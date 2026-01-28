@@ -3,11 +3,11 @@ const fs = require("fs");
 const path = require("path");
 
 const publicDir = path.join(__dirname, "..", "public");
-const logoPath = path.join(publicDir, "logo-royal-pomsky.jpg");
+const logoPath = path.join(publicDir, "logo-royal-pomsky-black.webp");
 
 async function createFavicons() {
     if (!fs.existsSync(logoPath)) {
-        console.log("❌ logo-royal-pomsky.jpg not found!");
+        console.log("❌ logo-royal-pomsky-black.webp not found!");
         return;
     }
 

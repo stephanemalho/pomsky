@@ -75,41 +75,51 @@ export default function HomePage() {
       <div className="flex flex-col">
         <section className="bg-accent-foreground">
           {/* Hero Section */}
-          <div className="relative h-[50vh] flex items-center justify-center overflow-hidden group">
+          <div className="relative h-[90vh] flex items-center justify-center overflow-hidden group">
             {/* Image de fond */}
             <div className="absolute inset-0 z-0 m-auto">
               <Image
-                src="/pomsky-all-sizes.webp"
+                src="/cute-pomsky-looking-us.webp"
                 alt="Tout les formats de pomsky en format paysage"
                 fill
-                className="object-cover"
+                className="object-cover scale-105 transition-transform duration-2000 group-hover:scale-110"
                 priority
               />
-              <div className="absolute inset-0 bg-black/40" aria-hidden="true" />
+              <div className="absolute inset-0 bg-linear-to-b from-black/70 via-black/45 to-black/75" aria-hidden="true" />
+              <div className="absolute inset-0 opacity-60 [background:radial-gradient(900px_circle_at_center,rgba(255,255,255,0.08),transparent_55%)]" aria-hidden="true" />
             </div>
+            <div className="relative z-10 text-center space-y-8 px-6 max-w-3xl py-10 mx-auto rounded-2xl border border-white/15 bg-black/35 backdrop-blur-md shadow-[0_30px_120px_rgba(0,0,0,0.55)]">
+              <div className="mx-auto inline-flex items-center gap-3 rounded-full border border-white/20 bg-white/10 px-4 py-1 text-[11px] uppercase tracking-[0.35em] text-white/80">
+                Royal Pomsky
+              </div>
+              <h1 className="text-2xl md:text-4xl font-semibold tracking-wide text-white">
+                Royal Pomsky 🐺
+                <span className="block text-base md:text-xl font-light text-white/80 mt-2">
+                  Premier élevage de Pomsky en France, lignées Américaines
+                </span>
+              </h1>
+              <div className="mx-auto">
+                <p className="text-base md:text-lg text-white/85">
+                  Notre élevage se situe dans la commune de SAINT-AMOUR (39160) en région Bourgogne Franche Comté est le premier élevage de Pomsky en France ayant fait le choix de débuter sa sélection en 2017 avec des lignées Américaines : directement au berceau de la race, pour amener en France le Pomsky absolument parfait.
+                </p>
+                <div className="mt-12">
+                  <p className="text-base md:text-lg text-white/85">
+                    Depuis notre première portée née en 2018 notre objectif est de vous apporter le meilleur et l'excellence version Pomsky : Un physique parfait, une santé de fer, une expertise comportementale, une sociabilisation parfaite, un suivi tout au long de la vie du chiot.
+                  </p>
+                  <p className="text-base md:text-lg text-white/85">
+                    Nous avons rédigé plusieurs articles contenant de très nombreuses informations, merci d'en prendre connaissance avant d'envisager l'adoption de votre chiot ! Vous pourrez consulter la page de nos chiots pomsky disponibles en cliquant ci-dessous :
+                  </p>
+                </div>
+              </div>
+              <Link
+                href="/chiots-disponibles"
+                className="inline-flex items-center justify-center rounded-full border border-white/30 bg-white/10 px-6 py-3 mt-12 text-sm font-semibold uppercase tracking-[0.2em] text-white transition hover:bg-white/20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+              >
+                Voir les chiots Pomsky disponibles
+              </Link>
+            </div>
+          </div>
 
-          </div>
-          <div
-            className="text-accent z-10 text-center  space-y-6 px-4 max-w-2xl p-4 mx-auto rounded-md backdrop-blur-sm"
-          >
-            <h1 className="text-xl md:text-3xl font-bold">
-              Elevage de Pomsky 🐺 Royal POMSKY <span className="text-base md:text-xl ">Premier élevage de Pomsky en France, lignées Américaines </span>              </h1>
-            <p className="text-base md:text-xl opacity-90">
-              Notre élevage se situe dans la commune de SAINT-AMOUR (39160) en région Bourgogne Franche Comté est le premier élevage de Pomsky en France ayant fait le choix de débuter sa sélection en 2017 avec des lignées Américaines : directement au berceau de la race, pour amener en France le Pomsky absolument parfait.
-            </p>
-            <p className="text-base md:text-xl opacity-90">
-              Depuis notre première portée née en 2018 notre objectif est de vous apporter le meilleur et l'excellence version Pomsky : Un physique parfait, une santé de fer, une expertise comportementale, une sociabilisation parfaite, un suivi tout au long de la vie du chiot.
-            </p>
-            <p className="text-base md:text-xl opacity-90">
-              Nous avons rédigé plusieurs articles contenant de très nombreuses informations, merci d'en prendre connaissance avant d'envisager l'adoption de votre chiot ! Vous pourrez consulter la page de nos chiots pomsky disponibles en cliquant ci-dessous :
-            </p>
-            <Link
-              href="/chiots-disponibles"
-              className="bg-primary hover:bg-primary/80 p-4 font-semibold inline-block dark:text-[#5b3a1a] rounded-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-            >
-              Voir les chiots Pomsky disponibles
-            </Link>
-          </div>
         </section>
         {/* Contenu centré */}
         {/* Présentation élevage */}

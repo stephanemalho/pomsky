@@ -2,7 +2,7 @@ import type React from "react"
 import type { Metadata } from "next"
 import CookieConsent from "../components/cookie-consent"
 import { Analytics } from "@vercel/analytics/next"
-import { Inter } from "next/font/google"
+import { Questrial } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "next-themes"
 import { Navigation } from "../components/navigation"
@@ -10,7 +10,11 @@ import { Footer } from "../components/footer"
 import { siteConfig } from "@/lib/seo-config"
 import { generateOrganizationSchema, generateWebsiteSchema } from "@/lib/schema-generators"
 
-const inter = Inter({ subsets: ["latin"] })
+const questrial = Questrial({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-questrial",
+})
 
 export const metadata: Metadata = {
   title: siteConfig.title,
@@ -87,7 +91,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
       </head>
-      <body className={inter.className}>
+      <body className={`${questrial.className} ${questrial.variable}`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <div className="min-h-screen bg-background">
             <Navigation />
