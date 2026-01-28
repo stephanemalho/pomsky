@@ -1,0 +1,46 @@
+# LLMs.txt for Royal Pomsky website
+
+site_name: Royal Pomsky
+site_url: https://royalpomsky.com/
+language: fr-FR
+purpose: Website for pomsky all sizes. Provide info about breeding, puppies, contact, and legal notices.
+
+key_pages:
+- / (home)
+- /presentation-elevage-elevage
+- /chiots-disponibles
+- /femelles-reproductrices
+- /le-pomsky
+- /contact
+- /blog
+     - /blog/le-pomsky-blanc-une-race-de-chien-au-look-irresistible
+     - /blog/le-chien-pomsky-une-race-hybride-qui-fait-fondre-les-coeurs
+     - /blog/le-pomsky-renard-decouvrez-ce-chien-au-look-de-petit-renard
+     - /blog/pomsky-a-vendre-comment-choisir-le-bon-eleveur-et-le-chiot-parfait-pour-vous
+     - /blog/pomsky-prix-guide-complet-pour-comprendre-le-cout-dadoption-et-dentretien
+     - /blog/pomsky-blanc-et-yeux-bleus-immersion-dans-lunivers-de-cette-race-captivante
+     - /blog/pomsky-beige-aux-yeux-bleus-decouverte-de-cette-incroyable-variete-de-chien
+     - /blog//blog/pomsky-noir-aux-yeux-bleus-decouvrez-ce-magnifique-chien-au-regard-envoutant
+     - /blog/le-pomsky-adulte-tout-ce-que-vous-devez-savoir-sur-cette-race-unique
+     - /blog/quelle-est-lhistoire-du-pomsky-les-origines-du-chien-pomsky
+     - /blog/a-quoi-sert-test-adn-chien
+     - /blog/pomsky-f1-f2-f3-cest-quoi
+     - /blog/le-spitz-nain
+     - /blog/le-husky-siberian
+     - /blog/duree-de-vie-du-pomsky-guide-complet-pour-prolonger-la-sante-de-votre-chien
+- /mentions-legales
+- /conditions-generales
+- /politique-de-confidentialite
+
+contact:
+- telephone :  0689758031
+
+legal:
+- legal_name: ELEVAGE ROYAL
+- trade_name: Royal Pomsky
+- siren: 917907016
+- siret: 91790701600013
+
+content_guidance:
+- focus: accurate information about breeding, animal welfare, and adoption process
+- avoid: inventing prices, availability, or medical claims not stated on the site
