@@ -54,19 +54,22 @@ const generations = [
         title: "F1 : première génération",
         description:
             "Croisement initial entre une femelle Husky Sibérien et un mâle Spitz nain (Poméranien). Les chiots peuvent varier en taille, en morphologie et en caractère.",
-        image: "/pearl-left-grass.webp",
+        image: "/pages/le-pomsky/Adorable-F1-Pomsky-puppy-in-grass.png",
+        alt: "Pomsky F1 assis dans l'herbe regardant vers l'objectif",
     },
     {
         title: "F2 : double F1",
         description:
             "Croisement entre deux Pomskys F1. Les portées deviennent un peu plus homogènes, mais le résultat reste encore variable.",
-        image: "/joy-cover.webp",
+        image: "/pages/le-pomsky/Fluffy-Pomsky-puppies-f2-in-the-grass.png",
+        alt: "Deux Pomsky F2 assis dans le jardin",
     },
     {
         title: "F3 à F5 : stabilisation",
         description:
             "Plus la génération avance, plus le type et le marquage se stabilisent. À partir de F5, on parle souvent de Pomsky multigénérationnel.",
-        image: "/milo-stand-up-tree.webp",
+        image: "/pages/le-pomsky/two-f3-pomsky-in the-grass.png",
+        alt: "Deux Pomsky F3 assis dans l'herbe regardant dans la même direction",
     },
 ]
 
@@ -240,7 +243,6 @@ export default function TeckelPage() {
                             ))}
                         </div>
                     </section>
-
                     <section className="mb-16 space-y-8">
                         <div className="text-center space-y-3">
                             <h2 className="text-xl md:text-2xl font-bold">Les générations de Pomsky</h2>
@@ -250,22 +252,39 @@ export default function TeckelPage() {
                             </p>
                             <div className="w-24 h-1 bg-primary mx-auto rounded-full" aria-hidden="true" />
                         </div>
-
                         <div className="grid md:grid-cols-3 gap-6">
                             {generations.map((generation) => (
-                                <Card key={generation.title} className="overflow-hidden bg-muted/60 h-full">
-                                    <CardHeader>
-                                        <CardTitle className="text-xl">{generation.title}</CardTitle>
+                                <Card
+                                    key={generation.title}
+                                    className="bg-muted/60 h-full flex flex-col"
+                                >
+                                    {/* Titre – toujours en haut */}
+                                    <CardHeader className="pb-2">
+                                        <CardTitle className="text-xl">
+                                            {generation.title}
+                                        </CardTitle>
                                     </CardHeader>
-                                    <CardContent>
-                                        <p className="text-sm text-muted-foreground leading-relaxed">
+
+                                    {/* Corps de carte */}
+                                    <CardContent className="flex flex-col flex-1">
+                                        {/* Description – zone centrale */}
+                                        <p className="text-sm text-muted-foreground leading-relaxed mb-4">
                                             {generation.description}
                                         </p>
+
+                                        {/* Image – toujours en bas */}
+                                        <div className="relative h-72 rounded-md overflow-hidden mt-auto">
+                                            <Image
+                                                src={generation.image}
+                                                alt={generation.title}
+                                                fill
+                                                className="object-cover"
+                                            />
+                                        </div>
                                     </CardContent>
                                 </Card>
                             ))}
                         </div>
-
                         <Card className="bg-muted/60">
                             <CardContent className="py-6 px-6 space-y-3 text-muted-foreground">
                                 <p className="font-semibold text-foreground">Le cas des Pomsky « B » (Backcross)</p>
