@@ -66,7 +66,7 @@ Cet document détaille toutes les améliorations d'accessibilité apportées au 
     - `<address>` pour les informations de contact avec `not-italic`
 - **Link Accessibility**:
     - `aria-label` sur les liens email et réseaux sociaux
-    - `aria-label="Envoyer un email à exoticperleteckel@gmail.com"`
+    - `aria-label="Envoyer un email à elevageroyalpomsky@gmail.com"`
     - `aria-label="Suivez-nous sur [Plateforme] (lien externe)"`
 - **Focus Indicators**: Classes `focus-visible` sur tous les liens
 - **Decorative Icons**: `aria-hidden="true"` sur les icônes décoratives
@@ -84,7 +84,7 @@ Cet document détaille toutes les améliorations d'accessibilité apportées au 
     - `aria-label` sur chaque section majeure
     - "Présentation du service d'élevage"
     - "Présentation de l'élevage Royal POMSKY"
-    - "Avantages de la race teckel"
+    - "Avantages de la race Pomsky"
     - "À propos de l'éleveur"
 - **Semantic HTML**:
     - `<section>` avec `aria-label` pour chaque zone

@@ -261,61 +261,61 @@ export const sitemapPages = [
         url: "/",
         changefreq: "weekly",
         priority: 1.0,
-        lastmod: "2026-01-10"
+        lastmod: "2026-01-29"
     },
     {
         url: "/le-pomsky",
         changefreq: "monthly",
         priority: 0.75,
-        lastmod: "2026-01-01"
+        lastmod: "2026-01-29"
     },
     {
         url: "/chiots-disponibles",
         changefreq: "weekly",
         priority: 0.9,
-        lastmod: "2026-01-10"
+        lastmod: "2026-01-29"
     },
     {
         url: "/femelles-reproductrices",
         changefreq: "monthly",
         priority: 0.8,
-        lastmod: "2026-01-01"
+        lastmod: "2026-01-29"
     },
     {
         url: "/presentation-elevage",
         changefreq: "monthly",
         priority: 0.7,
-        lastmod: "2026-01-01"
+        lastmod: "2026-01-29"
     },
     {
         url: "/bien-etre-animal",
         changefreq: "monthly",
         priority: 0.7,
-        lastmod: "2026-01-01"
+        lastmod: "2026-01-29"
     },
     {
         url: "/contact",
         changefreq: "monthly",
         priority: 0.8,
-        lastmod: "2026-01-02"
+        lastmod: "2026-01-29"
     },
     {
         url: "/mentions-legales",
         changefreq: "yearly",
         priority: 0.6,
-        lastmod: "2026-01-10"
+        lastmod: "2026-01-29"
     },
     {
         url: "/conditions-generales",
         changefreq: "yearly",
         priority: 0.6,
-        lastmod: "2026-01-03"
+        lastmod: "2026-01-29"
     },
     {
         url: "/politique-de-confidentialite",
         changefreq: "yearly",
         priority: 0.7,
-        lastmod: "2026-01-03"
+        lastmod: "2026-01-29"
     }
 ];
 

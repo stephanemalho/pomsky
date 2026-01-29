@@ -32,21 +32,24 @@ const sizes = [
         chest: "41 à 45 cm",
         weight: "9 à 12 kg",
         text: "Le plus grand gabarit. Il conserve l'allure du Husky miniature et demande de vraies sorties quotidiennes.",
-        image: "/milo-stand-up-grass.webp",
+        image: "/black-and-white-pomsky-L4-size.webp",
+        alt: "Pomsky noir et blanc de taille standard assis dans l'herbe",
     },
     {
         title: pageContent.pomsky.h3Miniature,
         chest: "35 à 40 cm",
         weight: "6 à 8 kg",
         text: "Bon équilibre entre énergie et format. Vif, proche de l'humain, à l'aise en appartement si ses besoins sont respectés.",
-        image: "/pixel-sitting-grass.webp",
+        image: "/luna-female-pomsky-f3.webp",
+        alt: "Pomsky femelle de taille miniature assise dans l'herbe",
     },
     {
         title:  pageContent.pomsky.h3toy,
         chest: "25 à 34 cm",
         weight: "2 à 5 kg",
         text: "Le plus petit gabarit. Très proche de ses humains, expressif et joueur, mais toujours besoin de stimulation.",
-        image: "/teckel-Toy-noir-et-feu.webp",
+        image: "/pomsky-black-and-white-f3-generation.webp",
+        alt: "Petit Pomsky noir et blanc pattes avant sur un muret",
     },
 ]
 
@@ -74,7 +77,7 @@ const generations = [
     },
 ]
 
-export default function TeckelPage() {
+export default function dogPage() {
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Accueil", url: "/" },
         { name: "Le Pomsky", url: siteConfig.pages.pomsky },
@@ -152,6 +155,14 @@ export default function TeckelPage() {
                                         </div>
                                     </CardHeader>
                                     <CardContent className="space-y-3 text-sm text-muted-foreground">
+                                        <div className="relative aspect-4/3 w-full overflow-hidden rounded-md">
+                                            <Image
+                                                src={item.image}
+                                                alt={item.alt}
+                                                fill
+                                                className="object-cover"
+                                            />
+                                        </div>
                                         <div className="flex items-center gap-2">
                                             <Ruler className="h-4 w-4 text-primary" aria-hidden="true" />
                                             <span>Taille au garrot : {item.chest}</span>
@@ -478,6 +489,5 @@ export default function TeckelPage() {
         </>
     )
 }
-
 
 

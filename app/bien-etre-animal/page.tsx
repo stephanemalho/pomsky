@@ -248,7 +248,7 @@ export default function SejoursPage() {
                     </section>
                     <FAQSection
                         title="FAQ adoption et quotidien"
-                        description="Tout ce qu'il faut savoir sur le caractère, l'éducation, la cohabitation et les soins du teckel."
+                        description="Tout ce qu'il faut savoir sur le caractère, l'éducation, la cohabitation et les soins du pomsky."
                         items={faqBienEtre}
                     />
                     {/* Localisation */}

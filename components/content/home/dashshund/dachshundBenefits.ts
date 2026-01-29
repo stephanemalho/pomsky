@@ -30,7 +30,7 @@ export const dachshundBenefits: BenefitCard[] = [
         title: "Les traits physiques du Pomsky",
         text: "Le Pomsky a de nombreuses caractéristiques physiques qui lui viennent du Husky. On retrouve parmi celles-ci, la couleur de ses yeux : (bleus, verts, ambre, bruns ou hétérochromes) ainsi que la couleur de sa robe, le marquage ( notamment le masque ), la texture et la densité de son poil.",
         image: wetPomsky,
-        alt: "Teckel regard expressif et attentif"
+        alt: "Pomsky regard expressif et attentif"
     },
     {
         title: "Un regard unique et expressif",

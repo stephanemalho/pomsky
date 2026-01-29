@@ -208,7 +208,7 @@ export default function NosChiotsPage() {
                     </section>
 
                     <FAQSection
-                        title="FAQ adoption et vie avec un teckel"
+                        title="FAQ adoption et vie avec un pomsky"
                         description="Le caractère, l'éducation, la cohabitation et les besoins quotidiens des pomsky."
                         items={faqNosChiots}
                     />
