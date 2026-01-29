@@ -2,7 +2,7 @@ import type { FAQItem } from "@/components/faq"
 
 export const faqHome: FAQItem[] = [
   {
-    question: "Qu’est-ce qui distingue l’élevage Royal POMSKY ?",
+    question: "Qu'est-ce qui distingue l'élevage Royal POMSKY ?",
     answer: (
       <div className="space-y-3">
         <p>
@@ -10,7 +10,7 @@ export const faqHome: FAQItem[] = [
           des reproducteurs, des portées limitées et un suivi structuré à chaque étape.
         </p>
         <p>
-          Chaque projet d’élevage vise à produire des chiens équilibrés, conformes au type
+          Chaque projet d'élevage vise à produire des chiens équilibrés, conformes au type
           et adaptés à la vie de compagnie.
         </p>
       </div>
@@ -22,7 +22,7 @@ export const faqHome: FAQItem[] = [
       <div className="space-y-3">
         <p>
           La socialisation commence dès les premiers jours avec des stimulations adaptées,
-          des manipulations régulières et une exposition progressive à l’environnement.
+          des manipulations régulières et une exposition progressive à l'environnement.
         </p>
         <p>
           Les chiots sont habitués aux bruits du quotidien, aux interactions humaines
@@ -36,31 +36,31 @@ export const faqHome: FAQItem[] = [
     answer: (
       <div className="space-y-3">
         <p>
-          L’élevage travaille plusieurs formats de Pomsky : standard, miniature et Toy.
+          L'élevage travaille plusieurs formats de Pomsky : standard, miniature et Toy.
         </p>
         <p>
           Les chiens présentent une grande variété de robes et de couleurs,
-          issues d’une sélection visant à concilier esthétique, tempérament et santé.
+          issues d'une sélection visant à concilier esthétique, tempérament et santé.
         </p>
       </div>
     ),
   },
   {
-    question: "Quel suivi est proposé après l’adoption ?",
+    question: "Quel suivi est proposé après l'adoption ?",
     answer: (
       <div className="space-y-3">
         <p>
           Un accompagnement est assuré après le départ du chiot afin de répondre aux questions
-          liées à l’alimentation, à l’adaptation et aux premiers mois de vie.
+          liées à l'alimentation, à l'adaptation et aux premiers mois de vie.
         </p>
         <p>
-          Ce suivi permet d’accompagner chaque adoptant dans la prise en main de son Pomsky.
+          Ce suivi permet d'accompagner chaque adoptant dans la prise en main de son Pomsky.
         </p>
       </div>
     ),
   },
   {
-    question: "Pourquoi passer par un élevage professionnel plutôt qu’une annonce en ligne ?",
+    question: "Pourquoi passer par un élevage professionnel plutôt qu'une annonce en ligne ?",
     answer: (
       <div className="space-y-3">
         <p>
@@ -83,10 +83,10 @@ export const faqPresentation: FAQItem[] = [
       <div className="space-y-3">
         <p>
           Les Pomsky évoluent dans un environnement familial, avec des espaces
-          sécurisés, des sorties quotidiennes et des interactions régulières avec l’humain.
+          sécurisés, des sorties quotidiennes et des interactions régulières avec l'humain.
         </p>
         <p>
-          Ce cadre favorise l’équilibre émotionnel, la confiance et la sociabilité des chiots.
+          Ce cadre favorise l'équilibre émotionnel, la confiance et la sociabilité des chiots.
         </p>
       </div>
     ),
@@ -101,11 +101,11 @@ export const faqBienEtre: FAQItem[] = [
       <div className="space-y-3">
         <p>
           La croissance est progressive et adaptée au gabarit du Pomsky.
-          L’activité est encadrée, les jeux sont choisis pour limiter les impacts,
+          L'activité est encadrée, les jeux sont choisis pour limiter les impacts,
           et le rythme du chiot est toujours respecté.
         </p>
         <p>
-          Une attention particulière est portée à l’équilibre, au repos et à l’évolution
+          Une attention particulière est portée à l'équilibre, au repos et à l'évolution
           physique durant les premiers mois.
         </p>
       </div>
@@ -159,8 +159,8 @@ export const faqContact: FAQItem[] = [
     answer: (
       <div className="space-y-3">
         <p>
-          Chaque projet d’adoption est différent.
-          L’échange permet de comprendre votre mode de vie,
+          Chaque projet d'adoption est différent.
+          L'échange permet de comprendre votre mode de vie,
           vos attentes et de vérifier que le Pomsky correspond à votre quotidien.
         </p>
         <p>

@@ -70,7 +70,7 @@ export default function MentionsLegalesPage() {
               <p>Forme juridique : {editor.legalForm}</p>
               <p>SIREN : {editor.siren}</p>
               <p>SIRET (siège) : {editor.siret}</p>
-              <p>Activité : {editor.activity}</p>
+              <p>Activité : <a href="https://www.saone-et-loire.gouv.fr/Actions-de-l-Etat/Environnement-risques-naturels-et-technologiques/ICPE-Teledeclarations/Preuves-de-depot-Changement-d-exploitant/2022/ELEVAGE-CANIN-ROYAL-POMSKY-a-DOMMARTIN-LES-CUISEAUX" className="text-primary hover:underline" target="_blank" rel="noreferrer">{editor.activity}</a></p>
               <p>Adresse du siège : Commune de Dommartin-lès-Cuiseaux (71480) - France
                 Adresse complète communiquée uniquement après réservation.</p>
               <p>Téléphone : <a href={`tel:${editor.phone.replace(/\s/g, "")}`} className="text-primary hover:underline">{siteConfig.contact.phoneFormatted}</a></p>

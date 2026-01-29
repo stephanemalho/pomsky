@@ -45,7 +45,7 @@ export const siteConfig = {
 
     /* ------------------------------ Contact ---------------------------------- */
     contact: {
-        email: "exoticperlepomsky@gmail.com",
+        email: "elevageroyalpomsky@gmail.com",
         phone: "+33689758031",
         phoneFormatted: "06 89 75 80 31"
     },
@@ -67,7 +67,7 @@ export const siteConfig = {
         }
     },
 
-    /* ----------------------- Localisation (marketing) ------------------------- */
+    /* ----------------------- Localisation (marketing) ------------------------- elevageroyalpomsky@gmail.com */
     location: {
         region: "Bourgogne-Franche-Comté",
         department: "Saône-et-Loire (71)",

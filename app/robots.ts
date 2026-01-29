@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
                 disallow: ["/admin", "/api", "/private"]
             }
         ],
-        sitemap: "https://www.teckelnain.com/sitemap.xml"
+        sitemap: "https://royalpomsky.com/sitemap.xml"
     };
 }
