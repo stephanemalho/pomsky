@@ -106,8 +106,8 @@ export default function HomePage() {
                   <div className="relative mx-auto w-full max-w-sm overflow-hidden rounded-xl border border-white/15 shadow-[0_18px_60px_rgba(0,0,0,0.45)]">
                     <div className="relative aspect-4/5">
                       <Image
-                        src="/gray-and-white-pomsky-f3-black-background.webp"
-                        alt="Pomsky gris et blanc sur fond noir"
+                        src="/SUSHI-pomsky.jpg"
+                        alt="SUSHI pomsky gris et blanc avec un oeil bleu et un oeil marron"
                         fill
                         className="object-cover"
                       />
@@ -172,8 +172,8 @@ export default function HomePage() {
 
               <div className="relative w-full aspect-video md:h-200 h-125 md:aspect-4/5 overflow-hidden rounded-lg">
                 <Image
-                  src="/puppy-pomsky-blue-eyes.webp"
-                  alt="pomsky chiots noir/rouge et blanc aux yeux bleue dans un arbre"
+                  src="/MIKKY-pomsky-puppy.jpg"
+                  alt="Mikky pomsky chiots levant les deux pattes avant"
                   fill
                   className="object-cover"
                 />
