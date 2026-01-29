@@ -56,9 +56,9 @@ export default function PresentationPage() {
                     {/* Hero Section */}
                     <section className="text-center space-y-6 mb-16">
                         <h1
-                            className="text-xl md:text-3xl font-bold">Elevage Royal POMSKY</h1>
+                            className="text-xl md:text-3xl font-bold">L&apos;élevage Royal POMSKY</h1>
                         <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                            Un élevage professionel de pomsky nains et Toys, élevés dans le Jura (39) avec amour, santé et caractère équilibré.
+                            Élevage spécialisé Pomsky dans le Jura (39) : sélection attentive, santé suivie et chiots élevés au contact de leur famille.
                         </p>
                         <div className="w-24 h-1 bg-primary mx-auto rounded-full" aria-hidden="true" />
                     </section>
@@ -72,16 +72,14 @@ export default function PresentationPage() {
                                     Notre philosophie
                                 </Badge>
                                 <h2
-                                    className="text-xl md:text-2xl font-bold">Faire naître des compagnons harmonieux</h2>
+                                    className="text-xl md:text-2xl font-bold">Faire naître des compagnons équilibrés</h2>
                                 <p className="text-muted-foreground leading-relaxed">
-                                    Chaque portée est préparée bien avant la naissance : sélection de lignées saines, dépistage ADN
-                                    et maladies génétiques, suivi vétérinaire rigoureux et beaucoup de présence humaine dès les
-                                    premiers jours.
+                                    Notre travail commence bien avant la naissance : choix des parents, suivi vétérinaire, et attention constante à la
+                                    qualité de vie des femelles. Chaque chiot bénéficie d&apos;un départ progressif et serein.
                                 </p>
                                 <p className="text-muted-foreground leading-relaxed">
-                                    Nous élevons nos pomsky dans des espaces dédiés à leur sécurité et leur bien être, habitués aux
-                                    bruits du quotidien et aux sorties dans notre terrain d&apos;un hectare ! L&apos;objectif : des chiots curieux,
-                                    confiants et faciles à intégrer dans leur nouvelle famille.
+                                    Les petits grandissent dans des espaces pensés pour l&apos;apprentissage : repères stables, manipulations douces,
+                                    bruits du quotidien et découvertes guidées. L&apos;objectif : un Pomsky confiant, bien socialisé et prêt pour sa famille.
                                 </p>
                             </div>
                             <div className="relative h-64 md:h-100 rounded-lg overflow-hidden">
@@ -111,9 +109,9 @@ export default function PresentationPage() {
                                             <Heart className="h-6 w-6 text-primary-foreground" />
                                         </div>
                                     </div>
-                                    <h3 className="text-xl font-semibold mb-2">Santé et bien-être</h3>
+                                    <h3 className="text-xl font-semibold mb-2">Santé & équilibre</h3>
                                     <p className="text-muted-foreground text-sm">
-                                        Examens génétiques ciblés, suivi vétérinaire et alimentation premium pour des chiots robustes dès la naissance.
+                                        Contrôles vétérinaires réguliers, alimentation adaptée et environnement sain pour des chiots solides et épanouis.
                                     </p>
                                 </CardContent>
                             </Card>
@@ -125,9 +123,9 @@ export default function PresentationPage() {
                                             <Leaf className="h-6 w-6 text-primary-foreground" />
                                         </div>
                                     </div>
-                                    <h3 className="text-xl font-semibold mb-2">Socialisation précoce</h3>
+                                    <h3 className="text-xl font-semibold mb-2">Socialisation progressive</h3>
                                     <p className="text-muted-foreground text-sm">
-                                        Jeux, sorties quotidiennes et découvertes progressives afin de préparer des chiens bien dans leurs pattes.
+                                        Stimulation douce, jeux d&apos;éveil et mises en situation variées pour des Pomsky à l&apos;aise partout.
                                     </p>
                                 </CardContent>
                             </Card>
@@ -141,7 +139,7 @@ export default function PresentationPage() {
                                     </div>
                                     <h3 className="text-xl font-semibold mb-2">Transparence</h3>
                                     <p className="text-muted-foreground text-sm">
-                                        Visites sur rendez-vous, livret d&apos;élevage détaillé et conseils partagés avant et après l&apos;adoption.
+                                        Échanges clairs, conseils honnêtes et informations complètes avant, pendant et après l&apos;adoption.
                                     </p>
                                 </CardContent>
                             </Card>
@@ -160,22 +158,22 @@ export default function PresentationPage() {
                                     Notre approche
                                 </Badge>
                                 <h2
-                                    className="text-xl md:text-2xl font-bold">Une méthode d&apos;élevage responsable</h2>
+                                    className="text-xl md:text-2xl font-bold">Une approche respectueuse et exigeante</h2>
                                 <p className="text-muted-foreground leading-relaxed">
-                                    Portées limitées, temps dédié à chaque chiot et famille, et un suivi personnalisé sur le tempérament et les besoins.
+                                    Portées raisonnées, temps dédié à chaque chiot et à chaque famille, et un accompagnement personnalisé selon le caractère.
                                 </p>
                                 <div className="space-y-3">
                                     <div className="flex items-start space-x-3">
                                         <div className="w-2 h-2 bg-primary rounded-full mt-2" />
-                                        <p className="text-sm">Parents testés et radiographiés, tempéraments stables et joyeux</p>
+                                        <p className="text-sm">Parents sélectionnés pour la santé, le tempérament et la morphologie</p>
                                     </div>
                                     <div className="flex items-start space-x-3">
                                         <div className="w-2 h-2 bg-primary rounded-full mt-2" />
-                                        <p className="text-sm">Stimulation neurosensorielle dès les premiers jours</p>
+                                        <p className="text-sm">Stimulation sensorielle progressive dès les premiers jours</p>
                                     </div>
                                     <div className="flex items-start space-x-3">
                                         <div className="w-2 h-2 bg-primary rounded-full mt-2" />
-                                        <p className="text-sm">Livret d&apos;accueil, kit chiot et accompagnement à la socialisation</p>
+                                        <p className="text-sm">Kit de départ, conseils d&apos;intégration et suivi post-adoption</p>
                                     </div>
                                 </div>
                                 <Link
@@ -193,26 +191,23 @@ export default function PresentationPage() {
                                 className="text-xl md:text-2xl font-bold">Notre histoire</h2>
                             <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-8" />
                             <h3 className="text-2xl font-bold">
-                                L&apos;élevage est situé dans le Jura non loin de la commune de Saint-Amour !
+                                Un élevage familial au cœur du Jura, à deux pas de Saint-Amour
                             </h3>
                             <p className="text-muted-foreground leading-relaxed">
-                                Notre élevage est consacre exclusivement au teckel à poil ras, et aux caractéristiques rares !
+                                Nous avons choisi de consacrer notre élevage au Pomsky pour son allure de chien nordique miniature et sa nature proche de l&apos;humain.
                             </p>
                             <p className="text-muted-foreground leading-relaxed">
-                                Né de notre coup de cœur pour le teckel : un petit chien vif, affectueux, loyal et courageux. En
-                                tant qu&apos;éducateur canin comportementaliste, j&apos;ai trouvé que le teckel possédait énormément de
-                                qualités qui font de lui un excellent chien de compagnie ! Leur proximité avec l&apos;humain a été une
-                                grande surprise : ce sont dès chiens en demande d&apos;affection et d&apos;amour qui font preuve d&apos;une
-
-                                grande loyauté !
+                                Notre histoire s&apos;est construite au fil des rencontres avec la race et des familles adoptantes. Nous recherchons un
+                                Pomsky bien dans sa tête, stable et joyeux, qui s&apos;intègre facilement à la vie de famille.
                             </p>
                             <p className="text-muted-foreground leading-relaxed">
-                                Ils ont accès à des structures chauffées, sécurisées, et un terrain d&apos;un hectare pour se balader, ils savent également marcher en laisse.
+                                Les chiens vivent à nos côtés, avec des espaces sécurisés et des moments de détente en extérieur pour nourrir leur curiosité.
                             </p>
                             <p className="text-muted-foreground leading-relaxed">
-                                Notre priorité : des chiots équilibrés, des couleurs rares, proches de l&apos;humain, habitués à la vie de famille. Nous partageons volontiers nos choix de sélection, de socialisation et nos petites astuces du quotidien.
+                                Notre priorité : des chiots équilibrés, sociables et prêts à démarrer une belle histoire avec leur future famille.
                             </p>
-                            <p className="text-muted-foreground leading-relaxed">Les familles repartent avec bien plus qu&apos;un chiot : un suivi, des conseils et la communauté des pomsky de l&apos;élevage Royal POMSKY !
+                            <p className="text-muted-foreground leading-relaxed">
+                                Les familles repartent avec un accompagnement concret, des conseils pratiques et des nouvelles régulières pour suivre l&apos;évolution.
                             </p>
                         </div>
                     </section>
@@ -230,7 +225,7 @@ export default function PresentationPage() {
                                 <CardContent className="p-6">
                                     <h3 className="text-xl font-semibold mb-4">Bien-être animal</h3>
                                     <p className="text-muted-foreground text-sm leading-relaxed">
-                                        Sorties quotidiennes, enrichissement olfactif et rythmes respectés pour des pomsky sereins et joueurs.
+                                        Rythmes respectés, sorties adaptées et activités d&apos;éveil pour des Pomsky sereins et curieux.
                                     </p>
                                 </CardContent>
                             </Card>
@@ -239,7 +234,7 @@ export default function PresentationPage() {
                                 <CardContent className="p-6">
                                     <h3 className="text-xl font-semibold mb-4">Suivi vétérinaire</h3>
                                     <p className="text-muted-foreground text-sm leading-relaxed">
-                                        Vaccins, identification, vermifuges réguliers et bilan santé complet remis le jour du départ.
+                                        Suivi sanitaire complet, identification et conseils de santé transmis au moment du départ.
                                     </p>
                                 </CardContent>
                             </Card>
@@ -248,7 +243,7 @@ export default function PresentationPage() {
                                 <CardContent className="p-6">
                                     <h3 className="text-xl font-semibold mb-4">Transparence</h3>
                                     <p className="text-muted-foreground text-sm leading-relaxed">
-                                        Livret détaillé, contrats clairs, photos et vidéos régulières de l&apos;évolution des chiots.
+                                        Informations claires, documents lisibles et échanges réguliers tout au long du parcours.
                                     </p>
                                 </CardContent>
                             </Card>
@@ -257,7 +252,7 @@ export default function PresentationPage() {
                                 <CardContent className="p-6">
                                     <h3 className="text-xl font-semibold mb-4">Accompagnement</h3>
                                     <p className="text-muted-foreground text-sm leading-relaxed">
-                                        Conseils d&apos;éducation, kit de transition et disponibilité après l&apos;adoption pour répondre à vos questions.
+                                        Conseils personnalisés, kit de départ et disponibilité pour vous aider à chaque étape.
                                     </p>
                                 </CardContent>
                             </Card>
@@ -265,16 +260,16 @@ export default function PresentationPage() {
                     </section>
 
                     <FAQSection
-                        title="FAQ teckel et élevage"
-                        description="Nos réponses sur le caractère, la taille et l'histoire du teckel pour préparer votre visite."
+                        title="FAQ Pomsky et élevage"
+                        description="Nos réponses sur l&apos;élevage, la vie à la maison et l&apos;accueil d&apos;un Pomsky."
                         items={faqPresentation}
                     />
                     {/* CTA Section */}
                     <section className="text-center space-y-6">
                         <h2
-                            className="text-xl md:text-2xl font-bold">Envie de rencontrer nos pomsky ?</h2>
+                            className="text-xl md:text-2xl font-bold">Envie de rencontrer nos Pomsky ?</h2>
                         <p className="text-muted-foreground max-w-2xl mx-auto">
-                            Planifiez une visite ou inscrivez-vous pour suivre l&apos;ouverture des réservations sur nos prochaines portées.
+                            Réservez une visite ou suivez l&apos;ouverture des réservations pour nos prochaines portées.
                         </p>
                         <div className="flex flex-col mt-12 sm:flex-row gap-8 justify-center h-10 items-center">
                             <Link
@@ -288,7 +283,7 @@ export default function PresentationPage() {
                                 Programmer une visite
                             </Link>
                         </div>
-                        <div className="text-right text-xs text-muted-foreground mt-6">
+                        <div className="text-right text-xs text-muted-foreground mt-20">
                             Dernière mise à jour : {lastMod}
                         </div>
                     </section>
