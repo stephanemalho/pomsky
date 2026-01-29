@@ -119,14 +119,13 @@ export const pageMetadata = {
         title: pageContent.home.h1 + " | " + pageContent.home.h1Subtitle,
         description: pageContent.home.description,
         keywords: [
-            "elevage pomsky",
-            "pomsky toy",
-            "pomsky petits",
-            "chiots pomsky",
-            "pomsky nain",
-            "pomsky yeux bleus",
-            "pomsky de taille miniature",
-            "Royal POMSKY"
+            "élevage de pomsky responsable",
+            "chiots pomsky toy miniature et standard",
+            "élevage de pomsky à taille humaine",
+            "chiots pomsky bien socialisés",
+            "pomsky aux yeux bleus",
+            "élevage éthique de pomsky",
+            "Royal Pomsky"
         ]
     },
 
@@ -134,14 +133,15 @@ export const pageMetadata = {
         title: pageContent.pomsky.h1,
         description: pageContent.pomsky.description,
         keywords: [
-            "pomsky",
-            "Toy",
-            "pomsky nain",
-            "pomsky standard",
-            "pomsky poil long",
-            "pomsky poil dur",
-            "pomsky poil ras",
-            "caractere du pomsky"
+            "taille du pomsky",
+            "pomsky toy miniature standard",
+            "différences pomsky toy miniature standard",
+            "origine du pomsky",
+            "histoire du pomsky",
+            "tempérament du pomsky",
+            "générations du pomsky",
+            "adopter un pomsky",
+            "ce qu'il faut savoir avant d'adopter un pomsky"
         ]
     },
 
@@ -154,7 +154,8 @@ export const pageMetadata = {
             "chiot pomsky nain",
             "chiots disponibles",
             "reservation chiot",
-            "naissances pomsky",
+            "bon élevage de pomsky",
+            "acheter un pomsky",
             "inscription portee"
         ]
     },
@@ -180,7 +181,9 @@ export const pageMetadata = {
             "passion pomsky",
             "selection rigoureuse",
             "accompagnement adoptant",
-            "ethique elevage"
+            "ethique elevage",
+            "trouver bon elevage pomsky",
+            "elevage chiots avec mere"
         ]
     },
 
@@ -188,12 +191,14 @@ export const pageMetadata = {
         title: pageContent.wellness.h1,
         description: pageContent.wellness.description,
         keywords: [
-            "bien-etre animal",
-            "socialisation chiot",
-            "sante pomsky",
-            "alimentation chiot",
-            "enrichissement environnemental",
-            "rythme naturel"
+            "conditions de vie des chiots en élevage",
+            "élevage familial responsable",
+            "bien-être et socialisation des chiots",
+            "chiots élevés avec leur mère",
+            "suivi vétérinaire dès la naissance",
+            "respect du développement du chiot",
+            "environnement sain pour chiots",
+            "élevage éthique de pomsky"
         ]
     },
 
@@ -205,7 +210,8 @@ export const pageMetadata = {
             "visite elevage",
             "rendez-vous",
             "adoption pomsky",
-            "informations chiot"
+            "informations chiot",
+            "reservation chiot"
         ]
     },
 
@@ -322,6 +328,3 @@ export const returnLastmod = createLastmodGetter(sitemapPages);
 // Compat legacy (à supprimer plus tard)
 export const retrunLastmod = returnLastmod;
 export const getLastmod = returnLastmod;
-
-
-

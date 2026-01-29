@@ -28,21 +28,21 @@ export const metadata: Metadata = {
 
 const sizes = [
     {
-        title: "Pomsky Standard",
+        title: pageContent.pomsky.h3Standard,
         chest: "41 à 45 cm",
         weight: "9 à 12 kg",
         text: "Le plus grand gabarit. Il conserve l'allure du Husky miniature et demande de vraies sorties quotidiennes.",
         image: "/milo-stand-up-grass.webp",
     },
     {
-        title: "Pomsky Miniature",
+        title: pageContent.pomsky.h3Miniature,
         chest: "35 à 40 cm",
         weight: "6 à 8 kg",
         text: "Bon équilibre entre énergie et format. Vif, proche de l'humain, à l'aise en appartement si ses besoins sont respectés.",
         image: "/pixel-sitting-grass.webp",
     },
     {
-        title: "Pomsky Toy (micro)",
+        title:  pageContent.pomsky.h3toy,
         chest: "25 à 34 cm",
         weight: "2 à 5 kg",
         text: "Le plus petit gabarit. Très proche de ses humains, expressif et joueur, mais toujours besoin de stimulation.",
@@ -133,7 +133,7 @@ export default function TeckelPage() {
 
                     <section className="mb-16 space-y-10">
                         <div className="text-center space-y-3">
-                            <h2 className="text-xl md:text-2xl font-bold">Les tailles du Pomsky</h2>
+                            <h2 className="text-xl md:text-2xl font-bold">{pageContent.pomsky.h2}</h2>
                             <p className="text-muted-foreground max-w-3xl mx-auto">
                                 On distingue généralement trois tailles : toy (ou micro), miniature et standard.
                                 Les tailles sont exprimées au garrot. Les individus issus de lignées Husky peuvent dépasser 43 cm,
@@ -192,7 +192,7 @@ export default function TeckelPage() {
                             <Badge variant="secondary" className="w-fit">
                                 Origines
                             </Badge>
-                            <h2 className="text-xl md:text-2xl font-bold">D'où vient le Pomsky ?</h2>
+                            <h2 className="text-xl md:text-2xl font-bold">{ pageContent.pomsky.pomskyOrigin}</h2>
                             <p className="text-muted-foreground leading-relaxed">
                                 Le Pomsky est né aux États-Unis. L'objectif : obtenir un chien de compagnie au look de Husky Sibérien
                                 (masque, regard, silhouette) dans un format plus petit, proche du Spitz nain (Poméranien).
@@ -362,7 +362,7 @@ export default function TeckelPage() {
 
                     <section className="mb-16 space-y-6 bg-muted/40 rounded-lg p-8">
                         <div className="text-center space-y-3">
-                            <h2 className="text-xl md:text-2xl font-bold">Adopter un Pomsky : ce qu'il faut savoir</h2>
+                            <h2 className="text-xl md:text-2xl font-bold">{pageContent.pomsky.googToKnow}</h2>
                             <p className="text-muted-foreground max-w-3xl mx-auto leading-relaxed">
                                 L'espérance de vie d'un Pomsky est généralement comprise entre 15 et 17 ans.
                                 C'est un engagement au long cours : sorties quotidiennes, stimulation intellectuelle

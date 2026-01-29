@@ -12,7 +12,13 @@ export const pageContent = {
     pomsky: {
         h1: "Le Pomsky : taille, tempérament, origines et adoption",
         description:
-            "Le Pomsky est une race en construction, encore non reconnue par la FCI. Son allure de Husky miniature en fait un chien très apprécié, mais c'est surtout un compagnon actif qui demande du temps et de la cohérence. Voici l'essentiel pour bien comprendre la race et adopter de manière responsable."
+            "Le Pomsky est une race en construction, encore non reconnue par la FCI. Son allure de Husky miniature en fait un chien très apprécié, mais c'est surtout un compagnon actif qui demande du temps et de la cohérence. Voici l'essentiel pour bien comprendre la race et adopter de manière responsable.",
+        h2: "Les tailles du Pomsky",
+        h3Standard: "Pomsky Standard",
+        h3Miniature: "Pomsky Miniature",
+        h3toy: "Pomsky Toy",
+        pomskyOrigin : "D'où vient le Pomsky ?",
+        googToKnow: "Adopter un Pomsky : ce qu'il faut savoir"
     },
     puppies: {
         h1: "Nos chiots disponibles",
