@@ -298,14 +298,23 @@ export default function TeckelPage() {
                                 <CardHeader>
                                     <CardTitle className="text-xl">Les yeux du Pomsky</CardTitle>
                                 </CardHeader>
-                                <CardContent className="text-sm text-muted-foreground leading-relaxed space-y-3">
-                                    <p>
-                                        Les yeux bleus sont très prisés, mais on peut aussi rencontrer des yeux verts, ambre,
-                                        bruns, hétérochromes ou vairons. Cette diversité est héritée du Husky Sibérien.
-                                    </p>
-                                    <p>
-                                        Le regard est intense et expressif, ce qui participe beaucoup au charme du Pomsky.
-                                    </p>
+                                <CardContent className="flex text-sm flex-col md:flex-row text-muted-foreground leading-relaxed space-y-3">
+                                    <div className="mt-4 space-y-3">
+                                        <p>
+                                            Les yeux bleus sont très prisés, mais on peut aussi rencontrer des yeux verts, ambre,
+                                            bruns, hétérochromes ou vairons. Cette diversité est héritée du Husky Sibérien.
+                                        </p>
+                                        <p>
+                                            Le regard est intense et expressif, ce qui participe beaucoup au charme du Pomsky.
+                                        </p>
+                                    </div>
+                                    <Image
+                                        src="/pomsky-eye-colors-blue-brown-heterochromia.webp"
+                                        alt="Pomsky aux yeux bleus"
+                                        width={400}
+                                        height={250}
+                                        className="rounded-md mt-2"
+                                    />
                                 </CardContent>
                             </Card>
 
@@ -313,14 +322,23 @@ export default function TeckelPage() {
                                 <CardHeader>
                                     <CardTitle className="text-xl">Morphologie générale</CardTitle>
                                 </CardHeader>
-                                <CardContent className="text-sm text-muted-foreground leading-relaxed space-y-3">
-                                    <p>
-                                        Le corps est compact, la queue est touffue et enroulée au-dessus du dos.
-                                        Les oreilles sont triangulaires, hautes et plutôt proches l'une de l'autre.
-                                    </p>
-                                    <p>
-                                        Le Pomsky est une race en devenir, non reconnue au LOF aujourd'hui.
-                                    </p>
+                                <CardContent className="flex text-sm flex-col md:flex-row text-muted-foreground leading-relaxed space-y-3">
+                                    <div className="mt-4 space-y-3">
+                                        <p>
+                                            Le corps est compact, la queue est touffue et enroulée au-dessus du dos.
+                                            Les oreilles sont triangulaires, hautes et plutôt proches l'une de l'autre.
+                                        </p>
+                                        <p>
+                                            Le Pomsky est une race en devenir, non reconnue au LOF aujourd'hui.
+                                        </p>
+                                    </div>
+                                    <Image
+                                        src="/frosty-pomsky-puppy-from-royal-pomsky.webp"
+                                        alt="Pomsky aux yeux bleus"
+                                        width={400}
+                                        height={250}
+                                        className="rounded-md mt-2"
+                                    />
                                 </CardContent>
                             </Card>
                         </div>

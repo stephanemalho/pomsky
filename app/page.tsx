@@ -75,7 +75,7 @@ export default function HomePage() {
       <div className="flex flex-col">
         <section className="bg-accent-foreground">
           {/* Hero Section */}
-          <div className="relative h-[90vh] flex items-center justify-center overflow-hidden group">
+          <div className="relative h-auto md:h-[90vh] flex items-center justify-center overflow-hidden group">
             {/* Image de fond */}
             <div className="absolute inset-0 z-0 m-auto">
               <Image
@@ -93,7 +93,7 @@ export default function HomePage() {
                 Royal Pomsky
               </div>
               <h1 className="text-2xl md:text-4xl font-semibold tracking-wide text-white">
-                Royal Pomsky 🐺
+                Royal Pomsky
                 <span className="block text-base md:text-xl font-light text-white/80 mt-2">
                   Premier élevage de Pomsky en France, lignées Américaines
                 </span>
@@ -102,6 +102,18 @@ export default function HomePage() {
                 <p className="text-base md:text-lg text-white/85">
                   Notre élevage se situe dans la commune de SAINT-AMOUR (39160) en région Bourgogne Franche Comté est le premier élevage de Pomsky en France ayant fait le choix de débuter sa sélection en 2017 avec des lignées Américaines : directement au berceau de la race, pour amener en France le Pomsky absolument parfait.
                 </p>
+                <div className="mt-6 md:hidden">
+                  <div className="relative mx-auto w-full max-w-sm overflow-hidden rounded-xl border border-white/15 shadow-[0_18px_60px_rgba(0,0,0,0.45)]">
+                    <div className="relative aspect-4/5">
+                      <Image
+                        src="/gray-and-white-pomsky-f3-black-background.webp"
+                        alt="Pomsky gris et blanc sur fond noir"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                  </div>
+                </div>
                 <div className="mt-12">
                   <p className="text-base md:text-lg text-white/85">
                     Depuis notre première portée née en 2018 notre objectif est de vous apporter le meilleur et l'excellence version Pomsky : Un physique parfait, une santé de fer, une expertise comportementale, une sociabilisation parfaite, un suivi tout au long de la vie du chiot.

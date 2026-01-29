@@ -86,8 +86,8 @@ export default function PresentationPage() {
                             </div>
                             <div className="relative h-64 md:h-100 rounded-lg overflow-hidden">
                                 <Image
-                                    src="/teckel-Toy-noir-et-feu.webp"
-                                    alt="Elevage familial de pomsky dans le Jura"
+                                    src="/luna-female-pomsky-f3.webp"
+                                    alt="Elevage professionnel de pomsky dans le Jura"
                                     fill
                                     className="object-cover"
                                 />
@@ -152,7 +152,7 @@ export default function PresentationPage() {
                     <section className="mb-16">
                         <div className="grid md:grid-cols-2 gap-12 items-center">
                             <div className="relative h-64 md:h-100 rounded-lg overflow-hidden md:order-2">
-                                <Image src="/adorable-chien-au-lit.webp" alt="Notre approche" fill className="object-cover" />
+                                <Image src="/guizmo-pomsky-f2-puppy.webp" alt="illustration d'un pomsky chiots de royal pomsky" fill className="object-cover" />
                             </div>
                             <div className="space-y-6 md:order-1">
                                 <Badge variant="secondary" className="w-fit">
