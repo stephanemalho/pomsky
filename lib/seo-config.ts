@@ -85,7 +85,7 @@ export const siteConfig = {
     ],
 
     /* ------------------------------ OpenGraph --------------------------------- */
-    ogImage: "/pomsky-noir-or-debout.webp",
+    ogImage: "/BEAUTY-pomsky-miniature-f4.webp",
     ogImageAlt: "pomsky Toy noir de Royal POMSKY",
     ogImageWidth: 1200,
     ogImageHeight: 630,

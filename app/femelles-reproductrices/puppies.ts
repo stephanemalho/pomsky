@@ -86,7 +86,7 @@ export const puppies: Puppy[] = [
             "Pomsky ADN pur (Poméranian / Husky)",
             "Testée Embark"
         ],
-        images: ["BEAUTY-pomsky-miniature-f4webp.webp"]
+        images: ["BEAUTY-pomsky-miniature-f4.webp"]
     },
     {
         name: "ROYAL POMSKY 'CHARM'",
