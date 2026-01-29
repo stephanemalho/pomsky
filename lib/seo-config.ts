@@ -1,4 +1,5 @@
 import { createLastmodGetter } from "./lastmod";
+import { pageContent } from "./page-content";
 
 /**
  * ============================================================
@@ -115,9 +116,8 @@ export const siteConfig = {
 
 export const pageMetadata = {
     home: {
-        title: "Élevage de pomsky de générations (F1 -F2 - F3)  | Royal POMSKY",
-        description:
-            "Élevage spécialisé dans les pomsky Toy, Nain et standard. de génération F1 - F2 - F3 , bien-être animal et accompagnement personnalisé.",
+        title: pageContent.home.h1 + " | " + pageContent.home.h1Subtitle,
+        description: pageContent.home.description,
         keywords: [
             "elevage pomsky",
             "pomsky toy",
@@ -131,9 +131,8 @@ export const pageMetadata = {
     },
 
     pomsky: {
-        title: "Le pomsky : tailles, caractère et variétés",
-        description:
-            "Découvrez le pomsky : histoire, tailles (standard, nain, Toy) et variétés de poil.",
+        title: pageContent.pomsky.h1,
+        description: pageContent.pomsky.description,
         keywords: [
             "pomsky",
             "Toy",
@@ -147,9 +146,8 @@ export const pageMetadata = {
     },
 
     puppies: {
-        title: "Chiots pomsky disponibles | Royal POMSKY",
-        description:
-            "Consultez les chiots pomsky disponibles ou à venir. Élevage responsable et sélection rigoureuse.",
+        title: pageContent.puppies.h1,
+        description: pageContent.puppies.description,
         keywords: [
             "chiots pomsky",
             "chiot Toy",
@@ -162,9 +160,8 @@ export const pageMetadata = {
     },
 
     reproductors: {
-        title: "Nos reproducteurs | Royal POMSKY",
-        description:
-            "Nos reproducteurs pomsky sont sélectionnés pour leur santé, leur caractère et leur conformité au standard.",
+        title: pageContent.reproductors.h1,
+        description: pageContent.reproductors.description,
         keywords: [
             "reproducteurs pomsky",
             "lignees pomsky",
@@ -176,9 +173,8 @@ export const pageMetadata = {
     },
 
     presentation: {
-        title: "Notre élevage | Royal POMSKY",
-        description:
-            "Découvrez l'histoire et les valeurs de l'élevage Royal POMSKY.",
+        title: pageContent.presentation.h1,
+        description: pageContent.presentation.description,
         keywords: [
             "elevage responsable",
             "passion pomsky",
@@ -189,9 +185,8 @@ export const pageMetadata = {
     },
 
     wellness: {
-        title: "Bien-être animal | Royal POMSKY",
-        description:
-            "Santé, socialisation et respect du rythme naturel des pomsky.",
+        title: pageContent.wellness.h1,
+        description: pageContent.wellness.description,
         keywords: [
             "bien-etre animal",
             "socialisation chiot",
@@ -203,9 +198,8 @@ export const pageMetadata = {
     },
 
     contact: {
-        title: "Contact & visites | Royal POMSKY",
-        description:
-            "Contactez-nous pour toute information ou projet d'adoption.",
+        title: pageContent.contact.h1,
+        description: pageContent.contact.description,
         keywords: [
             "contact elevage pomsky",
             "visite elevage",
@@ -216,8 +210,8 @@ export const pageMetadata = {
     },
 
     legalNotice: {
-        title: "Mentions légales | Royal POMSKY",
-        description: "Informations légales concernant l'élevage Royal POMSKY.",
+        title: pageContent.legalNotice.h1,
+        description: pageContent.legalNotice.description,
         keywords: [
             "mentions legales",
             "informations legales",
@@ -228,8 +222,8 @@ export const pageMetadata = {
     },
 
     terms: {
-        title: "Conditions générales | Royal POMSKY",
-        description: "Conditions générales d'utilisation du site Royal POMSKY.",
+        title: pageContent.terms.h1,
+        description: pageContent.terms.description,
         keywords: [
             "conditions generales",
             "conditions dutilisation",
@@ -240,8 +234,8 @@ export const pageMetadata = {
     },
 
     privacy: {
-        title: "Politique de confidentialité | Royal POMSKY",
-        description: "Gestion des données personnelles et cookies (RGPD).",
+        title: pageContent.privacy.h1,
+        description: pageContent.privacy.description,
         keywords: [
             "RGPD",
             "confidentialite",
@@ -328,3 +322,6 @@ export const returnLastmod = createLastmodGetter(sitemapPages);
 // Compat legacy (à supprimer plus tard)
 export const retrunLastmod = returnLastmod;
 export const getLastmod = returnLastmod;
+
+
+

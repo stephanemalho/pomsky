@@ -9,6 +9,7 @@ import { pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
 import { generateLocalBusinessSchema, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/schema-generators"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
 import { dachshundBenefits } from "@/components/content/home/dashshund/dachshundBenefits"
+import { pageContent } from "@/lib/page-content"
 
 export const metadata: Metadata = {
   title: pageMetadata.home.title,
@@ -93,14 +94,14 @@ export default function HomePage() {
                 Royal Pomsky
               </div>
               <h1 className="text-2xl md:text-4xl font-semibold tracking-wide text-white">
-                Royal Pomsky
+                {pageContent.home.h1}
                 <span className="block text-base md:text-xl font-light text-white/80 mt-2">
-                  Premier élevage de Pomsky en France, lignées Américaines
+                  {pageContent.home.h1Subtitle}
                 </span>
               </h1>
               <div className="mx-auto">
                 <p className="text-base md:text-lg text-white/85">
-                  Notre élevage se situe dans la commune de SAINT-AMOUR (39160) en région Bourgogne Franche Comté est le premier élevage de Pomsky en France ayant fait le choix de débuter sa sélection en 2017 avec des lignées Américaines : directement au berceau de la race, pour amener en France le Pomsky absolument parfait.
+                  {pageContent.home.description}
                 </p>
                 <div className="mt-6 md:hidden">
                   <div className="relative mx-auto w-full max-w-sm overflow-hidden rounded-xl border border-white/15 shadow-[0_18px_60px_rgba(0,0,0,0.45)]">
@@ -116,10 +117,10 @@ export default function HomePage() {
                 </div>
                 <div className="mt-12">
                   <p className="text-base md:text-lg text-white/85">
-                    Depuis notre première portée née en 2018 notre objectif est de vous apporter le meilleur et l'excellence version Pomsky : Un physique parfait, une santé de fer, une expertise comportementale, une sociabilisation parfaite, un suivi tout au long de la vie du chiot.
+                    {pageContent.home.descriptionSecondary}
                   </p>
                   <p className="text-base md:text-lg text-white/85">
-                    Nous avons rédigé plusieurs articles contenant de très nombreuses informations, merci d'en prendre connaissance avant d'envisager l'adoption de votre chiot ! Vous pourrez consulter la page de nos chiots pomsky disponibles en cliquant ci-dessous :
+                    {pageContent.home.descriptionTertiary}
                   </p>
                 </div>
               </div>
@@ -335,3 +336,6 @@ export default function HomePage() {
     </>
   )
 }
+
+
+

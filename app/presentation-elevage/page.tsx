@@ -7,6 +7,7 @@ import { Heart, Leaf, Users, Star } from "lucide-react"
 import Link from "next/link"
 import type { Metadata } from "next"
 import { pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
+import { pageContent } from "@/lib/page-content"
 import { generateOrganizationSchema, generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema-generators"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
 
@@ -56,9 +57,9 @@ export default function PresentationPage() {
                     {/* Hero Section */}
                     <section className="text-center space-y-6 mb-16">
                         <h1
-                            className="text-xl md:text-3xl font-bold">L&apos;élevage Royal POMSKY</h1>
+                            className="text-xl md:text-3xl font-bold">{pageContent.presentation.h1}</h1>
                         <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                            Élevage spécialisé Pomsky dans le Jura (39) : sélection attentive, santé suivie et chiots élevés au contact de leur famille.
+                            {pageContent.presentation.description}
                         </p>
                         <div className="w-24 h-1 bg-primary mx-auto rounded-full" aria-hidden="true" />
                     </section>
@@ -292,3 +293,4 @@ export default function PresentationPage() {
         </>
     )
 }
+

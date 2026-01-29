@@ -4,6 +4,7 @@ import { faqContact } from "@/lib/faq-data"
 import { MapPin, Phone, Mail, Clock, PawPrint } from "lucide-react"
 import type { Metadata } from "next"
 import { pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
+import { pageContent } from "@/lib/page-content"
 import { generateLocalBusinessSchema, generateContactPointSchema, generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema-generators"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
 import Image from "next/image"
@@ -135,9 +136,9 @@ export default function ContactPage() {
                     {/* Header */}
                     <section className="text-center space-y-4 mb-12">
                         <h1
-                            className="text-xl md:text-3xl font-bold">Contact & visites</h1>
+                            className="text-xl md:text-3xl font-bold">{pageContent.contact.h1}</h1>
                         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                            Parlons de votre futur compagnon. Les visites se font uniquement sur rendez-vous pour respecter le rythme des chiots.
+                            {pageContent.contact.description}
                         </p>
                     </section>
 
@@ -208,3 +209,4 @@ export default function ContactPage() {
         </>
     )
 }
+

@@ -6,6 +6,7 @@ import { FAQSection } from "@/components/faq"
 import { faqPomsky } from "@/lib/faq-data"
 import type { Metadata } from "next"
 import { pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
+import { pageContent } from "@/lib/page-content"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
 import { generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema-generators"
 import { Feather, Heart, History, Ruler, Scale, ScrollText, Sparkles } from "lucide-react"
@@ -100,13 +101,9 @@ export default function TeckelPage() {
                                 Le pomsky
                             </Badge>
                             <h1 className="text-xl md:text-3xl font-bold">
-                                Le Pomsky : taille, tempérament, origines et adoption
+                                {pageContent.pomsky.h1}
                             </h1>
-                            <p className="text-lg text-muted-foreground leading-relaxed">
-                                Le Pomsky est une race en construction, encore non reconnue par la FCI. Son allure de Husky miniature en
-                                fait un chien très apprécié, mais c'est surtout un compagnon actif qui demande du temps et de la cohérence.
-                                Voici l'essentiel pour bien comprendre la race et adopter de manière responsable.
-                            </p>
+                            <p className="text-lg text-muted-foreground leading-relaxed">{pageContent.pomsky.description}</p>
                             <div className="flex flex-wrap gap-3 text-sm text-muted-foreground">
                                 <div className="flex items-center gap-2">
                                     <Heart className="h-4 w-4 text-primary" aria-hidden="true" />
@@ -481,3 +478,6 @@ export default function TeckelPage() {
         </>
     )
 }
+
+
+

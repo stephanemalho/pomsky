@@ -4,6 +4,7 @@ import { Calendar, Heart, NotebookText, PawPrint, Sprout, Weight } from "lucide-
 import Link from "next/link"
 import type { Metadata } from "next"
 import { pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
+import { pageContent } from "@/lib/page-content"
 import { generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema-generators"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
 import { puppies } from "./puppies"
@@ -51,12 +52,12 @@ export default function NosChiotsPage() {
                 <div className="container mx-auto my-12">
                     <section className="text-center space-y-4 mb-12">
                         <h1
-                            className="text-xl md:text-3xl font-bold">Nos chiots disponibles</h1>
+                            className="text-xl md:text-3xl font-bold">{pageContent.puppies.h1}</h1>
                         <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                            Chez Royal POMSKY, chaque naissance est le fruit d&apos;un choix conscient, réfléchi et profondément respectueux du bien-être animal.
+                            {pageContent.puppies.description}
                         </p>
                         <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                            Notre élevage est dédié aux pomsky Toy rares et exotiques, élevés avec amour, patience et exigence, tant sur le plan de la santé que de l&apos;équilibre émotionnel.
+                            {pageContent.puppies.descriptionSecondary}
                         </p>
                         <div className="w-24 h-1 bg-primary mx-auto rounded-full" aria-hidden="true" />
                     </section>
@@ -219,3 +220,4 @@ export default function NosChiotsPage() {
         </>
     )
 }
+

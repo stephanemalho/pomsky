@@ -10,6 +10,7 @@ import { pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
 import Link from "next/link"
 import { puppies } from "./puppies"
+import { pageContent } from "@/lib/page-content"
 
 export const metadata: Metadata = {
     title: pageMetadata.reproductors.title,
@@ -52,20 +53,12 @@ export default function NosChiotsPage() {
                 <div className="container mx-auto my-12">
                     <section className="text-center space-y-4 mb-12">
                         <h1
-                            className="text-xl md:text-3xl font-bold">Nos chiens reproducteurs</h1>
-                        <h2 className="text-xl md:text-2xl">La famille - Royal POMSKY</h2>
+                            className="text-xl md:text-3xl font-bold">{pageContent.reproductors.h1}</h1>
+                        <h2 className="text-xl md:text-2xl">{pageContent.reproductors.subtitle}</h2>
 
-                        <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                            Les chiens présentés ici sont les reproducteurs de notre élevage Royal POMSKY.
-                            Ils constituent le cœur de notre lignée et participent activement à la transmission
-                            de nos valeurs, tant sur le plan physique que comportemental.
-                        </p>
+                        <p className="text-lg text-muted-foreground max-w-3xl mx-auto">{pageContent.reproductors.description}</p>
 
-                        <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                            Chaque mariage est soigneusement réfléchi et réalisé exclusivement au sein de notre élevage,
-                            dans une démarche responsable visant à préserver la santé, l'équilibre émotionnel
-                            et le type propre aux pomsky Toy rares et exotiques.
-                        </p>
+                        <p className="text-lg text-muted-foreground max-w-3xl mx-auto">{pageContent.reproductors.descriptionSecondary}</p>
 
                         <div className="w-24 h-1 bg-primary mx-auto rounded-full" />
                     </section>
@@ -155,6 +148,8 @@ export default function NosChiotsPage() {
         </>
     )
 }
+
+
 
 
 
