@@ -151,7 +151,7 @@ export default function SejoursPage() {
                         <section className="bg-muted/30 -mx-4 px-4 py-16 rounded-lg">
                             <div className="grid md:grid-cols-2 gap-12 items-center">
                                 <div className="relative h-64 md:h-80 rounded-lg overflow-hidden md:order-2">
-                                    <Image src="/veterinaire.webp" alt="Alimentation premium" fill className="object-cover" />
+                                    <Image src="/pomsky-nurcery-veterinaire.png" alt="Alimentation premium" fill className="object-cover" />
                                 </div>
                                 <div className="space-y-6 md:order-1">
                                     <Badge variant="secondary" className="w-fit">
@@ -182,7 +182,7 @@ export default function SejoursPage() {
                                     </p>
                                 </div>
                                 <div className="relative h-104 md:h-180 rounded-lg overflow-hidden">
-                                    <Image src="/baby-pet.webp" alt="Espace repos des chiots" fill className="object-cover" />
+                                    <Image src="/pomsky-mom-with-her-two-baby.png" alt="Espace repos des chiots" fill className="object-cover" />
                                 </div>
                             </div>
                         </section>

@@ -290,13 +290,13 @@ const puppies: Puppy[] = [
     },
     {
         name: "ROYAL POMSKY 'ALOU'",
-        coat: "Pomsky F3 (parents F2 – ADN Poméranian / Husky)",
+        coat: "Pomsky F3 (parents F2 - ADN Poméranian / Husky)",
         color: "Noire, grise et blanche",
         size: "Toy",
         ruler: "Fourrure : type wooly (longue et douce, aspect laineux)",
         weight: "Taille : 27 cm au garrot • Poids : 5 kg",
         description:
-            "Alou est une femelle Pomsky F3 de catégorie toy, née chez Royal Pomsky, à la robe noire, grise et blanche et au masque bandit très expressif. Son regard vairon lui confère une expression singulière et pleine de caractère. Dotée d’une belle ossature pour son format, elle présente une morphologie équilibrée et harmonieuse. Sa fourrure wooly, longue et douce à l’aspect laineux, renforce son allure élégante. Bien socialisée et attentive, Alou incarne un profil Pomsky toy à la fois typé, stable et attachant.",
+            "Alou est une femelle Pomsky F3 de catégorie toy, née chez Royal Pomsky, à la robe noire, grise et blanche et au masque bandit très expressif. Son regard vairon lui confère une expression singulière et pleine de caractère. Dotée d'une belle ossature pour son format, elle présente une morphologie équilibrée et harmonieuse. Sa fourrure wooly, longue et douce à l'aspect laineux, renforce son allure élégante. Bien socialisée et attentive, Alou incarne un profil Pomsky toy à la fois typé, stable et attachant.",
         highlights: [
             "Femelle",
             "Masque bandit",
@@ -320,7 +320,7 @@ const puppies: Puppy[] = [
         ruler: "Fourrure : type fluffy",
         weight: "Taille : 27 cm au garrot • Poids : 4,6 kg",
         description:
-            "Mogu est une femelle Pomsky F4 née chez Royal Pomsky, de catégorie miniature, à la robe noire et blanche et au regard bleu lumineux. Son masque Fleur de Lys bien dessiné et sa fourrure fluffy lui confèrent une allure douce et expressive, tout en conservant une belle typicité husky. Équilibrée et proche de l’humain, elle présente un tempérament serein et harmonieux. Sa morphologie compacte et proportionnée, associée à une excellente qualité de poil, fait d’elle une femelle F4 miniature élégante et représentative du type Pomsky recherché.",
+            "Mogu est une femelle Pomsky F4 née chez Royal Pomsky, de catégorie miniature, à la robe noire et blanche et au regard bleu lumineux. Son masque Fleur de Lys bien dessiné et sa fourrure fluffy lui confèrent une allure douce et expressive, tout en conservant une belle typicité husky. Équilibrée et proche de l'humain, elle présente un tempérament serein et harmonieux. Sa morphologie compacte et proportionnée, associée à une excellente qualité de poil, fait d'elle une femelle F4 miniature élégante et représentative du type Pomsky recherché.",
         highlights: [
             "Femelle",
             "Génération F4",
@@ -339,7 +339,7 @@ const puppies: Puppy[] = [
     },
     {
         name: "ROYAL POMSKY 'BANDIT'",
-        coat: "Pomsky F5+ (père F5, mère F4 – ADN Poméranian / Husky)",
+        coat: "Pomsky F5+ (père F5, mère F4 - ADN Poméranian / Husky)",
         color: "Bleue (robe exotique)",
         size: "Toy",
         ruler: "Fourrure : standard polaire type Husky",
@@ -365,13 +365,13 @@ const puppies: Puppy[] = [
     },
     {
         name: "ROYAL POMSKY 'SUSHI'",
-        coat: "Pomsky F3 (parents F2 – ADN Poméranian / Husky)",
+        coat: "Pomsky F3 (parents F2 - ADN Poméranian / Husky)",
         color: "Grise et blanche",
         size: "Toy",
         ruler: "Fourrure : standard polaire type Husky",
         weight: "Taille : 29 cm au garrot • Poids : 4,5 kg",
         description:
-            "Sushi est une femelle Pomsky F3 de catégorie toy, née chez Royal Pomsky, à la robe grise et blanche et au regard bleu vif. Petite par la taille mais affirmée par le caractère, elle se distingue par une forte présence au sein du groupe et une capacité naturelle à se faire respecter. Très énergique en extérieur, elle se montre dynamique et volontaire lors des balades, tout en étant particulièrement affectueuse et proche de l’humain. Son masque Fleur de Lys et sa fourrure polaire standard renforcent son expression husky dans un format compact et harmonieux.",
+            "Sushi est une femelle Pomsky F3 de catégorie toy, née chez Royal Pomsky, à la robe grise et blanche et au regard bleu vif. Petite par la taille mais affirmée par le caractère, elle se distingue par une forte présence au sein du groupe et une capacité naturelle à se faire respecter. Très énergique en extérieur, elle se montre dynamique et volontaire lors des balades, tout en étant particulièrement affectueuse et proche de l'humain. Son masque Fleur de Lys et sa fourrure polaire standard renforcent son expression husky dans un format compact et harmonieux.",
         highlights: [
             "Femelle",
             "Caractère affirmé",
