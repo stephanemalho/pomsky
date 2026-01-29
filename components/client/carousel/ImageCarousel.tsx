@@ -3,7 +3,13 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 
-function ImageCarousel({ images, alt }: { images: string[]; alt: string }) {
+type ImageCarouselProps = {
+    images: string[]
+    alt: string
+    priority?: boolean
+}
+
+function ImageCarousel({ images, alt, priority = false }: ImageCarouselProps) {
     const [index, setIndex] = useState(0)
     const total = images.length
     const isOneImage = total === 1
@@ -19,7 +25,8 @@ function ImageCarousel({ images, alt }: { images: string[]; alt: string }) {
                 fill
                 className="object-cover transition duration-300 p-2"
                 sizes="(min-width: 768px) 50vw, 100vw"
-                priority={index === 0}
+                priority={priority}          // ✅ décision externe
+                loading={priority ? "eager" : "lazy"}
             />
             <div className="absolute inset-0 bg-linear-to-t from-black/40 via-transparent to-transparent" />
             <div className="absolute top-3 right-3 text-xs px-3 py-1 rounded-full bg-black/60 text-white">
