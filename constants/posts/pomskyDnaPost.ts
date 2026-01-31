@@ -81,7 +81,7 @@ export const dogAdnTestPost: BlogPost = {
         linkedinUrl: "",
         linkedinLabelPrefix: "Profil de"
     },
-    date: "2021-06-30",
+    date: "2026-02-01",
     readTime: "8 min",
     category: "Santé & génétique",
     tags: [

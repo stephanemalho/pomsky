@@ -74,7 +74,7 @@ export const pomskyToyGuidePost: BlogPost = {
         linkedinUrl: "",
         linkedinLabelPrefix: "Profil de"
     },
-    date: "2025-02-06",
+    date: "2026-02-01",
     readTime: "8 min",
     category: "Race & Conseils",
     tags: [

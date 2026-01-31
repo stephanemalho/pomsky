@@ -67,7 +67,7 @@ export const pomskyGenerationsPost: BlogPost = {
         linkedinUrl: "",
         linkedinLabelPrefix: "Profil de"
     },
-    date: "2021-06-30",
+    date: "2026-02-01",
     readTime: "9 min",
     category: "Élevage & génétique",
     tags: [

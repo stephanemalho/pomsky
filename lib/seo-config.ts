@@ -249,6 +249,21 @@ export const pageMetadata = {
             "cookies",
             "droits des utilisateurs"
         ]
+    },
+    blog: {
+        title: "Blog Pomsky | Conseils, race et bien-etre",
+        description:
+            "Articles sur le Pomsky : race, genetique, sante, caractere, prix et conseils d'adoption.",
+        keywords: [
+            "blog pomsky",
+            "conseils pomsky",
+            "race pomsky",
+            "sante pomsky",
+            "prix pomsky",
+            "caractere pomsky",
+            "genetique pomsky",
+            "adoption pomsky"
+        ]
     }
 };
 

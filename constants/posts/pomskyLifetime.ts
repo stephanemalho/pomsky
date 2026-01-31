@@ -81,7 +81,7 @@ export const pomskyLifeExpectancyPost: BlogPost = {
         linkedinUrl: "",
         linkedinLabelPrefix: "Profil de"
     },
-    date: "2023-04-15",
+    date: "2026-02-01",
     readTime: "10 min",
     category: "Santé & bien-être",
     tags: [

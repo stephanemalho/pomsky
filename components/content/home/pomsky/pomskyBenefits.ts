@@ -1,7 +1,7 @@
 import pomskySize from "@/public/pomsky-standard-size.webp";
 import pomskyFur from "@/public/two-pomsky-puppy.webp";
 import wetPomsky from "@/public/pomsky-wet-night-forest.webp";
-import pomskyEyeColors from "@/public/pomsky-black-and-white-f3-generation.webp";
+import pomskyEyeColors from "@/public/pomsky-eye-colors-blue-brown-heterochromia.webp";
 import pomskyExpressive from "@/public/pomsky-f3-in-the-grass.webp";
 import pomskyPolyvalent from "@/public/pomsky-brown-and-white-f3-generation.webp";
 import { StaticImageData } from "next/image";

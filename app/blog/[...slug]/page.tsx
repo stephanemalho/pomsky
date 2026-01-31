@@ -1,9 +1,11 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { Badge } from "@/components/ui/badge";
 import { blog } from "@/constants/blog/blog";
+import { pageMetadata, siteConfig } from "@/lib/seo-config";
 import type { BlogPost } from "@/constants/blog/blogTypes";
 
 type BlogArticlePageProps = {
@@ -25,6 +27,62 @@ const formatDate = (value: string) =>
 
 export function generateStaticParams() {
     return blog.posts.map((post) => ({ slug: post.slug.split("/") }));
+}
+
+export async function generateMetadata({
+    params,
+}: BlogArticlePageProps): Promise<Metadata> {
+    const resolvedParams = await params;
+    const slug = Array.isArray(resolvedParams.slug)
+        ? resolvedParams.slug.map((segment) => decodeURIComponent(segment)).join("/")
+        : decodeURIComponent(resolvedParams.slug);
+    const post = getPostBySlug(slug);
+
+    if (!post) {
+        return {
+            title: pageMetadata.blog.title,
+            description: pageMetadata.blog.description,
+            alternates: {
+                canonical: new URL("/blog/pomsky", siteConfig.siteUrl).toString(),
+            },
+        };
+    }
+
+    const canonicalPath = `/blog/${post.slug}`;
+    const imageUrl = post.image
+        ? new URL(post.image, siteConfig.siteUrl).toString()
+        : new URL(siteConfig.ogImage, siteConfig.siteUrl).toString();
+
+    return {
+        title: post.title,
+        description: post.excerpt,
+        keywords: post.tags,
+        alternates: {
+            canonical: new URL(canonicalPath, siteConfig.siteUrl).toString(),
+        },
+        openGraph: {
+            title: post.title,
+            description: post.excerpt,
+            url: new URL(canonicalPath, siteConfig.siteUrl).toString(),
+            siteName: siteConfig.name,
+            locale: siteConfig.locale,
+            type: "article",
+            publishedTime: post.date,
+            authors: [post.author.name],
+            images: [
+                {
+                    url: imageUrl,
+                    alt: post.imageAlt ?? post.title,
+                },
+            ],
+        },
+        twitter: {
+            card: "summary_large_image",
+            title: post.title,
+            description: post.excerpt,
+            images: [imageUrl],
+        },
+    };
 }
 
 export default async function BlogArticlePage({

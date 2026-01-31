@@ -60,7 +60,7 @@ export const metadata: Metadata = {
   },
 
   other: {
-    "google-site-verification": "your-google-site-verification-code",
+    "google-site-verification": "your-google-site-verification-code", //@todo remplacer par le vrai code
   },
 }
 

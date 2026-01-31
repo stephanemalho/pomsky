@@ -88,7 +88,7 @@ export const pomskyRenardPost: BlogPost = {
         linkedinUrl: "",
         linkedinLabelPrefix: "Profil de"
     },
-    date: "2023-05-12",
+    date: "2026-02-01",
     readTime: "9 min",
     category: "Variétés & apparences",
     tags: [

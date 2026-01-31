@@ -67,7 +67,7 @@ export const pomskyBeigeYeuxBleusPost: BlogPost = {
         linkedinUrl: "",
         linkedinLabelPrefix: "Profil de"
     },
-    date: "2023-04-16",
+    date: "2026-02-01",
     readTime: "9 min",
     category: "Variétés & apparences",
     tags: [

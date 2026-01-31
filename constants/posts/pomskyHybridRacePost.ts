@@ -95,7 +95,7 @@ export const chienPomskyPost: BlogPost = {
         linkedinUrl: "",
         linkedinLabelPrefix: "Profil de"
     },
-    date: "2023-05-12",
+    date: "2026-02-01",
     readTime: "10 min",
     category: "Race Pomsky",
     tags: [

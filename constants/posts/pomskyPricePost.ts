@@ -88,7 +88,7 @@ export const pomskyPrixPost: BlogPost = {
         linkedinUrl: "",
         linkedinLabelPrefix: "Profil de"
     },
-    date: "2023-04-17",
+    date: "2026-02-01",
     readTime: "10 min",
     category: "Adoption & budget",
     tags: [
