@@ -47,7 +47,7 @@ export default async function BlogArticlePage({
                     href="/blog"
                     className="text-xs uppercase tracking-[0.2em] text-slate-500 underline hover:text-slate-700"
                 >
-                  ← {articleLabels.backToBlog}
+                    ← {articleLabels.backToBlog}
                 </Link>
                 <div className="mt-6 flex flex-col gap-4">
                     <p className="text-xs uppercase tracking-[0.3em] text-slate-500">
@@ -129,12 +129,18 @@ export default async function BlogArticlePage({
                         </h3>
                         <p className="text-sm text-slate-600">{post.author.role}</p>
                         {post.contactCta?.label ? (
-                            <div className="mt-4">
+                            <div className="flex items-center justify-between mt-4">
                                 <Link
                                     href="/contact"
                                     className="inline-flex items-center gap-2 rounded-full border border-slate-900 px-4 py-2 text-xs uppercase tracking-[0.2em] text-slate-900"
                                 >
                                     {post.contactCta.label}
+                                </Link>
+                                <Link
+                                    href="/blog"
+                                    className="text-xs uppercase tracking-[0.2em] text-slate-500 underline hover:text-slate-700"
+                                >
+                                    ← {articleLabels.backToBlog}
                                 </Link>
                             </div>
                         ) : null}

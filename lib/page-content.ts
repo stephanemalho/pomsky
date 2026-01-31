@@ -3,11 +3,11 @@ export const pageContent = {
         h1: "Royal Pomsky",
         h1Subtitle: "Premier élevage de Pomsky en France, et de lignées Américaines",
         description:
-            "Notre élevage se situe dans la commune de SAINT-AMOUR (39160) en région Bourgogne Franche Comté est le premier élevage de Pomsky en France ayant fait le choix de débuter sa sélection en 2017 avec des lignées Américaines : directement au berceau de la race, pour amener en France le Pomsky absolument parfait.",
+            "Royal Pomsky se situe dans la commune de SAINT-AMOUR (39160) en région Bourgogne Franche Comté. C'est le premier élevage de Pomsky en France ayant fait le choix de débuter sa sélection en 2017 avec des lignées Américaines : directement au berceau de la race, pour amener en France le Pomsky absolument parfait.",
         descriptionSecondary:
-            "Depuis notre première portée née en 2018 notre objectif est de vous apporter le meilleur et l'excellence version Pomsky : Un physique parfait, une santé de fer, une expertise comportementale, une sociabilisation parfaite, un suivi tout au long de la vie du chiot.",
+            "Depuis notre première portée née en 2018, notre objectif est de vous apporter le meilleur et l'excellence version Pomsky : Un physique parfait, une santé de fer, une expertise comportementale, une sociabilisation parfaite, un suivi tout au long de la vie du chiot.",
         descriptionTertiary:
-            "Nous avons rédigé plusieurs articles contenant de très nombreuses informations, merci d'en prendre connaissance avant d'envisager l'adoption de votre chiot ! Vous pourrez consulter la page de nos chiots pomsky disponibles en cliquant ci-dessous :"
+            "Nous avons rédigé plusieurs articles contenant de très nombreuses informations, merci d'en prendre connaissance avant d'envisager l'adoption de votre chiot ! Vous pourrez ensuite consulter la page de nos chiots pomsky disponibles en cliquant ci-dessous :"
     },
     pomsky: {
         h1: "Le Pomsky : taille, tempérament, origines et adoption",

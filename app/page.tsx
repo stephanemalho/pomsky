@@ -8,7 +8,7 @@ import type { Metadata } from "next"
 import { pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
 import { generateLocalBusinessSchema, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/schema-generators"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
-import { dachshundBenefits } from "@/components/content/home/dashshund/dachshundBenefits"
+import { pomskyBenefits } from "@/components/content/home/pomsky/pomskyBenefits"
 import { pageContent } from "@/lib/page-content"
 
 export const metadata: Metadata = {
@@ -148,17 +148,17 @@ export default function HomePage() {
                 </h2>
 
                 <p className="text-muted-foreground leading-relaxed">
-                  Alors que la création de la race commençait à arriver en France et s'effectuait par des croisements au résultat aléatoire, aux caractéristiques physiques et comportementales peu précises, nous avons fait le choix d'importer nos premiers Pomsky directement aux États Unis d'Amérique dans le but d'apporter aux futurs adoptants de nos chiots un physique prévisible, un comportement prévisible, et une construction de la race avec une stabilisation des le départ : chez nous, aucune place pour le hasard depuis le début.
+                  Alors que la création de la race commençait à arriver en France et s'effectuait par des croisements au résultat aléatoire, aux caractéristiques physiques et comportementales peu précises, <strong>nous avons fait le choix d'importer nos premiers Pomsky directement aux États Unis d'Amérique</strong> dans le but d'apporter aux futurs adoptants de nos chiots un physique prévisible, un comportement prévisible, et une construction de la race avec une stabilisation des le départ : chez nous, aucune place pour le hasard depuis le début.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  Nos Pomsky sont uniques et font entièrement partie de notre univers, ils sont nos protégés ! Ils sont aimés et représentent notre passion et notre fierté, ils sont dans nos pensées permanentes, nous accompagnent à chaque instant.
+                  <strong>Nos Pomsky sont uniques et font entièrement partie de notre univers</strong>, ils sont nos protégés ! Ils sont aimés et représentent notre passion et notre fierté, ils sont dans nos pensées permanentes, nous accompagnent à chaque instant.
                   ils sont constamment au cœur de nos préoccupations.
                 </p>
 
                 <div className="space-y-2">
                   <p className="font-semibold">Des Pomsky de toutes tailles élevées dans le bonheur</p>
                   <p className="text-sm text-muted-foreground">
-                    Notre élevage situé dans le Jura (39), en France. Chez Royal Pomsky, nous n'expédions jamais nos chiots à distance. Ils sont
+                    Notre élevage est situé dans le Jura (39), en France. <strong>Chez Royal Pomsky, nous n'expédions jamais nos chiots à distance, sauf cas particulier ( raison de santé etc… )</strong> votre demande sera étudiée. Ils sont
                     à adopter sur place, après visite de l'élevage et rencontre avec les parents.
                   </p>
                 </div>
@@ -218,8 +218,10 @@ export default function HomePage() {
               </h2>
 
               <p className="text-muted-foreground max-w-3xl mx-auto">
-                Petit chien au grand cœur, le pomsky nain et le pomsky Toy sont deux
-                variétés de petit gabarit, reconnues pour leur intelligence vive et leur
+                Petit chien au grand cœur, <strong>
+                  le pomsky nain et le pomsky Toy sont deux
+                  variétés de petit gabarit
+                </strong>, reconnues pour leur intelligence vive et leur
                 grande proximité avec leur famille.
               </p>
 
@@ -227,7 +229,7 @@ export default function HomePage() {
             </div>
 
             <div className="grid md:grid-cols-3 gap-6">
-              {dachshundBenefits.map((item) => (
+              {pomskyBenefits.map((item) => (
                 <Card key={item.title} className="overflow-hidden bg-muted/70 p-2">
                   <div className="relative aspect-4/3 rounded-lg overflow-hidden">
                     <Image
