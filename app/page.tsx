@@ -35,7 +35,7 @@ export default function HomePage() {
   const founders = [
     {
       name: "Aurélie",
-      image: "/aurelie-moshi.webp",
+      image: "/assets/authors/aurelie-violette-elevage-royal-pomsky.jpg",
       description:
         "Aurelie & Moshi ( la chihuahua ) est une passionnée par les animaux depuis toujours : ancienne éducatrice comportementaliste, elle a collaboré avec de nombreux centres de rééducation, éducation canine ainsi que des associations de protection animale : après des années de pratique elle se spécialise dans l'élevage canin : depuis 2018, le Pomsky est la race de cœur qui a convaincu Aurelie de se laisser guider vers le métier exclusif d'éleveur : Marine et moi étions originaire du VAR (83) et avons changé de région suite au développement de notre élevage de Pomsky, et à cette occasion nous avons rencontré le pomsky, chien de chasse relativement populaire dans le Jura et en région bourgogne franche compté. Suite à cela notre coup de cœur s'est porté sur les pomsky de très petite taille : les Toy qui pèsent moins de 3kg ! Ainsi que les pomsky standards de couleur exotique qui ressemblent à leur cousins le braque de Weimar mais en version absolument miniature !  Aurélie met ses compétences dans le développement et le bien être animal. Des chiots à l Socialisation parfaite, des protocoles précis pour accompagner les familles adoptantes durant toutes les étapes de la vie du chiot et jusqu'à l'âge adulte ! Moshi, la chihuahua de compagnie partage notre quotidien, elle est également présente pour l'éducation de nos petits pomsky !! Elle veille à ce que les codes canins soient respectés, une véritable Tati qui aide de façon bienveillante chaque maman dans son processus d'apprentissage. Une chihuahua au caractère fort et au cœur tendre : une super nanny",
       badges: [
@@ -46,7 +46,7 @@ export default function HomePage() {
     },
     {
       name: "Marine",
-      image: "/marine-ava.webp",
+      image: "/assets/authors/marine-elevage-royal-pomsky.jpg",
       description:
         "Marine est passionnée par le monde de l'élevage et a changé de vie pour se consacrer à leur développement depuis 4 ans !  Eleveuse de primitifs avant tout, elle est née en Bourgogne Franche comté, ce n'est qu'en retournant dans la région de sa naissance et en découvrant le caractère du pomsky, très apprécié par les chasseurs mais également par les personnes désirant un chien de compagnie affectueux, qu'elle a décidé de suivre Aurelie dans l'aventure, ayant une préférence pour les pomsky de taille Toy, pour leur taille extrêmement petite !  Marine est une véritable perfectionniste : avec elle les locaux doivent être entretenus de façon très protocolaire afin que nos chiots évoluent dans des conditions optimales pour leur santé et leur bien être. Chaque chiot est soigneusement ausculté chaque jour, elle porte attention à chaque caractère également grâce à son instinct d'anticipation, chaque petit est bichonné dès sa naissance ! « L'idée n'est pas de présenter le pomsky comme un chien de chasse mais bel et bien un chien de compagnie adapté à la vie citadine »",
       badges: [
