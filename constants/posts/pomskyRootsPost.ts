@@ -2,7 +2,7 @@ import type { BlogPost } from "@/constants/blog/blogTypes";
 
 export const pomskyHistoryPost: BlogPost = {
     id: "histoire-origines-pomsky",
-    slug: "quelle-est-lhistoire-du-pomsky-les-origines-du-chien-pomsky",
+    slug: "pomsky/origine/quelle-est-lhistoire-du-pomsky-les-origines-du-chien-pomsky",
     title: "Quelle est l'histoire du Pomsky ? Les origines du chien Pomsky",
     excerpt:
         "D'où vient le Pomsky ? Découvrez l'histoire, l'héritage génétique et les besoins de cette nouvelle génération de chiens hybrides issue du Husky Sibérien et du Spitz nain.",
@@ -91,3 +91,4 @@ export const pomskyHistoryPost: BlogPost = {
         label: "Contacter l'élevage"
     }
 };
+

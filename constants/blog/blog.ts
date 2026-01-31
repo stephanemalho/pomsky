@@ -23,7 +23,7 @@ export const blog: BlogContentType = {
         subtitle:
             "Race, élevage responsable, éducation et bien-être du Pomsky au quotidien.",
         cta: "Découvrir nos chiots",
-        linkTo: "/chiots",
+        linkTo: "/chiots-disponibles",
         Icon: "paw",
         color: "orange"
     },
@@ -60,6 +60,38 @@ export const blog: BlogContentType = {
             name: "Santé & entretien",
             description: "Santé, alimentation et soins du Pomsky",
             slug: "sante-entretien"
+        }
+    ],
+    themes: [
+        {
+            slug: "caracteristique",
+            label: "Caractéristiques",
+            description: "Taille, caractÃ¨re et vie avec le chien"
+        },
+        {
+            slug: "apparence",
+            label: "Apparence & robe",
+            description: "Couleurs, pelages et variations physiques"
+        },
+        {
+            slug: "origine",
+            label: "Origines",
+            description: "Histoire et racines des races"
+        },
+        {
+            slug: "genetique",
+            label: "Génétique",
+            description: "Générations, ADN et croisements"
+        },
+        {
+            slug: "prix",
+            label: "Prix & adoption",
+            description: "Budget, éleveurs et conseils d'achat"
+        },
+        {
+            slug: "sante",
+            label: "Santé & bien-être",
+            description: "Longévité, soins et entretien"
         }
     ],
     posts: [

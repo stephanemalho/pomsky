@@ -2,7 +2,7 @@ import type { BlogPost } from "@/constants/blog/blogTypes";
 
 export const pomskyBeigeYeuxBleusPost: BlogPost = {
     id: "pomsky-beige-yeux-bleus",
-    slug: "pomsky-beige-aux-yeux-bleus-decouverte-de-cette-incroyable-variete-de-chien",
+    slug: "pomsky/apparence/pomsky-beige-aux-yeux-bleus-decouverte-de-cette-incroyable-variete-de-chien",
     title: "Pomsky beige aux yeux bleus : découverte de cette incroyable variété de chien",
     excerpt:
         "Le Pomsky beige aux yeux bleus séduit par son pelage clair et son regard intense. Découvrez ses caractéristiques physiques, son tempérament, sa santé et les bonnes pratiques d'élevage.",
@@ -84,3 +84,4 @@ export const pomskyBeigeYeuxBleusPost: BlogPost = {
         label: "Contacter l'élevage"
     }
 };
+

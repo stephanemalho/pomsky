@@ -2,7 +2,7 @@ import type { BlogPost } from "@/constants/blog/blogTypes";
 
 export const pomskyNoirYeuxBleusPost: BlogPost = {
     id: "pomsky-noir-yeux-bleus",
-    slug: "pomsky-noir-aux-yeux-bleus-decouvrez-ce-magnifique-chien-au-regard-envoutant",
+    slug: "pomsky/apparence/pomsky-noir-aux-yeux-bleus-decouvrez-ce-magnifique-chien-au-regard-envoutant",
     title: "Pomsky noir aux yeux bleus : découvrez ce magnifique chien au regard envoûtant",
     excerpt:
         "Le Pomsky noir aux yeux bleus fascine par son apparence unique et son regard intense. Découvrez ses caractéristiques physiques, son tempérament, ses besoins et les bonnes pratiques d'élevage.",
@@ -105,3 +105,4 @@ export const pomskyNoirYeuxBleusPost: BlogPost = {
         label: "Contacter l'élevage"
     }
 };
+

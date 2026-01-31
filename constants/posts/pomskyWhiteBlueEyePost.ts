@@ -2,7 +2,7 @@ import type { BlogPost } from "@/constants/blog/blogTypes";
 
 export const pomskyBlancYeuxBleusPost: BlogPost = {
     id: "pomsky-blanc-yeux-bleus",
-    slug: "pomsky-blanc-et-yeux-bleus-immersion-dans-lunivers-de-cette-race-captivante",
+    slug: "pomsky/apparence/pomsky-blanc-et-yeux-bleus-immersion-dans-lunivers-de-cette-race-captivante",
     title: "Pomsky blanc et yeux bleus : immersion dans l'univers de cette race captivante",
     excerpt:
         "Le Pomsky blanc aux yeux bleus séduit par son pelage lumineux et son regard envoûtant. Découvrez son origine, son caractère, ses besoins et les points clés à connaître avant l'adoption.",
@@ -105,3 +105,4 @@ export const pomskyBlancYeuxBleusPost: BlogPost = {
         label: "Contacter l'élevage"
     }
 };
+

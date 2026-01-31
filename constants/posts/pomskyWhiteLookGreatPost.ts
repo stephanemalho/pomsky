@@ -2,7 +2,7 @@ import type { BlogPost } from "@/constants/blog/blogTypes";
 
 export const pomskyBlancPost: BlogPost = {
     id: "pomsky-blanc",
-    slug: "le-pomsky-blanc-une-race-de-chien-au-look-irresistible",
+    slug: "pomsky/apparence/le-pomsky-blanc-une-race-de-chien-au-look-irresistible",
     title: "Le Pomsky blanc : une race de chien au look irrésistible",
     excerpt:
         "Avec son pelage clair, son regard vif et son tempérament attachant, le Pomsky blanc séduit de nombreux amoureux des chiens. Découvrez ses origines, ses caractéristiques et les clés pour bien vivre avec lui.",
@@ -112,3 +112,4 @@ export const pomskyBlancPost: BlogPost = {
         label: "Contacter l'élevage"
     }
 };
+

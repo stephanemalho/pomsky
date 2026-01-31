@@ -2,7 +2,7 @@ import type { BlogPost } from "@/constants/blog/blogTypes";
 
 export const pomskyGenerationsPost: BlogPost = {
     id: "pomsky-f1-f2-f3",
-    slug: "pomsky-f1-f2-f3-cest-quoi",
+    slug: "pomsky/genetique/pomsky-f1-f2-f3-cest-quoi",
     title: "Pomsky F1, F2, F3 : c'est quoi ?",
     excerpt:
         "Que signifient les générations F1, F2 et F3 chez le Pomsky ? Découvrez la généalogie, les différences entre chaque palier et les enjeux de l'élevage responsable.",
@@ -84,3 +84,4 @@ export const pomskyGenerationsPost: BlogPost = {
         label: "Contacter l'élevage"
     }
 };
+

@@ -2,7 +2,7 @@ import type { BlogPost } from "@/constants/blog/blogTypes";
 
 export const spitzNainPost: BlogPost = {
     id: "spitz-nain",
-    slug: "le-spitz-nain",
+    slug: "spitz/caracteristique/le-spitz-nain",
     title: "Le Spitz nain : caractéristiques, origines et prix",
     excerpt:
         "Le Spitz nain, aussi appelé loulou de Poméranie, séduit par son apparence élégante, son intelligence et son tempérament vif. Découvrez son histoire, son caractère, ses besoins et son prix.",
@@ -84,3 +84,4 @@ export const spitzNainPost: BlogPost = {
         label: "Contacter l'élevage"
     }
 };
+

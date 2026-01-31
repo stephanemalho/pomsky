@@ -2,7 +2,7 @@ import type { BlogPost } from "@/constants/blog/blogTypes";
 
 export const pomskyAdultePost: BlogPost = {
     id: "pomsky-adulte",
-    slug: "le-pomsky-adulte-tout-ce-que-vous-devez-savoir-sur-cette-race-unique",
+    slug: "pomsky/caracteristique/le-pomsky-adulte-tout-ce-que-vous-devez-savoir-sur-cette-race-unique",
     title: "Le Pomsky adulte : tout ce que vous devez savoir sur cette race unique",
     excerpt:
         "Le Pomsky adulte séduit par son apparence de Husky miniature et son caractère affectueux. Découvrez ses caractéristiques, ses besoins, son alimentation et les clés pour bien l'accompagner au quotidien.",
@@ -98,3 +98,4 @@ export const pomskyAdultePost: BlogPost = {
         label: "Contacter l'élevage"
     }
 };
+

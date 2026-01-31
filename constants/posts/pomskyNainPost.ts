@@ -2,7 +2,7 @@ import type { BlogPost } from "../blog/blogTypes";
 
 export const pomskyNainPost: BlogPost = {
     id: "pomsky-nain-compagnon",
-    slug: "decouvrez-le-pomsky-nain-un-adorable-compagnon-a-quatre-pattes",
+    slug: "pomsky/caracteristique/decouvrez-le-pomsky-nain-un-adorable-compagnon-a-quatre-pattes",
     title: "Découvrez le pomsky nain : un adorable compagnon à quatre pattes",
     excerpt:
         "Le pomsky nain séduit par sa petite taille, son apparence unique et son caractère affectueux. Découvrez ses origines, son tempérament, ses besoins et les points clés avant l'adoption.",
@@ -107,3 +107,4 @@ export const pomskyNainPost: BlogPost = {
         label: "Contacter l'élevage"
     }
 };
+

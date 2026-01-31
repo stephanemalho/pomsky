@@ -93,9 +93,9 @@ export default function RootLayout({
       </head>
       <body className={`${questrial.className} ${questrial.variable}`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-          <div className="min-h-screen bg-background">
+          <div className="min-h-screen bg-background flex flex-col">
             <Navigation />
-            <main id="main-content" className="px-4 sm:px-6 lg:px-8">
+            <main id="main-content" className="px-4 sm:px-6 lg:px-8 flex-1">
               {children}
             </main>
             <Footer />

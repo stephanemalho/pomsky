@@ -2,7 +2,7 @@ import type { BlogPost } from "@/constants/blog/blogTypes";
 
 export const chienPomskyPost: BlogPost = {
     id: "chien-pomsky-race-hybride",
-    slug: "le-chien-pomsky-une-race-hybride-qui-fait-fondre-les-coeurs",
+    slug: "pomsky/caracteristique/le-chien-pomsky-une-race-hybride-qui-fait-fondre-les-coeurs",
     title: "Le chien Pomsky : une race hybride qui fait fondre les cœurs",
     excerpt:
         "Le Pomsky séduit par son apparence de petit loup, son intelligence et son caractère affectueux. Découvrez l'origine de cette race hybride, son mode de vie, ses besoins et les raisons de son succès.",
@@ -112,3 +112,4 @@ export const chienPomskyPost: BlogPost = {
         label: "Contacter l'élevage"
     }
 };
+

@@ -2,7 +2,7 @@ import type { BlogPost } from "@/constants/blog/blogTypes";
 
 export const dogAdnTestPost: BlogPost = {
     id: "test-adn-chien",
-    slug: "a-quoi-sert-test-adn-chien",
+    slug: "pomsky/genetique/a-quoi-sert-test-adn-chien",
     title: "À quoi sert le test ADN d'un chien ?",
     excerpt:
         "Pourquoi réaliser un test ADN pour son chien ? Découvrez son utilité, son fonctionnement, les informations obtenues et l'intérêt particulier pour les races comme le Pomsky.",
@@ -98,3 +98,4 @@ export const dogAdnTestPost: BlogPost = {
         label: "Contacter l'élevage"
     }
 };
+

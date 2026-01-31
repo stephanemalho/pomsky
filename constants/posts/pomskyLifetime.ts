@@ -2,7 +2,7 @@ import type { BlogPost } from "@/constants/blog/blogTypes";
 
 export const pomskyLifeExpectancyPost: BlogPost = {
     id: "pomsky-duree-de-vie",
-    slug: "duree-de-vie-du-pomsky-guide-complet-pour-prolonger-la-sante-de-votre-chien",
+    slug: "pomsky/sante/duree-de-vie-du-pomsky-guide-complet-pour-prolonger-la-sante-de-votre-chien",
     title: "Durée de vie du Pomsky : guide complet pour prolonger la santé de votre chien",
     excerpt:
         "Quelle est la durée de vie d'un Pomsky ? Découvrez les facteurs clés qui influencent sa longévité et les bonnes pratiques pour préserver la santé et le bien-être de votre chien.",
@@ -98,3 +98,4 @@ export const pomskyLifeExpectancyPost: BlogPost = {
         label: "Contacter l'élevage"
     }
 };
+

@@ -7,7 +7,7 @@ import { blog } from "@/constants/blog/blog";
 import type { BlogPost } from "@/constants/blog/blogTypes";
 
 type BlogArticlePageProps = {
-    params: { slug: string } | Promise<{ slug: string }>;
+    params: { slug: string[] } | Promise<{ slug: string[] }>;
 };
 
 const getPostBySlug = (slug: string): BlogPost | undefined =>
@@ -24,14 +24,16 @@ const formatDate = (value: string) =>
     });
 
 export function generateStaticParams() {
-    return blog.posts.map((post) => ({ slug: post.slug }));
+    return blog.posts.map((post) => ({ slug: post.slug.split("/") }));
 }
 
 export default async function BlogArticlePage({
     params,
 }: BlogArticlePageProps) {
     const resolvedParams = await params;
-    const slug = decodeURIComponent(resolvedParams.slug);
+    const slug = Array.isArray(resolvedParams.slug)
+        ? resolvedParams.slug.map((segment) => decodeURIComponent(segment)).join("/")
+        : decodeURIComponent(resolvedParams.slug);
     const post = getPostBySlug(slug);
 
     if (!post) {
@@ -41,25 +43,25 @@ export default async function BlogArticlePage({
     const { articleLabels } = blog;
 
     return (
-        <main className="bg-[#fcfbf9] text-slate-900">
+        <main className="bg-background text-foreground">
             <header className="max-w-4xl mx-auto px-6 pt-12 md:pt-16 pb-8">
                 <Link
-                    href="/blog"
-                    className="text-xs uppercase tracking-[0.2em] text-slate-500 underline hover:text-slate-700"
+                    href="/blog/pomsky"
+                    className="text-xs uppercase tracking-[0.2em] text-muted-foreground underline hover:text-foreground/80"
                 >
                     ← {articleLabels.backToBlog}
                 </Link>
                 <div className="mt-6 flex flex-col gap-4">
-                    <p className="text-xs uppercase tracking-[0.3em] text-slate-500">
+                    <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">
                         {post.category}
                     </p>
-                    <h1 className="text-3xl md:text-5xl font-serif font-semibold leading-tight bg-linear-to-r from-slate-900 via-primary to-slate-900 text-transparent bg-clip-text">
+                    <h1 className="text-3xl md:text-5xl font-serif font-semibold leading-tight bg-linear-to-r from-foreground via-primary to-foreground text-transparent bg-clip-text">
                         {post.title}
                     </h1>
-                    <p className="text-base md:text-lg text-slate-600 leading-relaxed">
+                    <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
                         {post.introduction}
                     </p>
-                    <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.2em] text-slate-500">
+                    <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.2em] text-muted-foreground">
                         <span>{formatDate(post.date)}</span>
                         <span>•</span>
                         <span>{post.readTime}</span>
@@ -69,7 +71,7 @@ export default async function BlogArticlePage({
 
             {post.image ? (
                 <section className="max-w-5xl mx-auto px-6">
-                    <div className="relative aspect-video w-full overflow-hidden rounded-3xl bg-slate-200">
+                    <div className="relative aspect-video w-full overflow-hidden rounded-3xl bg-muted">
                         <Image
                             src={post.image}
                             alt={post.imageAlt ?? post.title}
@@ -81,10 +83,10 @@ export default async function BlogArticlePage({
                 </section>
             ) : null}
 
-            <article className="max-w-3xl mx-auto px-6 py-12 md:py-14 text-slate-700">
+            <article className="max-w-3xl mx-auto px-6 py-12 md:py-14 text-muted-foreground">
                 <div className="flex flex-wrap gap-2 mb-10">
                     {post.tags.map((tag) => (
-                        <Badge key={tag} variant="outline" className="text-slate-600">
+                        <Badge key={tag} variant="outline" className="text-muted-foreground">
                             {tag}
                         </Badge>
                     ))}
@@ -93,7 +95,7 @@ export default async function BlogArticlePage({
                 <div className="space-y-12">
                     {post.sections.map((section) => (
                         <section key={section.subtitle} id={toSectionId(section.subtitle)}>
-                            <h2 className="text-2xl md:text-3xl font-serif font-semibold text-slate-900 mb-4">
+                            <h2 className="text-2xl md:text-3xl font-serif font-semibold text-foreground mb-4">
                                 {section.subtitle}
                             </h2>
                             <div className="space-y-4 leading-relaxed">
@@ -107,8 +109,8 @@ export default async function BlogArticlePage({
             </article>
 
             <aside className="max-w-3xl mx-auto px-6 pb-16">
-                <div className="rounded-3xl border border-slate-200 bg-white p-6 md:p-8 flex flex-col md:flex-row gap-6 items-center md:items-start">
-                    <div className="relative h-20 w-20 overflow-hidden rounded-full bg-slate-200">
+                <div className="rounded-3xl border border-border bg-card p-6 md:p-8 flex flex-col md:flex-row gap-6 items-center md:items-start">
+                    <div className="relative h-20 w-20 overflow-hidden rounded-full bg-muted">
                         <Image
                             src={post.author.imageSrc}
                             alt={post.author.imageAlt}
@@ -118,27 +120,27 @@ export default async function BlogArticlePage({
                         />
                     </div>
                     <div className="flex-1 text-center md:text-left">
-                        <p className="text-xs uppercase tracking-[0.2em] text-slate-500">
+                        <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">
                             {articleLabels.contactAuthorTemplate.replace(
                                 "{author}",
                                 post.author.name
                             )}
                         </p>
-                        <h3 className="mt-2 text-xl font-serif font-semibold text-slate-900">
+                        <h3 className="mt-2 text-xl font-serif font-semibold text-foreground">
                             {post.author.name}
                         </h3>
-                        <p className="text-sm text-slate-600">{post.author.role}</p>
+                        <p className="text-sm text-muted-foreground">{post.author.role}</p>
                         {post.contactCta?.label ? (
                             <div className="flex items-center justify-between mt-4">
                                 <Link
                                     href="/contact"
-                                    className="inline-flex items-center gap-2 rounded-full border border-slate-900 px-4 py-2 text-xs uppercase tracking-[0.2em] text-slate-900"
+                                    className="inline-flex items-center gap-2 rounded-full border border-foreground px-4 py-2 text-xs uppercase tracking-[0.2em] text-foreground"
                                 >
                                     {post.contactCta.label}
                                 </Link>
                                 <Link
-                                    href="/blog"
-                                    className="text-xs uppercase tracking-[0.2em] text-slate-500 underline hover:text-slate-700"
+                                    href="/blog/pomsky"
+                                    className="text-xs uppercase tracking-[0.2em] text-muted-foreground underline hover:text-foreground/80"
                                 >
                                     ← {articleLabels.backToBlog}
                                 </Link>
@@ -150,3 +152,4 @@ export default async function BlogArticlePage({
         </main>
     );
 }
+

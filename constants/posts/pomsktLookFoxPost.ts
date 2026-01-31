@@ -2,7 +2,7 @@ import type { BlogPost } from "@/constants/blog/blogTypes";
 
 export const pomskyRenardPost: BlogPost = {
     id: "pomsky-renard",
-    slug: "le-pomsky-renard-decouvrez-ce-chien-au-look-de-petit-renard",
+    slug: "pomsky/apparence/le-pomsky-renard-decouvrez-ce-chien-au-look-de-petit-renard",
     title: "Le Pomsky renard : découvrez ce chien au look de petit renard",
     excerpt:
         "Avec son pelage dense, sa taille compacte et son allure espiègle, le Pomsky renard séduit par son apparence unique. Découvrez ses caractéristiques, son comportement et les clés pour bien l'adopter.",

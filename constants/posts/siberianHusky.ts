@@ -2,7 +2,7 @@ import type { BlogPost } from "@/constants/blog/blogTypes";
 
 export const huskySiberienPost: BlogPost = {
     id: "husky-siberien",
-    slug: "le-husky-siberian",
+    slug: "husky/caracteristique/le-husky-siberian",
     title: "Le Husky Sibérien : le légendaire chien de traîneau",
     excerpt:
         "Originaire de Sibérie, le Husky Sibérien est un chien emblématique au regard fascinant. Découvrez son histoire, son caractère, son éducation et les points clés à connaître avant d'adopter.",
@@ -91,3 +91,4 @@ export const huskySiberienPost: BlogPost = {
         label: "Contacter l'élevage"
     }
 };
+

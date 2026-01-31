@@ -2,7 +2,7 @@ import type { BlogPost } from "../blog/blogTypes";
 
 export const pomskyToyGuidePost: BlogPost = {
     id: "pomsky-toy-guide",
-    slug: "tout-savoir-sur-le-pomsky-toy-race-caracteristiques-et-conseils",
+    slug: "pomsky/caracteristique/tout-savoir-sur-le-pomsky-toy-race-caracteristiques-et-conseils",
     title: "Tout savoir sur le pomsky toy : race, caractéristiques et conseils",
     excerpt:
         "Le pomsky toy séduit par sa petite taille, son apparence nordique et son tempérament affectueux. Découvrez ses origines, son caractère, ses besoins et les bonnes pratiques pour l'adopter.",
@@ -91,3 +91,4 @@ export const pomskyToyGuidePost: BlogPost = {
         label: "Contacter l'éleveur"
     }
 };
+

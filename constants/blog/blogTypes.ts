@@ -43,6 +43,12 @@ export type BlogCategory = {
     slug: string;
 };
 
+export type BlogTheme = {
+    slug: string;
+    label: string;
+    description?: string;
+};
+
 export type BlogHero = {
     title: string;
     subtitle: string;
@@ -60,6 +66,7 @@ export type BlogContentType = {
     };
     allCategory: BlogAllCategory;
     categories: BlogCategory[];
+    themes: BlogTheme[];
     posts: BlogPost[];
     filterLabels: {
         all: string;

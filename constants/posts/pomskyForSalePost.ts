@@ -2,7 +2,7 @@ import type { BlogPost } from "@/constants/blog/blogTypes";
 
 export const pomskyAVendrePost: BlogPost = {
     id: "pomsky-a-vendre",
-    slug: "pomsky-a-vendre-comment-choisir-le-bon-eleveur-et-le-chiot-parfait-pour-vous",
+    slug: "pomsky/prix/pomsky-a-vendre-comment-choisir-le-bon-eleveur-et-le-chiot-parfait-pour-vous",
     title: "Pomsky à vendre : comment choisir le bon éleveur et le chiot parfait pour vous",
     excerpt:
         "Vous souhaitez acheter un Pomsky en France ? Découvrez comment choisir un éleveur sérieux, comprendre les critères de sélection et adopter le chiot Pomsky qui correspond à votre mode de vie.",
@@ -105,3 +105,4 @@ export const pomskyAVendrePost: BlogPost = {
         label: "Contacter l'élevage"
     }
 };
+
