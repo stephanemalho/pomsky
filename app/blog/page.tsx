@@ -21,7 +21,7 @@ export default function BlogPage() {
                         <p className="text-xs uppercase tracking-[0.3em] text-slate-900">
                             Journal du Pomsky
                         </p>
-                        <h1 className="text-3xl md:text-5xl font-serif font-semibold leading-tight">
+                        <h1 className="text-3xl md:text-5xl font-serif font-semibold leading-tight bg-linear-to-r from-slate-900 via-primary to-slate-900 text-transparent bg-clip-text">
                             {hero.title}
                         </h1>
                         <p className="text-base md:text-lg text-slate-600 max-w-2xl">
@@ -40,7 +40,6 @@ export default function BlogPage() {
                         </div>
                     </div>
                 </div>
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,#f9f7f4,transparent_65%)] pointer-events-none" />
             </section>
 
             <section className="max-w-6xl mx-auto px-6 py-12 md:py-16">

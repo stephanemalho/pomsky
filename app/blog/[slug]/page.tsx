@@ -53,7 +53,7 @@ export default async function BlogArticlePage({
                     <p className="text-xs uppercase tracking-[0.3em] text-slate-500">
                         {post.category}
                     </p>
-                    <h1 className="text-3xl md:text-5xl font-serif font-semibold leading-tight">
+                    <h1 className="text-3xl md:text-5xl font-serif font-semibold leading-tight bg-linear-to-r from-slate-900 via-primary to-slate-900 text-transparent bg-clip-text">
                         {post.title}
                     </h1>
                     <p className="text-base md:text-lg text-slate-600 leading-relaxed">
