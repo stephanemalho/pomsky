@@ -9,7 +9,7 @@ import { pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
 import { pageContent } from "@/lib/page-content"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
 import { generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema-generators"
-import { Feather, Heart, History, Ruler, Scale, ScrollText, Sparkles } from "lucide-react"
+import { Feather, Heart, History, PawPrint, Ruler, Scale, ScrollText, Sparkles } from "lucide-react"
 
 export const metadata: Metadata = {
     title: pageMetadata.pomsky.title,
@@ -28,28 +28,31 @@ export const metadata: Metadata = {
 
 const sizes = [
     {
-        title: pageContent.pomsky.h3Standard,
-        chest: "41 à 45 cm",
-        weight: "9 à 12 kg",
-        text: "Le plus grand gabarit. Il conserve l'allure du Husky miniature et demande de vraies sorties quotidiennes.",
-        image: "/black-and-white-pomsky-L4-size.webp",
-        alt: "Pomsky noir et blanc de taille standard assis dans l'herbe",
+        title: pageContent.pomsky.h3toy,
+        chest: "25 à 34 cm",
+        weight: "3,5 à 5 kg",
+        text: "Le plus petit gabarit. Très proche de ses humains, expressif et joueur, c'est le plus petit de tous les Pomsky ! Il représente la taille d'un husky à deux mois, durant toute sa vie. Le toy est énergique, sa petite taille n'en fait pas un chien de canapé.Il est plus facilement transportable lors de déplacements, s'il est habitué il voyagera aisément en sac à dos par exemple ! Cela permet d'avoir un compagnon idéal pour la vie citadine.",
+        image: "/size-for-toy-pomsky.jpg",
+        alt: "comparatif de taille d'un pomsky toy vs husky",
+        pawSize: 4,
     },
     {
         title: pageContent.pomsky.h3Miniature,
         chest: "35 à 40 cm",
-        weight: "6 à 8 kg",
-        text: "Bon équilibre entre énergie et format. Vif, proche de l'humain, à l'aise en appartement si ses besoins sont respectés.",
-        image: "/luna-female-pomsky-f3.webp",
-        alt: "Pomsky femelle de taille miniature assise dans l'herbe",
+        weight: "6 à 9 kg",
+        text: "C'est le format qui met tout le monde d'accord : entre deux tailles, il est l'équivalent de la taille d'un husky de 4 mois toute sa vie. Vif, proche de l'humain, son format lui permet d'être plus facile à gérer. Il garde une morphologie extrêmement équilibrée en génération avancée..",
+        image: "/size-for-mini-pomsky.jpg",
+        alt: "comparatif de taille d'un pomsky miniature vs husky",
+        pawSize: 5,
     },
     {
-        title:  pageContent.pomsky.h3toy,
-        chest: "25 à 34 cm",
-        weight: "2 à 5 kg",
-        text: "Le plus petit gabarit. Très proche de ses humains, expressif et joueur, mais toujours besoin de stimulation.",
-        image: "/pomsky-black-and-white-f3-generation.webp",
-        alt: "Petit Pomsky noir et blanc pattes avant sur un muret",
+        title: pageContent.pomsky.h3Standard,
+        chest: "41 à 45 cm",
+        weight: "9 à 12 kg",
+        text: "Le plus grand gabarit. Il conserve l'allure du Husky, de la taille équivalente à un husky de 5 mois environ toute sa vie ! il n'est pas plus énergique que les tailles miniatures où Toy. Sa prestance impressionne tant le standard est un chien équilibré et facile à vivre.",
+        image: "/size-for-standard-pomsky.jpg",
+        alt: "comparatif de taille d'un pomsky standard vs husky",
+        pawSize: 6,
     },
 ]
 
@@ -57,23 +60,23 @@ const generations = [
     {
         title: "F1 : première génération",
         description:
-            "Croisement initial entre une femelle Husky Sibérien et un mâle Spitz nain (Poméranien). Les chiots peuvent varier en taille, en morphologie et en caractère.",
-        image: "/pages/le-pomsky/Adorable-F1-Pomsky-puppy-in-grass.png",
-        alt: "Pomsky F1 assis dans l'herbe regardant vers l'objectif",
+            "Croisement initial entre une femelle Husky Sibérien et un mâle Spitz nain (Poméranien). Résultat : Les chiots peuvent varier en taille, en morphologie et en caractère et être plus primitifs ( en raison de la maman qui est un husky )",
+        image: "/ISIS-f1-female-pomsky.webp",
+        alt: "Pomsky F1 couchée sur le canapé",
     },
     {
         title: "F2 : double F1",
         description:
-            "Croisement entre deux Pomskys F1. Les portées deviennent un peu plus homogènes, mais le résultat reste encore variable.",
-        image: "/pages/le-pomsky/Fluffy-Pomsky-puppies-f2-in-the-grass.png",
-        alt: "Deux Pomsky F2 assis dans le jardin",
+            "Croisement entre deux Pomskys F1. Les portées deviennent un peu plus homogènes, mais le résultat reste encore variable notamment en taille.",
+        image: "/guizmo-pomsky-f2-puppy.webp",
+        alt: "Pomsky F2 aux yeux bleus sur un banc",
     },
     {
         title: "F3 à F5 : stabilisation",
         description:
-            "Plus la génération avance, plus le type et le marquage se stabilisent. À partir de F5, on parle souvent de Pomsky multigénérationnel.",
-        image: "/pages/le-pomsky/two-f3-pomsky-in the-grass.png",
-        alt: "Deux Pomsky F3 assis dans l'herbe regardant dans la même direction",
+            "Plus la génération avance, plus le type, le comportement, la morphologie idéale et le marquage se stabilisent. À partir de F5, on parle souvent de Pomsky multigénérationnel.",
+        image: "/BEAUTY-pomsky-miniature-f4.webp",
+        alt: "Pomsky F4 assise dans le jardin entourée de feuilles d'automne",
     },
 ]
 
@@ -122,10 +125,10 @@ export default function dogPage() {
                                 </div>
                             </div>
                         </div>
-                        <div className="relative h-72 md:h-105 rounded-lg overflow-hidden">
+                        <div className="relative h-96 md:h-155 rounded-lg overflow-hidden">
                             <Image
-                                src="/sushi-mini-pomsky.webp"
-                                alt="Pomsky dans la nature"
+                                src="/pomsky-size-vs-husky-size.jpg"
+                                alt="Pomsky et Husky côte à côte pour comparaison de taille"
                                 fill
                                 className="object-cover"
                                 priority
@@ -151,16 +154,16 @@ export default function dogPage() {
                                     <CardHeader>
                                         <div className="flex items-center justify-between">
                                             <CardTitle className="text-xl">{item.title}</CardTitle>
-                                            <Badge variant="outline" className="text-xs">FCI</Badge>
+                                            <PawPrint className={`h-${item.pawSize} w-`} />
                                         </div>
                                     </CardHeader>
                                     <CardContent className="space-y-3 text-sm text-muted-foreground">
-                                        <div className="relative aspect-4/3 w-full overflow-hidden rounded-md">
+                                        <div className="relative aspect-4/3 w-full overflow-hidden rounded-md mb-10">
                                             <Image
                                                 src={item.image}
                                                 alt={item.alt}
                                                 fill
-                                                className="object-cover"
+                                                className="object-contain"
                                             />
                                         </div>
                                         <div className="flex items-center gap-2">
@@ -182,16 +185,16 @@ export default function dogPage() {
                                 <div className="space-y-3">
                                     <h3 className="text-2xl font-semibold">Une seule race, trois formats</h3>
                                     <p className="text-muted-foreground max-w-3xl">
-                                        Le poids suit la taille : 2 à 5 kg pour les toy/micro, 6 à 8 kg pour les miniatures,
-                                        9 à 12 kg pour les standards. Les hors standard peuvent atteindre 13 à 18 kg.
+                                        Le poids suit la taille mais n'est pas indicative de la catégorie. Seule la taille au garrot l'est, cependant voici un exemple de proportions : 3,5 à 5 kg pour les toy/micro, 6 à 8 kg pour les miniatures, 9 à 12 kg pour les standards. Les hors standard peuvent atteindre 13 à 18 kg.
+                                        En résumé :
                                     </p>
                                 </div>
                                 <div className="text-sm text-muted-foreground bg-background/60 border rounded-lg p-4 space-y-2 max-w-xs">
                                     <p className="font-semibold text-foreground">En résumé :</p>
                                     <ul className="list-disc ml-4 space-y-1">
                                         <li>Standard : 41 à 45 cm, 9 à 12 kg</li>
-                                        <li>Miniature : 35 à 40 cm, 6 à 8 kg</li>
-                                        <li>Toy/Micro : 25 à 34 cm, 2 à 5 kg</li>
+                                        <li>Miniature : 35 à 40 cm, 6 à 9 kg</li>
+                                        <li>Toy/Micro : 25 à 34 cm, 3,5 à 5 kg</li>
                                     </ul>
                                 </div>
                             </CardContent>
@@ -203,14 +206,12 @@ export default function dogPage() {
                             <Badge variant="secondary" className="w-fit">
                                 Origines
                             </Badge>
-                            <h2 className="text-xl md:text-2xl font-bold">{ pageContent.pomsky.pomskyOrigin}</h2>
+                            <h2 className="text-xl md:text-2xl font-bold">{pageContent.pomsky.pomskyOrigin}</h2>
                             <p className="text-muted-foreground leading-relaxed">
-                                Le Pomsky est né aux États-Unis. L'objectif : obtenir un chien de compagnie au look de Husky Sibérien
-                                (masque, regard, silhouette) dans un format plus petit, proche du Spitz nain (Poméranien).
+                                Le Pomsky est né aux États-Unis. L'objectif : obtenir un chien de compagnie au look de Husky Sibérien (masque, regard, silhouette) dans un format plus petit (Poméranien) mais également un comportement équilibré et plus adapté à notre époque et au mode de vie urbain.
                             </p>
                             <p className="text-muted-foreground leading-relaxed">
-                                Le résultat est un Husky miniature au poil dense, très apprécié pour la vie de famille,
-                                à condition de lui offrir des sorties régulières et une vraie stimulation.
+                                Le résultat est merveilleux : c'est un mélange équilibré du Spitz nain et du husky qui en ressort avec un chien ayant le physique d'un nordique de traîneau, dans une petite taille, avec un comportement de parfait chien de compagnie.
                             </p>
                         </div>
 

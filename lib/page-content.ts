@@ -1,7 +1,8 @@
 export const pageContent = {
     home: {
         h1: "Royal Pomsky",
-        h1Subtitle: "Premier élevage de Pomsky en France, et de lignées Américaines",
+        h1Subtitle:
+            "Premier élevage de Pomsky en France, et de lignées Américaines",
         description:
             "Royal Pomsky se situe dans la commune de SAINT-AMOUR (39160) en région Bourgogne Franche Comté. C'est le premier élevage de Pomsky en France ayant fait le choix de débuter sa sélection en 2017 avec des lignées Américaines : directement au berceau de la race, pour amener en France le Pomsky absolument parfait.",
         descriptionSecondary:
@@ -10,14 +11,14 @@ export const pageContent = {
             "Nous avons rédigé plusieurs articles contenant de très nombreuses informations, merci d'en prendre connaissance avant d'envisager l'adoption de votre chiot ! Vous pourrez ensuite consulter la page de nos chiots pomsky disponibles en cliquant ci-dessous :"
     },
     pomsky: {
-        h1: "Le Pomsky : taille, tempérament, origines et adoption",
+        h1: "Le Pomsky : taille, tempérament, origines et adoption responsable",
         description:
-            "Le Pomsky est une race en construction, encore non reconnue par la FCI. Son allure de Husky miniature en fait un chien très apprécié, mais c'est surtout un compagnon actif qui demande du temps et de la cohérence. Voici l'essentiel pour bien comprendre la race et adopter de manière responsable.",
+            "Le Pomsky est un chien issu du croisement entre le Husky sibérien et le Spitz nain, encore non reconnu par la FCI. Apprécié pour son apparence de Husky miniature, il s'agit d'un compagnon intelligent et actif qui demande du temps, de la cohérence et une éducation adaptée. Ce guide vous aide à comprendre les tailles du Pomsky, son tempérament, ses origines et les conditions nécessaires à une adoption responsable.",
         h2: "Les tailles du Pomsky",
         h3Standard: "Pomsky Standard",
         h3Miniature: "Pomsky Miniature",
         h3toy: "Pomsky Toy",
-        pomskyOrigin : "D'où vient le Pomsky ?",
+        pomskyOrigin: "D'où vient le Pomsky ?",
         googToKnow: "Adopter un Pomsky : ce qu'il faut savoir"
     },
     puppies: {
