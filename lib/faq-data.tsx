@@ -32,15 +32,17 @@ export const faqHome: FAQItem[] = [
     ),
   },
   {
-    question: "Quels types de Pomsky proposez-vous ?",
+    question: "Quels types de Pomsky sont proposés par Royal Pomsky ?",
     answer: (
       <div className="space-y-3">
         <p>
-          L'élevage travaille plusieurs formats de Pomsky : standard, miniature et Toy.
+          L'élevage est exclusivement spécialisé dans les Pomsky de petit gabarit,
+          en formats Toy et Miniature, à poil court.
         </p>
         <p>
-          Les chiens présentent une grande variété de robes et de couleurs,
-          issues d'une sélection visant à concilier esthétique, tempérament et santé.
+          La sélection porte également sur des robes aux couleurs rares et exotiques,
+          tout en respectant des critères stricts de santé, de tempérament et
+          d'équilibre.
         </p>
       </div>
     ),
