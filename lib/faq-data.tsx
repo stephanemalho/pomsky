@@ -50,11 +50,10 @@ export const faqHome: FAQItem[] = [
     answer: (
       <div className="space-y-3">
         <p>
-          Un accompagnement est assuré après le départ du chiot afin de répondre aux questions
-          liées à l'alimentation, à l'adaptation et aux premiers mois de vie.
+          Un accompagnement est assuré avant, pendant le processus d'adoption et également après le départ du chiot et tout au long de sa vie afin de répondre aux questions liées à l'alimentation, à l'adaptation et aux premiers mois de vie particulièrement.
         </p>
         <p>
-          Ce suivi permet d'accompagner chaque adoptant dans la prise en main de son Pomsky.
+          Ce suivi permet d'accompagner chaque adoptant pour que chaque chiot soit heureux et équilibré dans son nouveau foyer.
         </p>
       </div>
     ),
@@ -64,12 +63,12 @@ export const faqHome: FAQItem[] = [
     answer: (
       <div className="space-y-3">
         <p>
-          Un élevage professionnel offre une traçabilité des lignées, une connaissance des parents
-          et un cadre structuré pour le développement des chiots.
+          Un élevage professionnel comme le nôtre offre une génétique des lignées saine, une sélection de grande qualité.
+          Nous avons un suivi vétérinaire rigoureux, un cahier des charges élevé. Chez nous, les locaux sont adaptés au bien être animal, nous avons une connaissance accrue des soins à prodiguer aux animaux, actes de premiers secours, des urgences médicales, il y'a également une présence permanente.
+          Un suivi des parents, des chiots, de la sociabilisation, de la gestion émotionnelle et un cadre structuré pour le développement des chiots est nécessaire.
         </p>
         <p>
-          Cela permet de faire un choix réfléchi et responsable, basé sur des critères objectifs
-          plutôt que sur une simple annonce.
+          Cela permet de faire un choix réfléchi et responsable, basé sur des critères objectifs, basé sur le choix d'avoir choisi un chiot élevé dans des conditions optimales et sérieuses plutôt que sur une simple annonce ne respectant aucun cadre légal, et dont les conditions d'hygiène et les connaissances du naisseur laissent à désirer.
         </p>
       </div>
     ),
