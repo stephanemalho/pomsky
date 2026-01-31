@@ -36,13 +36,11 @@ export const faqHome: FAQItem[] = [
     answer: (
       <div className="space-y-3">
         <p>
-          L'élevage est exclusivement spécialisé dans les Pomsky de petit gabarit,
-          en formats Toy et Miniature, à poil court.
+          L'élevage travaille plusieurs formats de Pomsky : standard, miniature et Toy.
         </p>
         <p>
-          La sélection porte également sur des robes aux couleurs rares et exotiques,
-          tout en respectant des critères stricts de santé, de tempérament et
-          d'équilibre.
+          Les chiens présentent une grande variété de robes et de couleurs,
+          issues d'une sélection visant à concilier esthétique, tempérament et santé.
         </p>
       </div>
     ),
