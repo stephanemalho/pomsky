@@ -96,8 +96,8 @@ export const puppies: Puppy[] = [
         ruler: "Fourrure : standard polaire type Husky",
         weight: "Taille : 30 cm au garrot • Poids : 4 kg",
         description:
-            "Charm est une femelle Pomsky F3 de catégorie toy, importée des États-Unis, à la robe noire et blanche et au regard bleu intense. Son masque Fleur de Lys bien dessiné et sa fourrure standard polaire lui confèrent une expression husky très marquée dans un format compact. Équilibrée et attentive, elle présente un tempérament serein et harmonieux, tout en restant proche de l'humain. Sa morphologie proportionnée et sa belle qualité de poil font d'elle une femelle toy élégante et représentative du type Pomsky recherché.",
-        highlights: ["Femelle", "Import USA", "Masque Fleur de Lys"],
+            "Charm est un mâle Pomsky F3 de catégorie toy, importée des États-Unis, à la robe noire et blanche et au regard bleu intense. Son masque Fleur de Lys bien dessiné et sa fourrure standard polaire lui confèrent une expression husky très marquée dans un format compact. Équilibrée et attentive, elle présente un tempérament serein et harmonieux, tout en restant proche de l'humain. Sa morphologie proportionnée et sa belle qualité de poil font d'elle un mâle toy élégante et représentative du type Pomsky recherché.",
+        highlights: ["Mâle", "Import USA", "Masque Fleur de Lys"],
         health: [
             "Rotules 0/0",
             "MHOC indemne",
@@ -105,7 +105,7 @@ export const puppies: Puppy[] = [
             "Pomsky ADN pur (Poméranian / Husky)",
             "Testée Embark"
         ],
-        images: ["CHARM-pomsky-toy-f3.webp"]
+        images: ["pages/reproducteurs/charm-de-droite-pomsky.jpg","pages/reproducteurs/charm-de-face.jpg","pages/reproducteurs/CHARM-pomsky-toy-f3.webp"]
     },
     {
         name: "ROYAL POMSKY 'INUIT'",

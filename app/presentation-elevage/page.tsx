@@ -75,17 +75,15 @@ export default function PresentationPage() {
                                 <h2
                                     className="text-xl md:text-2xl font-bold">Faire naître des compagnons équilibrés</h2>
                                 <p className="text-muted-foreground leading-relaxed">
-                                    Notre travail commence bien avant la naissance : choix des parents, suivi vétérinaire, et attention constante à la
-                                    qualité de vie des femelles. Chaque chiot bénéficie d&apos;un départ progressif et serein.
+                                    Notre travail commence bien avant la naissance : choix des parents, suivi vétérinaire, et attention constante à la qualité de vie des femelles. Chaque chiot bénéficie d'un départ progressif et serein.
                                 </p>
                                 <p className="text-muted-foreground leading-relaxed">
-                                    Les petits grandissent dans des espaces pensés pour l&apos;apprentissage : repères stables, manipulations douces,
-                                    bruits du quotidien et découvertes guidées. L&apos;objectif : un Pomsky confiant, bien socialisé et prêt pour sa famille.
+                                    Les petits grandissent dans des espaces pensés pour l'apprentissage : repères stables, manipulations douces, bruits du quotidien et découvertes guidées. L'objectif : un Pomsky confiant, bien socialisé et prêt pour sa famille.
                                 </p>
                             </div>
                             <div className="relative h-64 md:h-100 rounded-lg overflow-hidden">
                                 <Image
-                                    src="/luna-female-pomsky-f3.webp"
+                                    src="/pages/presentation-elevage/chiot-pomsky-yeux-bleu-pelage-standard.jpg"
                                     alt="Elevage professionnel de pomsky dans le Jura"
                                     fill
                                     className="object-cover"
@@ -151,7 +149,7 @@ export default function PresentationPage() {
                     <section className="mb-16">
                         <div className="grid md:grid-cols-2 gap-12 items-center">
                             <div className="relative h-64 md:h-100 rounded-lg overflow-hidden md:order-2">
-                                <Image src="/guizmo-pomsky-f2-puppy.webp" alt="illustration d'un pomsky chiots de royal pomsky" fill className="object-cover" />
+                                <Image src="/pages/presentation-elevage/eleveuse-royal-pomsky-avec-un-pomsky.jpg" alt="illustration d'un pomsky chiots de royal pomsky" fill className="object-cover" />
                             </div>
                             <div className="space-y-6 md:order-1">
                                 <Badge variant="secondary" className="w-fit">
@@ -195,20 +193,22 @@ export default function PresentationPage() {
                                 Un élevage familial au cœur du Jura, à deux pas de Saint-Amour
                             </h3>
                             <p className="text-muted-foreground leading-relaxed">
-                                Nous avons choisi de consacrer notre élevage au Pomsky pour son allure de chien nordique miniature et sa nature proche de l&apos;humain.
+                                Nous avons choisi depuis l'année 2017 de nous installer au cœur de la nature, dans de grands espaces sauvages pour consacrer notre élevage et notre vie au Pomsky : pour le coup de cœur absolu que cela nous a procuré : son allure de chien nordique de traîneau miniature, sa nature proche de l'humain et son amour inconditionnel en font le chien le plus parfaitement adapté à nous.
+                                Notre expérience est désormais devenue une expertise complète de cette merveilleuse race en devenir.
                             </p>
                             <p className="text-muted-foreground leading-relaxed">
-                                Notre histoire s&apos;est construite au fil des rencontres avec la race et des familles adoptantes. Nous recherchons un
-                                Pomsky bien dans sa tête, stable et joyeux, qui s&apos;intègre facilement à la vie de famille.
+                                Nous avons sélectionné nos reproducteurs Pomsky au sein même du berceau de la race, pour vous apporter les meilleures lignées de Pomsky qui existent au monde. Nos adultes sont nés au quatre coins des Etats Unis d'Amérique : d'est en ouest, de New York à Seattle, en passant par la Californie et en revenant par la Floride. Ils ont débarqué en France pour faire partie de notre programme d'élevage canin, afin que nous puissions vous proposer les meilleures lignées de pomsky, parce nous visons l'excellence pour notre programme d'élevage ainsi que pour le devenir de la race.
+
+
+                            </p>
+                            <p className="text-muted-foreground leading-relaxed">
+                                Notre histoire s'est construite au fil des années, rencontres avec les éleveurs américains créateurs de cette race et des familles adoptantes. Nous recherchons depuis notre première portée née en 2018 à obtenir un Pomsky au physique abouti, bien dans sa tête, stable et joyeux, qui s'intègre facilement à la vie de famille.
                             </p>
                             <p className="text-muted-foreground leading-relaxed">
                                 Les chiens vivent à nos côtés, avec des espaces sécurisés et des moments de détente en extérieur pour nourrir leur curiosité.
-                            </p>
-                            <p className="text-muted-foreground leading-relaxed">
+                                Des balades sont régulièrement organisées en extérieur avec d'autres races de chiens.
                                 Notre priorité : des chiots équilibrés, sociables et prêts à démarrer une belle histoire avec leur future famille.
-                            </p>
-                            <p className="text-muted-foreground leading-relaxed">
-                                Les familles repartent avec un accompagnement concret, des conseils pratiques et des nouvelles régulières pour suivre l&apos;évolution.
+                                Les familles repartent avec un accompagnement concret, des conseils pratiques et des nouvelles régulières et un groupe whatsapp avec les familles adoptantes de leur fratrie.
                             </p>
                         </div>
                     </section>
@@ -235,7 +235,7 @@ export default function PresentationPage() {
                                 <CardContent className="p-6">
                                     <h3 className="text-xl font-semibold mb-4">Suivi vétérinaire</h3>
                                     <p className="text-muted-foreground text-sm leading-relaxed">
-                                        Suivi sanitaire complet, identification et conseils de santé transmis au moment du départ.
+                                        Suivi sanitaire complet, identification, vaccination, vemifuge, antiparasitaires, tests ADN du laboratoire EMBARK des parents, test de filiation du laboratoire ANTAGENE et conseils de santé transmis au moment du départ.
                                     </p>
                                 </CardContent>
                             </Card>
@@ -244,7 +244,7 @@ export default function PresentationPage() {
                                 <CardContent className="p-6">
                                     <h3 className="text-xl font-semibold mb-4">Transparence</h3>
                                     <p className="text-muted-foreground text-sm leading-relaxed">
-                                        Informations claires, documents lisibles et échanges réguliers tout au long du parcours.
+                                        Informations claires, visites et visio, documents lisibles et échanges réguliers tout au long du parcours.
                                     </p>
                                 </CardContent>
                             </Card>
@@ -253,7 +253,7 @@ export default function PresentationPage() {
                                 <CardContent className="p-6">
                                     <h3 className="text-xl font-semibold mb-4">Accompagnement</h3>
                                     <p className="text-muted-foreground text-sm leading-relaxed">
-                                        Conseils personnalisés, kit de départ et disponibilité pour vous aider à chaque étape.
+                                        Conseils personnalisés : guide pour l'accueil de votre chiot, kit de départ, conseil d'un éducateur canin agréé par notre réseau de connaissances ( éducation positive ) et disponibilité pour vous aider à chaque étape.
                                     </p>
                                 </CardContent>
                             </Card>
