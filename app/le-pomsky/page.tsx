@@ -58,24 +58,24 @@ const sizes = [
 
 const generations = [
     {
-        title: "F1 : première génération",
+        title: "F1 : première génération de pomsky",
         description:
             "Croisement initial entre une femelle Husky Sibérien et un mâle Spitz nain (Poméranien). Résultat : Les chiots peuvent varier en taille, en morphologie et en caractère et être plus primitifs ( en raison de la maman qui est un husky )",
-        image: "/ISIS-f1-female-pomsky.webp",
+        image: "/pages/le-pomsky/femmelle-pomsky-f1.jpg",
         alt: "Pomsky F1 couchée sur le canapé",
     },
     {
-        title: "F2 : double F1",
+        title: "F2 : deuxième génération de pomsky",
         description:
             "Croisement entre deux Pomskys F1. Les portées deviennent un peu plus homogènes, mais le résultat reste encore variable notamment en taille.",
-        image: "/guizmo-pomsky-f2-puppy.webp",
+        image: "/pages/le-pomsky/chiot-pomsky-f2-avec-citrouille.jpg",
         alt: "Pomsky F2 aux yeux bleus sur un banc",
     },
     {
         title: "F3 à F5 : stabilisation",
         description:
             "Plus la génération avance, plus le type, le comportement, la morphologie idéale et le marquage se stabilisent. À partir de F5, on parle souvent de Pomsky multigénérationnel.",
-        image: "/BEAUTY-pomsky-miniature-f4.webp",
+        image: "/pages/le-pomsky/pomsky-male-f3-pelage-fluffy.jpg",
         alt: "Pomsky F4 assise dans le jardin entourée de feuilles d'automne",
     },
 ]
@@ -125,9 +125,9 @@ export default function dogPage() {
                                 </div>
                             </div>
                         </div>
-                        <div className="relative h-96 md:h-155 rounded-lg overflow-hidden">
+                        <div className="relative h-72 md:h-105 rounded-lg overflow-hidden bg-black">
                             <Image
-                                src="/pomsky-size-vs-husky-size.jpg"
+                                src="/pages/le-pomsky/pomsky-f4-et -une-citrouille.jpg"
                                 alt="Pomsky et Husky côte à côte pour comparaison de taille"
                                 fill
                                 className="object-cover"
@@ -140,10 +140,9 @@ export default function dogPage() {
                     <section className="mb-16 space-y-10">
                         <div className="text-center space-y-3">
                             <h2 className="text-xl md:text-2xl font-bold">{pageContent.pomsky.h2}</h2>
-                            <p className="text-muted-foreground max-w-3xl mx-auto">
+                            <p className="text-muted-foreground max-w-xl mx-auto">
                                 On distingue généralement trois tailles : toy (ou micro), miniature et standard.
-                                Les tailles sont exprimées au garrot. Les individus issus de lignées Husky peuvent dépasser 43 cm,
-                                et les hors standard dépassent 45 cm.
+                                Les tailles sont exprimées au garrot.
                             </p>
                             <div className="w-24 h-1 bg-primary mx-auto rounded-full" aria-hidden="true" />
                         </div>
@@ -158,7 +157,7 @@ export default function dogPage() {
                                         </div>
                                     </CardHeader>
                                     <CardContent className="space-y-3 text-sm text-muted-foreground">
-                                        <div className="relative aspect-4/3 w-full overflow-hidden rounded-md mb-10">
+                                        <div className="relative aspect-4/3 w-full overflow-hidden rounded-md mb-10 bg-black">
                                             <Image
                                                 src={item.image}
                                                 alt={item.alt}
@@ -185,8 +184,7 @@ export default function dogPage() {
                                 <div className="space-y-3">
                                     <h3 className="text-2xl font-semibold">Une seule race, trois formats</h3>
                                     <p className="text-muted-foreground max-w-3xl">
-                                        Le poids suit la taille mais n'est pas indicative de la catégorie. Seule la taille au garrot l'est, cependant voici un exemple de proportions : 3,5 à 5 kg pour les toy/micro, 6 à 8 kg pour les miniatures, 9 à 12 kg pour les standards. Les hors standard peuvent atteindre 13 à 18 kg.
-                                        En résumé :
+                                        Le poids suit la taille mais n'est pas indicative de la catégorie. Seule la taille au garrot l'est, cependant voici un exemple de proportions : 3,5 à 5 kg pour les toy/micro, 6 à 8 kg pour les miniatures, 9 à 12 kg pour les standards.
                                     </p>
                                 </div>
                                 <div className="text-sm text-muted-foreground bg-background/60 border rounded-lg p-4 space-y-2 max-w-xs">
@@ -208,7 +206,7 @@ export default function dogPage() {
                             </Badge>
                             <h2 className="text-xl md:text-2xl font-bold">{pageContent.pomsky.pomskyOrigin}</h2>
                             <p className="text-muted-foreground leading-relaxed">
-                                Le Pomsky est né aux États-Unis. L'objectif : obtenir un chien de compagnie au look de Husky Sibérien (masque, regard, silhouette) dans un format plus petit (Poméranien) mais également un comportement équilibré et plus adapté à notre époque et au mode de vie urbain.
+                                Le Pomsky est né aux États-Unis. L'objectif : obtenir un chien de compagnie au look de Husky Sibérien (masque, regard, silhouette) dans un format plus petit ! Nous cherchons galement un comportement équilibré et plus adapté à notre époque et au mode de vie urbain.
                             </p>
                             <p className="text-muted-foreground leading-relaxed">
                                 Le résultat est merveilleux : c'est un mélange équilibré du Spitz nain et du husky qui en ressort avec un chien ayant le physique d'un nordique de traîneau, dans une petite taille, avec un comportement de parfait chien de compagnie.
@@ -326,7 +324,7 @@ export default function dogPage() {
                                 <CardHeader>
                                     <CardTitle className="text-xl">Les yeux du Pomsky</CardTitle>
                                 </CardHeader>
-                                <CardContent className="flex text-sm flex-col md:flex-row text-muted-foreground leading-relaxed space-y-3">
+                                <CardContent className="flex text-sm flex-col lg:flex-row text-muted-foreground leading-relaxed space-y-3">
                                     <div className="mt-4 space-y-3">
                                         <p>
                                             Les yeux bleus sont très prisés, mais on peut aussi rencontrer des yeux verts, ambre,
@@ -350,7 +348,7 @@ export default function dogPage() {
                                 <CardHeader>
                                     <CardTitle className="text-xl">Morphologie générale</CardTitle>
                                 </CardHeader>
-                                <CardContent className="flex text-sm flex-col md:flex-row text-muted-foreground leading-relaxed space-y-3">
+                                <CardContent className="flex text-sm flex-col lg:flex-row text-muted-foreground leading-relaxed space-y-3">
                                     <div className="mt-4 space-y-3">
                                         <p>
                                             Le corps est compact, la queue est touffue et enroulée au-dessus du dos.
@@ -361,7 +359,7 @@ export default function dogPage() {
                                         </p>
                                     </div>
                                     <Image
-                                        src="/frosty-pomsky-puppy-from-royal-pomsky.webp"
+                                        src="/pages/le-pomsky/male-pomsky-chocolat.jpg"
                                         alt="Pomsky aux yeux bleus"
                                         width={400}
                                         height={250}
@@ -424,12 +422,12 @@ export default function dogPage() {
                                 </CardHeader>
                                 <CardContent className="text-sm text-muted-foreground leading-relaxed space-y-3">
                                     <p>
-                                        Le Pomsky n'est pas compliqué d'entretien : brossage hebdomadaire si poil long
-                                        ou mi-long, bain 1 à 2 fois par an, et soins classiques des yeux et des oreilles.
+                                        Le Pomsky n'est pas compliqué d'entretien : un brossage une fois par semaine à raison de 15 minutes maximum sera nécessaire pour préserver la beauté du pelage : durant les périodes de mue (2x par an ), un toilettage sera utile, ou un bain suivi d'un brossage quotidienpour l'aider à enlever sa mue. Une fois la mue faite, le pelage ne tombe plus jusqu'à la prochaine mue.
                                     </p>
+                                    <p>Des soins classiques des yeux et des oreilles de temps à autres. </p>
                                     <p>
-                                        Alimentation riche en protéines et pauvre en amidon conseillée.
-                                        Ajoutez antiparasitaires et vermifuge plusieurs fois par an.
+                                        Alimentation riche en protéines et pauvre en amidon conseillée. Des traitements antiparasitaires et des vermifuge plusieurs fois par an seront nécessaire.
+                                        Une visite de contrôle annuel chez le vétérinaire. C'est un chien extrêmement robuste.
                                     </p>
                                 </CardContent>
                             </Card>
@@ -440,13 +438,17 @@ export default function dogPage() {
                                 </CardHeader>
                                 <CardContent className="text-sm text-muted-foreground leading-relaxed space-y-3">
                                     <p>
-                                        Le prix d'un Pomsky se situe généralement entre 3 500 et 6 500 euros selon la taille,
-                                        la rareté des traits (yeux, marquage), la lignée et la génération.
+                                        Le prix d'un Pomsky se situe généralement entre 3 000 et 6 000 euros selon la taille, la rareté des traits (yeux, marquage), la lignée et la génération.
                                     </p>
                                     <p>
-                                        Tournez-vous vers un élevage professionnel : vous bénéficiez de garanties de santé,
-                                        d'un suivi et de conseils concrets.
+                                        Dans un élevage professionnel vous bénéficiez de garanties de santé, d'un suivi et de conseils concrets.
                                     </p>
+                                    <Link
+                                        href="/chiots-disponibles"
+                                        className="border border-primary text-primary hover:bg-primary/10 px-6 py-3 rounded-md font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                                    >
+                                        Voir nos chiots disponibles
+                                    </Link>
                                 </CardContent>
                             </Card>
                         </div>

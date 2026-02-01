@@ -1,6 +1,6 @@
 export const pageContent = {
     home: {
-        h1: "Royal Pomsky",
+        h1: "Elevage de Pomsky 🐺 Royal POMSKY",
         h1Subtitle:
             "Premier élevage de Pomsky en France, et de lignées Américaines",
         description:

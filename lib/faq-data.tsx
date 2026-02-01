@@ -36,7 +36,7 @@ export const faqHome: FAQItem[] = [
     answer: (
       <div className="space-y-3">
         <p>
-          L'élevage travaille plusieurs formats de Pomsky : standard, miniature et Toy.
+          L'élevage travaille plusieurs formats de Pomsky : miniature et Toy.
         </p>
         <p>
           Les chiens présentent une grande variété de robes et de couleurs,
@@ -179,11 +179,10 @@ export const faqPomsky: FAQItem[] = [
     answer: (
       <div className="space-y-3">
         <p>
-          Oui. Le Pomsky est un chien très expressif et communicatif, qui crée un lien fort avec ses adoptants.
-          Son regard, ses attitudes et son comportement lui permettent d'interagir facilement avec son entourage.
+          Oui, mais cela se mérite. Le Pomsky est un chien très expressif et communicatif, qui crée un lien fort avec ses adoptants. Son regard, sa curiosité, ses attitudes et son comportement lui permettent d'interagir facilement avec son entourage.
         </p>
         <p>
-          Il apprécie la présence humaine et développe une relation complice avec sa famille.
+          Il apprécie la présence humaine et développe une relation complice avec sa famille, si vous êtes absolument cohérent dans l'éducation : une éducation positive uniquement basée sur le renforcement et non la peur. Le Pomsky ne sera pas proche de vous si vous utilisez une éducation basée sur la punition car il développera une méfiance permanente entraînant un éloignement.
         </p>
       </div>
     ),

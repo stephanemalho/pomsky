@@ -37,7 +37,7 @@ export default function HomePage() {
       name: "Aurélie",
       image: "/assets/authors/aurelie-violette-elevage-royal-pomsky.jpg",
       description:
-        "Aurelie & Moshi ( la chihuahua ) est une passionnée par les animaux depuis toujours : ancienne éducatrice comportementaliste, elle a collaboré avec de nombreux centres de rééducation, éducation canine ainsi que des associations de protection animale : après des années de pratique elle se spécialise dans l'élevage canin : depuis 2018, le Pomsky est la race de cœur qui a convaincu Aurelie de se laisser guider vers le métier exclusif d'éleveur : Marine et moi étions originaire du VAR (83) et avons changé de région suite au développement de notre élevage de Pomsky, et à cette occasion nous avons rencontré le pomsky, chien de chasse relativement populaire dans le Jura et en région bourgogne franche compté. Suite à cela notre coup de cœur s'est porté sur les pomsky de très petite taille : les Toy qui pèsent moins de 3kg ! Ainsi que les pomsky standards de couleur exotique qui ressemblent à leur cousins le braque de Weimar mais en version absolument miniature !  Aurélie met ses compétences dans le développement et le bien être animal. Des chiots à l Socialisation parfaite, des protocoles précis pour accompagner les familles adoptantes durant toutes les étapes de la vie du chiot et jusqu'à l'âge adulte ! Moshi, la chihuahua de compagnie partage notre quotidien, elle est également présente pour l'éducation de nos petits pomsky !! Elle veille à ce que les codes canins soient respectés, une véritable Tati qui aide de façon bienveillante chaque maman dans son processus d'apprentissage. Une chihuahua au caractère fort et au cœur tendre : une super nanny",
+        "Aurelie est une passionnée par les chiens et courses de traîneaux depuis sa plus tendre enfance : ancienne éducatrice comportementaliste, elle a collaboré avec de nombreux centres de rééducation, éducation canine ainsi que des associations de protection animale : après des années de pratique en éducation elle se spécialise dans l'élevage canin grâce au Pomsky : depuis 2018. « L'idée la plus extraordinaire crée dans ma génération : un husky miniature possédant toutes les qualités d'un chien de compagnie Pour moi, pas question de créer une race en faisant des essais, je me suis tournée vers les éleveurs Américains quim'ont appris à sélectionner et importer dès la première portée des reproducteurs exceptionnels. Faire naître et voir évoluer un chien ressemblent physiquement au nordique, au husky, ou au malamute, en miniature avecun comportement totalement équilibré est une honneur absolu, un bonheur et un privilège. Je ne trouve absolument aucun « défaut » à mes Pomsky, ils sont juste parfaits et adaptés à tout mode de vie, et c'est'objectif que je m'étais fixée depuis 2018 » Sa grande expérience, sa sensibilité la mène également vers la communication animale depuis 2020. Avec Auréli votre suivi sera totalement holistique et ce durant toute la vie de votre chiot Pomsky.Ses grandes connaissances en matière de santé et soins prodigués à l'animal pourront également vous être très utiles.",
       badges: [
         "Ancienne éducatrice comportementaliste",
         "8 ans d'expérience en élevage canin",
@@ -48,7 +48,7 @@ export default function HomePage() {
       name: "Marine",
       image: "/assets/authors/marine-ava.webp",
       description:
-        "Marine est passionnée par le monde de l'élevage et a changé de vie pour se consacrer à leur développement depuis 4 ans !  Eleveuse de primitifs avant tout, elle est née en Bourgogne Franche comté, ce n'est qu'en retournant dans la région de sa naissance et en découvrant le caractère du pomsky, très apprécié par les chasseurs mais également par les personnes désirant un chien de compagnie affectueux, qu'elle a décidé de suivre Aurelie dans l'aventure, ayant une préférence pour les pomsky de taille Toy, pour leur taille extrêmement petite !  Marine est une véritable perfectionniste : avec elle les locaux doivent être entretenus de façon très protocolaire afin que nos chiots évoluent dans des conditions optimales pour leur santé et leur bien être. Chaque chiot est soigneusement ausculté chaque jour, elle porte attention à chaque caractère également grâce à son instinct d'anticipation, chaque petit est bichonné dès sa naissance ! « L'idée n'est pas de présenter le pomsky comme un chien de chasse mais bel et bien un chien de compagnie adapté à la vie citadine »",
+        "Marine a suivi Aurelie dans l'aventure Pomsky, car à deux, la meute est absolument bichonnée ! Autodidacte, carrée c'est une véritable perfectionniste : avec elle les locaux doivent être entretenus de façon très protocolaire afin que nos chiots évoluent dans des conditions optimales pour leur santé et leur bien être.  Chaque chiot est soigneusement ausculté chaque jour, elle porte attention à chaque caractère également grâce à son instinct d'anticipation, chaque petit est bichonné dès sa naissance !Son niveau d'exigence est extrêmement élevé, voir militaire : rien n'échappe aux yeux de Marine ! Chez no ion et passe beaucoup de temps avec les chiens adultes, les chiots, elle les connaît absolument par cœur. Observatrice, elle sait ce dont chacun a besoin. Le bien être animal, les conditions sanitaires sont sa priorité.",
       badges: [
         "4 ans d'expérience en élevage canin",
         "Protocoles d'hygiène rigoureux",
@@ -156,10 +156,9 @@ export default function HomePage() {
                 </p>
 
                 <div className="space-y-2">
-                  <p className="font-semibold">Des Pomsky de toutes tailles élevées dans le bonheur</p>
-                  <p className="text-sm text-muted-foreground">
-                    Notre élevage est situé dans le Jura (39), en France. <strong>Chez Royal Pomsky, nous n'expédions jamais nos chiots à distance, sauf cas particulier ( raison de santé etc… )</strong> votre demande sera étudiée. Ils sont
-                    à adopter sur place, après visite de l'élevage et rencontre avec les parents.
+                  <h3 className="font-semibold">Des Pomsky de tailles miniature et toy élevés dans le bonheur</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Notre élevage est situé dans le Jura (39), en France. Chez Royal Pomsky, nous n'expédions jamais nos chiots à distance,  Ils sont à adopter sur place, après visite de l'élevage et rencontre avec les parents. sauf cas particulier ( raison de santé, impossibilité de déplacement etc… ) votre demande sera étudiée au cas par cas après un entretien en appel visio
                   </p>
                 </div>
 
@@ -309,11 +308,10 @@ export default function HomePage() {
             </div>
             <div className="text-center space-y-4 my-12">
               <h3 className="text-xl md:text-2xl font-semibold">
-                Vous souhaitez adopter un pomsky standard, miniature ou toy ?
+                Vous souhaitez adopter un pomsky miniature ou toy ?
               </h3>
               <p className="text-sm text-muted-foreground max-w-xl mx-auto">
-                Échangeons ensemble sur votre projet d'adoption et trouvons le pomsky
-                (standard, miniature ou toy) qui correspond le mieux à votre mode de vie.
+                Échangeons ensemble sur votre projet d'adoption et trouvons le pomsky qui correspond le mieux à votre mode de vie.
               </p>
               <div className="w-24 h-1 bg-primary mx-auto rounded-full" aria-hidden="true" />
             </div>
