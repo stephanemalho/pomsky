@@ -105,9 +105,9 @@ export default function SejoursPage() {
                                 <div className="relative h-64 md:h-122 rounded-lg overflow-hidden">
                                     <ImageCarousel
                                         images={[
-                                            "pages/conditions-de-vie/cocom-pour-chiots-pomsky.jpg",
-                                            "pages/conditions-de-vie/bebe-chiots-lit-douillet.jpg",
-                                            "pages/conditions-de-vie/salle-ambiante-pour-chiots.jpg",
+                                            "pages/conditions-de-vie/cocom-pour-chiots-pomsky.webp",
+                                            "pages/conditions-de-vie/bebe-chiots-lit-douillet.webp",
+                                            "pages/conditions-de-vie/salle-ambiante-pour-chiots.webp",
                                         ]}
                                         alt="Nursery pour chiots pomsky"
                                     />
@@ -120,9 +120,9 @@ export default function SejoursPage() {
                                 <div className="relative h-64 md:h-122 rounded-lg overflow-hidden md:order-2">
                                     <ImageCarousel
                                         images={[
-                                            "pages/conditions-de-vie/pomsky-joue-avec-balle-plastique.png",
-                                            "pages/conditions-de-vie/chiots-jouent-dans-bac-a-boules.png",
-                                            "pages/conditions-de-vie/ensemble-de-jouets-pour-chiots.png",
+                                            "pages/conditions-de-vie/pomsky-joue-avec-balle-plastique.webp",
+                                            "pages/conditions-de-vie/chiots-jouent-dans-bac-a-boules.webp",
+                                            "pages/conditions-de-vie/ensemble-de-jouets-pour-chiots.webp",
                                         ]}
                                         alt="Jeux d'éveil pour chiots pomsky"
                                     />
@@ -168,10 +168,10 @@ export default function SejoursPage() {
                                 <div className="relative h-64 md:h-122 rounded-lg overflow-hidden">
                                     <ImageCarousel
                                         images={[
-                                            "pages/conditions-de-vie/sortie-encadree-avec-marine.png",
-                                            "pages/conditions-de-vie/marine-joue-avec-les-chiots.png",
-                                            "pages/conditions-de-vie/sortie-avec-les-pomsky-adultes.png",
-                                            "pages/conditions-de-vie/pomsky-adulte-joue-avec-marine.png"
+                                            "pages/conditions-de-vie/sortie-encadree-avec-marine.webp",
+                                            "pages/conditions-de-vie/marine-joue-avec-les-chiots.webp",
+                                            "pages/conditions-de-vie/sortie-avec-les-pomsky-adultes.webp",
+                                            "pages/conditions-de-vie/pomsky-adulte-joue-avec-marine.webp"
                                         ]}
                                         alt="Chiots pomsky dans le jardin"
                                     />
@@ -184,8 +184,8 @@ export default function SejoursPage() {
                                 <div className="relative h-64 md:h-80 rounded-lg overflow-hidden md:order-2">
                                     <ImageCarousel
                                         images={[
-                                            "pages/conditions-de-vie/pomsky-nurcery-veterinaire.png",
-                                            "pages/conditions-de-vie/beurk-food.png",
+                                            "pages/conditions-de-vie/pomsky-nurcery-veterinaire.webp",
+                                            "pages/conditions-de-vie/beurk-food.webp",
                                         ]}
                                         alt="Alimentation premium"
                                     />
@@ -221,7 +221,7 @@ export default function SejoursPage() {
                                 <div className="relative h-104 md:h-180 rounded-lg overflow-hidden">
                                     <ImageCarousel
                                         images={[
-                                            "pomsky-mom-with-her-two-baby.png",
+                                            "pomsky-mom-with-her-two-baby.webp",
                                             "two-pomsky-puppy.webp",
                                         ]}
                                         alt="Espace repos des chiots"

@@ -35,7 +35,7 @@ export default function HomePage() {
   const founders = [
     {
       name: "Aurélie",
-      image: "/assets/authors/aurelie-violette-elevage-royal-pomsky.jpg",
+      image: "/assets/authors/aurelie-violette-elevage-royal-pomsky.webp",
       description:
         "Aurelie est une passionnée par les chiens et courses de traîneaux depuis sa plus tendre enfance : ancienne éducatrice comportementaliste, elle a collaboré avec de nombreux centres de rééducation, éducation canine ainsi que des associations de protection animale : après des années de pratique en éducation elle se spécialise dans l'élevage canin grâce au Pomsky : depuis 2018. « L'idée la plus extraordinaire crée dans ma génération : un husky miniature possédant toutes les qualités d'un chien de compagnie Pour moi, pas question de créer une race en faisant des essais, je me suis tournée vers les éleveurs Américains quim'ont appris à sélectionner et importer dès la première portée des reproducteurs exceptionnels. Faire naître et voir évoluer un chien ressemblent physiquement au nordique, au husky, ou au malamute, en miniature avecun comportement totalement équilibré est une honneur absolu, un bonheur et un privilège. Je ne trouve absolument aucun « défaut » à mes Pomsky, ils sont juste parfaits et adaptés à tout mode de vie, et c'est'objectif que je m'étais fixée depuis 2018 » Sa grande expérience, sa sensibilité la mène également vers la communication animale depuis 2020. Avec Auréli votre suivi sera totalement holistique et ce durant toute la vie de votre chiot Pomsky.Ses grandes connaissances en matière de santé et soins prodigués à l'animal pourront également vous être très utiles.",
       badges: [
@@ -107,7 +107,7 @@ export default function HomePage() {
                   <div className="relative mx-auto w-full max-w-sm overflow-hidden rounded-xl border border-white/15 shadow-[0_18px_60px_rgba(0,0,0,0.45)]">
                     <div className="relative aspect-4/5">
                       <Image
-                        src="/SUSHI-pomsky.jpg"
+                        src="/SUSHI-pomsky.webp"
                         alt="SUSHI pomsky gris et blanc avec un oeil bleu et un oeil marron"
                         fill
                         className="object-cover"
@@ -172,7 +172,7 @@ export default function HomePage() {
 
               <div className="relative w-full aspect-video md:h-200 h-125 md:aspect-4/5 overflow-hidden rounded-lg">
                 <Image
-                  src="/MIKKY-pomsky-puppy.jpg"
+                  src="/MIKKY-pomsky-puppy.webp"
                   alt="Mikky pomsky chiots levant les deux pattes avant"
                   fill
                   className="object-cover"

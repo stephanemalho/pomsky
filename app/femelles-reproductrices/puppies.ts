@@ -105,7 +105,7 @@ export const puppies: Puppy[] = [
             "Pomsky ADN pur (Poméranian / Husky)",
             "Testée Embark"
         ],
-        images: ["pages/reproducteurs/charm-de-droite-pomsky.jpg","pages/reproducteurs/charm-de-face.jpg","pages/reproducteurs/CHARM-pomsky-toy-f3.webp"]
+        images: ["pages/reproducteurs/charm-de-droite-pomsky.webp","pages/reproducteurs/charm-de-face.webp","pages/reproducteurs/CHARM-pomsky-toy-f3.webp"]
     },
     {
         name: "ROYAL POMSKY 'INUIT'",

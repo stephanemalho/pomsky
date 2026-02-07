@@ -35,9 +35,9 @@ export const puppies: Puppy[] = [
         ],
         health: ["Suivi vétérinaire en cours"],
         images: [
-            "pages/puppies/ALUNA-puppy-black-white-0.png",
-            "pages/puppies/ALUNA-puppy-black-white-1.png",
-            "pages/puppies/ALUNA-puppy-black-white-2.png"
+            "pages/puppies/ALUNA-puppy-black-white-0.webp",
+            "pages/puppies/ALUNA-puppy-black-white-1.webp",
+            "pages/puppies/ALUNA-puppy-black-white-2.webp"
         ]
     },
     {
@@ -59,7 +59,7 @@ export const puppies: Puppy[] = [
             "Développement en cours"
         ],
         health: ["Suivi vétérinaire en cours"],
-        images: ["pages/puppies/VUK-puppy-black-white-0.png", "pages/puppies/VUK-puppy-black-white-1.png"]
+        images: ["pages/puppies/VUK-puppy-black-white-0.webp", "pages/puppies/VUK-puppy-black-white-1.webp"]
     },
     {
         name: "ROYAL POMSKY 'THOR'",
@@ -82,9 +82,9 @@ export const puppies: Puppy[] = [
         ],
         health: ["Suivi vétérinaire en cours"],
         images: [
-            "pages/puppies/THOR-male-pomsly-puppy-gray-white-0.png",
-            "pages/puppies/THOR-male-pomsly-puppy-gray-white-1.png",
-            "pages/puppies/THOR-male-pomsly-puppy-gray-white-2.png"
+            "pages/puppies/THOR-male-pomsly-puppy-gray-white-0.webp",
+            "pages/puppies/THOR-male-pomsly-puppy-gray-white-1.webp",
+            "pages/puppies/THOR-male-pomsly-puppy-gray-white-2.webp"
         ]
     }
 ];

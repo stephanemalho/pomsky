@@ -105,13 +105,14 @@ export const faqPresentation: FAQItem[] = [
         </p>
         <p>Chez Royal POMSKY nous privilégions la qualité à la quantité.</p>
         <p>Nous n'hésitons pas à travailler la taille Toy qui est la taille la moins prolifique en Pomsky. </p>
-        <p>Les femelles ont leur année de repos après gestation, le nombre de portées est volontairement limité afin de garantir :
-          <ul className="list-disc ml-4">
-            <li>une présence quotidienne auprès des chiots,</li>
-            <li>une socialisation optimale,</li>
-            <li>un suivi individualisé pour chaque famille adoptante.</li>
-          </ul>
+        <p>
+          Les femelles ont leur année de repos après gestation, le nombre de portées est volontairement limité afin de garantir :
         </p>
+        <ul className="list-disc ml-4">
+          <li>une présence quotidienne auprès des chiots,</li>
+          <li>une socialisation optimale,</li>
+          <li>un suivi individualisé pour chaque famille adoptante.</li>
+        </ul>
         <p>Nos portées arrivent souvent en même temps ce qui nous laisse beaucoup de chiots à proposer à certaines périodes et moins à d'autres.</p>
       </div>
     ),
@@ -178,6 +179,49 @@ export const faqPresentation: FAQItem[] = [
 
 export const faqBienEtre: FAQItem[] = [
   {
+    question: "Dans quel environnement vivent les chiens et les chiots chez ROYAL POMSKY ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Les chiens et les chiots Pomsky de notre élevage évoluent dans un environnement propre, sécurisé et adapté à leurs besoins, au sein d'un élevage professionnel déclaré.
+        </p>
+        <p>
+          Les espaces sont pensés pour garantir confort, hygiène, repos et stimulation, tout en respectant les normes en vigueur.
+        </p>
+      </div>
+    ),
+  },
+  {
+    question: "Quel est le cadre naturel de l'élevage Royal POMSKY ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Royal POMSKY est implanté dans un cadre naturel calme et préservé, propice au bien-être des chiens et des chiots.</p>
+        <p>L'environnement est volontairement éloigné de l'agitation urbaine, offrant sérénité, espace et qualité de vie.</p>
+      </div>
+    ),
+  },
+  {
+    question: "Les chiots bénéficient-ils de cet environnement ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Oui. Dès leur plus jeune âge, les chiots découvrent progressivement ce cadre naturel, toujours de manière sécurisée.</p>
+        <p>Cette exposition favorise des chiots curieux, confiants et adaptables, capables de s'épanouir dans des environnements variés par la suite.</p>
+      </div>
+    ),
+  },
+  {
+    question: "Le cadre naturel est-il compatible avec un élevage professionnel ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Oui, parfaitement.</p>
+        <p>Royal POMSKY allie cadre naturel et structure professionnelle, en respectant les normes sanitaires, réglementaires et organisationnelles d'un élevage canin.</p>
+      </div>
+    ),
+  },
+  {
     question: "Comment accompagnez-vous la croissance du Pomsky ?",
     answer: (
       <div className="space-y-3">
@@ -208,19 +252,28 @@ export const faqBienEtre: FAQItem[] = [
     ),
   },
   {
-    question: "Le Pomsky est-il un chien actif ?",
+    question: "Comment préparez-vous la séparation avec la mère ?",
     answer: (
       <div className="space-y-3">
         <p>
-          Oui. Malgré son gabarit compact, le Pomsky est un chien actif et polyvalent.
-        </p>
+          Les chiots vivent à la fois en intérieur et en extérieur, de manière progressive et encadrée.</p>
         <p>
-          Il peut pratiquer différentes activités comme le pistage, le mantrailing, l'agility ou la cani-rando,
-          toujours dans le respect de son rythme et de sa morphologie.
-        </p>
+          Les premières semaines de vie ils sont dans une nurserie. Jusqu'à l'âge de 4 semaines ils ne vont pas en extérieur, ils passent ensuite les 5-6 autres semaines à alterner : la journée en extérieur, la nuit en intérieur.</p>
+        <ul className="list-disc">
+          Progressivement, les chiots gagnent en autonomie grâce à :
+          <li className="ml-4">
+            des temps de séparation courts et adaptés,
+          </li>
+          <li className="ml-4"> l'exploration de leur environnement en toute sécurité,</li>
+          <li className="ml-4"> des interactions positives avec l'humain,</li>
+          <li className="ml-4"> le maintien de routines rassurantes.</li>
+        </ul>
+        <p>La mère reste présente et attentive tout au long de ce processus, ce qui permet aux chiots de développer leur confiance, leur stabilité émotionnelle et leur capacité d'adaptation.</p>
+        <p>Cette préparation en douceur favorise une transition sereine vers leur nouvelle famille et contribue à faire des chiots bien dans leur tête et bien dans leurs pattes</p>
       </div>
     ),
   },
+
 
 ]
 
@@ -241,10 +294,165 @@ export const faqNosChiots: FAQItem[] = [
       </div>
     ),
   },
+  {
+    question: "À quel âge les chiots peuvent-ils rejoindre leur famille ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Nos chiots POMSKY rejoignent leur famille à l'âge de 9 à 10 semaines : leur développement, leur permettant d'avoir acquis les codes canins appris par leur mère, les bases essentielles pour une transition en douceur vers leur nouveau foyer.
+        </p>
+      </div>
+    ),
+  },
+  {
+    question: "Les chiots Pomsky sont-ils suivis sur le plan vétérinaire ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Oui. Tous les chiots bénéficient d'un suivi vétérinaire rigoureux.
+        </p>
+        <p>Ils quittent l'élevage :</p>
+        <ul className="list-disc ml-6">
+          <li>identifiés par puce électronique</li>
+          <li>vaccinés ( CHPPL )</li>
+          <li>vermifugés</li>
+          <li>Certificat de bonne santé</li>
+          <li>Test ADN de filiation</li>
+          <li>avec les documents légaux obligatoires ( carnet de santé ou passeport international/ certificat d'identification / certificat de vente / cession )</li>
+        </ul>
+      </div>
+    ),
+  },
+  {
+    question: "Aidez-vous les familles à choisir leur chiot Pomsky ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Oui. Un accompagnement personnalisé est proposé pour orienter les adoptants vers le chiot le plus adapté à leur mode de vie, leurs attentes et leur environnement. A l'âge de 5 semaines nous pouvons vous conseiller le chiot le plus adapté à votre mode de vie, en fonction de son caractère et des interactions qu'il a avec nous au quotidien : bien sûr le choix reste à la famille.
+        </p>
+      </div>
+    ),
+  },
+  {
+    question: "Les chiots sont-ils adaptés à la vie de famille ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Oui. Nos petits chiots Pomsky sont élevés dans une optique de chien de compagnie, adaptés à la vie de famille, avec enfants, dans le respect mutuel et sous supervision.
+        </p>
+      </div>
+    ),
+  },
+  {
+    question: "Que signifie pour vous un chiot bien préparé ?",
+    answer: (
+      <div className="space-y-3">
+        <p>Un chiot Pomsky bien préparé est un chiot :</p>
+        <ul className="list-disc ml-6">
+          <li>confiant,</li>
+          <li>équilibré,</li>
+          <li>curieux,</li>
+          <li>prêt à s'adapter sereinement à sa nouvelle vie.</li>
+        </ul>
+      </div>
+    ),
+  },
+  {
+    question: "Les chiots sont-ils visibles à l'élevage ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Oui, les chiots peuvent être rencontrés à l'élevage, dans un cadre sanitaire extrêmement strict, organisé et respectueux de leur bien-être.
+        </p>
+        <p>
+          Les visites sont proposées sur rendez-vous, lorsque l'âge des chiots le permet et dans le respect de leur développement, de leur rythme et des règles sanitaires.
+        </p>
+        <p>
+          Chez Royal POMSKY, les rencontres sont pensées comme un temps privilégié, permettant aux familles de découvrir les chiots, l'environnement dans lequel ils grandissent et la philosophie de l'élevage, en toute transparence et bienveillance
+        </p>
+      </div>
+    ),
+  },
+  {
+    question: "Peut-on manipuler les chiots Pomsky ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Pour des raisons sanitaires et de sécurité, les chiots sont visibles mais ne sont pas manipulés par les visiteurs jusquà lâge de 9 semaines ( après avoir effectué leur vaccination )
+        </p>
+        <p>Seul léleveur est autorisé à manipuler les chiots, afin de :</p>
+        <ul className="list-disc ml-6">
+          <li>préserver leur santé et limiter les risques de contamination,</li>
+          <li>respecter leur rythme de développement,</li>
+          <li>garantir des manipulations douces, adaptées et cohérentes.</li>
+        </ul>
+        <p>Cette règle est essentielle et fait partie intégrante de l'engagement de Royal POMSKY pour le bien-être et la protection des chiots déjà adoptés, des portées et de la santé sanitaire de l'élevage selon les recommandations de notre équipe vétérinaire.</p>
+
+      </div>
+    ),
+  }, {
+    question: "Les chiots sont-ils visibles à l'élevage ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Oui, les chiots peuvent être rencontrés à l'élevage, dans un cadre sanitaire extrêmement strict, organisé et respectueux de leur bien-être.
+        </p>
+      </div>
+    ),
+  },
 ]
+
 
 export const faqReproducteurs: FAQItem[] = [
   {
+    question: "Les chiens reproducteurs vivent-ils à l'élevage ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Oui. Les reproducteurs vivent au sein de l'élevage, aucun chien ne provient d'ailleurs : ils sont au contact de l'humain et de leur environnement naturel, ce qui contribue à leur équilibre et à la qualité des chiots à naître.
+        </p>
+      </div>
+    ),
+  },
+  {
+    question: "Pourquoi le choix des reproducteurs est-il si important ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Il est primordial dans un élevage ! Nos reproducteurs transmettent non seulement leur patrimoine génétique, mais aussi une part de leur équilibre émotionnel.
+        </p>
+        <p>
+          Des chiens stables et bien dans leur tête donnent naissance à des chiots plus confiants, plus adaptables et mieux préparés à la vie de famille et citadine.
+        </p>
+        <p>
+          Le Pomsky étant issu de lignées Husky et Spitz, la sélection des reproducteurs est primordiale pour obtenir des chiens équilibrés, stables et conformes au type.
+        </p>
+        <p>Le tempérament, la morphologie, la santé et le comportement sont pris en compte avant chaque projet de reproduction.
+        </p>
+      </div>
+    ),
+  }, {
+    question: "Les reproducteurs participent-ils à l'évolution de l'élevage ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Oui. Chaque reproducteur s'inscrit dans un projet d'élevage cohérent et durable pour la réaction de la race Pomsky, visant à améliorer la qualité, l'équilibre et le type des générations futures.
+        </p>
+      </div>
+    ),
+  }, {
+    question: "Les mâles et les femelles s'entendent ils entre eux ? ",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Nos mâles reproducteurs sont très doux et vivent ensemble, nos femelles vivent ensemble également.
+        </p>
+        <p>
+          Nous n'avons aucun problème d'incompatibilité de caractère malgré quelques ajustements dans la meute. Le Pomsky n'est pas un chien dominant et territorial mais sociable et équilibré.
+        </p>
+      </div>
+    ),
+  }, {
     question: "Pourquoi le choix des reproducteurs est-il essentiel chez le Pomsky ?",
     answer: (
       <div className="space-y-3">
@@ -259,7 +467,6 @@ export const faqReproducteurs: FAQItem[] = [
       </div>
     ),
   },
-
 ]
 
 
@@ -280,7 +487,39 @@ export const faqContact: FAQItem[] = [
       </div>
     ),
   },
+  {
+    question: "Est-il possible d'être inscrit sur liste d'attente ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Oui, il est tout à fait possible d'être inscrit sur liste d'attente chez Royal POMSKY.
+        </p>
+        <p>
+          La liste d'attente permet d'anticiper un futur projet d'adoption et de prendre le temps d'échanger afin de vérifier la compatibilité entre le chiot et la future famille.
+        </p>
+        <p>Elle ne constitue pas un engagement automatique, mais une démarche réfléchie et encadrée.</p>
+        <p>L'inscription se fait après un premier échange, permettant de mieux comprendre votre mode de vie, vos attentes et votre projet.</p>
+        <p>Chaque demande est étudiée avec attention, dans l'intérêt du chiot comme de la famille.</p>
+        <p>Chez Royal POMSKY, la liste d'attente est avant tout un moyen de confiance et de préparation, pour des adoptions sereines et durables</p>
 
+      </div>
+    ),
+  },
+  {
+    question: "Puis-je vous contacter après l'adoption si j'ai des questions ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Oui, bien sûr.
+        </p>
+        <p>
+          Chez Royal POMSKY, l'accompagnement ne s'arrête pas au départ du chiot.
+        </p>
+        <p>L'élevage reste disponible après l'adoption pour répondre aux questions, accompagner les premières étapes et apporter des conseils sur l'adaptation, l'éducation et le quotidien du chiot.</p>
+        <p>Garder le lien avec les familles fait partie intégrante de la philosophie de Royal POMSKY, car une adoption réussie se construit dans la durée, avec écoute, bienveillance et responsabilité</p>
+      </div>
+    ),
+  },
 ]
 
 
@@ -387,4 +626,3 @@ export const faqPomsky: FAQItem[] = [
     ),
   },
 ]
-

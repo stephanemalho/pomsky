@@ -32,7 +32,7 @@ const sizes = [
         chest: "25 à 34 cm",
         weight: "3,5 à 5 kg",
         text: "Le plus petit gabarit. Très proche de ses humains, expressif et joueur, c'est le plus petit de tous les Pomsky ! Il représente la taille d'un husky à deux mois, durant toute sa vie. Le toy est énergique, sa petite taille n'en fait pas un chien de canapé.Il est plus facilement transportable lors de déplacements, s'il est habitué il voyagera aisément en sac à dos par exemple ! Cela permet d'avoir un compagnon idéal pour la vie citadine.",
-        image: "/size-for-toy-pomsky.jpg",
+        image: "/size-for-toy-pomsky.webp",
         alt: "comparatif de taille d'un pomsky toy vs husky",
         pawSize: 4,
     },
@@ -41,7 +41,7 @@ const sizes = [
         chest: "35 à 40 cm",
         weight: "6 à 9 kg",
         text: "C'est le format qui met tout le monde d'accord : entre deux tailles, il est l'équivalent de la taille d'un husky de 4 mois toute sa vie. Vif, proche de l'humain, son format lui permet d'être plus facile à gérer. Il garde une morphologie extrêmement équilibrée en génération avancée..",
-        image: "/size-for-mini-pomsky.jpg",
+        image: "/size-for-mini-pomsky.webp",
         alt: "comparatif de taille d'un pomsky miniature vs husky",
         pawSize: 5,
     },
@@ -50,7 +50,7 @@ const sizes = [
         chest: "41 à 45 cm",
         weight: "9 à 12 kg",
         text: "Le plus grand gabarit. Il conserve l'allure du Husky, de la taille équivalente à un husky de 5 mois environ toute sa vie ! il n'est pas plus énergique que les tailles miniatures où Toy. Sa prestance impressionne tant le standard est un chien équilibré et facile à vivre.",
-        image: "/size-for-standard-pomsky.jpg",
+        image: "/size-for-standard-pomsky.webp",
         alt: "comparatif de taille d'un pomsky standard vs husky",
         pawSize: 6,
     },
@@ -61,21 +61,21 @@ const generations = [
         title: "F1 : première génération de pomsky",
         description:
             "Croisement initial entre une femelle Husky Sibérien et un mâle Spitz nain (Poméranien). Résultat : Les chiots peuvent varier en taille, en morphologie et en caractère et être plus primitifs ( en raison de la maman qui est un husky )",
-        image: "/pages/le-pomsky/femmelle-pomsky-f1.jpg",
+        image: "/pages/le-pomsky/femmelle-pomsky-f1.webp",
         alt: "Pomsky F1 couchée sur le canapé",
     },
     {
         title: "F2 : deuxième génération de pomsky",
         description:
             "Croisement entre deux Pomskys F1. Les portées deviennent un peu plus homogènes, mais le résultat reste encore variable notamment en taille.",
-        image: "/pages/le-pomsky/chiot-pomsky-f2-avec-citrouille.jpg",
+        image: "/pages/le-pomsky/chiot-pomsky-f2-avec-citrouille.webp",
         alt: "Pomsky F2 aux yeux bleus sur un banc",
     },
     {
         title: "F3 à F5 : stabilisation",
         description:
             "Plus la génération avance, plus le type, le comportement, la morphologie idéale et le marquage se stabilisent. À partir de F5, on parle souvent de Pomsky multigénérationnel.",
-        image: "/pages/le-pomsky/pomsky-male-f3-pelage-fluffy.jpg",
+        image: "/pages/le-pomsky/pomsky-male-f3-pelage-fluffy.webp",
         alt: "Pomsky F4 assise dans le jardin entourée de feuilles d'automne",
     },
 ]
@@ -359,7 +359,7 @@ export default function dogPage() {
                                         </p>
                                     </div>
                                     <Image
-                                        src="/pages/le-pomsky/male-pomsky-chocolat.jpg"
+                                        src="/pages/le-pomsky/male-pomsky-chocolat.webp"
                                         alt="Pomsky aux yeux bleus"
                                         width={400}
                                         height={250}

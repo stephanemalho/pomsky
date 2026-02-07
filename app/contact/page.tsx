@@ -180,7 +180,7 @@ export default function ContactPage() {
                                 <div className="flex justify-between items-center flex-col lg:flex-row gap-3">
                                     <div className="relative w-40 aspect-square my-4">
                                         <Image
-                                            src="/qr-code-contact-exotic-perle-teckel.png"
+                                            src="/qr-code-contact-exotic-perle-teckel.webp"
                                             alt="QR code pour contacter Royal POMSKY"
                                             fill
                                             className="object-cover"
