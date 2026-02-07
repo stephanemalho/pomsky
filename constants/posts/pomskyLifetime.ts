@@ -81,7 +81,7 @@ export const pomskyLifeExpectancyPost: BlogPost = {
         linkedinUrl: "",
         linkedinLabelPrefix: "Profil de"
     },
-    date: "2026-02-01",
+    date: "2026-02-07",
     readTime: "10 min",
     category: "Santé & bien-être",
     tags: [
@@ -93,9 +93,9 @@ export const pomskyLifeExpectancyPost: BlogPost = {
         "race hybride"
     ],
     image: "/assets/blog/pomsky-face-life-immustration-1038x576.webp",
-    imageAlt: "Illustration du visage d'un Pomsky représentant la longévité et la santé",
+    imageAlt:
+        "Illustration du visage d'un Pomsky représentant la longévité et la santé",
     contactCta: {
         label: "Contacter l'élevage"
     }
 };
-

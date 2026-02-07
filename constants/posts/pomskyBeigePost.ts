@@ -10,7 +10,8 @@ export const pomskyBeigeYeuxBleusPost: BlogPost = {
         "Le Pomsky beige aux yeux bleus est une variante fascinante de cette race hybride récente. Son apparence unique, sa taille réduite et son tempérament vif en font un chien très apprécié des amateurs de races originales, aussi bien chez les enfants que chez les adultes.",
     sections: [
         {
-            subtitle: "Le Pomsky beige aux yeux bleus : une variété au standard captivant",
+            subtitle:
+                "Le Pomsky beige aux yeux bleus : une variété au standard captivant",
             paragraphs: [
                 "Le Pomsky est issu du croisement entre le Husky Sibérien et le Spitz nain, également appelé Spitz poméranien. Ce chien miniature séduit par son allure, sa personnalité et son gabarit adapté à la vie moderne.",
                 "La variante beige aux yeux bleus se distingue par un pelage clair aux nuances douces et par des yeux d'un bleu éclatant, offrant un contraste visuel particulièrement recherché."
@@ -67,7 +68,7 @@ export const pomskyBeigeYeuxBleusPost: BlogPost = {
         linkedinUrl: "",
         linkedinLabelPrefix: "Profil de"
     },
-    date: "2026-02-01",
+    date: "2026-02-07",
     readTime: "9 min",
     category: "Variétés & apparences",
     tags: [
@@ -84,4 +85,3 @@ export const pomskyBeigeYeuxBleusPost: BlogPost = {
         label: "Contacter l'élevage"
     }
 };
-

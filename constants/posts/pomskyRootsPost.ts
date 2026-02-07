@@ -74,7 +74,7 @@ export const pomskyHistoryPost: BlogPost = {
         linkedinUrl: "",
         linkedinLabelPrefix: "Profil de"
     },
-    date: "2026-02-01",
+    date: "2026-02-07",
     readTime: "8 min",
     category: "Race Pomsky",
     tags: [
@@ -86,9 +86,9 @@ export const pomskyHistoryPost: BlogPost = {
         "spitz nain"
     ],
     image: "/assets/blog/sushi-illustrate-pomsky-lissening-1038x576.webp",
-    imageAlt: "Illustration d'un Pomsky à l'écoute représentant l'origine de la race",
+    imageAlt:
+        "Illustration d'un Pomsky à l'écoute représentant l'origine de la race",
     contactCta: {
         label: "Contacter l'élevage"
     }
 };
-

@@ -74,7 +74,7 @@ export const pomskyToyGuidePost: BlogPost = {
         linkedinUrl: "",
         linkedinLabelPrefix: "Profil de"
     },
-    date: "2026-02-01",
+    date: "2026-02-07",
     readTime: "8 min",
     category: "Race & Conseils",
     tags: [
@@ -91,4 +91,3 @@ export const pomskyToyGuidePost: BlogPost = {
         label: "Contacter l'éleveur"
     }
 };
-

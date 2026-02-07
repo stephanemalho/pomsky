@@ -1,7 +1,35 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  async redirects() {
+    return [
+      {
+        source: "/actualite",
+        destination: "/blog/pomsky",
+        permanent: true,
+      },
+      {
+        source: "/pourquoi-le-pomsky",
+        destination: "/le-pomsky",
+        permanent: true,
+      },
+      {
+        source: "/category/galerie-photos-videos",
+        destination: "/chiots-disponibles",
+        permanent: true,
+      },
+      {
+        source: "/videos-tiktok-royalpomsky",
+        destination: "/chiots-disponibles",
+        permanent: true,
+      },
+      {
+        source: "/galerie",
+        destination: "/chiots-disponibles",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

@@ -17,6 +17,7 @@ const questrial = Questrial({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteConfig.siteUrl),
   title: siteConfig.title,
   description: siteConfig.description,
   keywords: siteConfig.keywords,
@@ -58,10 +59,9 @@ export const metadata: Metadata = {
     telephone: true,
     address: true,
   },
-
-  other: {
-    "google-site-verification": "your-google-site-verification-code", //@todo remplacer par le vrai code
-  },
+  other: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
+    ? { "google-site-verification": process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION }
+    : undefined,
 }
 
 export default function RootLayout({

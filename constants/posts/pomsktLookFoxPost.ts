@@ -88,7 +88,7 @@ export const pomskyRenardPost: BlogPost = {
         linkedinUrl: "",
         linkedinLabelPrefix: "Profil de"
     },
-    date: "2026-02-01",
+    date: "2026-02-07",
     readTime: "9 min",
     category: "Variétés & apparences",
     tags: [
@@ -100,7 +100,8 @@ export const pomskyRenardPost: BlogPost = {
         "chien hybride"
     ],
     image: "/assets/blog/white-and-brown-pomsky-look-fox-1038x576.webp",
-    imageAlt: "Pomsky au look de petit renard avec pelage dense et regard expressif",
+    imageAlt:
+        "Pomsky au look de petit renard avec pelage dense et regard expressif",
     contactCta: {
         label: "Contacter l'élevage"
     }

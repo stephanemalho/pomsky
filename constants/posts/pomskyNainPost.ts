@@ -90,7 +90,7 @@ export const pomskyNainPost: BlogPost = {
         linkedinUrl: "",
         linkedinLabelPrefix: "Profil de"
     },
-    date: "2026-02-01",
+    date: "2026-02-07",
     readTime: "9 min",
     category: "Race Pomsky",
     tags: [
@@ -107,4 +107,3 @@ export const pomskyNainPost: BlogPost = {
         label: "Contacter l'élevage"
     }
 };
-

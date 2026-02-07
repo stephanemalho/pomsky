@@ -74,7 +74,7 @@ export const huskySiberienPost: BlogPost = {
         linkedinUrl: "",
         linkedinLabelPrefix: "Profil de"
     },
-    date: "2026-02-01",
+    date: "2026-02-07",
     readTime: "9 min",
     category: "Races de chiens",
     tags: [
@@ -91,4 +91,3 @@ export const huskySiberienPost: BlogPost = {
         label: "Contacter l'élevage"
     }
 };
-

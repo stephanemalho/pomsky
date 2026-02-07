@@ -88,7 +88,7 @@ export const pomskyBlancYeuxBleusPost: BlogPost = {
         linkedinUrl: "",
         linkedinLabelPrefix: "Profil de"
     },
-    date: "2026-02-01",
+    date: "2026-02-07",
     readTime: "10 min",
     category: "Variétés & apparences",
     tags: [
@@ -100,9 +100,9 @@ export const pomskyBlancYeuxBleusPost: BlogPost = {
         "élevage de pomsky"
     ],
     image: "/assets/blog/pomsky-blanc-yeux-bleu-1038x576.webp",
-    imageAlt: "Pomsky blanc aux yeux bleus au pelage lumineux et regard intense",
+    imageAlt:
+        "Pomsky blanc aux yeux bleus au pelage lumineux et regard intense",
     contactCta: {
         label: "Contacter l'élevage"
     }
 };
-

@@ -28,7 +28,7 @@ export const siteConfig = {
     author: CANONICAL_NAME,
     locale: "fr_FR",
 
-    siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.royalpomsky.com",
+    siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "https://royalpomsky.com",
 
     /* ------------------------------ SEO Global -------------------------------- */
     title: "Élevage de Pomsky | Royal POMSKY",

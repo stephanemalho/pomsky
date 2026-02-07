@@ -67,7 +67,7 @@ export const pomskyGenerationsPost: BlogPost = {
         linkedinUrl: "",
         linkedinLabelPrefix: "Profil de"
     },
-    date: "2026-02-01",
+    date: "2026-02-07",
     readTime: "9 min",
     category: "Élevage & génétique",
     tags: [
@@ -84,4 +84,3 @@ export const pomskyGenerationsPost: BlogPost = {
         label: "Contacter l'élevage"
     }
 };
-
