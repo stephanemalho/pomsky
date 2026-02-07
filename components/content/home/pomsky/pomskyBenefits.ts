@@ -30,13 +30,13 @@ export const pomskyBenefits: BenefitCard[] = [
         title: "Les traits physiques du Pomsky",
         text: "Le Pomsky a de nombreuses caractéristiques physiques qui lui viennent du Husky. On retrouve parmi celles-ci, la couleur de ses yeux : (bleus, verts, ambre, bruns ou hétérochromes) ainsi que la couleur de sa robe, le marquage ( notamment le masque ), la texture et la densité de son poil.",
         image: wetPomsky,
-        alt: "Pomsky regard expressif et attentif"
+        alt: "Pomsky mouillé après une baignade nocturne, ressemblant à un renard"
     },
     {
         title: "Un regard unique et expressif",
         text: "Le Pomsky se distingue par un regard intense et expressif. Ses yeux peuvent être bleus, verts, ambre, bruns, gris ou noirs, parfois vairons ou particolor, hérités du Husky sibérien. Cette richesse visuelle renforce son expressivité et le lien qu'il crée avec ses adoptants.",
         image: pomskyEyeColors,
-        alt: "Regard expressif du Pomsky avec différentes couleurs d'yeux"
+        alt: "Pomsky regardant l'objectif avec beaucoup de caractère"
     },
     {
         title: "Un lien fort avec ses adoptants",
@@ -48,6 +48,6 @@ export const pomskyBenefits: BenefitCard[] = [
         title: "Un chien polyvalent",
         text: "Malgré son gabarit compact, le Pomsky est un chien actif et polyvalent. Il peut s'épanouir dans des activités comme le pistage, le mantrailing, l'agility ou la cani-rando, toujours dans le respect de son rythme.",
         image: pomskyPolyvalent,
-        alt: "Pomsky pratiquant une activité physique en extérieur"
+        alt: "Pomsky pratiquant une activité physique en extérieur sur l'herbe verte"
     }
 ];

@@ -25,7 +25,7 @@ function ImageCarousel({ images, alt, priority = false }: ImageCarouselProps) {
                 fill
                 className="object-cover transition duration-300 p-2"
                 sizes="(min-width: 768px) 50vw, 100vw"
-                priority={priority}          // ✅ décision externe
+                priority={priority}     
                 loading={priority ? "eager" : "lazy"}
             />
             <div className="absolute inset-0 bg-linear-to-t from-black/40 via-transparent to-transparent" />

@@ -12,7 +12,7 @@ export function Footer() {
                             <div className="h-10 w-10 relative">
                                 <Image
                                     src="/logo-royal-pomsky-black.webp"
-                                    alt="logo Royal POMSKY - Elevage de pomsky"
+                                    alt="logo de Royal POMSKY - Elevage de pomsky pour toute la france"
                                     fill
                                     sizes="40px"
                                     className="object-contain"

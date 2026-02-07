@@ -62,21 +62,21 @@ const generations = [
         description:
             "Croisement initial entre une femelle Husky Sibérien et un mâle Spitz nain (Poméranien). Résultat : Les chiots peuvent varier en taille, en morphologie et en caractère et être plus primitifs ( en raison de la maman qui est un husky )",
         image: "/pages/le-pomsky/femmelle-pomsky-f1.webp",
-        alt: "Pomsky F1 couchée sur le canapé",
+        alt: "Pomsky F1 debout le regard assuré et fière.",
     },
     {
         title: "F2 : deuxième génération de pomsky",
         description:
             "Croisement entre deux Pomskys F1. Les portées deviennent un peu plus homogènes, mais le résultat reste encore variable notamment en taille.",
         image: "/pages/le-pomsky/chiot-pomsky-f2-avec-citrouille.webp",
-        alt: "Pomsky F2 aux yeux bleus sur un banc",
+        alt: "Pomsky F2 assis à coté d'une citrouille d'halloween.",
     },
     {
         title: "F3 à F5 : stabilisation",
         description:
             "Plus la génération avance, plus le type, le comportement, la morphologie idéale et le marquage se stabilisent. À partir de F5, on parle souvent de Pomsky multigénérationnel.",
         image: "/pages/le-pomsky/pomsky-male-f3-pelage-fluffy.webp",
-        alt: "Pomsky F4 assise dans le jardin entourée de feuilles d'automne",
+        alt: "Pomsky F3 en position de concentration fixant un object non visible",
     },
 ]
 
@@ -127,8 +127,8 @@ export default function dogPage() {
                         </div>
                         <div className="relative h-72 md:h-105 rounded-lg overflow-hidden bg-black">
                             <Image
-                                src="/pages/le-pomsky/pomsky-f4-et -une-citrouille.jpg"
-                                alt="Pomsky et Husky côte à côte pour comparaison de taille"
+                                src="/pages/le-pomsky/pomsky-f4-et-une-citrouille.webp"
+                                alt="Pomsky chiot f4 avec ses pattes avant sur un citrouille d'halloween"
                                 fill
                                 className="object-cover"
                                 priority
@@ -336,7 +336,7 @@ export default function dogPage() {
                                     </div>
                                     <Image
                                         src="/pomsky-eye-colors-blue-brown-heterochromia.webp"
-                                        alt="Pomsky aux yeux bleus"
+                                        alt="Montage de plusieurs couleurs des yeux du Pomsky"
                                         width={400}
                                         height={250}
                                         className="rounded-md mt-2"
@@ -360,7 +360,7 @@ export default function dogPage() {
                                     </div>
                                     <Image
                                         src="/pages/le-pomsky/male-pomsky-chocolat.webp"
-                                        alt="Pomsky aux yeux bleus"
+                                        alt="Pomsky couleur chocolat qui tire la langue"
                                         width={400}
                                         height={250}
                                         className="rounded-md mt-2"

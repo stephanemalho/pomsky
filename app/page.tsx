@@ -81,7 +81,7 @@ export default function HomePage() {
             <div className="absolute inset-0 z-0 m-auto">
               <Image
                 src="/cute-pomsky-looking-us.webp"
-                alt="Tout les formats de pomsky en format paysage"
+                alt="Un chiot pomsky regarde tendrement l'objectif pour nous acceuillir"
                 fill
                 className="object-cover scale-105 transition-transform duration-2000 group-hover:scale-110"
                 priority

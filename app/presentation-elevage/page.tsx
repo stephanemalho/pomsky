@@ -84,7 +84,7 @@ export default function PresentationPage() {
                             <div className="relative h-64 md:h-100 rounded-lg overflow-hidden">
                                 <Image
                                     src="/pages/presentation-elevage/chiot-pomsky-yeux-bleu-pelage-standard.webp"
-                                    alt="Elevage professionnel de pomsky dans le Jura"
+                                    alt="Chiot Pomsky aux yeux bleu assis a coté d'une citrouille d'halloween"
                                     fill
                                     className="object-cover"
                                 />
@@ -149,7 +149,7 @@ export default function PresentationPage() {
                     <section className="mb-16">
                         <div className="grid md:grid-cols-2 gap-12 items-center">
                             <div className="relative h-64 md:h-100 rounded-lg overflow-hidden md:order-2">
-                                <Image src="/pages/presentation-elevage/eleveuse-royal-pomsky-avec-un-pomsky.webp" alt="illustration d'un pomsky chiots de royal pomsky" fill className="object-cover" />
+                                <Image src="/pages/presentation-elevage/eleveuse-royal-pomsky-avec-un-pomsky.webp" alt="Aurélie de l'élevage Royal Pomsky et un pomsky qui attend son jouet" fill className="object-cover" />
                             </div>
                             <div className="space-y-6 md:order-1">
                                 <Badge variant="secondary" className="w-fit">

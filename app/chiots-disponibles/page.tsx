@@ -68,7 +68,7 @@ export default function NosChiotsPage() {
                                 <CardContent className="p-0">
                                     <div className={`grid md:grid-cols-2 gap-0 ${index % 2 === 1 ? "md:grid-flow-col-dense" : ""}`}>
                                         <div className={`relative min-h-80 ${index % 2 === 1 ? "md:order-2" : ""}`}>
-                                            <ImageCarousel images={puppy.images} alt={puppy.name} />
+                                            <ImageCarousel images={puppy.images} alt={"Carrousel d'images du chiots pomsky " + puppy.name} />
                                         </div>
                                         <div className={`p-8 space-y-4 flex flex-col justify-center ${index % 2 === 1 ? "md:order-1" : ""}`}>
                                             <div className="flex items-center gap-2">
