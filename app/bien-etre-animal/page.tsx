@@ -10,6 +10,7 @@ import { pageContent } from "@/lib/page-content"
 import { generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema-generators"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
 import Link from "next/link"
+import ImageCarousel from "@/components/client/carousel/ImageCarousel"
 
 export const metadata: Metadata = {
     title: pageMetadata.wellness.title,
@@ -76,7 +77,7 @@ export default function SejoursPage() {
                             <div className="flex flex-col items-center justify-center p-2 md:flex-row">
                                 <Dog className="h-4 w-4" />
                                 {/* <span>6 chiots attendus</span> */}
-                                <span className="ml-2">La nouvelle portée déjà reservée (inscrivez vous pour la prochaine)</span>
+                                <span className="ml-2">La nouvelle portée déjà reservée <Link href="/contact" className="text-blue-700 underline hover:text-blue-500">(inscrivez vous pour la prochaine)</Link></span>
                             </div>
                         </div>
                     </section>
@@ -91,24 +92,39 @@ export default function SejoursPage() {
                                         Nursery intérieure
                                     </Badge>
                                     <h3 className="text-xl md:text-2xl font-bold">Un cocon dès la naissance</h3>
+                                     <p className="text-muted-foreground leading-relaxed">
+                                        La nursery intérieure est pensée comme un véritable cocon, calme et sécurisé, où chaque chiot peut évoluer dans les meilleures conditions dès ses premières heures de vie. La température, l'hygiène et l'ambiance sonore sont maîtrisées afin de limiter le stress et de favoriser un développement harmonieux, aussi bien physique qu'émotionnel.
+                                    </p>
                                     <p className="text-muted-foreground leading-relaxed">
-                                        Les chiots naissent dans une salle de mise bas : une pièce tempérée, sous surveillance et avec une présence humaine continue. Nous assurons un suivi vétérinaire rapproché et pesées quotidiennes.
+                                        Les chiots naissent dans une salle de mise bas : une pièce tempérée, sous surveillance et avec une présence humaine continue. Nous assurons un suivi vétérinaire rapproché et des pesées quotidiennes.
+                                    </p>
+                                     <p className="text-muted-foreground leading-relaxed">
+                                        Cette présence humaine quotidienne permet aux chiots de s'habituer très tôt aux manipulations douces, aux odeurs et aux bruits du quotidien. Cette phase essentielle pose les bases d'un chiot confiant, serein et réceptif, facilitant les apprentissages futurs et la transition vers sa nouvelle famille. 
                                     </p>
                                 </div>
-                                <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
-                                    <Image src="/nurcery-doors.webp" alt="Nursery pour chiots pomsky" fill className="object-cover" />
+                                <div className="relative h-64 md:h-122 rounded-lg overflow-hidden">
+                                    <ImageCarousel
+                                        images={[
+                                            "pages/conditions-de-vie/cocom-pour-chiots-pomsky.jpg",
+                                            "pages/conditions-de-vie/bebe-chiots-lit-douillet.jpg",
+                                            "pages/conditions-de-vie/salle-ambiante-pour-chiots.jpg",
+                                        ]}
+                                        alt="Nursery pour chiots pomsky"
+                                    />
                                 </div>
                             </div>
                         </section>
                         {/* Espaces Intérieurs */}
                         <section className="bg-muted/30 -mx-4 px-4 py-16 rounded-lg">
                             <div className="grid md:grid-cols-2 gap-12 items-center">
-                                <div className="relative h-64 md:h-80 rounded-lg overflow-hidden md:order-2">
-                                    <Image
-                                        src="/nurcery-panier.webp"
+                                <div className="relative h-64 md:h-122 rounded-lg overflow-hidden md:order-2">
+                                    <ImageCarousel
+                                        images={[
+                                            "pages/conditions-de-vie/pomsky-joue-avec-balle-plastique.png",
+                                            "pages/conditions-de-vie/chiots-jouent-dans-bac-a-boules.png",
+                                            "pages/conditions-de-vie/ensemble-de-jouets-pour-chiots.png",
+                                        ]}
                                         alt="Jeux d'éveil pour chiots pomsky"
-                                        fill
-                                        className="object-cover"
                                     />
                                 </div>
                                 <div className="space-y-6 md:order-1">
@@ -132,18 +148,32 @@ export default function SejoursPage() {
                                         <Dumbbell className="h-4 w-4 mr-2" />
                                         Jardin sécurisé
                                     </Badge>
-                                    <h3 className="text-xl md:text-2xl font-bold">Premières sorties encadrées</h3>
+                                    <h3 className="text-xl md:text-2xl font-bold">Des sorties régulières en pleine nature, au cœur de l'éducation Royal Pomsky</h3>
                                     <p className="text-muted-foreground leading-relaxed">
-                                        Parc d&apos;herbe clôturé, jeux en extérieur et apprentissage de la propreté progressive pour préparer leur vie
-                                        future en famille.
+                                        Chez Royal Pomsky, le bien-être et l'équilibre de nos chiens et chiots sont une priorité quotidienne. Au-delà d'un environnement sécurisé à la maison, nous accordons une place essentielle aux sorties régulières en pleine nature, encadrées par les éleveurs.
+                                    </p>
+                                    <p className="text-muted-foreground leading-relaxed">
+                                        Forêts, jardins, lacs, prairies et chemins de campagne font partie intégrante de leur quotidien. Ces promenades permettent aux chiens adultes comme aux chiots de découvrir des environnements variés, de développer leur curiosité naturelle et de renforcer leur confiance face aux bruits du monde extérieur.
+                                    </p>
+                                    <p className="text-muted-foreground leading-relaxed">
+                                        Les chiots bénéficient ainsi très tôt d'une socialisation progressive et positive : nouveaux sons, nouvelles odeurs, terrains différents, interactions avec leurs congénères et avec l'humain. Cette stimulation douce favorise leur équilibre émotionnel, leur capacité d'adaptation et prépare sereinement leur future vie de chien de famille.
+                                    </p>
+                                    <p className="text-muted-foreground leading-relaxed">
+                                        À la maison, cet apprentissage est complété par un parc d'herbe clôturé, des jeux en extérieur et un apprentissage progressif de la propreté, toujours dans le respect du rythme de chaque chiot.
+                                    </p>
+                                    <p className="text-muted-foreground leading-relaxed">
+                                        L'engagement de Royal Pomsky est : élever des chiens bien dans leurs pattes, sociables, équilibrés et prêts à s'épanouir pleinement au sein de leur future famille.
                                     </p>
                                 </div>
-                                <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
-                                    <Image
-                                        src="/exterieur-3.webp"
+                                <div className="relative h-64 md:h-122 rounded-lg overflow-hidden">
+                                    <ImageCarousel
+                                        images={[
+                                            "pages/conditions-de-vie/sortie-encadree-avec-marine.png",
+                                            "pages/conditions-de-vie/marine-joue-avec-les-chiots.png",
+                                            "pages/conditions-de-vie/sortie-avec-les-pomsky-adultes.png",
+                                            "pages/conditions-de-vie/pomsky-adulte-joue-avec-marine.png"
+                                        ]}
                                         alt="Chiots pomsky dans le jardin"
-                                        fill
-                                        className="object-cover"
                                     />
                                 </div>
                             </div>
@@ -152,7 +182,13 @@ export default function SejoursPage() {
                         <section className="bg-muted/30 -mx-4 px-4 py-16 rounded-lg">
                             <div className="grid md:grid-cols-2 gap-12 items-center">
                                 <div className="relative h-64 md:h-80 rounded-lg overflow-hidden md:order-2">
-                                    <Image src="/pomsky-nurcery-veterinaire.png" alt="Alimentation premium" fill className="object-cover" />
+                                    <ImageCarousel
+                                        images={[
+                                            "pages/conditions-de-vie/pomsky-nurcery-veterinaire.png",
+                                            "pages/conditions-de-vie/beurk-food.png",
+                                        ]}
+                                        alt="Alimentation premium"
+                                    />
                                 </div>
                                 <div className="space-y-6 md:order-1">
                                     <Badge variant="secondary" className="w-fit">
@@ -183,7 +219,13 @@ export default function SejoursPage() {
                                     </p>
                                 </div>
                                 <div className="relative h-104 md:h-180 rounded-lg overflow-hidden">
-                                    <Image src="/pomsky-mom-with-her-two-baby.png" alt="Espace repos des chiots" fill className="object-cover" />
+                                    <ImageCarousel
+                                        images={[
+                                            "pomsky-mom-with-her-two-baby.png",
+                                            "two-pomsky-puppy.webp",
+                                        ]}
+                                        alt="Espace repos des chiots"
+                                    />
                                 </div>
                             </div>
                         </section>
@@ -277,4 +319,8 @@ export default function SejoursPage() {
         </>
     )
 }
+
+
+
+
 

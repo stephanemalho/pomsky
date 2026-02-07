@@ -77,15 +77,98 @@ export const faqHome: FAQItem[] = [
 
 export const faqPresentation: FAQItem[] = [
   {
-    question: "Comment est pensé le cadre de vie des Pomsky ?",
+    question: "Comment sont choisis les futurs parents ?",
     answer: (
       <div className="space-y-3">
         <p>
-          Les Pomsky évoluent dans un environnement familial, avec des espaces
-          sécurisés, des sorties quotidiennes et des interactions régulières avec l'humain.
+          Les futurs parents sont sélectionnés aux USA pour éviter tout risque de consanguinité ainsi que sur nos chiots nés à la maison : nous les retenons tout d'abord pour leur beauté physique et particulièrement leur correspondance au standard du Pomsky établi selon la fédération française du Pomsky et l'IPA ( premier club américain fondateur de la race ) ainsi que nos objectifs d'avancer en génération.
+        </p>
+        <p>
+          Pomsky et l'IPA ( premier club américain fondateur de la race ) ainsi que nos objectifs d'avancer en génération.
+        </p>
+        <p>À l'âge d'1 an nous faisons les test ADN de santé et de dépistage des tares liées au pomeranien et husky ! Suite à celà un bilan comportemental du chien que nous avons sélectionné. </p>
+        <p>Si le bilan est positif et que le comportement correspond à ce qui est souhaité pour la race en devenir ( Pomsky sociable, avenant, facile à éduquer, peu aboyeur, proche de l'humain et équilibré ) il sera sélectionné pour notre programme d'élevage et il reproduira à l'âge de 2 ans. </p>
+        <p>Si le comportement n'est pas adapté à la reproduction ( peur, méfiance, aboiement excessifs ) le chien est placé en famille d'accueil et stérilisé.</p>
+        <p>Tout ceci dans le but de vous garantir d'adopter un chien équilibré, avec une santé parfaite.</p>
+      </div>
+    ),
+  },
+  {
+    question: "Combien de portées sont réalisées par an ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Ce nombre est variable, mais en moyenne une dizaine de portées par année.
         </p>
         <p>
           Ce cadre favorise l'équilibre émotionnel, la confiance et la sociabilité des chiots.
+        </p>
+        <p>Chez Royal POMSKY nous privilégions la qualité à la quantité.</p>
+        <p>Nous n'hésitons pas à travailler la taille Toy qui est la taille la moins prolifique en Pomsky. </p>
+        <p>Les femelles ont leur année de repos après gestation, le nombre de portées est volontairement limité afin de garantir :
+          <ul className="list-disc ml-4">
+            <li>une présence quotidienne auprès des chiots,</li>
+            <li>une socialisation optimale,</li>
+            <li>un suivi individualisé pour chaque famille adoptante.</li>
+          </ul>
+        </p>
+        <p>Nos portées arrivent souvent en même temps ce qui nous laisse beaucoup de chiots à proposer à certaines périodes et moins à d'autres.</p>
+      </div>
+    ),
+  },
+  {
+    question: "Où grandissent les chiots ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Les chiots évoluent dans un environnement professionnel, sécurisé et stimulant.
+          Ils sont exposés progressivement aux bruits, ( sons, vidéo projection ) et aux manipulations depuis leur naissance et aux situations courantes, favorisant leur équilibre et leur confiance.
+        </p>
+      </div>
+    ),
+  },
+  {
+    question: "L'élevage respecte-t-il le rythme des chiens ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Oui. Chez Royal POMSKY, chaque de nos chiens évolue dans le respect de son rythme physiologique et émotionnel.
+          Les périodes de reproduction, de repos et de récupération sont soigneusement respectées afin de préserver la santé et l'équilibre des reproducteurs.
+        </p>
+      </div>
+    ),
+  },
+  {
+    question: "Accordez-vous de l'importance à l'équilibre émotionnel ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Absolument. L'équilibre émotionnel est une partie essentielle de notre travail, de par mon ancien métier d'éducatrice dans lequel j'ai vu bien trop de chiens souffrant de troubles du comportement. Je donne à mes chiots toutes les clés possibles.
+        </p>
+        <p>Un chiot bien dans sa tête devient un adulte stable, confiant et agréable à vivre. </p>
+        <p>C'est pourquoi chaque interaction est pensée pour renforcer la sécurité affective, la confiance en l'humain et en lui même.</p>
+      </div>
+    ),
+  },
+  {
+    question: "L'élevage est-il adapté aux familles avec enfants ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Oui. Cependant les enfants doivent être calme en présence de chiots pour faire connaissance avec eux de la meilleure manière possible. Une fois la relation établie les chiots seront à même de montrer leur personnalité véritable.
+        </p>
+        <p>
+          Les chiots sont habitués à une présence humaine variée et à des manipulations respectueuses, ce qui facilite leur intégration dans des foyers avec enfants, sous supervision et dans le respect mutuel.
+        </p>
+      </div>
+    ),
+  },
+  {
+    question: "Proposez-vous un accompagnement pour les primo-adoptants ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Oui, et j'adore cela !  J'accompagne tout particulièrement les premières adoptions, même si évidemment toute famille est traitée de la même manière ! Je le fais en prenant le temps d'expliquer les besoins du Pomsky, les bases éducatives et les bonnes pratiques pour un départ serein, bien sûr le travail sera accompagné bien après le départ du chiot, l'élevage étant impliqué au delà du simple placement du chiot.
         </p>
       </div>
     ),
@@ -106,6 +189,34 @@ export const faqBienEtre: FAQItem[] = [
         <p>
           Une attention particulière est portée à l'équilibre, au repos et à l'évolution
           physique durant les premiers mois.
+        </p>
+      </div>
+    ),
+  },
+  {
+    question: "Le Pomsky peut il vivre en appartement ? ",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Oui, il peut vivre en appartement et souvent un chien est plus heureux en appartement qu'en maison car les balades sont plus nombreuses !
+        </p>
+        <p>
+          4 balades par jour seront nécessaires pour rendre votre Pomsky heureux, pour la propreté également.
+          Vous pouvez alterner des balades en ville et en campagne, le Pomsky aime la variété.
+        </p>
+      </div>
+    ),
+  },
+  {
+    question: "Le Pomsky est-il un chien actif ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Oui. Malgré son gabarit compact, le Pomsky est un chien actif et polyvalent.
+        </p>
+        <p>
+          Il peut pratiquer différentes activités comme le pistage, le mantrailing, l'agility ou la cani-rando,
+          toujours dans le respect de son rythme et de sa morphologie.
         </p>
       </div>
     ),
@@ -188,15 +299,17 @@ export const faqPomsky: FAQItem[] = [
     ),
   },
   {
-    question: "Le Pomsky est-il un chien actif ?",
+    question: "Le Pomsky perd-il beaucoup de poils ?",
     answer: (
       <div className="space-y-3">
         <p>
-          Oui. Malgré son gabarit compact, le Pomsky est un chien actif et polyvalent.
+          Le Pomsky perd son pelage épisodiquement lors de mues : son pelage ne tombe pas en continu.
         </p>
         <p>
-          Il peut pratiquer différentes activités comme le pistage, le mantrailing, l'agility ou la cani-rando,
-          toujours dans le respect de son rythme et de sa morphologie.
+          Lorsque la température commence à changer ( expl au printemps ou à l'automne ) le pelage commence à entamer sa mue. Il faudra brosser votre Pomsky tous les jours durant les 3 semaines de mue ou vous rendre chez le toiletteur pour qu'il puisse l'aider à se dégager du poil qui a du mal à tomber tout seul.
+        </p>
+        <p>
+          Une fois que la mue est terminée le pelage est en période de repousse et ne tombe plus pendant environ 6 mois.
         </p>
       </div>
     ),
@@ -244,6 +357,16 @@ export const faqPomsky: FAQItem[] = [
         <p>
           Il peut être de type polaire Husky, intermédiaire (Plush Coat) ou de type Wooly,
           avec un aspect laineux et un poil mi-long à long, proche de celui du Loulou de Poméranie.
+        </p>
+      </div>
+    ),
+  },
+  {
+    question: "Le Pomsky au pelage standard polaire nécessite t'il moins d'entretien que le Pomsky au pelage fluffy ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Oui, globalement le Pomsky au pelage fluffy aura besoin d'un brossage 3 fois par semaine pour éviter les noeuds tandis que le Pomsky au pelage standard polaire aura besoin d'un brossage une fois par semaine.
         </p>
       </div>
     ),
