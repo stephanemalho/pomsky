@@ -187,7 +187,7 @@ export default function ContactPage() {
                                         />
                                     </div>
                                     <div className="flex flex-col items-center space-y-2">
-                                        <Link target="_blank" href="https://forms.gle/GJC3979ysQrCwwe18" className="flex items-center bg-primary text-white hover:bg-primary/80 px-4 font-semibold dark:text-[#5b3a1a] rounded-md h-10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">Remplir le questionnaire
+                                        <Link target="_blank" href="https://forms.gle/2ZtWVzEzJ9QQhZfa8" className="flex items-center bg-primary text-white hover:bg-primary/80 px-4 font-semibold dark:text-[#5b3a1a] rounded-md h-10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">Remplir le questionnaire
                                         </Link>
                                         <span className="text-sm italic text-muted-foreground/80">Vous recevrez un exemplaire par mail</span>
                                     </div>
