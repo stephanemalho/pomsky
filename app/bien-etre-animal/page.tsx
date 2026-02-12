@@ -5,7 +5,7 @@ import { FAQSection } from "@/components/faq"
 import { faqBienEtre } from "@/lib/faq-data"
 import { Calendar, MapPin, Bed, Utensils, Dumbbell, SpadeIcon as Spa, PawPrint, Dog } from "lucide-react"
 import type { Metadata } from "next"
-import { buildOpenGraph, pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
+import { buildOpenGraph, buildTwitter, pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
 import { pageContent } from "@/lib/page-content"
 import { generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema-generators"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
@@ -29,6 +29,11 @@ export const metadata: Metadata = {
                 type: "image/webp",
             },
         ],
+    }),
+    twitter: buildTwitter({
+        title: pageMetadata.wellness.title,
+        description: pageMetadata.wellness.description,
+        imageUrl: `${siteConfig.siteUrl}${siteConfig.ogImage}`,
     }),
     alternates: {
         canonical: `${siteConfig.siteUrl}/bien-etre-animal`,

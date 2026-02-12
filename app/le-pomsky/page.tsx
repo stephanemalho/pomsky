@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { FAQSection } from "@/components/faq"
 import { faqPomsky } from "@/lib/faq-data"
 import type { Metadata } from "next"
-import { buildOpenGraph, pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
+import { buildOpenGraph, buildTwitter, pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
 import { pageContent } from "@/lib/page-content"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
 import { generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema-generators"
@@ -28,6 +28,11 @@ export const metadata: Metadata = {
                 type: "image/webp",
             },
         ],
+    }),
+    twitter: buildTwitter({
+        title: pageMetadata.pomsky.title,
+        description: pageMetadata.pomsky.description,
+        imageUrl: `${siteConfig.siteUrl}${siteConfig.ogImage}`,
     }),
     alternates: {
         canonical: `${siteConfig.siteUrl}/le-pomsky`,

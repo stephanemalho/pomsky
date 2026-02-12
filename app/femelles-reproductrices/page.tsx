@@ -6,7 +6,7 @@ import { Dog, PawPrint, Ruler, Weight } from "lucide-react"
 import { generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema-generators"
 import ImageCarousel from "@/components/client/carousel/ImageCarousel"
 import type { Metadata } from "next"
-import { buildOpenGraph, pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
+import { buildOpenGraph, buildTwitter, pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
 import Link from "next/link"
 import { puppies } from "./puppies"
@@ -29,6 +29,11 @@ export const metadata: Metadata = {
                 type: "image/webp",
             },
         ],
+    }),
+    twitter: buildTwitter({
+        title: pageMetadata.reproductors.title,
+        description: pageMetadata.reproductors.description,
+        imageUrl: `${siteConfig.siteUrl}${siteConfig.ogImage}`,
     }),
     alternates: {
         canonical: `${siteConfig.siteUrl}/femelles-reproductrices`,

@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "next lint",
     "convert:webp": "node scripts/convert-to-webp.js",
-    "update:images": "node scripts/update-image-references.js"
+    "update:images": "node scripts/update-image-references.js",
+    "audit:schemas": "node scripts/seo-schema-audit.mjs",
+    "audit:meta": "node scripts/seo-meta-audit.mjs"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.14",

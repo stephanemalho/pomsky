@@ -46,6 +46,7 @@ export async function generateMetadata({
             title,
             description,
             url: new URL(canonicalPath, siteConfig.siteUrl).toString(),
+            type: "website",
             images: [
                 {
                     url: new URL(siteConfig.ogImage, siteConfig.siteUrl).toString(),

@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { buildOpenGraph, pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
+import { buildOpenGraph, buildTwitter, pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
 import { pageContent } from "@/lib/page-content"
 import { generateBreadcrumbSchema } from "@/lib/schema-generators"
 
@@ -21,6 +21,11 @@ export const metadata: Metadata = {
         type: "image/webp",
       },
     ],
+  }),
+  twitter: buildTwitter({
+    title: pageMetadata.privacy.title,
+    description: pageMetadata.privacy.description,
+    imageUrl: `${siteConfig.siteUrl}${siteConfig.ogImage}`,
   }),
   alternates: {
     canonical: `${siteConfig.siteUrl}${siteConfig.pages.privacy}`,

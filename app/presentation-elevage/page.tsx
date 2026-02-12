@@ -6,9 +6,9 @@ import { faqPresentation } from "@/lib/faq-data"
 import { Heart, Leaf, Users, Star } from "lucide-react"
 import Link from "next/link"
 import type { Metadata } from "next"
-import { buildOpenGraph, pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
+import { buildOpenGraph, buildTwitter, pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
 import { pageContent } from "@/lib/page-content"
-import { generateOrganizationSchema, generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema-generators"
+import { generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema-generators"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
 
 export const metadata: Metadata = {
@@ -29,6 +29,11 @@ export const metadata: Metadata = {
             },
         ],
     }),
+    twitter: buildTwitter({
+        title: pageMetadata.presentation.title,
+        description: pageMetadata.presentation.description,
+        imageUrl: `${siteConfig.siteUrl}${siteConfig.ogImage}`,
+    }),
     alternates: {
         canonical: `${siteConfig.siteUrl}/presentation-elevage`,
     },
@@ -36,7 +41,6 @@ export const metadata: Metadata = {
 
 export default function PresentationPage() {
     // Schémas JSON-LD
-    const organizationSchema = generateOrganizationSchema()
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Accueil", url: "/" },
         { name: "Présentation", url: siteConfig.pages.presentation },
@@ -47,10 +51,6 @@ export default function PresentationPage() {
     return (
         <>
             {/* JSON-LD Schemas */}
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-            />
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}

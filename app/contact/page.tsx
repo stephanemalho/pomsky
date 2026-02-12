@@ -1,9 +1,9 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { FAQSection } from "@/components/faq"
 import { faqContact } from "@/lib/faq-data"
-import { MapPin, Phone, Mail, Clock, PawPrint } from "lucide-react"
+import { Chrome, MapPin, Phone, Mail, Clock, PawPrint } from "lucide-react"
 import type { Metadata } from "next"
-import { buildOpenGraph, pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
+import { buildOpenGraph, buildTwitter, pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
 import { pageContent } from "@/lib/page-content"
 import { generateLocalBusinessSchema, generateContactPointSchema, generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema-generators"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
@@ -27,6 +27,11 @@ export const metadata: Metadata = {
                 type: "image/webp",
             },
         ],
+    }),
+    twitter: buildTwitter({
+        title: pageMetadata.contact.title,
+        description: pageMetadata.contact.description,
+        imageUrl: `${siteConfig.siteUrl}${siteConfig.ogImage}`,
     }),
     alternates: {
         canonical: `${siteConfig.siteUrl}/contact`,
@@ -61,6 +66,14 @@ const contactItems = [
         type: "text",
         content: "Lun - Sam : 9h - 18h",
         secondaryLine: "Dimanche : visites vidéo uniquement."
+    },
+    {
+        icon: Chrome,
+        title: "Avis Google",
+        type: "link",
+        content: "Laisser un avis sur Google",
+        href: "https://share.google/owpyAE3sBdFrFKSYN",
+        secondaryLine: "Voir nos avis sur Google"
     }
 ]
 
@@ -95,6 +108,21 @@ const renderContactContent = (item: typeof contactItems[0]) => {
                         <br />
                         {item.secondaryLine}
                     </address>
+                </div>
+            )
+        case "link":
+            return (
+                <div>
+                    <h3 className="font-semibold">{item.title}</h3>
+                    <a
+                        href={item.href}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-primary hover:underline text-sm"
+                    >
+                        {item.content}
+                    </a>
+                    <p className="text-muted-foreground text-sm">{item.secondaryLine}</p>
                 </div>
             )
         default:
@@ -217,4 +245,6 @@ export default function ContactPage() {
         </>
     )
 }
+
+
 

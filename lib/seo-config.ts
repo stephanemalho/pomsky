@@ -163,6 +163,27 @@ export const buildOpenGraph = ({
             ],
 });
 
+type TwitterParams = {
+    title: string;
+    description: string;
+    imageUrl?: string;
+};
+
+export const buildTwitter = ({
+    title,
+    description,
+    imageUrl
+}: TwitterParams) => ({
+    card: "summary_large_image",
+    title,
+    description,
+    images: [
+        imageUrl
+            ? imageUrl
+            : new URL(siteConfig.ogImage, siteConfig.siteUrl).toString()
+    ],
+});
+
 /* -------------------------------------------------------------------------- */
 /*  MÉTADONNÉES PAR PAGE                                                       */
 /* -------------------------------------------------------------------------- */

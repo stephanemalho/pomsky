@@ -3,7 +3,7 @@ import { faqNosChiots } from "@/lib/faq-data"
 import { Calendar, Heart, NotebookText, PawPrint, Sprout, Weight } from "lucide-react"
 import Link from "next/link"
 import type { Metadata } from "next"
-import { buildOpenGraph, pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
+import { buildOpenGraph, buildTwitter, pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
 import { pageContent } from "@/lib/page-content"
 import { generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema-generators"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
@@ -29,6 +29,11 @@ export const metadata: Metadata = {
                 type: "image/webp",
             },
         ],
+    }),
+    twitter: buildTwitter({
+        title: pageMetadata.puppies.title,
+        description: pageMetadata.puppies.description,
+        imageUrl: `${siteConfig.siteUrl}${siteConfig.ogImage}`,
     }),
     alternates: {
         canonical: `${siteConfig.siteUrl}/chiots-disponibles`,

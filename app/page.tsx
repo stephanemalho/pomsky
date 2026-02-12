@@ -5,7 +5,7 @@ import { FAQSection } from "@/components/faq"
 import { faqHome } from "@/lib/faq-data"
 import Link from "next/link"
 import type { Metadata } from "next"
-import { buildOpenGraph, pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
+import { buildOpenGraph, buildTwitter, pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
 import { generateLocalBusinessSchema, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/schema-generators"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
 import { pomskyBenefits } from "@/components/content/home/pomsky/pomskyBenefits"
@@ -28,6 +28,11 @@ export const metadata: Metadata = {
         type: "image/webp",
       },
     ],
+  }),
+  twitter: buildTwitter({
+    title: pageMetadata.home.title,
+    description: pageMetadata.home.description,
+    imageUrl: `${siteConfig.siteUrl}${siteConfig.ogImage}`,
   }),
   alternates: {
     canonical: siteConfig.siteUrl,

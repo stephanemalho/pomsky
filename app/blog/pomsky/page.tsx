@@ -14,6 +14,7 @@ export const metadata: Metadata = {
         title: pageMetadata.blog.title,
         description: pageMetadata.blog.description,
         url: new URL("/blog/pomsky", siteConfig.siteUrl).toString(),
+        type: "website",
         images: [
             {
                 url: new URL(siteConfig.ogImage, siteConfig.siteUrl).toString(),
