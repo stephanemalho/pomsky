@@ -37,8 +37,8 @@ export const puppies: Puppy[] = [
         ],
         health: ["Suivi vétérinaire en cours"],
         images: [
-            "pages/puppies/ALUNA-puppy-eyes-open.jpg",
-            "pages/puppies/ALUNA-puppy-pomsky-portrait.jpg",
+            "pages/puppies/ALUNA-puppy-eyes-open.webp",
+            "pages/puppies/ALUNA-puppy-pomsky-portrait.webp",
             "pages/puppies/ALUNA-puppy-black-white-0.webp",
             "pages/puppies/ALUNA-puppy-black-white-1.webp",
             "pages/puppies/ALUNA-puppy-black-white-2.webp"
@@ -65,7 +65,7 @@ export const puppies: Puppy[] = [
         ],
         health: ["Suivi vétérinaire en cours"],
         images: [
-            "pages/puppies/THOR-puppy-eye-open.jpg",
+            "pages/puppies/THOR-puppy-eye-open.webp",
             "pages/puppies/THOR-male-pomsly-puppy-gray-white-0.webp",
             "pages/puppies/THOR-male-pomsly-puppy-gray-white-1.webp",
             "pages/puppies/THOR-male-pomsly-puppy-gray-white-2.webp"
@@ -92,8 +92,8 @@ export const puppies: Puppy[] = [
         ],
         health: ["Suivi vétérinaire en cours"],
         images: [
-            "pages/puppies/VUK-pomsky-eyes-open-left.jpg",
-            "pages/puppies/VUK-pomsky-eyes-open.jpg",
+            "pages/puppies/VUK-pomsky-eyes-open-left.webp",
+            "pages/puppies/VUK-pomsky-eyes-open.webp",
             "pages/puppies/VUK-puppy-black-white-0.webp",
             "pages/puppies/VUK-puppy-black-white-1.webp"
         ]
@@ -120,8 +120,8 @@ export const puppies: Puppy[] = [
         ],
         health: ["Suivi vétérinaire en cours"],
         images: [
-            "pages/puppies/ASH-pomsky-eyes-open.jpg",
-            "pages/puppies/ASH-pomsky-eyes-open-left.jpg",
+            "pages/puppies/ASH-pomsky-eyes-open.webp",
+            "pages/puppies/ASH-pomsky-eyes-open-left.webp",
             "pages/puppies/ASH-femmelle-pomsky-puppy-black-white-2.webp",
             "pages/puppies/ASH-femmelle-pomsky-puppy-black-white-0.webp",
             "pages/puppies/ASH-femmelle-pomsky-puppy-black-white-1.webp"

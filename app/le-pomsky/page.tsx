@@ -81,14 +81,14 @@ const generations = [
         title: "F2 : deuxième génération de pomsky",
         description:
             "Croisement entre deux Pomskys F1. Les portées deviennent un peu plus homogènes, mais le résultat reste encore variable notamment en taille.",
-        image: "/pages/le-pomsky/chiot-pomsky-f2-avec-citrouille.jpeg",
+        image: "/pages/le-pomsky/chiot-pomsky-f2-avec-citrouille.webp",
         alt: "Pomsky F2 assis à coté d'une citrouille d'halloween.",
     },
     {
         title: "F3 à F5 : stabilisation",
         description:
             "Plus la génération avance, plus le type, le comportement, la morphologie idéale et le marquage se stabilisent. À partir de F5, on parle souvent de Pomsky multigénérationnel.",
-        image: "/pages/le-pomsky/pomsky-male-f3-pelage-fluffy.jpeg",
+        image: "/pages/le-pomsky/pomsky-male-f3-pelage-fluffy.webp",
         alt: "Pomsky F3 en position de concentration fixant un object non visible",
     },
 ]
@@ -140,7 +140,7 @@ export default function dogPage() {
                         </div>
                         <div className="relative h-72 md:h-105 rounded-lg overflow-hidden bg-black">
                             <Image
-                                src="/pages/le-pomsky/pomsky-f4-et-une-citrouille.jpeg"
+                                src="/pages/le-pomsky/pomsky-f4-et-une-citrouille.webp"
                                 alt="Pomsky chiot f4 avec ses pattes avant sur un citrouille d'halloween"
                                 fill
                                 className="object-cover"
@@ -347,7 +347,7 @@ export default function dogPage() {
                                             Le regard est intense et expressif, ce qui participe beaucoup au charme du Pomsky.
                                         </p>
                                     </div>
-                                    <div className="relative mt-auto w-full flex-[0_0_50%] min-h-48 md:min-h-56 overflow-hidden rounded-md">
+                                    <div  className="relative mt-4 mx-auto w-full lg:w-2/3 flex-[0_0_50%] min-h-64 overflow-hidden rounded-md">
                                         <Image
                                             src="/pomsky-eye-colors-blue-brown-heterochromia.webp"
                                             alt="Montage de plusieurs couleurs des yeux du Pomsky"
@@ -372,7 +372,7 @@ export default function dogPage() {
                                             Le Pomsky est une race en devenir, non reconnue au LOF aujourd'hui.
                                         </p>
                                     </div>
-                                    <div className="relative mt-auto w-full flex-[0_0_50%] min-h-48 md:min-h-56 overflow-hidden rounded-md">
+                                    <div className="relative mt-4 mx-auto w-full lg:w-2/3 flex-[0_0_50%] min-h-64 overflow-hidden rounded-md">
                                         <Image
                                             src="/pages/le-pomsky/male-pomsky-chocolat.webp"
                                             alt="Pomsky couleur chocolat qui tire la langue"
@@ -396,7 +396,7 @@ export default function dogPage() {
                         </div>
 
                         <div className="grid md:grid-cols-2 gap-6">
-                            <Card className="bg-background/70">
+                            <Card className="bg-background/70 flex flex-col">
                                 <CardHeader>
                                     <CardTitle className="text-xl">Caractère et éducation</CardTitle>
                                 </CardHeader>
@@ -451,16 +451,18 @@ export default function dogPage() {
                                 <CardHeader>
                                     <CardTitle className="text-xl">Prix et adoption</CardTitle>
                                 </CardHeader>
-                                <CardContent className="text-sm text-muted-foreground leading-relaxed space-y-3">
-                                    <p>
-                                        Le prix d'un Pomsky se situe généralement entre 3 000 et 6 000 euros selon la taille, la rareté des traits (yeux, marquage), la lignée et la génération.
-                                    </p>
-                                    <p>
-                                        Dans un élevage professionnel vous bénéficiez de garanties de santé, d'un suivi et de conseils concrets.
-                                    </p>
+                                <CardContent className="text-sm text-muted-foreground leading-relaxed space-y-3 flex flex-col flex-1">
+                                    <div className="flex flex-col gap-2">
+                                        <p>
+                                            Le prix d'un Pomsky se situe généralement entre 3 000 et 6 000 euros selon la taille, la rareté des traits (yeux, marquage), la lignée et la génération.
+                                        </p>
+                                        <p>
+                                            Dans un élevage professionnel vous bénéficiez de garanties de santé, d'un suivi et de conseils concrets.
+                                        </p>
+                                    </div>
                                     <Link
                                         href="/chiots-disponibles"
-                                        className="border border-primary text-primary hover:bg-primary/10 px-6 py-3 rounded-md font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                                        className="border w-fit border-primary text-primary hover:bg-primary/10 px-6 py-3 rounded-md font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary md:mt-auto"
                                     >
                                         Voir nos chiots disponibles
                                     </Link>

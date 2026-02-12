@@ -63,7 +63,7 @@ export const pomskyBeigeYeuxBleusPost: BlogPost = {
     author: {
         name: "Marine",
         role: "Éleveur de Pomsky passionnée",
-        imageSrc: "/assets/authors/marine-eleveuse-royal-pomsky.png",
+        imageSrc: "/assets/authors/marine-eleveuse-royal-pomsky.webp",
         imageAlt: "Portrait de l'éleveuse Marine de Royal Pomsky",
         linkedinUrl: "",
         linkedinLabelPrefix: "Profil de"

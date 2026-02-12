@@ -91,7 +91,7 @@ export default function PresentationPage() {
                             </div>
                             <div className="relative h-64 md:h-100 rounded-lg overflow-hidden">
                                 <Image
-                                    src="/pages/presentation-elevage/chiot-pomsky-yeux-bleu-pelage-standard.jpeg"
+                                    src="/pages/presentation-elevage/chiot-pomsky-yeux-bleu-pelage-standard.webp"
                                     alt="Chiot Pomsky aux yeux bleu assis a coté d'une citrouille d'halloween"
                                     fill
                                     className="object-cover"
