@@ -1,6 +1,6 @@
 import { FAQSection } from "@/components/faq"
 import { faqNosChiots } from "@/lib/faq-data"
-import { Calendar, Heart, NotebookText, PawPrint, Sprout, Weight } from "lucide-react"
+import { Calendar, Dog, Heart, NotebookText, PawPrint, Sprout, Weight } from "lucide-react"
 import Link from "next/link"
 import type { Metadata } from "next"
 import { buildOpenGraph, buildTwitter, pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
@@ -80,7 +80,7 @@ export default function NosChiotsPage() {
                             <Card key={puppy.name} className="overflow-hidden bg-muted/30">
                                 <CardContent className="p-0">
                                     <div className={`grid md:grid-cols-2 gap-0 ${index % 2 === 1 ? "md:grid-flow-col-dense" : ""}`}>
-                                        <div className={`relative min-h-80 ${index % 2 === 1 ? "md:order-2" : ""}`}>
+                                        <div className={`relative minh-80 lg:min-h-120 ${index % 2 === 1 ? "md:order-2" : ""}`}>
                                             <ImageCarousel images={puppy.images} alt={"Carrousel d'images du chiots pomsky " + puppy.name} />
                                         </div>
                                         <div className={`p-8 space-y-4 flex flex-col justify-center ${index % 2 === 1 ? "md:order-1" : ""}`}>
@@ -96,6 +96,10 @@ export default function NosChiotsPage() {
                                                 <p className="text-muted-foreground">{puppy.description}</p>
                                             </div>
                                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+                                                <div className="flex items-center gap-2 text-muted-foreground">
+                                                    <Dog className="h-4 w-4 text-primary" />
+                                                    <span>{puppy.sexe}</span>
+                                                </div>
                                                 <div className="flex items-center gap-2 text-muted-foreground">
                                                     <Heart className="h-4 w-4 text-primary" />
                                                     <span>{puppy.parents}</span>
@@ -131,7 +135,7 @@ export default function NosChiotsPage() {
                     </div>
                     <section className="max-w-4xl mx-auto bg-muted/30 border border-muted rounded-2xl p-8 md:p-10 space-y-6 text-left mb-12">
                         <div className="flex items-start gap-3">
-                            <NotebookText className="text-2xl text-primary" aria-hidden="true" />
+                            <NotebookText className="h-6 w-6 text-2xl text-primary" aria-hidden="true" />
                             <div>
                                 <h2 className="text-xl md:text-2xl font-semibold leading-tight">
                                     Une portée Pomsky F5 Toy rare et attendue
@@ -184,7 +188,7 @@ export default function NosChiotsPage() {
 
                     <section className="max-w-4xl mx-auto bg-muted/30 border border-muted rounded-2xl p-8 md:p-10 space-y-6 text-left">
                         <div className="flex items-start gap-3">
-                            <Sprout className="text-2xl text-primary" />
+                            <Sprout className="h-6 w-6 text-2xl text-primary" />
                             <div>
                                 <h2
                                     className="text-xl md:text-2xl font-semibold leading-tight">Ces perles rares prennent le temps de naître</h2>

@@ -2,6 +2,7 @@ export type Puppy = {
     name: string;
     coat: string;
     color: string;
+    sexe: string;
     weight: string;
     parents: string;
     readyDate: string;
@@ -18,73 +19,112 @@ export const puppies: Puppy[] = [
     {
         name: "ROYAL POMSKY 'ALUNA'",
         coat: "Pomsky F5 (ADN Poméranian / Husky)",
+        sexe: "Femelle",
         color: "Noire et blanche",
-        size: "Non déterminée pour le moment",
-        ruler: "Pelage en cours de développement",
-        weight: "Non déterminé pour le moment",
+        size: "Miniature",
+        ruler: "Pelage fluffy",
+        weight: "7-8kg",
         parents: "Parents : SHADOW & BANDIT",
-        readyDate: "Disponible à partir de mars 2026",
+        readyDate: "Disponible à partir du 15 mars 2026",
         age: "Née le 10 janvier 2026",
         description:
-            "Aluna est une femelle Pomsky F5 issue du mariage entre Shadow et Bandit. À ce stade très précoce de son développement, certaines caractéristiques restent à confirmer. Son masque Fleur de Lys est déjà bien visible. Son pelage, sa taille adulte et son format définitif seront précisés au fil des semaines, dans le respect de son évolution naturelle.",
+            "Aluna est une femelle Pomsky F5 issue du mariage entre Shadow et Bandit. Son masque husky en Fleur de Lys est absolument parfait, c'est une femelle douce curieuse et intelligente qui ressemblera fortement à sa maman Shadow .",
         highlights: [
             "Femelle",
             "Masque Fleur de Lys",
-            "Yeux encore fermés",
-            "Développement en cours"
+            "Yeux bleus",
+            "Taille adulte miniature"
         ],
         health: ["Suivi vétérinaire en cours"],
         images: [
+            "pages/puppies/ALUNA-puppy-eyes-open.jpg",
+            "pages/puppies/ALUNA-puppy-pomsky-portrait.jpg",
             "pages/puppies/ALUNA-puppy-black-white-0.webp",
             "pages/puppies/ALUNA-puppy-black-white-1.webp",
             "pages/puppies/ALUNA-puppy-black-white-2.webp"
         ]
     },
     {
-        name: "ROYAL POMSKY 'VUK'",
-        coat: "Pomsky F5 (ADN Poméranian / Husky)",
-        color: "Noire et blanche",
-        size: "Non déterminée pour le moment",
-        ruler: "Pelage en cours de développement",
-        weight: "Non déterminé pour le moment",
-        parents: "Parents : SHADOW & BANDIT",
-        readyDate: "Disponible à partir de mars 2026",
-        age: "Né le 10 janvier 2026",
-        description:
-            "Vuk est un mâle Pomsky F5 issu du mariage entre Shadow et Bandit. À ce stade précoce de son développement, certaines caractéristiques restent à confirmer. Son masque Fleur de Lys est déjà bien marqué. Son pelage définitif, son format adulte et sa taille finale seront précisés au fil des semaines, dans le respect de son évolution naturelle.",
-        highlights: [
-            "Mâle",
-            "Masque Fleur de Lys",
-            "Yeux encore fermés",
-            "Développement en cours"
-        ],
-        health: ["Suivi vétérinaire en cours"],
-        images: ["pages/puppies/VUK-puppy-black-white-0.webp", "pages/puppies/VUK-puppy-black-white-1.webp"]
-    },
-    {
         name: "ROYAL POMSKY 'THOR'",
         coat: "Pomsky F5 (ADN Poméranian / Husky)",
-        color: "Bleue et blanche",
-        size: "Non déterminée pour le moment",
+        color: "RARE bleue et blanche",
+        size: "miniature",
         ruler: "Pelage en cours de développement",
-        weight: "Non déterminé pour le moment",
+        weight: " 6-8kg adulte",
+        sexe: "male",
         parents: "Parents : SHADOW & BANDIT",
-        readyDate: "Disponible à partir de mars 2026",
+        readyDate: "Disponible à partir du 15 mars 2026",
         age: "Né le 10 janvier 2026",
         description:
-            "Thor est un mâle Pomsky F5 issu du mariage entre Shadow et Bandit. À ce stade précoce de son développement, certaines caractéristiques restent à confirmer. Sa robe bleue et blanche est déjà bien marquée et son masque Fleur de Lys commence à se dessiner. Son pelage définitif, son format adulte et sa taille finale seront précisés progressivement, dans le respect de son évolution naturelle.",
+            "THOR est un superbe Pomsky bleu à la robe exotique lumineuse et extraordinaire  Son masque Fleur de Lys est déjà bien visible. Son caractère : doux, docile, câlin et joueur ! Il ressemblera à la fois à sa maman Shadow et à son papa bandit.",
         highlights: [
             "Mâle",
-            "Robe bleue et blanche",
             "Masque Fleur de Lys",
-            "Yeux encore fermés",
-            "Développement en cours"
+            "Yeux bleus",
+            "Taille miniature"
         ],
         health: ["Suivi vétérinaire en cours"],
         images: [
+            "pages/puppies/THOR-puppy-eye-open.jpg",
             "pages/puppies/THOR-male-pomsly-puppy-gray-white-0.webp",
             "pages/puppies/THOR-male-pomsly-puppy-gray-white-1.webp",
             "pages/puppies/THOR-male-pomsly-puppy-gray-white-2.webp"
+        ]
+    },
+    {
+        name: "ROYAL POMSKY 'VUK'",
+        coat: "Pomsky F5 (ADN Poméranian / Husky)",
+        color: "Noire et blanche",
+        sexe: "Femmelle",
+        size: "miniature à petit standard ",
+        ruler: "Pelage fluffy",
+        weight: "9-10kg",
+        parents: "Parents : SHADOW & BANDIT",
+        readyDate: "Disponible à partir du 15 mars 2026",
+        age: "Né le 10 janvier 2026",
+        description:
+            "Vuk est un mâle Pomsky F5 aux yeux bleus et il est le plus grand chiot de la portée : gourmand, joueur et affectueux, il ressemble beaucoup à sa maman Shadow .",
+        highlights: [
+            "Mâle",
+            "Masque Fleur de Lys",
+            "Bleus",
+            "Taille miniature"
+        ],
+        health: ["Suivi vétérinaire en cours"],
+        images: [
+            "pages/puppies/VUK-pomsky-eyes-open-left.jpg",
+            "pages/puppies/VUK-pomsky-eyes-open.jpg",
+            "pages/puppies/VUK-puppy-black-white-0.webp",
+            "pages/puppies/VUK-puppy-black-white-1.webp"
+        ]
+    },
+    {
+        name: "ROYAL POMSKY 'ASH'",
+        coat: "Pomsky F5 (ADN Poméranian / Husky)",
+        color: "Noire et blanche",
+        sexe: "Mâle",
+        size: "Miniature",
+        ruler: "fluffy",
+        weight: "7-8kg adulte",
+        parents: "Parents : SHADOW & BANDIT",
+        readyDate: "Disponible à partir du 15 mars 2026",
+        age: "Né le 10 janvier 2026",
+        description:
+            "Ash est un mâle Pomsky F5 issu du mariage entre Shadow et Bandit. Sa robe noire et blanche est sublime et brillante, rappelle celle de sa maman Shadow, son caractère est affectueux, proche de l'humain et très sociable.",
+        highlights: [
+            "Mâle",
+            "Robe noire et blanche",
+            "Masque Fleur de Lys",
+            "Bruns",
+            "Taille miniature"
+        ],
+        health: ["Suivi vétérinaire en cours"],
+        images: [
+            "pages/puppies/ASH-pomsky-eyes-open.jpg",
+            "pages/puppies/ASH-pomsky-eyes-open-left.jpg",
+            "pages/puppies/ASH-femmelle-pomsky-puppy-black-white-2.webp",
+            "pages/puppies/ASH-femmelle-pomsky-puppy-black-white-0.webp",
+            "pages/puppies/ASH-femmelle-pomsky-puppy-black-white-1.webp"
         ]
     }
 ];
