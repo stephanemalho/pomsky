@@ -1,9 +1,9 @@
 import pomskySize from "@/public/pomsky-standard-size.webp";
-import pomskyFur from "@/public/two-pomsky-puppy.webp";
+import pomskyFur from "@/public/pages/homePage/two-pomsky-puppy.jpeg";
 import wetPomsky from "@/public/pomsky-wet-night-forest.webp";
-import pomskyEyeColors from "@/public/pages/homePage/sky-pomsky-mini-poil-fluffy.webp";
-import pomskyExpressive from "@/public/pomsky-f3-in-the-grass.webp";
-import pomskyPolyvalent from "@/public/pomsky-brown-and-white-f3-generation.webp";
+import pomskyEyeColors from "@/public/pages/homePage/pomsky-f3-blue-eyes.jpeg";
+import pomskyExpressive from "@/public/pages/homePage/pomsky-f3-in-the-grass.jpeg";
+import pomskyPolyvalent from "@/public/pages/homePage/pomsky-brown-and-white-f3-generation.jpeg";
 import { StaticImageData } from "next/image";
 
 type BenefitCard = {

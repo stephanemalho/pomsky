@@ -68,14 +68,14 @@ const generations = [
         title: "F2 : deuxième génération de pomsky",
         description:
             "Croisement entre deux Pomskys F1. Les portées deviennent un peu plus homogènes, mais le résultat reste encore variable notamment en taille.",
-        image: "/pages/le-pomsky/chiot-pomsky-f2-avec-citrouille.webp",
+        image: "/pages/le-pomsky/chiot-pomsky-f2-avec-citrouille.jpeg",
         alt: "Pomsky F2 assis à coté d'une citrouille d'halloween.",
     },
     {
         title: "F3 à F5 : stabilisation",
         description:
             "Plus la génération avance, plus le type, le comportement, la morphologie idéale et le marquage se stabilisent. À partir de F5, on parle souvent de Pomsky multigénérationnel.",
-        image: "/pages/le-pomsky/pomsky-male-f3-pelage-fluffy.webp",
+        image: "/pages/le-pomsky/pomsky-male-f3-pelage-fluffy.jpeg",
         alt: "Pomsky F3 en position de concentration fixant un object non visible",
     },
 ]
@@ -127,7 +127,7 @@ export default function dogPage() {
                         </div>
                         <div className="relative h-72 md:h-105 rounded-lg overflow-hidden bg-black">
                             <Image
-                                src="/pages/le-pomsky/pomsky-f4-et-une-citrouille.webp"
+                                src="/pages/le-pomsky/pomsky-f4-et-une-citrouille.jpeg"
                                 alt="Pomsky chiot f4 avec ses pattes avant sur un citrouille d'halloween"
                                 fill
                                 className="object-cover"
@@ -319,12 +319,12 @@ export default function dogPage() {
                             <div className="w-24 h-1 bg-primary mx-auto rounded-full" aria-hidden="true" />
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-6">
-                            <Card className="bg-muted/60">
+                        <div className="grid md:grid-cols-2 auto-rows-fr items-stretch gap-6">
+                            <Card className="bg-muted/60 flex flex-col h-full overflow-hidden">
                                 <CardHeader>
                                     <CardTitle className="text-xl">Les yeux du Pomsky</CardTitle>
                                 </CardHeader>
-                                <CardContent className="flex text-sm flex-col lg:flex-row text-muted-foreground leading-relaxed space-y-3">
+                                <CardContent className="flex flex-1 text-sm flex-col text-muted-foreground leading-relaxed space-y-3">
                                     <div className="mt-4 space-y-3">
                                         <p>
                                             Les yeux bleus sont très prisés, mais on peut aussi rencontrer des yeux verts, ambre,
@@ -334,21 +334,22 @@ export default function dogPage() {
                                             Le regard est intense et expressif, ce qui participe beaucoup au charme du Pomsky.
                                         </p>
                                     </div>
-                                    <Image
-                                        src="/pomsky-eye-colors-blue-brown-heterochromia.webp"
-                                        alt="Montage de plusieurs couleurs des yeux du Pomsky"
-                                        width={400}
-                                        height={250}
-                                        className="rounded-md mt-2"
-                                    />
+                                    <div className="relative mt-auto w-full flex-[0_0_50%] min-h-48 md:min-h-56 overflow-hidden rounded-md">
+                                        <Image
+                                            src="/pomsky-eye-colors-blue-brown-heterochromia.webp"
+                                            alt="Montage de plusieurs couleurs des yeux du Pomsky"
+                                            fill
+                                            className="object-contain"
+                                        />
+                                    </div>
                                 </CardContent>
                             </Card>
 
-                            <Card className="bg-muted/60">
+                            <Card className="bg-muted/60 flex flex-col h-full overflow-hidden">
                                 <CardHeader>
                                     <CardTitle className="text-xl">Morphologie générale</CardTitle>
                                 </CardHeader>
-                                <CardContent className="flex text-sm flex-col lg:flex-row text-muted-foreground leading-relaxed space-y-3">
+                                <CardContent className="flex flex-1 text-sm flex-col text-muted-foreground leading-relaxed space-y-3">
                                     <div className="mt-4 space-y-3">
                                         <p>
                                             Le corps est compact, la queue est touffue et enroulée au-dessus du dos.
@@ -358,13 +359,14 @@ export default function dogPage() {
                                             Le Pomsky est une race en devenir, non reconnue au LOF aujourd'hui.
                                         </p>
                                     </div>
-                                    <Image
-                                        src="/pages/le-pomsky/male-pomsky-chocolat.webp"
-                                        alt="Pomsky couleur chocolat qui tire la langue"
-                                        width={400}
-                                        height={250}
-                                        className="rounded-md mt-2"
-                                    />
+                                    <div className="relative mt-auto w-full flex-[0_0_50%] min-h-48 md:min-h-56 overflow-hidden rounded-md">
+                                        <Image
+                                            src="/pages/le-pomsky/male-pomsky-chocolat.webp"
+                                            alt="Pomsky couleur chocolat qui tire la langue"
+                                            fill
+                                            className="object-cover"
+                                        />
+                                    </div>
                                 </CardContent>
                             </Card>
                         </div>
@@ -492,5 +494,3 @@ export default function dogPage() {
         </>
     )
 }
-
-
