@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { FAQSection } from "@/components/faq"
 import { faqPomsky } from "@/lib/faq-data"
 import type { Metadata } from "next"
-import { pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
+import { buildOpenGraph, pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
 import { pageContent } from "@/lib/page-content"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
 import { generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema-generators"
@@ -15,12 +15,20 @@ export const metadata: Metadata = {
     title: pageMetadata.pomsky.title,
     description: pageMetadata.pomsky.description,
     keywords: pageMetadata.pomsky.keywords,
-    openGraph: {
+    openGraph: buildOpenGraph({
         title: pageMetadata.pomsky.title,
         description: pageMetadata.pomsky.description,
         url: `${siteConfig.siteUrl}/le-pomsky`,
-        images: [{ url: `${siteConfig.siteUrl}${siteConfig.ogImage}` }],
-    },
+        images: [
+            {
+                url: `${siteConfig.siteUrl}${siteConfig.ogImage}`,
+                alt: siteConfig.ogImageAlt,
+                width: siteConfig.ogImageWidth,
+                height: siteConfig.ogImageHeight,
+                type: "image/webp",
+            },
+        ],
+    }),
     alternates: {
         canonical: `${siteConfig.siteUrl}/le-pomsky`,
     },

@@ -6,7 +6,7 @@ import { faqPresentation } from "@/lib/faq-data"
 import { Heart, Leaf, Users, Star } from "lucide-react"
 import Link from "next/link"
 import type { Metadata } from "next"
-import { pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
+import { buildOpenGraph, pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
 import { pageContent } from "@/lib/page-content"
 import { generateOrganizationSchema, generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema-generators"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
@@ -15,12 +15,20 @@ export const metadata: Metadata = {
     title: pageMetadata.presentation.title,
     description: pageMetadata.presentation.description,
     keywords: pageMetadata.presentation.keywords,
-    openGraph: {
+    openGraph: buildOpenGraph({
         title: pageMetadata.presentation.title,
         description: pageMetadata.presentation.description,
         url: `${siteConfig.siteUrl}/presentation-elevage`,
-        images: [{ url: `${siteConfig.siteUrl}${siteConfig.ogImage}` }],
-    },
+        images: [
+            {
+                url: `${siteConfig.siteUrl}${siteConfig.ogImage}`,
+                alt: siteConfig.ogImageAlt,
+                width: siteConfig.ogImageWidth,
+                height: siteConfig.ogImageHeight,
+                type: "image/webp",
+            },
+        ],
+    }),
     alternates: {
         canonical: `${siteConfig.siteUrl}/presentation-elevage`,
     },

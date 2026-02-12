@@ -6,7 +6,7 @@ import { Dog, PawPrint, Ruler, Weight } from "lucide-react"
 import { generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema-generators"
 import ImageCarousel from "@/components/client/carousel/ImageCarousel"
 import type { Metadata } from "next"
-import { pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
+import { buildOpenGraph, pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
 import Link from "next/link"
 import { puppies } from "./puppies"
@@ -16,12 +16,20 @@ export const metadata: Metadata = {
     title: pageMetadata.reproductors.title,
     description: pageMetadata.reproductors.description,
     keywords: pageMetadata.reproductors.keywords,
-    openGraph: {
+    openGraph: buildOpenGraph({
         title: pageMetadata.reproductors.title,
         description: pageMetadata.reproductors.description,
         url: `${siteConfig.siteUrl}/femelles-reproductrices`,
-        images: [{ url: `${siteConfig.siteUrl}${siteConfig.ogImage}` }],
-    },
+        images: [
+            {
+                url: `${siteConfig.siteUrl}${siteConfig.ogImage}`,
+                alt: siteConfig.ogImageAlt,
+                width: siteConfig.ogImageWidth,
+                height: siteConfig.ogImageHeight,
+                type: "image/webp",
+            },
+        ],
+    }),
     alternates: {
         canonical: `${siteConfig.siteUrl}/femelles-reproductrices`,
     },

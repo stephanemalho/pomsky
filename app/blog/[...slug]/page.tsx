@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 
 import { Badge } from "@/components/ui/badge";
 import { blog } from "@/constants/blog/blog";
-import { pageMetadata, siteConfig } from "@/lib/seo-config";
+import { buildOpenGraph, pageMetadata, siteConfig } from "@/lib/seo-config";
 import type { BlogPost } from "@/constants/blog/blogTypes";
 
 type BlogArticlePageProps = {
@@ -45,6 +45,20 @@ export async function generateMetadata({
             alternates: {
                 canonical: new URL("/blog/pomsky", siteConfig.siteUrl).toString(),
             },
+            openGraph: buildOpenGraph({
+                title: pageMetadata.blog.title,
+                description: pageMetadata.blog.description,
+                url: new URL("/blog/pomsky", siteConfig.siteUrl).toString(),
+                images: [
+                    {
+                        url: new URL(siteConfig.ogImage, siteConfig.siteUrl).toString(),
+                        alt: siteConfig.ogImageAlt,
+                        width: siteConfig.ogImageWidth,
+                        height: siteConfig.ogImageHeight,
+                        type: "image/webp",
+                    },
+                ],
+            }),
         };
     }
 
@@ -60,12 +74,10 @@ export async function generateMetadata({
         alternates: {
             canonical: new URL(canonicalPath, siteConfig.siteUrl).toString(),
         },
-        openGraph: {
+        openGraph: buildOpenGraph({
             title: post.title,
             description: post.excerpt,
             url: new URL(canonicalPath, siteConfig.siteUrl).toString(),
-            siteName: siteConfig.name,
-            locale: siteConfig.locale,
             type: "article",
             publishedTime: post.date,
             authors: [post.author.name],
@@ -73,9 +85,12 @@ export async function generateMetadata({
                 {
                     url: imageUrl,
                     alt: post.imageAlt ?? post.title,
+                    width: siteConfig.ogImageWidth,
+                    height: siteConfig.ogImageHeight,
+                    type: "image/webp",
                 },
             ],
-        },
+        }),
         twitter: {
             card: "summary_large_image",
             title: post.title,
@@ -101,7 +116,7 @@ export default async function BlogArticlePage({
     const { articleLabels } = blog;
 
     return (
-        <main className="bg-background text-foreground">
+        <div className="bg-background text-foreground">
             <header className="max-w-4xl mx-auto px-6 pt-12 md:pt-16 pb-8">
                 <Link
                     href="/blog/pomsky"
@@ -207,7 +222,7 @@ export default async function BlogArticlePage({
                     </div>
                 </div>
             </aside>
-        </main>
+        </div>
     );
 }
 

@@ -14,6 +14,11 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/quelle-est-la-taille-dun-pomsky",
+        destination: "/le-pomsky",
+        permanent: true
+      },
+      {
         source: "/category/galerie-photos-videos",
         destination: "/chiots-disponibles",
         permanent: true,
@@ -28,6 +33,11 @@ const nextConfig: NextConfig = {
         destination: "/chiots-disponibles",
         permanent: true,
       },
+      {
+        source: "/blog",
+        destination: "/blog/pomsky",
+        permanent: true
+      }
     ];
   },
 };

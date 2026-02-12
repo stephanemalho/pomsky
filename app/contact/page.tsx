@@ -3,7 +3,7 @@ import { FAQSection } from "@/components/faq"
 import { faqContact } from "@/lib/faq-data"
 import { MapPin, Phone, Mail, Clock, PawPrint } from "lucide-react"
 import type { Metadata } from "next"
-import { pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
+import { buildOpenGraph, pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
 import { pageContent } from "@/lib/page-content"
 import { generateLocalBusinessSchema, generateContactPointSchema, generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema-generators"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
@@ -14,12 +14,20 @@ export const metadata: Metadata = {
     title: pageMetadata.contact.title,
     description: pageMetadata.contact.description,
     keywords: pageMetadata.contact.keywords,
-    openGraph: {
+    openGraph: buildOpenGraph({
         title: pageMetadata.contact.title,
         description: pageMetadata.contact.description,
         url: `${siteConfig.siteUrl}/contact`,
-        images: [{ url: `${siteConfig.siteUrl}${siteConfig.ogImage}` }],
-    },
+        images: [
+            {
+                url: `${siteConfig.siteUrl}${siteConfig.ogImage}`,
+                alt: siteConfig.ogImageAlt,
+                width: siteConfig.ogImageWidth,
+                height: siteConfig.ogImageHeight,
+                type: "image/webp",
+            },
+        ],
+    }),
     alternates: {
         canonical: `${siteConfig.siteUrl}/contact`,
     },

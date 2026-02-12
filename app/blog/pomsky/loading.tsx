@@ -1,6 +1,6 @@
 export default function PomskyBlogLoading() {
     return (
-        <main className="bg-background text-foreground">
+        <div className="bg-background text-foreground">
             <section className="border-b-2 border-dashed border-border/60">
                 <div className="max-w-6xl mx-auto px-6 py-16 md:py-20">
                     <div className="flex flex-col gap-6 animate-pulse">
@@ -42,7 +42,7 @@ export default function PomskyBlogLoading() {
                     ))}
                 </div>
             </section>
-        </main>
+        </div>
     );
 }
 

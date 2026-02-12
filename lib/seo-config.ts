@@ -110,6 +110,59 @@ export const siteConfig = {
     }
 };
 
+type OpenGraphParams = {
+    title: string;
+    description: string;
+    url: string;
+    type?: "website" | "article";
+    images?: Array<{
+        url: string;
+        alt?: string;
+        width?: number;
+        height?: number;
+        type?: string;
+    }>;
+    publishedTime?: string;
+    authors?: string[];
+};
+
+export const buildOpenGraph = ({
+    title,
+    description,
+    url,
+    type = "website",
+    images,
+    publishedTime,
+    authors
+}: OpenGraphParams) => ({
+    title,
+    description,
+    url,
+    siteName: siteConfig.name,
+    locale: siteConfig.locale,
+    type,
+    ...(type === "article" && publishedTime ? { publishedTime } : {}),
+    ...(type === "article" && authors ? { authors } : {}),
+    images:
+        images && images.length > 0
+            ? images.map((image) => ({
+                width: siteConfig.ogImageWidth,
+                height: siteConfig.ogImageHeight,
+                alt: siteConfig.ogImageAlt,
+                type: "image/webp",
+                ...image,
+            }))
+            : [
+                {
+                    url: new URL(siteConfig.ogImage, siteConfig.siteUrl).toString(),
+                    width: siteConfig.ogImageWidth,
+                    height: siteConfig.ogImageHeight,
+                    alt: siteConfig.ogImageAlt,
+                    type: "image/webp",
+                },
+            ],
+});
+
 /* -------------------------------------------------------------------------- */
 /*  MÉTADONNÉES PAR PAGE                                                       */
 /* -------------------------------------------------------------------------- */

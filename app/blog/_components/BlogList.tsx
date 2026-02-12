@@ -26,7 +26,7 @@ export default function BlogList({ base, theme }: BlogListProps) {
         : basePosts;
 
     return (
-        <main className="bg-background text-foreground">
+        <div className="bg-background text-foreground">
             <section className="relative overflow-hidden border-b-2 border-dashed border-border/60">
                 <div className="max-w-6xl mx-auto px-6 py-16 md:py-20">
                     <div className="flex flex-col gap-6">
@@ -147,7 +147,7 @@ export default function BlogList({ base, theme }: BlogListProps) {
                     </div>
                 )}
             </section>
-        </main>
+        </div>
     );
 }
 

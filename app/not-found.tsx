@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function NotFound() {
     return (
-        <main className="flex flex-col items-center justify-center min-h-screen px-4 bg-muted/30">
+        <div className="flex flex-col items-center justify-center min-h-screen px-4 bg-muted/30">
             <div className="max-w-md w-full text-center space-y-6">
                 {/* Icône */}
                 <div className="flex justify-center">
@@ -62,6 +62,6 @@ export default function NotFound() {
                     </ul>
                 </div>
             </div>
-        </main>
+        </div>
     );
 }

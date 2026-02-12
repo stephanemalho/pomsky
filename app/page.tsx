@@ -5,7 +5,7 @@ import { FAQSection } from "@/components/faq"
 import { faqHome } from "@/lib/faq-data"
 import Link from "next/link"
 import type { Metadata } from "next"
-import { pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
+import { buildOpenGraph, pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
 import { generateLocalBusinessSchema, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/schema-generators"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
 import { pomskyBenefits } from "@/components/content/home/pomsky/pomskyBenefits"
@@ -15,12 +15,20 @@ export const metadata: Metadata = {
   title: pageMetadata.home.title,
   description: pageMetadata.home.description,
   keywords: pageMetadata.home.keywords,
-  openGraph: {
+  openGraph: buildOpenGraph({
     title: pageMetadata.home.title,
     description: pageMetadata.home.description,
     url: siteConfig.siteUrl,
-    images: [{ url: `${siteConfig.siteUrl}${siteConfig.ogImage}` }],
-  },
+    images: [
+      {
+        url: `${siteConfig.siteUrl}${siteConfig.ogImage}`,
+        alt: siteConfig.ogImageAlt,
+        width: siteConfig.ogImageWidth,
+        height: siteConfig.ogImageHeight,
+        type: "image/webp",
+      },
+    ],
+  }),
   alternates: {
     canonical: siteConfig.siteUrl,
   },

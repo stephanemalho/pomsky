@@ -5,7 +5,7 @@ import { FAQSection } from "@/components/faq"
 import { faqBienEtre } from "@/lib/faq-data"
 import { Calendar, MapPin, Bed, Utensils, Dumbbell, SpadeIcon as Spa, PawPrint, Dog } from "lucide-react"
 import type { Metadata } from "next"
-import { pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
+import { buildOpenGraph, pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
 import { pageContent } from "@/lib/page-content"
 import { generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema-generators"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
@@ -16,12 +16,20 @@ export const metadata: Metadata = {
     title: pageMetadata.wellness.title,
     description: pageMetadata.wellness.description,
     keywords: pageMetadata.wellness.keywords,
-    openGraph: {
+    openGraph: buildOpenGraph({
         title: pageMetadata.wellness.title,
         description: pageMetadata.wellness.description,
         url: `${siteConfig.siteUrl}/bien-etre-animal`,
-        images: [{ url: `${siteConfig.siteUrl}${siteConfig.ogImage}` }],
-    },
+        images: [
+            {
+                url: `${siteConfig.siteUrl}${siteConfig.ogImage}`,
+                alt: siteConfig.ogImageAlt,
+                width: siteConfig.ogImageWidth,
+                height: siteConfig.ogImageHeight,
+                type: "image/webp",
+            },
+        ],
+    }),
     alternates: {
         canonical: `${siteConfig.siteUrl}/bien-etre-animal`,
     },

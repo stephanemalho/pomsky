@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 
 import BlogList from "@/app/blog/_components/BlogList";
 import { blog } from "@/constants/blog/blog";
-import { pageMetadata, siteConfig } from "@/lib/seo-config";
+import { buildOpenGraph, pageMetadata, siteConfig } from "@/lib/seo-config";
 
 type PomskyThemePageProps = {
     params: { theme: string } | Promise<{ theme: string }>;
@@ -42,23 +42,20 @@ export async function generateMetadata({
         alternates: {
             canonical: new URL(canonicalPath, siteConfig.siteUrl).toString(),
         },
-        openGraph: {
+        openGraph: buildOpenGraph({
             title,
             description,
             url: new URL(canonicalPath, siteConfig.siteUrl).toString(),
-            siteName: siteConfig.name,
-            locale: siteConfig.locale,
-            type: "website",
             images: [
                 {
                     url: new URL(siteConfig.ogImage, siteConfig.siteUrl).toString(),
+                    alt: siteConfig.ogImageAlt,
                     width: siteConfig.ogImageWidth,
                     height: siteConfig.ogImageHeight,
-                    alt: siteConfig.ogImageAlt,
                     type: "image/webp",
                 },
             ],
-        },
+        }),
         twitter: {
             card: "summary_large_image",
             title,

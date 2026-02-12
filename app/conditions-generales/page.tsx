@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
+import { buildOpenGraph, pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
 import { pageContent } from "@/lib/page-content"
 import { generateBreadcrumbSchema } from "@/lib/schema-generators"
 
@@ -8,12 +8,20 @@ export const metadata: Metadata = {
   title: pageMetadata.terms.title,
   description: pageMetadata.terms.description,
   keywords: pageMetadata.terms.keywords,
-  openGraph: {
+  openGraph: buildOpenGraph({
     title: pageMetadata.terms.title,
     description: pageMetadata.terms.description,
     url: `${siteConfig.siteUrl}${siteConfig.pages.terms}`,
-    images: [{ url: `${siteConfig.siteUrl}${siteConfig.ogImage}` }],
-  },
+    images: [
+      {
+        url: `${siteConfig.siteUrl}${siteConfig.ogImage}`,
+        alt: siteConfig.ogImageAlt,
+        width: siteConfig.ogImageWidth,
+        height: siteConfig.ogImageHeight,
+        type: "image/webp",
+      },
+    ],
+  }),
   alternates: {
     canonical: `${siteConfig.siteUrl}${siteConfig.pages.terms}`,
   },
