@@ -179,7 +179,7 @@ export default function dogPage() {
                             ))}
                         </div>
 
-                        <Card className="bg-primary/5 border-primary/30">
+                        <Card className="bg-primary/2 border-primary/10">
                             <CardContent className="py-6 px-6 md:px-10 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
                                 <div className="space-y-3">
                                     <h3 className="text-2xl font-semibold">Une seule race, trois formats</h3>
