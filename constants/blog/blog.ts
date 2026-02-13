@@ -66,7 +66,7 @@ export const blog: BlogContentType = {
         {
             slug: "caracteristique",
             label: "Caractéristiques",
-            description: "Taille, caractÃ¨re et vie avec le chien"
+            description: "Taille, caractère et vie avec le chien"
         },
         {
             slug: "apparence",
