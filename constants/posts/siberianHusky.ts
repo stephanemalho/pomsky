@@ -69,7 +69,7 @@ export const huskySiberienPost: BlogPost = {
     author: {
         name: "Aurélie Violette",
         role: "Éleveur & passionné de la race Pomsky",
-        imageSrc: "/assets/authors/aurelie-violette-portrait.png",
+        imageSrc: "/assets/authors/aurelie-violette-portrait.webp",
         imageAlt: "Portrait de l'auteur Aurélie Violette",
         linkedinUrl: "",
         linkedinLabelPrefix: "Profil de"
