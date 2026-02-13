@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
             {
                 userAgent: "*",
                 allow: "/",
-                disallow: ["/admin", "/api", "/private"]
+                disallow: ["/api", "/wp-admin", "/wp-content", "/wp-includes"]
             }
         ],
         sitemap: "https://royalpomsky.com/sitemap.xml"

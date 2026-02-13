@@ -31,5 +31,12 @@ export function proxy(request: NextRequest) {
 }
 
 export const config = {
-  matcher: "/:path*",
+  matcher: [
+    "/wp-admin/:path*",
+    "/wp-content/:path*",
+    "/wp-includes/:path*",
+    "/wp-login.php",
+    "/xmlrpc.php",
+    "/:path*.php",
+  ],
 }
