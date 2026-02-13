@@ -111,7 +111,7 @@ export default function PresentationEleveusesPage() {
 
                         <div className="space-y-12">
                             {/* Aurélie */}
-                            <article className="grid md:grid-cols-2 gap-12 items-start">
+                            <article id="aurelie" className="grid md:grid-cols-2 gap-12 items-start scroll-mt-28">
                                 <div className="grid grid-cols-6 auto-rows-[88px] md:auto-rows-[120px] gap-3">
                                     {aurelieGallery.map((image, index) => (
                                         <div
@@ -179,7 +179,7 @@ export default function PresentationEleveusesPage() {
                             </article>
 
                             {/* Marine */}
-                            <article className="grid md:grid-cols-2 gap-12 items-start">
+                            <article id="marine" className="grid md:grid-cols-2 gap-12 items-start scroll-mt-28">
                                 <div className="grid grid-cols-6 auto-rows-[88px] md:auto-rows-[120px] gap-3 md:order-2">
                                     {marineGallery.map((image, index) => (
                                         <div

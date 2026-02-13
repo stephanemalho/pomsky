@@ -291,7 +291,13 @@ export default function HomePage() {
 
             <div className="grid lg:grid-cols-2 gap-8">
               {founders.map((founder, index) => (
-                <article key={index} className="relative text-center bg-muted/70 rounded-lg overflow-hidden">
+                <Link
+                  key={index}
+                  href={`/presentation-eleveuses#${founder.name.toLowerCase()}`}
+                  className="block focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded-lg"
+                  aria-label={`Lire la présentation de ${founder.name}`}
+                >
+                  <article className="relative text-center bg-muted/70 rounded-lg overflow-hidden">
                   <div className="absolute top-4 left-4 md:flex hidden flex-col items-start gap-2 z-10">
                     {founder.badges.map((badge, badgeIdx) => (
                       <Badge
@@ -318,7 +324,8 @@ export default function HomePage() {
                       {founder.description}
                     </p>
                   </div>
-                </article>
+                  </article>
+                </Link>
               ))}
             </div>
             <div className="text-center space-y-4 my-12">
