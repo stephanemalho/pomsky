@@ -55,11 +55,10 @@ export default function BlogList({ base, theme }: BlogListProps) {
                                 <li className="my-2">
                                     <Link
                                         href={`/blog/${base}`}
-                                        className={`rounded-full border px-4 py-2 ${
-                                            !activeTheme
+                                        className={`rounded-full border px-4 py-2 ${!activeTheme
                                                 ? "border-foreground text-foreground"
                                                 : "border-border text-muted-foreground hover:text-foreground/80"
-                                        }`}
+                                            }`}
                                     >
                                         {filterLabels.all}
                                     </Link>
@@ -68,11 +67,10 @@ export default function BlogList({ base, theme }: BlogListProps) {
                                     <li className="my-2" key={item.slug}>
                                         <Link
                                             href={`/blog/${base}/${item.slug}`}
-                                            className={`rounded-full border px-4 py-2 ${
-                                                activeTheme === item.slug
+                                            className={`rounded-full border px-4 py-2 ${activeTheme === item.slug
                                                     ? "border-foreground text-foreground"
                                                     : "border-border text-muted-foreground hover:text-foreground/80"
-                                            }`}
+                                                }`}
                                         >
                                             {item.label}
                                         </Link>
@@ -111,9 +109,9 @@ export default function BlogList({ base, theme }: BlogListProps) {
                                 <div className="flex flex-col gap-4">
                                     <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.2em] text-muted-foreground">
                                         <span>{formatDate(post.date)}</span>
-                                        <span>â€¢</span>
+                                        <span>•</span>
                                         <span>{post.readTime}</span>
-                                        <span>â€¢</span>
+                                        <span>•</span>
                                         <span>{post.category}</span>
                                     </div>
                                     <h2 className="text-2xl md:text-3xl font-serif font-semibold leading-snug">
