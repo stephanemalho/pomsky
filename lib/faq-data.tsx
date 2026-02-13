@@ -449,16 +449,7 @@ export const faqNosChiots: FAQItem[] = [
 
       </div>
     ),
-  }, {
-    question: "Les chiots sont-ils visibles à l'élevage ?",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          Oui, les chiots peuvent être rencontrés à l'élevage, dans un cadre sanitaire extrêmement strict, organisé et respectueux de leur bien-être.
-        </p>
-      </div>
-    ),
-  },
+  }
 ]
 
 

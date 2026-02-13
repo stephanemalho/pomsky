@@ -44,6 +44,7 @@
 
 :root {
     --radius: 0.625rem;
+    --font-questrial: "Questrial", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
     --background: oklch(0.985 0.005 95);
     --foreground: oklch(0.14 0.005 90);
     --card: oklch(88.887% 0.05429 70.616 / 0.55);

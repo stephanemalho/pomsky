@@ -25,15 +25,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
         url: toUrl("/blog/pomsky"),
         changeFrequency: "weekly",
         priority: 0.8,
-        lastModified: "2026-02-07",
+        lastModified: "2026-02-13",
     };
 
     const blogThemeEntries: MetadataRoute.Sitemap = blog.themes.map(
         (theme): MetadataRoute.Sitemap[number] => ({
             url: toUrl(`/blog/pomsky/${theme.slug}`),
-            changeFrequency: "weekly",
+            changeFrequency: "monthly",
             priority: 0.6,
-            lastModified: "2026-02-07",
+            lastModified: "2026-02-13",
         })
     );
 

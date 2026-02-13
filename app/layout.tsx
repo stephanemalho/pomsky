@@ -2,19 +2,12 @@ import type React from "react"
 import type { Metadata } from "next"
 import CookieConsent from "../components/cookie-consent"
 import { Analytics } from "@vercel/analytics/next"
-import { Questrial } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "next-themes"
 import { Navigation } from "../components/navigation"
 import { Footer } from "../components/footer"
 import { siteConfig } from "@/lib/seo-config"
 import { generateOrganizationSchema, generateWebsiteSchema } from "@/lib/schema-generators"
-
-const questrial = Questrial({
-  subsets: ["latin"],
-  weight: "400",
-  variable: "--font-questrial",
-})
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.siteUrl),
@@ -78,6 +71,10 @@ export default function RootLayout({
         {/* Preconnect aux ressources externes */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Questrial:wght@400&display=swap"
+        />
 
         {/* Google Analytics will be injected by the client cookie consent manager */}
 
@@ -91,7 +88,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
       </head>
-      <body className={`${questrial.className} ${questrial.variable}`}>
+      <body>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <div className="min-h-screen bg-background flex flex-col">
             <Navigation />

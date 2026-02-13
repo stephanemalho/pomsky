@@ -4,7 +4,7 @@ const nextConfig: NextConfig = {
     async redirects() {
         return [
             {
-                source: "/author/admin-pomsky83",
+                source: "/author/:path*",
                 destination: "/",
                 permanent: true
             },
@@ -31,6 +31,11 @@ const nextConfig: NextConfig = {
             {
                 source: "/category/galerie-photos-videos",
                 destination: "/chiots-disponibles",
+                permanent: true
+            },
+            {
+                source: "/category/blog/page/:path*",
+                destination: "/blog/pomsky",
                 permanent: true
             },
             {
@@ -85,6 +90,44 @@ const nextConfig: NextConfig = {
                 source: "/tout-savoir-sur-le-pomsky-toy-race-caracteristiques-et-conseils",
                 destination:
                     "/blog/pomsky/caracteristique/tout-savoir-sur-le-pomsky-toy-race-caracteristiques-et-conseils",
+                permanent: true
+            },
+            {
+                source: "/decouvrez-le-pomsky-nain-un-adorable-compagnon-a-quatre-pattes",
+                destination:
+                    "/blog/pomsky/caracteristique/decouvrez-le-pomsky-nain-un-adorable-compagnon-a-quatre-pattes",
+                permanent: true
+            },
+            {
+                source: "/duree-de-vie-du-pomsky-guide-complet-pour-prolonger-la-sante-de-votre-chien",
+                destination:
+                    "/blog/pomsky/sante/duree-de-vie-du-pomsky-guide-complet-pour-prolonger-la-sante-de-votre-chien",
+                permanent: true
+            },
+            {
+                source: "/le-chien-pomsky-une-race-hybride-qui-fait-fondre-les-coeurs",
+                destination:
+                    "/blog/pomsky/origine/le-chien-pomsky-une-race-hybride-qui-fait-fondre-les-coeurs",
+                permanent: true
+            },
+            {
+                source: "/a-quoi-sert-test-adn-chien",
+                destination: "/blog/pomsky",
+                permanent: true
+            },
+            {
+                source: "/page-facebook",
+                destination: "/",
+                permanent: true
+            },
+            {
+                source: "/2020",
+                destination: "/",
+                permanent: true
+            },
+            {
+                source: "/2020/:path*",
+                destination: "/",
                 permanent: true
             }
         ];

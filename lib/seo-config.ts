@@ -26,7 +26,7 @@ export const siteConfig = {
     /* ----------------------------- Identité --------------------------------- */
     name: CANONICAL_NAME,
     author: CANONICAL_NAME,
-    locale: "fr_FR",
+    locale: "fr-FR",
 
     siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "https://royalpomsky.com",
 
@@ -147,21 +147,24 @@ export const buildOpenGraph = ({
     images:
         images && images.length > 0
             ? images.map((image) => ({
-                width: siteConfig.ogImageWidth,
-                height: siteConfig.ogImageHeight,
-                alt: siteConfig.ogImageAlt,
-                type: "image/webp",
-                ...image,
-            }))
+                  width: siteConfig.ogImageWidth,
+                  height: siteConfig.ogImageHeight,
+                  alt: siteConfig.ogImageAlt,
+                  type: "image/webp",
+                  ...image
+              }))
             : [
-                {
-                    url: new URL(siteConfig.ogImage, siteConfig.siteUrl).toString(),
-                    width: siteConfig.ogImageWidth,
-                    height: siteConfig.ogImageHeight,
-                    alt: siteConfig.ogImageAlt,
-                    type: "image/webp",
-                },
-            ],
+                  {
+                      url: new URL(
+                          siteConfig.ogImage,
+                          siteConfig.siteUrl
+                      ).toString(),
+                      width: siteConfig.ogImageWidth,
+                      height: siteConfig.ogImageHeight,
+                      alt: siteConfig.ogImageAlt,
+                      type: "image/webp"
+                  }
+              ]
 });
 
 type TwitterParams = {
@@ -182,7 +185,7 @@ export const buildTwitter = ({
         imageUrl
             ? imageUrl
             : new URL(siteConfig.ogImage, siteConfig.siteUrl).toString()
-    ],
+    ]
 });
 
 /* -------------------------------------------------------------------------- */
