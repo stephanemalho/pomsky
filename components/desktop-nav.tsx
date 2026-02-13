@@ -101,9 +101,14 @@ export function DesktopNav() {
                                 {group.label}
                             </NavigationMenuTrigger>
                             <NavigationMenuContent>
-                                <ul className="grid gap-3 p-4 md:w-[360px] lg:w-[420px]">
+                                <ul className="grid gap-3 p-4 md:w-90 lg:w-105">
                                     {group.items.map((item) => (
-                                        <ListItem key={item.href} href={item.href} title={item.title}>
+                                        <ListItem
+                                            key={item.href}
+                                            href={item.href}
+                                            title={item.title}
+                                            active={pathname === item.href}
+                                        >
                                             {item.description}
                                         </ListItem>
                                     ))}
@@ -121,17 +126,21 @@ type ListItemProps = {
     title: string
     href: string
     children: React.ReactNode
+    active?: boolean
 }
 
 const ListItem = React.forwardRef<HTMLAnchorElement, ListItemProps>(
-    ({ title, children, href }, ref) => {
+    ({ title, children, href, active }, ref) => {
         return (
             <li>
                 <NavigationMenuLink asChild>
                     <Link
                         ref={ref}
                         href={href}
-                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-muted/70 hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                        className={cn(
+                            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-muted/70 hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary",
+                            active ? "text-primary bg-muted/40" : "text-muted-foreground"
+                        )}
                     >
                         <div className="text-sm font-medium leading-none">{title}</div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
