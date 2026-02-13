@@ -47,38 +47,69 @@ export default function PresentationEleveusesPage() {
     const lastMod = returnLastmod(siteConfig.pages.eleveuses)
     const aurelieGallery = [
         {
-            src: "/assets/authors/Aurelie.webp",
-            alt: "Aurélie dans l'élevage Royal POMSKY",
-            className: "col-span-6 md:col-span-4 row-span-6 md:row-span-4",
+            src: "/assets/authors/aurelie-magnetisme-past-work.jpeg",
+            alt: "Magnetisme première activité d'aurelie avant l'élevage de pomsky",
+            className: "col-span-6 md:col-span-3 row-span-6 md:row-span-6",
         },
         {
             src: "/assets/authors/aurelie-violette-elevage-royal-pomsky.webp",
             alt: "Aurélie avec un Pomsky",
-            className: "col-span-3 md:col-span-2 row-span-2",
+            className: "col-span-3 md:col-span-3 row-span-3",
         },
         {
-            src: "/assets/authors/aurelie-moshi.webp",
-            alt: "Aurélie et Moshi",
-            className: "col-span-3 md:col-span-2 row-span-2",
+            src: "/assets/authors/aurelie-and-puppies-and-children.jpeg",
+            alt: "Aurélie avec les enfants et les chiots jouant dans l'herbe",
+            className: "col-span-3 md:col-span-3 row-span-3",
+        },
+        {
+            src: "/assets/authors/aurelie-and-pomsky-see-view.jpeg",
+            alt: "Aurélie avec un Pomsky assis au bord d'un lac",
+            className: "col-span-3 md:col-span-3 row-span-3",
+        },
+        {
+            src: "/assets/authors/aurelie-and-pomsky-on-a-bike.jpeg",
+            alt: "Aurélie et un Pomsky prets pour la route",
+            className: "col-span-3 md:col-span-3 row-span-3",
+        },
+        {
+            src: "/assets/authors/aurelie-and-pomsky-walking-street.jpeg",
+            alt: "Aurélie dans les rues chics promène un pomsky",
+            className: "col-span-6 md:col-span-6 row-span-6 md:row-span-6",
         },
     ]
     const marineGallery = [
         {
-            src: "/assets/authors/marine-eleveuse-royal-pomsky.webp",
-            alt: "Portrait de Marine, éleveuse Royal POMSKY",
-            className: "col-span-6 md:col-span-4 row-span-6 md:row-span-4",
+            src: "/assets/authors/marine-walking-dogs.jpeg",
+            alt: "Marine en promenade des chiens",
+            className: "col-span-6 md:col-span-3 row-span-6 md:row-span-6",
         },
         {
-            src: "/assets/authors/marine-elevage-royal-pomsky.webp",
+            src: "/assets/authors/portrait-aurelie-and-pomsky.jpeg",
             alt: "Marine avec un Pomsky",
-            className: "col-span-3 md:col-span-2 row-span-2",
+            className: "col-span-3 md:col-span-3 row-span-3",
         },
         {
-            src: "/assets/authors/marine-ava.webp",
-            alt: "Marine et Ava",
-            className: "col-span-3 md:col-span-2 row-span-2",
+            src: "/assets/authors/marine-in-a-chair-with-pomsky.jpeg",
+            alt: "Marine sur une chaise avec son bebe pomsky",
+            className: "col-span-3 md:col-span-3 row-span-3",
+        },
+        {
+            src: "/assets/authors/marine-and-a-new-puppy.jpeg",
+            alt: "Marine avec un Pomsky sur une chaise",
+            className: "col-span-3 md:col-span-3 row-span-3",
+        },
+        {
+            src: "/assets/authors/marine-and-pomsky-in-grass.jpeg",
+            alt: "Marine et un pomsky dans le jardin vert",
+            className: "col-span-3 md:col-span-3 row-span-3",
+        },
+        {
+            src: "/assets/authors/marine-and-a-puppy-pomsky-in-sofa.jpeg",
+            alt: "Marine sur le canapé avec un chiot pomsky",
+            className: "col-span-6 md:col-span-6 row-span-6 md:row-span-6",
         },
     ]
+
 
     return (
         <>
@@ -113,7 +144,7 @@ export default function PresentationEleveusesPage() {
                         <div className="space-y-12">
                             {/* Aurélie */}
                             <article id="aurelie" className="grid md:grid-cols-2 gap-12 items-start scroll-mt-28">
-                                <div className="grid grid-cols-6 auto-rows-[88px] md:auto-rows-[120px] gap-3">
+                                <div className="grid grid-cols-6 auto-rows-[70px] sm:auto-rows-[90px] md:auto-rows-[105px] lg:auto-rows-[118px] gap-3">
                                     {aurelieGallery.map((image, index) => (
                                         <div
                                             key={`${image.src}-${index}`}
@@ -125,6 +156,9 @@ export default function PresentationEleveusesPage() {
                                                 fill
                                                 sizes="(min-width: 1024px) 560px, 100vw"
                                                 className="object-cover"
+                                                priority={index === 0}
+                                                loading={index < 2 ? "eager" : "lazy"}
+                                                fetchPriority={index < 5 ? "high" : "auto"}
                                             />
                                         </div>
                                     ))}
@@ -181,7 +215,7 @@ export default function PresentationEleveusesPage() {
 
                             {/* Marine */}
                             <article id="marine" className="grid md:grid-cols-2 gap-12 items-start scroll-mt-28">
-                                <div className="grid grid-cols-6 auto-rows-[88px] md:auto-rows-[120px] gap-3 md:order-2">
+                                <div className="grid grid-cols-6 auto-rows-[70px] sm:auto-rows-[90px] md:auto-rows-[105px] lg:auto-rows-[118px] gap-3 md:order-2">
                                     {marineGallery.map((image, index) => (
                                         <div
                                             key={`${image.src}-${index}`}
@@ -193,6 +227,9 @@ export default function PresentationEleveusesPage() {
                                                 fill
                                                 sizes="(min-width: 1024px) 560px, 100vw"
                                                 className="object-cover"
+                                                priority={index === 0}
+                                                loading={index < 2 ? "eager" : "lazy"}
+                                                fetchPriority={index < 5 ? "high" : "auto"}
                                             />
                                         </div>
                                     ))}

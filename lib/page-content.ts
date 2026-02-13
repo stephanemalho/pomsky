@@ -44,7 +44,7 @@ export const pageContent = {
     eleveuses: {
         h1: "Les éleveuses de Royal POMSKY",
         description:
-            "Découvrez Aurélie et Marine, pionniaires à importer des pomsky d'Amérique depuis 2017 leurs parcours, leur vision du Pomsky et leur accompagnement des familles."
+            "Nous sommes Aurélie et Marine, pionnières dans l'importation de Pomskys d'Amérique depuis 2017. Cette page raconte notre parcours de vie, notre passion pour le Pomsky et l'accompagnement que nous proposons aux familles adoptives dès leurs premiers pas."
     },
     wellness: {
         h1: "La vie en élevage",
