@@ -117,28 +117,27 @@ export function DesktopNav() {
     )
 }
 
-type ListItemProps = React.ComponentPropsWithoutRef<"a"> & {
+type ListItemProps = {
     title: string
+    href: string
+    children: React.ReactNode
 }
 
 const ListItem = React.forwardRef<HTMLAnchorElement, ListItemProps>(
-    ({ className, title, children, ...props }, ref) => {
+    ({ title, children, href }, ref) => {
         return (
             <li>
                 <NavigationMenuLink asChild>
-                    <a
+                    <Link
                         ref={ref}
-                        className={cn(
-                            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-muted/70 hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary",
-                            className
-                        )}
-                        {...props}
+                        href={href}
+                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-muted/70 hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                     >
                         <div className="text-sm font-medium leading-none">{title}</div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                             {children}
                         </p>
-                    </a>
+                    </Link>
                 </NavigationMenuLink>
             </li>
         )
