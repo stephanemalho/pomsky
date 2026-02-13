@@ -50,10 +50,12 @@ export default function HomePage() {
       name: "Aurélie",
       image: "/assets/authors/aurelie-violette-elevage-royal-pomsky.webp",
       description:
-        "Aurelie est une passionnée par les chiens et courses de traîneaux depuis sa plus tendre enfance : ancienne éducatrice comportementaliste, elle a collaboré avec de nombreux centres de rééducation, éducation canine ainsi que des associations de protection animale : après des années de pratique en éducation elle se spécialise dans l'élevage canin grâce au Pomsky : depuis 2018. « L'idée la plus extraordinaire crée dans ma génération : un husky miniature possédant toutes les qualités d'un chien de compagnie Pour moi, pas question de créer une race en faisant des essais, je me suis tournée vers les éleveurs Américains quim'ont appris à sélectionner et importer dès la première portée des reproducteurs exceptionnels. Faire naître et voir évoluer un chien ressemblent physiquement au nordique, au husky, ou au malamute, en miniature avecun comportement totalement équilibré est une honneur absolu, un bonheur et un privilège. Je ne trouve absolument aucun « défaut » à mes Pomsky, ils sont juste parfaits et adaptés à tout mode de vie, et c'est'objectif que je m'étais fixée depuis 2018 » Sa grande expérience, sa sensibilité la mène également vers la communication animale depuis 2020. Avec Auréli votre suivi sera totalement holistique et ce durant toute la vie de votre chiot Pomsky.Ses grandes connaissances en matière de santé et soins prodigués à l'animal pourront également vous être très utiles.",
+        "Aurélie est une passionnée par les chiens et courses de traîneaux depuis sa plus tendre enfance : la sélection du cheptel royal Pomsky repose sur son expertise ! Éducatrice comportementaliste, elle a collaboré avec de nombreux centres de rééducation, éducation canine ainsi que des associations de protection animale tels que la S.P.A : après des années de pratique en éducation elle se spécialise dans l'élevage canin grâce au Pomsky : depuis 2018. « L'idée la plus extraordinaire crée dans ma génération : un husky miniature possédant toutes les qualités d'un chien de compagnie Pour moi, pas question de créer une race en faisant des essais, je me suis tournée vers les éleveurs Américains quim'ont appris à sélectionner et importer dès la première portée des reproducteurs exceptionnels. Faire naître et voir évoluer un chien ressemblent physiquement au nordique, au husky, ou au malamute, en miniature avecun comportement totalement équilibré est une honneur absolu, un bonheur et un privilège. Je ne trouve absolument aucun « défaut » à mes Pomsky, ils sont juste parfaits et adaptés à tout mode de vie, et c'est'objectif que je m'étais fixée depuis 2018 » Sa grande expérience, sa sensibilité la mène également vers la communication animale depuis 2020. Avec Aurélie votre suivi sera totalement holistique et ce durant toute la vie de votre chiot Pomsky. Ses grandes connaissances en matière de santé et soins prodigués à l'animal pourront également vous être très utiles.",
       badges: [
+        "diplômée éducateur canin comportementaliste",
         "Ancienne éducatrice comportementaliste",
         "8 ans d'expérience en élevage canin",
+        "Certifiée en communication animale",
         "Spécialiste socialisation chiots",
       ],
     },
@@ -61,7 +63,7 @@ export default function HomePage() {
       name: "Marine",
       image: "/assets/authors/marine-ava.webp",
       description:
-        "Marine a suivi Aurelie dans l'aventure Pomsky, car à deux, la meute est absolument bichonnée ! Autodidacte, carrée c'est une véritable perfectionniste : avec elle les locaux doivent être entretenus de façon très protocolaire afin que nos chiots évoluent dans des conditions optimales pour leur santé et leur bien être.  Chaque chiot est soigneusement ausculté chaque jour, elle porte attention à chaque caractère également grâce à son instinct d'anticipation, chaque petit est bichonné dès sa naissance !Son niveau d'exigence est extrêmement élevé, voir militaire : rien n'échappe aux yeux de Marine ! Chez no ion et passe beaucoup de temps avec les chiens adultes, les chiots, elle les connaît absolument par cœur. Observatrice, elle sait ce dont chacun a besoin. Le bien être animal, les conditions sanitaires sont sa priorité.",
+        "Marine a suivi Aurelie dans l'aventure Pomsky, car à deux, la meute est absolument bichonnée ! Autodidacte, carrée c'est une véritable perfectionniste : ancienne responsable de boutique dans une grande enseigne spécialisée en automobile, Marine a l'esprit de leader : avec elle les locaux doivent être entretenus de façon très protocolaire afin que nos chiots évoluent dans des conditions optimales pour leur santé et leur bien être. Chaque chiot est soigneusement ausculté chaque jour, elle porte attention à chaque caractère également grâce à son instinct d'anticipation, chaque petit est bichonné dès sa naissance ! Son niveau d'exigence est extrêmement élevé, voir militaire : rien n'échappe aux yeux de Marine ! Chaque jour elle passe beaucoup de temps avec les chiens adultes, les chiots, elle les connaît absolument par cœur. Observatrice, elle sait anticiper ce dont chacun a besoin. Le bien être animal, les conditions sanitaires sont sa priorité. Marine gère le côté administratif de l'élevage ! C'est donc elle qui prépare soigneusement les formalités pour le départ.",
       badges: [
         "4 ans d'expérience en élevage canin",
         "Protocoles d'hygiène rigoureux",
@@ -274,7 +276,7 @@ export default function HomePage() {
         <section className="py-16 my-8 bg-muted/30">
           <div className="container mx-auto p-2">
             <div className="text-center space-y-4 mb-12">
-              <h2 className="text-xl md:text-2xl font-bold">Les Éleveurs</h2>
+              <h2 className="text-xl md:text-2xl font-bold">Les Éleveuses</h2>
               <p className="text-muted-foreground max-w-3xl mx-auto text-sm leading-relaxed">
                 Derrière l'élevage se trouvent <strong>Aurélie et Marine</strong>, deux
                 éleveuses passionnées par le bien-être animal et unies par un amour

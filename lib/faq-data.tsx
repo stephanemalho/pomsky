@@ -177,6 +177,65 @@ export const faqPresentation: FAQItem[] = [
 
 ]
 
+export const faqEleveuses: FAQItem[] = [
+  {
+    question: "Est ce que l'élevage canin est une mauvaise chose ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          J'assume aujourd'hui totalement le fait que non, ce n'est pas une mauvaise chose. Tout ce qui est fait avec amour, intégrité, honneur, et avec les intentions les plus élevées est une bonne chose.
+        </p>
+        <p>
+          La façon d'élever change tout, élever avec des compétences et connaissances solides en ce qui concerne l'éthologie, change complètement l'expérience tant pour l'éleveur que pour l'adoptant. Je me suis longtemps questionnée à ce propos mais les études et statistiques parlent : chez royal Pomsky aucun chiot adopté depuis 8 ans n'a été abandonné : les familles doivent prévenir l'élevage en cas de recherche d'un autre foyer, et ceci m'est arrivé une seule fois de replacer un chiot après une tragédie familiale. Seulement environ 2,29 % des chiens abandonnés en France proviendraient d'un élevage professionnel : la majorité des abandons résultent de dons, particuliers, de naisseurs et non d'éleveurs.
+        </p>
+      </div>
+    ),
+  },
+  {
+    question: "Quelle est votre taille de Pomsky préférée ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Le Toy, sans conteste la taille la plus mignonne, mais cela reste un chien difficile à obtenir et surtout obtenir une belle harmonie.
+        </p>
+      </div>
+    ),
+  },
+  {
+    question: "Faites vous des concours et expositions ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Jusqu'à présent non, je suis membre de la fédération française du Pomsky, et j'ai été ( aurelie ) juge d'un concours organisé par l'european Pomsky club et la fédération française du Pomsky ( FFP) je me suis beaucoup amusée. Depuis je n'ai pas participé à des expositions cependant ce n'est pas exclu que j'envisage de le faire à l'avenir. Les concours sont très contraignants en terme de planning, de risques sanitaires de mon point de vue. Cependant c'est aussi très intéressant pour présenter la race en devenir et connecter à d'autres passionnés.
+        </p>
+      </div>
+    ),
+  },
+  {
+    question: "Pourquoi adhérer à un club de race ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          C'est une façon de retracer les lignées à travers la création de la race et de féderer les gens autour du Pomsky, pour le moment les clubs en France sont nombreux mais non officiels, étant donné que la race n'est pas recconue par la FCI, le but des clubs est d'accéder à la reconnaissance de la race Pomsky un jour ou l'autre.
+        </p>
+      </div>
+    ),
+  },
+  {
+    question: "Que vous apporte votre vision de thérapeute et de comportementaliste canin ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Je peux percevoir d'une manière plus fine le chiot le plus adapté au contexte familial décrit.
+        </p>
+        <p>
+          Cela me permet de faire un double lien entre la problématique de l'humain, sa personnalité, et la résolution de la problématique à travers la relation avec l'animal, parfois cela représente aussi un chemin initiatique pour l'adoptant. Je suis alors là pour soutenir, cadrer, accompagner l'un et l'autre dans leur processus d'intégration et de vie commune.
+        </p>
+      </div>
+    ),
+  },
+]
+
 export const faqBienEtre: FAQItem[] = [
   {
     question: "Dans quel environnement vivent les chiens et les chiots chez ROYAL POMSKY ?",

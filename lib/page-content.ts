@@ -41,6 +41,11 @@ export const pageContent = {
         description:
             "Élevage spécialisé Pomsky dans le Jura (39) : sélection attentive, santé suivie et chiots élevés au contact de leur famille."
     },
+    eleveuses: {
+        h1: "Les éleveuses de Royal POMSKY",
+        description:
+            "Découvrez Aurélie et Marine, pionniaires à importer des pomsky d'Amérique depuis 2017 leurs parcours, leur vision du Pomsky et leur accompagnement des familles."
+    },
     wellness: {
         h1: "La vie en élevage",
         description: "Voici comment vivent nos animaux chez Royal POMSKY"

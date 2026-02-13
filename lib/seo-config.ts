@@ -102,6 +102,7 @@ export const siteConfig = {
         puppies: "/chiots-disponibles",
         reproductors: "/femelles-reproductrices",
         presentation: "/presentation-elevage",
+        eleveuses: "/presentation-eleveuses",
         wellness: "/bien-etre-animal",
         contact: "/contact",
         legalNotice: "/mentions-legales",
@@ -260,6 +261,18 @@ export const pageMetadata = {
             "elevage chiots avec mere"
         ]
     },
+    eleveuses: {
+        title: pageContent.eleveuses.h1,
+        description: pageContent.eleveuses.description,
+        keywords: [
+            "eleveuses pomsky",
+            "equipe elevage pomsky",
+            "aurélie pomsky",
+            "marine pomsky",
+            "presentation eleveuses",
+            "approche holistique elevage"
+        ]
+    },
 
     wellness: {
         title: pageContent.wellness.h1,
@@ -375,6 +388,12 @@ export const sitemapPages = [
         changefreq: "monthly",
         priority: 0.7,
         lastmod: "2026-02-07"
+    },
+    {
+        url: "/presentation-eleveuses",
+        changefreq: "monthly",
+        priority: 0.7,
+        lastmod: "2026-02-13"
     },
     {
         url: "/bien-etre-animal",
