@@ -1,7 +1,7 @@
 import type React from "react"
 import type { Metadata } from "next"
 import CookieConsent from "../components/cookie-consent"
-import { Analytics } from "@vercel/analytics/next"
+import AnalyticsConsent from "../components/analytics-consent"
 import "./globals.css"
 import { ThemeProvider } from "next-themes"
 import { Navigation } from "../components/navigation"
@@ -99,7 +99,7 @@ export default function RootLayout({
           </div>
         </ThemeProvider>
         <CookieConsent />
-        <Analytics />
+        <AnalyticsConsent />
       </body>
     </html>
   )

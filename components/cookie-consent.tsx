@@ -46,12 +46,19 @@ gtag('config', '${GA_ID}');`
         }
     }, [])
 
+    function notifyConsentChange() {
+        try {
+            window.dispatchEvent(new Event("cookie-consent-updated"))
+        } catch { }
+    }
+
     function accept() {
         try {
             localStorage.setItem("cookie_consent", "accepted")
         } catch { }
         setConsent("accepted")
         setOpen(false)
+        notifyConsentChange()
     }
 
     function clearGACookies() {
@@ -95,6 +102,7 @@ gtag('config', '${GA_ID}');`
         } catch { }
         setConsent("denied")
         setOpen(false)
+        notifyConsentChange()
     }
 
     // Inject GA script when accepted, remove when refused
