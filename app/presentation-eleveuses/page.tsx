@@ -165,7 +165,7 @@ export default function PresentationEleveusesPage() {
                                 </div>
                                 <div className="space-y-6">
                                     <Badge variant="secondary" className="w-fit">
-                                        Aurélie - 34 ans !
+                                        Celle qui murmure à l'oreille des Pomskys
                                     </Badge>
                                     <h3 className="text-xl md:text-2xl font-bold">Aurélie - 34 ans !</h3>
 
@@ -236,15 +236,15 @@ export default function PresentationEleveusesPage() {
                                 </div>
                                 <div className="space-y-6 md:order-1">
                                     <Badge variant="secondary" className="w-fit">
-                                        Marine
+                                        Mode contrôle : ON 🐾, mais cool après le boulot
                                     </Badge>
-                                    <h3 className="text-xl md:text-2xl font-bold">Marine</h3>
+                                    <h3 className="text-xl md:text-2xl font-bold"> Marine - 32 ans !</h3>
                                     <div className="space-y-4 text-muted-foreground leading-relaxed">
                                         <p>
                                             Marine : Grande adoratrice de chats à la base, ce n'est qu'après plusieurs années à côtoyer Aurélie et son élevage de chiens que j'ai apprécié la relation unique et fusionnelle qu'à le chien avec l'homme.
                                         </p>
                                         <p>
-                                            Issue d'une école de commerce, J'ai évolué dans un milieu très compétitif et masculin à travers différentes professions telles que celle de responsable d'un magasin  dans une grande enseigne automobile.
+                                            Issue d'une école de commerce, J'ai évolué dans un milieu très compétitif et masculin à travers différentes professions telles que celle de responsable d'un magasin dans une grande enseigne automobile.
                                         </p>
                                         <p>
                                             Ceci a forgé ma personnalité et peu à peu, l'animal a pu m'apporter quelque chose de différent : ce calme, cette bonté naturelle, pas de compétition, pas de prise de pouvoir.
