@@ -56,6 +56,14 @@ export function Footer() {
                             </li>
                             <li>
                                 <Link
+                                    href="/presentation-eleveuses"
+                                    className="text-muted-foreground hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded px-1 py-0.5"
+                                >
+                                    Les éleveuses
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
                                     href="/femelles-reproductrices"
                                     className="text-muted-foreground hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded px-1 py-0.5"
                                 >

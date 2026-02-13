@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { FAQSection } from "@/components/faq"
 import type { Metadata } from "next"
@@ -239,6 +240,47 @@ export default function PresentationEleveusesPage() {
                                 </div>
                             </article>
                         </div>
+                    </section>
+                    <section className="mb-16">
+                        <Card className="bg-muted/30">
+                            <CardContent className="p-8 md:p-10">
+                                <div className="grid md:grid-cols-[1.3fr_0.7fr] gap-8 items-center">
+                                    <div className="space-y-4">
+                                        <h2 className="text-xl md:text-2xl font-bold">
+                                            Les articles d'Aurélie et Marine sur l'élevage de Pomsky Toy
+                                        </h2>
+                                        <h3 className="text-base md:text-xl font-semibold">Élevage de Pomsky Toy : conseils d'expertes, expériences terrain et adoption responsable.</h3>
+                                        <p className="text-muted-foreground leading-relaxed">
+                                            Aurélie et Marine, éleveuses passionnées de Pomsky Toy, partagent à travers leurs articles une vision authentique et professionnelle de l'élevage. Elles y abordent le quotidien d'un élevage éthique, la sélection des lignées, la socialisation des chiots, la santé, l'éducation et les bonnes pratiques pour une adoption réussie.
+                                        </p>
+                                        <p className="text-muted-foreground leading-relaxed">Chaque article s'appuie sur leur expérience concrète d'éleveuses de Pomsky Toy, avec des conseils clairs et pédagogiques destinés aux familles souhaitant comprendre la race, ses besoins spécifiques et les critères essentiels pour accueillir un chiot Pomsky Toy dans les meilleures conditions.</p>
+                                        <p className="text-muted-foreground leading-relaxed">Objectif : informer, rassurer et accompagner les futurs adoptants grâce à un contenu fiable, transparent et orienté bien-être animal.</p>
+                                    </div>
+                                    <div className="space-y-6 md:justify-self-end lg:justify-self-stretch">
+                                        <div className="relative w-full overflow-hidden rounded-2xl">
+                                            <div className="relative aspect-4/5 lg:aspect-4/3">
+                                                <Image
+                                                    src="/BANDIT-pomsky-toy-f5.webp"
+                                                    alt="Pomsky noir et blanc de g?n?ration F3"
+                                                    fill
+                                                    sizes="(min-width: 1024px) 360px, 100vw"
+                                                    className="object-cover"
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {/* Image */}
+                                    <div className="flex md:justify-end">
+                                        <Link
+                                            href="/blog"
+                                            className="inline-flex items-center w-full justify-center rounded-md bg-primary px-5 py-3 text-sm font-semibold text-white hover:bg-primary/80 dark:text-[#5b3a1a] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                                        >
+                                            Découvrir le blog des Pomsky
+                                        </Link>
+                                    </div>
+                                </div>
+                            </CardContent>
+                        </Card>
                     </section>
 
                     <FAQSection

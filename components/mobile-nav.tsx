@@ -12,6 +12,7 @@ const navigation = [
     { name: "Accueil", href: "/" },
     { name: "Le Pomsky", href: "/le-pomsky" },
     { name: "L'elevage", href: "/presentation-elevage" },
+    { name: "Les éleveuses", href: "/presentation-eleveuses" },
     { name: "Nos reproducteurs", href: "/femelles-reproductrices" },
     { name: "Nos chiots", href: "/chiots-disponibles" },
     { name: "Les conditions de vie", href: "/bien-etre-animal" },
