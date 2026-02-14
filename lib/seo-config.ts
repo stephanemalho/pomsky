@@ -33,7 +33,7 @@ export const siteConfig = {
     /* ------------------------------ SEO Global -------------------------------- */
     title: "Élevage de Pomsky | Royal POMSKY",
     description:
-        "Royal POMSKY est un élevage spécialisé dans les pomskys de toutes tailles. Chiots sélectionnés, élevage responsable, reproducteurs suivis.",
+        "Royal POMSKY est un élevage spécialisé dans les pomskys Toy de lignée Américaines. Chiots sélectionnés, élevage responsable, reproducteurs suivis.",
     keywords: [
         "élevage pomsky",
         "Pomsky France",
