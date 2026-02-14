@@ -55,7 +55,12 @@ const nextConfig: NextConfig = {
             },
             {
                 source: "/le-husky-siberian",
-                destination: "/blog/pomsky",
+                destination: "/blog/husky/caracteristique/le-husky-siberian",
+                permanent: true
+            },
+            {
+                source: "/le-spitz-nain",
+                destination: "/blog/spitz/caracteristique/le-spitz-nain",
                 permanent: true
             },
             {
@@ -87,6 +92,11 @@ const nextConfig: NextConfig = {
                 permanent: true
             },
             {
+                source: "/a-quoi-sert-test-adn-chien",
+                destination: "/blog/pomsky/genetique/a-quoi-sert-test-adn-chien",
+                permanent: true
+            },
+            {
                 source: "/tout-savoir-sur-le-pomsky-toy-race-caracteristiques-et-conseils",
                 destination:
                     "/blog/pomsky/caracteristique/tout-savoir-sur-le-pomsky-toy-race-caracteristiques-et-conseils",
@@ -105,19 +115,49 @@ const nextConfig: NextConfig = {
                 permanent: true
             },
             {
-                source: "/le-chien-pomsky-une-race-hybride-qui-fait-fondre-les-coeurs",
+                source: "/le-pomsky-adulte-tout-ce-que-vous-devez-savoir-sur-cette-race-unique",
                 destination:
-                    "/blog/pomsky/origine/le-chien-pomsky-une-race-hybride-qui-fait-fondre-les-coeurs",
+                    "/blog/pomsky/caracteristique/le-pomsky-adulte-tout-ce-que-vous-devez-savoir-sur-cette-race-unique",
                 permanent: true
             },
             {
-                source: "/a-quoi-sert-test-adn-chien",
-                destination: "/blog/pomsky",
+                source: "/pomsky-noir-aux-yeux-bleus-decouvrez-ce-magnifique-chien-au-regard-envoutant",
+                destination:
+                    "/blog/pomsky/apparence/pomsky-noir-aux-yeux-bleus-decouvrez-ce-magnifique-chien-au-regard-envoutant",
+                permanent: true
+            },
+            {
+                source: "/pomsky-beige-aux-yeux-bleus-decouverte-de-cette-incroyable-variete-de-chien",
+                destination:
+                    "/blog/pomsky/apparence/pomsky-beige-aux-yeux-bleus-decouverte-de-cette-incroyable-variete-de-chien",
+                permanent: true
+            },
+            {
+                source: "/pomsky-blanc-et-yeux-bleus-immersion-dans-lunivers-de-cette-race-captivante",
+                destination:
+                    "/blog/pomsky/apparence/pomsky-blanc-et-yeux-bleus-immersion-dans-lunivers-de-cette-race-captivante",
+                permanent: true
+            },
+            {
+                source: "/le-chien-pomsky-une-race-hybride-qui-fait-fondre-les-coeurs",
+                destination:
+                    "/blog/pomsky/caracteristique/le-chien-pomsky-une-race-hybride-qui-fait-fondre-les-coeurs",
+                permanent: true
+            },
+            {
+                source: "/le-pomsky-renard-decouvrez-ce-chien-au-look-de-petit-renard",
+                destination: "/blog/pomsky/apparence/le-pomsky-renard-decouvrez-ce-chien-au-look-de-petit-renard",
                 permanent: true
             },
             {
                 source: "/page-facebook",
                 destination: "/",
+                permanent: true
+            },
+            {
+                source: "/pomsky-a-vendre-comment-choisir-le-bon-eleveur-et-le-chiot-parfait-pour-vous",
+                destination:
+                    "/blog/pomsky/prix/pomsky-a-vendre-comment-choisir-le-bon-eleveur-et-le-chiot-parfait-pour-vous",
                 permanent: true
             },
             {
