@@ -124,7 +124,7 @@ export default function SejoursPage() {
                                         Cette présence humaine quotidienne permet aux chiots de s'habituer très tôt aux manipulations douces, aux odeurs et aux bruits du quotidien. Cette phase essentielle pose les bases d'un chiot confiant, serein et réceptif, facilitant les apprentissages futurs et la transition vers sa nouvelle famille. 
                                     </p>
                                 </div>
-                                <div className="relative h-64 md:h-122 rounded-lg overflow-hidden">
+                                <div className="relative h-80 md:h-122 rounded-lg overflow-hidden">
                                     <ImageCarousel
                                         images={[
                                             "pages/conditions-de-vie/cocom-pour-chiots-pomsky.webp",
@@ -141,7 +141,7 @@ export default function SejoursPage() {
                         {/* Espaces Intérieurs */}
                         <section className="bg-muted/30 -mx-4 px-4 py-16 rounded-lg">
                             <div className="grid md:grid-cols-2 gap-12 items-center">
-                                <div className="relative h-64 md:h-122 rounded-lg overflow-hidden md:order-2">
+                                <div className="relative h-80 md:h-122 rounded-lg overflow-hidden md:order-2">
                                     <ImageCarousel
                                         images={[
                                             "pages/conditions-de-vie/pomsky-joue-avec-balle-plastique.webp",
@@ -191,7 +191,7 @@ export default function SejoursPage() {
                                         L'engagement de Royal Pomsky est : élever des chiens bien dans leurs pattes, sociables, équilibrés et prêts à s'épanouir pleinement au sein de leur future famille.
                                     </p>
                                 </div>
-                                <div className="relative h-64 md:h-122 rounded-lg overflow-hidden">
+                                <div className="relative h-80 md:h-122 rounded-lg overflow-hidden">
                                     <ImageCarousel
                                         images={[
                                             "pages/conditions-de-vie/sortie-encadree-avec-marine.webp",
@@ -209,7 +209,7 @@ export default function SejoursPage() {
                         {/* Alimentation */}
                         <section className="bg-muted/30 -mx-4 px-4 py-16 rounded-lg">
                             <div className="grid md:grid-cols-2 gap-12 items-center">
-                                <div className="relative h-64 md:h-80 rounded-lg overflow-hidden md:order-2">
+                                <div className="relative h-80 rounded-lg overflow-hidden md:order-2">
                                     <ImageCarousel
                                         images={[
                                             "pages/conditions-de-vie/pomsky-nurcery-veterinaire.webp",
