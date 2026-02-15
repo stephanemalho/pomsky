@@ -193,6 +193,7 @@ export default async function BlogArticlePage({
                             fill
                             className="object-cover"
                             sizes="80px"
+                            quality={80}
                         />
                     </div>
                     <div className="flex-1 text-center md:text-left">

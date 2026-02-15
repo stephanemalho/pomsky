@@ -100,7 +100,10 @@ export default function HomePage() {
                 fill
                 className="object-cover scale-105 transition-transform duration-2000 group-hover:scale-110"
                 priority
+                fetchPriority="high"
+                loading="eager"
                 sizes="100vw"
+                quality={70}
               />
               <div className="absolute inset-0 bg-linear-to-b from-black/70 via-black/45 to-black/75" aria-hidden="true" />
               <div className="absolute inset-0 opacity-60 [background:radial-gradient(900px_circle_at_center,rgba(255,255,255,0.08),transparent_55%)]" aria-hidden="true" />
@@ -127,8 +130,8 @@ export default function HomePage() {
                         alt="SUSHI pomsky gris et blanc avec un oeil bleu et un oeil marron"
                         fill
                         className="object-cover"
-                        priority
-                        sizes="(max-width: 768px) 100vw, 384px"
+                        sizes="(max-width: 640px) 85vw, 360px"
+                        quality={65}
                       />
                     </div>
                   </div>
@@ -194,8 +197,8 @@ export default function HomePage() {
                   alt="Mikky pomsky chiots levant les deux pattes avant"
                   fill
                   className="object-cover"
-                  priority
-                  sizes="(max-width: 768px) 100vw, 50vw"
+                  sizes="(max-width: 768px) 85vw, 50vw"
+                  quality={70}
                 />
               </div>
             </div>
@@ -257,6 +260,7 @@ export default function HomePage() {
                       fill
                       className="object-cover"
                       sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      quality={75}
                     />
                   </div>
 
@@ -322,6 +326,7 @@ export default function HomePage() {
                       fill
                       className="object-cover"
                       sizes="(max-width: 1024px) 100vw, 50vw"
+                      quality={70}
                     />
                   </div>
 

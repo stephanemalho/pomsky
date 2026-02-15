@@ -228,9 +228,8 @@ export default function PresentationEleveusesPage() {
                                                 fill
                                                 sizes="(min-width: 1024px) 560px, 100vw"
                                                 className="object-cover"
-                                                priority={index === 0}
-                                                loading={index === 0 ? "eager" : "lazy"}
-                                                fetchPriority={index === 0 ? "high" : "auto"}
+                                                loading="lazy"
+                                                fetchPriority="auto"
                                                 quality={70}
                                             />
                                         </div>

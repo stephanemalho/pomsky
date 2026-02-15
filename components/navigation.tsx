@@ -23,7 +23,7 @@ export function Navigation() {
                             fill
                             sizes="40px"
                             className="object-contain"
-                            priority
+                            quality={80}
                         />
                     </div>
                     <span className="text-xl font-bold text-primary">Royal POMSKY</span>
