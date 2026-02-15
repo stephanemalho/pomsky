@@ -8,6 +8,13 @@ import { Navigation } from "../components/navigation"
 import { Footer } from "../components/footer"
 import { siteConfig } from "@/lib/seo-config"
 import { generateOrganizationSchema, generateWebsiteSchema } from "@/lib/schema-generators"
+import { Questrial } from "next/font/google"
+
+const questrial = Questrial({
+  weight: ["400"],
+  subsets: ["latin"],
+  display: "swap",
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.siteUrl),
@@ -68,14 +75,6 @@ export default function RootLayout({
   return (
     <html lang="fr" suppressHydrationWarning>
       <head>
-        {/* Preconnect aux ressources externes */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Questrial:wght@400&display=swap"
-        />
-
         {/* Google Analytics will be injected by the client cookie consent manager */}
 
         {/* JSON-LD Schema Markup */}
@@ -88,7 +87,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
       </head>
-      <body>
+      <body className={questrial.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <div className="min-h-screen bg-background flex flex-col">
             <Navigation />
