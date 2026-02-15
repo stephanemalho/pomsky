@@ -92,8 +92,8 @@ export default function HomePage() {
         <section className="bg-accent-foreground">
           {/* Hero Section */}
           <div className="relative h-auto md:h-[90vh] flex items-center justify-center overflow-hidden group">
-            {/* Image de fond */}
-            <div className="absolute inset-0 z-0 m-auto">
+            {/* Image de fond (desktop only) */}
+            <div className="absolute inset-0 z-0 m-auto hidden md:block">
               <Image
                 src="/cute-pomsky-looking-us.webp"
                 alt="Un chiot pomsky regarde tendrement l'objectif pour nous acceuillir"
@@ -108,6 +108,11 @@ export default function HomePage() {
               <div className="absolute inset-0 bg-linear-to-b from-black/70 via-black/45 to-black/75" aria-hidden="true" />
               <div className="absolute inset-0 opacity-60 [background:radial-gradient(900px_circle_at_center,rgba(255,255,255,0.08),transparent_55%)]" aria-hidden="true" />
             </div>
+            {/* Fallback background (mobile) */}
+            <div
+              className="absolute inset-0 z-0 md:hidden bg-linear-to-b from-[#4a2f1a] via-[#24160b] to-black"
+              aria-hidden="true"
+            />
             <div className="relative z-10 text-center space-y-8 px-6 max-w-3xl py-10 mx-auto rounded-2xl border border-white/15 bg-black/35 backdrop-blur-md shadow-[0_30px_120px_rgba(0,0,0,0.55)]">
               <div className="mx-auto inline-flex items-center gap-3 rounded-full border border-white/20 bg-white/10 px-4 py-1 text-[11px] uppercase tracking-[0.35em] text-white/80">
                 Royal Pomsky
