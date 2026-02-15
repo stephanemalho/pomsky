@@ -154,12 +154,12 @@ export default function PresentationEleveusesPage() {
                                                 src={image.src}
                                                 alt={image.alt}
                                                 fill
-                                                sizes="(min-width: 1024px) 560px, 100vw"
+                                                sizes="(min-width: 1280px) 420px, (min-width: 1024px) 360px, (min-width: 768px) 45vw, 90vw"
                                                 className="object-cover"
                                                 priority={index === 0}
                                                 loading={index === 0 ? "eager" : "lazy"}
                                                 fetchPriority={index === 0 ? "high" : "auto"}
-                                                quality={70}
+                                                quality={60}
                                             />
                                         </div>
                                     ))}
@@ -226,11 +226,11 @@ export default function PresentationEleveusesPage() {
                                                 src={image.src}
                                                 alt={image.alt}
                                                 fill
-                                                sizes="(min-width: 1024px) 560px, 100vw"
+                                                sizes="(min-width: 1280px) 420px, (min-width: 1024px) 360px, (min-width: 768px) 45vw, 90vw"
                                                 className="object-cover"
                                                 loading="lazy"
                                                 fetchPriority="auto"
-                                                quality={70}
+                                                quality={60}
                                             />
                                         </div>
                                     ))}
