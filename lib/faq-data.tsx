@@ -216,7 +216,7 @@ export const faqEleveuses: FAQItem[] = [
           Je peux percevoir d'une manière plus fine le chiot le plus adapté au contexte familial décrit.
         </p>
         <p>
-          Cela me permet de faire un double lien entre la problématique de l'humain, sa personnalité, et la résolution de la problématique à travers la relation avec l'animal, parfois cela représente aussi un chemin initiatique pour l'adoptant. Je suis alors là pour soutenir, cadrer, accompagner l'un et l'autre dans leur processus d'intégration et de vie commune.
+          Cela me permet de faire un pont entre la problématique de l'humain, sa personnalité, et la résolution de la problématique à travers la relation avec l'animal, parfois cela représente aussi un chemin initiatique pour l'adoptant. Je suis alors là pour soutenir, cadrer, accompagner l'un et l'autre dans leur processus d'intégration et de vie commune.
         </p>
       </div>
     ),
