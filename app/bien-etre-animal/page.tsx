@@ -67,7 +67,16 @@ export default function SejoursPage() {
                 <div className="container mx-auto">
                     <section className="text-center space-y-6 mb-16">
                         <div className="relative h-64 md:h-96 rounded-lg overflow-hidden">
-                            <Image src="/locaux.webp" alt="Image d'un des abris à Pomsky de Royal Pomsky" fill className="object-cover" />
+                            <Image
+                                src="/locaux.webp"
+                                alt="Image d'un des abris à Pomsky de Royal Pomsky"
+                                fill
+                                className="object-cover"
+                                priority
+                                fetchPriority="high"
+                                sizes="100vw"
+                                quality={75}
+                            />
                             <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
                                 <div className="text-white text-center space-y-4">
                                     <h1 className="text-xl md:text-3xl font-bold">{pageContent.wellness.h1}</h1>
@@ -123,6 +132,7 @@ export default function SejoursPage() {
                                             "pages/conditions-de-vie/salle-ambiante-pour-chiots.webp",
                                         ]}
                                         alt="Carrousel d'images montrant les cocons et espaces de repos des chiots Royal Pomsky"
+                                        sizes="(min-width: 1024px) 50vw, (min-width: 768px) 50vw, 100vw"
                                     />
                                 </div>
                             </div>
@@ -138,6 +148,7 @@ export default function SejoursPage() {
                                             "pages/conditions-de-vie/ensemble-de-jouets-pour-chiots.webp",
                                         ]}
                                         alt="Carrousel d'images montrant les jeux et activités de nos chiots"
+                                        sizes="(min-width: 1024px) 50vw, (min-width: 768px) 50vw, 100vw"
                                     />
                                 </div>
                                 <div className="space-y-6 md:order-1">
@@ -187,6 +198,7 @@ export default function SejoursPage() {
                                             "pages/conditions-de-vie/pomsky-adulte-joue-avec-marine.webp"
                                         ]}
                                         alt="Carrousel d'images de chiots et de Pomsky adultes jouant en plein air, sous encadrement"
+                                        sizes="(min-width: 1024px) 50vw, (min-width: 768px) 50vw, 100vw"
                                     />
                                 </div>
                             </div>
@@ -202,6 +214,7 @@ export default function SejoursPage() {
                                             "pages/conditions-de-vie/nourrite-des-chiots-marque.webp"
                                         ]}
                                         alt="Carrousel d'images de l'alimentation et les soins des chiots et des chiens adultes reproducteurs"
+                                        sizes="(min-width: 1024px) 50vw, (min-width: 768px) 50vw, 100vw"
                                     />
                                 </div>
                                 <div className="space-y-6 md:order-1">
@@ -239,6 +252,7 @@ export default function SejoursPage() {
                                             "pages/conditions-de-vie/pomsky-femmel-et-son-chiot-avec-marine.webp",
                                         ]}
                                         alt="Carrousel d'images des chiots avec leurs mamans et Marine l'éleveuse"
+                                        sizes="(min-width: 1024px) 50vw, (min-width: 768px) 50vw, 100vw"
                                     />
                                 </div>
                             </div>

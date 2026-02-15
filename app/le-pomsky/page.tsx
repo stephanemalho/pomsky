@@ -145,6 +145,9 @@ export default function dogPage() {
                                 fill
                                 className="object-cover"
                                 priority
+                                fetchPriority="high"
+                                sizes="(min-width: 768px) 50vw, 100vw"
+                                quality={75}
                             />
                             <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent" aria-hidden="true" />
                         </div>
@@ -176,6 +179,8 @@ export default function dogPage() {
                                                 alt={item.alt}
                                                 fill
                                                 className="object-contain"
+                                                sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                                                quality={75}
                                             />
                                         </div>
                                         <div className="flex items-center gap-2">
@@ -299,6 +304,8 @@ export default function dogPage() {
                                                 alt={generation.title}
                                                 fill
                                                 className="object-cover"
+                                                sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                                                quality={75}
                                             />
                                         </div>
                                     </CardContent>
@@ -353,6 +360,8 @@ export default function dogPage() {
                                             alt="Montage de plusieurs couleurs des yeux du Pomsky"
                                             fill
                                             className="object-contain"
+                                            sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                                            quality={75}
                                         />
                                     </div>
                                 </CardContent>
@@ -378,6 +387,8 @@ export default function dogPage() {
                                             alt="Pomsky couleur chocolat qui tire la langue"
                                             fill
                                             className="object-cover"
+                                            sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                                            quality={75}
                                         />
                                     </div>
                                 </CardContent>

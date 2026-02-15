@@ -151,6 +151,9 @@ export default async function BlogArticlePage({
                             fill
                             className="object-cover"
                             sizes="(min-width: 1024px) 70vw, 100vw"
+                            priority
+                            fetchPriority="high"
+                            quality={75}
                         />
                     </div>
                 </section>

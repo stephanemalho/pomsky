@@ -80,8 +80,13 @@ export default function NosChiotsPage() {
                             <Card key={puppy.name} className="overflow-hidden bg-muted/30">
                                 <CardContent className="p-0">
                                     <div className={`grid md:grid-cols-2 gap-0 ${index % 2 === 1 ? "md:grid-flow-col-dense" : ""}`}>
-                                        <div className={`relative minh-80 lg:min-h-120 ${index % 2 === 1 ? "md:order-2" : ""}`}>
-                                            <ImageCarousel images={puppy.images} alt={"Carrousel d'images du chiots pomsky " + puppy.name} />
+                                        <div className={`relative min-h-80 lg:min-h-120 ${index % 2 === 1 ? "md:order-2" : ""}`}>
+                                            <ImageCarousel
+                                                images={puppy.images}
+                                                alt={"Carrousel d'images du chiots pomsky " + puppy.name}
+                                                priority={index === 0}
+                                                sizes="(min-width: 1024px) 50vw, (min-width: 768px) 50vw, 100vw"
+                                            />
                                         </div>
                                         <div className={`p-8 space-y-4 flex flex-col justify-center ${index % 2 === 1 ? "md:order-1" : ""}`}>
                                             <div className="flex items-center gap-2">

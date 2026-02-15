@@ -157,8 +157,9 @@ export default function PresentationEleveusesPage() {
                                                 sizes="(min-width: 1024px) 560px, 100vw"
                                                 className="object-cover"
                                                 priority={index === 0}
-                                                loading={index < 2 ? "eager" : "lazy"}
-                                                fetchPriority={index < 5 ? "high" : "auto"}
+                                                loading={index === 0 ? "eager" : "lazy"}
+                                                fetchPriority={index === 0 ? "high" : "auto"}
+                                                quality={70}
                                             />
                                         </div>
                                     ))}
@@ -228,8 +229,9 @@ export default function PresentationEleveusesPage() {
                                                 sizes="(min-width: 1024px) 560px, 100vw"
                                                 className="object-cover"
                                                 priority={index === 0}
-                                                loading={index < 2 ? "eager" : "lazy"}
-                                                fetchPriority={index < 5 ? "high" : "auto"}
+                                                loading={index === 0 ? "eager" : "lazy"}
+                                                fetchPriority={index === 0 ? "high" : "auto"}
+                                                quality={70}
                                             />
                                         </div>
                                     ))}
@@ -302,6 +304,7 @@ export default function PresentationEleveusesPage() {
                                                     fill
                                                     sizes="(min-width: 1024px) 360px, 100vw"
                                                     className="object-cover"
+                                                    quality={75}
                                                 />
                                             </div>
                                         </div>

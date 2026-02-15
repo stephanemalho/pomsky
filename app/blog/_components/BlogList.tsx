@@ -87,7 +87,7 @@ export default function BlogList({ base, theme }: BlogListProps) {
                     <p className="text-sm text-muted-foreground">{filterLabels.noResults}</p>
                 ) : (
                     <div className="grid gap-10">
-                        {visiblePosts.map((post) => (
+                        {visiblePosts.map((post, index) => (
                             <article
                                 key={post.id}
                                 className="grid gap-6 md:grid-cols-[1.1fr_1.5fr] items-start border-b border-border/70 pb-10"
@@ -100,6 +100,9 @@ export default function BlogList({ base, theme }: BlogListProps) {
                                             fill
                                             className="object-cover"
                                             sizes="(min-width: 768px) 40vw, 100vw"
+                                            priority={index === 0}
+                                            fetchPriority={index === 0 ? "high" : "auto"}
+                                            quality={75}
                                         />
                                     </div>
                                 ) : (
@@ -148,4 +151,3 @@ export default function BlogList({ base, theme }: BlogListProps) {
         </div>
     );
 }
-

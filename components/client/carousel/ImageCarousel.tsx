@@ -7,12 +7,15 @@ type ImageCarouselProps = {
     images: string[]
     alt: string
     priority?: boolean
+    sizes?: string
+    quality?: number
 }
 
-function ImageCarousel({ images, alt, priority = false }: ImageCarouselProps) {
+function ImageCarousel({ images, alt, priority = false, sizes, quality = 70 }: ImageCarouselProps) {
     const [index, setIndex] = useState(0)
     const total = images.length
     const isOneImage = total === 1
+    const resolvedSizes = sizes ?? "(min-width: 1024px) 50vw, (min-width: 768px) 50vw, 100vw"
 
     const prev = () => setIndex((i) => (i - 1 + total) % total)
     const next = () => setIndex((i) => (i + 1) % total)
@@ -24,9 +27,11 @@ function ImageCarousel({ images, alt, priority = false }: ImageCarouselProps) {
                 alt={`${alt} - photo ${index + 1}`}
                 fill
                 className="object-cover transition duration-300 p-2"
-                sizes="(min-width: 768px) 50vw, 100vw"
-                priority={priority}     
+                sizes={resolvedSizes}
+                priority={priority}
+                fetchPriority={priority ? "high" : "auto"}
                 loading={priority ? "eager" : "lazy"}
+                quality={quality}
             />
             <div className="absolute inset-0 bg-linear-to-t from-black/40 via-transparent to-transparent" />
             <div className="absolute top-3 right-3 text-xs px-3 py-1 rounded-full bg-black/60 text-white">
