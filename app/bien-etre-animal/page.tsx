@@ -74,8 +74,8 @@ export default function SejoursPage() {
                                 className="object-cover"
                                 priority
                                 fetchPriority="high"
-                                sizes="100vw"
-                                quality={75}
+                                sizes="(max-width: 768px) 100vw, 70vw"
+                                quality={60}
                             />
                             <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
                                 <div className="text-white text-center space-y-4">
@@ -132,7 +132,8 @@ export default function SejoursPage() {
                                             "pages/conditions-de-vie/salle-ambiante-pour-chiots.webp",
                                         ]}
                                         alt="Carrousel d'images montrant les cocons et espaces de repos des chiots Royal Pomsky"
-                                        sizes="(min-width: 1024px) 50vw, (min-width: 768px) 50vw, 100vw"
+                                        sizes="(max-width: 768px) 90vw, (max-width: 1024px) 50vw, 45vw"
+                                        quality={60}
                                     />
                                 </div>
                             </div>
@@ -148,7 +149,8 @@ export default function SejoursPage() {
                                             "pages/conditions-de-vie/ensemble-de-jouets-pour-chiots.webp",
                                         ]}
                                         alt="Carrousel d'images montrant les jeux et activités de nos chiots"
-                                        sizes="(min-width: 1024px) 50vw, (min-width: 768px) 50vw, 100vw"
+                                        sizes="(max-width: 768px) 90vw, (max-width: 1024px) 50vw, 45vw"
+                                        quality={60}
                                     />
                                 </div>
                                 <div className="space-y-6 md:order-1">
@@ -198,7 +200,8 @@ export default function SejoursPage() {
                                             "pages/conditions-de-vie/pomsky-adulte-joue-avec-marine.webp"
                                         ]}
                                         alt="Carrousel d'images de chiots et de Pomsky adultes jouant en plein air, sous encadrement"
-                                        sizes="(min-width: 1024px) 50vw, (min-width: 768px) 50vw, 100vw"
+                                        sizes="(max-width: 768px) 90vw, (max-width: 1024px) 50vw, 45vw"
+                                        quality={60}
                                     />
                                 </div>
                             </div>
@@ -214,7 +217,8 @@ export default function SejoursPage() {
                                             "pages/conditions-de-vie/nourrite-des-chiots-marque.webp"
                                         ]}
                                         alt="Carrousel d'images de l'alimentation et les soins des chiots et des chiens adultes reproducteurs"
-                                        sizes="(min-width: 1024px) 50vw, (min-width: 768px) 50vw, 100vw"
+                                        sizes="(max-width: 768px) 90vw, (max-width: 1024px) 50vw, 45vw"
+                                        quality={60}
                                     />
                                 </div>
                                 <div className="space-y-6 md:order-1">
@@ -252,7 +256,8 @@ export default function SejoursPage() {
                                             "pages/conditions-de-vie/pomsky-femmel-et-son-chiot-avec-marine.webp",
                                         ]}
                                         alt="Carrousel d'images des chiots avec leurs mamans et Marine l'éleveuse"
-                                        sizes="(min-width: 1024px) 50vw, (min-width: 768px) 50vw, 100vw"
+                                        sizes="(max-width: 768px) 90vw, (max-width: 1024px) 50vw, 45vw"
+                                        quality={60}
                                     />
                                 </div>
                             </div>

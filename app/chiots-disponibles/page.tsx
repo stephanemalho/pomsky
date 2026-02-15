@@ -97,7 +97,7 @@ export default function NosChiotsPage() {
                                                 <Badge variant="outline">{puppy.color}</Badge>
                                             </div>
                                             <div className="space-y-2">
-                                                <h3 className="text-2xl font-bold">{puppy.name}</h3>
+                                                <h2 className="text-2xl font-bold">{puppy.name}</h2>
                                                 <p className="text-muted-foreground">{puppy.description}</p>
                                             </div>
                                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
@@ -130,7 +130,7 @@ export default function NosChiotsPage() {
                                                 ))}
                                             </div>
                                             <div className="flex flex-col sm:flex-row gap-3 mt-2">
-                                                <Link className="bg-primary text-primary-foreground shadow-xs hover:bg-primary/90 py-2 px-4 rounded-md" href="/contact">Réserver une visite ou demander plus de photos</Link>
+                                                <a target="_blank" className="bg-primary text-primary-foreground shadow-xs hover:bg-primary/90 py-2 px-4 rounded-md" href={puppy.linkTo}>Réserver une visite ou demander plus de photos/vidéos</a>
                                             </div>
                                         </div>
                                     </div>

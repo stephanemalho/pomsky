@@ -13,6 +13,7 @@ export type Puppy = {
     health?: string[];
     highlights: string[];
     images: string[];
+    linkTo: string;
 };
 
 export const puppies: Puppy[] = [
@@ -42,7 +43,8 @@ export const puppies: Puppy[] = [
             "pages/puppies/ALUNA-puppy-black-white-0.webp",
             "pages/puppies/ALUNA-puppy-black-white-1.webp",
             "pages/puppies/ALUNA-puppy-black-white-2.webp"
-        ]
+        ],
+        linkTo: "https://forms.gle/aDbQtgwXUtoaH5QFA"
     },
     {
         name: "ROYAL POMSKY 'THOR'",
@@ -69,7 +71,8 @@ export const puppies: Puppy[] = [
             "pages/puppies/THOR-male-pomsly-puppy-gray-white-0.webp",
             "pages/puppies/THOR-male-pomsly-puppy-gray-white-1.webp",
             "pages/puppies/THOR-male-pomsly-puppy-gray-white-2.webp"
-        ]
+        ],
+        linkTo: " https://forms.gle/oQT8xEvuTFgm753TA"
     },
     {
         name: "ROYAL POMSKY 'VUK'",
@@ -96,7 +99,8 @@ export const puppies: Puppy[] = [
             "pages/puppies/VUK-pomsky-eyes-open.webp",
             "pages/puppies/VUK-puppy-black-white-0.webp",
             "pages/puppies/VUK-puppy-black-white-1.webp"
-        ]
+        ],
+        linkTo: "https://forms.gle/PCvEkzSfpdWTXt8A9"
     },
     {
         name: "ROYAL POMSKY 'ASH'",
@@ -125,6 +129,7 @@ export const puppies: Puppy[] = [
             "pages/puppies/ASH-femmelle-pomsky-puppy-black-white-2.webp",
             "pages/puppies/ASH-femmelle-pomsky-puppy-black-white-0.webp",
             "pages/puppies/ASH-femmelle-pomsky-puppy-black-white-1.webp"
-        ]
+        ],
+        linkTo: "https://forms.gle/wtcxuo84YEQzposV9"
     }
 ];
