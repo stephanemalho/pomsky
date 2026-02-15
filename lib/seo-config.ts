@@ -396,7 +396,7 @@ export const sitemapPages = [
         url: "/presentation-eleveuses",
         changefreq: "monthly",
         priority: 0.7,
-        lastmod: "2026-02-13"
+        lastmod: "2026-02-15"
     },
     {
         url: "/bien-etre-animal",
