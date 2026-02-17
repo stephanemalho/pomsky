@@ -136,6 +136,8 @@ export default function HomePage() {
                         fill
                         className="object-cover"
                         sizes="(max-width: 640px) 85vw, 360px"
+                        priority
+                        fetchPriority="high"
                         quality={65}
                       />
                     </div>
