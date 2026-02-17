@@ -74,6 +74,44 @@ export default function NosChiotsPage() {
                         </p>
                         <div className="w-24 h-1 bg-primary mx-auto rounded-full" aria-hidden="true" />
                     </section>
+
+                    <section className="max-w-4xl mx-auto bg-muted/30 border border-muted rounded-2xl p-8 md:p-10 space-y-6 text-left">
+                        <div className="flex items-start gap-3">
+                            <Sprout className="h-6 w-6 text-2xl text-primary" />
+                            <div>
+                                <h2
+                                    className="text-xl md:text-2xl font-semibold leading-tight">Ces perles rares prennent le temps de naître</h2>
+                                <p className="text-muted-foreground mt-2">
+                                    Chez Royal POMSKY, nous croyons que les plus belles portées ne se précipitent pas.
+                                </p>
+                            </div>
+                        </div>
+                        <p className="text-muted-foreground">
+                            Nos chiots sont élevés comme de véritables perles : rares, précieuses, uniques, révélées au bon moment.
+                        </p>
+                        <p className="text-muted-foreground">
+                            Chaque future portée est pensée avec soin :
+                        </p>
+                        <div className="grid gap-3">
+                            {[
+                                "sélection rigoureuse des lignées,",
+                                "suivi vétérinaire attentif,",
+                                "respect du rythme naturel de nos reproducteurs,",
+                                "accompagnement des familles avant, pendant et après l'adoption.",
+                            ].map((item) => (
+                                <div key={item} className="flex gap-4 items-center">
+                                    <div className="rounded-full bg-primary/10 p-2 text-primary">
+                                        <Sprout className="h-4 w-4" />
+                                    </div>
+                                    <p className="text-muted-foreground">{item}</p>
+                                </div>
+                            ))}
+                        </div>
+                        <Link
+                            href="/bien-etre-animal"
+                            className="flex items-center bg-primary justify-center text-white hover:bg-primary/80 p-4 font-semibold dark:text-[#5b3a1a] rounded-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                        >Voir les conditions de vie des chiots</Link>
+                    </section>
                     {/* <NoAvailable /> */}
                     <div className="grid gap-10 my-12">
                         {puppies.map((puppy, index) => (
@@ -189,45 +227,6 @@ export default function NosChiotsPage() {
                             Rejoindre la liste d&apos;attente
                         </Link>
                     </section>
-
-                    <section className="max-w-4xl mx-auto bg-muted/30 border border-muted rounded-2xl p-8 md:p-10 space-y-6 text-left">
-                        <div className="flex items-start gap-3">
-                            <Sprout className="h-6 w-6 text-2xl text-primary" />
-                            <div>
-                                <h2
-                                    className="text-xl md:text-2xl font-semibold leading-tight">Ces perles rares prennent le temps de naître</h2>
-                                <p className="text-muted-foreground mt-2">
-                                    Chez Royal POMSKY, nous croyons que les plus belles portées ne se précipitent pas.
-                                </p>
-                            </div>
-                        </div>
-                        <p className="text-muted-foreground">
-                            Nos chiots sont élevés comme de véritables perles : rares, précieuses, uniques, révélées au bon moment.
-                        </p>
-                        <p className="text-muted-foreground">
-                            Chaque future portée est pensée avec soin :
-                        </p>
-                        <div className="grid gap-3">
-                            {[
-                                "sélection rigoureuse des lignées,",
-                                "suivi vétérinaire attentif,",
-                                "respect du rythme naturel de nos reproducteurs,",
-                                "accompagnement des familles avant, pendant et après l'adoption.",
-                            ].map((item) => (
-                                <div key={item} className="flex gap-4 items-center">
-                                    <div className="rounded-full bg-primary/10 p-2 text-primary">
-                                        <Sprout className="h-4 w-4" />
-                                    </div>
-                                    <p className="text-muted-foreground">{item}</p>
-                                </div>
-                            ))}
-                        </div>
-                        <Link
-                            href="/bien-etre-animal"
-                            className="flex items-center bg-primary justify-center text-white hover:bg-primary/80 p-4 font-semibold dark:text-[#5b3a1a] rounded-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-                        >Voir les conditions de vie des chiots</Link>
-                    </section>
-
                     <FAQSection
                         title="FAQ adoption et vie avec un pomsky"
                         description="Le caractère, l'éducation, la cohabitation et les besoins quotidiens des pomsky."

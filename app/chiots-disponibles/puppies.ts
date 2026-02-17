@@ -39,7 +39,6 @@ export const puppies: Puppy[] = [
         health: ["Suivi vétérinaire en cours"],
         images: [
             "pages/puppies/ALUNA-puppy-eyes-open.webp",
-            "pages/puppies/ALUNA-puppy-pomsky-portrait.webp",
             "pages/puppies/ALUNA-puppy-black-white-0.webp",
             "pages/puppies/ALUNA-puppy-black-white-1.webp",
             "pages/puppies/ALUNA-puppy-black-white-2.webp"
