@@ -81,7 +81,7 @@ export default function NosChiotsPage() {
                             <Card key={puppy.name} className="overflow-hidden bg-muted/30">
                                 <CardContent className="p-0">
                                     <div className={`grid md:grid-cols-2 gap-0 ${index % 2 === 1 ? "md:grid-flow-col-dense" : ""}`}>
-                                        <div className={`relative min-h-80 min-w-0 ${index % 2 === 1 ? "md:order-2" : ""}`}>
+                                        <div className={`relative w-full aspect-4/3 ${index % 2 === 1 ? "md:order-2" : ""}`}>
                                             <ImageCarousel
                                                 images={puppy.images}
                                                 alt={"Carrousel d'images du Pomsky reproducteur " + puppy.name}

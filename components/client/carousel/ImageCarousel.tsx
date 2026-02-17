@@ -21,7 +21,7 @@ function ImageCarousel({ images, alt, priority = false, sizes, quality = 70 }: I
     const next = () => setIndex((i) => (i + 1) % total)
 
     return (
-        <div className="relative h-72 md:h-full overflow-hidden rounded-lg bg-amber-950 mx-4">
+        <div className="relative h-full w-full overflow-hidden rounded-lg bg-amber-950">
             <Image
                 src={`/${images[index]}`}
                 alt={`${alt} - photo ${index + 1}`}

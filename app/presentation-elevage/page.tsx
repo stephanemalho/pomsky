@@ -216,7 +216,7 @@ export default function PresentationPage() {
                                 Notre expérience est désormais devenue une expertise complète de cette merveilleuse race en devenir.
                             </p>
                             <p className="text-muted-foreground leading-relaxed">
-                                Nous avons sélectionné nos reproducteurs Pomsky au sein même du berceau de la race, pour vous apporter les meilleures lignées de Pomsky qui existent au monde. Nos adultes sont nés au quatre coins des Etats Unis d'Amérique : d'est en ouest, de New York à Seattle, en passant par la Californie et en revenant par la Floride. Ils ont débarqué en France pour faire partie de notre programme d'élevage canin, afin que nous puissions vous proposer les meilleures lignées de pomsky, parce nous visons l'excellence pour notre programme d'élevage ainsi que pour le devenir de la race.
+                                Nous avons sélectionné nos reproducteurs Pomsky au sein même du berceau de la race, pour vous apporter les meilleures lignées de Pomsky qui existent au monde. Nos adultes sont nés au quatre coins des Etats Unis d'Amérique : d'est en ouest, de New York à Seattle, en passant par la Californie et en revenant par la Floride. Ils ont débarqué en France pour faire partie de notre programme d'élevage canin, afin que nous puissions vous proposer les meilleures lignées de pomsky, parce nous visons l'excellence pour notre programme d'élevage ainsi que pour le devenir de la race.
 
 
                             </p>

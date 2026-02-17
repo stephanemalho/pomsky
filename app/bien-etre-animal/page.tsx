@@ -114,17 +114,17 @@ export default function SejoursPage() {
                                         Nursery intérieure
                                     </Badge>
                                     <h3 className="text-xl md:text-2xl font-bold">Un cocon dès la naissance</h3>
-                                     <p className="text-muted-foreground leading-relaxed">
+                                    <p className="text-muted-foreground leading-relaxed">
                                         La nursery intérieure est pensée comme un véritable cocon, calme et sécurisé, où chaque chiot peut évoluer dans les meilleures conditions dès ses premières heures de vie. La température, l'hygiène et l'ambiance sonore sont maîtrisées afin de limiter le stress et de favoriser un développement harmonieux, aussi bien physique qu'émotionnel.
                                     </p>
                                     <p className="text-muted-foreground leading-relaxed">
                                         Les chiots naissent dans une salle de mise bas : une pièce tempérée, sous surveillance et avec une présence humaine continue. Nous assurons un suivi vétérinaire rapproché et des pesées quotidiennes.
                                     </p>
-                                     <p className="text-muted-foreground leading-relaxed">
-                                        Cette présence humaine quotidienne permet aux chiots de s'habituer très tôt aux manipulations douces, aux odeurs et aux bruits du quotidien. Cette phase essentielle pose les bases d'un chiot confiant, serein et réceptif, facilitant les apprentissages futurs et la transition vers sa nouvelle famille. 
+                                    <p className="text-muted-foreground leading-relaxed">
+                                        Cette présence humaine quotidienne permet aux chiots de s'habituer très tôt aux manipulations douces, aux odeurs et aux bruits du quotidien. Cette phase essentielle pose les bases d'un chiot confiant, serein et réceptif, facilitant les apprentissages futurs et la transition vers sa nouvelle famille.
                                     </p>
                                 </div>
-                                <div className="relative h-80 md:h-122 rounded-lg overflow-hidden">
+                                <div className="relative w-full aspect-4/3 rounded-lg overflow-hidden">
                                     <ImageCarousel
                                         images={[
                                             "pages/conditions-de-vie/cocom-pour-chiots-pomsky.webp",
@@ -141,7 +141,7 @@ export default function SejoursPage() {
                         {/* Espaces Intérieurs */}
                         <section className="bg-muted/30 -mx-4 px-4 py-16 rounded-lg">
                             <div className="grid md:grid-cols-2 gap-12 items-center">
-                                <div className="relative h-80 md:h-122 rounded-lg overflow-hidden md:order-2">
+                                <div className="relative w-full aspect-4/3 rounded-lg overflow-hidden md:order-2">
                                     <ImageCarousel
                                         images={[
                                             "pages/conditions-de-vie/pomsky-joue-avec-balle-plastique.webp",
@@ -191,7 +191,7 @@ export default function SejoursPage() {
                                         L'engagement de Royal Pomsky est : élever des chiens bien dans leurs pattes, sociables, équilibrés et prêts à s'épanouir pleinement au sein de leur future famille.
                                     </p>
                                 </div>
-                                <div className="relative h-80 md:h-122 rounded-lg overflow-hidden">
+                                <div className="relative w-full aspect-4/3 rounded-lg overflow-hidden">
                                     <ImageCarousel
                                         images={[
                                             "pages/conditions-de-vie/sortie-encadree-avec-marine.webp",
@@ -209,7 +209,7 @@ export default function SejoursPage() {
                         {/* Alimentation */}
                         <section className="bg-muted/30 -mx-4 px-4 py-16 rounded-lg">
                             <div className="grid md:grid-cols-2 gap-12 items-center">
-                                <div className="relative h-80 rounded-lg overflow-hidden md:order-2">
+                                <div className="relative w-full aspect-4/3 rounded-lg overflow-hidden md:order-2">
                                     <ImageCarousel
                                         images={[
                                             "pages/conditions-de-vie/pomsky-nurcery-veterinaire.webp",
@@ -249,7 +249,7 @@ export default function SejoursPage() {
                                         Espaces de repos individuels pour faciliter l&apos;apprentissage du calme et la gestion douce des séparations.
                                     </p>
                                 </div>
-                                <div className="relative h-104 md:h-180 rounded-lg overflow-hidden">
+                                <div className="relative w-full aspect-4/3 rounded-lg overflow-hidden">
                                     <ImageCarousel
                                         images={[
                                             "pages/conditions-de-vie/la-maman-et-son-chiot-avec-marine.webp",
