@@ -9,19 +9,36 @@ type ImageCarouselProps = {
     priority?: boolean
     sizes?: string
     quality?: number
+    className?: string
+    ratioClassName?: string
 }
 
-function ImageCarousel({ images, alt, priority = false, sizes, quality = 70 }: ImageCarouselProps) {
+function ImageCarousel({
+    images,
+    alt,
+    priority = false,
+    sizes,
+    quality = 70,
+    className,
+    ratioClassName,
+}: ImageCarouselProps) {
     const [index, setIndex] = useState(0)
     const total = images.length
     const isOneImage = total === 1
     const resolvedSizes = sizes ?? "(min-width: 1024px) 50vw, (min-width: 768px) 50vw, 100vw"
+    const containerClassName = [
+        "relative w-full overflow-hidden rounded-lg bg-amber-950",
+        ratioClassName ?? "aspect-4/3",
+        className,
+    ]
+        .filter(Boolean)
+        .join(" ")
 
     const prev = () => setIndex((i) => (i - 1 + total) % total)
     const next = () => setIndex((i) => (i + 1) % total)
 
     return (
-        <div className="relative h-full w-full overflow-hidden rounded-lg bg-amber-950">
+        <div className={containerClassName}>
             <Image
                 src={`/${images[index]}`}
                 alt={`${alt} - photo ${index + 1}`}

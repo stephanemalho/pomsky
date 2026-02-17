@@ -81,14 +81,13 @@ export default function NosChiotsPage() {
                             <Card key={puppy.name} className="overflow-hidden bg-muted/30">
                                 <CardContent className="p-0">
                                     <div className={`grid md:grid-cols-2 gap-0 ${index % 2 === 1 ? "md:grid-flow-col-dense" : ""}`}>
-                                        <div className={`relative w-full aspect-4/3 ${index % 2 === 1 ? "md:order-2" : ""}`}>
-                                            <ImageCarousel
-                                                images={puppy.images}
-                                                alt={"Carrousel d'images du Pomsky reproducteur " + puppy.name}
-                                                priority={index === 0}
-                                                sizes="(min-width: 1024px) 50vw, (min-width: 768px) 50vw, 100vw"
-                                            />
-                                        </div>
+                                        <ImageCarousel
+                                            className={index % 2 === 1 ? "md:order-2" : undefined}
+                                            images={puppy.images}
+                                            alt={"Carrousel d'images du Pomsky reproducteur " + puppy.name}
+                                            priority={index === 0}
+                                            sizes="(min-width: 1024px) 50vw, (min-width: 768px) 50vw, 100vw"
+                                        />
                                         <div className={`p-8 space-y-4 flex flex-col justify-center min-w-0 ${index % 2 === 1 ? "md:order-1" : ""}`}>
                                             <div className="flex items-center gap-2">
                                                 <Badge variant="secondary">

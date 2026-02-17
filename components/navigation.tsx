@@ -6,7 +6,7 @@ import { DesktopNav } from "./desktop-nav"
 
 export function Navigation() {
     return (
-        <header className="flex h-16 items-center justify-between sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60">
+        <header className="flex items-center justify-between sticky top-0 z-50 w-full border-b h-16 min-h-16 max-h-16 bg-background/95 lg:backdrop-blur lg:supports-backdrop-filter:bg-background/60">
             {/* Skip to main content link */}
             <div className="container flex h-16 items-center justify-between mx-auto px-4">
                 <a
@@ -20,13 +20,15 @@ export function Navigation() {
                         <Image
                             src="/logo-royal-pomsky-black.webp"
                             alt="logo Royal POMSKY - Elevage de pomsky"
-                            fill
+                            width={40}
+                            height={40}
                             sizes="40px"
                             className="object-contain"
                             quality={80}
+                            priority
                         />
                     </div>
-                    <span className="text-xl font-bold text-primary">Royal POMSKY</span>
+                    <span className="text-xl leading-none font-bold text-primary">Royal POMSKY</span>
                 </Link>
 
                 {/* Desktop Navigation */}

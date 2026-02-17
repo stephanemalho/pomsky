@@ -124,35 +124,32 @@ export default function SejoursPage() {
                                         Cette présence humaine quotidienne permet aux chiots de s'habituer très tôt aux manipulations douces, aux odeurs et aux bruits du quotidien. Cette phase essentielle pose les bases d'un chiot confiant, serein et réceptif, facilitant les apprentissages futurs et la transition vers sa nouvelle famille.
                                     </p>
                                 </div>
-                                <div className="relative w-full aspect-4/3 rounded-lg overflow-hidden">
-                                    <ImageCarousel
-                                        images={[
-                                            "pages/conditions-de-vie/cocom-pour-chiots-pomsky.webp",
-                                            "pages/conditions-de-vie/bebe-chiots-lit-douillet.webp",
-                                            "pages/conditions-de-vie/salle-ambiante-pour-chiots.webp",
-                                        ]}
-                                        alt="Carrousel d'images montrant les cocons et espaces de repos des chiots Royal Pomsky"
-                                        sizes="(max-width: 768px) 90vw, (max-width: 1024px) 50vw, 45vw"
-                                        quality={60}
-                                    />
-                                </div>
+                                <ImageCarousel
+                                    images={[
+                                        "pages/conditions-de-vie/cocom-pour-chiots-pomsky.webp",
+                                        "pages/conditions-de-vie/bebe-chiots-lit-douillet.webp",
+                                        "pages/conditions-de-vie/salle-ambiante-pour-chiots.webp",
+                                    ]}
+                                    alt="Carrousel d'images montrant les cocons et espaces de repos des chiots Royal Pomsky"
+                                    sizes="(max-width: 768px) 90vw, (max-width: 1024px) 50vw, 45vw"
+                                    quality={60}
+                                />
                             </div>
                         </section>
                         {/* Espaces Intérieurs */}
                         <section className="bg-muted/30 -mx-4 px-4 py-16 rounded-lg">
                             <div className="grid md:grid-cols-2 gap-12 items-center">
-                                <div className="relative w-full aspect-4/3 rounded-lg overflow-hidden md:order-2">
-                                    <ImageCarousel
-                                        images={[
-                                            "pages/conditions-de-vie/pomsky-joue-avec-balle-plastique.webp",
-                                            "pages/conditions-de-vie/chiots-jouent-dans-bac-a-boules.webp",
-                                            "pages/conditions-de-vie/ensemble-de-jouets-pour-chiots.webp",
-                                        ]}
-                                        alt="Carrousel d'images montrant les jeux et activités de nos chiots"
-                                        sizes="(max-width: 768px) 90vw, (max-width: 1024px) 50vw, 45vw"
-                                        quality={60}
-                                    />
-                                </div>
+                                <ImageCarousel
+                                    className="md:order-2"
+                                    images={[
+                                        "pages/conditions-de-vie/pomsky-joue-avec-balle-plastique.webp",
+                                        "pages/conditions-de-vie/chiots-jouent-dans-bac-a-boules.webp",
+                                        "pages/conditions-de-vie/ensemble-de-jouets-pour-chiots.webp",
+                                    ]}
+                                    alt="Carrousel d'images montrant les jeux et activités de nos chiots"
+                                    sizes="(max-width: 768px) 90vw, (max-width: 1024px) 50vw, 45vw"
+                                    quality={60}
+                                />
                                 <div className="space-y-6 md:order-1">
                                     <Badge variant="secondary" className="w-fit">
                                         <Spa className="h-4 w-4 mr-2" />
@@ -191,36 +188,33 @@ export default function SejoursPage() {
                                         L'engagement de Royal Pomsky est : élever des chiens bien dans leurs pattes, sociables, équilibrés et prêts à s'épanouir pleinement au sein de leur future famille.
                                     </p>
                                 </div>
-                                <div className="relative w-full aspect-4/3 rounded-lg overflow-hidden">
-                                    <ImageCarousel
-                                        images={[
-                                            "pages/conditions-de-vie/sortie-encadree-avec-marine.webp",
-                                            "pages/conditions-de-vie/marine-joue-avec-les-chiots.webp",
-                                            "pages/conditions-de-vie/sortie-avec-les-pomsky-adultes.webp",
-                                            "pages/conditions-de-vie/pomsky-adulte-joue-avec-marine.webp"
-                                        ]}
-                                        alt="Carrousel d'images de chiots et de Pomsky adultes jouant en plein air, sous encadrement"
-                                        sizes="(max-width: 768px) 90vw, (max-width: 1024px) 50vw, 45vw"
-                                        quality={60}
-                                    />
-                                </div>
+                                <ImageCarousel
+                                    images={[
+                                        "pages/conditions-de-vie/sortie-encadree-avec-marine.webp",
+                                        "pages/conditions-de-vie/marine-joue-avec-les-chiots.webp",
+                                        "pages/conditions-de-vie/sortie-avec-les-pomsky-adultes.webp",
+                                        "pages/conditions-de-vie/pomsky-adulte-joue-avec-marine.webp"
+                                    ]}
+                                    alt="Carrousel d'images de chiots et de Pomsky adultes jouant en plein air, sous encadrement"
+                                    sizes="(max-width: 768px) 90vw, (max-width: 1024px) 50vw, 45vw"
+                                    quality={60}
+                                />
                             </div>
                         </section>
                         {/* Alimentation */}
                         <section className="bg-muted/30 -mx-4 px-4 py-16 rounded-lg">
                             <div className="grid md:grid-cols-2 gap-12 items-center">
-                                <div className="relative w-full aspect-4/3 rounded-lg overflow-hidden md:order-2">
-                                    <ImageCarousel
-                                        images={[
-                                            "pages/conditions-de-vie/pomsky-nurcery-veterinaire.webp",
-                                            "pages/conditions-de-vie/nourriture-des-pomsky.webp",
-                                            "pages/conditions-de-vie/nourrite-des-chiots-marque.webp"
-                                        ]}
-                                        alt="Carrousel d'images de l'alimentation et les soins des chiots et des chiens adultes reproducteurs"
-                                        sizes="(max-width: 768px) 90vw, (max-width: 1024px) 50vw, 45vw"
-                                        quality={60}
-                                    />
-                                </div>
+                                <ImageCarousel
+                                    className="md:order-2"
+                                    images={[
+                                        "pages/conditions-de-vie/pomsky-nurcery-veterinaire.webp",
+                                        "pages/conditions-de-vie/nourriture-des-pomsky.webp",
+                                        "pages/conditions-de-vie/nourrite-des-chiots-marque.webp"
+                                    ]}
+                                    alt="Carrousel d'images de l'alimentation et les soins des chiots et des chiens adultes reproducteurs"
+                                    sizes="(max-width: 768px) 90vw, (max-width: 1024px) 50vw, 45vw"
+                                    quality={60}
+                                />
                                 <div className="space-y-6 md:order-1">
                                     <Badge variant="secondary" className="w-fit">
                                         <Utensils className="h-4 w-4 mr-2" />
@@ -249,17 +243,15 @@ export default function SejoursPage() {
                                         Espaces de repos individuels pour faciliter l&apos;apprentissage du calme et la gestion douce des séparations.
                                     </p>
                                 </div>
-                                <div className="relative w-full aspect-4/3 rounded-lg overflow-hidden">
-                                    <ImageCarousel
-                                        images={[
-                                            "pages/conditions-de-vie/la-maman-et-son-chiot-avec-marine.webp",
-                                            "pages/conditions-de-vie/pomsky-femmel-et-son-chiot-avec-marine.webp",
-                                        ]}
-                                        alt="Carrousel d'images des chiots avec leurs mamans et Marine l'éleveuse"
-                                        sizes="(max-width: 768px) 90vw, (max-width: 1024px) 50vw, 45vw"
-                                        quality={60}
-                                    />
-                                </div>
+                                <ImageCarousel
+                                    images={[
+                                        "pages/conditions-de-vie/la-maman-et-son-chiot-avec-marine.webp",
+                                        "pages/conditions-de-vie/pomsky-femmel-et-son-chiot-avec-marine.webp",
+                                    ]}
+                                    alt="Carrousel d'images des chiots avec leurs mamans et Marine l'éleveuse"
+                                    sizes="(max-width: 768px) 90vw, (max-width: 1024px) 50vw, 45vw"
+                                    quality={60}
+                                />
                             </div>
                         </section>
                     </div>

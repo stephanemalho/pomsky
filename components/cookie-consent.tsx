@@ -6,9 +6,23 @@ import { Cookie } from "lucide-react"
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID
 
-export default function CookieConsent() {
-    const [consent, setConsent] = useState<"accepted" | "denied" | "unknown">("unknown")
-    const [open, setOpen] = useState(false)
+type ConsentValue = "accepted" | "denied" | "unknown"
+
+type CookieConsentProps = {
+    initialConsent?: ConsentValue
+}
+
+export default function CookieConsent({ initialConsent = "unknown" }: CookieConsentProps) {
+    const [consent, setConsent] = useState<ConsentValue>(initialConsent)
+    const [open, setOpen] = useState(initialConsent === "unknown")
+
+    function setConsentCookie(value: "accepted" | "denied") {
+        try {
+            const secure =
+                typeof window !== "undefined" && window.location.protocol === "https:" ? "; Secure" : ""
+            document.cookie = `cookie_consent=${value}; Path=/; Max-Age=15552000; SameSite=Lax${secure}`
+        } catch { }
+    }
 
     function injectGAScript() {
         if (!GA_ID) return
@@ -36,15 +50,23 @@ gtag('config', '${GA_ID}');`
             if (stored === "accepted" || stored === "denied") {
                 setConsent(stored)
                 setOpen(false)
-            } else {
-                setConsent("unknown")
-                setOpen(true)
+                setConsentCookie(stored)
+                return
             }
-        } catch (e) {
+        } catch { }
+
+        if (initialConsent === "accepted" || initialConsent === "denied") {
+            setConsent(initialConsent)
+            setOpen(false)
+            try {
+                localStorage.setItem("cookie_consent", initialConsent)
+            } catch { }
+            notifyConsentChange()
+        } else {
             setConsent("unknown")
             setOpen(true)
         }
-    }, [])
+    }, [initialConsent])
 
     function notifyConsentChange() {
         try {
@@ -56,6 +78,7 @@ gtag('config', '${GA_ID}');`
         try {
             localStorage.setItem("cookie_consent", "accepted")
         } catch { }
+        setConsentCookie("accepted")
         setConsent("accepted")
         setOpen(false)
         notifyConsentChange()
@@ -92,6 +115,7 @@ gtag('config', '${GA_ID}');`
         try {
             localStorage.setItem("cookie_consent", "denied")
         } catch { }
+        setConsentCookie("denied")
         // If GA already loaded, inform Google Consent Mode and try to clear cookies
         try {
             if ((window as any).gtag) {
