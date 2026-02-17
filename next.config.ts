@@ -1,6 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+    images: {
+        qualities: [50, 60, 65, 70, 75, 80],
+    },
     async redirects() {
         return [
             {
