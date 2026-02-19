@@ -14,11 +14,12 @@ export type Puppy = {
     highlights: string[];
     images: string[];
     linkTo: string;
+    isReserved?: boolean;
 };
 
 export const puppies: Puppy[] = [
     {
-        name: "ROYAL POMSKY 'ALUNA'",
+        name: "ALUNA' de ROYAL POMSKY",
         coat: "Pomsky F5 (ADN Poméranian / Husky)",
         sexe: "Femelle",
         color: "Noire et blanche",
@@ -43,10 +44,11 @@ export const puppies: Puppy[] = [
             "pages/puppies/ALUNA-puppy-black-white-1.webp",
             "pages/puppies/ALUNA-puppy-black-white-2.webp"
         ],
-        linkTo: "https://forms.gle/aDbQtgwXUtoaH5QFA"
+        linkTo: "https://forms.gle/aDbQtgwXUtoaH5QFA",
+        isReserved: true
     },
     {
-        name: "ROYAL POMSKY 'THOR'",
+        name: "THOR' de ROYAL POMSKY",
         coat: "Pomsky F5 (ADN Poméranian / Husky)",
         color: "RARE bleue et blanche",
         size: "miniature",
@@ -74,7 +76,7 @@ export const puppies: Puppy[] = [
         linkTo: " https://forms.gle/oQT8xEvuTFgm753TA"
     },
     {
-        name: "ROYAL POMSKY 'VUK'",
+        name: "VUK' de ROYAL POMSKY",
         coat: "Pomsky F5 (ADN Poméranian / Husky)",
         color: "Noire et blanche",
         sexe: "Femmelle",
@@ -102,7 +104,7 @@ export const puppies: Puppy[] = [
         linkTo: "https://forms.gle/wtcxuo84YEQzposV9"
     },
     {
-        name: "ROYAL POMSKY 'ASH'",
+        name: "ASH' de ROYAL POMSKY",
         coat: "Pomsky F5 (ADN Poméranian / Husky)",
         color: "Noire et blanche",
         sexe: "Mâle",

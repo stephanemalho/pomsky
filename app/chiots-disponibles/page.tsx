@@ -11,6 +11,7 @@ import { puppies } from "./puppies"
 import { Card, CardContent } from "@/components/ui/card"
 import ImageCarousel from "@/components/client/carousel/ImageCarousel"
 import { Badge } from "@/components/ui/badge"
+import { isReservedPage } from "next/dist/build/utils"
 
 export const metadata: Metadata = {
     title: pageMetadata.puppies.title,
@@ -77,8 +78,18 @@ export default function NosChiotsPage() {
                     {/* <NoAvailable /> */}
                     <div className="grid gap-10 my-12">
                         {puppies.map((puppy, index) => (
-                            <Card key={puppy.name} className="overflow-hidden bg-muted/30 p-0 md:p-6">
+                            <Card
+                                key={puppy.name}
+                                className={`relative overflow-hidden bg-muted/30 p-0 md:p-6 ${puppy.isReserved ? "border-2 border-green-600 ring-2 ring-green-600/40 ring-offset-2 ring-offset-background" : ""}`}
+                            >
                                 <CardContent className="p-0">
+                                    {puppy.isReserved ? (
+                                        <div
+                                            className="absolute right-4 top-4 z-20 rotate-6 rounded-md border-2 border-green-700 bg-green-100 px-4 py-1 text-sm font-extrabold uppercase tracking-wider text-green-800 shadow-[0_0_0_3px_#166534]"
+                                        >
+                                            RÉSERVÉ
+                                        </div>
+                                    ) : null}
                                     <div className={`grid md:grid-cols-2 gap-0 ${index % 2 === 1 ? "md:grid-flow-col-dense" : ""}`}>
                                         <ImageCarousel
                                             className={index % 2 === 1 ? "md:order-2" : undefined}
@@ -128,8 +139,24 @@ export default function NosChiotsPage() {
                                                     </Badge>
                                                 ))}
                                             </div>
-                                            <div className="flex flex-col sm:flex-row gap-3 mt-2">
-                                                <a target="_blank" className="bg-primary text-primary-foreground shadow-xs hover:bg-primary/90 py-2 px-4 rounded-md" href={puppy.linkTo}>Réserver une visite ou demander plus de photos/vidéos</a>
+                                            <div className="flex m-auto flex-col sm:flex-row gap-3 mb-6">
+                                                {puppy.isReserved ? (
+                                                    <span
+                                                        aria-disabled="true"
+                                                        className="cursor-not-allowed rounded-md border border-green-700 bg-green-50 px-4 py-2 text-center font-medium text-green-800 opacity-90"
+                                                    >
+                                                        {puppy.isReserved && puppy.name} attend sa famille
+                                                    </span>
+                                                ) : (
+                                                    <a
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        className="bg-primary text-primary-foreground shadow-xs hover:bg-primary/90 py-2 px-4 rounded-md"
+                                                        href={puppy.linkTo}
+                                                    >
+                                                        Réserver une visite ou demander plus de photos/vidéos
+                                                    </a>
+                                                )}
                                             </div>
                                         </div>
                                     </div>
@@ -239,4 +266,3 @@ export default function NosChiotsPage() {
         </>
     )
 }
-
