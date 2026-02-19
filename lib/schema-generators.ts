@@ -1,10 +1,13 @@
-// Générateurs de schémas JSON-LD pour SEO structuré
 import { siteConfig } from "./seo-config";
 
-/**
- * Schéma Organization pour l'élevage Royal POMSKY
- * Utilisé notamment sur la page d'accueil
- */
+function toAbsoluteUrl(pathOrUrl: string) {
+    return pathOrUrl.startsWith("http")
+        ? pathOrUrl
+        : `${siteConfig.siteUrl}${pathOrUrl}`;
+}
+
+const defaultImageUrl = toAbsoluteUrl(siteConfig.ogImage);
+
 export function generateOrganizationSchema() {
     const legal = siteConfig.legal;
     const address = legal.address;
@@ -36,6 +39,7 @@ export function generateOrganizationSchema() {
         alternateName: legal.legalName,
         legalName: legal.legalName,
         url: siteConfig.siteUrl,
+        image: defaultImageUrl,
         logo: {
             "@type": "ImageObject",
             url: `${siteConfig.siteUrl}/icon.png`
@@ -64,10 +68,6 @@ export function generateOrganizationSchema() {
     };
 }
 
-/**
- * Schéma LocalBusiness pour la page Contact
- * Informations sur le lieu de visite et horaires
- */
 export function generateLocalBusinessSchema() {
     const legal = siteConfig.legal;
     const address = legal.address;
@@ -92,6 +92,7 @@ export function generateLocalBusinessSchema() {
         "@type": "LocalBusiness",
         name: siteConfig.name,
         url: siteConfig.siteUrl,
+        image: defaultImageUrl,
         email: siteConfig.contact.email,
         telephone: siteConfig.contact.phone,
         address: {
@@ -117,9 +118,6 @@ export function generateLocalBusinessSchema() {
     };
 }
 
-/**
- * Schéma ContactPoint pour la page Contact
- */
 export function generateContactPointSchema() {
     return {
         "@context": "https://schema.org",
@@ -133,10 +131,6 @@ export function generateContactPointSchema() {
     };
 }
 
-/**
- * Schéma FAQPage pour les sections FAQ
- * @param faqs - Array of {question: string, answer: string}
- */
 export function generateFAQSchema(
     faqs: Array<{ question: string; answer: string }>
 ) {
@@ -154,10 +148,6 @@ export function generateFAQSchema(
     };
 }
 
-/**
- * Schéma Product/Breeder pour les chiots (page Nos chiots)
- * @param puppy - Données du chiot
- */
 export function generatePuppySchema(puppy: {
     name: string;
     description: string;
@@ -171,7 +161,7 @@ export function generatePuppySchema(puppy: {
         "@type": "Product",
         name: puppy.name,
         description: puppy.description,
-        image: `${siteConfig.siteUrl}${puppy.image}`,
+        image: toAbsoluteUrl(puppy.image),
         brand: {
             "@type": "Brand",
             name: siteConfig.name
@@ -192,10 +182,6 @@ export function generatePuppySchema(puppy: {
     };
 }
 
-/**
- * Schéma ItemList pour la page Nos chiots
- * @param puppies - Array de chiots
- */
 export function generatePuppyListSchema(
     puppies: Array<{
         name: string;
@@ -217,15 +203,11 @@ export function generatePuppyListSchema(
             position: index + 1,
             name: puppy.name,
             url: `${siteConfig.siteUrl}/chiots-disponibles`,
-            image: `${siteConfig.siteUrl}${puppy.image}`
+            image: toAbsoluteUrl(puppy.image)
         }))
     };
 }
 
-/**
- * Schéma Person pour les reproducteurs (page Nos reproducteurs)
- * @param dog - Données du chien reproducteur
- */
 export function generateReproductorSchema(dog: {
     name: string;
     description: string;
@@ -238,7 +220,7 @@ export function generateReproductorSchema(dog: {
         "@type": "Person",
         name: dog.name,
         description: dog.description,
-        image: `${siteConfig.siteUrl}${dog.image}`,
+        image: toAbsoluteUrl(dog.image),
         affiliation: {
             "@type": "Organization",
             name: siteConfig.name,
@@ -247,10 +229,6 @@ export function generateReproductorSchema(dog: {
     };
 }
 
-/**
- * Schéma Breadcrumb pour la navigation
- * @param breadcrumbs - Array of {name: string, url: string}
- */
 export function generateBreadcrumbSchema(
     breadcrumbs: Array<{ name: string; url: string }>
 ) {
@@ -266,15 +244,13 @@ export function generateBreadcrumbSchema(
     };
 }
 
-/**
- * Schéma WebSite pour les moteurs de recherche
- */
 export function generateWebsiteSchema() {
     return {
         "@context": "https://schema.org",
         "@type": "WebSite",
         name: siteConfig.name,
         url: siteConfig.siteUrl,
+        image: defaultImageUrl,
         description: siteConfig.description,
         potentialAction: {
             "@type": "SearchAction",
