@@ -18,7 +18,7 @@ function ImageCarousel({
     alt,
     priority = false,
     sizes,
-    quality = 70,
+    quality = 75,
     className,
     ratioClassName,
 }: ImageCarouselProps) {
@@ -27,7 +27,7 @@ function ImageCarousel({
     const isOneImage = total === 1
     const resolvedSizes = sizes ?? "(min-width: 1024px) 50vw, (min-width: 768px) 50vw, 100vw"
     const containerClassName = [
-        "relative w-full overflow-hidden rounded-lg bg-amber-950",
+        "relative w-full overflow-hidden bg-amber-950 mb-6",
         ratioClassName ?? "aspect-4/3",
         className,
     ]
@@ -43,7 +43,7 @@ function ImageCarousel({
                 src={`/${images[index]}`}
                 alt={`${alt} - photo ${index + 1}`}
                 fill
-                className="object-cover transition duration-300 p-2"
+                className="object-cover transition duration-300"
                 sizes={resolvedSizes}
                 priority={priority}
                 fetchPriority={priority ? "high" : "auto"}

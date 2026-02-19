@@ -78,7 +78,7 @@ export default function NosChiotsPage() {
 
                     <div className="grid gap-10">
                         {puppies.map((puppy, index) => (
-                            <Card key={puppy.name} className="overflow-hidden bg-muted/30">
+                            <Card key={puppy.name} className="overflow-hidden bg-muted/30 p-0 md:p-6">
                                 <CardContent className="p-0">
                                     <div className={`grid md:grid-cols-2 gap-0 ${index % 2 === 1 ? "md:grid-flow-col-dense" : ""}`}>
                                         <ImageCarousel

@@ -75,7 +75,7 @@ export default function SejoursPage() {
                                 priority
                                 fetchPriority="high"
                                 sizes="(max-width: 768px) 100vw, 70vw"
-                                quality={50}
+                                quality={75}
                             />
                             <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
                                 <div className="text-white text-center space-y-4">
@@ -132,7 +132,7 @@ export default function SejoursPage() {
                                     ]}
                                     alt="Carrousel d'images montrant les cocons et espaces de repos des chiots Royal Pomsky"
                                     sizes="(max-width: 768px) 90vw, (max-width: 1024px) 50vw, 45vw"
-                                    quality={50}
+                                    quality={75}
                                 />
                             </div>
                         </section>
@@ -148,7 +148,7 @@ export default function SejoursPage() {
                                     ]}
                                     alt="Carrousel d'images montrant les jeux et activités de nos chiots"
                                     sizes="(max-width: 768px) 90vw, (max-width: 1024px) 50vw, 45vw"
-                                    quality={50}
+                                    quality={75}
                                 />
                                 <div className="space-y-6 md:order-1">
                                     <Badge variant="secondary" className="w-fit">
@@ -197,7 +197,7 @@ export default function SejoursPage() {
                                     ]}
                                     alt="Carrousel d'images de chiots et de Pomsky adultes jouant en plein air, sous encadrement"
                                     sizes="(max-width: 768px) 90vw, (max-width: 1024px) 50vw, 45vw"
-                                    quality={50}
+                                    quality={75}
                                 />
                             </div>
                         </section>
@@ -213,7 +213,7 @@ export default function SejoursPage() {
                                     ]}
                                     alt="Carrousel d'images de l'alimentation et les soins des chiots et des chiens adultes reproducteurs"
                                     sizes="(max-width: 768px) 90vw, (max-width: 1024px) 50vw, 45vw"
-                                    quality={50}
+                                    quality={75}
                                 />
                                 <div className="space-y-6 md:order-1">
                                     <Badge variant="secondary" className="w-fit">
@@ -250,7 +250,7 @@ export default function SejoursPage() {
                                     ]}
                                     alt="Carrousel d'images des chiots avec leurs mamans et Marine l'éleveuse"
                                     sizes="(max-width: 768px) 90vw, (max-width: 1024px) 50vw, 45vw"
-                                    quality={50}
+                                    quality={75}
                                 />
                             </div>
                         </section>

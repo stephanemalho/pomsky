@@ -159,7 +159,7 @@ export default function PresentationEleveusesPage() {
                                                 priority={index === 0}
                                                 loading={index === 0 ? "eager" : "lazy"}
                                                 fetchPriority={index === 0 ? "high" : "auto"}
-                                                quality={50}
+                                                quality={75}
                                             />
                                         </div>
                                     ))}
@@ -230,7 +230,7 @@ export default function PresentationEleveusesPage() {
                                                 className="object-cover"
                                                 loading="lazy"
                                                 fetchPriority="auto"
-                                                quality={50}
+                                                quality={75}
                                             />
                                         </div>
                                     ))}

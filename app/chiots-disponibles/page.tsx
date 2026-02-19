@@ -77,7 +77,7 @@ export default function NosChiotsPage() {
                     {/* <NoAvailable /> */}
                     <div className="grid gap-10 my-12">
                         {puppies.map((puppy, index) => (
-                            <Card key={puppy.name} className="overflow-hidden bg-muted/30">
+                            <Card key={puppy.name} className="overflow-hidden bg-muted/30 p-0 md:p-6">
                                 <CardContent className="p-0">
                                     <div className={`grid md:grid-cols-2 gap-0 ${index % 2 === 1 ? "md:grid-flow-col-dense" : ""}`}>
                                         <ImageCarousel
@@ -174,7 +174,7 @@ export default function NosChiotsPage() {
                             className="flex items-center bg-primary justify-center text-white hover:bg-primary/80 p-4 font-semibold dark:text-[#5b3a1a] rounded-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                         >Voir les conditions de vie des chiots</Link>
                     </section>
-                    <section className="max-w-4xl mx-auto bg-muted/30 border border-muted rounded-2xl p-8 md:p-10 space-y-6 text-left mb-12">
+                    <section className="max-w-4xl mt-12 mx-auto bg-muted/30 border border-muted rounded-2xl p-8 md:p-10 space-y-6 text-left mb-12">
                         <div className="flex items-start gap-3">
                             <NotebookText className="h-6 w-6 text-2xl text-primary" aria-hidden="true" />
                             <div>

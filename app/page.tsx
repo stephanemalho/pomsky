@@ -103,7 +103,7 @@ export default function HomePage() {
                 fetchPriority="high"
                 loading="eager"
                 sizes="100vw"
-                quality={70}
+                quality={75}
               />
               <div className="absolute inset-0 bg-linear-to-b from-black/70 via-black/45 to-black/75" aria-hidden="true" />
               <div className="absolute inset-0 opacity-60 [background:radial-gradient(900px_circle_at_center,rgba(255,255,255,0.08),transparent_55%)]" aria-hidden="true" />
@@ -138,7 +138,7 @@ export default function HomePage() {
                         sizes="(max-width: 640px) 85vw, 360px"
                         priority
                         fetchPriority="high"
-                        quality={65}
+                        quality={75}
                       />
                     </div>
                   </div>
@@ -205,7 +205,7 @@ export default function HomePage() {
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 85vw, 50vw"
-                  quality={70}
+                  quality={75}
                 />
               </div>
             </div>
@@ -333,7 +333,7 @@ export default function HomePage() {
                       fill
                       className="object-cover"
                       sizes="(max-width: 1024px) 100vw, 50vw"
-                      quality={70}
+                      quality={75}
                     />
                   </div>
 

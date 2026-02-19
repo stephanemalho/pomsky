@@ -127,7 +127,6 @@ export const puppies: Puppy[] = [
             "pages/puppies/ASH-pomsky-eyes-open-left.webp",
             "pages/puppies/ASH-femmelle-pomsky-puppy-black-white-2.webp",
             "pages/puppies/ASH-femmelle-pomsky-puppy-black-white-0.webp",
-            "pages/puppies/ASH-femmelle-pomsky-puppy-black-white-1.webp"
         ],
         linkTo: "https://forms.gle/PCvEkzSfpdWTXt8A9"
     }
