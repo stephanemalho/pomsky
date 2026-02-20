@@ -39,8 +39,8 @@ export const puppies: Puppy[] = [
         ],
         health: ["Suivi vétérinaire en cours"],
         images: [
-            "pages/puppies/ALUNA-pomsky-right.jpg",
-            "pages/puppies/ALUNA-pomsky-6week-pet.jpg",
+            "pages/puppies/ALUNA-pomsky-right.webp",
+            "pages/puppies/ALUNA-pomsky-6week-pet.webp",
             "pages/puppies/ALUNA-puppy-eyes-open.webp",
         ],
         linkTo: "https://forms.gle/aDbQtgwXUtoaH5QFA",
@@ -67,11 +67,11 @@ export const puppies: Puppy[] = [
         ],
         health: ["Suivi vétérinaire en cours"],
         images: [
-            "pages/puppies/THOR-puppy-eye-open.jpg",
-            "pages/puppies/THOR-male-pomsky-left.jpg",
-            "pages/puppies/THOR-6-week-puppy-profile.jpg",
-            "pages/puppies/THOR-6-week-puppy-paw-rased.jpg",
-            "pages/puppies/THOR-pet-for-sale-rpyal-pomsky.jpg"
+            "pages/puppies/THOR-puppy-eye-open.webp",
+            "pages/puppies/THOR-male-pomsky-left.webp",
+            "pages/puppies/THOR-6-week-puppy-profile.webp",
+            "pages/puppies/THOR-6-week-puppy-paw-rased.webp",
+            "pages/puppies/THOR-pet-for-sale-rpyal-pomsky.webp"
         ],
         linkTo: " https://forms.gle/oQT8xEvuTFgm753TA"
     },
@@ -96,11 +96,11 @@ export const puppies: Puppy[] = [
         ],
         health: ["Suivi vétérinaire en cours"],
         images: [
-            "pages/puppies/VUK-pomsky-face.jpg",
-            "pages/puppies/VUK-pomsky-left.jpg",
-            "pages/puppies/VUK-pomsky-right-side.jpg",
-            "pages/puppies/VUK-snif-the-floor.jpg",
-            "pages/puppies/VUK-pomsky-left-side.jpg"
+            "pages/puppies/VUK-pomsky-face.webp",
+            "pages/puppies/VUK-pomsky-left.webp",
+            "pages/puppies/VUK-pomsky-right-side.webp",
+            "pages/puppies/VUK-snif-the-floor.webp",
+            "pages/puppies/VUK-pomsky-left-side.webp"
         ],
         linkTo: "https://forms.gle/wtcxuo84YEQzposV9"
     },
@@ -126,11 +126,11 @@ export const puppies: Puppy[] = [
         ],
         health: ["Suivi vétérinaire en cours"],
         images: [
-            "pages/puppies/ASH-pomsky-eyes-open.jpg",
-            "pages/puppies/ASH-pomsky-face.jpg",
-            "pages/puppies/ASH-pomsky-left.jpg",
-            "pages/puppies/ASH-femal-poppy-profile.jpg",
-            "pages/puppies/ASH-popppy-pomsky-5-week.jpg"
+            "pages/puppies/ASH-pomsky-eyes-open.webp",
+            "pages/puppies/ASH-pomsky-face.webp",
+            "pages/puppies/ASH-pomsky-left.webp",
+            "pages/puppies/ASH-femal-poppy-profile.webp",
+            "pages/puppies/ASH-popppy-pomsky-5-week.webp"
         ],
         linkTo: "https://forms.gle/PCvEkzSfpdWTXt8A9"
     }

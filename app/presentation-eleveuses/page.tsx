@@ -47,7 +47,7 @@ export default function PresentationEleveusesPage() {
     const lastMod = returnLastmod(siteConfig.pages.eleveuses)
     const aurelieGallery = [
         {
-            src: "/assets/authors/aurelie-magnetisme-past-work.jpeg",
+            src: "/assets/authors/aurelie-magnetisme-past-work.webp",
             alt: "Magnetisme première activité d'aurelie avant l'élevage de pomsky",
             className: "col-span-6 md:col-span-3 row-span-6 md:row-span-6",
         },
@@ -57,54 +57,54 @@ export default function PresentationEleveusesPage() {
             className: "col-span-3 md:col-span-3 row-span-3",
         },
         {
-            src: "/assets/authors/aurelie-and-puppies-and-children.jpeg",
+            src: "/assets/authors/aurelie-and-puppies-and-children.webp",
             alt: "Aurélie avec les enfants et les chiots jouant dans l'herbe",
             className: "col-span-3 md:col-span-3 row-span-3",
         },
         {
-            src: "/assets/authors/aurelie-and-pomsky-see-view.jpeg",
+            src: "/assets/authors/aurelie-and-pomsky-see-view.webp",
             alt: "Aurélie avec un Pomsky assis au bord d'un lac",
             className: "col-span-3 md:col-span-3 row-span-3",
         },
         {
-            src: "/assets/authors/aurelie-and-pomsky-on-a-bike.jpeg",
+            src: "/assets/authors/aurelie-and-pomsky-on-a-bike.webp",
             alt: "Aurélie et un Pomsky prets pour la route",
             className: "col-span-3 md:col-span-3 row-span-3",
         },
         {
-            src: "/assets/authors/aurelie-and-pomsky-walking-street.jpeg",
+            src: "/assets/authors/aurelie-and-pomsky-walking-street.webp",
             alt: "Aurélie dans les rues chics promène un pomsky",
             className: "col-span-6 md:col-span-6 row-span-6 md:row-span-6",
         },
     ]
     const marineGallery = [
         {
-            src: "/assets/authors/marine-walking-dogs.jpeg",
+            src: "/assets/authors/marine-walking-dogs.webp",
             alt: "Marine en promenade des chiens",
             className: "col-span-6 md:col-span-3 row-span-6 md:row-span-6",
         },
         {
-            src: "/assets/authors/portrait-aurelie-and-pomsky.jpeg",
+            src: "/assets/authors/portrait-aurelie-and-pomsky.webp",
             alt: "Marine avec un Pomsky",
             className: "col-span-3 md:col-span-3 row-span-3",
         },
         {
-            src: "/assets/authors/marine-in-a-chair-with-pomsky.jpeg",
+            src: "/assets/authors/marine-in-a-chair-with-pomsky.webp",
             alt: "Marine sur une chaise avec son bebe pomsky",
             className: "col-span-3 md:col-span-3 row-span-3",
         },
         {
-            src: "/assets/authors/marine-and-a-new-puppy.jpeg",
+            src: "/assets/authors/marine-and-a-new-puppy.webp",
             alt: "Marine avec un Pomsky sur une chaise",
             className: "col-span-3 md:col-span-3 row-span-3",
         },
         {
-            src: "/assets/authors/marine-and-pomsky-in-grass.jpeg",
+            src: "/assets/authors/marine-and-pomsky-in-grass.webp",
             alt: "Marine et un pomsky dans le jardin vert",
             className: "col-span-3 md:col-span-3 row-span-3",
         },
         {
-            src: "/assets/authors/marine-and-a-puppy-pomsky-in-sofa.jpeg",
+            src: "/assets/authors/marine-and-a-puppy-pomsky-in-sofa.webp",
             alt: "Marine sur le canapé avec un chiot pomsky",
             className: "col-span-6 md:col-span-6 row-span-6 md:row-span-6",
         },
