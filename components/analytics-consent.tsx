@@ -5,12 +5,8 @@ import { Analytics } from "@vercel/analytics/next"
 
 type ConsentState = "accepted" | "denied" | "unknown"
 
-type AnalyticsConsentProps = {
-  initialConsent?: ConsentState
-}
-
-export default function AnalyticsConsent({ initialConsent = "unknown" }: AnalyticsConsentProps) {
-  const [consent, setConsent] = useState<ConsentState>(initialConsent)
+export default function AnalyticsConsent() {
+  const [consent, setConsent] = useState<ConsentState>("unknown")
 
   useEffect(() => {
     const readConsent = () => {
@@ -21,14 +17,14 @@ export default function AnalyticsConsent({ initialConsent = "unknown" }: Analyti
           return
         }
       } catch {}
-      setConsent(initialConsent)
+      setConsent("unknown")
     }
 
     readConsent()
     const handler = () => readConsent()
     window.addEventListener("cookie-consent-updated", handler)
     return () => window.removeEventListener("cookie-consent-updated", handler)
-  }, [initialConsent])
+  }, [])
 
   useEffect(() => {
     if (consent !== "denied") return

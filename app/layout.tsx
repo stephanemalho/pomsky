@@ -9,7 +9,6 @@ import { Footer } from "../components/footer"
 import { siteConfig } from "@/lib/seo-config"
 import { generateOrganizationSchema, generateWebsiteSchema } from "@/lib/schema-generators"
 import { Questrial } from "next/font/google"
-import { cookies } from "next/headers"
 
 const questrial = Questrial({
   weight: ["400"],
@@ -67,16 +66,13 @@ export const metadata: Metadata = {
     : undefined,
 }
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
   const organizationSchema = generateOrganizationSchema()
   const websiteSchema = generateWebsiteSchema()
-  const cookieStore = await cookies()
-  const consentCookie = cookieStore.get("cookie_consent")?.value
-  const initialConsent = consentCookie === "accepted" || consentCookie === "denied" ? consentCookie : "unknown"
 
   return (
     <html lang="fr" suppressHydrationWarning>
@@ -103,8 +99,8 @@ export default async function RootLayout({
             <Footer />
           </div>
         </ThemeProvider>
-        <CookieConsent initialConsent={initialConsent} />
-        <AnalyticsConsent initialConsent={initialConsent} />
+        <CookieConsent />
+        <AnalyticsConsent />
       </body>
     </html>
   )
