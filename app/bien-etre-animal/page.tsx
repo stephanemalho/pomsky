@@ -128,6 +128,7 @@ export default function SejoursPage() {
                                     images={[
                                         "pages/conditions-de-vie/cocom-pour-chiots-pomsky.webp",
                                         "pages/conditions-de-vie/bebe-chiots-lit-douillet.webp",
+                                        "pages/conditions-de-vie/nurcery-doors.webp",
                                         "pages/conditions-de-vie/salle-ambiante-pour-chiots.webp",
                                     ]}
                                     alt="Carrousel d'images montrant les cocons et espaces de repos des chiots Royal Pomsky"
