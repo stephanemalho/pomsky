@@ -207,7 +207,7 @@ export default function SejoursPage() {
                                 <ImageCarousel
                                     className="md:order-2"
                                     images={[
-                                        "pages/conditions-de-vie/pomsky-nurcery-veterinaire.webp",
+                                        "pages/conditions-de-vie/caring-dog-in-vet.jpeg",
                                         "pages/conditions-de-vie/nourriture-des-pomsky.webp",
                                         "pages/conditions-de-vie/nourrite-des-chiots-marque.webp"
                                     ]}
