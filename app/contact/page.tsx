@@ -221,7 +221,6 @@ export default function ContactPage() {
                                             fill
                                             className="object-cover"
                                             sizes="160px"
-                                            quality={80}
                                         />
                                     </div>
                                     <div className="flex flex-col items-center space-y-2">

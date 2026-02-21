@@ -153,7 +153,6 @@ export default async function BlogArticlePage({
                             sizes="(min-width: 1024px) 70vw, 100vw"
                             priority
                             fetchPriority="high"
-                            quality={75}
                         />
                     </div>
                 </section>
@@ -193,7 +192,6 @@ export default async function BlogArticlePage({
                             fill
                             className="object-cover"
                             sizes="80px"
-                            quality={80}
                         />
                     </div>
                     <div className="flex-1 text-center md:text-left">

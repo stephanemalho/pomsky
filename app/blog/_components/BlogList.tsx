@@ -56,8 +56,8 @@ export default function BlogList({ base, theme }: BlogListProps) {
                                     <Link
                                         href={`/blog/${base}`}
                                         className={`rounded-full border px-4 py-2 ${!activeTheme
-                                                ? "border-foreground text-foreground"
-                                                : "border-border text-muted-foreground hover:text-foreground/80"
+                                            ? "border-foreground text-foreground"
+                                            : "border-border text-muted-foreground hover:text-foreground/80"
                                             }`}
                                     >
                                         {filterLabels.all}
@@ -68,8 +68,8 @@ export default function BlogList({ base, theme }: BlogListProps) {
                                         <Link
                                             href={`/blog/${base}/${item.slug}`}
                                             className={`rounded-full border px-4 py-2 ${activeTheme === item.slug
-                                                    ? "border-foreground text-foreground"
-                                                    : "border-border text-muted-foreground hover:text-foreground/80"
+                                                ? "border-foreground text-foreground"
+                                                : "border-border text-muted-foreground hover:text-foreground/80"
                                                 }`}
                                         >
                                             {item.label}
@@ -102,7 +102,6 @@ export default function BlogList({ base, theme }: BlogListProps) {
                                             sizes="(min-width: 768px) 40vw, 100vw"
                                             priority={index === 0}
                                             fetchPriority={index === 0 ? "high" : "auto"}
-                                            quality={75}
                                         />
                                     </div>
                                 ) : (

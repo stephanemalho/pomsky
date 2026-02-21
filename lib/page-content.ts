@@ -1,8 +1,8 @@
 export const pageContent = {
     home: {
-        h1: "Elevage de Pomsky 🐺 Royal POMSKY",
+        h1: "Élevage de Pomsky Toy - Royal POMSKY",
         h1Subtitle:
-            "Premier élevage de Pomsky en France, et de lignées Américaines",
+            "Premier élevage français de Pomsky issus de lignées américaines",
         description:
             "Royal Pomsky se situe dans la commune de SAINT-AMOUR (39160) en région Bourgogne Franche Comté. C'est le premier élevage de Pomsky en France ayant fait le choix de débuter sa sélection en 2017 avec des lignées Américaines : directement au berceau de la race, pour amener en France le Pomsky absolument parfait.",
         descriptionSecondary:

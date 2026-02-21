@@ -17,7 +17,6 @@ export function Footer() {
                                     fill
                                     sizes="40px"
                                     className="object-contain"
-                                    quality={80}
                                 />
                             </div>
                             <span className="text-lg font-bold text-primary">Royal POMSKY</span>

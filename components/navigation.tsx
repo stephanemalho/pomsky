@@ -24,7 +24,6 @@ export function Navigation() {
                             height={40}
                             sizes="40px"
                             className="object-contain"
-                            quality={80}
                             priority
                         />
                     </div>

@@ -98,7 +98,6 @@ export default function PresentationPage() {
                                     priority
                                     fetchPriority="high"
                                     sizes="(min-width: 768px) 50vw, 100vw"
-                                    quality={75}
                                 />
                             </div>
                         </div>
@@ -167,7 +166,6 @@ export default function PresentationPage() {
                                     fill
                                     className="object-cover"
                                     sizes="(min-width: 768px) 50vw, 100vw"
-                                    quality={75}
                                 />
                             </div>
                             <div className="space-y-6 md:order-1">

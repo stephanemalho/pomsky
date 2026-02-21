@@ -147,7 +147,6 @@ export default function dogPage() {
                                 priority
                                 fetchPriority="high"
                                 sizes="(min-width: 768px) 50vw, 100vw"
-                                quality={75}
                             />
                             <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent" aria-hidden="true" />
                         </div>
@@ -180,7 +179,6 @@ export default function dogPage() {
                                                 fill
                                                 className="object-contain"
                                                 sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-                                                quality={75}
                                             />
                                         </div>
                                         <div className="flex items-center gap-2">
@@ -305,7 +303,6 @@ export default function dogPage() {
                                                 fill
                                                 className="object-cover"
                                                 sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-                                                quality={75}
                                             />
                                         </div>
                                     </CardContent>
@@ -354,14 +351,13 @@ export default function dogPage() {
                                             Le regard est intense et expressif, ce qui participe beaucoup au charme du Pomsky.
                                         </p>
                                     </div>
-                                    <div  className="relative mt-4 mx-auto w-full lg:w-2/3 flex-[0_0_50%] min-h-64 overflow-hidden rounded-md">
+                                    <div className="relative mt-4 mx-auto w-full lg:w-2/3 flex-[0_0_50%] min-h-64 overflow-hidden rounded-md">
                                         <Image
                                             src="/pomsky-eye-colors-blue-brown-heterochromia.webp"
                                             alt="Montage de plusieurs couleurs des yeux du Pomsky"
                                             fill
                                             className="object-contain"
                                             sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-                                            quality={75}
                                         />
                                     </div>
                                 </CardContent>
@@ -388,7 +384,6 @@ export default function dogPage() {
                                             fill
                                             className="object-cover"
                                             sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-                                            quality={75}
                                         />
                                     </div>
                                 </CardContent>

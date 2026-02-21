@@ -8,7 +8,6 @@ type ImageCarouselProps = {
     alt: string
     priority?: boolean
     sizes?: string
-    quality?: number
     className?: string
     ratioClassName?: string
 }
@@ -18,7 +17,6 @@ function ImageCarousel({
     alt,
     priority = false,
     sizes,
-    quality = 75,
     className,
     ratioClassName,
 }: ImageCarouselProps) {
@@ -48,7 +46,6 @@ function ImageCarousel({
                 priority={priority}
                 fetchPriority={priority ? "high" : "auto"}
                 loading={priority ? "eager" : "lazy"}
-                quality={quality}
             />
             <div className="absolute inset-0 bg-linear-to-t from-black/40 via-transparent to-transparent" />
             <div className="absolute top-3 right-3 text-xs px-3 py-1 rounded-full bg-black/60 text-white">

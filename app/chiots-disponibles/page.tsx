@@ -11,7 +11,6 @@ import { puppies } from "./puppies"
 import { Card, CardContent } from "@/components/ui/card"
 import ImageCarousel from "@/components/client/carousel/ImageCarousel"
 import { Badge } from "@/components/ui/badge"
-import { isReservedPage } from "next/dist/build/utils"
 
 export const metadata: Metadata = {
     title: pageMetadata.puppies.title,

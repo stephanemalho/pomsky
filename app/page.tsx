@@ -103,7 +103,6 @@ export default function HomePage() {
                 fetchPriority="high"
                 loading="eager"
                 sizes="100vw"
-                quality={75}
               />
               <div className="absolute inset-0 bg-linear-to-b from-black/70 via-black/45 to-black/75" aria-hidden="true" />
               <div className="absolute inset-0 opacity-60 [background:radial-gradient(900px_circle_at_center,rgba(255,255,255,0.08),transparent_55%)]" aria-hidden="true" />
@@ -138,7 +137,6 @@ export default function HomePage() {
                         sizes="(max-width: 640px) 85vw, 360px"
                         priority
                         fetchPriority="high"
-                        quality={75}
                       />
                     </div>
                   </div>
@@ -205,7 +203,6 @@ export default function HomePage() {
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 85vw, 50vw"
-                  quality={75}
                 />
               </div>
             </div>
@@ -267,7 +264,6 @@ export default function HomePage() {
                       fill
                       className="object-cover"
                       sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      quality={75}
                     />
                   </div>
 
@@ -315,34 +311,33 @@ export default function HomePage() {
                   aria-label={`Lire la présentation de ${founder.name}`}
                 >
                   <article className="relative text-center bg-muted/70 rounded-lg overflow-hidden">
-                  <div className="absolute top-4 left-4 md:flex hidden flex-col items-start gap-2 z-10">
-                    {founder.badges.map((badge, badgeIdx) => (
-                      <Badge
-                        key={badgeIdx}
-                        variant="secondary"
-                        className="text-[11px] shadow-sm p-2 backdrop-blur-sm bg-background/85"
-                      >
-                        {badge}
-                      </Badge>
-                    ))}
-                  </div>
-                  <div className="relative w-full aspect-square">
-                    <Image
-                      src={founder.image || "/placeholder.svg"}
-                      alt={`Photo d'${founder.name}, fondatrice de l'élevage`}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 1024px) 100vw, 50vw"
-                      quality={75}
-                    />
-                  </div>
+                    <div className="absolute top-4 left-4 md:flex hidden flex-col items-start gap-2 z-10">
+                      {founder.badges.map((badge, badgeIdx) => (
+                        <Badge
+                          key={badgeIdx}
+                          variant="secondary"
+                          className="text-[11px] shadow-sm p-2 backdrop-blur-sm bg-background/85"
+                        >
+                          {badge}
+                        </Badge>
+                      ))}
+                    </div>
+                    <div className="relative w-full aspect-square">
+                      <Image
+                        src={founder.image || "/placeholder.svg"}
+                        alt={`Photo d'${founder.name}, fondatrice de l'élevage`}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                      />
+                    </div>
 
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold mb-2">{founder.name}</h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
-                      {founder.description}
-                    </p>
-                  </div>
+                    <div className="p-6">
+                      <h3 className="text-xl font-semibold mb-2">{founder.name}</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        {founder.description}
+                      </p>
+                    </div>
                   </article>
                 </Link>
               ))}
