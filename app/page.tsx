@@ -169,6 +169,18 @@ export default function HomePage() {
                 <Badge variant="secondary" className="w-fit">
                   Notre élevage
                 </Badge>
+                <p className="text-sm text-muted-foreground">
+                  Royal Pomsky est membre de la{" "}
+                  <a
+                    href="https://federation-francaise-pomsky.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-medium underline underline-offset-4 hover:text-foreground"
+                  >
+                    Fédération Française du Pomsky
+                  </a>
+                  .
+                </p>
 
                 <h2 className="text-xl md:text-2xl font-bold">Des Pomsky élevés par des professionnelles passionnées, dans le respect de la race
                 </h2>
@@ -372,6 +384,5 @@ export default function HomePage() {
     </>
   )
 }
-
 
 
