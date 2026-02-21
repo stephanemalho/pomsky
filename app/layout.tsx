@@ -8,15 +8,6 @@ import { Navigation } from "../components/navigation"
 import { Footer } from "../components/footer"
 import { siteConfig } from "@/lib/seo-config"
 import { generateOrganizationSchema, generateWebsiteSchema } from "@/lib/schema-generators"
-import { Questrial } from "next/font/google"
-
-const questrial = Questrial({
-  weight: ["400"],
-  subsets: ["latin"],
-  display: "swap",
-  fallback: ["ui-sans-serif", "system-ui", "Segoe UI", "sans-serif"],
-  adjustFontFallback: true,
-})
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.siteUrl),
@@ -111,7 +102,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
       </head>
-      <body className={questrial.className}>
+      <body className="font-sans">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <div className="min-h-screen bg-background flex flex-col">
             <Navigation />
