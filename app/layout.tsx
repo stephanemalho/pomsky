@@ -42,6 +42,13 @@ export const metadata: Metadata = {
         alt: siteConfig.ogImageAlt,
         type: "image/webp",
       },
+      {
+        url: `${siteConfig.siteUrl}${siteConfig.ogImageJpg}`,
+        width: siteConfig.ogImageWidth,
+        height: siteConfig.ogImageHeight,
+        alt: siteConfig.ogImageAlt,
+        type: "image/jpeg",
+      },
     ],
     siteName: siteConfig.name,
   },
@@ -51,7 +58,22 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: siteConfig.title,
     description: siteConfig.description,
-    images: [`${siteConfig.siteUrl}${siteConfig.ogImage}`],
+    images: [
+      `${siteConfig.siteUrl}${siteConfig.ogImage}`,
+      `${siteConfig.siteUrl}${siteConfig.ogImageJpg}`,
+    ],
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
 
   // Autres métadonnées

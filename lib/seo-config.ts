@@ -87,6 +87,7 @@ export const siteConfig = {
 
     /* ------------------------------ OpenGraph --------------------------------- */
     ogImage: "/BEAUTY-pomsky-miniature-f4.webp",
+    ogImageJpg: "/BEAUTY-pomsky-miniature-f4.jpg",
     ogImageAlt: "pomsky Toy noir de Royal POMSKY",
     ogImageWidth: 1200,
     ogImageHeight: 630,
@@ -135,16 +136,8 @@ export const buildOpenGraph = ({
     images,
     publishedTime,
     authors
-}: OpenGraphParams) => ({
-    title,
-    description,
-    url,
-    siteName: siteConfig.name,
-    locale: siteConfig.locale,
-    type,
-    ...(type === "article" && publishedTime ? { publishedTime } : {}),
-    ...(type === "article" && authors ? { authors } : {}),
-    images:
+}: OpenGraphParams) => {
+    const normalizedImages =
         images && images.length > 0
             ? images.map((image) => ({
                   width: siteConfig.ogImageWidth,
@@ -164,8 +157,39 @@ export const buildOpenGraph = ({
                       alt: siteConfig.ogImageAlt,
                       type: "image/webp"
                   }
+              ];
+
+    const hasJpg = normalizedImages.some((image) =>
+        image.type === "image/jpeg" || /\.jpe?g($|\?)/i.test(image.url)
+    );
+    const jpgFallbackUrl = new URL(
+        siteConfig.ogImageJpg,
+        siteConfig.siteUrl
+    ).toString();
+
+    return {
+        title,
+        description,
+        url,
+        siteName: siteConfig.name,
+        locale: siteConfig.locale,
+        type,
+        ...(type === "article" && publishedTime ? { publishedTime } : {}),
+        ...(type === "article" && authors ? { authors } : {}),
+        images: hasJpg
+            ? normalizedImages
+            : [
+                  ...normalizedImages,
+                  {
+                      url: jpgFallbackUrl,
+                      width: siteConfig.ogImageWidth,
+                      height: siteConfig.ogImageHeight,
+                      alt: siteConfig.ogImageAlt,
+                      type: "image/jpeg"
+                  }
               ]
-});
+    };
+};
 
 type TwitterParams = {
     title: string;
@@ -177,16 +201,24 @@ export const buildTwitter = ({
     title,
     description,
     imageUrl
-}: TwitterParams) => ({
-    card: "summary_large_image",
-    title,
-    description,
-    images: [
-        imageUrl
-            ? imageUrl
-            : new URL(siteConfig.ogImage, siteConfig.siteUrl).toString()
-    ]
-});
+}: TwitterParams) => {
+    const primaryImage = imageUrl
+        ? imageUrl
+        : new URL(siteConfig.ogImage, siteConfig.siteUrl).toString();
+    const jpgFallbackUrl = new URL(
+        siteConfig.ogImageJpg,
+        siteConfig.siteUrl
+    ).toString();
+
+    return {
+        card: "summary_large_image",
+        title,
+        description,
+        images: /\.jpe?g($|\?)/i.test(primaryImage)
+            ? [primaryImage]
+            : [primaryImage, jpgFallbackUrl]
+    };
+};
 
 /* -------------------------------------------------------------------------- */
 /*  MÉTADONNÉES PAR PAGE                                                       */
