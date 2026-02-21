@@ -1,6 +1,6 @@
 export const pageContent = {
     home: {
-        h1: "Élevage de Pomsky Toy - Royal POMSKY",
+        h1: "Élevage de Pomsky - Royal POMSKY",
         h1Subtitle:
             "Premier élevage français de Pomsky issus de lignées américaines",
         description:
