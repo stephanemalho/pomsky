@@ -72,19 +72,19 @@ export default function PresentationEleveusesPage() {
             className: "col-span-3 md:col-span-3 row-span-3",
         },
         {
-            src: "/assets/authors/aurelie-and-pomsky-walking-street.webp",
+            src: "/assets/authors/aurelie-and-pomsky-walking-street.jpeg",
             alt: "Aurélie dans les rues chics promène un pomsky",
             className: "col-span-6 md:col-span-6 row-span-6 md:row-span-6",
         },
     ]
     const marineGallery = [
         {
-            src: "/assets/authors/marine-walking-dogs.webp",
+            src: "/assets/authors/marine-walking-dogs.jpeg",
             alt: "Marine en promenade des chiens",
             className: "col-span-6 md:col-span-3 row-span-6 md:row-span-6",
         },
         {
-            src: "/assets/authors/portrait-aurelie-and-pomsky.webp",
+            src: "/assets/authors/portrait-aurelie-and-pomsky.jpeg",
             alt: "Marine avec un Pomsky",
             className: "col-span-3 md:col-span-3 row-span-3",
         },
@@ -104,7 +104,7 @@ export default function PresentationEleveusesPage() {
             className: "col-span-3 md:col-span-3 row-span-3",
         },
         {
-            src: "/assets/authors/marine-and-a-puppy-pomsky-in-sofa.webp",
+            src: "/assets/authors/marine-and-a-puppy-pomsky-in-sofa.jpeg",
             alt: "Marine sur le canapé avec un chiot pomsky",
             className: "col-span-6 md:col-span-6 row-span-6 md:row-span-6",
         },
@@ -155,7 +155,7 @@ export default function PresentationEleveusesPage() {
                                                 alt={image.alt}
                                                 fill
                                                 sizes="(min-width: 1280px) 360px, (min-width: 1024px) 320px, (min-width: 768px) 40vw, 90vw"
-                                                className="object-cover"
+                                                className="object-cover [image-orientation:from-image]"
                                                 priority={index === 0}
                                                 loading={index === 0 ? "eager" : "lazy"}
                                                 fetchPriority={index === 0 ? "high" : "auto"}
