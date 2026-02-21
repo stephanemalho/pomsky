@@ -4,6 +4,11 @@ import { useEffect, useState } from "react"
 import { Analytics } from "@vercel/analytics/next"
 
 type ConsentState = "accepted" | "denied" | "unknown"
+type WindowWithVercelAnalytics = Window & {
+  va?: unknown
+  vaq?: unknown
+  vam?: unknown
+}
 
 export default function AnalyticsConsent() {
   const [consent, setConsent] = useState<ConsentState>("unknown")
@@ -38,9 +43,10 @@ export default function AnalyticsConsent() {
           script.parentElement?.removeChild(script)
         })
       })
-      delete (window as any).va
-      delete (window as any).vaq
-      delete (window as any).vam
+      const win = window as WindowWithVercelAnalytics
+      delete win.va
+      delete win.vaq
+      delete win.vam
     } catch {}
   }, [consent])
 

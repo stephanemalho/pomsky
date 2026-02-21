@@ -5,6 +5,10 @@ import { Button } from "./ui/button"
 import { Cookie } from "lucide-react"
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID
+type WindowWithGA = Window & {
+    gtag?: (...args: unknown[]) => void
+    dataLayer?: unknown[]
+}
 
 export default function CookieConsent() {
     const [consent, setConsent] = useState<"accepted" | "denied" | "unknown">("unknown")
@@ -40,7 +44,7 @@ gtag('config', '${GA_ID}');`
                 setConsent("unknown")
                 setOpen(true)
             }
-        } catch (e) {
+        } catch {
             setConsent("unknown")
             setOpen(true)
         }
@@ -80,11 +84,12 @@ gtag('config', '${GA_ID}');`
             const scripts = Array.from(document.querySelectorAll('script[data-cookie-consent^="ga"]'))
             scripts.forEach((s) => s.parentElement?.removeChild(s))
             try {
-                delete (window as any).gtag
-                delete (window as any).dataLayer
+                const win = window as WindowWithGA
+                delete win.gtag
+                delete win.dataLayer
             } catch { }
-        } catch (e) {
-            console.warn("cookie-consent: failed to remove GA scripts", e)
+        } catch (error) {
+            console.warn("cookie-consent: failed to remove GA scripts", error)
         }
     }
 
@@ -94,8 +99,9 @@ gtag('config', '${GA_ID}');`
         } catch { }
         // If GA already loaded, inform Google Consent Mode and try to clear cookies
         try {
-            if ((window as any).gtag) {
-                ; (window as any).gtag("consent", "update", { analytics_storage: "denied" })
+            const win = window as WindowWithGA
+            if (win.gtag) {
+                win.gtag("consent", "update", { analytics_storage: "denied" })
             }
             clearGACookies()
             removeGAScript()

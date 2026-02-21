@@ -1,5 +1,4 @@
 import type { Metadata } from "next"
-import Link from "next/link"
 import { buildOpenGraph, buildTwitter, pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
 import { pageContent } from "@/lib/page-content"
 import { generateBreadcrumbSchema } from "@/lib/schema-generators"
@@ -192,4 +191,3 @@ export default function PolitiqueConfidentialitePage() {
     </>
   )
 }
-

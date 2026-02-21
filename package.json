@@ -6,7 +6,7 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint . --max-warnings=0",
     "convert:webp": "node scripts/convert-to-webp.js",
     "update:images": "node scripts/update-image-references.js",
     "audit:schemas": "node scripts/seo-schema-audit.mjs",

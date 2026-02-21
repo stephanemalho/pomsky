@@ -19,39 +19,33 @@ export function extractTextFromFAQ(faqItem: FAQItem): {
         answer = faqItem.answer;
     } else {
         // L'answer est un ReactElement, on extrait le texte des paragraphes
-        const answerElement = faqItem.answer as ReactElement<any>;
+        const answerElement = faqItem.answer as ReactElement<{
+            children?: unknown;
+        }>;
+
+        const asString = (value: unknown): string => {
+            if (typeof value === "string") return value;
+            if (Array.isArray(value)) {
+                return value.map((item) => asString(item)).filter(Boolean).join(" ");
+            }
+            if (
+                value &&
+                typeof value === "object" &&
+                "props" in value &&
+                value.props &&
+                typeof value.props === "object" &&
+                "children" in value.props
+            ) {
+                return asString(
+                    (value.props as { children?: unknown }).children
+                );
+            }
+            return "";
+        };
 
         if (answerElement.props && answerElement.props.children) {
             const children = answerElement.props.children;
-
-            if (Array.isArray(children)) {
-                answer = children
-                    .map((child: any) => {
-                        if (typeof child === "string") return child;
-                        if (child && child.props && child.props.children) {
-                            if (typeof child.props.children === "string")
-                                return child.props.children;
-                            if (Array.isArray(child.props.children)) {
-                                return child.props.children.join(" ");
-                            }
-                        }
-                        return "";
-                    })
-                    .filter(Boolean)
-                    .join(" ");
-            } else if (typeof children === "string") {
-                answer = children;
-            } else if (
-                children &&
-                typeof children === "object" &&
-                "props" in children &&
-                children.props &&
-                children.props.children
-            ) {
-                if (typeof children.props.children === "string") {
-                    answer = children.props.children;
-                }
-            }
+            answer = asString(children);
         }
     }
 

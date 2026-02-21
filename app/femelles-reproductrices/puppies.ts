@@ -13,7 +13,7 @@ export type Puppy = {
 
 export const puppies: Puppy[] = [
     {
-        name: "ROYAL POMSKY 'ALOU'",
+        name: "'ALOU'",
         coat: "Pomsky F3 (parents F2 - ADN Poméranian / Husky)",
         color: "Noire, grise et blanche",
         size: "Toy",
@@ -31,7 +31,7 @@ export const puppies: Puppy[] = [
         images: ["ALOU-pomsky-toy-f3.webp"]
     },
     {
-        name: "ROYAL POMSKY 'BAMBOU'",
+        name: "'BAMBOU'",
         coat: "Pomsky F5 (ADN Poméranian / Husky)",
         color: "Noire et blanche",
         size: "Toy",
@@ -50,7 +50,7 @@ export const puppies: Puppy[] = [
         images: ["BAMBOU-pomsky-miniature-f5.webp"]
     },
     {
-        name: "ROYAL POMSKY 'BANDIT'",
+        name: "'BANDIT'",
         coat: "Pomsky F5+ (père F5, mère F4 - ADN Poméranian / Husky)",
         color: "Bleue (robe exotique)",
         size: "Toy",
@@ -70,7 +70,7 @@ export const puppies: Puppy[] = [
         images: ["BANDIT-pomsky-toy-f5.webp"]
     },
     {
-        name: "ROYAL POMSKY 'BEAUTY'",
+        name: "'BEAUTY'",
         coat: "Pomsky F4 (ADN Poméranian / Husky)",
         color: "Noire et blanche",
         size: "Mini",
@@ -89,7 +89,7 @@ export const puppies: Puppy[] = [
         images: ["BEAUTY-pomsky-miniature-f4.webp"]
     },
     {
-        name: "ROYAL POMSKY 'CHARM'",
+        name: "'CHARM'",
         coat: "Pomsky F3 (ADN Poméranian / Husky)",
         color: "Noire et blanche",
         size: "Toy",
@@ -108,7 +108,7 @@ export const puppies: Puppy[] = [
         images: ["pages/reproducteurs/charm-de-droite-pomsky.webp","pages/reproducteurs/charm-de-face.webp","pages/reproducteurs/CHARM-pomsky-toy-f3.webp"]
     },
     {
-        name: "ROYAL POMSKY 'INUIT'",
+        name: "'INUIT'",
         coat: "Pomsky F5 (père F4, mère F4 - ADN Poméranian / Husky)",
         color: "Chocolat et blanc",
         size: "Toy",
@@ -128,7 +128,7 @@ export const puppies: Puppy[] = [
         images: ["INUIT-pomsky-toy-f5.webp"]
     },
     {
-        name: "ROYAL POMSKY 'MOGU'",
+        name: "'MOGU'",
         coat: "Pomsky F4 (ADN Poméranian / Husky)",
         color: "Noire et blanche",
         size: "Miniature",
@@ -147,7 +147,7 @@ export const puppies: Puppy[] = [
         images: ["MOGU-pomsky-miniature-f4.webp"]
     },
     {
-        name: "ROYAL POMSKY 'PWEEK'",
+        name: "'PWEEK'",
         coat: "Pomsky F3 (ADN Poméranian / Husky)",
         color: "Noire et blanche",
         size: "Toy",
@@ -166,7 +166,7 @@ export const puppies: Puppy[] = [
         images: ["PWEEK-pomsky-toy-f3.webp"]
     },
     {
-        name: "ROYAL POMSKY 'SALLY'",
+        name: "'SALLY'",
         coat: "Pomsky (ADN Poméranian / Husky)",
         color: "Chocolat et blanc (porteuse bleu et lavande)",
         size: "Mini",
@@ -185,7 +185,7 @@ export const puppies: Puppy[] = [
         images: ["SALLY-pomsky-miniature.webp"]
     },
     {
-        name: "ROYAL POMSKY 'SHADOW'",
+        name: "'SHADOW'",
         coat: "Pomsky F4 (ADN Poméranian / Husky)",
         color: "Noir et blanc (porteuse bleu et blanc)",
         size: "Mini",
@@ -203,7 +203,7 @@ export const puppies: Puppy[] = [
         images: ["SHADOW-pomsky-F4.webp"]
     },
     {
-        name: "ROYAL POMSKY 'SHANE'",
+        name: "'SHANE'",
         coat: "Pomsky F3 (ADN Poméranian / Husky)",
         color: "Bleu et blanc (coloration rare)",
         size: "Mini",
@@ -222,7 +222,7 @@ export const puppies: Puppy[] = [
         images: ["SHANE-pomsky-miniature-f3.webp"]
     },
     {
-        name: "ROYAL POMSKY 'SKY'",
+        name: "'SKY'",
         coat: "Pomsky F3+ (ADN Poméranian / Husky)",
         color: "Bleu et blanc (coloration rare)",
         size: "Mini",
@@ -241,7 +241,7 @@ export const puppies: Puppy[] = [
         images: ["SKY-pomsky-miniature-f3.webp"]
     },
     {
-        name: "ROYAL POMSKY 'SUSHI'",
+        name: "'SUSHI'",
         coat: "Pomsky F3 (parents F2 - ADN Poméranian / Husky)",
         color: "Grise et blanche",
         size: "Toy",
@@ -260,7 +260,7 @@ export const puppies: Puppy[] = [
         images: ["SUSHI-pomsky-toy-f3.webp"]
     },
     {
-        name: "ROYAL POMSKY 'WILLOW'",
+        name: "'WILLOW'",
         coat: "Pomsky F2 (ADN Poméranian / Husky)",
         color: "Bleue et blanche (rare)",
         size: "Toy",
