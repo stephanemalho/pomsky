@@ -160,7 +160,7 @@ export default async function BlogArticlePage({
                     <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">
                         {post.category}
                     </p>
-                    <h1 className="text-3xl md:text-5xl font-serif font-semibold leading-tight bg-linear-to-r from-foreground via-primary to-foreground text-transparent bg-clip-text">
+                    <h1 className="text-3xl md:text-5xl font-sans font-semibold leading-tight bg-linear-to-r from-foreground via-primary to-foreground text-transparent bg-clip-text">
                         {post.title}
                     </h1>
                     <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
@@ -202,7 +202,7 @@ export default async function BlogArticlePage({
                 <div className="space-y-12">
                     {post.sections.map((section) => (
                         <section key={section.subtitle} id={toSectionId(section.subtitle)}>
-                            <h2 className="text-2xl md:text-3xl font-serif font-semibold text-foreground mb-4">
+                            <h2 className="text-2xl md:text-3xl font-sans font-semibold text-foreground mb-4">
                                 {section.subtitle}
                             </h2>
                             <div className="space-y-4 leading-relaxed">
@@ -218,7 +218,7 @@ export default async function BlogArticlePage({
             {relatedPosts.length > 0 ? (
                 <section className="max-w-3xl mx-auto px-6 pb-10">
                     <div className="rounded-3xl border border-border bg-card p-6 md:p-8">
-                        <h2 className="text-xl md:text-2xl font-serif font-semibold text-foreground">
+                        <h2 className="text-xl md:text-2xl font-sans font-semibold text-foreground">
                             Articles liés
                         </h2>
                         <div className="mt-4 grid gap-3">
@@ -254,7 +254,7 @@ export default async function BlogArticlePage({
                                 post.author.name
                             )}
                         </p>
-                        <h3 className="mt-2 text-xl font-serif font-semibold text-foreground">
+                        <h3 className="mt-2 text-xl font-sans font-semibold text-foreground">
                             {post.author.name}
                         </h3>
                         <p className="text-sm text-muted-foreground">{post.author.role}</p>
