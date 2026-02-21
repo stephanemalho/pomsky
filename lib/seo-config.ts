@@ -366,7 +366,7 @@ export const sitemapPages = [
         url: "/",
         changefreq: "monthly",
         priority: 1.0,
-        lastmod: "2026-02-13"
+        lastmod: "2026-02-21"
     },
     {
         url: "/le-pomsky",
@@ -402,7 +402,7 @@ export const sitemapPages = [
         url: "/bien-etre-animal",
         changefreq: "monthly",
         priority: 0.7,
-        lastmod: "2026-02-13"
+        lastmod: "2026-02-21"
     },
     {
         url: "/contact",
