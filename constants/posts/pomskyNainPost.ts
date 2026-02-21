@@ -91,7 +91,7 @@ export const pomskyNainPost: BlogPost = {
         linkedinLabelPrefix: "Profil de"
     },
     date: "2026-02-13",
-    readTime: "9 min",
+    readTime: "5 min",
     category: "Race Pomsky",
     tags: [
         "pomsky nain",

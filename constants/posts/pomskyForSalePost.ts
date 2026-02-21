@@ -89,7 +89,7 @@ export const pomskyAVendrePost: BlogPost = {
         linkedinLabelPrefix: "Profil de"
     },
     date: "2026-02-13",
-    readTime: "10 min",
+    readTime: "4 min",
     category: "Adoption & élevage",
     tags: [
         "pomsky à vendre",

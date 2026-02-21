@@ -1,9 +1,12 @@
 import { siteConfig } from "./seo-config";
 
 function toAbsoluteUrl(pathOrUrl: string) {
-    return pathOrUrl.startsWith("http")
-        ? pathOrUrl
-        : `${siteConfig.siteUrl}${pathOrUrl}`;
+    const value = pathOrUrl.trim();
+    if (value.startsWith("http")) {
+        return value;
+    }
+    const normalizedPath = value.startsWith("/") ? value : `/${value}`;
+    return new URL(normalizedPath, siteConfig.siteUrl).toString();
 }
 
 const defaultImageUrl = toAbsoluteUrl(siteConfig.ogImage);
@@ -55,7 +58,7 @@ export function generateOrganizationSchema() {
             "@type": "PostalAddress",
             addressLocality: address.city,
             postalCode: address.postalCode,
-            addressCountry: address.country
+            addressCountry: address.countryCode
         },
         additionalProperty: [
             {
@@ -99,7 +102,7 @@ export function generateLocalBusinessSchema() {
             "@type": "PostalAddress",
             addressLocality: address.city,
             postalCode: address.postalCode,
-            addressCountry: address.country,
+            addressCountry: address.countryCode,
             ...(siteConfig.location?.region
                 ? { addressRegion: siteConfig.location.region }
                 : {})

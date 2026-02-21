@@ -63,7 +63,8 @@ export const siteConfig = {
         address: {
             city: "Dommartin-lès-Cuiseaux",
             postalCode: "71480",
-            country: "France"
+            country: "France",
+            countryCode: "FR"
         }
     },
 

@@ -82,7 +82,7 @@ export const dogAdnTestPost: BlogPost = {
         linkedinLabelPrefix: "Profil de"
     },
     date: "2026-02-13",
-    readTime: "8 min",
+    readTime: "4 min",
     category: "Santé & génétique",
     tags: [
         "test ADN chien",

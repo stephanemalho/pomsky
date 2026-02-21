@@ -68,7 +68,7 @@ export const spitzNainPost: BlogPost = {
         linkedinLabelPrefix: "Profil de"
     },
     date: "2026-02-13",
-    readTime: "8 min",
+    readTime: "3 min",
     category: "Races de chiens",
     tags: [
         "spitz nain",

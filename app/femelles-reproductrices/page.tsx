@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge"
 import { FAQSection } from "@/components/faq"
 import { faqReproducteurs } from "@/lib/faq-data"
 import { Dog, PawPrint, Ruler, Weight } from "lucide-react"
-import { generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema-generators"
+import { generateBreadcrumbSchema, generateFAQSchema, generateReproductorSchema } from "@/lib/schema-generators"
 import ImageCarousel from "@/components/client/carousel/ImageCarousel"
 import type { Metadata } from "next"
 import { buildOpenGraph, buildTwitter, pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
@@ -47,6 +47,18 @@ export default function NosChiotsPage() {
         { name: "Nos reproducteurs", url: siteConfig.pages.reproductors },
     ])
     const faqSchema = generateFAQSchema(convertFAQsToSchema(faqReproducteurs))
+    const reproductorGraphSchema = {
+        "@context": "https://schema.org",
+        "@graph": puppies.map((puppy) =>
+            generateReproductorSchema({
+                name: puppy.name,
+                description: puppy.description,
+                color: puppy.color,
+                size: puppy.size,
+                image: puppy.images[0] ?? siteConfig.ogImage,
+            })
+        ),
+    }
     const lastMod = returnLastmod(siteConfig.pages.reproductors)
 
 
@@ -60,6 +72,10 @@ export default function NosChiotsPage() {
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(reproductorGraphSchema) }}
             />
 
             <div className="py-16">
@@ -165,7 +181,6 @@ export default function NosChiotsPage() {
         </>
     )
 }
-
 
 
 

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 import BlogList from "@/app/blog/_components/BlogList";
-import { buildOpenGraph, pageMetadata, siteConfig } from "@/lib/seo-config";
+import { buildOpenGraph, buildTwitter, pageMetadata, siteConfig } from "@/lib/seo-config";
 
 export const metadata: Metadata = {
     title: pageMetadata.blog.title,
@@ -25,12 +25,11 @@ export const metadata: Metadata = {
             },
         ],
     }),
-    twitter: {
-        card: "summary_large_image",
+    twitter: buildTwitter({
         title: pageMetadata.blog.title,
         description: pageMetadata.blog.description,
-        images: [new URL(siteConfig.ogImage, siteConfig.siteUrl).toString()],
-    },
+        imageUrl: new URL(siteConfig.ogImage, siteConfig.siteUrl).toString(),
+    }),
 };
 
 export default function PomskyBlogPage() {

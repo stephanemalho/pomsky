@@ -5,7 +5,7 @@ import Link from "next/link"
 import type { Metadata } from "next"
 import { buildOpenGraph, buildTwitter, pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
 import { pageContent } from "@/lib/page-content"
-import { generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema-generators"
+import { generateBreadcrumbSchema, generateFAQSchema, generatePuppyListSchema, generatePuppySchema } from "@/lib/schema-generators"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
 import { puppies } from "./puppies"
 import { Card, CardContent } from "@/components/ui/card"
@@ -47,6 +47,27 @@ export default function NosChiotsPage() {
         { name: "Nos chiots", url: siteConfig.pages.puppies },
     ])
     const faqSchema = generateFAQSchema(convertFAQsToSchema(faqNosChiots))
+    const puppyListSchema = generatePuppyListSchema(
+        puppies.map((puppy) => ({
+            name: puppy.name,
+            description: puppy.description,
+            color: puppy.color,
+            size: puppy.size,
+            image: puppy.images[0] ?? siteConfig.ogImage,
+        }))
+    )
+    const puppyGraphSchema = {
+        "@context": "https://schema.org",
+        "@graph": puppies.map((puppy) =>
+            generatePuppySchema({
+                name: puppy.name,
+                description: puppy.description,
+                color: puppy.color,
+                size: puppy.size,
+                image: puppy.images[0] ?? siteConfig.ogImage,
+            })
+        ),
+    }
     const lastMod = returnLastmod(siteConfig.pages.puppies)
 
     return (
@@ -59,6 +80,14 @@ export default function NosChiotsPage() {
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(puppyListSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(puppyGraphSchema) }}
             />
 
             <div className="py-16 ">

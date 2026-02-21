@@ -89,7 +89,7 @@ export const pomskyRenardPost: BlogPost = {
         linkedinLabelPrefix: "Profil de"
     },
     date: "2026-02-13",
-    readTime: "9 min",
+    readTime: "4 min",
     category: "Variétés & apparences",
     tags: [
         "pomsky renard",

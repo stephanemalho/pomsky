@@ -82,7 +82,7 @@ export const pomskyLifeExpectancyPost: BlogPost = {
         linkedinLabelPrefix: "Profil de"
     },
     date: "2026-02-13",
-    readTime: "10 min",
+    readTime: "4 min",
     category: "Santé & bien-être",
     tags: [
         "durée de vie pomsky",

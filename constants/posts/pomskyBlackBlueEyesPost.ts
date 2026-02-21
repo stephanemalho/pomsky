@@ -89,7 +89,7 @@ export const pomskyNoirYeuxBleusPost: BlogPost = {
         linkedinLabelPrefix: "Profil de"
     },
     date: "2026-02-13",
-    readTime: "10 min",
+    readTime: "5 min",
     category: "Variétés & apparences",
     tags: [
         "pomsky noir",
