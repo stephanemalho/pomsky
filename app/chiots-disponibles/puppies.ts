@@ -19,7 +19,7 @@ export type Puppy = {
 
 export const puppies: Puppy[] = [
     {
-        name: "ALUNA' de ROYAL POMSKY",
+        name: "ALUNA",
         coat: "Pomsky F5 (ADN Poméranian / Husky)",
         sexe: "Femelle",
         color: "Noire et blanche",
@@ -47,13 +47,13 @@ export const puppies: Puppy[] = [
         isReserved: true
     },
     {
-        name: "THOR' de ROYAL POMSKY",
+        name: "THOR",
         coat: "Pomsky F5 (ADN Poméranian / Husky)",
         color: "RARE bleue et blanche",
         size: "miniature",
         ruler: "Pelage en cours de développement",
         weight: " 6-8kg adulte",
-        sexe: "male",
+        sexe: "Mâle",
         parents: "Parents : SHADOW & BANDIT",
         readyDate: "Disponible à partir du 15 mars 2026",
         age: "Né le 10 janvier 2026",
@@ -76,10 +76,10 @@ export const puppies: Puppy[] = [
         linkTo: " https://forms.gle/oQT8xEvuTFgm753TA"
     },
     {
-        name: "VUK' de ROYAL POMSKY",
+        name: "VUK",
         coat: "Pomsky F5 (ADN Poméranian / Husky)",
         color: "Noire et blanche",
-        sexe: "Femmelle",
+        sexe: "Femelle",
         size: "miniature à petit standard ",
         ruler: "Pelage fluffy",
         weight: "9-10kg",
@@ -105,7 +105,7 @@ export const puppies: Puppy[] = [
         linkTo: "https://forms.gle/wtcxuo84YEQzposV9"
     },
     {
-        name: "ASH' de ROYAL POMSKY",
+        name: "ASH",
         coat: "Pomsky F5 (ADN Poméranian / Husky)",
         color: "Noire et blanche",
         sexe: "Mâle",
