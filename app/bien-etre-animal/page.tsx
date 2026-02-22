@@ -99,7 +99,7 @@ export default function SejoursPage() {
                             <div className="flex flex-col items-center justify-center p-2 md:flex-row">
                                 <Dog className="h-4 w-4" />
                                 {/* <span>6 chiots attendus</span> */}
-                                <span className="ml-2">La nouvelle portée déjà reservée <Link href="/contact" className="text-blue-700 underline hover:text-blue-500">(inscrivez vous pour la prochaine)</Link></span>
+                                <span className="ml-2">La portée de février 2026 est déjà reservée <Link href="/contact" className="text-blue-700 underline hover:text-blue-500">(inscrivez vous pour la prochaine)</Link></span>
                             </div>
                         </div>
                     </section>
