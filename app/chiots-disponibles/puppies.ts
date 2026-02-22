@@ -41,7 +41,7 @@ export const puppies: Puppy[] = [
         images: [
             "pages/puppies/ALUNA-pomsky-right.webp",
             "pages/puppies/ALUNA-pomsky-6week-pet.webp",
-            "pages/puppies/ALUNA-puppy-eyes-open.webp",
+            "pages/puppies/ALUNA-puppy-eyes-open.webp"
         ],
         linkTo: "https://forms.gle/aDbQtgwXUtoaH5QFA",
         isReserved: true
@@ -67,11 +67,11 @@ export const puppies: Puppy[] = [
         ],
         health: ["Suivi vétérinaire en cours"],
         images: [
-            "pages/puppies/THOR-puppy-eye-open.webp",
-            "pages/puppies/THOR-male-pomsky-left.webp",
             "pages/puppies/THOR-6-week-puppy-profile.webp",
             "pages/puppies/THOR-6-week-puppy-paw-rased.webp",
-            "pages/puppies/THOR-pet-for-sale-rpyal-pomsky.webp"
+            "pages/puppies/THOR-pet-for-sale-rpyal-pomsky.webp",
+            "pages/puppies/THOR-puppy-eye-open.webp",
+            "pages/puppies/THOR-male-pomsky-left.webp"
         ],
         linkTo: " https://forms.gle/oQT8xEvuTFgm753TA"
     },
@@ -96,10 +96,10 @@ export const puppies: Puppy[] = [
         ],
         health: ["Suivi vétérinaire en cours"],
         images: [
-            "pages/puppies/VUK-pomsky-face.webp",
-            "pages/puppies/VUK-pomsky-left.webp",
             "pages/puppies/VUK-pomsky-right-side.webp",
             "pages/puppies/VUK-snif-the-floor.webp",
+            "pages/puppies/VUK-pomsky-face.webp",
+            "pages/puppies/VUK-pomsky-left.webp",
             "pages/puppies/VUK-pomsky-left-side.webp"
         ],
         linkTo: "https://forms.gle/wtcxuo84YEQzposV9"
@@ -116,7 +116,7 @@ export const puppies: Puppy[] = [
         readyDate: "Disponible à partir du 15 mars 2026",
         age: "Né le 10 janvier 2026",
         description:
-        "Ash est un mâle Pomsky F5 issu du mariage entre Shadow et Bandit. Sa robe noire et blanche est sublime et brillante, rappelle celle de sa maman Shadow, son caractère est affectueux, proche de l'humain et très sociable.",
+            "Ash est un mâle Pomsky F5 issu du mariage entre Shadow et Bandit. Sa robe noire et blanche est sublime et brillante, rappelle celle de sa maman Shadow, son caractère est affectueux, proche de l'humain et très sociable.",
         highlights: [
             "Mâle",
             "Robe noire et blanche",
@@ -132,6 +132,7 @@ export const puppies: Puppy[] = [
             "pages/puppies/ASH-femal-poppy-profile.webp",
             "pages/puppies/ASH-popppy-pomsky-5-week.webp"
         ],
-        linkTo: "https://forms.gle/PCvEkzSfpdWTXt8A9"
+        linkTo: "https://forms.gle/PCvEkzSfpdWTXt8A9",
+        isReserved: true
     }
 ];
