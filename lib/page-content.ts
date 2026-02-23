@@ -22,11 +22,11 @@ export const pageContent = {
         googToKnow: "Adopter un Pomsky : ce qu'il faut savoir"
     },
     puppies: {
-        h1: "Nos chiots disponibles",
+        h1: "Nos chiots Pomsky disponibles",
         description:
-            "Chez Royal POMSKY, chaque naissance est le fruit d'un choix conscient, réfléchi et profondément respectueux du bien-être animal.",
+            "Les chiots Pomsky présentés sur cette page sont proposés à l'adoption chez Royal POMSKY, dans un cadre professionnel et réglementé. Notre élevage assure un suivi vétérinaire rigoureux et un accompagnement personnalisé des familles.",
         descriptionSecondary:
-            "Notre élevage est dédié aux pomsky Toy rares et exotiques, élevés avec amour, patience et exigence, tant sur le plan de la santé que de l'équilibre émotionnel."
+            "Notre élevage est dédié aux pomsky Toy des trois formats (Standard, Mini et Toy), trouvez sur cette page la liste des chiots disponible à la reservation"
     },
     reproductors: {
         h1: "Nos chiens reproducteurs",

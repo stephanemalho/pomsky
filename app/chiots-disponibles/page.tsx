@@ -54,6 +54,8 @@ export default function NosChiotsPage() {
             color: puppy.color,
             size: puppy.size,
             image: puppy.images[0] ?? siteConfig.ogImage,
+            sexe: puppy.sexe,
+            isReserved: puppy.isReserved
         }))
     )
     const lastMod = returnLastmod(siteConfig.pages.puppies)
@@ -87,6 +89,14 @@ export default function NosChiotsPage() {
                         <div className="w-24 h-1 bg-primary mx-auto rounded-full" aria-hidden="true" />
                     </section>
                     {/* <NoAvailable /> */}
+                    <section className="max-w-4xl mx-auto bg-muted/30 border border-muted rounded-2xl p-8 md:p-10 space-y-4 text-left">
+                        <h2 className="text-xl md:text-2xl font-semibold leading-tight">
+                            Un processus d'adoption transparent et accompagné
+                        </h2>
+                        <p className="text-muted-foreground">
+                            Chaque adoption chez Royal POMSKY s'inscrit dans un parcours réfléchi : échanges préalables avec les familles, conseils personnalisés, transparence sur les lignées et accompagnement avant et après l'arrivée du chiot. Cette approche garantit une adoption durable et respectueuse du bien-être animal.
+                        </p>
+                    </section>
                     <div className="grid gap-10 my-12">
                         {puppies.map((puppy, index) => (
                             <Card

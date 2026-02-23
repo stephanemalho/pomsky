@@ -158,6 +158,8 @@ export function generatePuppyListSchema(
         color: string;
         size: string;
         image: string;
+        isReserved?: boolean;
+        sexe:string
     }>
 ) {
     return {
@@ -171,8 +173,21 @@ export function generatePuppyListSchema(
             "@type": "ListItem",
             position: index + 1,
             name: puppy.name,
-            url: `${siteConfig.siteUrl}/chiots-disponibles`,
-            image: toAbsoluteUrl(puppy.image)
+            description: puppy.description,
+            image: toAbsoluteUrl(puppy.image),
+            additionalProperty: [
+                { "@type": "PropertyValue", name: "Sexe", value: puppy.sexe },
+                {
+                    "@type": "PropertyValue",
+                    name: "Couleur",
+                    value: puppy.color
+                },
+                {
+                    "@type": "PropertyValue",
+                    name: "Disponibilité",
+                    value: puppy.isReserved ? "Réservé" : "Disponible"
+                }
+            ]
         }))
     };
 }
