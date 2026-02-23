@@ -177,17 +177,19 @@ export const buildOpenGraph = ({
         type,
         ...(type === "article" && publishedTime ? { publishedTime } : {}),
         ...(type === "article" && authors ? { authors } : {}),
+        // Put JPEG first for better compatibility with social scrapers
+        // (e.g. WhatsApp) that may only read the first og:image.
         images: hasJpg
             ? normalizedImages
             : [
-                  ...normalizedImages,
                   {
                       url: jpgFallbackUrl,
                       width: siteConfig.ogImageWidth,
                       height: siteConfig.ogImageHeight,
                       alt: siteConfig.ogImageAlt,
                       type: "image/jpeg"
-                  }
+                  },
+                  ...normalizedImages
               ]
     };
 };
@@ -215,9 +217,10 @@ export const buildTwitter = ({
         card: "summary_large_image",
         title,
         description,
+        // Put JPEG first for social clients that are inconsistent with WebP.
         images: /\.jpe?g($|\?)/i.test(primaryImage)
             ? [primaryImage]
-            : [primaryImage, jpgFallbackUrl]
+            : [jpgFallbackUrl, primaryImage]
     };
 };
 
