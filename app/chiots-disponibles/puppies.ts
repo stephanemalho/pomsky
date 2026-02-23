@@ -78,18 +78,18 @@ export const puppies: Puppy[] = [
     {
         name: "VUK",
         coat: "Pomsky F5 (ADN Poméranian / Husky)",
-        color: "Noire et blanche",
-        sexe: "Femelle",
+        color: "Noir et blanc",
+        sexe: "Mâle",
         size: "miniature à petit standard ",
         ruler: "Pelage fluffy",
         weight: "9-10kg",
         parents: "Parents : SHADOW & BANDIT",
         readyDate: "Disponible à partir du 15 mars 2026",
-        age: "Née le 10 janvier 2026",
+        age: "Né le 10 janvier 2026",
         description:
-            "Vuk est une femmelle Pomsky F5 aux yeux Vairons et elle est le plus grand chiot de la portée : gourmand, joueur et affectueux, elle ressemble beaucoup à sa maman Shadow .",
+            "Vuk est un mâle Pomsky F5 aux yeux Vairons et il est le plus grand chiot de la portée : gourmand, joueur et affectueux, il ressemble beaucoup à sa maman Shadow .",
         highlights: [
-            "Femmelle",
+            "Mâle",
             "Masque Fleur de Lys",
             "Vairons",
             "Taille miniature"
