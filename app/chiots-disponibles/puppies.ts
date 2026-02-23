@@ -67,10 +67,10 @@ export const puppies: Puppy[] = [
         ],
         health: ["Suivi vétérinaire en cours"],
         images: [
-            "pages/puppies/THOR-6-week-puppy-profile.webp",
+            "pages/puppies/THOR-puppy-eye-open.webp",
             "pages/puppies/THOR-6-week-puppy-paw-rased.webp",
             "pages/puppies/THOR-pet-for-sale-rpyal-pomsky.webp",
-            "pages/puppies/THOR-puppy-eye-open.webp",
+            "pages/puppies/THOR-6-week-puppy-profile.webp",
             "pages/puppies/THOR-male-pomsky-left.webp"
         ],
         linkTo: " https://forms.gle/oQT8xEvuTFgm753TA"
@@ -96,10 +96,10 @@ export const puppies: Puppy[] = [
         ],
         health: ["Suivi vétérinaire en cours"],
         images: [
-            "pages/puppies/VUK-pomsky-right-side.webp",
-            "pages/puppies/VUK-snif-the-floor.webp",
             "pages/puppies/VUK-pomsky-face.webp",
             "pages/puppies/VUK-pomsky-left.webp",
+            "pages/puppies/VUK-pomsky-right-side.webp",
+            "pages/puppies/VUK-snif-the-floor.webp",
             "pages/puppies/VUK-pomsky-left-side.webp"
         ],
         linkTo: "https://forms.gle/wtcxuo84YEQzposV9"
