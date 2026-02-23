@@ -151,40 +151,6 @@ export function generateFAQSchema(
     };
 }
 
-export function generatePuppySchema(puppy: {
-    name: string;
-    description: string;
-    color: string;
-    size: string;
-    image: string;
-    price?: number;
-}) {
-    return {
-        "@context": "https://schema.org",
-        "@type": "Product",
-        name: puppy.name,
-        description: puppy.description,
-        image: toAbsoluteUrl(puppy.image),
-        brand: {
-            "@type": "Brand",
-            name: siteConfig.name
-        },
-        manufacturer: {
-            "@type": "Organization",
-            name: siteConfig.name,
-            url: siteConfig.siteUrl
-        },
-        offers: puppy.price
-            ? {
-                  "@type": "Offer",
-                  url: `${siteConfig.siteUrl}/contact`,
-                  priceCurrency: "EUR",
-                  price: puppy.price.toString()
-              }
-            : undefined
-    };
-}
-
 export function generatePuppyListSchema(
     puppies: Array<{
         name: string;

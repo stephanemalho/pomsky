@@ -5,7 +5,7 @@ import Link from "next/link"
 import type { Metadata } from "next"
 import { buildOpenGraph, buildTwitter, pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
 import { pageContent } from "@/lib/page-content"
-import { generateBreadcrumbSchema, generateFAQSchema, generatePuppyListSchema, generatePuppySchema } from "@/lib/schema-generators"
+import { generateBreadcrumbSchema, generateFAQSchema, generatePuppyListSchema } from "@/lib/schema-generators"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
 import { puppies } from "./puppies"
 import { Card, CardContent } from "@/components/ui/card"
@@ -56,18 +56,6 @@ export default function NosChiotsPage() {
             image: puppy.images[0] ?? siteConfig.ogImage,
         }))
     )
-    const puppyGraphSchema = {
-        "@context": "https://schema.org",
-        "@graph": puppies.map((puppy) =>
-            generatePuppySchema({
-                name: puppy.name,
-                description: puppy.description,
-                color: puppy.color,
-                size: puppy.size,
-                image: puppy.images[0] ?? siteConfig.ogImage,
-            })
-        ),
-    }
     const lastMod = returnLastmod(siteConfig.pages.puppies)
 
     return (
@@ -85,11 +73,6 @@ export default function NosChiotsPage() {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(puppyListSchema) }}
             />
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(puppyGraphSchema) }}
-            />
-
             <div className="py-16 ">
                 <div className="container mx-auto my-12">
                     <section className="text-center space-y-4 mb-12">

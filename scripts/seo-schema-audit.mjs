@@ -11,9 +11,8 @@ const schemaFnToType = {
   generateContactPointSchema: "ContactPoint",
   generateFAQSchema: "FAQPage",
   generateBreadcrumbSchema: "BreadcrumbList",
-  generatePuppySchema: "Product",
   generatePuppyListSchema: "ItemList",
-  generateReproductorSchema: "Product",
+  generateReproductorSchema: "Person",
 };
 
 const globalSchemaTypes = new Set(["Organization", "WebSite"]);

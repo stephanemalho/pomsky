@@ -73,7 +73,7 @@ export const puppies: Puppy[] = [
             "pages/puppies/THOR-6-week-puppy-profile.webp",
             "pages/puppies/THOR-male-pomsky-left.webp"
         ],
-        linkTo: " https://forms.gle/oQT8xEvuTFgm753TA"
+        linkTo: "https://forms.gle/oQT8xEvuTFgm753TA"
     },
     {
         name: "VUK",
