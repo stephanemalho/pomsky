@@ -9,7 +9,7 @@ import { buildOpenGraph, buildTwitter, pageMetadata, siteConfig } from "@/lib/se
 import type { BlogPost } from "@/constants/blog/blogTypes";
 
 type BlogArticlePageProps = {
-    params: { slug: string[] } | Promise<{ slug: string[] }>;
+    params: Promise<{ slug: string[] }>;
 };
 
 const getPostBySlug = (slug: string): BlogPost | undefined =>

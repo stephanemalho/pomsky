@@ -6,7 +6,7 @@ import { blog } from "@/constants/blog/blog";
 import { buildOpenGraph, buildTwitter, pageMetadata, siteConfig } from "@/lib/seo-config";
 
 type PomskyThemePageProps = {
-    params: { theme: string } | Promise<{ theme: string }>;
+    params: Promise<{ theme: string }>;
 };
 
 export function generateStaticParams() {
