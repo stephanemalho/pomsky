@@ -85,13 +85,13 @@ export const puppies: Puppy[] = [
         weight: "9-10kg",
         parents: "Parents : SHADOW & BANDIT",
         readyDate: "Disponible à partir du 15 mars 2026",
-        age: "Né le 10 janvier 2026",
+        age: "Née le 10 janvier 2026",
         description:
-            "Vuk est un mâle Pomsky F5 aux yeux bleus et il est le plus grand chiot de la portée : gourmand, joueur et affectueux, il ressemble beaucoup à sa maman Shadow .",
+            "Vuk est une femmelle Pomsky F5 aux yeux Vairons et elle est le plus grand chiot de la portée : gourmand, joueur et affectueux, elle ressemble beaucoup à sa maman Shadow .",
         highlights: [
-            "Mâle",
+            "Femmelle",
             "Masque Fleur de Lys",
-            "Bleus",
+            "Vairons",
             "Taille miniature"
         ],
         health: ["Suivi vétérinaire en cours"],

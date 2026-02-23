@@ -11,6 +11,8 @@ import { convertFAQsToSchema } from "@/lib/faq-utils"
 import { pomskyBenefits } from "@/components/content/home/pomsky/pomskyBenefits"
 import { pageContent } from "@/lib/page-content"
 
+const HOME_OG_IMAGE = "/pomsky-and-his-pet-family-parent.jpg"
+
 export const metadata: Metadata = {
   title: pageMetadata.home.title,
   description: pageMetadata.home.description,
@@ -21,18 +23,18 @@ export const metadata: Metadata = {
     url: siteConfig.siteUrl,
     images: [
       {
-        url: `${siteConfig.siteUrl}${siteConfig.ogImage}`,
-        alt: siteConfig.ogImageAlt,
+        url: `${siteConfig.siteUrl}${HOME_OG_IMAGE}`,
+        alt: "Pomsky et sa famille",
         width: siteConfig.ogImageWidth,
         height: siteConfig.ogImageHeight,
-        type: "image/webp",
+        type: "image/jpeg",
       },
     ],
   }),
   twitter: buildTwitter({
     title: pageMetadata.home.title,
     description: pageMetadata.home.description,
-    imageUrl: `${siteConfig.siteUrl}${siteConfig.ogImage}`,
+    imageUrl: `${siteConfig.siteUrl}${HOME_OG_IMAGE}`,
   }),
   alternates: {
     canonical: siteConfig.siteUrl,
