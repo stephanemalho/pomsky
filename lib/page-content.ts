@@ -37,9 +37,9 @@ export const pageContent = {
             "Chaque mariage est soigneusement réfléchi et réalisé exclusivement au sein de notre élevage, dans une démarche responsable visant à préserver la santé, l'équilibre émotionnel et le type propre aux pomsky Toy rares et exotiques."
     },
     presentation: {
-        h1: "L'élevage Royal POMSKY",
+        h1: "Une approche responsable de l'élevage du Pomsky",
         description:
-            "Élevage spécialisé Pomsky dans le Jura (39) : sélection attentive, santé suivie et chiots élevés au contact de leur famille."
+            "Cette page détaille nos choix d'élevage, nos critères et notre vision du bien-être de nos Pomsky."
     },
     eleveuses: {
         h1: "Les éleveuses de Royal POMSKY",

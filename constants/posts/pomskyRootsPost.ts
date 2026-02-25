@@ -26,7 +26,7 @@ export const pomskyHistoryPost: BlogPost = {
         {
             subtitle: "La naissance officielle du Pomsky",
             paragraphs: [
-                "En 2013, en Arizona, les éleveuses Tressa Peterson et Joline Philipps obtiennent une première portée réussie de Pomskies.",
+                "En 2012, en Arizona, les éleveuses Tressa Peterson et Joline Philipps obtiennent une première portée réussie de Pomskies.",
                 "La même année, le Pomsky Club of America est fondé, marquant un tournant majeur dans la reconnaissance et la popularité de cette nouvelle race hybride."
             ]
         },

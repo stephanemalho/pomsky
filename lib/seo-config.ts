@@ -402,13 +402,13 @@ export const sitemapPages = [
         url: "/",
         changefreq: "monthly",
         priority: 1.0,
-        lastmod: "2026-02-21"
+        lastmod: "2026-02-25"
     },
     {
         url: "/le-pomsky",
         changefreq: "monthly",
         priority: 0.75,
-        lastmod: "2026-02-13"
+        lastmod: "2026-02-25"
     },
     {
         url: "/chiots-disponibles",
@@ -426,7 +426,7 @@ export const sitemapPages = [
         url: "/presentation-elevage",
         changefreq: "monthly",
         priority: 0.7,
-        lastmod: "2026-02-13"
+        lastmod: "2026-02-25"
     },
     {
         url: "/presentation-eleveuses",

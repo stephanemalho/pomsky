@@ -188,11 +188,10 @@ export default function HomePage() {
                 </h2>
 
                 <p className="text-muted-foreground leading-relaxed">
-                  Alors que la création de la race commençait à arriver en France et s'effectuait par des croisements au résultat aléatoire, aux caractéristiques physiques et comportementales peu précises, <strong>nous avons fait le choix d'importer nos premiers Pomsky directement aux États Unis d'Amérique</strong> dans le but d'apporter aux futurs adoptants de nos chiots un physique prévisible, un comportement prévisible, et une construction de la race avec une stabilisation des le départ : chez nous, aucune place pour le hasard depuis le début.
+                  Alors que la création de la race commençait à arriver en France et s'effectuait par des croisements au résultat aléatoire, aux caractéristiques physiques et comportementales peu précises, <strong>nous avons fait le choix d'importer nos premiers Pomsky directement des États Unis d'Amérique</strong> dans le but d'apporter aux futurs adoptants de nos chiots un physique prévisible, un comportement prévisible, et une construction de la race avec une stabilisation des le départ : chez nous, aucune place pour le hasard depuis le début.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  <strong>Nos Pomsky sont uniques et font entièrement partie de notre univers</strong>, ils sont nos protégés ! Ils sont aimés et représentent notre passion et notre fierté, ils sont dans nos pensées permanentes, nous accompagnent à chaque instant.
-                  ils sont constamment au cœur de nos préoccupations.
+                  <strong>Nos Pomsky sont uniques et font entièrement partie de notre univers</strong>, ce sont nos protégés ! Ils sont aimés et représentent notre passion et notre fierté, ils sont dans nos pensées permanentes, nous accompagnent à chaque instant, et sont constamment au cœur de nos préoccupations.
                 </p>
 
                 <div className="space-y-2">

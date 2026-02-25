@@ -487,10 +487,10 @@ export default function dogPage() {
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Link
-                                href="/chiots-disponibles"
+                                href="/blog/pomsky"
                                 className="bg-primary text-white hover:bg-primary/80 px-6 py-3 rounded-md font-semibold dark:text-[#5b3a1a] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                             >
-                                Découvrir nos chiots
+                                En savoir plus sur le Pomsky 
                             </Link>
                             <Link
                                 href="/contact"

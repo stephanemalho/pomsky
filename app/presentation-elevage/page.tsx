@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { FAQSection } from "@/components/faq"
 import { faqPresentation } from "@/lib/faq-data"
-import { Heart, Leaf, Users, Star } from "lucide-react"
+import { Heart, Leaf, Star, HeartPulse, PawPrint, Stethoscope, Eye, Handshake } from "lucide-react"
 import Link from "next/link"
 import type { Metadata } from "next"
 import { buildOpenGraph, buildTwitter, pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
@@ -110,8 +110,20 @@ export default function PresentationPage() {
                                 className="text-xl md:text-2xl font-bold mb-4">Nos valeurs</h2>
                             <div className="w-24 h-1 bg-primary mx-auto rounded-full" aria-hidden="true" />
                         </div>
-
                         <div className="grid md:grid-cols-3 gap-8">
+                            <Card className="text-center bg-muted/80">
+                                <CardContent className="p-6">
+                                    <div className="flex justify-center mb-4">
+                                        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary">
+                                            <HeartPulse className="h-6 w-6 text-primary-foreground" />
+                                        </div>
+                                    </div>
+                                    <h3 className="text-xl font-semibold mb-2">Lien maternel & autonomie progressive</h3>
+                                    <p className="text-muted-foreground text-sm">
+                                        Les premières semaines se déroulent au contact de la mère, puis des phases de découverte progressive sont mises en place pour accompagner le chiot vers plus d'autonomie, sans rupture brutale.
+                                    </p>
+                                </CardContent>
+                            </Card>
                             <Card className="text-center bg-muted/80">
                                 <CardContent className="p-6">
                                     <div className="flex justify-center mb-4">
@@ -140,19 +152,7 @@ export default function PresentationPage() {
                                 </CardContent>
                             </Card>
 
-                            <Card className="text-center bg-muted/80">
-                                <CardContent className="p-6">
-                                    <div className="flex justify-center mb-4">
-                                        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary">
-                                            <Users className="h-6 w-6 text-primary-foreground" />
-                                        </div>
-                                    </div>
-                                    <h3 className="text-xl font-semibold mb-2">Transparence</h3>
-                                    <p className="text-muted-foreground text-sm">
-                                        Échanges clairs, conseils honnêtes et informations complètes avant, pendant et après l&apos;adoption.
-                                    </p>
-                                </CardContent>
-                            </Card>
+
                         </div>
                     </section>
 
@@ -195,7 +195,7 @@ export default function PresentationPage() {
                                 <Link
                                     href="/femelles-reproductrices"
                                     className="flex items-center bg-primary h-10 text-white hover:bg-primary/80 px-4 font-semibold  dark:text-[#5b3a1a] rounded-md w-fit"
-                                >Voir nos reproducteurs</Link>
+                                >Voir nos pomsky reproducteurs</Link>
                             </div>
                         </div>
                     </section>
@@ -241,16 +241,26 @@ export default function PresentationPage() {
                         <div className="grid md:grid-cols-2 gap-8">
                             <Card className="bg-muted/80">
                                 <CardContent className="p-6">
-                                    <h3 className="text-xl font-semibold mb-4">Bien-être animal</h3>
+                                    <div className="flex items-start gap-4 mb-4">
+                                        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-primary">
+                                            <PawPrint className="h-5 w-5 text-primary-foreground" aria-hidden="true" />
+                                        </div>
+                                        <h3 className="text-xl font-semibold">Bien-être animal</h3>
+                                    </div>
                                     <p className="text-muted-foreground text-sm leading-relaxed">
-                                        Rythmes respectés, sorties adaptées et activités d&apos;éveil pour des Pomsky sereins et curieux.
+                                        Élever des Pomsky ne consiste pas uniquement à faire naître des chiots. C'est un travail de sélection, d'observation et d'accompagnement, mené sur plusieurs années. Nos pomsky ont besoin d'un rythmes respectés, de sorties adaptées et d&apos;activités d&apos;éveil pour des Pomsky sereins et curieux.
                                     </p>
                                 </CardContent>
                             </Card>
 
                             <Card className="bg-muted/80">
                                 <CardContent className="p-6">
-                                    <h3 className="text-xl font-semibold mb-4">Suivi vétérinaire</h3>
+                                    <div className="flex items-start gap-4 mb-4">
+                                        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-primary">
+                                            <Stethoscope className="h-5 w-5 text-primary-foreground" aria-hidden="true" />
+                                        </div>
+                                        <h3 className="text-xl font-semibold">Suivi vétérinaire</h3>
+                                    </div>
                                     <p className="text-muted-foreground text-sm leading-relaxed">
                                         Suivi sanitaire complet, identification, vaccination, vemifuge, antiparasitaires, tests ADN du laboratoire EMBARK des parents, test de filiation du laboratoire ANTAGENE et conseils de santé transmis au moment du départ.
                                     </p>
@@ -259,16 +269,28 @@ export default function PresentationPage() {
 
                             <Card className="bg-muted/80">
                                 <CardContent className="p-6">
-                                    <h3 className="text-xl font-semibold mb-4">Transparence</h3>
+                                    <div className="flex items-start gap-4 mb-4">
+                                        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-primary">
+                                            <Eye className="h-5 w-5 text-primary-foreground" aria-hidden="true" />
+                                        </div>
+                                        <h3 className="text-xl font-semibold">Transparence</h3>
+                                    </div>
                                     <p className="text-muted-foreground text-sm leading-relaxed">
-                                        Informations claires, visites et visio, documents lisibles et échanges réguliers tout au long du parcours.
+                                        Nous partageons régulièrement des photos et nouvelles de l'évolution des chiots durant toute la période de sevrage.
+                                        Les familles peuvent suivre leur croissance, leurs premières découvertes et leur développement au fil des semaines.
+                                        Les échanges sont ouverts, les documents accessibles, et chaque étape peut être expliquée simplement, en toute confiance.
                                     </p>
                                 </CardContent>
                             </Card>
 
                             <Card className="bg-muted/80">
                                 <CardContent className="p-6">
-                                    <h3 className="text-xl font-semibold mb-4">Accompagnement</h3>
+                                    <div className="flex items-start gap-4 mb-4">
+                                        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-primary">
+                                            <Handshake className="h-5 w-5 text-primary-foreground" aria-hidden="true" />
+                                        </div>
+                                        <h3 className="text-xl font-semibold">Accompagnement</h3>
+                                    </div>
                                     <p className="text-muted-foreground text-sm leading-relaxed">
                                         Conseils personnalisés : guide pour l'accueil de votre chiot, kit de départ, conseil d'un éducateur canin agréé par notre réseau de connaissances ( éducation positive ) et disponibilité pour vous aider à chaque étape.
                                     </p>
@@ -310,4 +332,3 @@ export default function PresentationPage() {
         </>
     )
 }
-
