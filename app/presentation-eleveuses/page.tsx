@@ -39,6 +39,26 @@ export const metadata: Metadata = {
 }
 
 export default function PresentationEleveusesPage() {
+    type GalleryPriorityPolicy = {
+        mobile: boolean
+        tablet: boolean
+        desktop: boolean
+    }
+
+    const galleryHalfDesktopSizes =
+        "(min-width: 1536px) 340px, (min-width: 1280px) 300px, (min-width: 1024px) 260px, (min-width: 768px) calc(25vw - 2rem), calc(50vw - 1.25rem)"
+    const galleryHalfDesktopMobileFullSizes =
+        "(min-width: 1536px) 340px, (min-width: 1280px) 300px, (min-width: 1024px) 260px, (min-width: 768px) calc(25vw - 2rem), calc(100vw - 2rem)"
+    const galleryFullSizes =
+        "(min-width: 1536px) 700px, (min-width: 1280px) 620px, (min-width: 1024px) 520px, (min-width: 768px) calc(50vw - 2.5rem), calc(100vw - 2rem)"
+    const galleryImageQuality = 62
+    const resolveFetchPriority = (policy: GalleryPriorityPolicy): "high" | "auto" | "low" => {
+        if (policy.mobile && policy.tablet && policy.desktop) return "high"
+        if (policy.mobile || policy.tablet || policy.desktop) return "auto"
+        return "low"
+    }
+    const resolveLoading = (policy: GalleryPriorityPolicy): "eager" | "lazy" => (policy.mobile ? "eager" : "lazy")
+
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Accueil", url: "/" },
         { name: "Les éleveuses", url: siteConfig.pages.eleveuses },
@@ -50,31 +70,43 @@ export default function PresentationEleveusesPage() {
             src: "/assets/authors/aurelie-magnetisme-past-work.webp",
             alt: "Magnetisme première activité d'aurelie avant l'élevage de pomsky",
             className: "col-span-6 md:col-span-3 row-span-6 md:row-span-6",
+            sizes: galleryHalfDesktopMobileFullSizes,
+            priority: { mobile: true, tablet: true, desktop: true },
         },
         {
             src: "/assets/authors/aurelie-violette-elevage-royal-pomsky.webp",
             alt: "Aurélie avec un Pomsky",
             className: "col-span-3 md:col-span-3 row-span-3",
+            sizes: galleryHalfDesktopSizes,
+            priority: { mobile: false, tablet: true, desktop: true },
         },
         {
             src: "/assets/authors/aurelie-and-puppies-and-children.webp",
             alt: "Aurélie avec les enfants et les chiots jouant dans l'herbe",
             className: "col-span-3 md:col-span-3 row-span-3",
+            sizes: galleryHalfDesktopSizes,
+            priority: { mobile: false, tablet: false, desktop: true },
         },
         {
             src: "/assets/authors/aurelie-and-pomsky-see-view.webp",
             alt: "Aurélie avec un Pomsky assis au bord d'un lac",
             className: "col-span-3 md:col-span-3 row-span-3",
+            sizes: galleryHalfDesktopSizes,
+            priority: { mobile: false, tablet: false, desktop: false },
         },
         {
             src: "/assets/authors/aurelie-and-pomsky-on-a-bike.webp",
             alt: "Aurélie et un Pomsky prets pour la route",
             className: "col-span-3 md:col-span-3 row-span-3",
+            sizes: galleryHalfDesktopSizes,
+            priority: { mobile: false, tablet: false, desktop: false },
         },
         {
             src: "/assets/authors/aurelie-and-pomsky-walking-street.jpeg",
             alt: "Aurélie dans les rues chics promène un pomsky",
             className: "col-span-6 md:col-span-6 row-span-6 md:row-span-6",
+            sizes: galleryFullSizes,
+            priority: { mobile: false, tablet: false, desktop: false },
         },
     ]
     const marineGallery = [
@@ -82,31 +114,43 @@ export default function PresentationEleveusesPage() {
             src: "/assets/authors/marine-walking-dogs.jpeg",
             alt: "Marine en promenade des chiens",
             className: "col-span-6 md:col-span-3 row-span-6 md:row-span-6",
+            sizes: galleryHalfDesktopMobileFullSizes,
+            priority: { mobile: false, tablet: false, desktop: false },
         },
         {
             src: "/assets/authors/portrait-aurelie-and-pomsky.jpeg",
             alt: "Marine avec un Pomsky",
             className: "col-span-3 md:col-span-3 row-span-3",
+            sizes: galleryHalfDesktopSizes,
+            priority: { mobile: false, tablet: false, desktop: false },
         },
         {
             src: "/assets/authors/marine-in-a-chair-with-pomsky.webp",
             alt: "Marine sur une chaise avec son bebe pomsky",
             className: "col-span-3 md:col-span-3 row-span-3",
+            sizes: galleryHalfDesktopSizes,
+            priority: { mobile: false, tablet: false, desktop: false },
         },
         {
             src: "/assets/authors/marine-and-a-new-puppy.webp",
             alt: "Marine avec un Pomsky sur une chaise",
             className: "col-span-3 md:col-span-3 row-span-3",
+            sizes: galleryHalfDesktopSizes,
+            priority: { mobile: false, tablet: false, desktop: false },
         },
         {
             src: "/assets/authors/marine-and-pomsky-in-grass.webp",
             alt: "Marine et un pomsky dans le jardin vert",
             className: "col-span-3 md:col-span-3 row-span-3",
+            sizes: galleryHalfDesktopSizes,
+            priority: { mobile: false, tablet: false, desktop: false },
         },
         {
             src: "/assets/authors/marine-and-a-puppy-pomsky-in-sofa.jpeg",
             alt: "Marine sur le canapé avec un chiot pomsky",
             className: "col-span-6 md:col-span-6 row-span-6 md:row-span-6",
+            sizes: galleryFullSizes,
+            priority: { mobile: false, tablet: false, desktop: false },
         },
     ]
 
@@ -154,11 +198,11 @@ export default function PresentationEleveusesPage() {
                                                 src={image.src}
                                                 alt={image.alt}
                                                 fill
-                                                sizes="(min-width: 1280px) 360px, (min-width: 1024px) 320px, (min-width: 768px) 40vw, 90vw"
+                                                sizes={image.sizes}
+                                                quality={galleryImageQuality}
                                                 className="object-cover [image-orientation:from-image]"
-                                                priority={index === 0}
-                                                loading={index === 0 ? "eager" : "lazy"}
-                                                fetchPriority={index === 0 ? "high" : "auto"}
+                                                loading={resolveLoading(image.priority)}
+                                                fetchPriority={resolveFetchPriority(image.priority)}
                                             />
                                         </div>
                                     ))}
@@ -225,10 +269,11 @@ export default function PresentationEleveusesPage() {
                                                 src={image.src}
                                                 alt={image.alt}
                                                 fill
-                                                sizes="(min-width: 1280px) 360px, (min-width: 1024px) 320px, (min-width: 768px) 40vw, 90vw"
+                                                sizes={image.sizes}
+                                                quality={galleryImageQuality}
                                                 className="object-cover"
-                                                loading="lazy"
-                                                fetchPriority="auto"
+                                                loading={resolveLoading(image.priority)}
+                                                fetchPriority={resolveFetchPriority(image.priority)}
                                             />
                                         </div>
                                     ))}
@@ -299,8 +344,11 @@ export default function PresentationEleveusesPage() {
                                                     src="/BANDIT-pomsky-toy-f5.webp"
                                                     alt="Pomsky noir et blanc de g?n?ration F3"
                                                     fill
-                                                    sizes="(min-width: 1024px) 360px, 100vw"
+                                                    sizes="(min-width: 1280px) 360px, (min-width: 1024px) 320px, (min-width: 768px) 34vw, 100vw"
+                                                    quality={70}
                                                     className="object-cover"
+                                                    loading="lazy"
+                                                    fetchPriority="low"
                                                 />
                                             </div>
                                         </div>
