@@ -97,12 +97,12 @@ export const puppies: Puppy[] = [
         ],
         health: ["Suivi vétérinaire en cours"],
         images: [
-            "pages/puppies/VUK-pomsky-7-week.jpg",
-            "pages/puppies/VUK-pomsky-left-profile.jpg",
-            "pages/puppies/VUK-pomsky-face-side.jpg",
-            "pages/puppies/VUK-pomky-puppy.jpg",
-            "pages/puppies/Vuk-pomsky-available-for-adoption.jpg",
-            "pages/puppies/VUK-pomsky-from-royal-pomsky.jpg"
+            "pages/puppies/VUK-pomsky-7-week.webp",
+            "pages/puppies/VUK-pomsky-left-profile.webp",
+            "pages/puppies/VUK-pomsky-face-side.webp",
+            "pages/puppies/VUK-pomky-puppy.webp",
+            "pages/puppies/Vuk-pomsky-available-for-adoption.webp",
+            "pages/puppies/VUK-pomsky-from-royal-pomsky.webp"
         ],
         linkTo: "https://forms.gle/wtcxuo84YEQzposV9"
     },
