@@ -81,27 +81,28 @@ export const puppies: Puppy[] = [
         coat: "Pomsky F5 (ADN Poméranian / Husky)",
         color: "Noir et blanc",
         sexe: "Mâle",
-        size: "miniature à petit standard ",
+        size: "miniature",
         ruler: "Pelage fluffy",
-        weight: "9-10kg",
+        weight: "7-8kg",
         parents: "Parents : SHADOW & BANDIT",
         readyDate: "Disponible à partir du 15 mars 2026",
         age: "Né le 10 janvier 2026",
         description:
-            "Vuk est un mâle Pomsky F5 aux yeux Vairons et il est le plus grand chiot de la portée : gourmand, joueur et affectueux, il ressemble beaucoup à sa maman Shadow .",
+            "Vuk est un mâle Pomsky F5 aux yeux Vairons et il est le plus grand chiot de la portée (il va faire 7 à 8kg adulte): gourmand, joueur et affectueux, il ressemble beaucoup à sa maman Shadow. Voici les caractéristiques de Vuk : un masque en Fleur de Lys, une robe noire et blanche, des yeux vairons (un bleu et un marron) et une taille miniature. Vuk est un chiot très sociable qui adore les câlins et les jeux avec les enfants. Protitez de cette liste de photos pour découvrir son évolution et son caractère attachant ! (à 7 semaines)",
         highlights: [
             "Mâle",
             "Masque Fleur de Lys",
             "Vairons",
-            "Taille miniature"
+            "Taille miniature",
         ],
         health: ["Suivi vétérinaire en cours"],
         images: [
-            "pages/puppies/VUK-pomsky-face.webp",
-            "pages/puppies/VUK-pomsky-left.webp",
-            "pages/puppies/VUK-pomsky-right-side.webp",
-            "pages/puppies/VUK-snif-the-floor.webp",
-            "pages/puppies/VUK-pomsky-left-side.webp"
+            "pages/puppies/VUK-pomsky-7-week.jpg",
+            "pages/puppies/VUK-pomsky-left-profile.jpg",
+            "pages/puppies/VUK-pomsky-face-side.jpg",
+            "pages/puppies/VUK-pomky-puppy.jpg",
+            "pages/puppies/Vuk-pomsky-available-for-adoption.jpg",
+            "pages/puppies/VUK-pomsky-from-royal-pomsky.jpg"
         ],
         linkTo: "https://forms.gle/wtcxuo84YEQzposV9"
     },
