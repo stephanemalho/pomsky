@@ -171,12 +171,18 @@ export default function NosChiotsPage() {
                                                         <a
                                                             target="_blank"
                                                             rel="noopener noreferrer"
-                                                            className="bg-primary text-primary-foreground shadow-xs hover:bg-primary/90 py-2 px-4 rounded-md"
+                                                            className="bg-primary text-primary-foreground shadow-xs hover:bg-primary/90 py-2 px-4 rounded-md text-center"
                                                             href={puppy.linkTo}
                                                         >
                                                             Réserver une visite ou demander plus de photos/vidéos
                                                         </a>
                                                     )}
+                                                    <Link
+                                                        href="/contact"
+                                                        className="border border-primary text-primary shadow-xs hover:bg-primary/10 py-2 px-4 rounded-md text-center"
+                                                    >
+                                                        Contacter l&apos;élevage
+                                                    </Link>
                                                 </div>
                                             </div>
                                         </div>
