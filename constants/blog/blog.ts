@@ -16,6 +16,8 @@ import { pomskyAVendrePost } from "../posts/pomskyForSalePost";
 import { pomskyRenardPost } from "../posts/pomsktLookFoxPost";
 import { chienPomskyPost } from "../posts/pomskyHybridRacePost";
 import { pomskyBlancPost } from "../posts/pomskyWhiteLookGreatPost";
+import { pomskyToyTransparencePost } from "../posts/pomskyToyTransparencePost";
+import { pomskyEmbarkPost } from "../posts/pomskyEmbarkPost";
 
 export const blog: BlogContentType = {
     hero: {
@@ -95,6 +97,8 @@ export const blog: BlogContentType = {
         }
     ],
     posts: [
+        pomskyEmbarkPost,
+        pomskyToyTransparencePost,
         pomskyNainPost,
         pomskyToyGuidePost,
         pomskyLifeExpectancyPost,

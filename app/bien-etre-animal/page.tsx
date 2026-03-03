@@ -99,7 +99,7 @@ export default function SejoursPage() {
                             <div className="flex flex-col items-center justify-center p-2 md:flex-row">
                                 <Dog className="h-4 w-4" />
                                 {/* <span>6 chiots attendus</span> */}
-                                <span className="ml-2">La portée de février 2026 est déjà reservée <Link href="/contact" className="text-blue-700 underline hover:text-blue-500">(inscrivez vous pour la prochaine)</Link></span>
+                                <span className="ml-2">Une portée Pomsky F5 Toy rare est attendue  <Link href="/contact" className="text-blue-700 underline hover:text-blue-500">(inscrivez vous pour être notifié)</Link></span>
                             </div>
                         </div>
                     </section>
@@ -157,8 +157,13 @@ export default function SejoursPage() {
                                     </Badge>
                                     <h3 className="text-xl md:text-2xl font-bold">Jeux d&apos;éveil et découvertes</h3>
                                     <p className="text-muted-foreground leading-relaxed">
-                                        Tunnels, textures, sons doux et rencontres quotidiennes : nous multiplions les expériences positives pour
-                                        des pomsky curieux et équilibrés.
+                                        Tunnels, jeux de textures variées, sons doux et découvertes encadrées rythment le quotidien de nos Pomsky.
+                                        Dès leurs premières semaines, nous mettons en place des jeux d’éveil progressifs permettant
+                                        d’explorer différents environnements, supports et stimulations sensorielles.
+                                        Ces expériences positives, répétées et adaptées à leur âge et à leur gabarit,
+                                        favorisent le développement de la curiosité, de la confiance et d’un équilibre émotionnel durable.
+                                        Elles contribuent également à une meilleure capacité d’adaptation lors du départ en famille
+                                        et dans les nouveaux contextes de vie.
                                     </p>
                                 </div>
                             </div>
@@ -221,8 +226,15 @@ export default function SejoursPage() {
                                     <h3
                                         className="text-xl md:text-2xl font-bold">Nutrition et soins adaptée</h3>
                                     <p className="text-muted-foreground leading-relaxed">
-                                        Sevrage en douceur, croquettes premium et introduction au BARF pour les familles qui le souhaitent.
-                                        Un kit alimentaire de départ est remis le jour du départ.
+
+                                        L’alimentation joue un rôle central dans le développement et la santé du Pomsky toy.
+                                        Le sevrage est effectué en douceur, en tenant compte de la croissance,
+                                        de la sensibilité digestive et du gabarit du chiot.
+                                        Nous privilégions des croquettes premium de haute qualité
+                                        et proposons, pour les familles intéressées, une initiation progressive au BARF,
+                                        toujours accompagnée de recommandations adaptées.
+                                        Chaque famille repart avec un kit alimentaire de départ
+                                        et des conseils pour maintenir une alimentation équilibrée lors de l’arrivée du chiot à la maison.
                                     </p>
                                 </div>
                             </div>
@@ -238,7 +250,11 @@ export default function SejoursPage() {
                                     <h3
                                         className="text-xl md:text-2xl font-bold">Attente avec maman</h3>
                                     <p className="text-muted-foreground leading-relaxed">
-                                        Espaces de repos individuels pour faciliter l&apos;apprentissage du calme et la gestion douce des séparations.
+                                        Des espaces de repos individuels sont mis en place afin de favoriser l’apprentissage du calme
+                                        et d’accompagner progressivement les premières phases de séparation.
+                                        Les chiots restent proches de leur mère tout en découvrant des moments d’autonomie,
+                                        dans un cadre sécurisant et respectueux de leur développement émotionnel.
+                                        Cette étape essentielle permet de préparer en douceur l’intégration future dans leur nouvelle famille.
                                     </p>
                                 </div>
                                 <ImageCarousel

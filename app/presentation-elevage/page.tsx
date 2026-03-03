@@ -7,7 +7,6 @@ import { Heart, Leaf, Star, HeartPulse, PawPrint, Stethoscope, Eye, Handshake } 
 import Link from "next/link"
 import type { Metadata } from "next"
 import { buildOpenGraph, buildTwitter, pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
-import { pageContent } from "@/lib/page-content"
 import { generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema-generators"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
 
@@ -65,9 +64,14 @@ export default function PresentationPage() {
                     {/* Hero Section */}
                     <section className="text-center space-y-6 mb-16">
                         <h1
-                            className="text-xl md:text-3xl font-bold">{pageContent.presentation.h1}</h1>
+                            className="text-xl md:text-3xl font-bold">Élevage de Pomsky Toy de lignée américaine</h1>
                         <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                            {pageContent.presentation.description}
+                            Découvrez plus en détail notre élevage professionel de Pomsky toy en France.
+                        </p>
+                        <p className="text-muted-foreground max-w-2xl mx-auto">
+                            Bien que nous soyons spécialisés dans l'élevage de Pomsky toy, nous proposons également les deux autres formats (Miniature et Standard) avec un engagement envers le bien-être animal et la satisfaction des familles adoptantes. Explorez notre élevage, nos valeurs et notre passion pour cette race exceptionnelle.
+                        </p>
+                        <p className="text-muted-foreground max-w-2xl mx-auto">Nous abordons plusieurs aspects, tels que la sélection rigoureuse des parents, la socialisation progressive, le suivi vétérinaire complet et l’accompagnement des familles.
                         </p>
                         <div className="w-24 h-1 bg-primary mx-auto rounded-full" aria-hidden="true" />
                     </section>
@@ -80,13 +84,20 @@ export default function PresentationPage() {
                                     <Heart className="h-4 w-4 mr-2" aria-hidden="true" />
                                     Notre philosophie
                                 </Badge>
-                                <h2
-                                    className="text-xl md:text-2xl font-bold">Faire naître des compagnons équilibrés</h2>
+                                <h2 className="text-xl md:text-2xl font-bold">
+                                    Faire naître des Pomsky équilibrés
+                                </h2>
                                 <p className="text-muted-foreground leading-relaxed">
-                                    Notre travail commence bien avant la naissance : choix des parents, suivi vétérinaire, et attention constante à la qualité de vie des femelles. Chaque chiot bénéficie d'un départ progressif et serein.
+                                    Notre travail commence bien avant la naissance, car le choix des parents en fonction de leurs caractéristiques génétiques est essentiel.
+                                    Le suivi vétérinaire doit être rigoureux et demande une attention constante à la qualité de vie des femelles,
+                                    afin de garantir que les mamans, en bonne santé, puissent s’occuper de leurs bébés Pomsky
+                                    et offrir aux chiots un départ progressif et serein dans leur future vie de Pomsky.
                                 </p>
                                 <p className="text-muted-foreground leading-relaxed">
-                                    Les petits grandissent dans des espaces pensés pour l'apprentissage : repères stables, manipulations douces, bruits du quotidien et découvertes guidées. L'objectif : un Pomsky confiant, bien socialisé et prêt pour sa famille.
+                                    Les petits Pomsky grandissent dans des espaces pensés pour l’apprentissage, afin de créer des repères stables.
+                                    Nous pratiquons des manipulations douces, habituons nos Pomsky aux bruits du quotidien,
+                                    avec des sorties en plein air et des découvertes guidées.
+                                    L’objectif est de former un Pomsky Toy confiant, bien socialisé et prêt à rejoindre sa famille.
                                 </p>
                             </div>
                             <div className="relative h-64 md:h-100 rounded-lg overflow-hidden">
@@ -107,7 +118,7 @@ export default function PresentationPage() {
                     <section className="mb-16 bg-muted/30 -mx-4 px-4 py-16 rounded-lg">
                         <div className="text-center mb-12">
                             <h2
-                                className="text-xl md:text-2xl font-bold mb-4">Nos valeurs</h2>
+                                className="text-xl md:text-2xl font-bold mb-4">Nos valeurs pour des pomsky heureux</h2>
                             <div className="w-24 h-1 bg-primary mx-auto rounded-full" aria-hidden="true" />
                         </div>
                         <div className="grid md:grid-cols-3 gap-8">
@@ -151,8 +162,13 @@ export default function PresentationPage() {
                                     </p>
                                 </CardContent>
                             </Card>
-
-
+                            <h3 className="text-xl font-semibold mb-2 text-center md:col-span-3">Pour mieux comprendre le caractère de votre futur compagnon, n&apos;hésitez pas à consulter notre article complet sur le tempérament du Pomsky toy.</h3>
+                            <div className="flex justify-center md:col-span-3 hover:underline">
+                                <Link
+                                    href="/le-pomsky"
+                                    className="flex items-center bg-primary h-10 text-white hover:bg-primary/80 px-4 font-semibold  dark:text-[#5b3a1a] rounded-md w-fit"
+                                >En savoir plus sur le tempérament du Pomsky toy</Link>
+                            </div>
                         </div>
                     </section>
 
@@ -193,11 +209,27 @@ export default function PresentationPage() {
                                     </div>
                                 </div>
                                 <Link
-                                    href="/femelles-reproductrices"
+                                    href="/bien-etre-animal"
                                     className="flex items-center bg-primary h-10 text-white hover:bg-primary/80 px-4 font-semibold  dark:text-[#5b3a1a] rounded-md w-fit"
-                                >Voir nos pomsky reproducteurs</Link>
+                                >Voir les conditions de bien-être des Pomsky</Link>
                             </div>
+
                         </div>
+                        <div className="w-24 my-12 h-1 bg-primary mx-auto rounded-full" aria-hidden="true" />
+                        <div className="max-w-3xl mx-auto text-center md:col-span-2 mt-12"><p className="text-muted-foreground text-sm mt-4">
+                            Nous avons à cœur de vous accompagner dans le choix de votre pomsky qui sera votre futur compagnon de vie, en vous apportant des conseils personnalisés et en vous aidant à trouver le chiot qui correspondra le mieux à votre mode de vie et à vos attentes.
+                        </p>
+                        </div>
+                        <div className="text-center my-6 max-w-4xl mx-auto">
+                            <h3 className="md:text-lg  font-semibold mb-2 my-6">Découvrez nos pomsky reproducteurs sélectionnés, les piliers de notre élevage</h3>
+                            <p className="text-muted-foreground text-sm mb-4">
+                                Nos pomsky, chiens reproducteurs sont soigneusement sélectionnés pour leur santé, leur tempérament et leur conformité au standard du Pomsky toy. Ils sont au cœur de notre programme d'élevage et participent activement à la transmission de nos valeurs.
+                            </p>
+                        </div>
+                        <Link
+                            href="/femelles-reproductrices"
+                            className="flex items-center mx-auto bg-primary h-10 text-white hover:bg-primary/80 px-4 font-semibold  dark:text-[#5b3a1a] rounded-md w-fit"
+                        >Voir nos pomsky reproducteurs</Link>
                     </section>
 
                     {/* Story Section */}
@@ -250,6 +282,12 @@ export default function PresentationPage() {
                                     <p className="text-muted-foreground text-sm leading-relaxed">
                                         Élever des Pomsky ne consiste pas uniquement à faire naître des chiots. C'est un travail de sélection, d'observation et d'accompagnement, mené sur plusieurs années. Nos pomsky ont besoin d'un rythmes respectés, de sorties adaptées et d&apos;activités d&apos;éveil pour des Pomsky sereins et curieux.
                                     </p>
+                                    <Link
+                                        href="/bien-etre-animal"
+                                        className="mt-3 inline-flex text-sm font-medium text-primary underline underline-offset-4"
+                                    >
+                                        Découvrez nos conditions de bien-être animal
+                                    </Link>
                                 </CardContent>
                             </Card>
 
@@ -264,6 +302,22 @@ export default function PresentationPage() {
                                     <p className="text-muted-foreground text-sm leading-relaxed">
                                         Suivi sanitaire complet, identification, vaccination, vemifuge, antiparasitaires, tests ADN du laboratoire EMBARK des parents, test de filiation du laboratoire ANTAGENE et conseils de santé transmis au moment du départ.
                                     </p>
+                                    <div className="flex flex-col">
+                                        <Link
+                                            href="/blog/pomsky/genetique/pourquoi-le-test-embark-est-essentiel-dans-un-elevage-de-pomsky"
+                                            className="mt-3 inline-flex text-sm font-medium text-primary underline underline-offset-4"
+                                        >
+                                            Pourquoi le test ADN EMBARK est essentiel
+                                        </Link>
+                                        <a
+                                            href="https://embarkvet.com/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="mt-2 inline-flex text-sm font-medium text-primary underline underline-offset-4"
+                                        >
+                                            Site officiel EMBARK
+                                        </a>
+                                    </div>
                                 </CardContent>
                             </Card>
 
@@ -280,6 +334,22 @@ export default function PresentationPage() {
                                         Les familles peuvent suivre leur croissance, leurs premières découvertes et leur développement au fil des semaines.
                                         Les échanges sont ouverts, les documents accessibles, et chaque étape peut être expliquée simplement, en toute confiance.
                                     </p>
+                                    <div className="flex flex-col">
+                                        <Link
+                                            href="/chiots-disponibles"
+                                            className="mt-3 inline-flex text-sm font-medium text-primary underline underline-offset-4"
+                                        >
+                                            Voir les dernières photos de nos chiots disponibles
+                                        </Link>
+                                        <a
+                                            href="https://www.instagram.com/royalpomsky"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="mt-2 inline-flex text-sm font-medium text-primary underline underline-offset-4"
+                                        >
+                                            Site Instagram officiel de Royal Pomsky
+                                        </a>
+                                    </div>
                                 </CardContent>
                             </Card>
 
@@ -294,6 +364,23 @@ export default function PresentationPage() {
                                     <p className="text-muted-foreground text-sm leading-relaxed">
                                         Conseils personnalisés : guide pour l'accueil de votre chiot, kit de départ, conseil d'un éducateur canin agréé par notre réseau de connaissances ( éducation positive ) et disponibilité pour vous aider à chaque étape.
                                     </p>
+                                    <div className="flex flex-col">
+                                        <Link
+                                            href="/contact"
+                                            className="mt-3 inline-flex text-sm font-medium text-primary underline underline-offset-4"
+                                        >
+                                            Contactez-nous pour un accompagnement personnalisé
+                                        </Link>
+
+                                        <a
+                                            href="https://forms.gle/2ZtWVzEzJ9QQhZfa8"
+                                            target="_blank"
+                                            rel="noopener"
+                                            className="mt-2 inline-flex text-sm font-medium text-primary underline underline-offset-4"
+                                        >
+                                            Écrivez-nous pour discuter de votre projet d’adoption de Pomsky
+                                        </a>
+                                    </div>
                                 </CardContent>
                             </Card>
                         </div>

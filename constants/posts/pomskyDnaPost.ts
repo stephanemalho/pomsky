@@ -90,7 +90,10 @@ export const dogAdnTestPost: BlogPost = {
         "santé du chien",
         "pomsky",
         "élevage responsable",
-        "maladies génétiques"
+        "maladies génétiques",
+        "test embark pomsky",
+        "test adn pomsky",
+        "genetique pomsky"
     ],
     image: "/assets/blog/puppy-brothers-adn-1038x576.webp",
     imageAlt: "Chiots illustrant l'analyse ADN et la génétique canine",

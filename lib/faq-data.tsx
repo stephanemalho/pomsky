@@ -1,4 +1,5 @@
 import type { FAQItem } from "@/components/faq"
+import Link from "next/link"
 
 export const faqHome: FAQItem[] = [
   {
@@ -28,6 +29,23 @@ export const faqHome: FAQItem[] = [
           Les chiots sont habitués aux bruits du quotidien, aux interactions humaines
           et aux différentes textures afin de favoriser confiance et stabilité.
         </p>
+      </div>
+    ),
+  },
+  {
+    question: "Avez-vous uniquement des pomsky toy chez royal pomsky ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Non. Chez Royal POMSKY, nous travaillons principalement les formats Toy et Miniature.
+        </p>
+        <p>
+          Même avec une sélection rigoureuse des reproducteurs, une portée peut faire naître des chiots de catégories différentes : la génétique, les lignées, les générations et les combinaisons parentales influencent la taille finale de chaque chiot.
+        </p>
+        <p>
+          C&apos;est pourquoi chaque chiot est évalué individuellement au fil de sa croissance avant de confirmer sa catégorie de format.
+        </p>
+        <p> Nous avons également des chiots de taille standard qui sont très mignons et très appréciés par les familles qui souhaitent un Pomsky plus grand que le Toy.</p>
       </div>
     ),
   },
@@ -633,6 +651,119 @@ export const faqPomsky: FAQItem[] = [
             <strong>Pomsky Toy</strong> : en dessous de ces tailles, autour de 30 cm au garrot pour environ 5 kg adulte.
           </li>
         </ul>
+      </div>
+    ),
+  },
+  {
+    question: "Le Pomsky est-il reconnu par la FCI ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Non. À ce jour, le Pomsky n&apos;est pas reconnu par la FCI.
+        </p>
+        <p>
+          La race est encore en cours de structuration. Des clubs spécialisés existent pour encadrer les pratiques d&apos;élevage et le suivi des lignées.
+        </p>
+        <p>
+          Référence utile:&nbsp;
+          <a
+            href="https://americanpomskykennelclub.org/faqs"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline underline-offset-4"
+          >
+            American Pomsky Kennel Club (APKC) - FAQs
+          </a>
+          .
+        </p>
+      </div>
+    ),
+  },
+  {
+    question: "Le format Pomsky Toy est-il garanti à 100 % dès la naissance ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Non, pas de façon absolue. Le format Toy existe, mais la taille adulte dépend de plusieurs facteurs génétiques et de l&apos;évolution du chiot.
+        </p>
+        <p>
+          Un élevage sérieux doit expliquer clairement ses marges d&apos;estimation et éviter les promesses catégoriques trop précoces.
+        </p>
+        <p>
+          Pour comprendre les critères à vérifier avant réservation, consultez notre guide:&nbsp;
+          <Link
+            href="/blog/pomsky/prix/pomsky-toy-comprendre-les-promesses-et-choisir-un-elevage-serieux"
+            className="underline underline-offset-4"
+          >
+            Pomsky Toy: comprendre les promesses et choisir un élevage sérieux
+          </Link>
+          .
+        </p>
+      </div>
+    ),
+  },
+  {
+    question: "Le Pomsky Toy est-il fragile ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Pas lorsqu&apos;il est sélectionné correctement.
+        </p>
+        <p>
+          Le point critique n&apos;est pas la petite taille en elle-même, mais une miniaturisation trop rapide sans maîtrise génétique suffisante.
+        </p>
+        <p>Un Pomsky Toy équilibré doit conserver :</p>
+        <ul className="list-disc ml-6">
+          <li>une ossature solide,</li>
+          <li>une dentition harmonieuse,</li>
+          <li>des proportions cohérentes,</li>
+          <li>un mental stable.</li>
+        </ul>
+      </div>
+    ),
+  },
+  {
+    question: "Y a-t-il une liste d'attente pour un Pomsky Toy ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Oui. Le Pomsky Toy 50/50 bien équilibré étant plus rare, les naissances sont naturellement limitées.
+        </p>
+        <p>
+          Une disponibilité immédiate n&apos;est pas forcément un problème, mais c&apos;est un point qui mérite d&apos;être vérifié avec précision (lignées, suivi, transparence des estimations).
+        </p>
+      </div>
+    ),
+  },
+  {
+    question: "Pourquoi certains Pomsky Toy ressemblent-ils davantage à des Spitz ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Pour réduire la taille rapidement, certains programmes augmentent la proportion de Spitz dans les lignées.
+        </p>
+        <p>On peut alors obtenir un chien plus petit, mais parfois :</p>
+        <ul className="list-disc ml-6">
+          <li>moins typé Husky,</li>
+          <li>avec une structure moins harmonieuse,</li>
+          <li>et un risque plus élevé de déséquilibres liés à l&apos;hyper-miniaturisation.</li>
+        </ul>
+        <p>
+          Le véritable enjeu est de conserver un équilibre global du chien, avec un type Pomsky cohérent sur la durée.
+        </p>
+      </div>
+    ),
+  },
+  {
+    question: "Le Pomsky Toy est-il adapté aux voyages ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Oui. Son petit format le rend généralement plus simple à transporter.
+        </p>
+        <p>
+          Mais il reste un chien actif qui a besoin de se dépenser, de conserver des repères stables et d&apos;évoluer dans un cadre structuré, même en déplacement.
+        </p>
       </div>
     ),
   },

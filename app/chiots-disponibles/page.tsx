@@ -233,7 +233,7 @@ export default function NosChiotsPage() {
                             <NotebookText className="h-6 w-6 text-2xl text-primary" aria-hidden="true" />
                             <div>
                                 <h2 className="text-xl md:text-2xl font-semibold leading-tight">
-                                    Une portée Pomsky F5 Toy rare et attendue
+                                    Une portée Pomsky Miniature F5 rare est attendue
                                 </h2>
                                 <p className="text-muted-foreground mt-2">
                                     Issue du mariage entre Shadow & Bandit, deux reproducteurs parfaitement typés et équilibrés.

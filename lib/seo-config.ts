@@ -35,12 +35,15 @@ export const siteConfig = {
     description:
         "Royal POMSKY est le premier élevage spécialisé dans les pomskys Toy de lignée Américaines. Chiots sélectionnés, élevage responsable, reproducteurs suivis depuis 2017.",
     keywords: [
-        "élevage pomsky",
-        "Pomsky France",
-        "chiots pomsky",
+        "elevage pomsky",
+        "elevage pomsky france",
+        "elevage pomsky jura",
+        "royal pomsky",
         "pomsky toy",
-        "élevage responsable",
-        "pomsky miniature"
+        "pomsky miniature",
+        "chiot pomsky a vendre",
+        "adoption pomsky",
+        "premier elevage pomsky toy americain en france",
     ],
 
     /* ------------------------------ Contact ---------------------------------- */
@@ -233,13 +236,15 @@ export const pageMetadata = {
         title: pageContent.home.h1 + " | " + pageContent.home.h1Subtitle,
         description: pageContent.home.description,
         keywords: [
-            "élevage de pomsky responsable",
-            "chiots pomsky toy miniature et standard",
-            "élevage de pomsky à taille humaine",
-            "chiots pomsky bien socialisés",
-            "pomsky aux yeux bleus",
-            "élevage éthique de pomsky",
-            "Royal Pomsky"
+            "elevage pomsky toy",
+            "le pomsky",
+            "elevage pomsky miniature",
+            "chiot pomsky a vendre france",
+            "adopter un pomsky",
+            "elevage pomsky professionnel",
+            "elevage pomsky jura",
+            "pomsky france",
+            "royal pomsky"
         ]
     },
 
@@ -247,15 +252,16 @@ export const pageMetadata = {
         title: pageContent.pomsky.h1,
         description: pageContent.pomsky.description,
         keywords: [
-            "taille du pomsky",
-            "pomsky toy miniature standard",
-            "différences pomsky toy miniature standard",
+            "qu est ce qu un pomsky",
             "origine du pomsky",
-            "histoire du pomsky",
-            "tempérament du pomsky",
-            "générations du pomsky",
-            "adopter un pomsky",
-            "ce qu'il faut savoir avant d'adopter un pomsky"
+            "taille pomsky",
+            "pomsky toy",
+            "pomsky toy taille adulte",
+            "pomsky miniature taille adulte",
+            "generations pomsky f1 f2 f3 f4 f5",
+            "pomsky vs klee kai",
+            "caractere pomsky",
+            "sante pomsky",
         ]
     },
 
@@ -263,14 +269,14 @@ export const pageMetadata = {
         title: pageContent.puppies.h1,
         description: pageContent.puppies.description,
         keywords: [
-            "chiots pomsky",
-            "chiot Toy",
-            "chiot pomsky nain",
-            "chiots disponibles",
-            "reservation chiot",
-            "bon élevage de pomsky",
-            "acheter un pomsky",
-            "inscription portee"
+            "chiot pomsky disponible",
+            "chiot pomsky a reserver",
+            "chiot pomsky toy a vendre",
+            "chiot pomsky miniature a vendre",
+            "adoption chiot pomsky france",
+            "prix chiot pomsky toy",
+            "elevage pomsky chiots disponibles",
+            "reservation pomsky"
         ]
     },
 
@@ -280,10 +286,12 @@ export const pageMetadata = {
         keywords: [
             "reproducteurs pomsky",
             "lignees pomsky",
-            "standard de race",
-            "sante canine",
-            "tests genetiques",
-            "caractere pomsky"
+            "adn pomsky",
+            "tests genetiques pomsky",
+            "selection reproducteurs pomsky",
+            "sante reproducteurs pomsky",
+            "pomsky f3 f4 f5",
+            "elevage responsable pomsky"
         ]
     },
 
@@ -291,25 +299,28 @@ export const pageMetadata = {
         title: pageContent.presentation.h1,
         description: pageContent.presentation.description,
         keywords: [
-            "elevage responsable",
-            "passion pomsky",
-            "selection rigoureuse",
-            "accompagnement adoptant",
-            "ethique elevage",
-            "trouver bon elevage pomsky",
-            "elevage chiots avec mere"
+            "elevage pomsky responsable",
+            "elevage canin professionnel",
+            "selection lignee pomsky",
+            "socialisation chiot pomsky",
+            "bien etre chiot elevage",
+            "adoption pomsky accompagnee",
+            "visite elevage pomsky",
+            "elevage pomsky france"
         ]
     },
     eleveuses: {
         title: pageContent.eleveuses.h1,
         description: pageContent.eleveuses.description,
         keywords: [
-            "eleveuses pomsky",
-            "equipe elevage pomsky",
-            "aurélie pomsky",
-            "marine pomsky",
-            "presentation eleveuses",
-            "approche holistique elevage"
+            "eleveuse pomsky",
+            "expert pomsky toy",
+            "accompagnement adoption pomsky",
+            "conseils elevage pomsky",
+            "royal pomsky equipe",
+            "experience elevage pomsky",
+            "approche comportementale chien",
+            "suivi famille adoptante"
         ]
     },
 
@@ -317,14 +328,14 @@ export const pageMetadata = {
         title: pageContent.wellness.h1,
         description: pageContent.wellness.description,
         keywords: [
-            "conditions de vie des chiots en élevage",
-            "élevage familial responsable",
-            "bien-être et socialisation des chiots",
-            "chiots élevés avec leur mère",
-            "suivi vétérinaire dès la naissance",
-            "respect du développement du chiot",
-            "environnement sain pour chiots",
-            "élevage éthique de pomsky"
+            "bien etre chiot pomsky",
+            "conditions de vie chiot elevage",
+            "socialisation chiot",
+            "nursery chiot elevage",
+            "environnement sain chiot",
+            "suivi veterinaire chiot",
+            "elevage ethique pomsky",
+            "chiot eleve avec sa mere"
         ]
     },
 
@@ -333,11 +344,13 @@ export const pageMetadata = {
         description: pageContent.contact.description,
         keywords: [
             "contact elevage pomsky",
-            "visite elevage",
-            "rendez-vous",
-            "adoption pomsky",
-            "informations chiot",
-            "reservation chiot"
+            "visiter elevage pomsky",
+            "rdv adoption pomsky",
+            "reserver chiot pomsky",
+            "elevage pomsky jura contact",
+            "informations adoption pomsky",
+            "prix pomsky toy contact",
+            "royal pomsky contact"
         ]
     },
 
@@ -382,13 +395,13 @@ export const pageMetadata = {
             "Articles sur le Pomsky : race, genetique, sante, caractere, prix et conseils d'adoption.",
         keywords: [
             "blog pomsky",
-            "conseils pomsky",
-            "race pomsky",
+            "conseils pomsky toy",
+            "prix pomsky toy",
+            "taille adulte pomsky",
+            "adoption pomsky conseils",
+            "education pomsky",
             "sante pomsky",
-            "prix pomsky",
-            "caractere pomsky",
-            "genetique pomsky",
-            "adoption pomsky"
+            "genetique pomsky"
         ]
     }
 };
@@ -402,13 +415,13 @@ export const sitemapPages = [
         url: "/",
         changefreq: "monthly",
         priority: 1.0,
-        lastmod: "2026-02-25"
+        lastmod: "2026-03-03"
     },
     {
         url: "/le-pomsky",
         changefreq: "monthly",
         priority: 0.75,
-        lastmod: "2026-02-25"
+        lastmod: "2026-03-03"
     },
     {
         url: "/chiots-disponibles",
@@ -420,13 +433,13 @@ export const sitemapPages = [
         url: "/femelles-reproductrices",
         changefreq: "monthly",
         priority: 0.8,
-        lastmod: "2026-02-13"
+        lastmod: "2026-03-03"
     },
     {
         url: "/presentation-elevage",
         changefreq: "monthly",
         priority: 0.7,
-        lastmod: "2026-02-25"
+        lastmod: "2026-03-03"
     },
     {
         url: "/presentation-eleveuses",

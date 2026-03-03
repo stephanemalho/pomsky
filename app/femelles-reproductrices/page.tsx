@@ -89,6 +89,8 @@ export default function NosChiotsPage() {
 
                         <p className="text-lg text-muted-foreground max-w-3xl mx-auto">{pageContent.reproductors.descriptionSecondary}</p>
 
+                        <p className="text-lg text-muted-foreground max-w-3xl mx-auto">Vous trouverez ici tous nos adultes pomsky classés par catégorie de taille du plus petit au plus grand : TOY / MINI / STANDARD</p>
+
                         <div className="w-24 h-1 bg-primary mx-auto rounded-full" />
                     </section>
 
@@ -164,7 +166,7 @@ export default function NosChiotsPage() {
                             href="/chiots-disponibles"
                             className="bg-primary w-fit m-auto text-white hover:bg-primary/80 p-4 font-semibold inline-block dark:text-[#5b3a1a] rounded-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                         >
-                            Découvrir nos Chiots
+                            Voir nos Chiots Pomsky disponibles
                         </Link>
                     </div>
 

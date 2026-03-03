@@ -48,6 +48,7 @@ const sizes = [
         image: "/size-for-toy-pomsky.webp",
         alt: "comparatif de taille d'un pomsky toy vs husky",
         pawSize: 4,
+        linkHref: "/blog/pomsky/prix/pomsky-toy-comprendre-les-promesses-et-choisir-un-elevage-serieux",
     },
     {
         title: pageContent.pomsky.h3Miniature,
@@ -57,6 +58,7 @@ const sizes = [
         image: "/size-for-mini-pomsky.webp",
         alt: "comparatif de taille d'un pomsky miniature vs husky",
         pawSize: 5,
+        linkHref: "/blog/pomsky/caracteristique/decouvrez-le-pomsky-nain-un-adorable-compagnon-a-quatre-pattes",
     },
     {
         title: pageContent.pomsky.h3Standard,
@@ -66,6 +68,7 @@ const sizes = [
         image: "/size-for-standard-pomsky.webp",
         alt: "comparatif de taille d'un pomsky standard vs husky",
         pawSize: 6,
+        linkHref: "/blog/pomsky/caracteristique/le-pomsky-adulte-tout-ce-que-vous-devez-savoir-sur-cette-race-unique",
     },
 ]
 
@@ -154,7 +157,7 @@ export default function dogPage() {
 
                     <section className="mb-16 space-y-10">
                         <div className="text-center space-y-3">
-                            <h2 className="text-xl md:text-2xl font-bold">{pageContent.pomsky.h2}</h2>
+                            <h2 className="text-xl md:text-2xl font-bold">Les différentes tailles du Pomsky</h2>
                             <p className="text-muted-foreground max-w-xl mx-auto">
                                 On distingue généralement trois tailles : toy (ou micro), miniature et standard.
                                 Les tailles sont exprimées au garrot.
@@ -164,34 +167,36 @@ export default function dogPage() {
 
                         <div className="grid md:grid-cols-3 gap-6">
                             {sizes.map((item) => (
-                                <Card key={item.title} className="flex flex-col bg-muted/60 h-full overflow-hidden">
-                                    <CardHeader>
-                                        <div className="flex items-center justify-between">
-                                            <CardTitle className="text-xl">{item.title}</CardTitle>
-                                            <PawPrint className={`h-${item.pawSize} w-`} />
-                                        </div>
-                                    </CardHeader>
-                                    <CardContent className="space-y-3 text-sm text-muted-foreground">
-                                        <div className="relative aspect-4/3 w-full overflow-hidden rounded-md mb-10 bg-black">
-                                            <Image
-                                                src={item.image}
-                                                alt={item.alt}
-                                                fill
-                                                className="object-contain"
-                                                sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-                                            />
-                                        </div>
-                                        <div className="flex items-center gap-2">
-                                            <Ruler className="h-4 w-4 text-primary" aria-hidden="true" />
-                                            <span>Taille au garrot : {item.chest}</span>
-                                        </div>
-                                        <div className="flex items-center gap-2">
-                                            <Scale className="h-4 w-4 text-primary" aria-hidden="true" />
-                                            <span>Poids moyen : {item.weight}</span>
-                                        </div>
-                                        <p className="leading-relaxed">{item.text}</p>
-                                    </CardContent>
-                                </Card>
+                                <Link key={item.title} href={item.linkHref} className="group block h-full">
+                                    <Card className="flex flex-col bg-muted/60 h-full overflow-hidden transition-colors group-hover:border-primary/50">
+                                        <CardHeader>
+                                            <div className="flex items-center justify-between">
+                                                <CardTitle className="text-xl">{item.title}</CardTitle>
+                                                <PawPrint className={`h-${item.pawSize} w-`} />
+                                            </div>
+                                        </CardHeader>
+                                        <CardContent className="space-y-3 text-sm text-muted-foreground">
+                                            <div className="relative aspect-4/3 w-full overflow-hidden rounded-md mb-10 bg-black">
+                                                <Image
+                                                    src={item.image}
+                                                    alt={item.alt}
+                                                    fill
+                                                    className="object-contain"
+                                                    sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                                                />
+                                            </div>
+                                            <div className="flex items-center gap-2">
+                                                <Ruler className="h-4 w-4 text-primary" aria-hidden="true" />
+                                                <span>Taille au garrot : {item.chest}</span>
+                                            </div>
+                                            <div className="flex items-center gap-2">
+                                                <Scale className="h-4 w-4 text-primary" aria-hidden="true" />
+                                                <span>Poids moyen : {item.weight}</span>
+                                            </div>
+                                            <p className="leading-relaxed">{item.text}</p>
+                                        </CardContent>
+                                    </Card>
+                                </Link>
                             ))}
                         </div>
 
@@ -227,6 +232,9 @@ export default function dogPage() {
                             <p className="text-muted-foreground leading-relaxed">
                                 Le résultat est merveilleux : c'est un mélange équilibré du Spitz nain et du husky qui en ressort avec un chien ayant le physique d'un nordique de traîneau, dans une petite taille, avec un comportement de parfait chien de compagnie.
                             </p>
+                            <Link href="/blog/pomsky/origine/quelle-est-lhistoire-du-pomsky-les-origines-du-chien-pomsky" className="text-primary font-medium inline-flex items-center gap-1 underline">
+                                En savoir plus sur les origines du Pomsky
+                            </Link>
                         </div>
 
                         <div className="grid sm:grid-cols-2 gap-4">
@@ -234,22 +242,31 @@ export default function dogPage() {
                                 {
                                     icon: <History className="h-4 w-4 text-primary" aria-hidden="true" />,
                                     title: "Origines américaines",
-                                    text: "Race récente, née aux USA et rapidement adoptée en Europe.",
+                                    text: "Race récente, née aux USA et rapidement adoptée en Europe. Notamment en France par Royal Pomsky, premier élevage français spécialisé dans le Pomsky toy de lignée américaine.",
+                                    linkHref: "https://www.saone-et-loire.gouv.fr/Actions-de-l-Etat/Environnement-risques-naturels-et-technologiques/Installations-classees-pour-la-protection-de-l-environnement-ICPE/ICPE-Teledeclarations/Preuves-de-depot-Changement-d-exploitant/2022/ELEVAGE-CANIN-ROYAL-POMSKY-a-DOMMARTIN-LES-CUISEAUX",
+                                    linkLabel: "Voir la déclaration officielle ICPE – Préfecture de Saône-et-Loire",
+
                                 },
                                 {
                                     icon: <ScrollText className="h-4 w-4 text-primary" aria-hidden="true" />,
                                     title: "Croisement fondateur",
-                                    text: "Husky Sibérien x Spitz nain : même allure que le Husky, mais en plus petit.",
+                                    text: "Husky Sibérien x Spitz nain : même allure que le Husky, mais en plus petit. Ce croisement permet de combiner le type nordique du Husky avec le tempérament plus familial du Spitz nain.",
+                                    linkHref: "/blog/pomsky/caracteristique/tout-savoir-sur-le-pomsky-toy-race-caracteristiques-et-conseils",
+                                    linkLabel: "Lire notre article sur le Pomsky Toy",
                                 },
                                 {
                                     icon: <Heart className="h-4 w-4 text-primary" aria-hidden="true" />,
                                     title: "Création en 2012",
-                                    text: "Association de deux éleveuses : Arctic Design Pomskies et Apex Pomskies.",
+                                    text: "Association de deux éleveuses : Arctic Design Pomskies et Apex Pomskies qui avait débuté les éssais en 2010. Le Pomsky Club of America est fondé la même année (2012).",
+                                    linkHref: "https://americanpomskykennelclub.org/",
+                                    linkLabel: "American Pomsky Kennel Club",
                                 },
                                 {
                                     icon: <Sparkles className="h-4 w-4 text-primary" aria-hidden="true" />,
                                     title: "Pomsky vs Klee Kai",
-                                    text: "Le Pomsky est un chien de compagnie, plus accessible à l'éducation que l'Alaskan Klee Kai.",
+                                    text: "Le Pomsky est un chien de compagnie, plus accessible à l'éducation que l'Alaskan Klee Kai. Il est généralement plus adaptable à la vie de famille et aux environnements variés.",
+                                    linkHref: "https://fr.wikipedia.org/wiki/Alaskan_Klee_Kai",
+                                    linkLabel: "Voir la fiche Alaskan Klee Kai",
                                 },
                             ].map((item) => (
                                 <Card key={item.title} className="bg-muted/60 h-full">
@@ -259,8 +276,27 @@ export default function dogPage() {
                                             <CardTitle className="text-base">{item.title}</CardTitle>
                                         </div>
                                     </CardHeader>
-                                    <CardContent>
+                                    <CardContent className="flex h-full flex-col">
                                         <p className="text-sm text-muted-foreground leading-relaxed">{item.text}</p>
+                                        {item.linkHref ? (
+                                            item.linkHref.startsWith("/") ? (
+                                                <Link
+                                                    href={item.linkHref}
+                                                    className="mt-auto pt-2 inline-flex text-sm text-primary underline underline-offset-4"
+                                                >
+                                                    {item.linkLabel}
+                                                </Link>
+                                            ) : (
+                                                <a
+                                                    href={item.linkHref}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="mt-auto pt-2 inline-flex text-sm text-primary underline underline-offset-4"
+                                                >
+                                                    {item.linkLabel}
+                                                </a>
+                                            )
+                                        ) : null}
                                     </CardContent>
                                 </Card>
                             ))}
@@ -308,6 +344,17 @@ export default function dogPage() {
                                     </CardContent>
                                 </Card>
                             ))}
+                            <div className="text-sm text-muted-foreground bg-background/60 border rounded-lg p-4 space-y-2 max-w-xs mx-auto md:col-span-3">
+                                <p className="font-semibold text-foreground">En résumé :</p>
+                                <ul className="list-disc ml-4 space-y-1">
+                                    <li>F1 : croisement initial, portées très variables</li>
+                                    <li>F2 : un peu plus homogène, mais encore variable</li>
+                                    <li>F3 à F5 : stabilisation du type et du comportement</li>
+                                </ul>
+                                <Link href="/blog/pomsky/genetique/pomsky-f1-f2-f3-cest-quoi" className="text-primary font-medium inline-flex items-center gap-1 underline">
+                                    Voir notre article de blog sur les générations de Pomsky
+                                </Link>
+                            </div>
                         </div>
                         <Card className="bg-muted/60">
                             <CardContent className="py-6 px-6 space-y-3 text-muted-foreground">
@@ -337,57 +384,67 @@ export default function dogPage() {
                         </div>
 
                         <div className="grid md:grid-cols-2 auto-rows-fr items-stretch gap-6">
-                            <Card className="bg-muted/60 flex flex-col h-full overflow-hidden">
-                                <CardHeader>
-                                    <CardTitle className="text-xl">Les yeux du Pomsky</CardTitle>
-                                </CardHeader>
-                                <CardContent className="flex flex-1 text-sm flex-col text-muted-foreground leading-relaxed space-y-3">
-                                    <div className="mt-4 space-y-3">
-                                        <p>
-                                            Les yeux bleus sont très prisés, mais on peut aussi rencontrer des yeux verts, ambre,
-                                            bruns, hétérochromes ou vairons. Cette diversité est héritée du Husky Sibérien.
-                                        </p>
-                                        <p>
-                                            Le regard est intense et expressif, ce qui participe beaucoup au charme du Pomsky.
-                                        </p>
-                                    </div>
-                                    <div className="relative mt-4 mx-auto w-full lg:w-2/3 flex-[0_0_50%] min-h-64 overflow-hidden rounded-md">
-                                        <Image
-                                            src="/pomsky-eye-colors-blue-brown-heterochromia.webp"
-                                            alt="Montage de plusieurs couleurs des yeux du Pomsky"
-                                            fill
-                                            className="object-contain"
-                                            sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-                                        />
-                                    </div>
-                                </CardContent>
-                            </Card>
+                            <Link
+                                href="/blog/pomsky/apparence/pomsky-noir-aux-yeux-bleus-decouvrez-ce-magnifique-chien-au-regard-envoutant"
+                                className="group block h-full"
+                            >
+                                <Card className="bg-muted/60 flex flex-col h-full overflow-hidden transition-colors group-hover:border-primary/50">
+                                    <CardHeader>
+                                        <CardTitle className="text-xl">Les yeux du Pomsky</CardTitle>
+                                    </CardHeader>
+                                    <CardContent className="flex flex-1 text-sm flex-col text-muted-foreground leading-relaxed space-y-3">
+                                        <div className="mt-4 space-y-3">
+                                            <p>
+                                                Les yeux bleus sont très prisés, mais on peut aussi rencontrer des yeux verts, ambre,
+                                                bruns, hétérochromes ou vairons. Cette diversité est héritée du Husky Sibérien.
+                                            </p>
+                                            <p>
+                                                Le regard est intense et expressif, ce qui participe beaucoup au charme du Pomsky.
+                                            </p>
+                                        </div>
+                                        <div className="relative mt-4 mx-auto w-full lg:w-2/3 flex-[0_0_50%] min-h-64 overflow-hidden rounded-md">
+                                            <Image
+                                                src="/pomsky-eye-colors-blue-brown-heterochromia.webp"
+                                                alt="Montage de plusieurs couleurs des yeux du Pomsky"
+                                                fill
+                                                className="object-contain"
+                                                sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                                            />
+                                        </div>
+                                    </CardContent>
+                                </Card>
+                            </Link>
 
-                            <Card className="bg-muted/60 flex flex-col h-full overflow-hidden">
-                                <CardHeader>
-                                    <CardTitle className="text-xl">Morphologie générale</CardTitle>
-                                </CardHeader>
-                                <CardContent className="flex flex-1 text-sm flex-col text-muted-foreground leading-relaxed space-y-3">
-                                    <div className="mt-4 space-y-3">
-                                        <p>
-                                            Le corps est compact, la queue est touffue et enroulée au-dessus du dos.
-                                            Les oreilles sont triangulaires, hautes et plutôt proches l'une de l'autre.
-                                        </p>
-                                        <p>
-                                            Le Pomsky est une race en devenir, non reconnue au LOF aujourd'hui.
-                                        </p>
-                                    </div>
-                                    <div className="relative mt-4 mx-auto w-full lg:w-2/3 flex-[0_0_50%] min-h-64 overflow-hidden rounded-md">
-                                        <Image
-                                            src="/pages/le-pomsky/male-pomsky-chocolat.webp"
-                                            alt="Pomsky couleur chocolat qui tire la langue"
-                                            fill
-                                            className="object-cover"
-                                            sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-                                        />
-                                    </div>
-                                </CardContent>
-                            </Card>
+                            <Link
+                                href="/blog/pomsky/caracteristique/le-chien-pomsky-une-race-hybride-qui-fait-fondre-les-coeurs"
+                                className="group block h-full"
+                            >
+                                <Card className="bg-muted/60 flex flex-col h-full overflow-hidden transition-colors group-hover:border-primary/50">
+                                    <CardHeader>
+                                        <CardTitle className="text-xl">Morphologie générale</CardTitle>
+                                    </CardHeader>
+                                    <CardContent className="flex flex-1 text-sm flex-col text-muted-foreground leading-relaxed space-y-3">
+                                        <div className="mt-4 space-y-3">
+                                            <p>
+                                                Le corps est compact, la queue est touffue et enroulée au-dessus du dos.
+                                                Les oreilles sont triangulaires, hautes et plutôt proches l'une de l'autre.
+                                            </p>
+                                            <p>
+                                                Le Pomsky est une race en devenir, non reconnue au LOF aujourd'hui.
+                                            </p>
+                                        </div>
+                                        <div className="relative mt-4 mx-auto w-full lg:w-2/3 flex-[0_0_50%] min-h-64 overflow-hidden rounded-md">
+                                            <Image
+                                                src="/pages/le-pomsky/male-pomsky-chocolat.webp"
+                                                alt="Pomsky couleur chocolat qui tire la langue"
+                                                fill
+                                                className="object-cover"
+                                                sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                                            />
+                                        </div>
+                                    </CardContent>
+                                </Card>
+                            </Link>
                         </div>
                     </section>
 
@@ -490,13 +547,38 @@ export default function dogPage() {
                                 href="/blog/pomsky"
                                 className="bg-primary text-white hover:bg-primary/80 px-6 py-3 rounded-md font-semibold dark:text-[#5b3a1a] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                             >
-                                En savoir plus sur le Pomsky 
+                                En savoir plus sur le Pomsky
                             </Link>
                             <Link
                                 href="/contact"
                                 className="border border-primary text-primary hover:bg-primary/10 px-6 py-3 rounded-md font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                             >
                                 Poser vos questions
+                            </Link>
+                        </div>
+                    </section>
+
+                    <section className="mb-16 bg-muted/40 rounded-lg p-8">
+                        <div className="max-w-4xl mx-auto space-y-4">
+                            <h2 className="text-xl md:text-2xl font-bold">
+                                Attention avec le Pomsky Toy: promesses, réalité et points de vigilance
+                            </h2>
+                            <p className="text-muted-foreground leading-relaxed">
+                                Le Pomsky Toy existe, mais il ne se garantit pas sur une simple annonce.
+                                La taille adulte dépend de plusieurs facteurs génétiques et d&apos;un
+                                travail de sélection cohérent sur les lignées.
+                            </p>
+                            <p className="text-muted-foreground leading-relaxed">
+                                Pour aider les familles à faire un choix éclairé, nous avons rédigé un
+                                guide pratique avec des critères concrets: transparence de l&apos;éleveur,
+                                limites de prédiction, cohérence des promesses et points à vérifier avant
+                                réservation.
+                            </p>
+                            <Link
+                                href="/blog/pomsky/prix/pomsky-toy-comprendre-les-promesses-et-choisir-un-elevage-serieux"
+                                className="inline-flex border border-primary text-primary hover:bg-primary/10 px-6 py-3 rounded-md font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                            >
+                                Lire le guide complet sur le Pomsky Toy
                             </Link>
                         </div>
                     </section>

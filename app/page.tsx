@@ -119,9 +119,9 @@ export default function HomePage() {
                 Royal Pomsky
               </div>
               <h1 className="text-2xl md:text-4xl font-semibold tracking-wide text-white">
-                {pageContent.home.h1}
+                Élevage de Pomsky - Royal POMSKY
                 <span className="block text-base md:text-xl font-light text-white/80 mt-2">
-                  {pageContent.home.h1Subtitle}
+                  "Premier élevage français de Pomsky issus de lignées américaines"
                 </span>
               </h1>
               <div className="mx-auto">
@@ -195,7 +195,7 @@ export default function HomePage() {
                 </p>
 
                 <div className="space-y-2">
-                  <h3 className="font-semibold">Des Pomsky de tailles miniature et toy élevés dans le bonheur</h3>
+                  <h3 className="font-semibold">Des Pomsky de tailles toy à standard élevés dans le bonheur</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Notre élevage est situé dans le Jura (39), en France. Chez Royal Pomsky, nous n'expédions jamais nos chiots à distance,  Ils sont à adopter sur place, après visite de l'élevage et rencontre avec les parents. sauf cas particulier ( raison de santé, impossibilité de déplacement etc… ) votre demande sera étudiée au cas par cas après un entretien en appel visio
                   </p>
@@ -253,12 +253,12 @@ export default function HomePage() {
           <div className="container mx-auto p-2">
             <div className="text-center space-y-4 mb-10">
               <h2 className="text-xl md:text-2xl font-bold">
-                Pourquoi choisir un pomsky nain ou Toy ?
+                Pourquoi choisir un Pomsky Miniature ou Toy ?
               </h2>
 
               <p className="text-muted-foreground max-w-3xl mx-auto">
                 Petit chien au grand cœur, <strong>
-                  le pomsky nain et le pomsky Toy sont deux
+                  le pomsky miniature et le pomsky Toy sont deux
                   variétés de petit gabarit
                 </strong>, reconnues pour leur intelligence vive et leur
                 grande proximité avec leur famille.
