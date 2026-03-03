@@ -110,7 +110,7 @@ export default function BlogList({ base, theme }: BlogListProps) {
 
                                 <div className="flex flex-col gap-4">
                                     <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.2em] text-muted-foreground">
-                                        <span>{formatDate(post.date)}</span>
+                                        <time dateTime={post.date}>{formatDate(post.date)}</time>
                                         <span>•</span>
                                         <span>{post.readTime}</span>
                                         <span>•</span>

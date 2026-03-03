@@ -41,10 +41,17 @@ export const metadata: Metadata = {
 const contactItems = [
     {
         icon: MapPin,
-        title: "Adresse",
+        title: "Lieu d'élevage et visites",
         type: "address",
-        content: "Jura (39) commune de SAINT AMOUR",
-        secondaryLine: "visite sur rendez-vous."
+        content: `${siteConfig.location.breedingLocation.postalCode} ${siteConfig.location.breedingLocation.city} (${siteConfig.location.breedingLocation.department})`,
+        secondaryLine: "visites sur rendez-vous."
+    },
+    {
+        icon: MapPin,
+        title: "Siège social",
+        type: "address",
+        content: `${siteConfig.legal.address.postalCode} ${siteConfig.legal.address.city} (Saône-et-Loire, 71)`,
+        secondaryLine: "adresse légale de l'entreprise."
     },
     {
         icon: Phone,
@@ -246,6 +253,5 @@ export default function ContactPage() {
         </>
     )
 }
-
 
 

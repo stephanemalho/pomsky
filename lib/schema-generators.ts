@@ -73,7 +73,8 @@ export function generateOrganizationSchema() {
 
 export function generateLocalBusinessSchema() {
     const legal = siteConfig.legal;
-    const address = legal.address;
+    const breedingLocation = siteConfig.location?.breedingLocation;
+    const address = breedingLocation ?? legal.address;
     const coordinates = (
         legal as {
             address?: {
@@ -103,8 +104,11 @@ export function generateLocalBusinessSchema() {
             addressLocality: address.city,
             postalCode: address.postalCode,
             addressCountry: address.countryCode,
-            ...(siteConfig.location?.region
-                ? { addressRegion: siteConfig.location.region }
+            ...((breedingLocation?.department || siteConfig.location?.region)
+                ? {
+                      addressRegion:
+                          breedingLocation?.department ?? siteConfig.location?.region
+                  }
                 : {})
         },
         ...(coordinates?.latitude != null && coordinates?.longitude != null
@@ -117,6 +121,11 @@ export function generateLocalBusinessSchema() {
               }
             : {}),
         openingHoursSpecification,
+        parentOrganization: {
+            "@type": "Organization",
+            name: legal.tradeName || siteConfig.name,
+            legalName: legal.legalName
+        },
         priceRange: "$$" // ? ajuster selon votre gamme tarifaire
     };
 }
@@ -201,10 +210,14 @@ export function generateReproductorSchema(dog: {
 }) {
     return {
         "@context": "https://schema.org",
-        "@type": "Person",
+        "@type": "Animal",
         name: dog.name,
         description: dog.description,
         image: toAbsoluteUrl(dog.image),
+        additionalProperty: [
+            { "@type": "PropertyValue", name: "Couleur", value: dog.color },
+            { "@type": "PropertyValue", name: "Format", value: dog.size }
+        ],
         affiliation: {
             "@type": "Organization",
             name: siteConfig.name,
@@ -235,14 +248,57 @@ export function generateWebsiteSchema() {
         name: siteConfig.name,
         url: siteConfig.siteUrl,
         image: defaultImageUrl,
-        description: siteConfig.description,
-        potentialAction: {
-            "@type": "SearchAction",
-            target: {
-                "@type": "EntryPoint",
-                urlTemplate: `${siteConfig.siteUrl}/search?q={search_term_string}`
-            },
-            "query-input": "required name=search_term_string"
+        description: siteConfig.description
+    };
+}
+
+export function generateBlogPostingSchema(post: {
+    title: string;
+    excerpt: string;
+    url: string;
+    datePublished: string;
+    dateModified?: string;
+    imageUrl: string;
+    imageAlt?: string;
+    authorName: string;
+    authorUrl?: string;
+    publisherName?: string;
+    tags?: string[];
+}) {
+    const topicTags = post.tags && post.tags.length > 0
+        ? post.tags
+        : ["Pomsky", "Chien", "Élevage canin"];
+
+    return {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        headline: post.title,
+        description: post.excerpt,
+        mainEntityOfPage: post.url,
+        datePublished: post.datePublished,
+        dateModified: post.dateModified ?? post.datePublished,
+        image: {
+            "@type": "ImageObject",
+            url: toAbsoluteUrl(post.imageUrl),
+            caption: post.imageAlt ?? post.title
+        },
+        author: {
+            "@type": "Person",
+            name: post.authorName,
+            ...(post.authorUrl ? { url: post.authorUrl } : {})
+        },
+        keywords: topicTags.join(", "),
+        about: topicTags.map((topic) => ({
+            "@type": "Thing",
+            name: topic
+        })),
+        publisher: {
+            "@type": "Organization",
+            name: post.publisherName ?? siteConfig.name,
+            logo: {
+                "@type": "ImageObject",
+                url: `${siteConfig.siteUrl}/icon.png`
+            }
         }
     };
 }

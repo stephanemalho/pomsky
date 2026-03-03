@@ -2,6 +2,7 @@ import Link from "next/link"
 import { Facebook, Instagram } from "lucide-react"
 import { FaTiktok } from "react-icons/fa6";
 import Image from "next/image"
+import { siteConfig } from "@/lib/seo-config"
 
 export function Footer() {
     return (
@@ -22,7 +23,7 @@ export function Footer() {
                             <span className="text-lg font-bold text-primary">Royal POMSKY</span>
                         </div>
                         <p className="text-sm text-muted-foreground">
-                            Elevage Professionel de pomsky Toys, miniatures, et standards dans le Jura (39). Santé, socialisation et accompagnement des familles.
+                            Élevage Professionnel de Pomsky Toys, miniatures et standards. Siège social en Saône-et-Loire (71), élevage et visites à Saint-Amour (39).
                         </p>
                     </div>
 
@@ -121,7 +122,12 @@ export function Footer() {
                     <address className="not-italic">
                         <h3 className="font-semibold mb-4">Contact</h3>
                         <ul className="space-y-2 text-sm text-muted-foreground">
-                            <li>Jura (39) commune de SAINT AMOUR</li>
+                            <li>
+                                Élevage et visites: {siteConfig.location.breedingLocation.city}, {siteConfig.location.breedingLocation.department}
+                            </li>
+                            <li>
+                                Siège social: {siteConfig.legal.address.city}, Saône-et-Loire (71)
+                            </li>
                             <li>Visites sur rendez-vous</li>
                             <li>
                                 <Link
@@ -133,7 +139,7 @@ export function Footer() {
                             </li>
                             <li>
                                 <a
-                                    href="mailto:royal-pomsky@gmail.com"
+                                    href="mailto:elevageroyalpomsky@gmail.com"
                                     className="hover:text-primary transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded"
                                     aria-label="Envoyer un email à elevageroyalpomsky@gmail.com"
                                 >

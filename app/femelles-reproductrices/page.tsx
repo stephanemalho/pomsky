@@ -83,7 +83,7 @@ export default function NosChiotsPage() {
                     <section className="text-center space-y-4 mb-12">
                         <h1
                             className="text-xl md:text-3xl font-bold">{pageContent.reproductors.h1}</h1>
-                        <h2 className="text-xl md:text-2xl">{pageContent.reproductors.subtitle}</h2>
+                        <p className="text-xl md:text-2xl">{pageContent.reproductors.subtitle}</p>
 
                         <p className="text-lg text-muted-foreground max-w-3xl mx-auto">{pageContent.reproductors.description}</p>
 
@@ -185,4 +185,3 @@ export default function NosChiotsPage() {
         </>
     )
 }
-

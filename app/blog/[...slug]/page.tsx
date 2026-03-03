@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { Badge } from "@/components/ui/badge";
 import { blog } from "@/constants/blog/blog";
 import { buildOpenGraph, buildTwitter, pageMetadata, siteConfig } from "@/lib/seo-config";
+import { generateBlogPostingSchema } from "@/lib/schema-generators";
 import type { BlogPost } from "@/constants/blog/blogTypes";
 
 type BlogArticlePageProps = {
@@ -146,9 +147,26 @@ export default async function BlogArticlePage({
 
     const { articleLabels } = blog;
     const relatedPosts = getRelatedPosts(post);
+    const articleUrl = new URL(`/blog/${post.slug}`, siteConfig.siteUrl).toString();
+    const articleSchema = generateBlogPostingSchema({
+        title: post.title,
+        excerpt: post.excerpt,
+        url: articleUrl,
+        datePublished: post.date,
+        imageUrl: post.image ?? siteConfig.ogImage,
+        imageAlt: post.imageAlt ?? post.title,
+        authorName: post.author.name,
+        authorUrl: post.author.linkedinUrl,
+        publisherName: siteConfig.name,
+        tags: post.tags
+    });
 
     return (
         <div className="bg-background text-foreground">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+            />
             <header className="max-w-4xl mx-auto px-6 pt-12 md:pt-16 pb-8">
                 <Link
                     href="/blog/pomsky"
@@ -167,7 +185,7 @@ export default async function BlogArticlePage({
                         {post.introduction}
                     </p>
                     <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.2em] text-muted-foreground">
-                        <span>{formatDate(post.date)}</span>
+                        <time dateTime={post.date}>{formatDate(post.date)}</time>
                         <span>•</span>
                         <span>{post.readTime}</span>
                     </div>

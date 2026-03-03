@@ -75,7 +75,14 @@ export const siteConfig = {
     location: {
         region: "Bourgogne-Franche-Comté",
         department: "Saône-et-Loire (71)",
-        nearbyCity: "Saint-Amour (39)"
+        nearbyCity: "Saint-Amour (39)",
+        breedingLocation: {
+            city: "Saint-Amour",
+            postalCode: "39160",
+            department: "Jura (39)",
+            country: "France",
+            countryCode: "FR"
+        }
     },
 
     /* ------------------------------ Horaires ---------------------------------- */

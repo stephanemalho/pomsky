@@ -173,21 +173,23 @@ export default function NosChiotsPage() {
                                                             {puppy.isReserved && puppy.name} attend sa famille
                                                         </span>
                                                     ) : (
-                                                        <a
-                                                            target="_blank"
-                                                            rel="noopener noreferrer"
-                                                            className="bg-primary text-primary-foreground shadow-xs hover:bg-primary/90 py-2 px-4 rounded-md text-center"
-                                                            href={puppy.linkTo}
-                                                        >
-                                                            Réserver une visite ou demander plus de photos/vidéos
-                                                        </a>
+                                                        <div className="flex flex-col sm:flex-row gap-3">
+                                                            <Link
+                                                                href="/contact"
+                                                                className="border border-primary text-primary shadow-xs hover:bg-primary/10 py-2 px-4 rounded-md text-center"
+                                                            >
+                                                                Contacter l&apos;élevage
+                                                            </Link>
+                                                            <a
+                                                                target="_blank"
+                                                                rel="noopener noreferrer"
+                                                                className="bg-primary text-primary-foreground shadow-xs hover:bg-primary/90 py-2 px-4 rounded-md text-center"
+                                                                href={puppy.linkTo}
+                                                            >
+                                                                Réserver une visite ou demander plus de photos/vidéos
+                                                            </a>
+                                                        </div>
                                                     )}
-                                                    <Link
-                                                        href="/contact"
-                                                        className="border border-primary text-primary shadow-xs hover:bg-primary/10 py-2 px-4 rounded-md text-center"
-                                                    >
-                                                        Contacter l&apos;élevage
-                                                    </Link>
                                                 </div>
                                             </div>
                                         </div>
