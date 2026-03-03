@@ -221,33 +221,6 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-
-        {/* Portées disponibles */}
-        {/* <section className="py-16 my-8">
-        <div className="container mx-auto">
-          <div className="text-center space-y-4 mb-12">
-            <h2 className="text-xl md:text-2xl font-bold">Portées actuellement disponibles</h2>
-
-            <div className="flex items-center justify-center space-x-4 text-muted-foreground">
-              <div className="flex items-center space-x-2">
-                <Calendar className="h-4 w-4" />
-                <span>Portée du 12 octobre 2025</span>
-              </div>
-
-              <div className="flex items-center space-x-2">
-                <MapPin className="h-4 w-4" />
-                <span>Île-de-France</span>
-              </div>
-            </div>
-
-            <Link href="/chiots-disponibles" className="bg-primary text-white hover:bg-primary/80 p-4 font-semibold inline-block dark:text-[#5b3a1a] rounded-md">
-              Voir les chiots disponibles
-            </Link>
-          </div>
-
-
-        </div>
-      </section> */}
         {/* Pourquoi choisir un pomsky */}
         <section className="py-16 my-8 bg-muted/30">
           <div className="container mx-auto p-2">

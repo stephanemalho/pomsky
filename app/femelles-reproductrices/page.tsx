@@ -2,7 +2,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { FAQSection } from "@/components/faq"
 import { faqReproducteurs } from "@/lib/faq-data"
-import { Dog, PawPrint, Ruler, Weight } from "lucide-react"
+import { Dog, PawPrint, Ruler, Scissors, Weight } from "lucide-react"
 import { generateBreadcrumbSchema, generateFAQSchema, generateReproductorSchema } from "@/lib/schema-generators"
 import ImageCarousel from "@/components/client/carousel/ImageCarousel"
 import type { Metadata } from "next"
@@ -109,7 +109,7 @@ export default function NosChiotsPage() {
                                         <div className={`p-8 space-y-4 flex flex-col justify-center min-w-0 ${index % 2 === 1 ? "md:order-1" : ""}`}>
                                             <div className="flex items-center gap-2">
                                                 <Badge variant="secondary">
-                                                    <PawPrint className="h-4 w-4 mr-1" />
+                                                    <PawPrint className="max-h-4 max-w-4 mr-1" />
                                                     {puppy.coat}
                                                 </Badge>
                                                 <Badge variant="outline" className="min-w-0 whitespace-normal wrap-break-words">{puppy.color}</Badge>
@@ -120,8 +120,8 @@ export default function NosChiotsPage() {
                                                 <div>
                                                     {puppy.health && puppy.health.length > 0 && (
                                                         <div className="space-y-1">
-                                                            <h4 className="font-semibold">Santé :</h4>
-                                                            <ul className="list-disc list-inside text-sm text-muted-foreground">
+                                                            <h4 id={`health-title-${index}`} className="font-semibold">Santé :</h4>
+                                                            <ul aria-labelledby={`health-title-${index}`} className="list-disc list-inside text-sm text-muted-foreground">
                                                                 {puppy.health.map((healthItem) => (
                                                                     <li key={healthItem}>{healthItem}</li>
                                                                 ))}
@@ -130,26 +130,28 @@ export default function NosChiotsPage() {
                                                     )}
                                                 </div>
                                             </div>
-                                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
-                                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
-                                                    <div className="flex items-center gap-2 text-muted-foreground">
-                                                        <Dog className="h-4 w-4 text-primary" />
-                                                        <span>{puppy.size}</span>
-                                                    </div>
+                                            <dl className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+                                                <div className="flex items-center gap-2 text-muted-foreground">
+                                                    <dt className="sr-only">Format</dt>
+                                                    <Dog className="max-h-4 max-w-4 text-primary" aria-hidden="true" />
+                                                    <dd>{puppy.size}</dd>
                                                 </div>
-                                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
-                                                    <div className="flex items-center gap-2 text-muted-foreground">
-                                                        <Ruler className="min-h-4 min-w-4 text-primary" />
-                                                        <span>{puppy.ruler}</span>
-                                                    </div>
+                                                <div className="flex items-center gap-2 text-muted-foreground">
+                                                    <dt className="sr-only">Taille</dt>
+                                                    <Ruler className="max-h-4 max-w-4 text-primary" aria-hidden="true" />
+                                                    <dd>{puppy.height}</dd>
                                                 </div>
-                                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
-                                                    <div className="flex items-center gap-2 text-muted-foreground">
-                                                        <Weight className="min-h-4 min-w-4 text-primary" />
-                                                        <span>{puppy.weight}</span>
-                                                    </div>
+                                                <div className="flex items-center gap-2 text-muted-foreground">
+                                                    <dt className="sr-only">Poids</dt>
+                                                    <Weight className="max-h-4 max-w-4 text-primary" aria-hidden="true" />
+                                                    <dd>{puppy.weight}</dd>
                                                 </div>
-                                            </div>
+                                                <div className="flex items-center gap-2 text-muted-foreground">
+                                                    <dt className="sr-only">Fourrure</dt>
+                                                    <Scissors className="max-h-4 max-w-4 text-primary" aria-hidden="true" />
+                                                    <dd>{puppy.ruler}</dd>
+                                                </div>
+                                            </dl>
                                             <div className="flex flex-wrap gap-2">
                                                 {puppy.highlights.map((item) => (
                                                     <Badge key={item} variant="secondary">
@@ -183,7 +185,4 @@ export default function NosChiotsPage() {
         </>
     )
 }
-
-
-
 

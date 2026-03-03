@@ -130,28 +130,33 @@ export default function NosChiotsPage() {
                                                     <h3 className="text-2xl font-bold">{puppy.name}</h3>
                                                     <p className="text-muted-foreground">{puppy.description}</p>
                                                 </div>
-                                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+                                                <dl className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
                                                     <div className="flex items-center gap-2 text-muted-foreground">
-                                                        <Dog className="h-4 w-4 text-primary" />
-                                                        <span>{puppy.sexe}</span>
+                                                        <dt className="sr-only">Sexe</dt>
+                                                        <Dog className="h-4 w-4 text-primary" aria-hidden="true" />
+                                                        <dd>{puppy.sexe}</dd>
                                                     </div>
                                                     <div className="flex items-center gap-2 text-muted-foreground">
-                                                        <Heart className="h-4 w-4 text-primary" />
-                                                        <span>{puppy.parents}</span>
+                                                        <dt className="sr-only">Parents</dt>
+                                                        <Heart className="h-4 w-4 text-primary" aria-hidden="true" />
+                                                        <dd>{puppy.parents}</dd>
                                                     </div>
                                                     <div className="flex items-center gap-2 text-muted-foreground">
-                                                        <Calendar className="h-4 w-4 text-primary" />
-                                                        <span>{puppy.readyDate}</span>
+                                                        <dt className="sr-only">Disponible le</dt>
+                                                        <Calendar className="h-4 w-4 text-primary" aria-hidden="true" />
+                                                        <dd>{puppy.readyDate}</dd>
                                                     </div>
                                                     <div className="flex items-center gap-2 text-muted-foreground">
-                                                        <PawPrint className="h-4 w-4 text-primary" />
-                                                        <span>{puppy.age}</span>
+                                                        <dt className="sr-only">Âge</dt>
+                                                        <PawPrint className="h-4 w-4 text-primary" aria-hidden="true" />
+                                                        <dd>{puppy.age}</dd>
                                                     </div>
                                                     <div className="flex items-center gap-2 text-muted-foreground">
-                                                        <Weight className="h-4 w-4 text-primary" />
-                                                        <span>{puppy.weight}</span>
+                                                        <dt className="sr-only">Poids</dt>
+                                                        <Weight className="h-4 w-4 text-primary" aria-hidden="true" />
+                                                        <dd>{puppy.weight}</dd>
                                                     </div>
-                                                </div>
+                                                </dl>
                                                 <div className="flex flex-wrap gap-2">
                                                     {puppy.highlights.map((item) => (
                                                         <Badge key={item} variant="secondary">

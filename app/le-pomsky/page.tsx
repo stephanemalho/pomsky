@@ -227,7 +227,7 @@ export default function dogPage() {
                             </Badge>
                             <h2 className="text-xl md:text-2xl font-bold">{pageContent.pomsky.pomskyOrigin}</h2>
                             <p className="text-muted-foreground leading-relaxed">
-                                Le Pomsky est né aux États-Unis. L'objectif : obtenir un chien de compagnie au look de Husky Sibérien (masque, regard, silhouette) dans un format plus petit ! Nous cherchons galement un comportement équilibré et plus adapté à notre époque et au mode de vie urbain.
+                                Le Pomsky est né aux États-Unis. L'objectif : obtenir un chien de compagnie au look de Husky Sibérien (masque, regard, silhouette) dans un format plus petit ! Nous cherchons également un comportement équilibré et plus adapté à notre époque et au mode de vie urbain.
                             </p>
                             <p className="text-muted-foreground leading-relaxed">
                                 Le résultat est merveilleux : c'est un mélange équilibré du Spitz nain et du husky qui en ressort avec un chien ayant le physique d'un nordique de traîneau, dans une petite taille, avec un comportement de parfait chien de compagnie.
@@ -240,8 +240,15 @@ export default function dogPage() {
                         <div className="grid sm:grid-cols-2 gap-4">
                             {[
                                 {
+                                    icon: <Heart className="h-4 w-4 text-primary" aria-hidden="true" />,
+                                    title: "Création du posmky en 2012",
+                                    text: "Association de deux éleveuses : Arctic Design Pomskies et Apex Pomskies qui avait débuté les éssais en 2010. Le Pomsky Club of America est fondé la même année (2012).",
+                                    linkHref: "https://americanpomskykennelclub.org/",
+                                    linkLabel: "American Pomsky Kennel Club",
+                                },
+                                {
                                     icon: <History className="h-4 w-4 text-primary" aria-hidden="true" />,
-                                    title: "Origines américaines",
+                                    title: "D'origines américaines",
                                     text: "Race récente, née aux USA et rapidement adoptée en Europe. Notamment en France par Royal Pomsky, premier élevage français spécialisé dans le Pomsky toy de lignée américaine.",
                                     linkHref: "https://www.saone-et-loire.gouv.fr/Actions-de-l-Etat/Environnement-risques-naturels-et-technologiques/Installations-classees-pour-la-protection-de-l-environnement-ICPE/ICPE-Teledeclarations/Preuves-de-depot-Changement-d-exploitant/2022/ELEVAGE-CANIN-ROYAL-POMSKY-a-DOMMARTIN-LES-CUISEAUX",
                                     linkLabel: "Voir la déclaration officielle ICPE – Préfecture de Saône-et-Loire",
@@ -255,13 +262,6 @@ export default function dogPage() {
                                     linkLabel: "Lire notre article sur le Pomsky Toy",
                                 },
                                 {
-                                    icon: <Heart className="h-4 w-4 text-primary" aria-hidden="true" />,
-                                    title: "Création en 2012",
-                                    text: "Association de deux éleveuses : Arctic Design Pomskies et Apex Pomskies qui avait débuté les éssais en 2010. Le Pomsky Club of America est fondé la même année (2012).",
-                                    linkHref: "https://americanpomskykennelclub.org/",
-                                    linkLabel: "American Pomsky Kennel Club",
-                                },
-                                {
                                     icon: <Sparkles className="h-4 w-4 text-primary" aria-hidden="true" />,
                                     title: "Pomsky vs Klee Kai",
                                     text: "Le Pomsky est un chien de compagnie, plus accessible à l'éducation que l'Alaskan Klee Kai. Il est généralement plus adaptable à la vie de famille et aux environnements variés.",
@@ -273,7 +273,7 @@ export default function dogPage() {
                                     <CardHeader className="space-y-2">
                                         <div className="flex items-center gap-2">
                                             {item.icon}
-                                            <CardTitle className="text-base">{item.title}</CardTitle>
+                                            <h3 className="leading-none font-semibold">{item.title}</h3>
                                         </div>
                                     </CardHeader>
                                     <CardContent className="flex h-full flex-col">
@@ -319,9 +319,9 @@ export default function dogPage() {
                                 >
                                     {/* Titre – toujours en haut */}
                                     <CardHeader className="pb-2">
-                                        <CardTitle className="text-xl">
+                                        <h3 className="text-xl leading-none font-semibold">
                                             {generation.title}
-                                        </CardTitle>
+                                        </h3>
                                     </CardHeader>
 
                                     {/* Corps de carte */}
@@ -358,7 +358,7 @@ export default function dogPage() {
                         </div>
                         <Card className="bg-muted/60">
                             <CardContent className="py-6 px-6 space-y-3 text-muted-foreground">
-                                <p className="font-semibold text-foreground">Le cas des Pomsky « B » (Backcross)</p>
+                                <h2 className="font-semibold text-foreground">Le cas des Pomsky « B » (Backcross)</h2>
                                 <p className="leading-relaxed">
                                     Un Pomsky peut être recroisé avec un Husky ou un Poméranien pour renforcer une caractéristique
                                     physique. On parle alors de F1B, F2B, F3B selon la génération du parent Pomsky.
@@ -390,7 +390,7 @@ export default function dogPage() {
                             >
                                 <Card className="bg-muted/60 flex flex-col h-full overflow-hidden transition-colors group-hover:border-primary/50">
                                     <CardHeader>
-                                        <CardTitle className="text-xl">Les yeux du Pomsky</CardTitle>
+                                        <h3 className="leading-none font-semibold text-xl">Les yeux du Pomsky</h3>
                                     </CardHeader>
                                     <CardContent className="flex flex-1 text-sm flex-col text-muted-foreground leading-relaxed space-y-3">
                                         <div className="mt-4 space-y-3">
@@ -421,7 +421,7 @@ export default function dogPage() {
                             >
                                 <Card className="bg-muted/60 flex flex-col h-full overflow-hidden transition-colors group-hover:border-primary/50">
                                     <CardHeader>
-                                        <CardTitle className="text-xl">Morphologie générale</CardTitle>
+                                        <h3 className="leading-none font-semibold text-xl">Morphologie générale</h3>
                                     </CardHeader>
                                     <CardContent className="flex flex-1 text-sm flex-col text-muted-foreground leading-relaxed space-y-3">
                                         <div className="mt-4 space-y-3">
@@ -461,7 +461,7 @@ export default function dogPage() {
                         <div className="grid md:grid-cols-2 gap-6">
                             <Card className="bg-background/70 flex flex-col">
                                 <CardHeader>
-                                    <CardTitle className="text-xl">Caractère et éducation</CardTitle>
+                                    <h3 className="leading-none font-semibold text-xl">Caractère et éducation</h3>
                                 </CardHeader>
                                 <CardContent className="text-sm text-muted-foreground leading-relaxed space-y-3">
                                     <p>
@@ -478,7 +478,7 @@ export default function dogPage() {
 
                             <Card className="bg-background/70">
                                 <CardHeader>
-                                    <CardTitle className="text-xl">Santé et robustesse</CardTitle>
+                                    <h3 className="leading-none font-semibold text-xl">Santé et robustesse</h3>
                                 </CardHeader>
                                 <CardContent className="text-sm text-muted-foreground leading-relaxed space-y-3">
                                     <p>
@@ -496,7 +496,7 @@ export default function dogPage() {
                         <div className="grid md:grid-cols-2 gap-6">
                             <Card className="bg-background/70">
                                 <CardHeader>
-                                    <CardTitle className="text-xl">Soins et entretien</CardTitle>
+                                    <h3 className="text-xl">Soins et entretien</h3>
                                 </CardHeader>
                                 <CardContent className="text-sm text-muted-foreground leading-relaxed space-y-3">
                                     <p>
@@ -512,7 +512,7 @@ export default function dogPage() {
 
                             <Card className="bg-background/70">
                                 <CardHeader>
-                                    <CardTitle className="text-xl">Prix et adoption</CardTitle>
+                                    <h3 className="leading-none font-semibold text-xl">Prix et adoption</h3>
                                 </CardHeader>
                                 <CardContent className="text-sm text-muted-foreground leading-relaxed space-y-3 flex flex-col flex-1">
                                     <div className="flex flex-col gap-2">
