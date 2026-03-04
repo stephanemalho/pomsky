@@ -119,9 +119,9 @@ export default function HomePage() {
                 Royal Pomsky
               </div>
               <h1 className="text-2xl md:text-4xl font-semibold tracking-wide text-white">
-                Élevage de Pomsky - Royal POMSKY
+                {pageContent.home.h1}
                 <span className="block text-base md:text-xl font-light text-white/80 mt-2">
-                  "Premier élevage français de Pomsky issus de lignées américaines"
+                  {pageContent.home.h1Subtitle}
                 </span>
               </h1>
               <div className="mx-auto">

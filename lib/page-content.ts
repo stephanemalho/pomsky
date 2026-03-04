@@ -1,18 +1,14 @@
 export const pageContent = {
     home: {
-        h1: "Élevage de Pomsky Toy de lignée américaine en France",
-
+        h1: "Élevage de Pomsky - Royal POMSKY",
         h1Subtitle:
-            "Le Pomsky Toy est une taille de Pomsky rare, qui nécessite une exigence et une maîtrise avancée des lignées, de la génétique et du développement du chiot. Chez Royal Pomsky, cette expertise est le fruit d’un travail de sélection rigoureux mené depuis 2017.",
-
+            "Premier élevage français de Pomsky issus de lignées américaines",
         description:
-            "Royal Pomsky est un élevage familial situé à Saint-Amour (39160), en Bourgogne Franche-Comté. Spécialisé dans le Pomsky Toy, notre élevage a fait le choix, dès 2017, de travailler exclusivement avec des lignées américaines issues du berceau de la race.",
-
+            "Royal Pomsky se situe dans la commune de SAINT-AMOUR (39160) en région Bourgogne Franche Comté. C'est le premier élevage de Pomsky en France ayant fait le choix de débuter sa sélection en 2017 avec des lignées Américaines : directement au berceau de la race, pour amener en France le Pomsky absolument parfait.",
         descriptionSecondary:
-            "Depuis notre première portée née en 2018, notre objectif est clair : proposer des Pomsky Toy équilibrés, en bonne santé et parfaitement socialisés. Notre travail repose sur une sélection morphologique cohérente, un suivi vétérinaire rigoureux et une expertise comportementale approfondie.",
-
+            "Depuis notre première portée née en 2018, notre objectif est de vous apporter le meilleur et l'excellence version Pomsky : Un physique parfait, une santé de fer, une expertise comportementale, une sociabilisation parfaite, un suivi tout au long de la vie du chiot.",
         descriptionTertiary:
-            "Nous avons rédigé plusieurs articles détaillés pour vous aider à mieux comprendre le Pomsky et les spécificités de cette taille. Nous vous invitons à en prendre connaissance avant d’envisager l’adoption de votre chiot, puis à consulter nos Pomsky disponibles via la page ci-dessous."
+            "Nous avons rédigé plusieurs articles contenant de très nombreuses informations, merci d'en prendre connaissance avant d'envisager l'adoption de votre chiot ! Vous pourrez ensuite consulter la page de nos chiots pomsky disponibles en cliquant ci-dessous :"
     },
     pomsky: {
         h1: "Le Pomsky toy: taille, tempérament, origines et adoption responsable",
