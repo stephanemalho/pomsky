@@ -241,7 +241,7 @@ export default function dogPage() {
                             {[
                                 {
                                     icon: <Heart className="h-4 w-4 text-primary" aria-hidden="true" />,
-                                    title: "Création du posmky en 2012",
+                                    title: "Création du pomsky en 2012",
                                     text: "Association de deux éleveuses : Arctic Design Pomskies et Apex Pomskies qui avait débuté les éssais en 2010. Le Pomsky Club of America est fondé la même année (2012).",
                                     linkHref: "https://americanpomskykennelclub.org/",
                                     linkLabel: "American Pomsky Kennel Club",
