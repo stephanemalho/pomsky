@@ -13,6 +13,8 @@ const defaultImageUrl = toAbsoluteUrl(siteConfig.ogImage);
 const puppyBrandName = "Royal Pomsky";
 const puppyCategory = "Pomsky";
 const puppyAdditionalType = "https://fr.wikipedia.org/wiki/Pomsky";
+const puppyEligibleRegion = ["FR", "CH"];
+const puppyDepartureMode = "Retrait à l'élevage sur rendez-vous";
 
 type PuppySchemaInput = {
     name: string;
@@ -43,6 +45,10 @@ function getPuppyUrl(puppy: PuppySchemaInput) {
     return toAbsoluteUrl(`${siteConfig.pages.puppies}#${toPuppyAnchorId(puppy.name)}`);
 }
 
+function getPuppyProductId(puppy: PuppySchemaInput) {
+    return `${getPuppyUrl(puppy)}-product`;
+}
+
 function getPuppyAvailability(isReserved?: boolean) {
     return isReserved
         ? "https://schema.org/OutOfStock"
@@ -63,6 +69,8 @@ function createPuppyAdditionalProperty(puppy: PuppySchemaInput) {
         { name: "Date naissance", value: puppy.age },
         { name: "Disponibilité", value: puppy.isReserved ? "Réservé" : "Disponible" },
         { name: "Prix", value: puppyPriceValue },
+        { name: "Zone d'adoption", value: "France et Suisse" },
+        { name: "Mode de départ", value: puppyDepartureMode },
         { name: "Lignée", value: puppy.coat },
         { name: "Disponible à partir", value: puppy.readyDate }
     ];
@@ -82,11 +90,14 @@ function createPuppyProductEntity(puppy: PuppySchemaInput) {
         .filter(Boolean)
         .map(toAbsoluteUrl);
     const productUrl = getPuppyUrl(puppy);
+    const productId = getPuppyProductId(puppy);
 
     const offer = {
         "@type": "Offer",
         availability: getPuppyAvailability(puppy.isReserved),
         url: productUrl,
+        eligibleRegion: puppyEligibleRegion,
+        availableDeliveryMethod: "https://schema.org/OnSitePickup",
         ...(typeof puppy.price === "number"
             ? {
                   price: String(puppy.price),
@@ -110,6 +121,7 @@ function createPuppyProductEntity(puppy: PuppySchemaInput) {
 
     return {
         "@type": "Product",
+        "@id": productId,
         name: puppy.name,
         description: puppy.description,
         image: absoluteImages.length > 0 ? absoluteImages : [defaultImageUrl],
@@ -288,7 +300,12 @@ export function generatePuppyListSchema(puppies: PuppySchemaInput[]) {
         itemListElement: puppies.map((puppy, index) => ({
             "@type": "ListItem",
             position: index + 1,
-            item: createPuppyProductEntity(puppy)
+            item: {
+                "@type": "Product",
+                "@id": getPuppyProductId(puppy),
+                name: puppy.name,
+                url: getPuppyUrl(puppy)
+            }
         }))
     };
 }

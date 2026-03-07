@@ -274,7 +274,8 @@ export const pageMetadata = {
 
     puppies: {
         title: pageContent.puppies.h1,
-        description: pageContent.puppies.description,
+        description:
+            "Chiots Pomsky disponibles à l’adoption chez Royal POMSKY. Adoption possible partout en France et en Suisse, retrait à l’élevage sur rendez-vous.",
         keywords: [
             "chiot pomsky disponible",
             "chiot pomsky a reserver",
