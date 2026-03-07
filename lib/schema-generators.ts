@@ -29,6 +29,9 @@ type PuppySchemaInput = {
     images: string[];
     linkTo: string;
     isReserved?: boolean;
+    price?: number;
+    priceCurrency?: string;
+    priceIncludes?: string;
 };
 
 function toPuppyAnchorId(name: string) {
@@ -46,6 +49,10 @@ function getPuppyAvailability(isReserved?: boolean) {
 }
 
 function createPuppyAdditionalProperty(puppy: PuppySchemaInput) {
+    const puppyPriceValue =
+        typeof puppy.price === "number"
+            ? `${puppy.price} ${puppy.priceCurrency ?? "EUR"}${puppy.priceIncludes ? ` (${puppy.priceIncludes})` : ""}`
+            : undefined;
     const candidates = [
         { name: "Sexe", value: puppy.sexe },
         { name: "Couleur", value: puppy.color },
@@ -54,6 +61,7 @@ function createPuppyAdditionalProperty(puppy: PuppySchemaInput) {
         { name: "Parents", value: puppy.parents },
         { name: "Date naissance", value: puppy.age },
         { name: "Disponibilité", value: puppy.isReserved ? "Réservé" : "Disponible" },
+        { name: "Prix", value: puppyPriceValue },
         { name: "Lignée", value: puppy.coat },
         { name: "Disponible à partir", value: puppy.readyDate }
     ];
@@ -74,6 +82,28 @@ function createPuppyProductEntity(puppy: PuppySchemaInput) {
         .map(toAbsoluteUrl);
     const productUrl = getPuppyUrl(puppy);
 
+    const offer = {
+        "@type": "Offer",
+        availability: getPuppyAvailability(puppy.isReserved),
+        url: productUrl,
+        ...(typeof puppy.price === "number"
+            ? {
+                  price: String(puppy.price),
+                  priceCurrency: puppy.priceCurrency ?? "EUR",
+                  ...(puppy.priceIncludes
+                      ? {
+                            priceSpecification: {
+                                "@type": "UnitPriceSpecification",
+                                price: String(puppy.price),
+                                priceCurrency: puppy.priceCurrency ?? "EUR",
+                                description: puppy.priceIncludes
+                            }
+                        }
+                      : {})
+              }
+            : {})
+    };
+
     return {
         "@type": "Product",
         name: puppy.name,
@@ -87,11 +117,7 @@ function createPuppyProductEntity(puppy: PuppySchemaInput) {
         additionalType: puppyAdditionalType,
         additionalProperty: createPuppyAdditionalProperty(puppy),
         url: productUrl,
-        offers: {
-            "@type": "Offer",
-            availability: getPuppyAvailability(puppy.isReserved),
-            url: productUrl
-        },
+        offers: offer,
         ...(puppy.highlights.length > 0
             ? { keywords: puppy.highlights.join(", ") }
             : {})

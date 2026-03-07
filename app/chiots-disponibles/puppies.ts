@@ -15,6 +15,9 @@ export type Puppy = {
     images: string[];
     linkTo: string;
     isReserved?: boolean;
+    price?: number;
+    priceCurrency?: string;
+    priceIncludes?: string;
 };
 
 export const puppies: Puppy[] = [
@@ -30,7 +33,7 @@ export const puppies: Puppy[] = [
         readyDate: "Disponible à partir du 15 mars 2026",
         age: "Né le 10 janvier 2026",
         description:
-            "Vuk est un mâle Pomsky F5 aux yeux Vairons et il est le plus grand chiot de la portée (il va faire 7 à 8kg adulte): gourmand, joueur et affectueux, il ressemble beaucoup à sa maman Shadow. Voici les caractéristiques de Vuk : un masque en Fleur de Lys, une robe noire et blanche, des yeux vairons (un bleu et un marron) et une taille miniature. Vuk est un chiot très sociable qui adore les câlins et les jeux avec les enfants. Protitez de cette liste de photos pour découvrir son évolution et son caractère attachant ! (à 7 semaines)",
+            "Vuk est un mâle Pomsky F5 aux yeux Vairons et il est le plus grand chiot de la portée (il va faire 7 à 8kg adulte): gourmand, joueur et affectueux, il ressemble beaucoup à sa maman Shadow. Voici les caractéristiques de Vuk : un masque en Fleur de Lys, une robe noire et blanche, des yeux vairons (un bleu et un marron) et une taille miniature. Vuk est un chiot très sociable qui adore les câlins et les jeux avec les enfants. Protitez de cette liste de photos pour découvrir son évolution et son caractère attachant ! (à 8 semaines)",
         highlights: [
             "Mâle",
             "Masque Fleur de Lys",
@@ -47,7 +50,10 @@ export const puppies: Puppy[] = [
             "pages/puppies/VUK-pomsky-from-royal-pomsky.webp"
         ],
         linkTo: "https://forms.gle/wtcxuo84YEQzposV9",
-        isReserved: false
+        isReserved: false,
+        price: 3500,
+        priceCurrency: "EUR",
+        priceIncludes: "Tout frais compris"
     },
     {
         name: "ALUNA",

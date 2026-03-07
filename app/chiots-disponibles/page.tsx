@@ -1,6 +1,6 @@
 import { FAQSection } from "@/components/faq"
 import { faqNosChiots } from "@/lib/faq-data"
-import { Calendar, Dog, Heart, NotebookText, PawPrint, Sprout, Weight } from "lucide-react"
+import { Banknote, Calendar, Dog, Heart, NotebookText, PawPrint, Sprout, Weight } from "lucide-react"
 import Link from "next/link"
 import type { Metadata } from "next"
 import { buildOpenGraph, buildTwitter, pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
@@ -38,6 +38,14 @@ export const metadata: Metadata = {
     alternates: {
         canonical: `${siteConfig.siteUrl}/chiots-disponibles`,
     },
+}
+
+function formatPuppyPrice(price: number, currency = "EUR") {
+    return new Intl.NumberFormat("fr-FR", {
+        style: "currency",
+        currency,
+        maximumFractionDigits: 0
+    }).format(price)
 }
 
 export default function NosChiotsPage() {
@@ -155,6 +163,16 @@ export default function NosChiotsPage() {
                                                         <Weight className="h-4 w-4 text-primary" aria-hidden="true" />
                                                         <dd>{puppy.weight}</dd>
                                                     </div>
+                                                    {typeof puppy.price === "number" ? (
+                                                        <div className="flex items-center gap-2 text-muted-foreground sm:col-span-2">
+                                                            <dt className="sr-only">Prix</dt>
+                                                            <Banknote className="h-4 w-4 text-primary" aria-hidden="true" />
+                                                            <dd>
+                                                                {formatPuppyPrice(puppy.price, puppy.priceCurrency ?? "EUR")}
+                                                                {puppy.priceIncludes ? ` - ${puppy.priceIncludes}` : ""}
+                                                            </dd>
+                                                        </div>
+                                                    ) : null}
                                                 </dl>
                                                 <div className="flex flex-wrap gap-2">
                                                     {puppy.highlights.map((item) => (

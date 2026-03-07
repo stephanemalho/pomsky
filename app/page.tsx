@@ -10,6 +10,7 @@ import { generateLocalBusinessSchema, generateFAQSchema, generateBreadcrumbSchem
 import { convertFAQsToSchema } from "@/lib/faq-utils"
 import { pomskyBenefits } from "@/components/content/home/pomsky/pomskyBenefits"
 import { pageContent } from "@/lib/page-content"
+import { puppies } from "./chiots-disponibles/puppies"
 
 const HOME_OG_IMAGE = "/pomsky-and-his-pet-family-parent.jpg"
 
@@ -47,6 +48,23 @@ export default function HomePage() {
   const breadcrumbSchema = generateBreadcrumbSchema([{ name: "Accueil", url: "/" }])
   const faqSchema = generateFAQSchema(convertFAQsToSchema(faqHome))
   const lastMod = returnLastmod(siteConfig.pages.home)
+  const featuredPuppy = puppies[0]
+  const allPuppiesReserved = puppies.length > 0 && puppies.every((puppy) => puppy.isReserved === true)
+  const featuredPuppySlug = featuredPuppy
+    ? featuredPuppy.name.trim().toLowerCase().replace(/\s+/g, "-")
+    : ""
+  const featuredPuppyHref = featuredPuppy
+    ? `/chiots-disponibles#${featuredPuppySlug}`
+    : "/chiots-disponibles"
+  const featuredPuppyImage = featuredPuppy?.images[0]
+    ? (featuredPuppy.images[0].startsWith("/") ? featuredPuppy.images[0] : `/${featuredPuppy.images[0]}`)
+    : siteConfig.ogImage
+  const featuredPuppySideImages = featuredPuppy
+    ? featuredPuppy.images
+      .slice(1, 3)
+      .map((image) => (image.startsWith("/") ? image : `/${image}`))
+    : []
+  const featuredPuppySeoTitle = `Chiot Pomsky disponible à la vente : ${featuredPuppy?.name ?? "Royal POMSKY"}`
   const founders = [
     {
       name: "Aurélie",
@@ -160,7 +178,6 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
-
         </section>
         {/* Contenu centré */}
         {/* Présentation élevage */}
@@ -270,7 +287,131 @@ export default function HomePage() {
             En savoir plus sur le pomsky
           </Link>
         </section>
-
+        {featuredPuppy && !featuredPuppy.isReserved ? (
+          <section className="py-16 bg-muted/30 my-8">
+            <div className="container mx-auto p-2">
+              <div className="text-center space-y-4 mb-10">
+                <h2 className="text-xl md:text-2xl font-bold">
+                  {featuredPuppySeoTitle}
+                </h2>
+                <p className="text-muted-foreground max-w-3xl mx-auto">
+                  Accès direct à la fiche de {featuredPuppy.name} pour voir ses photos, sa disponibilité et ses informations d&apos;adoption.
+                </p>
+                <div className="w-24 h-1 bg-primary mx-auto rounded-full" aria-hidden="true" />
+              </div>
+              <Card className="overflow-hidden bg-muted/70 p-0">
+                <div className="grid xl:grid-cols-2 gap-0">
+                  <div className="relative aspect-4/3 xl:aspect-square">
+                    <Image
+                      src={featuredPuppyImage}
+                      alt={`Chiot Pomsky ${featuredPuppy.name} chez Royal POMSKY`}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 1279px) 100vw, 50vw"
+                    />
+                  </div>
+                  <CardContent className="p-6 md:p-8 space-y-4">
+                    <div className="flex flex-wrap gap-2">
+                      <Badge variant={featuredPuppy.isReserved ? "outline" : "secondary"}>
+                        {featuredPuppy.isReserved ? "Réservé" : "Disponible"}
+                      </Badge>
+                      <Badge variant="outline">{featuredPuppy.color}</Badge>
+                      <Badge variant="outline">{featuredPuppy.size}</Badge>
+                    </div>
+                    <h3 className="text-2xl font-bold">{featuredPuppy.name}</h3>
+                    <p className="text-muted-foreground">
+                      {featuredPuppy.description}
+                    </p>
+                    <dl className="grid sm:grid-cols-2 gap-3 text-sm text-muted-foreground">
+                      <div>
+                        <dt className="font-semibold text-foreground">Sexe</dt>
+                        <dd>{featuredPuppy.sexe}</dd>
+                      </div>
+                      <div>
+                        <dt className="font-semibold text-foreground">Poids adulte</dt>
+                        <dd>{featuredPuppy.weight}</dd>
+                      </div>
+                      <div>
+                        <dt className="font-semibold text-foreground">Parents</dt>
+                        <dd>{featuredPuppy.parents}</dd>
+                      </div>
+                      <div>
+                        <dt className="font-semibold text-foreground">Disponibilité</dt>
+                        <dd>{featuredPuppy.readyDate}</dd>
+                      </div>
+                    </dl>
+                    {featuredPuppySideImages.length > 0 ? (
+                      <div className="hidden xl:flex items-center gap-3">
+                        {featuredPuppySideImages.map((imageSrc, index) => (
+                          <div
+                            key={`${featuredPuppy.name}-thumb-${index}`}
+                            className="relative h-60 w-60 shrink-0 overflow-hidden rounded-md border border-border/70 bg-muted"
+                          >
+                            <Image
+                              src={imageSrc}
+                              alt={`${featuredPuppy.name} photo ${index + 2}`}
+                              fill
+                              className="object-cover"
+                              sizes="240px"
+                            />
+                          </div>
+                        ))}
+                      </div>
+                    ) : null}
+                    <div className="flex flex-col sm:flex-row gap-3 pt-2">
+                      <Link
+                        href={featuredPuppyHref}
+                        className="bg-primary text-white hover:bg-primary/80 py-3 px-4 font-semibold text-center rounded-md dark:text-[#5b3a1a] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                      >
+                        Voir la fiche de {featuredPuppy.name}
+                      </Link>
+                      <a
+                        href={featuredPuppy.linkTo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="border border-primary text-primary hover:bg-primary/10 py-3 px-4 font-semibold text-center rounded-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                      >
+                        Formulaire de réservation {featuredPuppy.name}
+                      </a>
+                    </div>
+                  </CardContent>
+                </div>
+              </Card>
+            </div>
+          </section>
+        ) : allPuppiesReserved ? (
+          <section className="py-16 bg-muted/30 my-8">
+            <div className="container mx-auto p-2">
+              <Card className="overflow-hidden bg-muted/70 p-0">
+                <CardContent className="p-8 md:p-10 text-center space-y-5">
+                  <Badge variant="secondary" className="w-fit mx-auto">
+                    Tous nos chiots sont à réserver à l'avance
+                  </Badge>
+                  <h2 className="text-xl md:text-2xl font-bold">
+                    Chiot Pomsky à vendre: rejoignez la liste d&apos;attente
+                  </h2>
+                  <p className="text-muted-foreground max-w-3xl mx-auto">
+                    Nos prochaines portées sont préparées avec soin. Inscrivez-vous dès maintenant pour être alerté(e) en priorité lors de l&apos;ouverture des réservations.
+                  </p>
+                  <div className="flex flex-col sm:flex-row justify-center gap-3 pt-2">
+                    <Link
+                      href="/contact"
+                      className="bg-primary text-white hover:bg-primary/80 py-3 px-4 font-semibold text-center rounded-md dark:text-[#5b3a1a] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                    >
+                      Rejoindre la liste d&apos;attente
+                    </Link>
+                    <Link
+                      href="/chiots-disponibles"
+                      className="border border-primary text-primary hover:bg-primary/10 py-3 px-4 font-semibold text-center rounded-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                    >
+                      Voir les chiots réservés
+                    </Link>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </section>
+        ) : null}
         {/* éleveurs */}
         <section className="py-16 my-8 bg-muted/30">
           <div className="container mx-auto p-2">
@@ -330,10 +471,10 @@ export default function HomePage() {
             </div>
             <div className="text-center space-y-4 my-12">
               <h3 className="text-xl md:text-2xl font-semibold">
-                Vous souhaitez adopter un pomsky miniature ou toy ?
+                Vous souhaitez un Pomsky mais vous ne savez pas quel format choisir ?
               </h3>
               <p className="text-sm text-muted-foreground max-w-xl mx-auto">
-                Échangeons ensemble sur votre projet d'adoption et trouvons le pomsky qui correspond le mieux à votre mode de vie.
+                Toy, Micro ou Miniature… chaque Pomsky a ses particularités. Nous vous aidons à choisir le format le plus adapté à votre mode de vie, votre environnement et vos attentes afin de trouver le compagnon idéal.
               </p>
               <div className="w-24 h-1 bg-primary mx-auto rounded-full" aria-hidden="true" />
             </div>
@@ -358,5 +499,3 @@ export default function HomePage() {
     </>
   )
 }
-
-
