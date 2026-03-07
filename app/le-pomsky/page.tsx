@@ -159,8 +159,8 @@ export default function dogPage() {
                         <div className="text-center space-y-3">
                             <h2 className="text-xl md:text-2xl font-bold">Les différentes tailles du Pomsky</h2>
                             <p className="text-muted-foreground max-w-xl mx-auto">
-                                On distingue généralement trois tailles : toy (ou micro), miniature et standard.
-                                Les tailles sont exprimées au garrot.
+                                On distingue généralement trois tailles : le pomsky toy (ou micro), pomsky miniature (ou pomsky nain) et pomsky standard.
+                                Ces 3 tailles sont exprimées au garrot.
                             </p>
                             <div className="w-24 h-1 bg-primary mx-auto rounded-full" aria-hidden="true" />
                         </div>
@@ -203,17 +203,18 @@ export default function dogPage() {
                         <Card className="bg-primary/2 border-primary/10">
                             <CardContent className="py-6 px-6 md:px-10 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
                                 <div className="space-y-3">
-                                    <h3 className="text-2xl font-semibold">Une seule race, trois formats</h3>
+                                    <h3 className="text-2xl font-semibold">Le Pomsky constitue une seule race, mais il existe en trois formats.</h3>
                                     <p className="text-muted-foreground max-w-3xl">
-                                        Le poids suit la taille mais n'est pas indicative de la catégorie. Seule la taille au garrot l'est, cependant voici un exemple de proportions : 3,5 à 5 kg pour les toy/micro, 6 à 8 kg pour les miniatures, 9 à 12 kg pour les standards.
+                                        Le poids suit généralement la taille, mais il ne détermine pas la catégorie. Seule la taille au garrot fait référence.
+                                        À titre indicatif, on observe généralement : <strong>3,5 à 5 kg pour les pomsky "Toy/Micro", 6 à 8 kg pour les pomsky "Miniatures" ou pomsky "Nain" et 9 à 12 kg pour les pomsky "Standards".</strong>
                                     </p>
                                 </div>
                                 <div className="text-sm text-muted-foreground bg-background/60 border rounded-lg p-4 space-y-2 max-w-xs">
                                     <p className="font-semibold text-foreground">En résumé :</p>
                                     <ul className="list-disc ml-4 space-y-1">
-                                        <li>Standard : 41 à 45 cm, 9 à 12 kg</li>
-                                        <li>Miniature : 35 à 40 cm, 6 à 9 kg</li>
-                                        <li>Toy/Micro : 25 à 34 cm, 3,5 à 5 kg</li>
+                                        <li>Le pomsky standard mesure et pèse : 41 à 45 cm, 9 à 12 kg</li>
+                                        <li>Le pomsky miniature mesure et pèse : 35 à 40 cm, 6 à 9 kg</li>
+                                        <li>Le pomsky toy mesure et pèse : 25 à 34 cm, 3,5 à 5 kg</li>
                                     </ul>
                                 </div>
                             </CardContent>
@@ -347,9 +348,9 @@ export default function dogPage() {
                             <div className="text-sm text-muted-foreground bg-background/60 border rounded-lg p-4 space-y-2 max-w-xs mx-auto md:col-span-3">
                                 <p className="font-semibold text-foreground">En résumé :</p>
                                 <ul className="list-disc ml-4 space-y-1">
-                                    <li>F1 : croisement initial, portées très variables</li>
-                                    <li>F2 : un peu plus homogène, mais encore variable</li>
-                                    <li>F3 à F5 : stabilisation du type et du comportement</li>
+                                    <li>Pomsky F1 : croisement initial, portées très variables</li>
+                                    <li>Pomsky F2 : un peu plus homogène, mais encore variable</li>
+                                    <li>Pomsky F3 à F5 : stabilisation du type et du comportement</li>
                                 </ul>
                                 <Link href="/blog/pomsky/genetique/pomsky-f1-f2-f3-cest-quoi" className="text-primary font-medium inline-flex items-center gap-1 underline">
                                     Voir notre article de blog sur les générations de Pomsky
@@ -375,10 +376,10 @@ export default function dogPage() {
                     <section className="mb-16 space-y-6">
                         <div className="text-center space-y-3">
                             <h2 className="text-xl md:text-2xl font-bold">Traits physiques et couleurs</h2>
-                            <p className="text-muted-foreground max-w-3xl mx-auto">
-                                Le Pomsky hérite du Husky ses yeux expressifs, son masque et sa robe.
-                                Les couleurs sont variées : agouti, gris, noir, gris loup, chocolat, red, etc.
-                                Le poil peut être long (wooly), mi-long (plush) ou standard.
+                            <p className="text-muted-foreground max-w-4xl mx-auto">
+                                Le Pomsky hérite du Husky <strong>de ses yeux expressifs, de son masque et de sa robe</strong>.
+                                Les couleurs du Pomsky sont variées et peuvent être <strong>agouti, gris, noir, gris loup, chocolat ou rouge</strong>, entre autres.
+                                Le poil peut être <strong>long (wooly), mi-long (plush) ou standard</strong>.
                             </p>
                             <div className="w-24 h-1 bg-primary mx-auto rounded-full" aria-hidden="true" />
                         </div>
@@ -421,7 +422,7 @@ export default function dogPage() {
                             >
                                 <Card className="bg-muted/60 flex flex-col h-full overflow-hidden transition-colors group-hover:border-primary/50">
                                     <CardHeader>
-                                        <h3 className="leading-none font-semibold text-xl">Morphologie générale</h3>
+                                        <h3 className="leading-none font-semibold text-xl">Morphologie générale d'un Pomsky</h3>
                                     </CardHeader>
                                     <CardContent className="flex flex-1 text-sm flex-col text-muted-foreground leading-relaxed space-y-3">
                                         <div className="mt-4 space-y-3">
@@ -496,7 +497,7 @@ export default function dogPage() {
                         <div className="grid md:grid-cols-2 gap-6">
                             <Card className="bg-background/70">
                                 <CardHeader>
-                                    <h3 className="text-xl">Soins et entretien</h3>
+                                    <h3 className="leading-none font-semibold text-xl">Soins et entretien</h3>
                                 </CardHeader>
                                 <CardContent className="text-sm text-muted-foreground leading-relaxed space-y-3">
                                     <p>
@@ -535,7 +536,7 @@ export default function dogPage() {
                     </section>
 
                     <section className="mb-16 text-center space-y-6">
-                        <h2 className="text-xl md:text-2xl font-bold">Un compagnon vif et équilibré</h2>
+                        <h2 className="text-xl md:text-2xl font-bold">Le Pomsky est un compagnon vif et équilibré</h2>
                         <p className="text-muted-foreground max-w-3xl mx-auto leading-relaxed">
                             Actif, sociable et joueur, le Pomsky s'épanouit avec des sorties régulières,
                             des activités variées et une vraie proximité avec sa famille.

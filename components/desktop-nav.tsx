@@ -16,10 +16,10 @@ import {
 
 const navGroups = [
     {
-        label: "Découvrir",
+        label: "Pomsky",
         items: [
             {
-                title: "Le Pomsky",
+                title: "Découvrir le Pomsky",
                 href: "/le-pomsky",
                 description: "Taille, tempérament, origines et adoption responsable.",
             },
