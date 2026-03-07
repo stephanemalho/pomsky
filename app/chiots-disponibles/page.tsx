@@ -104,10 +104,19 @@ export default function NosChiotsPage() {
                             Chaque adoption chez Royal POMSKY s'inscrit dans un parcours réfléchi : échanges préalables avec les familles, conseils personnalisés, transparence sur les lignées et accompagnement avant et après l'arrivée du chiot. Cette approche garantit une adoption durable et respectueuse du bien-être animal.
                         </p>
                         <h3 className="text-lg font-medium">
-                            Adoption possible partout en France et en Suisse, avec retrait des chiots uniquement à l&apos;élevage sur rendez-vous.
+                            Adoption possible partout en France et en Suisse, avec retrait des chiots à l&apos;élevage uniquement sur rendez-vous.
                         </h3>
                         <p className="text-muted-foreground">
-                            Vous êtes à l&apos;étranger ? Nos chiots peuvent quitter le territoire sous certaines conditions, avec un accompagnement personnalisé sur les démarches.
+                            Vous résidez à l&apos;étranger ? Nous pouvons organiser le départ de votre chiot sous conditions, avec un accompagnement
+                            personnalisé pour chaque étape administrative et sanitaire. Pour un transport international sécurisé, nous recommandons{" "}
+                            <a
+                                href="https://anivetvoyage.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="font-medium text-primary underline underline-offset-4 hover:no-underline"
+                            >
+                                Anivet Voyage
+                            </a>.
                         </p>
                         <div className="grid gap-10 my-12">
                             {puppies.map((puppy, index) => (
