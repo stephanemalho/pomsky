@@ -435,7 +435,7 @@ export const sitemapPages = [
         url: "/chiots-disponibles",
         changefreq: "weekly",
         priority: 0.9,
-        lastmod: "2026-02-28"
+        lastmod: "2026-03-07"
     },
     {
         url: "/femelles-reproductrices",
