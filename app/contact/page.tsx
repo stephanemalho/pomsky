@@ -8,6 +8,7 @@ import { pageContent } from "@/lib/page-content"
 import { generateLocalBusinessSchema, generateContactPointSchema, generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema-generators"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
 import Image from "next/image"
+import Link from "next/link"
 
 export const metadata: Metadata = {
     title: pageMetadata.contact.title,
@@ -239,6 +240,23 @@ export default function ContactPage() {
                         </Card>
                     </div>
 
+                    <section className="mt-12 rounded-2xl border border-primary/20 bg-muted/40 p-6 md:p-8">
+                        <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+                            <div className="max-w-3xl space-y-2">
+                                <h2 className="text-xl md:text-2xl font-semibold">Préparer l&apos;arrivée de votre chiot Pomsky</h2>
+                                <p className="text-muted-foreground">
+                                    Avant de nous contacter, vous pouvez consulter notre guide pratique pour préparer le trajet du jour J, l&apos;installation à la maison, la première semaine et les premiers repères de propreté.
+                                </p>
+                            </div>
+                            <Link
+                                href="/adoption/reussir-son-adoption"
+                                className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 font-semibold text-white transition hover:bg-primary/85 dark:text-[#5b3a1a]"
+                            >
+                                Lire le guide adoption
+                            </Link>
+                        </div>
+                    </section>
+
                     <FAQSection
                         title="FAQ avant de prendre contact"
                         description="Réponses rapides sur le caractère et la cohabitation du pomsky."
@@ -252,4 +270,3 @@ export default function ContactPage() {
         </>
     )
 }
-
