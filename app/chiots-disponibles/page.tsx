@@ -96,28 +96,31 @@ export default function NosChiotsPage() {
                         <div className="w-24 h-1 bg-primary mx-auto rounded-full" aria-hidden="true" />
                     </section>
                     {/* <NoAvailable /> */}
-                    <section className="mx-auto md:bg-muted/30 md:border border-muted rounded-2xl p-0 md:p-10 space-y-4 text-left mb-12">
+                    <section className="mx-auto md:bg-muted/30 md:border border-muted rounded-2xl p-0 md:p-10 space-y-4 text-center mb-12">
                         <h2 className="text-xl md:text-2xl font-semibold leading-tight">
                             Un processus d'adoption transparent et accompagné
                         </h2>
                         <p className="text-muted-foreground">
                             Chaque adoption chez Royal POMSKY s'inscrit dans un parcours réfléchi : échanges préalables avec les familles, conseils personnalisés, transparence sur les lignées et accompagnement avant et après l'arrivée du chiot. Cette approche garantit une adoption durable et respectueuse du bien-être animal.
                         </p>
-                        <h3 className="text-lg font-medium">
-                            Adoption possible partout en France et en Suisse, avec retrait des chiots à l&apos;élevage uniquement sur rendez-vous.
-                        </h3>
-                        <p className="text-muted-foreground">
-                            Vous résidez à l&apos;étranger ? Nous pouvons vous aider pour le départ de votre chiot sous conditions, avec un accompagnement
-                            personnalisé pour chaque étape administrative et sanitaire. Pour un transport international sécurisé, nous recommandons{" "}
-                            <a
-                                href="https://anivetvoyage.com/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="font-medium text-primary underline underline-offset-4 hover:no-underline"
-                            >
-                                Anivet Voyage
-                            </a>.
-                        </p>
+                        <div className="w-24 h-1 bg-primary mx-auto rounded-full mt-16" aria-hidden="true" />
+                        <div className="space-y-4 max-w-3xl mx-auto">
+                            <h3 id="adoption-france-suisse" className="text-lg font-medium pt-16">
+                                Adoption possible partout en France et en Suisse, avec retrait des chiots à l&apos;élevage uniquement sur rendez-vous.
+                            </h3>
+                            <p className="text-muted-foreground">
+                                Vous résidez à l&apos;étranger ? Nous pouvons vous aider pour le départ de votre chiot sous conditions, avec un accompagnement
+                                personnalisé pour chaque étape administrative et sanitaire. Pour un transport international sécurisé, nous recommandons{" "}
+                                <a
+                                    href="https://anivetvoyage.com/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="font-medium text-primary underline underline-offset-4 hover:no-underline"
+                                >
+                                    Anivet Voyage
+                                </a>.
+                            </p>
+                        </div>
                         <div className="grid gap-10 my-12">
                             {puppies.map((puppy, index) => (
                                 <Card

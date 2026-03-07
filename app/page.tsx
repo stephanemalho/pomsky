@@ -212,9 +212,14 @@ export default function HomePage() {
                 </p>
 
                 <div className="space-y-2">
-                  <h3 className="font-semibold">Des Pomsky de tailles toy à standard élevés dans le bonheur</h3>
+                  <h3 className="font-semibold">
+                      Des Pomsky de tailles toy à standard élevés dans le bonheur
+                  </h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Notre élevage est situé dans le Jura (39), en France. Chez Royal Pomsky, nous n'expédions jamais nos chiots à distance,  Ils sont à adopter sur place, après visite de l'élevage et rencontre avec les parents. sauf cas particulier ( raison de santé, impossibilité de déplacement etc… ) votre demande sera étudiée au cas par cas après un entretien en appel visio
+                    Notre élevage est situé dans le Jura (39), en France. Chez Royal Pomsky, nous n'expédions jamais nos chiots à distance,  Ils sont à adopter sur place, après visite de l'élevage et rencontre avec les parents.  <Link
+                      href="/chiots-disponibles#adoption-france-suisse"
+                      className="underline text-accent-foreground hover:text-muted-foreground"
+                    >sauf cas particulier ( raison de santé, impossibilité de déplacement etc… )</Link> votre demande sera étudiée au cas par cas après un entretien en appel visio
                   </p>
                 </div>
 
