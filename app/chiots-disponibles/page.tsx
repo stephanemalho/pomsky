@@ -107,7 +107,7 @@ export default function NosChiotsPage() {
                             Adoption possible partout en France et en Suisse, avec retrait des chiots à l&apos;élevage uniquement sur rendez-vous.
                         </h3>
                         <p className="text-muted-foreground">
-                            Vous résidez à l&apos;étranger ? Nous pouvons organiser le départ de votre chiot sous conditions, avec un accompagnement
+                            Vous résidez à l&apos;étranger ? Nous pouvons vous aider pour le départ de votre chiot sous conditions, avec un accompagnement
                             personnalisé pour chaque étape administrative et sanitaire. Pour un transport international sécurisé, nous recommandons{" "}
                             <a
                                 href="https://anivetvoyage.com/"
