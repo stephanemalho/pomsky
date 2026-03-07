@@ -50,13 +50,14 @@ function formatPuppyPrice(price: number, currency = "EUR") {
 
 export default function NosChiotsPage() {
     // Schémas JSON-LD
+    const puppiesForRichResults = puppies.filter((puppy) => typeof puppy.price === "number")
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Accueil", url: "/" },
         { name: "Nos chiots", url: siteConfig.pages.puppies },
     ])
     const faqSchema = generateFAQSchema(convertFAQsToSchema(faqNosChiots))
-    const puppyListSchema = generatePuppyListSchema(puppies)
-    const puppyProductsSchemas = puppies.map((puppy) => generatePuppyProductSchema(puppy))
+    const puppyListSchema = generatePuppyListSchema(puppiesForRichResults)
+    const puppyProductsSchemas = puppiesForRichResults.map((puppy) => generatePuppyProductSchema(puppy))
     const lastMod = returnLastmod(siteConfig.pages.puppies)
 
     return (
@@ -76,7 +77,7 @@ export default function NosChiotsPage() {
             />
             {puppyProductsSchemas.map((puppyProductSchema, index) => (
                 <script
-                    key={`puppy-product-schema-${puppies[index]?.name ?? index}`}
+                    key={`puppy-product-schema-${puppiesForRichResults[index]?.name ?? index}`}
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(puppyProductSchema) }}
                 />
