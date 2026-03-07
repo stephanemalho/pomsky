@@ -193,11 +193,13 @@ export default function NosChiotsPage() {
                                                     </div>
                                                     {typeof puppy.price === "number" ? (
                                                         <div className="flex items-center gap-2 text-muted-foreground sm:col-span-2">
+                                                            <Banknote className="min-h-4 min-w-4 text-primary" aria-hidden="true" />
                                                             <dt className="sr-only">Prix</dt>
-                                                            <Banknote className="h-4 w-4 text-primary" aria-hidden="true" />
-                                                            <dd>
+                                                            <dd className="flex gap-2 items-center text-lg font-semibold text-primary">
                                                                 {formatPuppyPrice(puppy.price, puppy.priceCurrency ?? "EUR")}
-                                                                {puppy.priceIncludes ? ` - ${puppy.priceIncludes}` : ""}
+                                                                <p className="text-xs text-muted-foreground mt-1">
+                                                                    {puppy.priceIncludes}
+                                                                </p>
                                                             </dd>
                                                         </div>
                                                     ) : null}
