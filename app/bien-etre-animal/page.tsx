@@ -337,7 +337,7 @@ export default function SejoursPage() {
                             className="text-xl md:text-2xl font-bold mb-4">Visiter l&apos;élevage</h2>
                         <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-8" />
                         <p className="text-muted-foreground max-w-3xl mx-auto">
-                            Notre élevage se situe dans le Jura. Les visites se font exclusivement sur
+                            Notre élevage de Pomsky se situe dans le Jura. Les visites se font exclusivement sur
                             rendez-vous pour préserver la tranquillité des chiots et des mamans.
                         </p>
                         <Link

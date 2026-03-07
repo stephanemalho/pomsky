@@ -112,6 +112,7 @@ export const siteConfig = {
         home: "/",
         pomsky: "/le-pomsky",
         puppies: "/chiots-disponibles",
+        adoptionGuide: "/adoption/reussir-son-adoption",
         reproductors: "/femelles-reproductrices",
         presentation: "/presentation-elevage",
         eleveuses: "/presentation-eleveuses",
@@ -288,6 +289,22 @@ export const pageMetadata = {
         ]
     },
 
+    adoptionGuide: {
+        title: "Réussir l'adoption de son chiot | Conseils avant et après l'arrivée",
+        description:
+            "Guide pratique pour préparer l'adoption d'un chiot : trajet du jour J, installation à la maison, première semaine, propreté et repères utiles pour une arrivée sereine.",
+        keywords: [
+            "reussir adoption chiot",
+            "preparer arrivee chiot maison",
+            "trajet adoption chiot voiture train avion",
+            "premiere semaine chiot",
+            "proprete chiot 2 mois",
+            "conseils nouveaux maitres chiot",
+            "accueil chiot elevage",
+            "guide adoption pomsky"
+        ]
+    },
+
     reproductors: {
         title: pageContent.reproductors.h1,
         description: pageContent.reproductors.description,
@@ -435,6 +452,12 @@ export const sitemapPages = [
         url: "/chiots-disponibles",
         changefreq: "weekly",
         priority: 0.9,
+        lastmod: "2026-03-07"
+    },
+    {
+        url: "/adoption/reussir-son-adoption",
+        changefreq: "monthly",
+        priority: 0.8,
         lastmod: "2026-03-07"
     },
     {

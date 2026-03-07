@@ -18,6 +18,7 @@ const navigation = [
     { name: "Les conditions de vie", href: "/bien-etre-animal" },
     { name: "Blog", href: "/blog/pomsky" },
     { name: "Contact", href: "/contact" },
+    { name: "Réussir son adoption", href: "/adoption/reussir-son-adoption" },
 ]
 
 export function MobileNav() {

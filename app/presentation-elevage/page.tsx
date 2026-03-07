@@ -223,7 +223,7 @@ export default function PresentationPage() {
                         <div className="text-center my-6 max-w-4xl mx-auto">
                             <h3 className="md:text-lg  font-semibold mb-2 my-6">Découvrez nos pomsky reproducteurs sélectionnés, les piliers de notre élevage</h3>
                             <p className="text-muted-foreground text-sm mb-4">
-                                Nos pomsky, chiens reproducteurs sont soigneusement sélectionnés pour leur santé, leur tempérament et leur conformité au standard du Pomsky toy. Ils sont au cœur de notre programme d'élevage et participent activement à la transmission de nos valeurs.
+                                Nos pomsky, chiens reproducteurs sont soigneusement sélectionnés pour leur santé, leur tempérament et leur conformité au standard du Pomsky toy. Ils sont au cœur de notre programme d'élevage de Pomsky et participent activement à la transmission de nos valeurs.
                             </p>
                         </div>
                         <Link

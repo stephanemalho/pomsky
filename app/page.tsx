@@ -423,7 +423,7 @@ export default function HomePage() {
             <div className="text-center space-y-4 mb-12">
               <h2 className="text-xl md:text-2xl font-bold">Les Éleveuses</h2>
               <p className="text-muted-foreground max-w-3xl mx-auto text-sm leading-relaxed">
-                Derrière l'élevage se trouvent <strong>Aurélie et Marine</strong>, deux
+                Derrière l'élevage de Pomsky se trouvent <strong>Aurélie et Marine</strong>, deux
                 éleveuses passionnées par le bien-être animal et unies par un amour
                 profond pour le <strong>pomsky miniature et le pomsky toy</strong>.
                 Issues de parcours complémentaires dans l'éducation, le comportement et

@@ -11,7 +11,7 @@ export const pageContent = {
             "Nous avons rédigé plusieurs articles contenant de très nombreuses informations, merci d'en prendre connaissance avant d'envisager l'adoption de votre chiot ! Vous pourrez ensuite consulter la page de nos chiots pomsky disponibles en cliquant ci-dessous :"
     },
     pomsky: {
-        h1: "Le Pomsky: taille, tempérament, origines et adoption responsable",
+        h1: "Le Pomsky: tempérament, tailles, origines, traits physiques et couleurs",
         description:
             "Le Pomsky est un chien issu du croisement entre le Husky sibérien et le Spitz nain, encore non reconnu par la FCI. Apprécié pour son apparence de Husky miniature, il s'agit d'un compagnon intelligent et actif qui demande du temps, de la cohérence et une éducation adaptée. Ce guide vous aide à comprendre les différentes tailles du Pomsky, du pomsky toy au pomsky standard, son tempérament, ses origines et les conditions nécessaires à une adoption responsable.",
         h2: "Toutes les tailles du Pomsky du plus petit au plus grand :",

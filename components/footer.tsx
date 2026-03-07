@@ -80,6 +80,14 @@ export function Footer() {
                             </li>
                             <li>
                                 <Link
+                                    href="/adoption/reussir-son-adoption"
+                                    className="text-muted-foreground hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded px-1 py-0.5"
+                                >
+                                    Réussir son adoption
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
                                     href="/bien-etre-animal"
                                     className="text-muted-foreground hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded px-1 py-0.5"
                                 >

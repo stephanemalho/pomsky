@@ -24,7 +24,7 @@ const navGroups = [
                 description: "Taille, tempérament, origines et adoption responsable.",
             },
             {
-                title: "Blog",
+                title: "Le blog dédié au Pomsky",
                 href: "/blog/pomsky",
                 description: "Conseils, race, génétique et bien-être.",
             },
@@ -67,6 +67,11 @@ const navGroups = [
                 title: "Contact",
                 href: "/contact",
                 description: "Parlons de votre projet d'adoption.",
+            },
+            {
+                title: "Réussir son adoption",
+                href: "/adoption/reussir-son-adoption",
+                description: "Préparer le trajet, la maison et les premières semaines.",
             },
         ],
     },

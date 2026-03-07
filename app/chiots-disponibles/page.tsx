@@ -120,6 +120,15 @@ export default function NosChiotsPage() {
                                     Anivet Voyage
                                 </a>.
                             </p>
+                            <p className="text-sm text-muted-foreground">
+                                Pour préparer le trajet, l&apos;installation à la maison et les premiers jours, consultez aussi notre guide{" "}
+                                <Link
+                                    href="/adoption/reussir-son-adoption"
+                                    className="font-medium text-primary underline underline-offset-4 hover:no-underline"
+                                >
+                                    Réussir son adoption
+                                </Link>.
+                            </p>
                         </div>
                         <div className="grid gap-10 my-12">
                             {puppies.map((puppy, index) => (
