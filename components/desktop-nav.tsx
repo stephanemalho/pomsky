@@ -34,22 +34,22 @@ const navGroups = [
         label: "L'élevage",
         items: [
             {
-                title: "Présentation",
+                title: "Présentation de Royal POMSKY",
                 href: "/presentation-elevage",
                 description: "Philosophie, valeurs et histoire de l'élevage.",
             },
             {
-                title: "Les éleveuses",
+                title: "Les éleveuses Aurélie & Marine",
                 href: "/presentation-eleveuses",
                 description: "Aurélie & Marine, leur parcours et leur vision.",
             },
             {
-                title: "Nos reproducteurs",
+                title: "Nos Pomsky reproducteurs",
                 href: "/femelles-reproductrices",
                 description: "Les lignées et la sélection de nos chiens.",
             },
             {
-                title: "Conditions de vie",
+                title: "Conditions de vie des Pomsky",
                 href: "/bien-etre-animal",
                 description: "Le quotidien de nos chiens et chiots.",
             },

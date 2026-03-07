@@ -46,7 +46,8 @@ export const puppies: Puppy[] = [
             "pages/puppies/Vuk-pomsky-available-for-adoption.webp",
             "pages/puppies/VUK-pomsky-from-royal-pomsky.webp"
         ],
-        linkTo: "https://forms.gle/wtcxuo84YEQzposV9"
+        linkTo: "https://forms.gle/wtcxuo84YEQzposV9",
+        isReserved: false
     },
     {
         name: "ALUNA",

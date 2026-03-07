@@ -10,6 +10,93 @@ function toAbsoluteUrl(pathOrUrl: string) {
 }
 
 const defaultImageUrl = toAbsoluteUrl(siteConfig.ogImage);
+const puppyBrandName = "Royal Pomsky";
+const puppyCategory = "Pomsky";
+const puppyAdditionalType = "https://fr.wikipedia.org/wiki/Pomsky";
+
+type PuppySchemaInput = {
+    name: string;
+    coat: string;
+    color: string;
+    sexe: string;
+    weight: string;
+    parents: string;
+    readyDate: string;
+    age: string;
+    size: string;
+    description: string;
+    highlights: string[];
+    images: string[];
+    linkTo: string;
+    isReserved?: boolean;
+};
+
+function toPuppyAnchorId(name: string) {
+    return name.trim().toLowerCase().replace(/\s+/g, "-");
+}
+
+function getPuppyUrl(puppy: PuppySchemaInput) {
+    return toAbsoluteUrl(`${siteConfig.pages.puppies}#${toPuppyAnchorId(puppy.name)}`);
+}
+
+function getPuppyAvailability(isReserved?: boolean) {
+    return isReserved
+        ? "https://schema.org/OutOfStock"
+        : "https://schema.org/InStock";
+}
+
+function createPuppyAdditionalProperty(puppy: PuppySchemaInput) {
+    const candidates = [
+        { name: "Sexe", value: puppy.sexe },
+        { name: "Couleur", value: puppy.color },
+        { name: "Taille", value: puppy.size },
+        { name: "Poids adulte", value: puppy.weight },
+        { name: "Parents", value: puppy.parents },
+        { name: "Date naissance", value: puppy.age },
+        { name: "Disponibilité", value: puppy.isReserved ? "Réservé" : "Disponible" },
+        { name: "Lignée", value: puppy.coat },
+        { name: "Disponible à partir", value: puppy.readyDate }
+    ];
+
+    return candidates
+        .filter((item) => item.value?.trim().length)
+        .map((item) => ({
+            "@type": "PropertyValue" as const,
+            name: item.name,
+            value: item.value
+        }));
+}
+
+function createPuppyProductEntity(puppy: PuppySchemaInput) {
+    const absoluteImages = puppy.images
+        .map((image) => image.trim())
+        .filter(Boolean)
+        .map(toAbsoluteUrl);
+    const productUrl = getPuppyUrl(puppy);
+
+    return {
+        "@type": "Product",
+        name: puppy.name,
+        description: puppy.description,
+        image: absoluteImages.length > 0 ? absoluteImages : [defaultImageUrl],
+        brand: {
+            "@type": "Brand",
+            name: puppyBrandName
+        },
+        category: puppyCategory,
+        additionalType: puppyAdditionalType,
+        additionalProperty: createPuppyAdditionalProperty(puppy),
+        url: productUrl,
+        offers: {
+            "@type": "Offer",
+            availability: getPuppyAvailability(puppy.isReserved),
+            url: productUrl
+        },
+        ...(puppy.highlights.length > 0
+            ? { keywords: puppy.highlights.join(", ") }
+            : {})
+    };
+}
 
 export function generateOrganizationSchema() {
     const legal = siteConfig.legal;
@@ -160,44 +247,27 @@ export function generateFAQSchema(
     };
 }
 
-export function generatePuppyListSchema(
-    puppies: Array<{
-        name: string;
-        description: string;
-        color: string;
-        size: string;
-        image: string;
-        isReserved?: boolean;
-        sexe:string
-    }>
-) {
+export function generatePuppyListSchema(puppies: PuppySchemaInput[]) {
     return {
         "@context": "https://schema.org",
         "@type": "ItemList",
         name: "Chiots pomsky disponibles",
         description:
-            "Liste des chiots pomsky Royal POMSKYs disponibles à l'adoption.",
+            "Liste des chiots pomsky Royal POMSKY disponibles à l'adoption.",
         numberOfItems: puppies.length,
         itemListElement: puppies.map((puppy, index) => ({
             "@type": "ListItem",
             position: index + 1,
-            name: puppy.name,
-            description: puppy.description,
-            image: toAbsoluteUrl(puppy.image),
-            additionalProperty: [
-                { "@type": "PropertyValue", name: "Sexe", value: puppy.sexe },
-                {
-                    "@type": "PropertyValue",
-                    name: "Couleur",
-                    value: puppy.color
-                },
-                {
-                    "@type": "PropertyValue",
-                    name: "Disponibilité",
-                    value: puppy.isReserved ? "Réservé" : "Disponible"
-                }
-            ]
+            url: getPuppyUrl(puppy),
+            item: createPuppyProductEntity(puppy)
         }))
+    };
+}
+
+export function generatePuppyProductSchema(puppy: PuppySchemaInput) {
+    return {
+        "@context": "https://schema.org",
+        ...createPuppyProductEntity(puppy)
     };
 }
 

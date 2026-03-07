@@ -5,7 +5,7 @@ import Link from "next/link"
 import type { Metadata } from "next"
 import { buildOpenGraph, buildTwitter, pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
 import { pageContent } from "@/lib/page-content"
-import { generateBreadcrumbSchema, generateFAQSchema, generatePuppyListSchema } from "@/lib/schema-generators"
+import { generateBreadcrumbSchema, generateFAQSchema, generatePuppyListSchema, generatePuppyProductSchema } from "@/lib/schema-generators"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
 import { puppies } from "./puppies"
 import { Card, CardContent } from "@/components/ui/card"
@@ -47,17 +47,8 @@ export default function NosChiotsPage() {
         { name: "Nos chiots", url: siteConfig.pages.puppies },
     ])
     const faqSchema = generateFAQSchema(convertFAQsToSchema(faqNosChiots))
-    const puppyListSchema = generatePuppyListSchema(
-        puppies.map((puppy) => ({
-            name: puppy.name,
-            description: puppy.description,
-            color: puppy.color,
-            size: puppy.size,
-            image: puppy.images[0] ?? siteConfig.ogImage,
-            sexe: puppy.sexe,
-            isReserved: puppy.isReserved
-        }))
-    )
+    const puppyListSchema = generatePuppyListSchema(puppies)
+    const puppyProductsSchemas = puppies.map((puppy) => generatePuppyProductSchema(puppy))
     const lastMod = returnLastmod(siteConfig.pages.puppies)
 
     return (
@@ -75,6 +66,13 @@ export default function NosChiotsPage() {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(puppyListSchema) }}
             />
+            {puppyProductsSchemas.map((puppyProductSchema, index) => (
+                <script
+                    key={`puppy-product-schema-${puppies[index]?.name ?? index}`}
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(puppyProductSchema) }}
+                />
+            ))}
             <div className="pb-16 ">
                 <div className="container mx-auto my-12">
                     <section className="text-center space-y-4 mb-12">
@@ -100,6 +98,7 @@ export default function NosChiotsPage() {
                             {puppies.map((puppy, index) => (
                                 <Card
                                     key={puppy.name}
+                                    id={puppy.name.toLowerCase()}
                                     className={`relative overflow-hidden bg-muted/30 p-0 md:p-6 ${puppy.isReserved ? "border-2 border-green-600 ring-2 ring-green-600/40 ring-offset-2 ring-offset-background" : ""}`}
                                 >
                                     <CardContent className="p-0">
