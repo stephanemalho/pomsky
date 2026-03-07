@@ -17,8 +17,10 @@ import {
 } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
+import { FAQSection } from "@/components/faq"
+import { convertFAQsToSchema } from "@/lib/faq-utils"
 import { buildOpenGraph, buildTwitter, pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
-import { generateBreadcrumbSchema } from "@/lib/schema-generators"
+import { generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema-generators"
 
 export const metadata: Metadata = {
     title: pageMetadata.adoptionGuide.title,
@@ -135,11 +137,117 @@ const resources = [
     },
 ]
 
+const adoptionGuideFaq = [
+    {
+        question: "Que faut-il prévoir pour le trajet du jour de l'adoption ?",
+        answer: (
+            <div className="space-y-3">
+                <p>
+                    Préparez une couverture, de l&apos;eau, une petite gamelle de voyage, une alèse ou une serviette absorbante,
+                    ainsi qu&apos;un moyen de transport sécurisé comme une caisse ou un harnais adapté.
+                </p>
+                <p>
+                    L&apos;objectif est de garder le trajet simple, calme et confortable pour le chiot Pomsky, sans surstimulation inutile.
+                </p>
+            </div>
+        ),
+    },
+    {
+        question: "Comment accueillir un chiot Pomsky à la maison la première semaine ?",
+        answer: (
+            <div className="space-y-3">
+                <p>
+                    La première semaine, il vaut mieux limiter l&apos;environnement aux habitants de la maison et éviter les visites en série.
+                </p>
+                <p>
+                    Le chiot doit pouvoir observer, dormir, explorer à son rythme et choisir un endroit refuge où son couchage pourra ensuite être installé durablement.
+                </p>
+            </div>
+        ),
+    },
+    {
+        question: "À quelle fréquence un chiot doit-il sortir pour apprendre la propreté ?",
+        answer: (
+            <div className="space-y-3">
+                <p>
+                    Vers 2 mois, il faut souvent proposer une sortie environ toutes les 2 heures, puis toutes les 3 heures vers 3 mois, avec de grandes variations selon le chiot.
+                </p>
+                <p>
+                    Les moments clés restent le réveil, les repas, l&apos;eau, le jeu et les émotions fortes. Avant 6 mois, la retenue reste encore limitée.
+                </p>
+            </div>
+        ),
+    },
+    {
+        question: "Faut-il commencer à apprendre la solitude dès les premières semaines ?",
+        answer: (
+            <div className="space-y-3">
+                <p>
+                    Oui, mais de façon progressive. On évite les départs brutaux ou les rituels anxiogènes, et on construit des absences courtes, lisibles et répétées.
+                </p>
+                <p>
+                    L&apos;enjeu est d&apos;éviter que le chiot associe chaque départ à une montée de stress, surtout chez un Pomsky très proche de l&apos;humain.
+                </p>
+            </div>
+        ),
+    },
+    {
+        question: "Faut-il une formation pour apprendre à élever son chiot ?",
+        answer: (
+            <div className="space-y-3">
+                <p>
+                    Oui et non. L&apos;apprentissage d&apos;un chiot repose très souvent sur le bon sens, la régularité et l&apos;attention que l&apos;on porte à ses besoins au quotidien.
+                </p>
+                <p>
+                    Il n&apos;est donc pas obligatoire de suivre une formation, mais il peut être très utile de se préparer avant l&apos;arrivée du chiot avec des ressources sérieuses, comme certaines formations proposées par Esprit Dog.
+                </p>
+                <p>
+                    L&apos;important reste de choisir des conseils cohérents, respectueux du bien-être du chiot et adaptés à votre mode de vie. Vous restez libre de retenir les approches qui vous correspondent le mieux.
+                </p>
+            </div>
+        ),
+    },
+]
+
 export default function AdoptionSuccessPage() {
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Accueil", url: "/" },
         { name: "Réussir son adoption", url: siteConfig.pages.adoptionGuide },
     ])
+    const faqSchema = generateFAQSchema(convertFAQsToSchema(adoptionGuideFaq))
+    const articleSchema = {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        headline: pageMetadata.adoptionGuide.title,
+        description: pageMetadata.adoptionGuide.description,
+        mainEntityOfPage: `${siteConfig.siteUrl}${siteConfig.pages.adoptionGuide}`,
+        inLanguage: "fr-FR",
+        datePublished: "2026-03-07",
+        dateModified: "2026-03-07",
+        author: {
+            "@type": "Organization",
+            name: siteConfig.name,
+            url: siteConfig.siteUrl,
+        },
+        publisher: {
+            "@type": "Organization",
+            name: siteConfig.name,
+            logo: {
+                "@type": "ImageObject",
+                url: `${siteConfig.siteUrl}/icon.png`,
+            },
+        },
+        image: [
+            `${siteConfig.siteUrl}/nurcery-panier.webp`,
+            `${siteConfig.siteUrl}/pomsky-and-his-pet-family-parent.jpg`,
+        ],
+        about: [
+            { "@type": "Thing", name: "Pomsky" },
+            { "@type": "Thing", name: "Adoption de chiot" },
+            { "@type": "Thing", name: "Éducation du chiot" },
+            { "@type": "Thing", name: "Propreté du chiot" },
+        ],
+    }
     const lastMod = returnLastmod(siteConfig.pages.adoptionGuide)
 
     return (
@@ -147,6 +255,14 @@ export default function AdoptionSuccessPage() {
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
             />
 
             <div className="py-16">
@@ -157,16 +273,19 @@ export default function AdoptionSuccessPage() {
                                 Guide adoption
                             </Badge>
                             <div className="space-y-4">
-                                <h1 className="text-2xl font-bold md:text-4xl">
-                                    Réussir l&apos;adoption de son chiot: le jour du départ, à la maison et les premières semaines
+                                <h1 className="text-2xl font-bold md:text-3xl">
+                                    Réussir l&apos;adoption de son chiot Pomsky: le jour du départ, l&apos;arrivée à la maison et les premières semaines
                                 </h1>
                                 <p className="max-w-3xl text-muted-foreground">
                                     Une adoption réussie se prépare avant même le trajet. Le jour J, l&apos;objectif n&apos;est pas d&apos;en faire trop, mais
-                                    d&apos;offrir au chiot un départ doux, prévisible et rassurant.
+                                    d&apos;offrir à votre chiot Pomsky un départ doux, prévisible et rassurant.
                                 </p>
                                 <p className="max-w-3xl text-muted-foreground">
                                     Cette page réunit les repères essentiels pour les futurs parents: trajet en voiture, train ou avion, installation à la
                                     maison, premières nuits, premières sorties et rythme de propreté.
+                                </p>
+                                <p className="max-w-3xl text-muted-foreground">
+                                    Ces conseils sont pensés pour tous les formats de Pomsky, du Pomsky toy au Pomsky standard, et pour des profils de chiots très différents, du plus calme au plus sensible. Beaucoup de repères restent utiles pour d&apos;autres races, mais nous les avons ici formulés à partir de notre expérience avec les Pomsky de Royal POMSKY.
                                 </p>
                             </div>
                             <div className="grid gap-3 sm:grid-cols-3">
@@ -194,7 +313,7 @@ export default function AdoptionSuccessPage() {
                                     href="/chiots-disponibles"
                                     className="inline-flex items-center rounded-md bg-primary px-4 py-2 font-semibold text-white transition hover:bg-primary/85 dark:text-[#5b3a1a]"
                                 >
-                                    Voir nos chiots disponibles
+                                    Voir nos chiots Pomsky disponibles
                                 </Link>
                                 <Link
                                     href="/contact"
@@ -223,8 +342,8 @@ export default function AdoptionSuccessPage() {
                                     <div className="space-y-2">
                                         <h2 className="font-semibold">Ce que nous faisons pour une séparation plus douce</h2>
                                         <p className="text-sm text-muted-foreground">
-                                            Avant le départ, nous laissons un temps calme entre la maman, le chiot et les futurs adoptants pour limiter la
-                                            rupture. L&apos;élevage remet également un objet portant l&apos;odeur de la maman afin d&apos;offrir un repère familier
+                                            Avant le départ, nous laissons un temps calme entre la maman, son chiot et les futurs adoptants pour limiter la
+                                            rupture. L&apos;élevage remet également un objet portant l&apos;odeur de la maman afin d&apos;offrir à votre chiot un repère familier
                                             dès les premières heures.
                                         </p>
                                     </div>
@@ -284,7 +403,7 @@ export default function AdoptionSuccessPage() {
                             </Badge>
                             <h2 className="text-xl font-bold md:text-2xl">Voiture, train ou avion: on adapte le matériel au trajet, pas l&apos;inverse</h2>
                             <p className="text-muted-foreground">
-                                Le meilleur trajet est celui qui reste simple, sécurisé et prévisible. Le chiot n&apos;a pas besoin de stimulation, il a besoin
+                                Le meilleur trajet est celui qui reste simple, sécurisé et prévisible. Un chiot Pomsky n&apos;a pas besoin de stimulation, il a besoin
                                 de stabilité, de température confortable et d&apos;un adulte disponible.
                             </p>
                         </div>
@@ -378,7 +497,7 @@ export default function AdoptionSuccessPage() {
                             </Badge>
                             <h2 className="text-xl font-bold md:text-2xl">Un chiot ne peut pas se retenir comme un adulte, surtout avant 6 mois</h2>
                             <p className="text-muted-foreground">
-                                Ce tableau donne des repères utiles, pas une règle absolue. Certains chiots auront besoin de sortir encore plus souvent,
+                                Ce tableau donne des repères utiles, pas une règle absolue. Certains chiots Pomsky auront besoin de sortir encore plus souvent,
                                 notamment après le sommeil, les repas, le jeu, l&apos;eau ou une montée d&apos;émotion.
                             </p>
                         </div>
@@ -398,7 +517,7 @@ export default function AdoptionSuccessPage() {
                         </div>
                         <Card className="bg-background/85">
                             <CardContent className="p-4 md:p-6">
-                                <h3 className="font-semibold">Repères très concrets pour aider le chiot</h3>
+                                <h3 className="font-semibold">Repères très concrets pour aider votre chiot Pomsky dans les premiers mois</h3>
                                 <ul className="mt-4 grid gap-3 text-sm text-muted-foreground md:grid-cols-2">
                                     <li className="flex items-start gap-3 rounded-2xl bg-muted/40 p-4">
                                         <PawPrint className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
@@ -483,14 +602,20 @@ export default function AdoptionSuccessPage() {
                                     Contacter l&apos;élevage
                                 </Link>
                                 <Link
-                                    href="/chiots-disponibles"
+                                    href="/le-pomsky"
                                     className="inline-flex items-center rounded-md border border-white/40 px-4 py-2 font-semibold transition hover:bg-white/10"
                                 >
-                                    Revenir aux chiots disponibles
+                                    Revoir les bases sur le Pomsky
                                 </Link>
                             </div>
                         </div>
                     </section>
+
+                    <FAQSection
+                        title="FAQ adoption du chiot Pomsky"
+                        description="Les repères essentiels pour préparer le départ, les premiers jours à la maison et les bases d'un démarrage serein."
+                        items={adoptionGuideFaq}
+                    />
 
                     <p className="text-center text-sm text-muted-foreground">
                         Dernière mise à jour: {lastMod}

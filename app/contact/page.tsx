@@ -8,7 +8,6 @@ import { pageContent } from "@/lib/page-content"
 import { generateLocalBusinessSchema, generateContactPointSchema, generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema-generators"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
 import Image from "next/image"
-import Link from "next/link"
 
 export const metadata: Metadata = {
     title: pageMetadata.contact.title,
@@ -253,5 +252,4 @@ export default function ContactPage() {
         </>
     )
 }
-
 

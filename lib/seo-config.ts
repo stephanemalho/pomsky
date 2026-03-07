@@ -290,11 +290,14 @@ export const pageMetadata = {
     },
 
     adoptionGuide: {
-        title: "Réussir l'adoption de son chiot | Conseils avant et après l'arrivée",
+        title: "Réussir l'adoption de son chiot Pomsky | Trajet, maison et premières semaines",
         description:
-            "Guide pratique pour préparer l'adoption d'un chiot : trajet du jour J, installation à la maison, première semaine, propreté et repères utiles pour une arrivée sereine.",
+            "Guide complet pour réussir l'adoption d'un chiot Pomsky : trajet du jour J, arrivée à la maison, première semaine, propreté, solitude et repères essentiels.",
         keywords: [
             "reussir adoption chiot",
+            "adoption chiot pomsky",
+            "reussir adoption pomsky",
+            "adopter un chiot pomsky",
             "preparer arrivee chiot maison",
             "trajet adoption chiot voiture train avion",
             "premiere semaine chiot",

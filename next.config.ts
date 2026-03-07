@@ -114,6 +114,11 @@ const nextConfig: NextConfig = {
                 permanent: true
             },
             {
+                source: "/adoption",
+                destination: "/adoption/reussir-son-adoption",
+                permanent: true
+            },
+            {
                 source: "/le-husky-siberian",
                 destination: "/blog/husky/caracteristique/le-husky-siberian",
                 permanent: true
