@@ -371,7 +371,7 @@ export default function HomePage() {
                         rel="noopener noreferrer"
                         className="border border-primary text-primary hover:bg-primary/10 py-3 px-4 font-semibold text-center rounded-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                       >
-                        Formulaire de réservation {featuredPuppy.name}
+                        Cliquez ici pour réserver {featuredPuppy.name}
                       </a>
                     </div>
                   </CardContent>

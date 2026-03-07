@@ -32,6 +32,7 @@ type PuppySchemaInput = {
     price?: number;
     priceCurrency?: string;
     priceIncludes?: string;
+    priceValidUntil?: string;
 };
 
 function toPuppyAnchorId(name: string) {
@@ -90,6 +91,9 @@ function createPuppyProductEntity(puppy: PuppySchemaInput) {
             ? {
                   price: String(puppy.price),
                   priceCurrency: puppy.priceCurrency ?? "EUR",
+                  ...(puppy.priceValidUntil
+                      ? { priceValidUntil: puppy.priceValidUntil }
+                      : {}),
                   ...(puppy.priceIncludes
                       ? {
                             priceSpecification: {
@@ -284,7 +288,6 @@ export function generatePuppyListSchema(puppies: PuppySchemaInput[]) {
         itemListElement: puppies.map((puppy, index) => ({
             "@type": "ListItem",
             position: index + 1,
-            url: getPuppyUrl(puppy),
             item: createPuppyProductEntity(puppy)
         }))
     };

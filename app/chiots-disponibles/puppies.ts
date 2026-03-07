@@ -18,6 +18,7 @@ export type Puppy = {
     price?: number;
     priceCurrency?: string;
     priceIncludes?: string;
+    priceValidUntil?: string;
 };
 
 export const puppies: Puppy[] = [
@@ -51,9 +52,10 @@ export const puppies: Puppy[] = [
         ],
         linkTo: "https://forms.gle/wtcxuo84YEQzposV9",
         isReserved: false,
-        price: 3500,
+        price: 3800,
         priceCurrency: "EUR",
-        priceIncludes: "Tout frais compris"
+        priceIncludes: "Tout frais compris",
+        priceValidUntil: "2026-03-31"
     },
     {
         name: "ALUNA",
