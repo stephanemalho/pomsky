@@ -361,10 +361,53 @@ export function generateWebsiteSchema() {
     return {
         "@context": "https://schema.org",
         "@type": "WebSite",
+        "@id": `${siteConfig.siteUrl}#website`,
         name: siteConfig.name,
         url: siteConfig.siteUrl,
         image: defaultImageUrl,
         description: siteConfig.description
+    };
+}
+
+export function generateWebPageSchema(page: {
+    name: string;
+    description: string;
+    url: string;
+    imageUrl?: string;
+    dateModified?: string;
+    about?: string[];
+}) {
+    return {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": `${toAbsoluteUrl(page.url)}#webpage`,
+        name: page.name,
+        url: toAbsoluteUrl(page.url),
+        description: page.description,
+        inLanguage: siteConfig.locale,
+        isPartOf: {
+            "@type": "WebSite",
+            "@id": `${siteConfig.siteUrl}#website`,
+            name: siteConfig.name,
+            url: siteConfig.siteUrl
+        },
+        ...(page.imageUrl
+            ? {
+                  primaryImageOfPage: {
+                      "@type": "ImageObject",
+                      url: toAbsoluteUrl(page.imageUrl)
+                  }
+              }
+            : {}),
+        ...(page.dateModified ? { dateModified: page.dateModified } : {}),
+        ...(page.about && page.about.length > 0
+            ? {
+                  about: page.about.map((topic) => ({
+                      "@type": "Thing",
+                      name: topic
+                  }))
+              }
+            : {})
     };
 }
 

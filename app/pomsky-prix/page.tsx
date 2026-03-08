@@ -5,9 +5,12 @@ import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { FAQSection, type FAQItem } from "@/components/faq"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
-import { buildOpenGraph, buildTwitter, pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
-import { generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema-generators"
+import { buildOpenGraph, buildTwitter, pageMetadata, returnLastmod, siteConfig, sitemapPages } from "@/lib/seo-config"
+import { generateBreadcrumbSchema, generateFAQSchema, generateWebPageSchema } from "@/lib/schema-generators"
 import { Banknote, Heart, NotebookText, PawPrint, Sprout } from "lucide-react"
+
+const pomskyPriceOgJpg = "/BAMBOU-pomsky-miniature-f5.jpg"
+const pomskyPriceOgWebp = "/BAMBOU-pomsky-miniature-f5.webp"
 
 export const metadata: Metadata = {
     title: pageMetadata.pomskyPrice.title,
@@ -19,7 +22,14 @@ export const metadata: Metadata = {
         url: `${siteConfig.siteUrl}${siteConfig.pages.pomskyPrice}`,
         images: [
             {
-                url: `${siteConfig.siteUrl}/BAMBOU-pomsky-miniature-f5.webp`,
+                url: `${siteConfig.siteUrl}${pomskyPriceOgJpg}`,
+                alt: "Pomsky miniature chez Royal Pomsky",
+                width: siteConfig.ogImageWidth,
+                height: siteConfig.ogImageHeight,
+                type: "image/jpeg",
+            },
+            {
+                url: `${siteConfig.siteUrl}${pomskyPriceOgWebp}`,
                 alt: "Pomsky miniature chez Royal Pomsky",
                 width: siteConfig.ogImageWidth,
                 height: siteConfig.ogImageHeight,
@@ -30,7 +40,7 @@ export const metadata: Metadata = {
     twitter: buildTwitter({
         title: pageMetadata.pomskyPrice.title,
         description: pageMetadata.pomskyPrice.description,
-        imageUrl: `${siteConfig.siteUrl}/BAMBOU-pomsky-miniature-f5.webp`,
+        imageUrl: `${siteConfig.siteUrl}${pomskyPriceOgJpg}`,
     }),
     alternates: {
         canonical: `${siteConfig.siteUrl}${siteConfig.pages.pomskyPrice}`,
@@ -161,11 +171,20 @@ const faqPomskyPrice: FAQItem[] = [
 ]
 
 export default function PomskyPricePage() {
+    const pageLastModValue = sitemapPages.find((page) => page.url === siteConfig.pages.pomskyPrice)?.lastmod
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Accueil", url: "/" },
         { name: "Prix du Pomsky", url: siteConfig.pages.pomskyPrice },
     ])
     const faqSchema = generateFAQSchema(convertFAQsToSchema(faqPomskyPrice))
+    const webPageSchema = generateWebPageSchema({
+        name: pageMetadata.pomskyPrice.title,
+        description: pageMetadata.pomskyPrice.description,
+        url: siteConfig.pages.pomskyPrice,
+        imageUrl: pomskyPriceOgJpg,
+        dateModified: pageLastModValue,
+        about: ["Prix du Pomsky", "Pomsky Toy", "Pomsky Miniature", "Pomsky Standard", "Adoption Pomsky"],
+    })
     const lastMod = returnLastmod(siteConfig.pages.pomskyPrice)
 
     return (
@@ -177,6 +196,10 @@ export default function PomskyPricePage() {
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
             />
 
             <div className="py-16">
