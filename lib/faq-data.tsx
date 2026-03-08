@@ -82,8 +82,8 @@ export const faqHome: FAQItem[] = [
       <div className="space-y-3">
         <p>
           Un élevage professionnel comme le nôtre offre une génétique des lignées saine, une sélection de grande qualité.
-          Nous avons un suivi vétérinaire rigoureux, un cahier des charges élevé. Chez nous, les locaux sont adaptés au bien être animal, nous avons une connaissance accrue des soins à prodiguer aux animaux, actes de premiers secours, des urgences médicales, il y'a également une présence permanente.
-          Un suivi des parents, des chiots, de la sociabilisation, de la gestion émotionnelle et un cadre structuré pour le développement des chiots est nécessaire.
+          Nous avons un suivi vétérinaire rigoureux et un cahier des charges élevé. Chez nous, les locaux sont adaptés au bien-être animal, nous avons une connaissance accrue des soins à prodiguer aux animaux, des actes de premiers secours et des urgences médicales, et il y a également une présence permanente.
+          Un suivi des parents, des chiots, de la socialisation, de la gestion émotionnelle et un cadre structuré pour le développement des chiots est nécessaire.
         </p>
         <p>
           Cela permet de faire un choix réfléchi et responsable, basé sur des critères objectifs, basé sur le choix d'avoir choisi un chiot élevé dans des conditions optimales et sérieuses plutôt que sur une simple annonce ne respectant aucun cadre légal, et dont les conditions d'hygiène et les connaissances du naisseur laissent à désirer.
@@ -99,14 +99,11 @@ export const faqPresentation: FAQItem[] = [
     answer: (
       <div className="space-y-3">
         <p>
-          Les futurs parents sont sélectionnés aux USA pour éviter tout risque de consanguinité ainsi que sur nos chiots nés à la maison : nous les retenons tout d'abord pour leur beauté physique et particulièrement leur correspondance au standard du Pomsky établi selon la fédération française du Pomsky et l'IPA ( premier club américain fondateur de la race ) ainsi que nos objectifs d'avancer en génération.
+          Les futurs parents sont sélectionnés aux USA pour éviter tout risque de consanguinité, ainsi que parmi nos chiots nés à la maison : nous les retenons tout d'abord pour leur beauté physique et, en particulier, leur correspondance au standard du Pomsky établi selon la Fédération française du Pomsky et l'IPA (premier club américain fondateur de la race), ainsi que selon nos objectifs d'avancer en génération.
         </p>
-        <p>
-          Pomsky et l'IPA ( premier club américain fondateur de la race ) ainsi que nos objectifs d'avancer en génération.
-        </p>
-        <p>À l'âge d'1 an nous faisons les test ADN de santé et de dépistage des tares liées au pomeranien et husky ! Suite à celà un bilan comportemental du chien que nous avons sélectionné. </p>
-        <p>Si le bilan est positif et que le comportement correspond à ce qui est souhaité pour la race en devenir ( Pomsky sociable, avenant, facile à éduquer, peu aboyeur, proche de l'humain et équilibré ) il sera sélectionné pour notre programme d'élevage et il reproduira à l'âge de 2 ans. </p>
-        <p>Si le comportement n'est pas adapté à la reproduction ( peur, méfiance, aboiement excessifs ) le chien est placé en famille d'accueil et stérilisé.</p>
+        <p>À l'âge d'un an, nous faisons les tests ADN de santé et de dépistage des tares liées au poméranien et au Husky. Suite à cela, un bilan comportemental du chien sélectionné est réalisé.</p>
+        <p>Si le bilan est positif et que le comportement correspond à ce qui est souhaité pour la race en devenir (Pomsky sociable, avenant, facile à éduquer, peu aboyeur, proche de l'humain et équilibré), il sera sélectionné pour notre programme d'élevage et reproduira à l'âge de 2 ans.</p>
+        <p>Si le comportement n'est pas adapté à la reproduction (peur, méfiance, aboiements excessifs), le chien est placé en famille d'accueil et stérilisé.</p>
         <p>Tout ceci dans le but de vous garantir d'adopter un chien équilibré, avec une santé parfaite.</p>
       </div>
     ),
@@ -122,7 +119,7 @@ export const faqPresentation: FAQItem[] = [
           Ce cadre favorise l'équilibre émotionnel, la confiance et la sociabilité des chiots.
         </p>
         <p>Chez Royal POMSKY nous privilégions la qualité à la quantité.</p>
-        <p>Nous n'hésitons pas à travailler la taille Toy qui est la taille la moins prolifique en Pomsky. </p>
+        <p>Nous n'hésitons pas à travailler la taille Toy, qui est la taille la moins prolifique en Pomsky.</p>
         <p>
           Les femelles ont leur année de repos après gestation, le nombre de portées est volontairement limité afin de garantir :
         </p>
@@ -141,7 +138,7 @@ export const faqPresentation: FAQItem[] = [
       <div className="space-y-3">
         <p>
           Les chiots évoluent dans un environnement professionnel, sécurisé et stimulant.
-          Ils sont exposés progressivement aux bruits, ( sons, vidéo projection ) et aux manipulations depuis leur naissance et aux situations courantes, favorisant leur équilibre et leur confiance.
+          Ils sont exposés progressivement aux bruits (sons, vidéo-projection), aux manipulations depuis leur naissance et aux situations courantes, favorisant leur équilibre et leur confiance.
         </p>
       </div>
     ),
@@ -151,7 +148,7 @@ export const faqPresentation: FAQItem[] = [
     answer: (
       <div className="space-y-3">
         <p>
-          Oui. Chez Royal POMSKY, chaque de nos chiens évolue dans le respect de son rythme physiologique et émotionnel.
+          Oui. Chez Royal POMSKY, chacun de nos chiens évolue dans le respect de son rythme physiologique et émotionnel.
           Les périodes de reproduction, de repos et de récupération sont soigneusement respectées afin de préserver la santé et l'équilibre des reproducteurs.
         </p>
       </div>
@@ -165,7 +162,7 @@ export const faqPresentation: FAQItem[] = [
           Absolument. L'équilibre émotionnel est une partie essentielle de notre travail, de par mon ancien métier d'éducatrice dans lequel j'ai vu bien trop de chiens souffrant de troubles du comportement. Je donne à mes chiots toutes les clés possibles.
         </p>
         <p>Un chiot bien dans sa tête devient un adulte stable, confiant et agréable à vivre. </p>
-        <p>C'est pourquoi chaque interaction est pensée pour renforcer la sécurité affective, la confiance en l'humain et en lui même.</p>
+        <p>C'est pourquoi chaque interaction est pensée pour renforcer la sécurité affective, la confiance en l'humain et en lui-même.</p>
       </div>
     ),
   },
@@ -174,7 +171,7 @@ export const faqPresentation: FAQItem[] = [
     answer: (
       <div className="space-y-3">
         <p>
-          Oui. Cependant les enfants doivent être calme en présence de chiots pour faire connaissance avec eux de la meilleure manière possible. Une fois la relation établie les chiots seront à même de montrer leur personnalité véritable.
+          Oui. Cependant, les enfants doivent être calmes en présence de chiots pour faire connaissance avec eux de la meilleure manière possible. Une fois la relation établie, les chiots seront à même de montrer leur personnalité véritable.
         </p>
         <p>
           Les chiots sont habitués à une présence humaine variée et à des manipulations respectueuses, ce qui facilite leur intégration dans des foyers avec enfants, sous supervision et dans le respect mutuel.
@@ -187,7 +184,7 @@ export const faqPresentation: FAQItem[] = [
     answer: (
       <div className="space-y-3">
         <p>
-          Oui, et j'adore cela !  J'accompagne tout particulièrement les premières adoptions, même si évidemment toute famille est traitée de la même manière ! Je le fais en prenant le temps d'expliquer les besoins du Pomsky, les bases éducatives et les bonnes pratiques pour un départ serein, bien sûr le travail sera accompagné bien après le départ du chiot, l'élevage étant impliqué au delà du simple placement du chiot.
+          Oui, et j'adore cela ! J'accompagne tout particulièrement les premières adoptions, même si évidemment chaque famille est traitée de la même manière. Je prends le temps d'expliquer les besoins du Pomsky, les bases éducatives et les bonnes pratiques pour un départ serein. Bien sûr, ce travail se poursuit bien après le départ du chiot, l'élevage étant impliqué au-delà du simple placement du chiot.
         </p>
       </div>
     ),
@@ -197,14 +194,14 @@ export const faqPresentation: FAQItem[] = [
 
 export const faqEleveuses: FAQItem[] = [
   {
-    question: "Est ce que l'élevage canin est une mauvaise chose ?",
+    question: "Est-ce que l'élevage canin est une mauvaise chose ?",
     answer: (
       <div className="space-y-3">
         <p>
           J'assume aujourd'hui totalement le fait que non, ce n'est pas une mauvaise chose. Tout ce qui est fait avec amour, intégrité, honneur, et avec les intentions les plus élevées est une bonne chose.
         </p>
         <p>
-          La façon d'élever change tout, élever avec des compétences et connaissances solides en ce qui concerne l'éthologie, change complètement l'expérience tant pour l'éleveur que pour l'adoptant. Je me suis longtemps questionnée à ce propos mais les études et statistiques parlent : chez royal Pomsky aucun chiot adopté depuis 8 ans n'a été abandonné : les familles doivent prévenir l'élevage en cas de recherche d'un autre foyer, et ceci m'est arrivé une seule fois de replacer un chiot après une tragédie familiale. Seulement environ 2,29 % des chiens abandonnés en France proviendraient d'un élevage professionnel : la majorité des abandons résultent de dons, particuliers, de naisseurs et non d'éleveurs.
+          La façon d'élever change tout. Élever avec des compétences et des connaissances solides en ce qui concerne l'éthologie change complètement l'expérience, tant pour l'éleveur que pour l'adoptant. Je me suis longtemps questionnée à ce propos, mais les études et statistiques parlent : chez Royal Pomsky, aucun chiot adopté depuis 8 ans n'a été abandonné. Les familles doivent prévenir l'élevage en cas de recherche d'un autre foyer, et cela ne m'est arrivé qu'une seule fois, après une tragédie familiale. Seulement environ 2,29 % des chiens abandonnés en France proviendraient d'un élevage professionnel : la majorité des abandons résulte de dons, de particuliers, de naisseurs et non d'éleveurs.
         </p>
       </div>
     ),
@@ -214,17 +211,17 @@ export const faqEleveuses: FAQItem[] = [
     answer: (
       <div className="space-y-3">
         <p>
-          Le Toy, sans conteste la taille la plus mignonne, mais cela reste un chien difficile à obtenir et surtout obtenir une belle harmonie.
+          Le Toy, sans conteste la taille la plus mignonne, mais cela reste un chien difficile à obtenir, surtout lorsqu'on recherche une belle harmonie.
         </p>
       </div>
     ),
   },
   {
-    question: "Faites vous des concours et expositions ?",
+    question: "Faites-vous des concours et expositions ?",
     answer: (
       <div className="space-y-3">
         <p>
-          Jusqu'à présent non, je suis membre de la fédération française du Pomsky, et j'ai été ( aurelie ) juge d'un concours organisé par l'european Pomsky club et la fédération française du Pomsky ( FFP) je me suis beaucoup amusée. Depuis je n'ai pas participé à des expositions cependant ce n'est pas exclu que j'envisage de le faire à l'avenir. Les concours sont très contraignants en terme de planning, de risques sanitaires de mon point de vue. Cependant c'est aussi très intéressant pour présenter la race en devenir et connecter à d'autres passionnés.
+          Jusqu'à présent, non. Je suis membre de la Fédération française du Pomsky, et j'ai été, en tant qu'Aurélie, juge d'un concours organisé par l'European Pomsky Club et la Fédération française du Pomsky (FFP) ; je me suis beaucoup amusée. Depuis, je n'ai pas participé à des expositions, cependant il n'est pas exclu que j'envisage de le faire à l'avenir. Les concours sont très contraignants en termes de planning et présentent des risques sanitaires de mon point de vue. Cependant, c'est aussi très intéressant pour présenter la race en devenir et échanger avec d'autres passionnés.
         </p>
       </div>
     ),
@@ -234,7 +231,7 @@ export const faqEleveuses: FAQItem[] = [
     answer: (
       <div className="space-y-3">
         <p>
-          C'est une façon de retracer les lignées à travers la création de la race et de féderer les gens autour du Pomsky, pour le moment les clubs en France sont nombreux mais non officiels, étant donné que la race n'est pas recconue par la FCI, le but des clubs est d'accéder à la reconnaissance de la race Pomsky un jour ou l'autre.
+          C'est une façon de retracer les lignées à travers la création de la race et de fédérer les gens autour du Pomsky. Pour le moment, les clubs en France sont nombreux mais non officiels, étant donné que la race n'est pas reconnue par la FCI. Le but des clubs est d'accéder à la reconnaissance de la race Pomsky un jour ou l'autre.
         </p>
       </div>
     ),
@@ -360,7 +357,7 @@ export const faqNosChiots: FAQItem[] = [
     answer: (
       <div className="space-y-3">
         <p>
-          Oui. Un accompagnement personnalisé est proposé pour orienter les adoptants vers le chiot le plus adapté à leur mode de vie, leurs attentes et leur environnement. A l'âge de 5 semaines nous pouvons vous conseiller le chiot le plus adapté à votre mode de vie, en fonction de son caractère et des interactions qu'il a avec nous au quotidien : bien sûr le choix reste à la famille.
+          Oui. Un accompagnement personnalisé est proposé pour orienter les adoptants vers le chiot le plus adapté à leur mode de vie, leurs attentes et leur environnement. À l'âge de 5 semaines, nous pouvons vous conseiller le chiot le plus adapté à votre mode de vie, en fonction de son caractère et des interactions qu'il a avec nous au quotidien ; bien sûr, le choix reste à la famille.
         </p>
       </div>
     ),
@@ -400,7 +397,7 @@ export const faqNosChiots: FAQItem[] = [
           Les visites sont proposées sur rendez-vous, lorsque l'âge des chiots le permet et dans le respect de leur développement, de leur rythme et des règles sanitaires.
         </p>
         <p>
-          Chez Royal POMSKY, les rencontres sont pensées comme un temps privilégié, permettant aux familles de découvrir les chiots, l'environnement dans lequel ils grandissent et la philosophie de l'élevage, en toute transparence et bienveillance
+          Chez Royal POMSKY, les rencontres sont pensées comme un temps privilégié, permettant aux familles de découvrir les chiots, l'environnement dans lequel ils grandissent et la philosophie de l'élevage, en toute transparence et bienveillance.
         </p>
       </div>
     ),
@@ -410,9 +407,9 @@ export const faqNosChiots: FAQItem[] = [
     answer: (
       <div className="space-y-3">
         <p>
-          Pour des raisons sanitaires et de sécurité, les chiots sont visibles mais ne sont pas manipulés par les visiteurs jusquà lâge de 9 semaines ( après avoir effectué leur vaccination )
+          Pour des raisons sanitaires et de sécurité, les chiots sont visibles mais ne sont pas manipulés par les visiteurs jusqu'à l'âge de 9 semaines (après avoir effectué leur vaccination).
         </p>
-        <p>Seul léleveur est autorisé à manipuler les chiots, afin de :</p>
+        <p>Seul l'éleveur est autorisé à manipuler les chiots, afin de :</p>
         <ul className="list-disc ml-6">
           <li>préserver leur santé et limiter les risques de contamination,</li>
           <li>respecter leur rythme de développement,</li>

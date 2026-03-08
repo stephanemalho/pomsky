@@ -6,7 +6,7 @@ export const pageContent = {
         description:
             "Royal Pomsky se situe dans la commune de SAINT-AMOUR (39160) en région Bourgogne Franche Comté. C'est le premier élevage de Pomsky en France ayant fait le choix de débuter sa sélection en 2017 avec des lignées Américaines : directement au berceau de la race, pour amener en France le Pomsky absolument parfait.",
         descriptionSecondary:
-            "Depuis notre première portée née en 2018, notre objectif est de vous apporter le meilleur et l'excellence version Pomsky : Un physique parfait, une santé de fer, une expertise comportementale, une sociabilisation parfaite, un suivi tout au long de la vie du chiot.",
+            "Depuis notre première portée née en 2018, notre objectif est de vous apporter le meilleur et l'excellence version Pomsky : un physique parfait, une santé de fer, une expertise comportementale, une socialisation parfaite, un suivi tout au long de la vie du chiot.",
         descriptionTertiary:
             "Nous avons rédigé plusieurs articles contenant de très nombreuses informations, merci d'en prendre connaissance avant d'envisager l'adoption de votre chiot ! Vous pourrez ensuite consulter la page de nos chiots pomsky disponibles en cliquant ci-dessous :"
     },
@@ -26,7 +26,7 @@ export const pageContent = {
         description:
             "Les chiots Pomsky petit format présentés sur cette page sont proposés à l'adoption chez Royal POMSKY, dans un cadre professionnel et réglementé. Notre élevage assure un suivi vétérinaire rigoureux et un accompagnement personnalisé des familles.",
         descriptionSecondary:
-            "Notre élevage est dédié aux pomsky toy mais nous proposons les trois formats de pomsky qui existe (Standard, Mini et Toy), trouvez sur cette page la liste des chiots disponible à la reservation"
+            "Notre élevage est dédié aux Pomsky Toy, mais nous proposons les trois formats de Pomsky qui existent (Standard, Miniature et Toy). Trouvez sur cette page la liste des chiots disponibles à la réservation."
     },
     reproductors: {
         h1: "NOS POMSKY ADULTES REPRODUCTEURS",
@@ -39,7 +39,7 @@ export const pageContent = {
     presentation: {
         h1: "Notre élevage est spécialisé en Pomsky Toy de lignée américaine",
         description:
-            "Cette page vous détaille nos choix d'élevage, nous voulons optenir pour vous des pomsky toy équilibrés, socialisés, avec suivis vétérinaires, et un accompagnement avant et après adoption."
+            "Cette page vous détaille nos choix d'élevage : nous voulons obtenir pour vous des Pomsky Toy équilibrés, socialisés, avec un suivi vétérinaire et un accompagnement avant et après l'adoption."
     },
     eleveuses: {
         h1: "Les éleveuses de Royal POMSKY",
