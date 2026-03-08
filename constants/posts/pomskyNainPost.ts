@@ -54,7 +54,7 @@ export const pomskyNainPost: BlogPost = {
         {
             subtitle: "Prix et acquisition d'un pomsky miniature",
             paragraphs: [
-                "Le pomsky miniature est un chien rare, ce qui explique un coût d'acquisition élevé. Le prix peut varier entre 5 000 et 7 000 euros selon la qualité de l'élevage et les caractéristiques du chiot.",
+                "Le pomsky miniature est un chien rare, ce qui explique un coût d'acquisition élevé. Le prix peut varier entre 3800 et 4500 euros selon la qualité de l'élevage et les caractéristiques du chiot.",
                 "Il est indispensable de choisir un élevage réputé, transparent et respectueux du bien-être animal afin de garantir la santé et l'équilibre de votre futur compagnon."
             ]
         },

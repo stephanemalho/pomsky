@@ -629,7 +629,7 @@ export const faqPomsky: FAQItem[] = [
           Le prix d’un Pomsky varie généralement selon le format, la génération, la lignée et certaines caractéristiques morphologiques.
         </p>
         <p>
-          À titre indicatif, on observe souvent une fourchette comprise entre 3 000 € et 7 000 € selon le profil du chiot.
+          À titre indicatif, on observe souvent une fourchette comprise entre 3 000 € et 6 000 € selon le profil du chiot.
         </p>
       </div>
     ),

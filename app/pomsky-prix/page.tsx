@@ -50,30 +50,33 @@ export const metadata: Metadata = {
 const quickPrices = [
     { label: "Pomsky Standard", price: "à partir de 3 000 €" },
     { label: "Pomsky Miniature", price: "à partir de 3 800 €" },
-    { label: "Pomsky Toy", price: "à partir de 5 800 €" },
+    { label: "Pomsky Toy", price: "à partir de 4 000 €" },
 ]
 
 const priceCategories = [
     {
         category: "Pomsky Standard",
         size: "format le plus grand",
-        profile: "allure plus proche du Husky miniature",
+        profile: "robe marquage husky génération F4 / F5 / F6",
+        lineage: "américaine",
         price: "3 000 € à 3 800 €",
-        family: "familles à l’aise avec un chien plus grand, actif et expressif",
+        availability: "Oui",
     },
     {
         category: "Pomsky Miniature",
         size: "petit à moyen format",
-        profile: "format très apprécié pour son équilibre",
-        price: "3 800 € à 5 800 €",
-        family: "familles recherchant un Pomsky compact, polyvalent et harmonieux",
+        profile: "format intermédiaire très apprécié",
+        lineage: "américaine",
+        price: "3 800 € à 4 500 €",
+        availability: "Oui",
     },
     {
         category: "Pomsky Toy",
         size: "très petit format",
         profile: "profil rare et très demandé",
-        price: "5 800 € à 7 000 €",
-        family: "familles recherchant un très petit Pomsky avec un format particulièrement sélectionné",
+        lineage: "américaine",
+        price: "4 000 € à 5 500 €",
+        availability: "Oui",
     },
 ]
 
@@ -92,7 +95,7 @@ const priceFactors = [
     },
     {
         title: "4. Les caractéristiques morphologiques",
-        text: "Certaines caractéristiques attirent particulièrement les familles : un très petit format, une expression marquée, une robe spécifique, un masque harmonieux, des yeux clairs ou vairons, une fourrure recherchée ou encore un type très “Pomsky”. Lorsque plusieurs de ces critères sont réunis dans un même profil, cela peut influencer le prix.",
+        text: "Certaines caractéristiques attirent particulièrement les familles : un très petit format, une expression marquée, une robe spécifique, un masque harmonieux, des yeux clairs ou vairons, une fourrure recherchée ou encore un type très “Pomsky”. Lorsque plusieurs de ces critères sont réunis dans un même profil, cela peut influencer le prix. Certaines couleurs rares, comme le Silverwolf, peuvent également faire monter le tarif de certains chiots jusqu’à 6 000 €.",
     },
     {
         title: "5. La qualité d’élevage et l’accompagnement",
@@ -132,7 +135,7 @@ const faqPomskyPrice: FAQItem[] = [
         question: "Quel est le prix moyen d’un Pomsky en France ?",
         answer: (
             <p>
-                Le prix moyen d’un Pomsky en France peut varier selon sa catégorie, son gabarit, sa lignée et ses caractéristiques. À titre indicatif, un Pomsky peut se situer entre 3 000 € et 7 000 € selon son profil.
+                Le prix moyen d’un Pomsky en France peut varier selon sa catégorie, son gabarit, sa lignée et ses caractéristiques. À titre indicatif, un Pomsky peut se situer entre 3 000 € et 6 000 € selon son profil.
             </p>
         ),
     },
@@ -252,10 +255,13 @@ export default function PomskyPricePage() {
                         <div className="space-y-3">
                             <h2 className="text-xl font-bold md:text-2xl">Combien coûte un Pomsky ?</h2>
                             <p className="max-w-4xl leading-relaxed text-muted-foreground">
-                                Le prix d’un Pomsky dépend avant tout de sa catégorie et de ses caractéristiques propres. À titre indicatif, un Pomsky peut se situer dans une fourchette allant de 3 000 € à 7 000 €.
+                                Le prix d’un Pomsky dépend avant tout de sa catégorie et de ses caractéristiques propres. À titre indicatif, un Pomsky peut se situer dans une fourchette allant de 3 000 € à 6 000 €.
                             </p>
                             <p className="max-w-4xl leading-relaxed text-muted-foreground">
                                 Voici une première estimation de nos catégories de prix. Ces tarifs sont donnés à titre indicatif. Le prix exact peut varier selon le profil du chiot, sa morphologie, son type, sa lignée et la rareté de certaines caractéristiques recherchées.
+                            </p>
+                            <p className="max-w-4xl leading-relaxed text-muted-foreground">
+                                Certains profils réunissant plusieurs critères recherchés, notamment un très petit format et une couleur rare comme le Silverwolf, peuvent atteindre 6 000 €.
                             </p>
                         </div>
 
@@ -290,8 +296,9 @@ export default function PomskyPricePage() {
                                             <th className="px-5 py-4 font-semibold">Catégorie</th>
                                             <th className="px-5 py-4 font-semibold">Gabarit adulte estimé</th>
                                             <th className="px-5 py-4 font-semibold">Profil recherché</th>
+                                            <th className="px-5 py-4 font-semibold">Lignée</th>
                                             <th className="px-5 py-4 font-semibold">Fourchette indicative</th>
-                                            <th className="px-5 py-4 font-semibold">Pour quel type de famille</th>
+                                            <th className="px-5 py-4 font-semibold">Proposé chez Royal Pomsky</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -300,8 +307,9 @@ export default function PomskyPricePage() {
                                                 <td className="px-5 py-4 font-semibold text-foreground">{item.category}</td>
                                                 <td className="px-5 py-4 text-muted-foreground">{item.size}</td>
                                                 <td className="px-5 py-4 text-muted-foreground">{item.profile}</td>
+                                                <td className="px-5 py-4 text-muted-foreground">{item.lineage}</td>
                                                 <td className="px-5 py-4 font-medium text-primary">{item.price}</td>
-                                                <td className="px-5 py-4 text-muted-foreground">{item.family}</td>
+                                                <td className="px-5 py-4 text-muted-foreground">{item.availability}</td>
                                             </tr>
                                         ))}
                                     </tbody>
@@ -313,6 +321,9 @@ export default function PomskyPricePage() {
                             <CardContent className="space-y-3 p-6 text-sm leading-relaxed text-muted-foreground md:p-8">
                                 <p>
                                     Le Pomsky Toy fait partie des profils les plus recherchés en raison de son petit gabarit et de la complexité de sélection qu’il implique. Le Pomsky Miniature séduit par son excellent compromis entre format, type et facilité d’intégration dans de nombreux foyers. Le Pomsky Standard, quant à lui, peut convenir aux familles qui souhaitent conserver davantage la prestance du Husky dans un format plus accessible.
+                                </p>
+                                <p>
+                                    Certains chiots se distinguent aussi par la rareté de leur robe. Des couleurs recherchées comme le Silverwolf peuvent justifier un positionnement plus élevé et amener certains profils jusqu’à 6 000 €.
                                 </p>
                             </CardContent>
                         </Card>
