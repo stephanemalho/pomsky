@@ -66,7 +66,7 @@ export default function PresentationPage() {
                         <h1
                             className="text-xl md:text-3xl font-bold">Élevage de Pomsky Toy de lignée américaine</h1>
                         <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                            Découvrez plus en détail notre élevage professionel de Pomsky toy en France.
+                            Découvrez plus en détail notre élevage professionnel de Pomsky toy en France.
                         </p>
                         <p className="text-muted-foreground max-w-2xl mx-auto">
                             Bien que nous soyons spécialisés dans l'élevage de Pomsky toy, nous proposons également les deux autres formats (Miniature et Standard) avec un engagement envers le bien-être animal et la satisfaction des familles adoptantes. Explorez notre élevage, nos valeurs et notre passion pour cette race exceptionnelle.
@@ -246,7 +246,7 @@ export default function PresentationPage() {
                                 Notre expérience est désormais devenue une expertise complète de cette merveilleuse race en devenir.
                             </p>
                             <p className="text-muted-foreground leading-relaxed">
-                                Nous avons sélectionné nos reproducteurs Pomsky au sein même du berceau de la race, pour vous apporter les meilleures lignées de Pomsky qui existent au monde. Nos adultes sont nés aux quatre coins des États-Unis d'Amérique : d'est en ouest, de New York à Seattle, en passant par la Californie et en revenant par la Floride. Ils sont arrivés en France pour faire partie de notre programme d'élevage canin, afin que nous puissions vous proposer les meilleures lignées de Pomsky, parce que nous visons l'excellence pour notre programme d'élevage ainsi que pour le devenir de la race.
+                                Nous avons sélectionné nos reproducteurs Pomsky au sein même du berceau de la race, pour vous apporter les meilleures lignées de Pomsky au monde. Nos adultes sont nés aux quatre coins des États-Unis d'Amérique : d'est en ouest, de New York à Seattle, en passant par la Californie et en revenant par la Floride. Ils sont arrivés en France pour faire partie de notre programme d'élevage canin, afin que nous puissions vous proposer les meilleures lignées de Pomsky, parce que nous visons l'excellence pour notre programme d'élevage ainsi que pour le devenir de la race.
 
 
                             </p>
@@ -300,7 +300,7 @@ export default function PresentationPage() {
                                         <h3 className="text-xl font-semibold">Suivi vétérinaire</h3>
                                     </div>
                                     <p className="text-muted-foreground text-sm leading-relaxed">
-                                        Suivi sanitaire complet, identification, vaccination, vemifuge, antiparasitaires, tests ADN du laboratoire EMBARK des parents, test de filiation du laboratoire ANTAGENE et conseils de santé transmis au moment du départ.
+                                        Suivi sanitaire complet, identification, vaccination, vermifuge, antiparasitaires, tests ADN du laboratoire EMBARK des parents, test de filiation du laboratoire ANTAGENE et conseils de santé transmis au moment du départ.
                                     </p>
                                     <div className="flex flex-col">
                                         <Link

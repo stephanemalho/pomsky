@@ -26,7 +26,7 @@ export const pageContent = {
         description:
             "Les chiots Pomsky petit format présentés sur cette page sont proposés à l'adoption chez Royal POMSKY, dans un cadre professionnel et réglementé. Notre élevage assure un suivi vétérinaire rigoureux et un accompagnement personnalisé des familles.",
         descriptionSecondary:
-            "Notre élevage est dédié aux Pomsky Toy, mais nous proposons les trois formats de Pomsky qui existent (Standard, Miniature et Toy). Trouvez sur cette page la liste des chiots disponibles à la réservation."
+            "Notre élevage est dédié aux Pomsky Toy, mais nous proposons les trois formats de Pomsky (Standard, Miniature et Toy). Trouvez sur cette page la liste des chiots disponibles à la réservation."
     },
     reproductors: {
         h1: "NOS POMSKY ADULTES REPRODUCTEURS",

@@ -84,7 +84,7 @@ export const pomskyNainPost: BlogPost = {
     ],
     author: {
         name: "Marine",
-        role: "Éleveur de Pomsky pationnnée",
+        role: "Éleveur de Pomsky pationnée",
         imageSrc: "/assets/authors/marine-eleveuse-royal-pomsky.webp",
         imageAlt: "Portrait de l'éleveuse Marine de Royal Pomsky",
         linkedinUrl: "",

@@ -60,7 +60,7 @@ export default function ConditionsGeneralesPage() {
           <section className="space-y-3">
             <h2 className="text-xl md:text-2xl font-semibold">1. Objet et champ d&apos;application</h2>
             <p className="text-muted-foreground">
-              Le site {siteConfig.name} présente l&apos;élevage professionel, les reproducteurs et les chiots disponibles.
+              Le site {siteConfig.name} présente l&apos;élevage professionnel, les reproducteurs et les chiots disponibles.
               Il ne constitue pas un site de vente en ligne : toute adoption ou réservation nécessite un échange direct
               avec l&apos;éleveur (visite, visio, contrat). Les photos, tarifs indicatifs et disponibilités sont
               communiqués à titre informatif et peuvent évoluer.
