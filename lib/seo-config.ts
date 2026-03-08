@@ -374,17 +374,18 @@ export const pageMetadata = {
     },
 
     wellness: {
-        title: pageContent.wellness.h1,
-        description: pageContent.wellness.description,
+        title: "Bien-être animal en élevage Pomsky | Conditions de vie et socialisation",
+        description:
+            "Découvrez comment nos chiots et adultes Pomsky vivent au quotidien : environnement rassurant, socialisation progressive, sorties, repos, soins et respect du rythme de chaque chien.",
         keywords: [
-            "bien etre chiot pomsky",
-            "conditions de vie chiot elevage",
-            "socialisation chiot",
-            "nursery chiot elevage",
-            "environnement sain chiot",
-            "suivi veterinaire chiot",
-            "elevage ethique pomsky",
-            "chiot eleve avec sa mere"
+            "bien etre animal elevage pomsky",
+            "conditions de vie chiot pomsky",
+            "socialisation chiot elevage",
+            "elevage pomsky bien etre",
+            "comment vivent les chiots pomsky",
+            "respect du rythme chiot",
+            "environnement chiot elevage",
+            "elevage pomsky responsable"
         ]
     },
 
@@ -512,7 +513,7 @@ export const sitemapPages = [
         url: "/bien-etre-animal",
         changefreq: "monthly",
         priority: 0.7,
-        lastmod: "2026-02-21"
+        lastmod: "2026-03-08"
     },
     {
         url: "/contact",

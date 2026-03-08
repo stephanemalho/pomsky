@@ -256,102 +256,57 @@ export const faqEleveuses: FAQItem[] = [
 
 export const faqBienEtre: FAQItem[] = [
   {
-    question: "Dans quel environnement vivent les chiens et les chiots chez ROYAL POMSKY ?",
+    question: "Pourquoi le bien-être animal est-il important dans un élevage Pomsky ?",
     answer: (
       <div className="space-y-3">
         <p>
-          Les chiens et les chiots Pomsky de notre élevage évoluent dans un environnement propre, sécurisé et adapté à leurs besoins, au sein d'un élevage professionnel déclaré.
+          Le bien-être animal influence directement le développement du chiot, son équilibre émotionnel, sa relation à l’humain et sa capacité d’adaptation dans sa future famille.
         </p>
-        <p>
-          Les espaces sont pensés pour garantir confort, hygiène, repos et stimulation, tout en respectant les normes en vigueur.
-        </p>
+        <p>Il constitue une base essentielle pour un bon départ dans la vie.</p>
       </div>
     ),
   },
   {
-    question: "Quel est le cadre naturel de l'élevage Royal POMSKY ?",
+    question: "Comment socialiser un chiot Pomsky en élevage ?",
     answer: (
       <div className="space-y-3">
         <p>
-          Royal POMSKY est implanté dans un cadre naturel calme et préservé, propice au bien-être des chiens et des chiots.</p>
-        <p>L'environnement est volontairement éloigné de l'agitation urbaine, offrant sérénité, espace et qualité de vie.</p>
-      </div>
-    ),
-  },
-  {
-    question: "Les chiots bénéficient-ils de cet environnement ?",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          Oui. Dès leur plus jeune âge, les chiots découvrent progressivement ce cadre naturel, toujours de manière sécurisée.</p>
-        <p>Cette exposition favorise des chiots curieux, confiants et adaptables, capables de s'épanouir dans des environnements variés par la suite.</p>
-      </div>
-    ),
-  },
-  {
-    question: "Le cadre naturel est-il compatible avec un élevage professionnel ?",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          Oui, parfaitement.</p>
-        <p>Royal POMSKY allie cadre naturel et structure professionnelle, en respectant les normes sanitaires, réglementaires et organisationnelles d'un élevage canin.</p>
-      </div>
-    ),
-  },
-  {
-    question: "Comment accompagnez-vous la croissance du Pomsky ?",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          La croissance est progressive et adaptée au gabarit du Pomsky.
-          L'activité est encadrée, les jeux sont choisis pour limiter les impacts,
-          et le rythme du chiot est toujours respecté.
-        </p>
-        <p>
-          Une attention particulière est portée à l'équilibre, au repos et à l'évolution
-          physique durant les premiers mois.
+          La socialisation d’un chiot Pomsky repose sur des découvertes progressives, des interactions humaines positives, des manipulations douces, une exposition adaptée aux sons du quotidien et un accompagnement respectueux de son rythme.
         </p>
       </div>
     ),
   },
   {
-    question: "Le Pomsky peut il vivre en appartement ? ",
+    question: "Pourquoi le repos est-il important pour un chiot ?",
     answer: (
       <div className="space-y-3">
         <p>
-          Oui, il peut vivre en appartement et souvent un chien est plus heureux en appartement qu'en maison car les balades sont plus nombreuses !
+          Le repos permet au chiot de récupérer, d’intégrer ses expériences et de se développer dans de bonnes conditions.
         </p>
+        <p>Un équilibre entre stimulation et calme est indispensable à son bien-être.</p>
+      </div>
+    ),
+  },
+  {
+    question: "Le cadre de vie influence-t-il le comportement futur du chiot ?",
+    answer: (
+      <div className="space-y-3">
         <p>
-          4 balades par jour seront nécessaires pour rendre votre Pomsky heureux, pour la propreté également.
-          Vous pouvez alterner des balades en ville et en campagne, le Pomsky aime la variété.
+          Oui, le cadre de vie joue un rôle important. Un environnement stable, rassurant et cohérent peut aider le chiot à développer davantage de confiance, de repères et de sérénité pour son arrivée en famille.
         </p>
       </div>
     ),
   },
   {
-    question: "Comment préparez-vous la séparation avec la mère ?",
+    question: "Comment reconnaître un élevage attentif au bien-être animal ?",
     answer: (
       <div className="space-y-3">
         <p>
-          Les chiots vivent à la fois en intérieur et en extérieur, de manière progressive et encadrée.</p>
-        <p>
-          Les premières semaines de vie ils sont dans une nurserie. Jusqu'à l'âge de 4 semaines ils ne vont pas en extérieur, ils passent ensuite les 5-6 autres semaines à alterner : la journée en extérieur, la nuit en intérieur.</p>
-        <ul className="list-disc">
-          Progressivement, les chiots gagnent en autonomie grâce à :
-          <li className="ml-4">
-            des temps de séparation courts et adaptés,
-          </li>
-          <li className="ml-4"> l'exploration de leur environnement en toute sécurité,</li>
-          <li className="ml-4"> des interactions positives avec l'humain,</li>
-          <li className="ml-4"> le maintien de routines rassurantes.</li>
-        </ul>
-        <p>La mère reste présente et attentive tout au long de ce processus, ce qui permet aux chiots de développer leur confiance, leur stabilité émotionnelle et leur capacité d'adaptation.</p>
-        <p>Cette préparation en douceur favorise une transition sereine vers leur nouvelle famille et contribue à faire des chiots bien dans leur tête et bien dans leurs pattes</p>
+          Un élevage attentif au bien-être animal accorde de l’importance à la qualité de l’environnement, à la socialisation, au respect du rythme des chiots, à la présence humaine, à la cohérence du quotidien et à l’accompagnement des familles.
+        </p>
       </div>
     ),
   },
-
-
 ]
 
 export const faqNosChiots: FAQItem[] = [

@@ -47,8 +47,9 @@ export const pageContent = {
             "Nous sommes Aurélie et Marine, pionnières dans l'importation de Pomskys d'Amérique depuis 2017. Cette page raconte notre parcours de vie, notre passion pour le Pomsky et l'accompagnement que nous proposons aux familles adoptives dès leurs premiers pas."
     },
     wellness: {
-        h1: "La vie en élevage pour les Pomsky toy de Royal POMSKY",
-        description: "Voici comment vivent nos chiens chez Royal POMSKY"
+        h1: "Le bien-être animal chez Royal Pomsky",
+        description:
+            "Le bien-être animal fait partie des fondations de notre élevage. Chez Royal Pomsky, nous accordons une attention constante à l’environnement de vie de nos chiots et de nos adultes, à leur rythme quotidien, à leur socialisation et à leur équilibre émotionnel."
     },
     contact: {
         h1: "Contact & visites",
