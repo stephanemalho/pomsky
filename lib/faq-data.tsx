@@ -615,17 +615,6 @@ export const faqPomsky: FAQItem[] = [
     ),
   },
   {
-    question: "Le Pomsky est-il facile à adapter à la vie de famille ?",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          Oui, à condition qu'il soit bien socialisé, éduqué avec cohérence et accueilli dans un cadre stable.
-        </p>
-        <p>Le Pomsky reste un chien vif, proche de l'humain, qui a besoin de sorties, d'attention et d'interactions régulières.</p>
-      </div>
-    ),
-  },
-  {
     question: "Quelles sont les tailles possibles chez le Pomsky ?",
     answer: (
       <div className="space-y-3">
@@ -641,6 +630,19 @@ export const faqPomsky: FAQItem[] = [
             <strong>Pomsky standard</strong> : 41 à 45 cm au garrot, pour 9 à 12 kg.
           </li>
         </ul>
+      </div>
+    ),
+  },
+  {
+    question: "Que veulent dire F1 à F5 chez le Pomsky ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          La lettre F désigne la filiation. Plus la génération est avancée, plus le type, la taille et le comportement tendent à se stabiliser.
+        </p>
+        <p>
+          Les F1 sont souvent plus variables, tandis que les F3 à F5 sont généralement recherchés pour une meilleure homogénéité.
+        </p>
       </div>
     ),
   },
@@ -668,6 +670,19 @@ export const faqPomsky: FAQItem[] = [
     ),
   },
   {
+    question: "Combien coûte un Pomsky ?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          Le prix d’un Pomsky varie généralement selon le format, la génération, la lignée et certaines caractéristiques morphologiques.
+        </p>
+        <p>
+          À titre indicatif, on observe souvent une fourchette comprise entre 3 000 € et 7 000 € selon le profil du chiot.
+        </p>
+      </div>
+    ),
+  },
+  {
     question: "Le format Pomsky Toy est-il garanti à 100 % dès la naissance ?",
     answer: (
       <div className="space-y-3">
@@ -685,83 +700,6 @@ export const faqPomsky: FAQItem[] = [
           </Link>
           .
         </p>
-      </div>
-    ),
-  },
-  {
-    question: "Le Pomsky Toy est-il fragile ?",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          Pas par nature.
-        </p>
-        <p>Le point de vigilance concerne surtout la qualité de sélection : un Pomsky Toy équilibré doit conserver une structure saine, des proportions cohérentes et un mental stable.</p>
-      </div>
-    ),
-  },
-  {
-    question: "Y a-t-il une liste d'attente pour un Pomsky Toy ?",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          Souvent oui, car les petits formats bien construits restent plus rares et les portées sont limitées.
-        </p>
-        <p>Une disponibilité immédiate n&apos;est pas forcément anormale, mais elle mérite d&apos;être vérifiée avec attention.</p>
-      </div>
-    ),
-  },
-  {
-    question: "Pourquoi certains Pomsky Toy ressemblent-ils davantage à des Spitz ?",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          Parce que certaines lignées renforcent davantage l&apos;apport du Spitz pour réduire la taille.
-        </p>
-        <p>On peut alors obtenir un chien plus petit, mais parfois moins typé Husky. L&apos;enjeu reste de conserver un Pomsky harmonieux et équilibré.</p>
-      </div>
-    ),
-  },
-  {
-    question: "Le Pomsky Toy est-il adapté aux voyages ?",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          Oui, son petit format le rend souvent plus simple à transporter.
-        </p>
-        <p>Il reste néanmoins un chien actif, qui a besoin de repères, d&apos;activité et d&apos;un cadre stable, même en déplacement.</p>
-      </div>
-    ),
-  },
-  {
-    question: "Le Pomsky présente-t-il différentes textures de poil ?",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          Oui. Le Pomsky peut présenter un pelage standard, plush ou wooly selon les lignées.
-        </p>
-        <p>La densité, la longueur et l&apos;aspect du poil varient d&apos;un chien à l&apos;autre.</p>
-      </div>
-    ),
-  },
-  {
-    question: "Le Pomsky au pelage standard polaire nécessite t'il moins d'entretien que le Pomsky au pelage fluffy ?",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          Oui, en règle générale.
-        </p>
-        <p>Un pelage fluffy ou wooly demande souvent plus de brossage qu&apos;un pelage standard, car il retient davantage les nœuds et la mue.</p>
-      </div>
-    ),
-  },
-  {
-    question: "Le Pomsky peut-il avoir différentes couleurs d'yeux ?",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          Oui. Le Pomsky peut avoir les yeux bleus, bruns, ambre, verts ou vairons.
-        </p>
-        <p>Cette diversité participe beaucoup à son expression et à son allure nordique.</p>
       </div>
     ),
   },

@@ -48,6 +48,14 @@ export function Footer() {
                             </li>
                             <li>
                                 <Link
+                                    href="/pomsky-prix"
+                                    className="text-muted-foreground hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded px-1 py-0.5"
+                                >
+                                    Prix du Pomsky
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
                                     href="/presentation-elevage"
                                     className="text-muted-foreground hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded px-1 py-0.5"
                                 >

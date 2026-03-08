@@ -24,6 +24,11 @@ const navGroups = [
                 description: "Taille, tempérament, origines et adoption responsable.",
             },
             {
+                title: "Prix du Pomsky",
+                href: "/pomsky-prix",
+                description: "Tarifs Toy, Miniature et Standard, avec les critères qui influencent le prix.",
+            },
+            {
                 title: "Le blog dédié au Pomsky",
                 href: "/blog/pomsky",
                 description: "Conseils, race, génétique et bien-être.",

@@ -9,6 +9,7 @@ export function GET() {
     const pages = [
         siteConfig.pages.home,
         siteConfig.pages.pomsky,
+        siteConfig.pages.pomskyPrice,
         siteConfig.pages.puppies,
         siteConfig.pages.reproductors,
         siteConfig.pages.presentation,

@@ -111,6 +111,7 @@ export const siteConfig = {
     pages: {
         home: "/",
         pomsky: "/le-pomsky",
+        pomskyPrice: "/pomsky-prix",
         puppies: "/chiots-disponibles",
         adoptionGuide: "/adoption/reussir-son-adoption",
         reproductors: "/femelles-reproductrices",
@@ -272,6 +273,24 @@ export const pageMetadata = {
             "caractere pomsky",
             "sante pomsky",
             "prix pomsky",
+        ]
+    },
+
+    pomskyPrice: {
+        title: "Prix du Pomsky en France | Tarifs Toy, Miniature et Standard - Royal Pomsky",
+        description:
+            "Découvrez le prix d’un Pomsky en France selon sa catégorie : Toy, Miniature ou Standard. Comparez les tarifs, comprenez les critères qui influencent le prix et découvrez nos chiots disponibles.",
+        keywords: [
+            "pomsky prix",
+            "prix pomsky",
+            "prix chiot pomsky",
+            "prix pomsky toy",
+            "prix pomsky miniature",
+            "combien coute un pomsky",
+            "prix elevage pomsky france",
+            "prix pomsky standard",
+            "tarif pomsky",
+            "pomsky prix france",
         ]
     },
 
@@ -451,6 +470,12 @@ export const sitemapPages = [
         url: "/le-pomsky",
         changefreq: "monthly",
         priority: 0.75,
+        lastmod: "2026-03-08"
+    },
+    {
+        url: "/pomsky-prix",
+        changefreq: "monthly",
+        priority: 0.8,
         lastmod: "2026-03-08"
     },
     {

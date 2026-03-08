@@ -550,12 +550,20 @@ export default function DogPage() {
                                 <p className="max-w-3xl text-sm leading-relaxed text-muted-foreground">
                                     Un prix plus élevé peut refléter un vrai travail de sélection, de suivi vétérinaire et d’accompagnement. À l’inverse, une promesse trop attractive sur le papier mérite toujours d’être vérifiée.
                                 </p>
-                                <Link
-                                    href="/chiots-disponibles"
-                                    className="inline-flex w-fit rounded-md border border-primary px-5 py-3 font-semibold text-primary transition-colors hover:bg-primary/10"
-                                >
-                                    Voir nos chiots disponibles
-                                </Link>
+                                <div className="flex flex-col gap-3 sm:flex-row">
+                                    <Link
+                                        href="/pomsky-prix"
+                                        className="inline-flex w-fit rounded-md border border-primary px-5 py-3 font-semibold text-primary transition-colors hover:bg-primary/10"
+                                    >
+                                        Comprendre le prix du Pomsky
+                                    </Link>
+                                    <Link
+                                        href="/chiots-disponibles"
+                                        className="inline-flex w-fit rounded-md border border-primary px-5 py-3 font-semibold text-primary transition-colors hover:bg-primary/10"
+                                    >
+                                        Voir nos chiots disponibles
+                                    </Link>
+                                </div>
                             </CardContent>
                         </Card>
                     </section>
