@@ -257,8 +257,9 @@ export const pageMetadata = {
     },
 
     pomsky: {
-        title: pageContent.pomsky.h1,
-        description: pageContent.pomsky.description,
+        title: "Pomsky : taille, caractère, prix, Pomsky Toy, F1 à F5 | Guide complet",
+        description:
+            "Découvrez le Pomsky : tailles toy, miniature et standard, caractère, origines, générations F1 à F5, prix et conseils pour une adoption responsable.",
         keywords: [
             "qu est ce qu un pomsky",
             "origine du pomsky",
@@ -270,6 +271,7 @@ export const pageMetadata = {
             "pomsky vs klee kai",
             "caractere pomsky",
             "sante pomsky",
+            "prix pomsky",
         ]
     },
 
@@ -443,13 +445,13 @@ export const sitemapPages = [
         url: "/",
         changefreq: "monthly",
         priority: 1.0,
-        lastmod: "2026-03-07"
+        lastmod: "2026-03-08"
     },
     {
         url: "/le-pomsky",
         changefreq: "monthly",
         priority: 0.75,
-        lastmod: "2026-03-07"
+        lastmod: "2026-03-08"
     },
     {
         url: "/chiots-disponibles",

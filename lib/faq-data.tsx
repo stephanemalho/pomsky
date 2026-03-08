@@ -597,11 +597,9 @@ export const faqPomsky: FAQItem[] = [
     answer: (
       <div className="space-y-3">
         <p>
-          Oui, mais cela se mérite. Le Pomsky est un chien très expressif et communicatif, qui crée un lien fort avec ses adoptants. Son regard, sa curiosité, ses attitudes et son comportement lui permettent d'interagir facilement avec son entourage.
+          Oui, le Pomsky est généralement très attaché à sa famille et apprécie les interactions régulières.
         </p>
-        <p>
-          Il apprécie la présence humaine et développe une relation complice avec sa famille, si vous êtes absolument cohérent dans l'éducation : une éducation positive uniquement basée sur le renforcement et non la peur. Le Pomsky ne sera pas proche de vous si vous utilisez une éducation basée sur la punition car il développera une méfiance permanente entraînant un éloignement.
-        </p>
+        <p>Il supporte mieux un environnement cohérent, avec de la présence, des repères stables et une éducation positive.</p>
       </div>
     ),
   },
@@ -610,14 +608,9 @@ export const faqPomsky: FAQItem[] = [
     answer: (
       <div className="space-y-3">
         <p>
-          Le Pomsky perd son pelage épisodiquement lors de mues : son pelage ne tombe pas en continu.
+          Comme beaucoup de chiens nordiques, le Pomsky connaît des périodes de mue marquées, souvent deux fois par an.
         </p>
-        <p>
-          Lorsque la température commence à changer ( expl au printemps ou à l'automne ) le pelage commence à entamer sa mue. Il faudra brosser votre Pomsky tous les jours durant les 3 semaines de mue ou vous rendre chez le toiletteur pour qu'il puisse l'aider à se dégager du poil qui a du mal à tomber tout seul.
-        </p>
-        <p>
-          Une fois que la mue est terminée le pelage est en période de repousse et ne tombe plus pendant environ 6 mois.
-        </p>
+        <p>Hors mue, l'entretien reste généralement raisonnable avec un brossage régulier.</p>
       </div>
     ),
   },
@@ -626,12 +619,9 @@ export const faqPomsky: FAQItem[] = [
     answer: (
       <div className="space-y-3">
         <p>
-          Oui. Les Pomsky sont préparés dès leurs premières semaines à la vie de famille grâce à une socialisation
-          progressive, des manipulations douces et une exposition aux bruits du quotidien.
+          Oui, à condition qu'il soit bien socialisé, éduqué avec cohérence et accueilli dans un cadre stable.
         </p>
-        <p>
-          Cette préparation facilite leur adaptation dans leur nouveau foyer.
-        </p>
+        <p>Le Pomsky reste un chien vif, proche de l'humain, qui a besoin de sorties, d'attention et d'interactions régulières.</p>
       </div>
     ),
   },
@@ -639,16 +629,16 @@ export const faqPomsky: FAQItem[] = [
     question: "Quelles sont les tailles possibles chez le Pomsky ?",
     answer: (
       <div className="space-y-3">
-        <p>Il existe plusieurs tailles de Pomsky :</p>
+        <p>On distingue généralement trois formats :</p>
         <ul className="list-disc ml-6">
           <li>
-            <strong>Pomsky standard</strong> : environ 41 à 45 cm au garrot à l'âge adulte.
+            <strong>Pomsky Toy</strong> : 25 à 34 cm au garrot, pour 3,5 à 5 kg.
           </li>
           <li>
-            <strong>Pomsky miniature</strong> : environ 36 à 40 cm au garrot.
+            <strong>Pomsky miniature</strong> : 35 à 40 cm au garrot, pour 6 à 9 kg.
           </li>
           <li>
-            <strong>Pomsky Toy</strong> : en dessous de ces tailles, autour de 30 cm au garrot pour environ 5 kg adulte.
+            <strong>Pomsky standard</strong> : 41 à 45 cm au garrot, pour 9 à 12 kg.
           </li>
         </ul>
       </div>
@@ -659,11 +649,9 @@ export const faqPomsky: FAQItem[] = [
     answer: (
       <div className="space-y-3">
         <p>
-          Non. À ce jour, le Pomsky n&apos;est pas reconnu par la FCI.
+          Non, le Pomsky n&apos;est pas reconnu à ce jour par la FCI.
         </p>
-        <p>
-          La race est encore en cours de structuration. Des clubs spécialisés existent pour encadrer les pratiques d&apos;élevage et le suivi des lignées.
-        </p>
+        <p>Il s&apos;agit d&apos;une race en développement, structurée par des clubs et des élevages spécialisés.</p>
         <p>
           Référence utile:&nbsp;
           <a
@@ -684,11 +672,9 @@ export const faqPomsky: FAQItem[] = [
     answer: (
       <div className="space-y-3">
         <p>
-          Non, pas de façon absolue. Le format Toy existe, mais la taille adulte dépend de plusieurs facteurs génétiques et de l&apos;évolution du chiot.
+          Non. La taille adulte d&apos;un chiot dépend de plusieurs facteurs génétiques et de son évolution.
         </p>
-        <p>
-          Un élevage sérieux doit expliquer clairement ses marges d&apos;estimation et éviter les promesses catégoriques trop précoces.
-        </p>
+        <p>Un éleveur sérieux peut estimer une tendance, mais pas promettre avec certitude absolue un format sur simple annonce.</p>
         <p>
           Pour comprendre les critères à vérifier avant réservation, consultez notre guide:&nbsp;
           <Link
@@ -707,18 +693,9 @@ export const faqPomsky: FAQItem[] = [
     answer: (
       <div className="space-y-3">
         <p>
-          Pas lorsqu&apos;il est sélectionné correctement.
+          Pas par nature.
         </p>
-        <p>
-          Le point critique n&apos;est pas la petite taille en elle-même, mais une miniaturisation trop rapide sans maîtrise génétique suffisante.
-        </p>
-        <p>Un Pomsky Toy équilibré doit conserver :</p>
-        <ul className="list-disc ml-6">
-          <li>une ossature solide,</li>
-          <li>une dentition harmonieuse,</li>
-          <li>des proportions cohérentes,</li>
-          <li>un mental stable.</li>
-        </ul>
+        <p>Le point de vigilance concerne surtout la qualité de sélection : un Pomsky Toy équilibré doit conserver une structure saine, des proportions cohérentes et un mental stable.</p>
       </div>
     ),
   },
@@ -727,11 +704,9 @@ export const faqPomsky: FAQItem[] = [
     answer: (
       <div className="space-y-3">
         <p>
-          Oui. Le Pomsky Toy 50/50 bien équilibré étant plus rare, les naissances sont naturellement limitées.
+          Souvent oui, car les petits formats bien construits restent plus rares et les portées sont limitées.
         </p>
-        <p>
-          Une disponibilité immédiate n&apos;est pas forcément un problème, mais c&apos;est un point qui mérite d&apos;être vérifié avec précision (lignées, suivi, transparence des estimations).
-        </p>
+        <p>Une disponibilité immédiate n&apos;est pas forcément anormale, mais elle mérite d&apos;être vérifiée avec attention.</p>
       </div>
     ),
   },
@@ -740,17 +715,9 @@ export const faqPomsky: FAQItem[] = [
     answer: (
       <div className="space-y-3">
         <p>
-          Pour réduire la taille rapidement, certains programmes augmentent la proportion de Spitz dans les lignées.
+          Parce que certaines lignées renforcent davantage l&apos;apport du Spitz pour réduire la taille.
         </p>
-        <p>On peut alors obtenir un chien plus petit, mais parfois :</p>
-        <ul className="list-disc ml-6">
-          <li>moins typé Husky,</li>
-          <li>avec une structure moins harmonieuse,</li>
-          <li>et un risque plus élevé de déséquilibres liés à l&apos;hyper-miniaturisation.</li>
-        </ul>
-        <p>
-          Le véritable enjeu est de conserver un équilibre global du chien, avec un type Pomsky cohérent sur la durée.
-        </p>
+        <p>On peut alors obtenir un chien plus petit, mais parfois moins typé Husky. L&apos;enjeu reste de conserver un Pomsky harmonieux et équilibré.</p>
       </div>
     ),
   },
@@ -759,11 +726,9 @@ export const faqPomsky: FAQItem[] = [
     answer: (
       <div className="space-y-3">
         <p>
-          Oui. Son petit format le rend généralement plus simple à transporter.
+          Oui, son petit format le rend souvent plus simple à transporter.
         </p>
-        <p>
-          Mais il reste un chien actif qui a besoin de se dépenser, de conserver des repères stables et d&apos;évoluer dans un cadre structuré, même en déplacement.
-        </p>
+        <p>Il reste néanmoins un chien actif, qui a besoin de repères, d&apos;activité et d&apos;un cadre stable, même en déplacement.</p>
       </div>
     ),
   },
@@ -772,12 +737,9 @@ export const faqPomsky: FAQItem[] = [
     answer: (
       <div className="space-y-3">
         <p>
-          Oui. Le Pomsky possède généralement un poil dense et épais.
+          Oui. Le Pomsky peut présenter un pelage standard, plush ou wooly selon les lignées.
         </p>
-        <p>
-          Il peut être de type polaire Husky, intermédiaire (Plush Coat) ou de type Wooly,
-          avec un aspect laineux et un poil mi-long à long, proche de celui du Loulou de Poméranie.
-        </p>
+        <p>La densité, la longueur et l&apos;aspect du poil varient d&apos;un chien à l&apos;autre.</p>
       </div>
     ),
   },
@@ -786,8 +748,9 @@ export const faqPomsky: FAQItem[] = [
     answer: (
       <div className="space-y-3">
         <p>
-          Oui, globalement le Pomsky au pelage fluffy aura besoin d'un brossage 3 fois par semaine pour éviter les noeuds tandis que le Pomsky au pelage standard polaire aura besoin d'un brossage une fois par semaine.
+          Oui, en règle générale.
         </p>
+        <p>Un pelage fluffy ou wooly demande souvent plus de brossage qu&apos;un pelage standard, car il retient davantage les nœuds et la mue.</p>
       </div>
     ),
   },
@@ -796,13 +759,9 @@ export const faqPomsky: FAQItem[] = [
     answer: (
       <div className="space-y-3">
         <p>
-          Oui. Le Pomsky peut présenter une grande diversité de couleurs d'yeux :
-          bleus, verts, ambre, bruns, gris ou noirs.
+          Oui. Le Pomsky peut avoir les yeux bleus, bruns, ambre, verts ou vairons.
         </p>
-        <p>
-          Certains Pomsky ont également des yeux vairons ou particolor,
-          une caractéristique héritée du Husky sibérien.
-        </p>
+        <p>Cette diversité participe beaucoup à son expression et à son allure nordique.</p>
       </div>
     ),
   },
