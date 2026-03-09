@@ -120,7 +120,7 @@ export const siteConfig = {
                 authorName: "Alisson Terwagne",
                 reviewRating: 5,
                 reviewBody:
-                    "Je remercie Aurelie, pour son professionnalisme, pour l'amour qu'elle donne a ses chiens. Son elevage est de loin une perle rare : elevage ethique."
+                    "Je remercie Aurelie, pour son professionnalisme, pour l'amour qu'elle donne à ses chiens. Son elevage est de loin une perle rare : élevage éthique..."
             }
         }
     },
@@ -537,7 +537,7 @@ export const sitemapPages = [
         url: "/contact",
         changefreq: "monthly",
         priority: 0.8,
-        lastmod: "2026-02-13"
+        lastmod: "2026-03-09"
     },
     {
         url: "/mentions-legales",
