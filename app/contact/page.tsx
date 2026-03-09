@@ -254,7 +254,7 @@ export default function ContactPage() {
                                                 Les familles nous recommandent
                                             </h2>
                                             <p className="text-muted-foreground">
-                                                Consultez les retours publies sur Google Business Profile pour decouvrir l'experience vecue par les familles qui ont adopte chez Royal POMSKY.
+                                                Consultez les retours publiés sur Google Business Profile pour découvrir l'expérience vécue par les familles qui ont adopté chez Royal POMSKY.
                                             </p>
                                         </div>
 
