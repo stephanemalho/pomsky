@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { FAQSection } from "@/components/faq"
 import { faqContact } from "@/lib/faq-data"
-import { Chrome, MapPin, Phone, Mail, Clock, PawPrint } from "lucide-react"
+import { Chrome, MapPin, Phone, Mail, Clock, PawPrint, Star } from "lucide-react"
 import type { Metadata } from "next"
 import { buildOpenGraph, buildTwitter, pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
 import { pageContent } from "@/lib/page-content"
@@ -79,7 +79,7 @@ const contactItems = [
         title: "Avis Google",
         type: "link",
         content: "Laisser un avis sur Google",
-        href: "https://share.google/owpyAE3sBdFrFKSYN",
+        href: siteConfig.richResults.googleReviews.sourceUrl,
         secondaryLine: "Voir nos avis sur Google"
     }
 ]
@@ -152,6 +152,7 @@ export default function ContactPage() {
         { name: "Contact", url: siteConfig.pages.contact },
     ])
     const faqSchema = generateFAQSchema(convertFAQsToSchema(faqContact))
+    const googleReviews = siteConfig.richResults.googleReviews
     const lastMod = returnLastmod(siteConfig.pages.contact)
 
     return (
@@ -239,6 +240,96 @@ export default function ContactPage() {
                             </CardContent>
                         </Card>
                     </div>
+
+                    <section className="mt-12">
+                        <Card className="border-primary/20 bg-muted/40">
+                            <CardContent className="p-6 md:p-8">
+                                <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
+                                    <div className="space-y-4">
+                                        <div className="space-y-2">
+                                            <p className="text-sm font-medium uppercase tracking-wide text-primary/80">
+                                                Avis Google
+                                            </p>
+                                            <h2 className="text-xl md:text-2xl font-semibold">
+                                                Les familles nous recommandent
+                                            </h2>
+                                            <p className="text-muted-foreground">
+                                                Consultez les retours publies sur Google Business Profile pour decouvrir l'experience vecue par les familles qui ont adopte chez Royal POMSKY.
+                                            </p>
+                                        </div>
+
+                                        <div className="flex flex-wrap items-center gap-4">
+                                            <div className="flex items-center gap-3 rounded-xl border border-primary/15 bg-background/80 px-4 py-3">
+                                                <div className="text-3xl font-bold leading-none">
+                                                    {googleReviews.ratingValue.toLocaleString("fr-FR", {
+                                                        minimumFractionDigits: 1,
+                                                        maximumFractionDigits: 1
+                                                    })}
+                                                </div>
+                                                <div className="space-y-1">
+                                                    <div className="flex items-center gap-1" aria-label={`Note moyenne ${googleReviews.ratingValue} sur ${googleReviews.bestRating}`}>
+                                                        {Array.from({ length: googleReviews.bestRating }).map((_, index) => (
+                                                            <Star
+                                                                key={`google-review-star-${index}`}
+                                                                className="h-4 w-4 fill-amber-400 text-amber-400"
+                                                                aria-hidden="true"
+                                                            />
+                                                        ))}
+                                                    </div>
+                                                    <p className="text-sm text-muted-foreground">
+                                                        {googleReviews.reviewCount} avis sur {googleReviews.source}
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                            <a
+                                                href={googleReviews.sourceUrl}
+                                                target="_blank"
+                                                rel="noreferrer"
+                                                className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 font-semibold text-white transition hover:bg-primary/85 dark:text-[#5b3a1a]"
+                                            >
+                                                Voir tous les avis
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div className="rounded-2xl border border-primary/15 bg-background/80 p-5">
+                                        <div className="space-y-4">
+                                            <div className="flex items-start justify-between gap-4">
+                                                <div>
+                                                    <p className="font-semibold">{googleReviews.featuredReview.authorName}</p>
+                                                    <p className="text-sm text-muted-foreground">
+                                                        Avis publie sur {googleReviews.source}
+                                                    </p>
+                                                </div>
+                                                <div className="flex items-center gap-1" aria-hidden="true">
+                                                    {Array.from({ length: googleReviews.featuredReview.reviewRating }).map((_, index) => (
+                                                        <Star
+                                                            key={`featured-review-star-${index}`}
+                                                            className="h-4 w-4 fill-amber-400 text-amber-400"
+                                                        />
+                                                    ))}
+                                                </div>
+                                            </div>
+
+                                            <p className="text-sm leading-7 text-muted-foreground">
+                                                "{googleReviews.featuredReview.reviewBody}"
+                                            </p>
+
+                                            <a
+                                                href={googleReviews.featuredReview.reviewUrl}
+                                                target="_blank"
+                                                rel="noreferrer"
+                                                className="inline-flex text-sm font-medium text-primary underline underline-offset-4 hover:no-underline"
+                                            >
+                                                Lire cet avis sur Google
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </CardContent>
+                        </Card>
+                    </section>
 
                     <section className="mt-12 rounded-2xl border border-primary/20 bg-muted/40 p-6 md:p-8">
                         <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">

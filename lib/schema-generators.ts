@@ -15,6 +15,100 @@ const puppyCategory = "Pomsky";
 const puppyAdditionalType = "https://fr.wikipedia.org/wiki/Pomsky";
 const puppyEligibleRegion = ["FR", "CH"];
 const puppyDepartureMode = "Retrait à l'élevage sur rendez-vous";
+const organizationId = `${siteConfig.siteUrl}#organization`;
+const merchantReturnPolicyId = `${siteConfig.siteUrl}#merchant-return-policy`;
+const puppySellerReviewId = `${siteConfig.siteUrl}#google-review-highlight`;
+
+function createDefinedRegions() {
+    return puppyEligibleRegion.map((countryCode) => ({
+        "@type": "DefinedRegion" as const,
+        addressCountry: countryCode
+    }));
+}
+
+function createOfferShippingDetails() {
+    return {
+        "@type": "OfferShippingDetails",
+        shippingLabel: puppyDepartureMode,
+        shippingRate: {
+            "@type": "MonetaryAmount",
+            value: "0",
+            currency: "EUR"
+        },
+        shippingDestination: createDefinedRegions(),
+        deliveryTime: {
+            "@type": "ShippingDeliveryTime",
+            handlingTime: {
+                "@type": "QuantitativeValue",
+                minValue: 0,
+                maxValue: 0,
+                unitCode: "DAY"
+            },
+            transitTime: {
+                "@type": "QuantitativeValue",
+                minValue: 0,
+                maxValue: 0,
+                unitCode: "DAY"
+            }
+        }
+    };
+}
+
+function createMerchantReturnPolicyReference() {
+    return {
+        "@type": "MerchantReturnPolicy",
+        "@id": merchantReturnPolicyId
+    };
+}
+
+function createProductAggregateRating() {
+    const googleReviews = siteConfig.richResults?.googleReviews;
+
+    if (!googleReviews) {
+        return undefined;
+    }
+
+    return {
+        "@type": "AggregateRating",
+        ratingValue: String(googleReviews.ratingValue),
+        reviewCount: googleReviews.reviewCount,
+        bestRating: String(googleReviews.bestRating ?? 5),
+        worstRating: "1"
+    };
+}
+
+function createProductReview() {
+    const featuredReview = siteConfig.richResults?.googleReviews?.featuredReview;
+
+    if (!featuredReview) {
+        return undefined;
+    }
+
+    return [
+        {
+            "@type": "Review",
+            "@id": puppySellerReviewId,
+            author: {
+                "@type": "Person",
+                name: featuredReview.authorName
+            },
+            publisher: {
+                "@type": "Organization",
+                name: siteConfig.richResults.googleReviews.source
+            },
+            ...(featuredReview.reviewUrl
+                ? { url: featuredReview.reviewUrl }
+                : {}),
+            reviewRating: {
+                "@type": "Rating",
+                ratingValue: String(featuredReview.reviewRating),
+                bestRating: "5",
+                worstRating: "1"
+            },
+            reviewBody: featuredReview.reviewBody
+        }
+    ];
+}
 
 type PuppySchemaInput = {
     name: string;
@@ -97,7 +191,12 @@ function createPuppyProductEntity(puppy: PuppySchemaInput) {
         availability: getPuppyAvailability(puppy.isReserved),
         url: productUrl,
         eligibleRegion: puppyEligibleRegion,
+        shippingDetails: createOfferShippingDetails(),
+        hasMerchantReturnPolicy: createMerchantReturnPolicyReference(),
         availableDeliveryMethod: "https://schema.org/OnSitePickup",
+        seller: {
+            "@id": organizationId
+        },
         ...(typeof puppy.price === "number"
             ? {
                   price: String(puppy.price),
@@ -134,6 +233,10 @@ function createPuppyProductEntity(puppy: PuppySchemaInput) {
         additionalProperty: createPuppyAdditionalProperty(puppy),
         url: productUrl,
         offers: offer,
+        ...(createProductReview() ? { review: createProductReview() } : {}),
+        ...(createProductAggregateRating()
+            ? { aggregateRating: createProductAggregateRating() }
+            : {}),
         ...(puppy.highlights.length > 0
             ? { keywords: puppy.highlights.join(", ") }
             : {})
@@ -167,6 +270,7 @@ export function generateOrganizationSchema() {
     return {
         "@context": "https://schema.org",
         "@type": "Organization",
+        "@id": organizationId,
         name: legal.tradeName || siteConfig.name,
         alternateName: legal.legalName,
         legalName: legal.legalName,
@@ -196,6 +300,11 @@ export function generateOrganizationSchema() {
                 value: legal.legalForm
             }
         ],
+        hasMerchantReturnPolicy: {
+            "@type": "MerchantReturnPolicy",
+            "@id": merchantReturnPolicyId,
+            merchantReturnLink: toAbsoluteUrl(siteConfig.pages.terms)
+        },
         sameAs
     };
 }

@@ -107,6 +107,24 @@ export const siteConfig = {
         instagram: "https://www.instagram.com/royalpomsky/"
     },
 
+    /* ------------------------- Rich results / Merchant ------------------------ */
+    richResults: {
+        googleReviews: {
+            source: "Google Business Profile",
+            sourceUrl: "https://www.google.com/search?sca_esv=c9866652b0fe63dd&hl=fr&gl=fr&sxsrf=ANbL-n5ecBJ5-lGW48M3Fg0pXurxqgy2TA:1773084430943&q=%C3%89levage%20Pomsky%20-%20ROYAL%20POMSKY%20Avis&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxI2NDQxtbQ0MzazNDa3MDE2MTQ028DI-IpR-XBnTmpZYnqqQkB-bnF2pYKuQpB_pKOPQoC_b7B3pIJjWWbxIlZiVAEAZiihkGYAAAA&rldimm=1145996369378434116&tbm=lcl&sa=X&ved=0CAcQ5foLahcKEwiA-NedxpOTAxUAAAAAHQAAAAAQBQ#lkt=LocalPoiReviews&arid=Ci9DQUlRQUNvZENodHljRjlvT2xWT2FEQXhjVTVNTms4eFVHdDZWMk5yVTNoNmExRRAB",
+            ratingValue: 4.9,
+            reviewCount: 110,
+            bestRating: 5,
+            featuredReview: {
+                reviewUrl: "https://share.google/d7nRgoa9ldEeX6zxV",
+                authorName: "Alisson Terwagne",
+                reviewRating: 5,
+                reviewBody:
+                    "Je remercie Aurelie, pour son professionnalisme, pour l'amour qu'elle donne a ses chiens. Son elevage est de loin une perle rare : elevage ethique."
+            }
+        }
+    },
+
     /* ------------------------------- Pages ------------------------------------ */
     pages: {
         home: "/",
