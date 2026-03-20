@@ -52,25 +52,9 @@ export default function HomePage() {
   const breadcrumbSchema = generateBreadcrumbSchema([{ name: "Accueil", url: "/" }])
   const faqSchema = generateFAQSchema(convertFAQsToSchema(faqHome))
   const lastMod = returnLastmod(siteConfig.pages.home)
-  const featuredPuppy = puppies[0]
+  const availablePuppies = puppies.filter((puppy) => puppy.isReserved !== true)
+  const featuredPuppies = availablePuppies.slice(0, 2)
   const allPuppiesReserved = puppies.length > 0 && puppies.every((puppy) => puppy.isReserved === true)
-  const featuredPuppySlug = featuredPuppy
-    ? featuredPuppy.name.trim().toLowerCase().replace(/\s+/g, "-")
-    : ""
-  const featuredPuppyHref = featuredPuppy
-    ? `/chiots-disponibles#${featuredPuppySlug}`
-    : "/chiots-disponibles"
-  const featuredPuppyImage = featuredPuppy?.images[0]
-    ? (featuredPuppy.images[0].startsWith("/") ? featuredPuppy.images[0] : `/${featuredPuppy.images[0]}`)
-    : siteConfig.ogImage
-  const featuredPuppySeoTitle = `Chiot Pomsky disponible : ${featuredPuppy?.name ?? "Royal POMSKY"}`
-  const featuredPuppyGeneration = featuredPuppy?.coat.match(/Pomsky\s+F\d+/i)?.[0] ?? "Pomsky"
-  const featuredPuppyEyes = featuredPuppy?.highlights.find((highlight) =>
-    /vairons|yeux|bruns|bleus/i.test(highlight)
-  )
-  const featuredPuppyTeaser = featuredPuppy
-    ? `${featuredPuppy.name} est un ${lowerFirst(featuredPuppy.sexe)} ${featuredPuppyGeneration} ${lowerFirst(featuredPuppy.color)}${featuredPuppyEyes ? ` aux yeux ${lowerFirst(featuredPuppyEyes)}` : ""}, de taille ${lowerFirst(featuredPuppy.size)}, ${lowerFirst(featuredPuppy.readyDate)}. Découvrez ses photos, son profil et ses conditions d’adoption sur sa fiche complète.`
-    : ""
   const founders = [
     {
       name: "Aurélie",
@@ -298,62 +282,79 @@ export default function HomePage() {
             En savoir plus sur le pomsky
           </Link>
         </section>
-        {featuredPuppy && !featuredPuppy.isReserved ? (
+        {featuredPuppies.length > 0 ? (
           <section className="py-16 bg-muted/30 my-8">
             <div className="container mx-auto p-2">
               <div className="text-center space-y-4 mb-10">
                 <h2 className="text-xl md:text-2xl font-bold">
-                  {featuredPuppySeoTitle}
+                  Chiots Pomsky disponibles : Vuk Miniature et Aluna Toy
                 </h2>
                 <p className="text-muted-foreground max-w-3xl mx-auto">
-                  Découvrez {featuredPuppy.name} un mâle Pomsky F5 noir et blanc aux yeux vairons, de taille miniature, disponible à partir du 15 mars 2026.
+                  Deux chiots sont actuellement disponibles à l&apos;adoption chez Royal POMSKY : Vuk, Pomsky Miniature, et Aluna, Pomsky Toy.
                 </p>
                 <div className="w-24 h-1 bg-primary mx-auto rounded-full" aria-hidden="true" />
               </div>
-              <Card className="mx-auto max-w-5xl overflow-hidden border-primary/15 bg-muted/70 p-0">
-                <div className="grid gap-0 lg:grid-cols-[420px_minmax(0,1fr)]">
-                  <div className="relative aspect-[4/3] lg:aspect-auto lg:min-h-[360px]">
-                    <Image
-                      src={featuredPuppyImage}
-                      alt={`Chiot Pomsky ${featuredPuppy.name} chez Royal POMSKY`}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 1023px) 100vw, 420px"
-                    />
-                  </div>
-                  <CardContent className="flex flex-col justify-center p-6 md:p-8 lg:p-10 space-y-5">
-                    <div className="flex flex-wrap gap-2 max-w-xl">
-                      <Badge variant="secondary">Disponible</Badge>
-                      <Badge variant="outline">{featuredPuppy.sexe}</Badge>
-                      <Badge variant="outline">{featuredPuppyGeneration}</Badge>
-                      <Badge variant="outline">{featuredPuppy.color}</Badge>
-                      {featuredPuppyEyes ? <Badge variant="outline">{featuredPuppyEyes}</Badge> : null}
-                      <Badge variant="outline">{featuredPuppy.size}</Badge>
-                    </div>
-                    <div className="space-y-3">
-                      <h3 className="text-2xl font-bold md:text-3xl">{featuredPuppy.name}</h3>
-                      <p className="text-sm font-medium text-foreground/80">{featuredPuppy.readyDate}</p>
-                    </div>
-                    <p className="max-w-xl text-muted-foreground">
-                      {featuredPuppyTeaser}
-                    </p>
-                    <div className="flex flex-col gap-3 pt-2 sm:flex-row">
-                      <Link
-                        href={featuredPuppyHref}
-                        className="bg-primary text-white hover:bg-primary/80 py-3 px-4 font-semibold text-center rounded-md dark:text-[#5b3a1a] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-                      >
-                         Accès direct à la fiche de {featuredPuppy.name}
-                      </Link>
-                      <Link
-                        href="/chiots-disponibles"
-                        className="border border-primary text-primary hover:bg-primary/10 py-3 px-4 font-semibold text-center rounded-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-                      >
-                        Voir tous les chiots disponibles
-                      </Link>
-                    </div>
-                  </CardContent>
-                </div>
-              </Card>
+              <div className="grid gap-6 lg:grid-cols-2">
+                {featuredPuppies.map((puppy) => {
+                  const puppySlug = puppy.name.trim().toLowerCase().replace(/\s+/g, "-")
+                  const puppyHref = `/chiots-disponibles#${puppySlug}`
+                  const puppyImage = puppy.images[0]
+                    ? (puppy.images[0].startsWith("/") ? puppy.images[0] : `/${puppy.images[0]}`)
+                    : siteConfig.ogImage
+                  const puppyGeneration = puppy.coat.match(/Pomsky(?:\s+Toy)?\s+F\d+/i)?.[0] ?? "Pomsky"
+                  const puppyEyes = puppy.highlights.find((highlight) =>
+                    /vairons|yeux|bruns|bleus/i.test(highlight)
+                  )
+                  const puppyTeaser = `${puppy.name} est ${lowerFirst(puppy.sexe === "Mâle" ? "un mâle" : "une femelle")} ${lowerFirst(puppyGeneration)} ${lowerFirst(puppy.color)}${puppyEyes ? ` aux yeux ${lowerFirst(puppyEyes)}` : ""}, de taille ${lowerFirst(puppy.size)}, ${lowerFirst(puppy.readyDate)}.`
+
+                  return (
+                    <Card key={puppy.name} className="overflow-hidden border-primary/15 bg-muted/70 p-0">
+                      <div className="grid gap-0">
+                        <div className="relative aspect-[4/3]">
+                          <Image
+                            src={puppyImage}
+                            alt={`Chiot Pomsky ${puppy.name} chez Royal POMSKY`}
+                            fill
+                            className="object-cover"
+                            sizes="(max-width: 1023px) 100vw, 50vw"
+                          />
+                        </div>
+                        <CardContent className="flex flex-col justify-center p-6 md:p-8 space-y-5">
+                          <div className="flex flex-wrap gap-2">
+                            <Badge variant="secondary">Disponible</Badge>
+                            <Badge variant="outline">{puppy.sexe}</Badge>
+                            <Badge variant="outline">{puppyGeneration}</Badge>
+                            <Badge variant="outline">{puppy.color}</Badge>
+                            {puppyEyes ? <Badge variant="outline">{puppyEyes}</Badge> : null}
+                            <Badge variant="outline">{puppy.size}</Badge>
+                          </div>
+                          <div className="space-y-3">
+                            <h3 className="text-2xl font-bold md:text-3xl">{puppy.name}</h3>
+                            <p className="text-sm font-medium text-foreground/80">{puppy.readyDate}</p>
+                          </div>
+                          <p className="text-muted-foreground">
+                            {puppyTeaser}
+                          </p>
+                          <div className="flex flex-col gap-3 pt-2 sm:flex-row">
+                            <Link
+                              href={puppyHref}
+                              className="bg-primary text-white hover:bg-primary/80 py-3 px-4 font-semibold text-center rounded-md dark:text-[#5b3a1a] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                            >
+                              Accès direct à la fiche de {puppy.name}
+                            </Link>
+                            <Link
+                              href="/chiots-disponibles"
+                              className="border border-primary text-primary hover:bg-primary/10 py-3 px-4 font-semibold text-center rounded-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                            >
+                              Voir tous les chiots disponibles
+                            </Link>
+                          </div>
+                        </CardContent>
+                      </div>
+                    </Card>
+                  )
+                })}
+              </div>
             </div>
           </section>
         ) : allPuppiesReserved ? (

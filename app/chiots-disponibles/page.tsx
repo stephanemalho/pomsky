@@ -48,6 +48,10 @@ function formatPuppyPrice(price: number, currency = "EUR") {
     }).format(price)
 }
 
+function getPuppyAnchorId(name: string) {
+    return name.trim().toLowerCase().replace(/\s+/g, "-")
+}
+
 export default function NosChiotsPage() {
     // Schémas JSON-LD
     const puppiesForRichResults = puppies.filter((puppy) => typeof puppy.price === "number")
@@ -131,118 +135,121 @@ export default function NosChiotsPage() {
                             </p>
                         </div>
                         <div className="grid gap-10 my-12">
-                            {puppies.map((puppy, index) => (
-                                <Card
-                                    key={puppy.name}
-                                    id={puppy.name.toLowerCase()}
-                                    className={`relative overflow-hidden bg-muted/30 p-0 md:p-6 ${puppy.isReserved ? "border-2 border-green-600 ring-2 ring-green-600/40 ring-offset-2 ring-offset-background" : ""}`}
-                                >
-                                    <CardContent className="p-0">
-                                        {puppy.isReserved ? (
-                                            <div
-                                                className="absolute right-4 top-4 z-20 rotate-6 rounded-md border-2 border-green-700 bg-green-100 px-4 py-1 text-sm font-extrabold uppercase tracking-wider text-green-800 shadow-[0_0_0_3px_#166534]"
-                                            >
-                                                RÉSERVÉ
-                                            </div>
-                                        ) : null}
-                                        <div className={`grid md:grid-cols-2 gap-0 ${index % 2 === 1 ? "md:grid-flow-col-dense" : ""}`}>
-                                            <ImageCarousel
-                                                className={index % 2 === 1 ? "md:order-2" : undefined}
-                                                images={puppy.images}
-                                                alt={"Carrousel d'images du chiots pomsky " + puppy.name}
-                                                priority={index === 0}
-                                                sizes="(min-width: 1024px) 50vw, (min-width: 768px) 50vw, 100vw"
-                                            />
-                                            <div className={`px-8 space-y-4 flex flex-col justify-center ${index % 2 === 1 ? "md:order-1" : ""}`}>
-                                                <div className="flex items-center gap-2">
-                                                    <Badge variant="secondary">
-                                                        <PawPrint className="h-4 w-4 mr-1" />
-                                                        {puppy.coat}
-                                                    </Badge>
-                                                    <Badge variant="outline">{puppy.color}</Badge>
+                            {puppies.map((puppy, index) => {
+                                const puppyAnchorId = getPuppyAnchorId(puppy.name)
+
+                                return (
+                                    <Card
+                                        key={puppy.name}
+                                        className={`relative overflow-hidden bg-muted/30 p-0 md:p-6 ${puppy.isReserved ? "border-2 border-green-600 ring-2 ring-green-600/40 ring-offset-2 ring-offset-background" : ""}`}
+                                    >
+                                        <CardContent className="p-0">
+                                            {puppy.isReserved ? (
+                                                <div
+                                                    className="absolute right-4 top-4 z-20 rotate-6 rounded-md border-2 border-green-700 bg-green-100 px-4 py-1 text-sm font-extrabold uppercase tracking-wider text-green-800 shadow-[0_0_0_3px_#166534]"
+                                                >
+                                                    RÉSERVÉ
                                                 </div>
-                                                <div className="space-y-2">
-                                                    <h3 className="text-2xl font-bold">{puppy.name}</h3>
-                                                    <p className="text-muted-foreground">{puppy.description}</p>
-                                                </div>
-                                                <dl className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
-                                                    <div className="flex items-center gap-2 text-muted-foreground">
-                                                        <dt className="sr-only">Sexe</dt>
-                                                        <Dog className="h-4 w-4 text-primary" aria-hidden="true" />
-                                                        <dd>{puppy.sexe}</dd>
-                                                    </div>
-                                                    <div className="flex items-center gap-2 text-muted-foreground">
-                                                        <dt className="sr-only">Parents</dt>
-                                                        <Heart className="h-4 w-4 text-primary" aria-hidden="true" />
-                                                        <dd>{puppy.parents}</dd>
-                                                    </div>
-                                                    <div className="flex items-center gap-2 text-muted-foreground">
-                                                        <dt className="sr-only">Disponible le</dt>
-                                                        <Calendar className="h-4 w-4 text-primary" aria-hidden="true" />
-                                                        <dd>{puppy.readyDate}</dd>
-                                                    </div>
-                                                    <div className="flex items-center gap-2 text-muted-foreground">
-                                                        <dt className="sr-only">Âge</dt>
-                                                        <PawPrint className="h-4 w-4 text-primary" aria-hidden="true" />
-                                                        <dd>{puppy.age}</dd>
-                                                    </div>
-                                                    <div className="flex items-center gap-2 text-muted-foreground">
-                                                        <dt className="sr-only">Poids</dt>
-                                                        <Weight className="h-4 w-4 text-primary" aria-hidden="true" />
-                                                        <dd>{puppy.weight}</dd>
-                                                    </div>
-                                                    {typeof puppy.price === "number" ? (
-                                                        <div className="flex items-center gap-2 text-muted-foreground sm:col-span-2">
-                                                            <Banknote className="min-h-4 min-w-4 text-primary" aria-hidden="true" />
-                                                            <dt className="sr-only">Prix</dt>
-                                                            <dd className="flex gap-2 items-center text-lg font-semibold text-primary">
-                                                                {formatPuppyPrice(puppy.price, puppy.priceCurrency ?? "EUR")}
-                                                                <p className="text-xs text-muted-foreground mt-1">
-                                                                    {puppy.priceIncludes}
-                                                                </p>
-                                                            </dd>
-                                                        </div>
-                                                    ) : null}
-                                                </dl>
-                                                <div className="flex flex-wrap gap-2">
-                                                    {puppy.highlights.map((item) => (
-                                                        <Badge key={item} variant="secondary">
-                                                            {item}
+                                            ) : null}
+                                            <div className={`grid md:grid-cols-2 gap-0 ${index % 2 === 1 ? "md:grid-flow-col-dense" : ""}`}>
+                                                <ImageCarousel
+                                                    className={index % 2 === 1 ? "md:order-2" : undefined}
+                                                    images={puppy.images}
+                                                    alt={"Carrousel d'images du chiots pomsky " + puppy.name}
+                                                    priority={index === 0}
+                                                    sizes="(min-width: 1024px) 50vw, (min-width: 768px) 50vw, 100vw"
+                                                />
+                                                <div className={`px-8 space-y-4 flex flex-col justify-center ${index % 2 === 1 ? "md:order-1" : ""}`}>
+                                                    <div className="flex items-center gap-2">
+                                                        <Badge variant="secondary">
+                                                            <PawPrint className="h-4 w-4 mr-1" />
+                                                            {puppy.coat}
                                                         </Badge>
-                                                    ))}
-                                                </div>
-                                                <div className="flex m-auto flex-col sm:flex-row gap-3 mb-6">
-                                                    {puppy.isReserved ? (
-                                                        <span
-                                                            aria-disabled="true"
-                                                            className="cursor-not-allowed rounded-md border border-green-700 bg-green-50 px-4 py-2 text-center font-medium text-green-800 opacity-90"
-                                                        >
-                                                            {puppy.isReserved && puppy.name} attend sa famille
-                                                        </span>
-                                                    ) : (
-                                                        <div className="flex flex-col sm:flex-row gap-3">
-                                                            <Link
-                                                                href="/contact"
-                                                                className="border border-primary text-primary shadow-xs hover:bg-primary/10 py-2 px-4 rounded-md text-center"
-                                                            >
-                                                                Contacter l&apos;élevage
-                                                            </Link>
-                                                            <a
-                                                                target="_blank"
-                                                                rel="noopener noreferrer"
-                                                                className="bg-primary text-primary-foreground shadow-xs hover:bg-primary/90 py-2 px-4 rounded-md text-center"
-                                                                href={puppy.linkTo}
-                                                            >
-                                                                Réserver une visite ou demander plus de photos/vidéos
-                                                            </a>
+                                                        <Badge variant="outline">{puppy.color}</Badge>
+                                                    </div>
+                                                    <div className="space-y-2">
+                                                        <h3 id={puppyAnchorId} className="scroll-mt-28 text-2xl font-bold">{puppy.name}</h3>
+                                                        <p className="text-muted-foreground">{puppy.description}</p>
+                                                    </div>
+                                                    <dl className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+                                                        <div className="flex items-center gap-2 text-muted-foreground">
+                                                            <dt className="sr-only">Sexe</dt>
+                                                            <Dog className="h-4 w-4 text-primary" aria-hidden="true" />
+                                                            <dd>{puppy.sexe}</dd>
                                                         </div>
-                                                    )}
+                                                        <div className="flex items-center gap-2 text-muted-foreground">
+                                                            <dt className="sr-only">Parents</dt>
+                                                            <Heart className="h-4 w-4 text-primary" aria-hidden="true" />
+                                                            <dd>{puppy.parents}</dd>
+                                                        </div>
+                                                        <div className="flex items-center gap-2 text-muted-foreground">
+                                                        <dt className="sr-only">Départ possible</dt>
+                                                            <Calendar className="h-4 w-4 text-primary" aria-hidden="true" />
+                                                            <dd>{puppy.readyDate}</dd>
+                                                        </div>
+                                                        <div className="flex items-center gap-2 text-muted-foreground">
+                                                            <dt className="sr-only">Âge</dt>
+                                                            <PawPrint className="h-4 w-4 text-primary" aria-hidden="true" />
+                                                            <dd>{puppy.age}</dd>
+                                                        </div>
+                                                        <div className="flex items-center gap-2 text-muted-foreground">
+                                                            <dt className="sr-only">Poids</dt>
+                                                            <Weight className="h-4 w-4 text-primary" aria-hidden="true" />
+                                                            <dd>{puppy.weight}</dd>
+                                                        </div>
+                                                        {typeof puppy.price === "number" ? (
+                                                            <div className="flex items-center gap-2 text-muted-foreground sm:col-span-2">
+                                                                <Banknote className="min-h-4 min-w-4 text-primary" aria-hidden="true" />
+                                                                <dt className="sr-only">Prix</dt>
+                                                                <dd className="flex gap-2 items-center text-lg font-semibold text-primary">
+                                                                    {formatPuppyPrice(puppy.price, puppy.priceCurrency ?? "EUR")}
+                                                                    <p className="text-xs text-muted-foreground mt-1">
+                                                                        {puppy.priceIncludes}
+                                                                    </p>
+                                                                </dd>
+                                                            </div>
+                                                        ) : null}
+                                                    </dl>
+                                                    <div className="flex flex-wrap gap-2">
+                                                        {puppy.highlights.map((item) => (
+                                                            <Badge key={item} variant="secondary">
+                                                                {item}
+                                                            </Badge>
+                                                        ))}
+                                                    </div>
+                                                    <div className="flex m-auto flex-col sm:flex-row gap-3 mb-6">
+                                                        {puppy.isReserved ? (
+                                                            <span
+                                                                aria-disabled="true"
+                                                                className="cursor-not-allowed rounded-md border border-green-700 bg-green-50 px-4 py-2 text-center font-medium text-green-800 opacity-90"
+                                                            >
+                                                                {puppy.isReserved && puppy.name} attend sa famille
+                                                            </span>
+                                                        ) : (
+                                                            <div className="flex flex-col sm:flex-row gap-3">
+                                                                <Link
+                                                                    href="/contact"
+                                                                    className="border border-primary text-primary shadow-xs hover:bg-primary/10 py-2 px-4 rounded-md text-center"
+                                                                >
+                                                                    Contacter l&apos;élevage
+                                                                </Link>
+                                                                <a
+                                                                    target="_blank"
+                                                                    rel="noopener noreferrer"
+                                                                    className="bg-primary text-primary-foreground shadow-xs hover:bg-primary/90 py-2 px-4 rounded-md text-center"
+                                                                    href={puppy.linkTo}
+                                                                >
+                                                                    Réserver une visite ou demander plus de photos/vidéos
+                                                                </a>
+                                                            </div>
+                                                        )}
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </CardContent>
-                                </Card>
-                            ))}
+                                        </CardContent>
+                                    </Card>
+                                )
+                            })}
                         </div>
                     </section>
                     <section className="max-w-4xl mx-auto bg-muted/30 border border-muted rounded-2xl p-8 md:p-10 space-y-6 text-left">

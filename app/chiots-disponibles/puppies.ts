@@ -31,7 +31,7 @@ export const puppies: Puppy[] = [
         ruler: "Pelage fluffy",
         weight: "7-8kg",
         parents: "Parents : SHADOW & BANDIT",
-        readyDate: "Disponible à partir du 15 mars 2026",
+        readyDate: "Peut rejoindre sa famille dès maintenant",
         age: "Né le 10 janvier 2026",
         description:
             "Vuk est un mâle Pomsky F5 aux yeux Vairons et il est le plus grand chiot de la portée (il va faire 7 à 8kg adulte): gourmand, joueur et affectueux, il ressemble beaucoup à sa maman Shadow. Voici les caractéristiques de Vuk : un masque en Fleur de Lys, une robe noire et blanche, des yeux vairons (un bleu et un marron) et une taille miniature. Vuk est un chiot très sociable qui adore les câlins et les jeux avec les enfants. Profitez de cette liste de photos pour découvrir son évolution et son caractère attachant ! (à 8 semaines)",
@@ -66,7 +66,7 @@ export const puppies: Puppy[] = [
         ruler: "Pelage fluffy",
         weight: "4-5kg",
         parents: "Parents : SHADOW & BANDIT",
-        readyDate: "Disponible à partir du 15 mars 2026",
+        readyDate: "Peut rejoindre sa famille dès maintenant",
         age: "Née le 10 janvier 2026",
         description:
             "Aluna est une femelle Pomsky Toy F5 issue du mariage entre Shadow et Bandit. Son masque husky en Fleur de Lys est absolument parfait, c'est une femelle douce curieuse et intelligente qui ressemblera fortement à sa maman Shadow.",
@@ -98,7 +98,7 @@ export const puppies: Puppy[] = [
         weight: " 6-8kg adulte",
         sexe: "Mâle",
         parents: "Parents : SHADOW & BANDIT",
-        readyDate: "Disponible à partir du 15 mars 2026",
+        readyDate: "Peut rejoindre sa famille dès maintenant",
         age: "Né le 10 janvier 2026",
         description:
             "THOR est un superbe Pomsky bleu à la robe exotique lumineuse et extraordinaire  Son masque Fleur de Lys est déjà bien visible. Son caractère : doux, docile, câlin et joueur ! Il ressemblera à la fois à sa maman Shadow et à son papa bandit.",
@@ -128,7 +128,7 @@ export const puppies: Puppy[] = [
         ruler: "fluffy",
         weight: "7-8kg adulte",
         parents: "Parents : SHADOW & BANDIT",
-        readyDate: "Disponible à partir du 15 mars 2026",
+        readyDate: "Peut rejoindre sa famille dès maintenant",
         age: "Né le 10 janvier 2026",
         description:
             "Ash est un mâle Pomsky F5 issu du mariage entre Shadow et Bandit. Sa robe noire et blanche est sublime et brillante, rappelle celle de sa maman Shadow, son caractère est affectueux, proche de l'humain et très sociable.",
