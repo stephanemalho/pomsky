@@ -54,8 +54,7 @@ export const puppies: Puppy[] = [
         isReserved: false,
         price: 3800,
         priceCurrency: "EUR",
-        priceIncludes: "ttc",
-        priceValidUntil: "2026-03-31"
+        priceIncludes: "ttc"
     },
     {
         name: "ALUNA",
@@ -86,8 +85,7 @@ export const puppies: Puppy[] = [
         isReserved: false,
         price: 4500,
         priceCurrency: "EUR",
-        priceIncludes: "ttc",
-        priceValidUntil: "2026-03-31"
+        priceIncludes: "ttc"
     },
     {
         name: "THOR",

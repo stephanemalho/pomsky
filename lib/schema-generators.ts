@@ -166,7 +166,7 @@ function createPuppyAdditionalProperty(puppy: PuppySchemaInput) {
         { name: "Zone d'adoption", value: "France et Suisse" },
         { name: "Mode de départ", value: puppyDepartureMode },
         { name: "Lignée", value: puppy.coat },
-        { name: "Disponible à partir", value: puppy.readyDate }
+        { name: "Départ possible", value: puppy.readyDate }
     ];
 
     return candidates
