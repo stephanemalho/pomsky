@@ -59,17 +59,17 @@ export const puppies: Puppy[] = [
     },
     {
         name: "ALUNA",
-        coat: "Pomsky F5 (ADN Poméranian / Husky)",
+        coat: "Pomsky Toy F5 (ADN Poméranian / Husky)",
         sexe: "Femelle",
         color: "Noire et blanche",
-        size: "Miniature",
+        size: "Toy",
         ruler: "Pelage fluffy",
-        weight: "7-8kg",
+        weight: "4-5kg",
         parents: "Parents : SHADOW & BANDIT",
         readyDate: "Disponible à partir du 15 mars 2026",
         age: "Née le 10 janvier 2026",
         description:
-            "Aluna est une femelle Pomsky F5 issue du mariage entre Shadow et Bandit. Son masque husky en Fleur de Lys est absolument parfait, c'est une femelle douce curieuse et intelligente qui ressemblera fortement à sa maman Shadow .",
+            "Aluna est une femelle Pomsky Toy F5 issue du mariage entre Shadow et Bandit. Son masque husky en Fleur de Lys est absolument parfait, c'est une femelle douce curieuse et intelligente qui ressemblera fortement à sa maman Shadow.",
         highlights: [
             "Femelle",
             "Masque Fleur de Lys",
@@ -83,7 +83,11 @@ export const puppies: Puppy[] = [
             "pages/puppies/ALUNA-puppy-eyes-open.webp"
         ],
         linkTo: "https://forms.gle/aDbQtgwXUtoaH5QFA",
-        isReserved: true
+        isReserved: false,
+        price: 4500,
+        priceCurrency: "EUR",
+        priceIncludes: "ttc",
+        priceValidUntil: "2026-03-31"
     },
     {
         name: "THOR",
