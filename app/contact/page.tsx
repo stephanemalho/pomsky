@@ -251,7 +251,7 @@ export default function ContactPage() {
                                                 Avis Google
                                             </p>
                                             <h2 className="text-xl md:text-2xl font-semibold">
-                                                Les familles nous recommandent
+                                                Les adoptants nous recommandent
                                             </h2>
                                             <p className="text-muted-foreground">
                                                 Consultez les retours publiés sur Google Business Profile pour découvrir l'expérience vécue par les familles qui ont adopté chez Royal POMSKY.
