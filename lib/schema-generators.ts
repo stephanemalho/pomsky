@@ -17,7 +17,6 @@ const puppyEligibleRegion = ["FR", "CH"];
 const puppyDepartureMode = "Retrait à l'élevage sur rendez-vous";
 const organizationId = `${siteConfig.siteUrl}#organization`;
 const merchantReturnPolicyId = `${siteConfig.siteUrl}#merchant-return-policy`;
-const puppySellerReviewId = `${siteConfig.siteUrl}#google-review-highlight`;
 
 function createDefinedRegions() {
     return puppyEligibleRegion.map((countryCode) => ({
@@ -59,55 +58,6 @@ function createMerchantReturnPolicyReference() {
         "@type": "MerchantReturnPolicy",
         "@id": merchantReturnPolicyId
     };
-}
-
-function createProductAggregateRating() {
-    const googleReviews = siteConfig.richResults?.googleReviews;
-
-    if (!googleReviews) {
-        return undefined;
-    }
-
-    return {
-        "@type": "AggregateRating",
-        ratingValue: String(googleReviews.ratingValue),
-        reviewCount: googleReviews.reviewCount,
-        bestRating: String(googleReviews.bestRating ?? 5),
-        worstRating: "1"
-    };
-}
-
-function createProductReview() {
-    const featuredReview = siteConfig.richResults?.googleReviews?.featuredReview;
-
-    if (!featuredReview) {
-        return undefined;
-    }
-
-    return [
-        {
-            "@type": "Review",
-            "@id": puppySellerReviewId,
-            author: {
-                "@type": "Person",
-                name: featuredReview.authorName
-            },
-            publisher: {
-                "@type": "Organization",
-                name: siteConfig.richResults.googleReviews.source
-            },
-            ...(featuredReview.reviewUrl
-                ? { url: featuredReview.reviewUrl }
-                : {}),
-            reviewRating: {
-                "@type": "Rating",
-                ratingValue: String(featuredReview.reviewRating),
-                bestRating: "5",
-                worstRating: "1"
-            },
-            reviewBody: featuredReview.reviewBody
-        }
-    ];
 }
 
 type PuppySchemaInput = {
@@ -233,10 +183,6 @@ function createPuppyProductEntity(puppy: PuppySchemaInput) {
         additionalProperty: createPuppyAdditionalProperty(puppy),
         url: productUrl,
         offers: offer,
-        ...(createProductReview() ? { review: createProductReview() } : {}),
-        ...(createProductAggregateRating()
-            ? { aggregateRating: createProductAggregateRating() }
-            : {}),
         ...(puppy.highlights.length > 0
             ? { keywords: puppy.highlights.join(", ") }
             : {})
