@@ -356,10 +356,7 @@ export function generatePuppyListSchema(puppies: PuppySchemaInput[]) {
             "@type": "ListItem",
             position: index + 1,
             item: {
-                "@type": "Product",
-                "@id": getPuppyProductId(puppy),
-                name: puppy.name,
-                url: getPuppyUrl(puppy)
+                "@id": getPuppyProductId(puppy)
             }
         }))
     };
