@@ -79,7 +79,8 @@ export const puppies: Puppy[] = [
         health: ["Suivi vétérinaire en cours"],
         images: [
             "pages/puppies/Aluna-chiot-pomsky-toy-de-face.jpeg",
-            "pages/puppies/Aluna-pomsky-chiot-femellle-a-vendre.jpeg"        ],
+            "pages/puppies/Aluna-pomsky-chiot-femellle-a-vendre.jpeg"
+        ],
         linkTo: "https://forms.gle/aDbQtgwXUtoaH5QFA",
         isReserved: false,
         price: 4500,

@@ -113,10 +113,10 @@ export default function HomePage() {
 
       <div className="flex flex-col">
         <section className="bg-accent-foreground">
-          <div className="overflow-hidden bg-linear-to-b from-[#2f1c10] via-[#1d1108] to-[#120a05]">
+          <div className="overflow-hidden bg-linear-to-b from-[#6a1820] via-[#3a1016] to-[#1a090d]">
             <div className="container mx-auto px-4 py-6 md:px-6 md:py-8 lg:px-8 lg:py-10">
               <div className="mx-auto max-w-6xl space-y-5 md:space-y-6">
-                <div className="overflow-hidden rounded-xl md:rounded-4xl border border-white/10 bg-[#22140b] shadow-[0_35px_120px_rgba(0,0,0,0.35)]">
+                <div className="overflow-hidden rounded-xl md:rounded-4xl border border-white/10 bg-[#3a1117] shadow-[0_35px_120px_rgba(0,0,0,0.35)]">
                   <Image
                     src="/bandeau-presentaion-royal-pomsky-toy.jpeg"
                     alt="Bandeau de presentation Royal Pomsky Toy"
@@ -130,16 +130,31 @@ export default function HomePage() {
                   />
                 </div>
 
-                <div className="mx-auto max-w-4xl rounded-xl md:rounded-[1.75rem] border border-white/12 bg-black/35 px-6 py-6 text-center text-white shadow-[0_30px_100px_rgba(0,0,0,0.32)] backdrop-blur-sm md:px-8">
-                  <div className="mx-auto inline-flex items-center gap-3 rounded-full border border-white/20 bg-white/10 px-4 py-1 text-[11px] uppercase tracking-[0.35em] text-white/80">
-                    Royal Pomsky
+                <div className="mx-auto max-w-6xl rounded-xl md:rounded-[1.75rem] border border-white/12 bg-[#47131b]/72 px-6 py-6 text-center text-white shadow-[0_30px_100px_rgba(0,0,0,0.32)] backdrop-blur-sm md:px-8">
+                  <div className="mx-auto max-w-4xl">
+                    <div className="mx-auto inline-flex items-center gap-3 rounded-full border border-white/20 bg-white/10 px-4 py-1 text-[11px] uppercase tracking-[0.35em] text-white/80">
+                      Royal Pomsky
+                    </div>
+                    <h1 className="mt-4 text-3xl font-semibold tracking-[0.03em] text-white md:text-4xl lg:text-5xl">
+                      {pageContent.home.h1}
+                    </h1>
                   </div>
-                  <h1 className="mt-4 text-3xl font-semibold tracking-[0.03em] text-white md:text-4xl lg:text-5xl">
-                    {pageContent.home.h1}
-                  </h1>
                 </div>
 
-                <div className="mx-auto max-w-6xl rounded-xl md:rounded-4xl border border-white/12 bg-black/45 px-6 py-6 text-white shadow-[0_35px_120px_rgba(0,0,0,0.4)] backdrop-blur-md md:px-8 md:py-8 lg:px-10">
+                <div className="mx-auto max-w-6xl overflow-hidden rounded-xl md:rounded-[1.75rem] border border-white/12 bg-[#3a1117]/55 shadow-[0_30px_100px_rgba(0,0,0,0.28)] backdrop-blur-sm">
+                  <div className="relative aspect-[4/3] sm:aspect-[16/11] md:aspect-[16/8] lg:aspect-[16/7]">
+                    <Image
+                      src="/pomsky-and-his-pet-family-parent.jpg"
+                      alt="Pomsky auprès de sa famille dans un moment tendre"
+                      fill
+                      className="object-cover object-center"
+                      sizes="(min-width: 1280px) 960px, (min-width: 1024px) 80vw, (min-width: 768px) calc(100vw - 80px), calc(100vw - 32px)"
+                    />
+                    <div className="absolute inset-0 bg-linear-to-t from-[#2a0d12]/35 via-transparent to-transparent" aria-hidden="true" />
+                  </div>
+                </div>
+
+                <div className="mx-auto max-w-6xl rounded-xl md:rounded-4xl border border-white/12 bg-[#2b0d13]/82 px-6 py-6 text-white shadow-[0_35px_120px_rgba(0,0,0,0.4)] backdrop-blur-md md:px-8 md:py-8 lg:px-10">
                   <p className="text-sm font-medium uppercase tracking-[0.28em] text-white/72">
                     {pageContent.home.h1Subtitle}
                   </p>
