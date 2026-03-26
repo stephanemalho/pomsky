@@ -501,7 +501,7 @@ export const sitemapPages = [
         url: "/chiots-disponibles",
         changefreq: "weekly",
         priority: 0.9,
-        lastmod: "2026-03-21"
+        lastmod: "2026-03-26"
     },
     {
         url: "/adoption/reussir-son-adoption",
