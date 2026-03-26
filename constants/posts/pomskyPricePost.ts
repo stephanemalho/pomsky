@@ -3,7 +3,7 @@ import type { BlogPost } from "@/constants/blog/blogTypes";
 export const pomskyPrixPost: BlogPost = {
     id: "pomsky-prix",
     slug: "pomsky/prix/pomsky-prix-guide-complet-pour-comprendre-le-cout-dadoption-et-dentretien",
-    title: "Pomsky prix : guide complet pour comprendre le coût d'adoption et d'entretien",
+    title: "Prix d'un pomsky 2026 : guide complet pour comprendre le coût d'adoption et d'entretien au quotidien",
     excerpt:
         "Quel est le prix d'un Pomsky ? Découvrez les coûts liés à l'adoption, à l'alimentation, à l'entretien et à la santé afin de bien préparer l'arrivée de ce chien au caractère unique.",
     introduction:
