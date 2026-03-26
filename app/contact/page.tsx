@@ -10,6 +10,8 @@ import { convertFAQsToSchema } from "@/lib/faq-utils"
 import Image from "next/image"
 import Link from "next/link"
 
+const contactOgImage = "/assets/authors/marine-and-a-puppy-pomsky-in-sofa.jpeg"
+
 export const metadata: Metadata = {
     title: pageMetadata.contact.title,
     description: pageMetadata.contact.description,
@@ -20,18 +22,18 @@ export const metadata: Metadata = {
         url: `${siteConfig.siteUrl}/contact`,
         images: [
             {
-                url: `${siteConfig.siteUrl}${siteConfig.ogImage}`,
-                alt: siteConfig.ogImageAlt,
+                url: `${siteConfig.siteUrl}${contactOgImage}`,
+                alt: "Prendre contact avec Royal Pomsky",
                 width: siteConfig.ogImageWidth,
                 height: siteConfig.ogImageHeight,
-                type: "image/webp",
+                type: "image/jpeg",
             },
         ],
     }),
     twitter: buildTwitter({
         title: pageMetadata.contact.title,
         description: pageMetadata.contact.description,
-        imageUrl: `${siteConfig.siteUrl}${siteConfig.ogImage}`,
+        imageUrl: `${siteConfig.siteUrl}${contactOgImage}`,
     }),
     alternates: {
         canonical: `${siteConfig.siteUrl}/contact`,

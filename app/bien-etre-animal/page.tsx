@@ -10,7 +10,8 @@ import { buildOpenGraph, buildTwitter, pageMetadata, returnLastmod, siteConfig, 
 import { generateBreadcrumbSchema, generateFAQSchema, generateWebPageSchema } from "@/lib/schema-generators"
 import { Bed, Heart, NotebookText, PawPrint, Sprout, Utensils } from "lucide-react"
 
-const wellnessOgImage = "/pages/conditions-de-vie/pomsky-joue-avec-balle-plastique.webp"
+const wellnessOgJpg = "/pages/conditions-de-vie/la-maman-et-son-chiot-avec-marine.jpg"
+const wellnessOgWebp = "/pages/conditions-de-vie/la-maman-et-son-chiot-avec-marine.webp"
 
 export const metadata: Metadata = {
     title: pageMetadata.wellness.title,
@@ -22,8 +23,15 @@ export const metadata: Metadata = {
         url: `${siteConfig.siteUrl}${siteConfig.pages.wellness}`,
         images: [
             {
-                url: `${siteConfig.siteUrl}${wellnessOgImage}`,
-                alt: "Chiot Pomsky dans un environnement rassurant",
+                url: `${siteConfig.siteUrl}${wellnessOgJpg}`,
+                alt: "La maman Pomsky et son chiot avec Marine",
+                width: siteConfig.ogImageWidth,
+                height: siteConfig.ogImageHeight,
+                type: "image/jpeg",
+            },
+            {
+                url: `${siteConfig.siteUrl}${wellnessOgWebp}`,
+                alt: "La maman Pomsky et son chiot avec Marine",
                 width: siteConfig.ogImageWidth,
                 height: siteConfig.ogImageHeight,
                 type: "image/webp",
@@ -33,7 +41,7 @@ export const metadata: Metadata = {
     twitter: buildTwitter({
         title: pageMetadata.wellness.title,
         description: pageMetadata.wellness.description,
-        imageUrl: `${siteConfig.siteUrl}${wellnessOgImage}`,
+        imageUrl: `${siteConfig.siteUrl}${wellnessOgJpg}`,
     }),
     alternates: {
         canonical: `${siteConfig.siteUrl}${siteConfig.pages.wellness}`,
@@ -95,7 +103,7 @@ export default function WellnessPage() {
         name: pageMetadata.wellness.title,
         description: pageMetadata.wellness.description,
         url: siteConfig.pages.wellness,
-        imageUrl: wellnessOgImage,
+        imageUrl: wellnessOgJpg,
         dateModified: pageLastModValue,
         about: ["Bien-être animal", "Pomsky", "Socialisation du chiot", "Élevage responsable"],
     })
@@ -174,7 +182,7 @@ export default function WellnessPage() {
                             <div className="space-y-4">
                                 <div className="relative min-h-80 overflow-hidden rounded-[1.75rem] border border-white/50 bg-muted shadow-lg md:min-h-[32rem]">
                                     <Image
-                                        src={wellnessOgImage}
+                                        src={wellnessOgWebp}
                                         alt="Chiot Pomsky fixe sa balle en plastique"
                                         fill
                                         priority

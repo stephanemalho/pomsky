@@ -5,6 +5,9 @@ import BlogList from "@/app/blog/_components/BlogList";
 import { blog } from "@/constants/blog/blog";
 import { buildOpenGraph, buildTwitter, pageMetadata, siteConfig } from "@/lib/seo-config";
 
+const blogThemeOgJpg = "/assets/blog/pomsky-for-sale-blog-page.jpg"
+const blogThemeOgWebp = "/assets/blog/pomsky-for-sale-blog-page.webp"
+
 type PomskyThemePageProps = {
     params: Promise<{ theme: string }>;
 };
@@ -49,8 +52,15 @@ export async function generateMetadata({
             type: "website",
             images: [
                 {
-                    url: new URL(siteConfig.ogImage, siteConfig.siteUrl).toString(),
-                    alt: siteConfig.ogImageAlt,
+                    url: new URL(blogThemeOgJpg, siteConfig.siteUrl).toString(),
+                    alt: `Blog Pomsky ${themeData.label}`,
+                    width: siteConfig.ogImageWidth,
+                    height: siteConfig.ogImageHeight,
+                    type: "image/jpeg",
+                },
+                {
+                    url: new URL(blogThemeOgWebp, siteConfig.siteUrl).toString(),
+                    alt: `Blog Pomsky ${themeData.label}`,
                     width: siteConfig.ogImageWidth,
                     height: siteConfig.ogImageHeight,
                     type: "image/webp",
@@ -60,7 +70,7 @@ export async function generateMetadata({
         twitter: buildTwitter({
             title,
             description,
-            imageUrl: new URL(siteConfig.ogImage, siteConfig.siteUrl).toString(),
+            imageUrl: new URL(blogThemeOgJpg, siteConfig.siteUrl).toString(),
         }),
     };
 }

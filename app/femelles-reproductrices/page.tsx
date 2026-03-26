@@ -12,6 +12,9 @@ import Link from "next/link"
 import { puppies } from "./puppies"
 import { pageContent } from "@/lib/page-content"
 
+const reproductorsOgJpg = "/BEAUTY-pomsky-miniature-f4.jpg"
+const reproductorsOgWebp = "/BEAUTY-pomsky-miniature-f4.webp"
+
 export const metadata: Metadata = {
     title: pageMetadata.reproductors.title,
     description: pageMetadata.reproductors.description,
@@ -22,8 +25,15 @@ export const metadata: Metadata = {
         url: `${siteConfig.siteUrl}/femelles-reproductrices`,
         images: [
             {
-                url: `${siteConfig.siteUrl}${siteConfig.ogImage}`,
-                alt: siteConfig.ogImageAlt,
+                url: `${siteConfig.siteUrl}${reproductorsOgJpg}`,
+                alt: "Pomsky reproductrice chez Royal Pomsky",
+                width: siteConfig.ogImageWidth,
+                height: siteConfig.ogImageHeight,
+                type: "image/jpeg",
+            },
+            {
+                url: `${siteConfig.siteUrl}${reproductorsOgWebp}`,
+                alt: "Pomsky reproductrice chez Royal Pomsky",
                 width: siteConfig.ogImageWidth,
                 height: siteConfig.ogImageHeight,
                 type: "image/webp",
@@ -33,7 +43,7 @@ export const metadata: Metadata = {
     twitter: buildTwitter({
         title: pageMetadata.reproductors.title,
         description: pageMetadata.reproductors.description,
-        imageUrl: `${siteConfig.siteUrl}${siteConfig.ogImage}`,
+        imageUrl: `${siteConfig.siteUrl}${reproductorsOgJpg}`,
     }),
     alternates: {
         canonical: `${siteConfig.siteUrl}/femelles-reproductrices`,

@@ -10,6 +10,9 @@ import { buildOpenGraph, buildTwitter, pageMetadata, returnLastmod, siteConfig, 
 import { generateBreadcrumbSchema, generateFAQSchema, generateWebPageSchema } from "@/lib/schema-generators"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
 
+const presentationOgJpg = "/pages/presentation-elevage/eleveuse-royal-pomsky-avec-un-pomsky.jpg"
+const presentationOgWebp = "/pages/presentation-elevage/eleveuse-royal-pomsky-avec-un-pomsky.webp"
+
 export const metadata: Metadata = {
     title: pageMetadata.presentation.title,
     description: pageMetadata.presentation.description,
@@ -20,8 +23,15 @@ export const metadata: Metadata = {
         url: `${siteConfig.siteUrl}/presentation-elevage`,
         images: [
             {
-                url: `${siteConfig.siteUrl}${siteConfig.ogImage}`,
-                alt: siteConfig.ogImageAlt,
+                url: `${siteConfig.siteUrl}${presentationOgJpg}`,
+                alt: "Éleveuse Royal Pomsky avec un Pomsky",
+                width: siteConfig.ogImageWidth,
+                height: siteConfig.ogImageHeight,
+                type: "image/jpeg",
+            },
+            {
+                url: `${siteConfig.siteUrl}${presentationOgWebp}`,
+                alt: "Éleveuse Royal Pomsky avec un Pomsky",
                 width: siteConfig.ogImageWidth,
                 height: siteConfig.ogImageHeight,
                 type: "image/webp",
@@ -31,7 +41,7 @@ export const metadata: Metadata = {
     twitter: buildTwitter({
         title: pageMetadata.presentation.title,
         description: pageMetadata.presentation.description,
-        imageUrl: `${siteConfig.siteUrl}${siteConfig.ogImage}`,
+        imageUrl: `${siteConfig.siteUrl}${presentationOgJpg}`,
     }),
     alternates: {
         canonical: `${siteConfig.siteUrl}/presentation-elevage`,

@@ -10,6 +10,9 @@ import { buildOpenGraph, buildTwitter, pageMetadata, returnLastmod, siteConfig, 
 import { generateBreadcrumbSchema, generateFAQSchema, generateWebPageSchema } from "@/lib/schema-generators"
 import { Feather, Heart, History, PawPrint, Ruler, Scale, ScrollText, Sparkles } from "lucide-react"
 
+const pomskyPageOgJpg = "/pages/le-pomsky/pomsky-f4-et-une-citrouille.jpg"
+const pomskyPageOgWebp = "/pages/le-pomsky/pomsky-f4-et-une-citrouille.webp"
+
 export const metadata: Metadata = {
     title: pageMetadata.pomsky.title,
     description: pageMetadata.pomsky.description,
@@ -20,8 +23,15 @@ export const metadata: Metadata = {
         url: `${siteConfig.siteUrl}/le-pomsky`,
         images: [
             {
-                url: `${siteConfig.siteUrl}${siteConfig.ogImage}`,
-                alt: siteConfig.ogImageAlt,
+                url: `${siteConfig.siteUrl}${pomskyPageOgJpg}`,
+                alt: "Pomsky au regard expressif chez Royal Pomsky",
+                width: siteConfig.ogImageWidth,
+                height: siteConfig.ogImageHeight,
+                type: "image/jpeg",
+            },
+            {
+                url: `${siteConfig.siteUrl}${pomskyPageOgWebp}`,
+                alt: "Pomsky au regard expressif chez Royal Pomsky",
                 width: siteConfig.ogImageWidth,
                 height: siteConfig.ogImageHeight,
                 type: "image/webp",
@@ -31,7 +41,7 @@ export const metadata: Metadata = {
     twitter: buildTwitter({
         title: pageMetadata.pomsky.title,
         description: pageMetadata.pomsky.description,
-        imageUrl: `${siteConfig.siteUrl}${siteConfig.ogImage}`,
+        imageUrl: `${siteConfig.siteUrl}${pomskyPageOgJpg}`,
     }),
     alternates: {
         canonical: `${siteConfig.siteUrl}/le-pomsky`,

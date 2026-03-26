@@ -22,6 +22,9 @@ import { convertFAQsToSchema } from "@/lib/faq-utils"
 import { buildOpenGraph, buildTwitter, pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
 import { generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema-generators"
 
+const adoptionGuideOgJpg = "/nurcery-panier.jpg"
+const adoptionGuideOgWebp = "/nurcery-panier.webp"
+
 export const metadata: Metadata = {
     title: pageMetadata.adoptionGuide.title,
     description: pageMetadata.adoptionGuide.description,
@@ -32,8 +35,15 @@ export const metadata: Metadata = {
         url: `${siteConfig.siteUrl}${siteConfig.pages.adoptionGuide}`,
         images: [
             {
-                url: `${siteConfig.siteUrl}/nurcery-panier.webp`,
-                alt: "Chiot pomsky dans un panier avant son départ",
+                url: `${siteConfig.siteUrl}${adoptionGuideOgJpg}`,
+                alt: "Chiot Pomsky dans un panier avant son départ",
+                width: siteConfig.ogImageWidth,
+                height: siteConfig.ogImageHeight,
+                type: "image/jpeg",
+            },
+            {
+                url: `${siteConfig.siteUrl}${adoptionGuideOgWebp}`,
+                alt: "Chiot Pomsky dans un panier avant son départ",
                 width: siteConfig.ogImageWidth,
                 height: siteConfig.ogImageHeight,
                 type: "image/webp",
@@ -43,7 +53,7 @@ export const metadata: Metadata = {
     twitter: buildTwitter({
         title: pageMetadata.adoptionGuide.title,
         description: pageMetadata.adoptionGuide.description,
-        imageUrl: `${siteConfig.siteUrl}/nurcery-panier.webp`,
+        imageUrl: `${siteConfig.siteUrl}${adoptionGuideOgJpg}`,
     }),
     alternates: {
         canonical: `${siteConfig.siteUrl}${siteConfig.pages.adoptionGuide}`,

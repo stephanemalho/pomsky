@@ -12,6 +12,8 @@ import { Card, CardContent } from "@/components/ui/card"
 import ImageCarousel from "@/components/client/carousel/ImageCarousel"
 import { Badge } from "@/components/ui/badge"
 
+const puppiesOgImage = "/pages/puppies/VUK-male-pomsky-a-vendre-1.jpeg"
+
 export const metadata: Metadata = {
     title: pageMetadata.puppies.title,
     description: pageMetadata.puppies.description,
@@ -22,18 +24,18 @@ export const metadata: Metadata = {
         url: `${siteConfig.siteUrl}/chiots-disponibles`,
         images: [
             {
-                url: `${siteConfig.siteUrl}${siteConfig.ogImage}`,
-                alt: siteConfig.ogImageAlt,
+                url: `${siteConfig.siteUrl}${puppiesOgImage}`,
+                alt: "Chiot Pomsky disponible chez Royal Pomsky",
                 width: siteConfig.ogImageWidth,
                 height: siteConfig.ogImageHeight,
-                type: "image/webp",
+                type: "image/jpeg",
             },
         ],
     }),
     twitter: buildTwitter({
         title: pageMetadata.puppies.title,
         description: pageMetadata.puppies.description,
-        imageUrl: `${siteConfig.siteUrl}${siteConfig.ogImage}`,
+        imageUrl: `${siteConfig.siteUrl}${puppiesOgImage}`,
     }),
     alternates: {
         canonical: `${siteConfig.siteUrl}/chiots-disponibles`,

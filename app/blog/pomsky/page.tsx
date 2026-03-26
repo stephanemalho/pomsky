@@ -3,6 +3,9 @@ import type { Metadata } from "next";
 import BlogList from "@/app/blog/_components/BlogList";
 import { buildOpenGraph, buildTwitter, pageMetadata, siteConfig } from "@/lib/seo-config";
 
+const blogHubOgJpg = "/assets/blog/pomsky-for-sale-blog-page.jpg"
+const blogHubOgWebp = "/assets/blog/pomsky-for-sale-blog-page.webp"
+
 export const metadata: Metadata = {
     title: pageMetadata.blog.title,
     description: pageMetadata.blog.description,
@@ -17,8 +20,15 @@ export const metadata: Metadata = {
         type: "website",
         images: [
             {
-                url: new URL(siteConfig.ogImage, siteConfig.siteUrl).toString(),
-                alt: siteConfig.ogImageAlt,
+                url: new URL(blogHubOgJpg, siteConfig.siteUrl).toString(),
+                alt: "Blog Pomsky de Royal Pomsky",
+                width: siteConfig.ogImageWidth,
+                height: siteConfig.ogImageHeight,
+                type: "image/jpeg",
+            },
+            {
+                url: new URL(blogHubOgWebp, siteConfig.siteUrl).toString(),
+                alt: "Blog Pomsky de Royal Pomsky",
                 width: siteConfig.ogImageWidth,
                 height: siteConfig.ogImageHeight,
                 type: "image/webp",
@@ -28,7 +38,7 @@ export const metadata: Metadata = {
     twitter: buildTwitter({
         title: pageMetadata.blog.title,
         description: pageMetadata.blog.description,
-        imageUrl: new URL(siteConfig.ogImage, siteConfig.siteUrl).toString(),
+        imageUrl: new URL(blogHubOgJpg, siteConfig.siteUrl).toString(),
     }),
 };
 

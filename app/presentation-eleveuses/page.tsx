@@ -10,6 +10,8 @@ import { convertFAQsToSchema } from "@/lib/faq-utils"
 import { faqEleveuses } from "@/lib/faq-data"
 import Link from "next/link"
 
+const eleveusesOgImage = "/assets/authors/portrait-aurelie-and-pomsky.jpeg"
+
 export const metadata: Metadata = {
     title: pageMetadata.eleveuses.title,
     description: pageMetadata.eleveuses.description,
@@ -20,18 +22,18 @@ export const metadata: Metadata = {
         url: `${siteConfig.siteUrl}/presentation-eleveuses`,
         images: [
             {
-                url: `${siteConfig.siteUrl}${siteConfig.ogImage}`,
-                alt: siteConfig.ogImageAlt,
+                url: `${siteConfig.siteUrl}${eleveusesOgImage}`,
+                alt: "Aurélie de Royal Pomsky avec un Pomsky",
                 width: siteConfig.ogImageWidth,
                 height: siteConfig.ogImageHeight,
-                type: "image/webp",
+                type: "image/jpeg",
             },
         ],
     }),
     twitter: buildTwitter({
         title: pageMetadata.eleveuses.title,
         description: pageMetadata.eleveuses.description,
-        imageUrl: `${siteConfig.siteUrl}${siteConfig.ogImage}`,
+        imageUrl: `${siteConfig.siteUrl}${eleveusesOgImage}`,
     }),
     alternates: {
         canonical: `${siteConfig.siteUrl}/presentation-eleveuses`,
