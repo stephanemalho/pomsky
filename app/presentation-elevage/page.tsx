@@ -261,7 +261,7 @@ export default function PresentationPage() {
                                 className="text-xl md:text-2xl font-bold">Notre histoire</h2>
                             <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-8" />
                             <h3 className="text-2xl font-bold">
-                                Un élevage familial au cœur du Jura, à deux pas de Saint-Amour
+                                Un élevage professionnel au cœur du Jura, en Bourgogne-Franche-Comté, dédié au Pomsky Toy américain
                             </h3>
                             <p className="text-muted-foreground leading-relaxed">
                                 Nous avons choisi depuis l'année 2017 de nous installer au cœur de la nature, dans de grands espaces sauvages pour consacrer notre élevage et notre vie au Pomsky : pour le coup de cœur absolu que cela nous a procuré : son allure de chien nordique de traîneau miniature, sa nature proche de l'humain et son amour inconditionnel en font le chien le plus parfaitement adapté à nous.

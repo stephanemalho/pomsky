@@ -69,7 +69,7 @@ export const pomskyAdultePost: BlogPost = {
             subtitle: "Conseils pour choisir un éleveur Pomsky",
             paragraphs: [
                 "Choisir un éleveur responsable et expérimenté est une étape clé pour adopter un Pomsky en bonne santé.",
-                "Il est recommandé de visiter l'élevage, de rencontrer les parents, de vérifier les tests de santé et de privilégier un élevage familial favorisant la socialisation des chiots."
+                "Il est recommandé de visiter l'élevage, de rencontrer les parents, de vérifier les tests de santé et de privilégier un élevage professionnel favorisant la socialisation des chiots."
             ]
         }
     ],
