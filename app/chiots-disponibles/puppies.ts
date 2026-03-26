@@ -43,8 +43,8 @@ export const puppies: Puppy[] = [
         ],
         health: ["Suivi vétérinaire en cours"],
         images: [
-            "pages/puppies/Aluna-chiot-pomsky-toy-de-face.jpeg",
-            "pages/puppies/Aluna-pomsky-chiot-femellle-a-vendre.jpeg"
+            "pages/puppies/Aluna-pomsky-chiot-femellle-a-vendre.jpeg",
+            "pages/puppies/Aluna-chiot-pomsky-toy-de-face.jpeg"
         ],
         linkTo: "https://forms.gle/aDbQtgwXUtoaH5QFA",
         isReserved: false,
@@ -74,11 +74,11 @@ export const puppies: Puppy[] = [
         ],
         health: ["Suivi vétérinaire en cours"],
         images: [
+            "pages/puppies/SNOW-male-pomsky-a-vendre-3.jpeg",
             "pages/puppies/SNOW-male-pomsky-a-vendre-5.jpeg",
             "pages/puppies/SNOW-male-pomsky-a-vendre-6.jpeg",
             "pages/puppies/SNOW-male-pomsky-a-vendre-1.jpeg",
             "pages/puppies/SNOW-male-pomsky-a-vendre-2.jpeg",
-            "pages/puppies/SNOW-male-pomsky-a-vendre-3.jpeg",
             "pages/puppies/SNOW-male-pomsky-a-vendre-4.jpeg"
         ],
         linkTo: "https://forms.gle/wtcxuo84YEQzposV9",
