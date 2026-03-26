@@ -12,7 +12,7 @@ export const pomskyPrixPost: BlogPost = {
         {
             subtitle: "Élevage et achat des chiots Pomsky",
             paragraphs: [
-                "Les Pomskies figurent parmi les chiens les plus onéreux en France et à l'étranger. Plusieurs centres d'élevage spécialisés proposent des chiots Pomsky à des tarifs généralement compris entre 3 000 et 6 000 euros.",
+                "Les Pomskies figurent parmi les chiens les plus onéreux en France et à l'étranger. Plusieurs centres d'élevage spécialisés proposent des chiots Pomsky à des tarifs généralement compris entre 2500 et 6000 euros.",
                 "Le prix varie selon plusieurs critères : la couleur du pelage, la couleur des yeux, la taille, le poids et la génération du chiot."
             ]
         },

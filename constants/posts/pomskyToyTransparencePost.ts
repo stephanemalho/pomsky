@@ -45,7 +45,7 @@ export const pomskyToyTransparencePost: BlogPost = {
         {
             subtitle: "Prix, promesses et prudence",
             paragraphs: [
-                "Le prix dépend du travail de sélection, de la lignée, de la génération, du suivi sanitaire et de l'accompagnement proposé. il se situe généralement entre 3 000 et 7500 €. À l'inverse, un tarif très bas assorti de promesses catégoriques doit inviter à la vérification.",
+                "Le prix dépend du travail de sélection, de la lignée, de la génération, du suivi sanitaire et de l'accompagnement proposé. il se situe généralement entre 2600 et 6000 €. À l'inverse, un tarif très bas assorti de promesses catégoriques doit inviter à la vérification.",
                 "Le bon réflexe consiste à comparer des éléments objectifs et documentés, plutôt que de se baser uniquement sur une annonce ou sur des mots-clés marketing."
             ]
         },

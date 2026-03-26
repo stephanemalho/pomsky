@@ -562,7 +562,7 @@ export default function DogPage() {
                         <div className="space-y-3">
                             <h2 className="text-xl font-bold md:text-2xl">Quel est le prix d’un Pomsky ?</h2>
                             <p className="max-w-4xl leading-relaxed text-muted-foreground">
-                                Le prix d’un Pomsky se situe généralement entre 3 000 et 6 000 euros selon la taille, la génération, la qualité des lignées, la rareté de certains traits physiques et le niveau de sélection effectué par l’éleveur.
+                                Le prix d’un Pomsky se situe généralement entre 2500 et 6000 euros selon la taille, la génération, la qualité des lignées, la rareté de certains traits physiques et le niveau de sélection effectué par l’éleveur.
                                 Au-delà du prix, il est essentiel d’évaluer le sérieux de l’élevage, la transparence sur les parents, les tests de santé, l’accompagnement proposé et les conditions d’élevage.
                             </p>
                         </div>
