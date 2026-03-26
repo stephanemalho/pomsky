@@ -230,10 +230,13 @@ export default function AdoptionSuccessPage() {
         "@type": "Article",
         headline: pageMetadata.adoptionGuide.title,
         description: pageMetadata.adoptionGuide.description,
-        mainEntityOfPage: `${siteConfig.siteUrl}${siteConfig.pages.adoptionGuide}`,
+        mainEntityOfPage: {
+            "@type": "WebPage",
+            "@id": `${siteConfig.siteUrl}${siteConfig.pages.adoptionGuide}`,
+        },
         inLanguage: "fr-FR",
-        datePublished: "2026-03-07",
-        dateModified: "2026-03-07",
+        datePublished: "2026-03-07T09:00:00+01:00",
+        dateModified: "2026-03-07T09:00:00+01:00",
         author: {
             "@type": "Organization",
             name: siteConfig.name,

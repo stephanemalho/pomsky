@@ -12,6 +12,24 @@ function toAbsoluteUrl(pathOrUrl: string) {
 const defaultImageUrl = toAbsoluteUrl(siteConfig.ogImage);
 const organizationId = `${siteConfig.siteUrl}#organization`;
 
+function normalizeSchemaDateTime(value: string) {
+    if (/^\d{4}-\d{2}-\d{2}$/.test(value)) {
+        return `${value}T09:00:00+01:00`;
+    }
+
+    return value;
+}
+
+function getAuthorProfileUrl(authorName: string) {
+    const normalized = authorName.trim().toLowerCase();
+
+    if (normalized === "aurélie violette" || normalized === "marine") {
+        return toAbsoluteUrl(siteConfig.pages.eleveuses);
+    }
+
+    return undefined;
+}
+
 type PuppySchemaInput = {
     name: string;
     description: string;
@@ -281,15 +299,21 @@ export function generateBlogPostingSchema(post: {
     const topicTags = post.tags && post.tags.length > 0
         ? post.tags
         : ["Pomsky", "Chien", "Élevage canin"];
+    const authorUrl = post.authorUrl?.trim() || getAuthorProfileUrl(post.authorName);
+    const datePublished = normalizeSchemaDateTime(post.datePublished);
+    const dateModified = normalizeSchemaDateTime(post.dateModified ?? post.datePublished);
 
     return {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         headline: post.title,
         description: post.excerpt,
-        mainEntityOfPage: post.url,
-        datePublished: post.datePublished,
-        dateModified: post.dateModified ?? post.datePublished,
+        mainEntityOfPage: {
+            "@type": "WebPage",
+            "@id": post.url
+        },
+        datePublished,
+        dateModified,
         image: {
             "@type": "ImageObject",
             url: toAbsoluteUrl(post.imageUrl),
@@ -298,7 +322,7 @@ export function generateBlogPostingSchema(post: {
         author: {
             "@type": "Person",
             name: post.authorName,
-            ...(post.authorUrl ? { url: post.authorUrl } : {})
+            ...(authorUrl ? { url: authorUrl } : {})
         },
         keywords: topicTags.join(", "),
         about: topicTags.map((topic) => ({
@@ -308,6 +332,7 @@ export function generateBlogPostingSchema(post: {
         publisher: {
             "@type": "Organization",
             name: post.publisherName ?? siteConfig.name,
+            url: siteConfig.siteUrl,
             logo: {
                 "@type": "ImageObject",
                 url: `${siteConfig.siteUrl}/icon.png`
