@@ -100,72 +100,62 @@ export default function HomePage() {
 
       <div className="flex flex-col">
         <section className="bg-accent-foreground">
-          {/* Hero Section */}
-          <div className="relative h-auto md:h-[90vh] flex items-center justify-center overflow-hidden group">
-            {/* Image de fond (desktop only) */}
-            <div className="absolute inset-0 z-0 m-auto hidden md:block">
-              <Image
-                src="/cute-pomsky-looking-us.webp"
-                alt="Un chiot pomsky regarde tendrement l'objectif pour nous acceuillir"
-                fill
-                className="object-cover scale-105 transition-transform duration-2000 group-hover:scale-110"
-                priority
-                fetchPriority="high"
-                loading="eager"
-                sizes="100vw"
-              />
-              <div className="absolute inset-0 bg-linear-to-b from-black/70 via-black/45 to-black/75" aria-hidden="true" />
-              <div className="absolute inset-0 opacity-60 [background:radial-gradient(900px_circle_at_center,rgba(255,255,255,0.08),transparent_55%)]" aria-hidden="true" />
-            </div>
-            {/* Fallback background (mobile) */}
-            <div
-              className="absolute inset-0 z-0 md:hidden bg-linear-to-b from-[#4a2f1a] via-[#24160b] to-black"
-              aria-hidden="true"
-            />
-            <div className="relative z-10 text-center space-y-8 px-6 max-w-3xl py-10 mx-auto rounded-2xl border border-white/15 bg-black/35 backdrop-blur-md shadow-[0_30px_120px_rgba(0,0,0,0.55)]">
-              <div className="mx-auto inline-flex items-center gap-3 rounded-full border border-white/20 bg-white/10 px-4 py-1 text-[11px] uppercase tracking-[0.35em] text-white/80">
-                Royal Pomsky
-              </div>
-              <h1 className="text-2xl md:text-4xl font-semibold tracking-wide text-white">
-                {pageContent.home.h1}
-                <span className="block text-base md:text-xl font-light text-white/80 mt-2">
-                  {pageContent.home.h1Subtitle}
-                </span>
-              </h1>
-              <div className="mx-auto">
-                <p className="text-base md:text-lg text-white/85">
-                  {pageContent.home.description}
-                </p>
-                <div className="mt-6 md:hidden">
-                  <div className="relative mx-auto w-full max-w-sm overflow-hidden rounded-xl border border-white/15 shadow-[0_18px_60px_rgba(0,0,0,0.45)]">
-                    <div className="relative aspect-4/5">
-                      <Image
-                        src="/SUSHI-pomsky.webp"
-                        alt="SUSHI pomsky gris et blanc avec un oeil bleu et un oeil marron"
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 640px) 85vw, 360px"
-                        priority
-                        fetchPriority="high"
-                      />
+          <div className="overflow-hidden bg-linear-to-b from-[#2f1c10] via-[#1d1108] to-[#120a05]">
+            <div className="container mx-auto px-4 py-6 md:px-6 md:py-8 lg:px-8 lg:py-10">
+              <div className="mx-auto max-w-6xl space-y-5 md:space-y-6">
+                <div className="overflow-hidden rounded-xl md:rounded-4xl border border-white/10 bg-[#22140b] shadow-[0_35px_120px_rgba(0,0,0,0.35)]">
+                  <Image
+                    src="/bandeau-presentaion-royal-pomsky-toy.jpeg"
+                    alt="Bandeau de presentation Royal Pomsky Toy"
+                    width={1260}
+                    height={400}
+                    priority
+                    fetchPriority="high"
+                    loading="eager"
+                    sizes="(min-width: 1280px) 1152px, (min-width: 768px) calc(100vw - 48px), calc(100vw - 32px)"
+                    className="block h-auto w-full"
+                  />
+                </div>
+
+                <div className="mx-auto max-w-4xl rounded-xl md:rounded-[1.75rem] border border-white/12 bg-black/35 px-6 py-6 text-center text-white shadow-[0_30px_100px_rgba(0,0,0,0.32)] backdrop-blur-sm md:px-8">
+                  <div className="mx-auto inline-flex items-center gap-3 rounded-full border border-white/20 bg-white/10 px-4 py-1 text-[11px] uppercase tracking-[0.35em] text-white/80">
+                    Royal Pomsky
+                  </div>
+                  <h1 className="mt-4 text-3xl font-semibold tracking-[0.03em] text-white md:text-4xl lg:text-5xl">
+                    {pageContent.home.h1}
+                  </h1>
+                </div>
+
+                <div className="mx-auto max-w-6xl rounded-xl md:rounded-4xl border border-white/12 bg-black/45 px-6 py-6 text-white shadow-[0_35px_120px_rgba(0,0,0,0.4)] backdrop-blur-md md:px-8 md:py-8 lg:px-10">
+                  <p className="text-sm font-medium uppercase tracking-[0.28em] text-white/72">
+                    {pageContent.home.h1Subtitle}
+                  </p>
+                  <div className="mt-5 grid gap-6 lg:grid-cols-[1.5fr_0.75fr] lg:items-end">
+                    <div className="space-y-4">
+                      <p className="text-base leading-relaxed text-white/88 md:text-lg">
+                        {pageContent.home.description}
+                      </p>
+                      <p className="text-base leading-relaxed text-white/82 md:text-lg">
+                        {pageContent.home.descriptionSecondary}
+                      </p>
+                      <p className="text-base leading-relaxed text-white/82 md:text-lg">
+                        {pageContent.home.descriptionTertiary}
+                      </p>
+                    </div>
+                    <div className="flex lg:justify-end">
+                      <Link
+                        href="/chiots-disponibles"
+                        className="inline-flex items-center justify-center 
+                         md:rounded-full 
+                         rounded-md
+                         border border-white/30 bg-white/10 px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-white transition hover:bg-white/20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                      >
+                        Voir les chiots Pomsky disponibles
+                      </Link>
                     </div>
                   </div>
                 </div>
-                <div className="mt-12">
-                  <p className="text-base md:text-lg text-white/85">
-                    {pageContent.home.descriptionSecondary}
-                  </p>
-                  <p className="text-base md:text-lg text-white/85">
-                    {pageContent.home.descriptionTertiary}
-                  </p>
-                </div>
               </div>
-              <Link
-                href="/chiots-disponibles"
-                className="inline-flex items-center justify-center rounded-full border border-white/30 bg-white/10 px-6 py-3 mt-12 text-sm font-semibold uppercase tracking-[0.2em] text-white transition hover:bg-white/20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-              >
-                Voir les chiots Pomsky disponibles
-              </Link>
             </div>
           </div>
         </section>

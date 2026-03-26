@@ -4,7 +4,7 @@ export const pageContent = {
         h1Subtitle:
             "Premier élevage français de Pomsky issus de lignées américaines",
         description:
-            "Royal Pomsky se situe dans la commune de SAINT-AMOUR (39160) en région Bourgogne Franche Comté. C'est le premier élevage de Pomsky en France ayant fait le choix de débuter sa sélection en 2017 avec des lignées Américaines : directement au berceau de la race, pour amener en France le Pomsky absolument parfait.",
+            "Royal Pomsky se situe en région Bourgogne Franche Comté. C'est le premier élevage de Pomsky en France ayant fait le choix de débuter sa sélection en 2017 avec des lignées Américaines : directement au berceau de la race, pour amener en France le Pomsky absolument parfait.",
         descriptionSecondary:
             "Depuis notre première portée née en 2018, notre objectif est de vous apporter le meilleur et l'excellence version Pomsky : un physique parfait, une santé de fer, une expertise comportementale, une socialisation parfaite, un suivi tout au long de la vie du chiot.",
         descriptionTertiary:
