@@ -1,5 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
+import { Questrial } from "next/font/google"
 import CookieConsent from "../components/cookie-consent"
 import AnalyticsConsent from "../components/analytics-consent"
 import "./globals.css"
@@ -8,6 +9,14 @@ import { Navigation } from "../components/navigation"
 import { Footer } from "../components/footer"
 import { siteConfig } from "@/lib/seo-config"
 import { generateOrganizationSchema, generateWebsiteSchema } from "@/lib/schema-generators"
+
+const questrial = Questrial({
+  subsets: ["latin"],
+  weight: "400",
+  display: "swap",
+  variable: "--font-questrial",
+  fallback: ["Arial", "Helvetica", "ui-sans-serif", "system-ui", "sans-serif"],
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.siteUrl),
@@ -88,7 +97,7 @@ export default function RootLayout({
   const websiteSchema = generateWebsiteSchema()
 
   return (
-    <html lang="fr" suppressHydrationWarning>
+    <html lang="fr" suppressHydrationWarning className={questrial.variable}>
       <head>
         {/* Google Analytics will be injected by the client cookie consent manager */}
 
