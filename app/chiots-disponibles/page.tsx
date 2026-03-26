@@ -3,9 +3,9 @@ import { faqNosChiots } from "@/lib/faq-data"
 import { Banknote, Calendar, Dog, Heart, NotebookText, PawPrint, Sprout, Weight } from "lucide-react"
 import Link from "next/link"
 import type { Metadata } from "next"
-import { buildOpenGraph, buildTwitter, pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
+import { buildOpenGraph, buildTwitter, pageMetadata, returnLastmod, siteConfig, sitemapPages } from "@/lib/seo-config"
 import { pageContent } from "@/lib/page-content"
-import { generateBreadcrumbSchema, generateFAQSchema, generatePuppyListSchema, generatePuppyProductSchema } from "@/lib/schema-generators"
+import { generateBreadcrumbSchema, generateFAQSchema, generatePuppyListSchema, generateWebPageSchema } from "@/lib/schema-generators"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
 import { puppies } from "./puppies"
 import { Card, CardContent } from "@/components/ui/card"
@@ -54,14 +54,20 @@ function getPuppyAnchorId(name: string) {
 
 export default function NosChiotsPage() {
     // Schémas JSON-LD
-    const puppiesForRichResults = puppies.filter((puppy) => typeof puppy.price === "number")
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Accueil", url: "/" },
         { name: "Nos chiots", url: siteConfig.pages.puppies },
     ])
     const faqSchema = generateFAQSchema(convertFAQsToSchema(faqNosChiots))
-    const puppyListSchema = generatePuppyListSchema(puppiesForRichResults)
-    const puppyProductsSchemas = puppiesForRichResults.map((puppy) => generatePuppyProductSchema(puppy))
+    const pageLastModValue = sitemapPages.find((page) => page.url === siteConfig.pages.puppies)?.lastmod
+    const puppyListSchema = generatePuppyListSchema(puppies)
+    const webPageSchema = generateWebPageSchema({
+        name: pageMetadata.puppies.title,
+        description: pageMetadata.puppies.description,
+        url: siteConfig.pages.puppies,
+        dateModified: pageLastModValue,
+        about: ["Chiots Pomsky disponibles", "Adoption Pomsky", "Élevage Pomsky"]
+    })
     const lastMod = returnLastmod(siteConfig.pages.puppies)
 
     return (
@@ -79,13 +85,10 @@ export default function NosChiotsPage() {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(puppyListSchema) }}
             />
-            {puppyProductsSchemas.map((puppyProductSchema, index) => (
-                <script
-                    key={`puppy-product-schema-${puppiesForRichResults[index]?.name ?? index}`}
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{ __html: JSON.stringify(puppyProductSchema) }}
-                />
-            ))}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+            />
             <div className="pb-16 ">
                 <div className="container mx-auto my-12">
                     <section className="text-center space-y-4 mb-12">

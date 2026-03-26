@@ -6,8 +6,8 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { FAQSection } from "@/components/faq"
 import { faqPomsky } from "@/lib/faq-data"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
-import { buildOpenGraph, buildTwitter, pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
-import { generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema-generators"
+import { buildOpenGraph, buildTwitter, pageMetadata, returnLastmod, siteConfig, sitemapPages } from "@/lib/seo-config"
+import { generateBreadcrumbSchema, generateFAQSchema, generateWebPageSchema } from "@/lib/schema-generators"
 import { Feather, Heart, History, PawPrint, Ruler, Scale, ScrollText, Sparkles } from "lucide-react"
 
 export const metadata: Metadata = {
@@ -139,6 +139,14 @@ export default function DogPage() {
         { name: "Le Pomsky", url: siteConfig.pages.pomsky },
     ])
     const faqSchema = generateFAQSchema(convertFAQsToSchema(faqPomsky))
+    const pageLastModValue = sitemapPages.find((page) => page.url === siteConfig.pages.pomsky)?.lastmod
+    const webPageSchema = generateWebPageSchema({
+        name: pageMetadata.pomsky.title,
+        description: pageMetadata.pomsky.description,
+        url: siteConfig.pages.pomsky,
+        dateModified: pageLastModValue,
+        about: ["Pomsky", "Pomsky Toy", "Pomsky Miniature", "Taille du Pomsky", "Caractère du Pomsky"],
+    })
     const lastMod = returnLastmod(siteConfig.pages.pomsky)
 
     return (
@@ -150,6 +158,10 @@ export default function DogPage() {
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
             />
 
             <div className="py-16">

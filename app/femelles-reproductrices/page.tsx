@@ -3,10 +3,10 @@ import { Badge } from "@/components/ui/badge"
 import { FAQSection } from "@/components/faq"
 import { faqReproducteurs } from "@/lib/faq-data"
 import { Dog, PawPrint, Ruler, Scissors, Weight } from "lucide-react"
-import { generateBreadcrumbSchema, generateFAQSchema, generateReproductorSchema } from "@/lib/schema-generators"
+import { generateBreadcrumbSchema, generateFAQSchema, generateWebPageSchema } from "@/lib/schema-generators"
 import ImageCarousel from "@/components/client/carousel/ImageCarousel"
 import type { Metadata } from "next"
-import { buildOpenGraph, buildTwitter, pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
+import { buildOpenGraph, buildTwitter, pageMetadata, returnLastmod, siteConfig, sitemapPages } from "@/lib/seo-config"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
 import Link from "next/link"
 import { puppies } from "./puppies"
@@ -47,18 +47,14 @@ export default function NosChiotsPage() {
         { name: "Nos reproducteurs", url: siteConfig.pages.reproductors },
     ])
     const faqSchema = generateFAQSchema(convertFAQsToSchema(faqReproducteurs))
-    const reproductorGraphSchema = {
-        "@context": "https://schema.org",
-        "@graph": puppies.map((puppy) =>
-            generateReproductorSchema({
-                name: puppy.name,
-                description: puppy.description,
-                color: puppy.color,
-                size: puppy.size,
-                image: puppy.images[0] ?? siteConfig.ogImage,
-            })
-        ),
-    }
+    const pageLastModValue = sitemapPages.find((page) => page.url === siteConfig.pages.reproductors)?.lastmod
+    const webPageSchema = generateWebPageSchema({
+        name: pageMetadata.reproductors.title,
+        description: pageMetadata.reproductors.description,
+        url: siteConfig.pages.reproductors,
+        dateModified: pageLastModValue,
+        about: ["Reproducteurs Pomsky", "Lignées Pomsky", "Élevage Pomsky"],
+    })
     const lastMod = returnLastmod(siteConfig.pages.reproductors)
 
 
@@ -75,7 +71,7 @@ export default function NosChiotsPage() {
             />
             <script
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(reproductorGraphSchema) }}
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
             />
 
             <div className="py-16">

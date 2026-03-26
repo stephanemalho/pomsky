@@ -5,8 +5,8 @@ import { FAQSection } from "@/components/faq"
 import { faqHome } from "@/lib/faq-data"
 import Link from "next/link"
 import type { Metadata } from "next"
-import { buildOpenGraph, buildTwitter, pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
-import { generateLocalBusinessSchema, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/schema-generators"
+import { buildOpenGraph, buildTwitter, pageMetadata, returnLastmod, siteConfig, sitemapPages } from "@/lib/seo-config"
+import { generateLocalBusinessSchema, generateFAQSchema, generateBreadcrumbSchema, generateWebPageSchema } from "@/lib/schema-generators"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
 import { pomskyBenefits } from "@/components/content/home/pomsky/pomskyBenefits"
 import { pageContent } from "@/lib/page-content"
@@ -51,6 +51,15 @@ export default function HomePage() {
   const localBusinessSchema = generateLocalBusinessSchema()
   const breadcrumbSchema = generateBreadcrumbSchema([{ name: "Accueil", url: "/" }])
   const faqSchema = generateFAQSchema(convertFAQsToSchema(faqHome))
+  const pageLastModValue = sitemapPages.find((page) => page.url === siteConfig.pages.home)?.lastmod
+  const webPageSchema = generateWebPageSchema({
+    name: pageMetadata.home.title,
+    description: pageMetadata.home.description,
+    url: siteConfig.pages.home,
+    imageUrl: HOME_OG_IMAGE,
+    dateModified: pageLastModValue,
+    about: ["Élevage de chiots Pomsky", "Pomsky Toy", "Pomsky Miniature", "Chiots disponibles"],
+  })
   const lastMod = returnLastmod(siteConfig.pages.home)
   const availablePuppies = puppies.filter((puppy) => puppy.isReserved !== true)
   const featuredPuppies = availablePuppies.slice(0, 2)
@@ -96,6 +105,10 @@ export default function HomePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
       />
 
       <div className="flex flex-col">

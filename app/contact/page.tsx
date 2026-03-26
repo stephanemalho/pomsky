@@ -3,9 +3,9 @@ import { FAQSection } from "@/components/faq"
 import { faqContact } from "@/lib/faq-data"
 import { Chrome, MapPin, Phone, Mail, Clock, PawPrint, Star } from "lucide-react"
 import type { Metadata } from "next"
-import { buildOpenGraph, buildTwitter, pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
+import { buildOpenGraph, buildTwitter, pageMetadata, returnLastmod, siteConfig, sitemapPages } from "@/lib/seo-config"
 import { pageContent } from "@/lib/page-content"
-import { generateLocalBusinessSchema, generateContactPointSchema, generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema-generators"
+import { generateLocalBusinessSchema, generateContactPointSchema, generateBreadcrumbSchema, generateFAQSchema, generateWebPageSchema } from "@/lib/schema-generators"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
 import Image from "next/image"
 import Link from "next/link"
@@ -152,6 +152,14 @@ export default function ContactPage() {
         { name: "Contact", url: siteConfig.pages.contact },
     ])
     const faqSchema = generateFAQSchema(convertFAQsToSchema(faqContact))
+    const pageLastModValue = sitemapPages.find((page) => page.url === siteConfig.pages.contact)?.lastmod
+    const webPageSchema = generateWebPageSchema({
+        name: pageMetadata.contact.title,
+        description: pageMetadata.contact.description,
+        url: siteConfig.pages.contact,
+        dateModified: pageLastModValue,
+        about: ["Contact élevage Pomsky", "Visite élevage Pomsky", "Prendre rendez-vous adoption Pomsky"],
+    })
     const googleReviews = siteConfig.richResults.googleReviews
     const lastMod = returnLastmod(siteConfig.pages.contact)
 
@@ -173,6 +181,10 @@ export default function ContactPage() {
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
             />
 
             <div className="py-16">

@@ -10,75 +10,11 @@ function toAbsoluteUrl(pathOrUrl: string) {
 }
 
 const defaultImageUrl = toAbsoluteUrl(siteConfig.ogImage);
-const puppyBrandName = "Royal Pomsky";
-const puppyCategory = "Pomsky";
-const puppyAdditionalType = "https://fr.wikipedia.org/wiki/Pomsky";
-const puppyEligibleRegion = ["FR", "CH"];
-const puppyDepartureMode = "Retrait à l'élevage sur rendez-vous";
 const organizationId = `${siteConfig.siteUrl}#organization`;
-const merchantReturnPolicyId = `${siteConfig.siteUrl}#merchant-return-policy`;
-
-function createDefinedRegions() {
-    return puppyEligibleRegion.map((countryCode) => ({
-        "@type": "DefinedRegion" as const,
-        addressCountry: countryCode
-    }));
-}
-
-function createOfferShippingDetails() {
-    return {
-        "@type": "OfferShippingDetails",
-        shippingLabel: puppyDepartureMode,
-        shippingRate: {
-            "@type": "MonetaryAmount",
-            value: "0",
-            currency: "EUR"
-        },
-        shippingDestination: createDefinedRegions(),
-        deliveryTime: {
-            "@type": "ShippingDeliveryTime",
-            handlingTime: {
-                "@type": "QuantitativeValue",
-                minValue: 0,
-                maxValue: 0,
-                unitCode: "DAY"
-            },
-            transitTime: {
-                "@type": "QuantitativeValue",
-                minValue: 0,
-                maxValue: 0,
-                unitCode: "DAY"
-            }
-        }
-    };
-}
-
-function createMerchantReturnPolicyReference() {
-    return {
-        "@type": "MerchantReturnPolicy",
-        "@id": merchantReturnPolicyId
-    };
-}
 
 type PuppySchemaInput = {
     name: string;
-    coat: string;
-    color: string;
-    sexe: string;
-    weight: string;
-    parents: string;
-    readyDate: string;
-    age: string;
-    size: string;
     description: string;
-    highlights: string[];
-    images: string[];
-    linkTo: string;
-    isReserved?: boolean;
-    price?: number;
-    priceCurrency?: string;
-    priceIncludes?: string;
-    priceValidUntil?: string;
 };
 
 function toPuppyAnchorId(name: string) {
@@ -87,106 +23,6 @@ function toPuppyAnchorId(name: string) {
 
 function getPuppyUrl(puppy: PuppySchemaInput) {
     return toAbsoluteUrl(`${siteConfig.pages.puppies}#${toPuppyAnchorId(puppy.name)}`);
-}
-
-function getPuppyProductId(puppy: PuppySchemaInput) {
-    return `${getPuppyUrl(puppy)}-product`;
-}
-
-function getPuppyAvailability(isReserved?: boolean) {
-    return isReserved
-        ? "https://schema.org/OutOfStock"
-        : "https://schema.org/InStock";
-}
-
-function createPuppyAdditionalProperty(puppy: PuppySchemaInput) {
-    const puppyPriceValue =
-        typeof puppy.price === "number"
-            ? `${puppy.price} ${puppy.priceCurrency ?? "EUR"}${puppy.priceIncludes ? ` (${puppy.priceIncludes})` : ""}`
-            : undefined;
-    const candidates = [
-        { name: "Sexe", value: puppy.sexe },
-        { name: "Couleur", value: puppy.color },
-        { name: "Taille", value: puppy.size },
-        { name: "Poids adulte", value: puppy.weight },
-        { name: "Parents", value: puppy.parents },
-        { name: "Date naissance", value: puppy.age },
-        { name: "Disponibilité", value: puppy.isReserved ? "Réservé" : "Disponible" },
-        { name: "Prix", value: puppyPriceValue },
-        { name: "Zone d'adoption", value: "France et Suisse" },
-        { name: "Mode de départ", value: puppyDepartureMode },
-        { name: "Lignée", value: puppy.coat },
-        { name: "Départ possible", value: puppy.readyDate }
-    ];
-
-    return candidates
-        .filter((item) => item.value?.trim().length)
-        .map((item) => ({
-            "@type": "PropertyValue" as const,
-            name: item.name,
-            value: item.value
-        }));
-}
-
-function createPuppyProductEntity(puppy: PuppySchemaInput) {
-    const absoluteImages = puppy.images
-        .map((image) => image.trim())
-        .filter(Boolean)
-        .map(toAbsoluteUrl);
-    const productUrl = getPuppyUrl(puppy);
-    const productId = getPuppyProductId(puppy);
-
-    const offer = {
-        "@type": "Offer",
-        availability: getPuppyAvailability(puppy.isReserved),
-        url: productUrl,
-        eligibleRegion: puppyEligibleRegion,
-        shippingDetails: createOfferShippingDetails(),
-        hasMerchantReturnPolicy: createMerchantReturnPolicyReference(),
-        availableDeliveryMethod: "https://schema.org/OnSitePickup",
-        seller: {
-            "@id": organizationId
-        },
-        ...(typeof puppy.price === "number"
-            ? {
-                  price: String(puppy.price),
-                  priceCurrency: puppy.priceCurrency ?? "EUR",
-                  ...(puppy.priceValidUntil
-                      ? { priceValidUntil: puppy.priceValidUntil }
-                      : {}),
-                  ...(puppy.priceIncludes
-                      ? {
-                            priceSpecification: {
-                                "@type": "UnitPriceSpecification",
-                                price: String(puppy.price),
-                                priceCurrency: puppy.priceCurrency ?? "EUR",
-                                description: puppy.priceIncludes
-                            }
-                        }
-                      : {})
-              }
-            : {})
-    };
-
-    return {
-        "@type": "Product",
-        "@id": productId,
-        name: puppy.name,
-        description: puppy.description,
-        image: absoluteImages.length > 0 ? absoluteImages : [defaultImageUrl],
-        brand: {
-            "@type": "Brand",
-            name: puppyBrandName
-        },
-        category: puppyCategory,
-        additionalType: puppyAdditionalType,
-        additionalProperty: createPuppyAdditionalProperty(puppy),
-        url: productUrl,
-        offers: offer,
-        ...(puppy.highlights.length > 0
-            ? { keywords: puppy.highlights.join(", ") }
-            : {})
-    };
 }
 
 export function generateOrganizationSchema() {
@@ -246,11 +82,6 @@ export function generateOrganizationSchema() {
                 value: legal.legalForm
             }
         ],
-        hasMerchantReturnPolicy: {
-            "@type": "MerchantReturnPolicy",
-            "@id": merchantReturnPolicyId,
-            merchantReturnLink: toAbsoluteUrl(siteConfig.pages.terms)
-        },
         sameAs
     };
 }
@@ -356,41 +187,12 @@ export function generatePuppyListSchema(puppies: PuppySchemaInput[]) {
             "@type": "ListItem",
             position: index + 1,
             item: {
-                "@id": getPuppyProductId(puppy)
+                "@type": "Thing",
+                name: puppy.name,
+                description: puppy.description,
+                url: getPuppyUrl(puppy)
             }
         }))
-    };
-}
-
-export function generatePuppyProductSchema(puppy: PuppySchemaInput) {
-    return {
-        "@context": "https://schema.org",
-        ...createPuppyProductEntity(puppy)
-    };
-}
-
-export function generateReproductorSchema(dog: {
-    name: string;
-    description: string;
-    color: string;
-    size: string;
-    image: string;
-}) {
-    return {
-        "@context": "https://schema.org",
-        "@type": "Animal",
-        name: dog.name,
-        description: dog.description,
-        image: toAbsoluteUrl(dog.image),
-        additionalProperty: [
-            { "@type": "PropertyValue", name: "Couleur", value: dog.color },
-            { "@type": "PropertyValue", name: "Format", value: dog.size }
-        ],
-        affiliation: {
-            "@type": "Organization",
-            name: siteConfig.name,
-            url: siteConfig.siteUrl
-        }
     };
 }
 

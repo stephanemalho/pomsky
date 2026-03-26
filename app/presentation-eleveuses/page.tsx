@@ -3,9 +3,9 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { FAQSection } from "@/components/faq"
 import type { Metadata } from "next"
-import { buildOpenGraph, buildTwitter, pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
+import { buildOpenGraph, buildTwitter, pageMetadata, returnLastmod, siteConfig, sitemapPages } from "@/lib/seo-config"
 import { pageContent } from "@/lib/page-content"
-import { generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema-generators"
+import { generateBreadcrumbSchema, generateFAQSchema, generateWebPageSchema } from "@/lib/schema-generators"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
 import { faqEleveuses } from "@/lib/faq-data"
 import Link from "next/link"
@@ -64,6 +64,14 @@ export default function PresentationEleveusesPage() {
         { name: "Les éleveuses", url: siteConfig.pages.eleveuses },
     ])
     const faqSchema = generateFAQSchema(convertFAQsToSchema(faqEleveuses))
+    const pageLastModValue = sitemapPages.find((page) => page.url === siteConfig.pages.eleveuses)?.lastmod
+    const webPageSchema = generateWebPageSchema({
+        name: pageMetadata.eleveuses.title,
+        description: pageMetadata.eleveuses.description,
+        url: siteConfig.pages.eleveuses,
+        dateModified: pageLastModValue,
+        about: ["Éleveuses Pomsky", "Royal Pomsky", "Accompagnement adoption Pomsky"],
+    })
     const lastMod = returnLastmod(siteConfig.pages.eleveuses)
     const aurelieGallery = [
         {
@@ -165,6 +173,10 @@ export default function PresentationEleveusesPage() {
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
             />
 
             <div className="py-16">

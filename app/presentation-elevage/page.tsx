@@ -6,8 +6,8 @@ import { faqPresentation } from "@/lib/faq-data"
 import { Heart, Leaf, Star, HeartPulse, PawPrint, Stethoscope, Eye, Handshake } from "lucide-react"
 import Link from "next/link"
 import type { Metadata } from "next"
-import { buildOpenGraph, buildTwitter, pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
-import { generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema-generators"
+import { buildOpenGraph, buildTwitter, pageMetadata, returnLastmod, siteConfig, sitemapPages } from "@/lib/seo-config"
+import { generateBreadcrumbSchema, generateFAQSchema, generateWebPageSchema } from "@/lib/schema-generators"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
 
 export const metadata: Metadata = {
@@ -45,6 +45,14 @@ export default function PresentationPage() {
         { name: "Présentation", url: siteConfig.pages.presentation },
     ])
     const faqSchema = generateFAQSchema(convertFAQsToSchema(faqPresentation))
+    const pageLastModValue = sitemapPages.find((page) => page.url === siteConfig.pages.presentation)?.lastmod
+    const webPageSchema = generateWebPageSchema({
+        name: pageMetadata.presentation.title,
+        description: pageMetadata.presentation.description,
+        url: siteConfig.pages.presentation,
+        dateModified: pageLastModValue,
+        about: ["Élevage Pomsky", "Élevage de chiots Pomsky", "Socialisation des chiots", "Bien-être animal"],
+    })
     const lastMod = returnLastmod(siteConfig.pages.presentation)
 
     return (
@@ -57,6 +65,10 @@ export default function PresentationPage() {
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
             />
 
             <div className="py-16">
