@@ -295,12 +295,14 @@ export const pageMetadata = {
     },
 
     pomskyPrice: {
-        title: "Prix du Pomsky en France | Tarifs Toy, Miniature et Standard - Royal Pomsky",
+        title: "Prix Pomsky 2026 chez Royal Pomsky | Tarifs dès 2 500 €",
         description:
-            "Découvrez le prix d’un Pomsky en France selon sa catégorie : Toy, Miniature ou Standard. Comparez les tarifs, comprenez les critères qui influencent le prix et découvrez nos chiots disponibles.",
+            "Découvrez les prix 2026 des chiots Pomsky chez Royal Pomsky : tarifs dès 2 500 €, catégories Standard, Miniature et Toy, critères de sélection et accompagnement à l’adoption.",
         keywords: [
             "pomsky prix",
             "prix pomsky",
+            "prix pomsky 2026",
+            "prix royal pomsky",
             "prix chiot pomsky",
             "prix pomsky toy",
             "prix pomsky miniature",

@@ -48,7 +48,7 @@ export const metadata: Metadata = {
 }
 
 const quickPrices = [
-    { label: "Pomsky Standard", price: "à partir de 3 000 €" },
+    { label: "Pomsky Standard", price: "à partir de 2 500 €" },
     { label: "Pomsky Miniature", price: "à partir de 3 800 €" },
     { label: "Pomsky Toy", price: "à partir de 4 000 €" },
 ]
@@ -59,7 +59,7 @@ const priceCategories = [
         size: "format le plus grand",
         profile: "robe marquage husky génération F4 / F5 / F6",
         lineage: "américaine",
-        price: "3 000 € à 3 800 €",
+        price: "2 500 € à 3 800 €",
         availability: "Oui",
     },
     {
@@ -135,7 +135,7 @@ const faqPomskyPrice: FAQItem[] = [
         question: "Quel est le prix moyen d’un Pomsky en France ?",
         answer: (
             <p>
-                Le prix moyen d’un Pomsky en France peut varier selon sa catégorie, son gabarit, sa lignée et ses caractéristiques. À titre indicatif, un Pomsky peut se situer entre 3 000 € et 6 000 € selon son profil.
+                En 2026, le prix d’un Pomsky en France peut varier selon sa catégorie, son gabarit, sa lignée et ses caractéristiques. Chez Royal Pomsky, nos tarifs indicatifs démarrent à partir de 2 500 € et peuvent aller jusqu’à 6 000 € selon le profil du chiot.
             </p>
         ),
     },
@@ -210,16 +210,16 @@ export default function PomskyPricePage() {
                     <section className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
                         <div className="space-y-6">
                             <Badge variant="secondary" className="w-fit">
-                                Prix du Pomsky
+                                Prix Royal Pomsky 2026
                             </Badge>
                             <h1 className="text-2xl font-bold md:text-4xl">
-                                Prix d’un Pomsky en France : catégories, tarifs et critères à connaître
+                                Prix des Pomsky Royal Pomsky en 2026 : tarifs, catégories et accompagnement
                             </h1>
                             <p className="max-w-3xl text-lg leading-relaxed text-muted-foreground">
-                                Le prix d’un Pomsky en France peut varier selon plusieurs critères : la catégorie du chiot, son gabarit adulte estimé, sa lignée, sa génération, certaines caractéristiques morphologiques et le travail de sélection réalisé en élevage. Chez Royal Pomsky, nous faisons le choix de la transparence pour vous aider à mieux comprendre nos catégories de prix et à identifier le profil le plus adapté à votre projet d’adoption.
+                                En 2026, le prix d’un chiot Pomsky chez Royal Pomsky varie selon sa catégorie, son gabarit adulte estimé, sa lignée, sa génération et ses caractéristiques morphologiques. Nous avons choisi de présenter une grille claire et accessible pour vous aider à comprendre nos tarifs, à partir de 2 500 €, et à identifier le chiot le plus cohérent avec votre projet d’adoption.
                             </p>
                             <p className="max-w-3xl leading-relaxed text-muted-foreground">
-                                Sur cette page, vous retrouverez une estimation claire des prix selon les catégories Toy, Miniature et Standard, ainsi que les principaux éléments qui expliquent les différences de tarif entre deux chiots Pomsky.
+                                Sur cette page, vous retrouvez les repères de prix Royal Pomsky 2026 pour les catégories Standard, Miniature et Toy, ainsi que les principaux critères qui expliquent les écarts de tarif d’un chiot à l’autre.
                             </p>
                             <div className="flex flex-col gap-3 sm:flex-row">
                                 <Link
@@ -253,12 +253,12 @@ export default function PomskyPricePage() {
 
                     <section className="space-y-8">
                         <div className="space-y-3">
-                            <h2 className="text-xl font-bold md:text-2xl">Combien coûte un Pomsky ?</h2>
+                            <h2 className="text-xl font-bold md:text-2xl">Quels sont les prix des Pomsky Royal Pomsky en 2026 ?</h2>
                             <p className="max-w-4xl leading-relaxed text-muted-foreground">
-                                Le prix d’un Pomsky dépend avant tout de sa catégorie et de ses caractéristiques propres. À titre indicatif, un Pomsky peut se situer dans une fourchette allant de 3 000 € à 6 000 €.
+                                Le prix d’un Pomsky dépend avant tout de sa catégorie et de ses caractéristiques propres. En 2026, chez Royal Pomsky, un chiot peut se situer dans une fourchette allant de 2 500 € à 6 000 €.
                             </p>
                             <p className="max-w-4xl leading-relaxed text-muted-foreground">
-                                Voici une première estimation de nos catégories de prix. Ces tarifs sont donnés à titre indicatif. Le prix exact peut varier selon le profil du chiot, sa morphologie, son type, sa lignée et la rareté de certaines caractéristiques recherchées.
+                                Voici une première estimation de nos catégories de prix pour 2026. Ces tarifs sont donnés à titre indicatif. Le prix exact peut varier selon le profil du chiot, sa morphologie, son type, sa lignée et la rareté de certaines caractéristiques recherchées.
                             </p>
                             <p className="max-w-4xl leading-relaxed text-muted-foreground">
                                 Certains profils réunissant plusieurs critères recherchés, notamment un très petit format et une couleur rare comme le Silverwolf, peuvent atteindre 6 000 €.
@@ -282,9 +282,9 @@ export default function PomskyPricePage() {
 
                     <section className="space-y-8">
                         <div className="space-y-3">
-                            <h2 className="text-xl font-bold md:text-2xl">Nos catégories de prix Pomsky</h2>
+                            <h2 className="text-xl font-bold md:text-2xl">Nos catégories de prix Pomsky chez Royal Pomsky</h2>
                             <p className="max-w-4xl leading-relaxed text-muted-foreground">
-                                Pour vous aider à mieux comparer les profils, voici un aperçu simple des différentes catégories de Pomsky proposées à l’élevage.
+                                Pour vous aider à mieux comparer les profils, voici un aperçu simple des différentes catégories de Pomsky proposées chez Royal Pomsky en 2026.
                             </p>
                         </div>
 
@@ -331,7 +331,7 @@ export default function PomskyPricePage() {
 
                     <section className="space-y-8">
                         <div className="space-y-3">
-                            <h2 className="text-xl font-bold md:text-2xl">Pourquoi le prix d’un Pomsky peut-il varier ?</h2>
+                            <h2 className="text-xl font-bold md:text-2xl">Pourquoi le prix d’un Pomsky Royal Pomsky peut-il varier ?</h2>
                             <p className="max-w-4xl leading-relaxed text-muted-foreground">
                                 Deux chiots Pomsky n’ont pas forcément le même prix, même au sein d’une même portée. Plusieurs critères peuvent expliquer un écart de tarif. Il ne s’agit pas uniquement d’une question d’apparence, mais d’un ensemble de facteurs liés au travail de sélection, à la rareté de certains profils et à la qualité globale du chiot.
                             </p>
@@ -453,7 +453,7 @@ export default function PomskyPricePage() {
                                 </div>
                                 <h2 className="text-xl font-bold md:text-2xl">Vous souhaitez comprendre le prix du Pomsky plus en détail ?</h2>
                                 <p className="max-w-4xl leading-relaxed text-muted-foreground">
-                                    Cette page vous donne une vision claire de nos catégories tarifaires. Si vous souhaitez aller plus loin et mieux comprendre l’ensemble des éléments qui composent le coût d’adoption et d’entretien d’un Pomsky, nous vous invitons à consulter notre guide complet dédié au prix du Pomsky.
+                                Cette page vous donne une vision claire de nos catégories tarifaires 2026. Si vous souhaitez aller plus loin et mieux comprendre l’ensemble des éléments qui composent le coût d’adoption et d’entretien d’un Pomsky, nous vous invitons à consulter notre guide complet dédié au prix du Pomsky.
                                 </p>
                                 <Link
                                     href="/blog/pomsky/prix/pomsky-prix-guide-complet-pour-comprendre-le-cout-dadoption-et-dentretien"
@@ -491,8 +491,8 @@ export default function PomskyPricePage() {
                     </section>
 
                     <FAQSection
-                        title="Questions fréquentes sur le prix du Pomsky"
-                        description="Les réponses essentielles sur les tarifs du Pomsky, les différences entre catégories et les critères à regarder avant adoption."
+                        title="Questions fréquentes sur le prix du Pomsky en 2026"
+                        description="Les réponses essentielles sur les tarifs Royal Pomsky 2026, les différences entre catégories et les critères à regarder avant adoption."
                         items={faqPomskyPrice}
                     />
 
