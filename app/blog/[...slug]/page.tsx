@@ -254,6 +254,30 @@ export default async function BlogArticlePage({
                 </section>
             ) : null}
 
+            <section className="max-w-3xl mx-auto px-6 pb-10">
+                <div className="rounded-3xl border border-primary/20 bg-primary/5 p-6 md:p-8">
+                    <p className="text-xs uppercase tracking-[0.2em] text-primary/80">
+                        Chiots disponibles
+                    </p>
+                    <h2 className="mt-2 text-xl md:text-2xl font-sans font-semibold text-foreground">
+                        Découvrir nos chiots Pomsky actuellement disponibles
+                    </h2>
+                    <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                        Vous souhaitez passer de la lecture à un projet d&apos;adoption concret ? Consultez
+                        nos chiots Pomsky disponibles en ce moment chez Royal Pomsky et découvrez les
+                        profils actuellement proposés.
+                    </p>
+                    <div className="mt-5">
+                        <Link
+                            href="/chiots-disponibles"
+                            className="inline-flex items-center gap-2 rounded-full border border-primary px-5 py-3 text-sm font-semibold text-primary transition-colors hover:bg-primary/10"
+                        >
+                            Voir les chiots disponibles actuellement
+                        </Link>
+                    </div>
+                </div>
+            </section>
+
             <aside className="max-w-3xl mx-auto px-6 pb-16">
                 <div className="rounded-3xl border border-border bg-card p-6 md:p-8 flex flex-col md:flex-row gap-6 items-center md:items-start">
                     <div className="relative h-20 w-20 overflow-hidden rounded-full bg-muted">
