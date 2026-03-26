@@ -43,12 +43,12 @@ export const puppies: Puppy[] = [
         ],
         health: ["Suivi vétérinaire en cours"],
         images: [
-            "pages/puppies/VUK-pomsky-7-week.webp",
-            "pages/puppies/VUK-pomsky-left-profile.webp",
-            "pages/puppies/VUK-pomsky-face-side.webp",
-            "pages/puppies/VUK-pomky-puppy.webp",
-            "pages/puppies/Vuk-pomsky-available-for-adoption.webp",
-            "pages/puppies/VUK-pomsky-from-royal-pomsky.webp"
+            "pages/puppies/VUK-male-pomsky-a-vendre-1.jpeg",
+            "pages/puppies/VUK-male-pomsky-a-vendre-2.jpeg",
+            "pages/puppies/VUK-male-pomsky-a-vendre-3.jpeg",
+            "pages/puppies/VUK-male-pomsky-a-vendre-4.jpeg",
+            "pages/puppies/VUK-male-pomsky-a-vendre-5.jpeg",
+            "pages/puppies/VUK-male-pomsky-a-vendre-6.jpeg"
         ],
         linkTo: "https://forms.gle/wtcxuo84YEQzposV9",
         isReserved: false,
@@ -78,10 +78,8 @@ export const puppies: Puppy[] = [
         ],
         health: ["Suivi vétérinaire en cours"],
         images: [
-            "pages/puppies/ALUNA-pomsky-right.webp",
-            "pages/puppies/ALUNA-pomsky-6week-pet.webp",
-            "pages/puppies/ALUNA-puppy-eyes-open.webp"
-        ],
+            "pages/puppies/Aluna-chiot-pomsky-toy-de-face.jpeg",
+            "pages/puppies/Aluna-pomsky-chiot-femellle-a-vendre.jpeg"        ],
         linkTo: "https://forms.gle/aDbQtgwXUtoaH5QFA",
         isReserved: false,
         price: 4500,
