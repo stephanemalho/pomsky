@@ -12,7 +12,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import ImageCarousel from "@/components/client/carousel/ImageCarousel"
 import { Badge } from "@/components/ui/badge"
 
-const puppiesOgImage = "/pages/puppies/VUK-male-pomsky-a-vendre-1.jpeg"
+const puppiesOgImage = "/pages/puppies/SNOW-male-pomsky-a-vendre-5.jpeg"
 
 export const metadata: Metadata = {
     title: pageMetadata.puppies.title,

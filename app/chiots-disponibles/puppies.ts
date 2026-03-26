@@ -22,41 +22,6 @@ export type Puppy = {
 };
 
 export const puppies: Puppy[] = [
-     {
-        name: "VUK",
-        coat: "Pomsky F5 (ADN Poméranian / Husky)",
-        color: "Noir et blanc",
-        sexe: "Mâle",
-        size: "miniature",
-        ruler: "Pelage fluffy",
-        weight: "7-8kg",
-        parents: "Parents : SHADOW & BANDIT",
-        readyDate: "Peut rejoindre sa famille dès maintenant",
-        age: "Né le 10 janvier 2026",
-        description:
-            "Vuk est un mâle Pomsky F5 aux yeux Vairons et il est le plus grand chiot de la portée (il va faire 7 à 8kg adulte): gourmand, joueur et affectueux, il ressemble beaucoup à sa maman Shadow. Voici les caractéristiques de Vuk : un masque en Fleur de Lys, une robe noire et blanche, des yeux vairons (un bleu et un marron) et une taille miniature. Vuk est un chiot très sociable qui adore les câlins et les jeux avec les enfants. Profitez de cette liste de photos pour découvrir son évolution et son caractère attachant ! (à 8 semaines)",
-        highlights: [
-            "Mâle",
-            "Masque Fleur de Lys",
-            "Vairons",
-            "Taille miniature",
-        ],
-        health: ["Suivi vétérinaire en cours"],
-        images: [
-            "pages/puppies/VUK-male-pomsky-a-vendre-1.jpeg",
-            "pages/puppies/VUK-male-pomsky-a-vendre-2.jpeg",
-            "pages/puppies/VUK-male-pomsky-a-vendre-3.jpeg",
-            "pages/puppies/VUK-male-pomsky-a-vendre-4.jpeg",
-            "pages/puppies/VUK-male-pomsky-a-vendre-5.jpeg",
-            "pages/puppies/VUK-male-pomsky-a-vendre-6.jpeg"
-        ],
-        linkTo: "https://forms.gle/wtcxuo84YEQzposV9",
-        isReserved: false,
-        price: 3800,
-        priceCurrency: "EUR",
-        priceIncludes: "ttc",
-        priceValidUntil: "2026-12-31"
-    },
     {
         name: "ALUNA",
         coat: "Pomsky Toy F5 (ADN Poméranian / Husky)",
@@ -84,6 +49,41 @@ export const puppies: Puppy[] = [
         linkTo: "https://forms.gle/aDbQtgwXUtoaH5QFA",
         isReserved: false,
         price: 4500,
+        priceCurrency: "EUR",
+        priceIncludes: "ttc",
+        priceValidUntil: "2026-12-31"
+    },
+    {
+        name: "SNOW",
+        coat: "Pomsky F5 (ADN Poméranian / Husky)",
+        color: "Noir et blanc",
+        sexe: "Mâle",
+        size: "miniature",
+        ruler: "Pelage fluffy",
+        weight: "7-8kg",
+        parents: "Parents : SHADOW & BANDIT",
+        readyDate: "Peut rejoindre sa famille dès maintenant",
+        age: "Né le 10 janvier 2026",
+        description:
+            "Snow est un mâle Pomsky F5 aux yeux vairons et il est le plus grand chiot de la portée (il va faire 7 à 8 kg adulte) : gourmand, joueur et affectueux, il ressemble beaucoup à sa maman Shadow. Voici les caractéristiques de Snow : un masque en Fleur de Lys, une robe noire et blanche, des yeux vairons (un bleu et un marron) et une taille miniature. Snow est un chiot très sociable qui adore les câlins et les jeux avec les enfants. Profitez de cette liste de photos pour découvrir son évolution et son caractère attachant ! (à 8 semaines)",
+        highlights: [
+            "Mâle",
+            "Masque Fleur de Lys",
+            "Vairons",
+            "Taille miniature",
+        ],
+        health: ["Suivi vétérinaire en cours"],
+        images: [
+            "pages/puppies/SNOW-male-pomsky-a-vendre-5.jpeg",
+            "pages/puppies/SNOW-male-pomsky-a-vendre-6.jpeg",
+            "pages/puppies/SNOW-male-pomsky-a-vendre-1.jpeg",
+            "pages/puppies/SNOW-male-pomsky-a-vendre-2.jpeg",
+            "pages/puppies/SNOW-male-pomsky-a-vendre-3.jpeg",
+            "pages/puppies/SNOW-male-pomsky-a-vendre-4.jpeg"
+        ],
+        linkTo: "https://forms.gle/wtcxuo84YEQzposV9",
+        isReserved: false,
+        price: 3800,
         priceCurrency: "EUR",
         priceIncludes: "ttc",
         priceValidUntil: "2026-12-31"
