@@ -491,7 +491,7 @@ export const sitemapPages = [
         url: "/le-pomsky",
         changefreq: "monthly",
         priority: 0.75,
-        lastmod: "2026-03-08"
+        lastmod: "2026-03-26"
     },
     {
         url: "/pomsky-prix",
@@ -509,37 +509,37 @@ export const sitemapPages = [
         url: "/adoption/reussir-son-adoption",
         changefreq: "monthly",
         priority: 0.8,
-        lastmod: "2026-03-07"
+        lastmod: "2026-03-26"
     },
     {
         url: "/femelles-reproductrices",
         changefreq: "monthly",
         priority: 0.8,
-        lastmod: "2026-03-03"
+        lastmod: "2026-03-26"
     },
     {
         url: "/presentation-elevage",
         changefreq: "monthly",
         priority: 0.7,
-        lastmod: "2026-03-03"
+        lastmod: "2026-03-26"
     },
     {
         url: "/presentation-eleveuses",
         changefreq: "monthly",
         priority: 0.7,
-        lastmod: "2026-02-15"
+        lastmod: "2026-03-26"
     },
     {
         url: "/bien-etre-animal",
         changefreq: "monthly",
         priority: 0.7,
-        lastmod: "2026-03-08"
+        lastmod: "2026-03-26"
     },
     {
         url: "/contact",
         changefreq: "monthly",
         priority: 0.8,
-        lastmod: "2026-03-09"
+        lastmod: "2026-03-26"
     },
     {
         url: "/mentions-legales",
