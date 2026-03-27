@@ -5,11 +5,11 @@ export const pomskyClandestineBreedingPost: BlogPost = {
     slug: "pomsky/prix/elevage-clandestin-de-chiots-comment-reperer-les-signaux-dalerte-avant-adoption",
     title: "Élevage clandestin de chiots : comment repérer les signaux d'alerte avant adoption",
     seoTitle:
-        "Élevage clandestin de chiots : les signaux d'alerte à connaître avant d'adopter un Pomsky",
+        "Élevage clandestin de chiots : les signaux d'alerte avant réservation",
     excerpt:
         "Les affaires d'élevages clandestins rappellent qu'une annonce séduisante ne suffit jamais. Voici comment repérer les signaux d'alerte, protéger votre projet d'adoption et éviter les cadres opaques ou risqués.",
     seoDescription:
-        "Comment reconnaître un élevage clandestin de chiots avant adoption ? Découvrez les signaux d'alerte, les questions à poser et les vérifications utiles avant de réserver un Pomsky.",
+        "Comment reconnaître un élevage clandestin de chiots ? Découvrez les signaux d'alerte, les questions à poser et les vérifications utiles avant de réserver un Pomsky.",
     introduction:
         "Les faits divers liés à des élevages clandestins rappellent une réalité simple: une belle annonce ou un chiot très photogénique ne disent presque rien sur les conditions dans lesquelles il a grandi. Pour un futur adoptant, le vrai sujet n'est pas seulement moral. Il est aussi pratique, sanitaire et comportemental. Quand le cadre d'élevage est opaque, improvisé ou dissimulé, les risques augmentent pour le chiot comme pour la famille. Cet article ne cherche donc pas à commenter une affaire précise, mais à transformer cette actualité en repères utiles: comment reconnaître un contexte à risque, quelles questions poser et à quel moment il vaut mieux renoncer plutôt que se rassurer trop vite.",
     modifiedDate: "2026-03-27",

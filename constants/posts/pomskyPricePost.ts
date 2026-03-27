@@ -5,11 +5,11 @@ export const pomskyPrixPost: BlogPost = {
     slug: "pomsky/prix/pomsky-prix-guide-complet-pour-comprendre-le-cout-dadoption-et-dentretien",
     title: "Prix d'un Pomsky 2026 : quel budget total prévoir sur toute sa vie ?",
     seoTitle:
-        "Combien coûte un Pomsky sur sa vie ? Budget global d'adoption, d'entretien et de santé",
+        "Budget Pomsky sur 10 à 15 ans : coût réel d'achat, d'entretien et de santé",
     excerpt:
         "Le prix d'achat d'un Pomsky n'est qu'une partie du budget. Découvrez combien coûte réellement un Pomsky sur 10 à 15 ans: adoption, matériel, alimentation, vétérinaire, entretien et imprévus.",
     seoDescription:
-        "Quel budget total prévoir pour un Pomsky ? Ce guide détaille le coût d'achat, les frais initiaux, le budget mensuel, les soins vétérinaires, l'entretien et la projection financière sur toute la vie du chien.",
+        "Quel budget total prévoir pour un Pomsky pour la vie de tous les jours? Découvrez le coût réel d'achat, les frais initiaux, le budget mensuel, les soins vétérinaires et les imprévus.",
     introduction:
         "Le vrai sujet n'est pas seulement le prix d'achat d'un Pomsky, mais le budget global que représente ce chien pendant 10 à 15 ans. Beaucoup de familles se focalisent sur le tarif du chiot, puis découvrent après l'adoption que l'alimentation, les soins vétérinaires, l'entretien du pelage, les accessoires, les imprévus et parfois la garde pèsent davantage sur la durée. Si vous cherchez une réponse claire à la question 'combien coûte un Pomsky au total ?', cet article vous aide à vous projeter avec des repères concrets, sans dramatiser ni minimiser l'engagement financier.",
     modifiedDate: "2026-03-27",

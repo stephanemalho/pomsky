@@ -276,9 +276,9 @@ export const pageMetadata = {
     },
 
     pomsky: {
-        title: "Tout savoir sur le Pomsky d’Amérique : origines, taille, caractère et adoption",
+        title: "Le Pomsky : origines, taille, caractère et générations | Guide complet",
         description:
-            "Découvrez tout ce qu’il faut savoir sur le Pomsky d’origine américaine : son histoire, ses formats toy, miniature et standard, son caractère, les générations F1 à F5, ses besoins et les repères utiles avant une adoption réfléchie.",
+            "Guide complet sur le Pomsky : origines, formats Toy, Miniature et Standard, caractère, générations F1 à F5 et repères utiles avant une adoption réfléchie.",
         keywords: [
             "qu est ce qu un pomsky",
             "origine du pomsky",
@@ -294,9 +294,9 @@ export const pageMetadata = {
     },
 
     pomskyPrice: {
-        title: "Prix d’un Pomsky en 2026 chez Royal Pomsky | Tarifs dès 2 500 €",
+        title: "Prix Royal Pomsky 2026 | Tarifs Pomsky Standard, Miniature et Toy",
         description:
-            "Découvrez les tarifs 2026 des chiots Pomsky chez Royal Pomsky : prix dès 2 500 €, catégories Standard, Miniature et Toy, critères de sélection et accompagnement à l’adoption.",
+            "Consultez les tarifs 2026 des chiots Royal Pomsky : prix par catégorie, profils Standard, Miniature et Toy, et repères utiles pour comprendre nos écarts de tarif.",
         keywords: [
             "pomsky prix",
             "prix pomsky",

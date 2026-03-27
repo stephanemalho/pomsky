@@ -175,12 +175,12 @@ export default function PresentationPage() {
                                     </p>
                                 </CardContent>
                             </Card>
-                            <h3 className="text-xl font-semibold mb-2 text-center md:col-span-3">Pour mieux comprendre le caractère de votre futur compagnon, n&apos;hésitez pas à consulter notre article complet sur le tempérament du Pomsky toy.</h3>
+                            <h3 className="text-xl font-semibold mb-2 text-center md:col-span-3">Pour mieux comprendre la race, ses formats et les repères utiles avant adoption, vous pouvez consulter notre guide complet sur le Pomsky.</h3>
                             <div className="flex justify-center md:col-span-3 hover:underline">
                                 <Link
                                     href="/le-pomsky"
                                     className="flex items-center bg-primary h-10 text-white hover:bg-primary/80 px-4 font-semibold  dark:text-[#5b3a1a] rounded-md w-fit"
-                                >En savoir plus sur le tempérament du Pomsky toy</Link>
+                                >Lire le guide complet sur le Pomsky</Link>
                             </div>
                         </div>
                     </section>
