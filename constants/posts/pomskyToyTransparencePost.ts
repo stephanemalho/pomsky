@@ -12,6 +12,7 @@ export const pomskyToyTransparencePost: BlogPost = {
         "Un Pomsky pas cher peut cacher des promesses floues ou des annonces trompeuses. Voici les vérifications utiles avant réservation et les repères pour lire une annonce avec recul.",
     introduction:
         "L'expression 'Pomsky pas cher' attire naturellement les familles, surtout lorsqu'elle s'accompagne de promesses très séduisantes: très petit format, yeux bleus, robe rare, disponibilité immédiate ou taille adulte garantie. Le problème n'est pas de comparer les prix. Le problème, c'est de confondre un tarif attractif avec une bonne opportunité. Dans cet article, nous expliquons comment lire ces annonces avec recul, quels signaux doivent vous alerter et pourquoi la transparence compte bien davantage qu'un prix d'appel.",
+    modifiedDate: "2026-03-27",
     sections: [
         {
             subtitle:

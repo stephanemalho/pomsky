@@ -25,7 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         url: toUrl("/blog/pomsky"),
         changeFrequency: "weekly",
         priority: 0.8,
-        lastModified: "2026-02-13",
+        lastModified: "2026-03-27",
     };
 
     const blogThemeEntries: MetadataRoute.Sitemap = blog.themes.map(
@@ -33,7 +33,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
             url: toUrl(`/blog/pomsky/${theme.slug}`),
             changeFrequency: "monthly",
             priority: 0.6,
-            lastModified: "2026-02-13",
+            lastModified: "2026-03-27",
         })
     );
 
