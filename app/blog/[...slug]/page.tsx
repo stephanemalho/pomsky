@@ -150,11 +150,14 @@ export default async function BlogArticlePage({
     const { articleLabels } = blog;
     const relatedPosts = getRelatedPosts(post);
     const articleUrl = new URL(`/blog/${post.slug}`, siteConfig.siteUrl).toString();
+    const hasModifiedDate = Boolean(post.modifiedDate && post.modifiedDate !== post.date);
+    const displayedDate = hasModifiedDate ? post.modifiedDate! : post.date;
     const articleSchema = generateBlogPostingSchema({
         title: post.title,
         excerpt: post.excerpt,
         url: articleUrl,
         datePublished: post.date,
+        dateModified: post.modifiedDate,
         imageUrl: post.image ?? siteConfig.ogImage,
         imageAlt: post.imageAlt ?? post.title,
         authorName: post.author.name,
@@ -187,7 +190,10 @@ export default async function BlogArticlePage({
                         {post.introduction}
                     </p>
                     <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.2em] text-muted-foreground">
-                        <time dateTime={post.date}>{formatDate(post.date)}</time>
+                        <time dateTime={displayedDate}>
+                            {formatDate(displayedDate)}
+                            {hasModifiedDate ? " (modifié)" : ""}
+                        </time>
                         <span>•</span>
                         <span>{post.readTime}</span>
                     </div>

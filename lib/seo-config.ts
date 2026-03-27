@@ -498,7 +498,7 @@ export const sitemapPages = [
         url: "/pomsky-prix",
         changefreq: "monthly",
         priority: 0.8,
-        lastmod: "2026-03-08"
+        lastmod: "2026-03-27"
     },
     {
         url: "/chiots-disponibles",
@@ -540,7 +540,7 @@ export const sitemapPages = [
         url: "/contact",
         changefreq: "monthly",
         priority: 0.8,
-        lastmod: "2026-03-26"
+        lastmod: "2026-03-27"
     },
     {
         url: "/mentions-legales",

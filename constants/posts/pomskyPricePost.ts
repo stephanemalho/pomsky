@@ -11,6 +11,7 @@ export const pomskyPrixPost: BlogPost = {
         "Au-delà du prix d’achat, découvrez le budget quotidien d’un Pomsky : alimentation, toilettage, frais vétérinaires, antiparasitaires et dépenses courantes à anticiper avant l’adoption.",
     introduction:
         "Particulièrement populaire en France et aux États-Unis, le Pomsky séduit par son caractère, sa taille réduite et son apparence, notamment ses yeux souvent bleus hérités du Husky. Avant d'adopter ce chien hybride, il est essentiel de comprendre le coût global que représente son adoption et son entretien tout au long de sa vie.",
+    modifiedDate: "2026-03-27",
     sections: [
         {
             subtitle: "Élevage et achat des chiots Pomsky",

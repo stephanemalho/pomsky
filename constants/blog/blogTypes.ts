@@ -23,6 +23,7 @@ export type BlogPost = {
         linkedinLabelPrefix: string;
     };
     date: string;
+    modifiedDate?: string;
     readTime: string;
     category: string;
     tags: string[];
