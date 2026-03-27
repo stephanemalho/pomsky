@@ -276,9 +276,9 @@ export const pageMetadata = {
     },
 
     pomsky: {
-        title: "Pomsky : taille, caractère, prix, Pomsky Toy, F1 à F5 | Guide complet",
+        title: "Tout savoir sur le Pomsky d’Amérique : origines, taille, caractère et adoption",
         description:
-            "Découvrez le Pomsky : tailles toy, miniature et standard, caractère, origines, générations F1 à F5, prix et conseils pour une adoption responsable.",
+            "Découvrez tout ce qu’il faut savoir sur le Pomsky d’origine américaine : son histoire, ses formats toy, miniature et standard, son caractère, les générations F1 à F5, ses besoins et les repères utiles avant une adoption réfléchie.",
         keywords: [
             "qu est ce qu un pomsky",
             "origine du pomsky",
@@ -290,7 +290,6 @@ export const pageMetadata = {
             "pomsky vs klee kai",
             "caractere pomsky",
             "sante pomsky",
-            "prix pomsky",
         ]
     },
 
@@ -492,7 +491,7 @@ export const sitemapPages = [
         url: "/le-pomsky",
         changefreq: "monthly",
         priority: 0.75,
-        lastmod: "2026-03-26"
+        lastmod: "2026-03-27"
     },
     {
         url: "/pomsky-prix",
