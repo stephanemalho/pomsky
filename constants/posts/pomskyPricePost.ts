@@ -4,8 +4,11 @@ export const pomskyPrixPost: BlogPost = {
     id: "pomsky-prix",
     slug: "pomsky/prix/pomsky-prix-guide-complet-pour-comprendre-le-cout-dadoption-et-dentretien",
     title: "Prix d'un pomsky 2026 : guide complet pour comprendre le coût d'adoption et d'entretien au quotidien",
+    seoTitle: "Coût d’un Pomsky au quotidien : nourriture, vétérinaire, toilettage et budget à prévoir",
     excerpt:
         "Quel est le prix d'un Pomsky ? Découvrez les coûts liés à l'adoption, à l'alimentation, à l'entretien et à la santé afin de bien préparer l'arrivée de ce chien au caractère unique.",
+    seoDescription:
+        "Au-delà du prix d’achat, découvrez le budget quotidien d’un Pomsky : alimentation, toilettage, frais vétérinaires, antiparasitaires et dépenses courantes à anticiper avant l’adoption.",
     introduction:
         "Particulièrement populaire en France et aux États-Unis, le Pomsky séduit par son caractère, sa taille réduite et son apparence, notamment ses yeux souvent bleus hérités du Husky. Avant d'adopter ce chien hybride, il est essentiel de comprendre le coût global que représente son adoption et son entretien tout au long de sa vie.",
     sections: [

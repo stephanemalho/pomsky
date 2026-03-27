@@ -295,9 +295,9 @@ export const pageMetadata = {
     },
 
     pomskyPrice: {
-        title: "Prix Pomsky 2026 chez Royal Pomsky | Tarifs dès 2 500 €",
+        title: "Prix d’un Pomsky en 2026 chez Royal Pomsky | Tarifs dès 2 500 €",
         description:
-            "Découvrez les prix 2026 des chiots Pomsky chez Royal Pomsky : tarifs dès 2 500 €, catégories Standard, Miniature et Toy, critères de sélection et accompagnement à l’adoption.",
+            "Découvrez les tarifs 2026 des chiots Pomsky chez Royal Pomsky : prix dès 2 500 €, catégories Standard, Miniature et Toy, critères de sélection et accompagnement à l’adoption.",
         keywords: [
             "pomsky prix",
             "prix pomsky",

@@ -99,17 +99,19 @@ export async function generateMetadata({
     const imageUrl = post.image
         ? new URL(post.image, siteConfig.siteUrl).toString()
         : new URL(siteConfig.ogImage, siteConfig.siteUrl).toString();
+    const metadataTitle = post.seoTitle ?? post.title;
+    const metadataDescription = post.seoDescription ?? post.excerpt;
 
     return {
-        title: post.title,
-        description: post.excerpt,
+        title: metadataTitle,
+        description: metadataDescription,
         keywords: post.tags,
         alternates: {
             canonical: new URL(canonicalPath, siteConfig.siteUrl).toString(),
         },
         openGraph: buildOpenGraph({
-            title: post.title,
-            description: post.excerpt,
+            title: metadataTitle,
+            description: metadataDescription,
             url: new URL(canonicalPath, siteConfig.siteUrl).toString(),
             type: "article",
             publishedTime: post.date,
@@ -125,8 +127,8 @@ export async function generateMetadata({
             ],
         }),
         twitter: buildTwitter({
-            title: post.title,
-            description: post.excerpt,
+            title: metadataTitle,
+            description: metadataDescription,
             imageUrl,
         }),
     };

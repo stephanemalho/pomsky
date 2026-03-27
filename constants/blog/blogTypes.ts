@@ -9,7 +9,9 @@ export type BlogPost = {
     id: string;
     slug: string;
     title: string;
+    seoTitle?: string;
     excerpt: string;
+    seoDescription?: string;
     introduction: string;
     sections: BlogSection[];
     author: {
