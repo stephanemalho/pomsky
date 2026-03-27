@@ -61,7 +61,7 @@ export default function PresentationPage() {
         description: pageMetadata.presentation.description,
         url: siteConfig.pages.presentation,
         dateModified: pageLastModValue,
-        about: ["Élevage Pomsky", "Élevage de chiots Pomsky", "Socialisation des chiots", "Bien-être animal"],
+        about: ["Politique d'élevage Pomsky", "Sélection des reproducteurs", "Lignées américaines", "Suivi sanitaire"],
     })
     const lastMod = returnLastmod(siteConfig.pages.presentation)
 
@@ -86,14 +86,11 @@ export default function PresentationPage() {
                     {/* Hero Section */}
                     <section className="text-center space-y-6 mb-16">
                         <h1
-                            className="text-xl md:text-3xl font-bold">Élevage de Pomsky Toy de lignée américaine</h1>
+                            className="text-xl md:text-3xl font-bold">La politique d’élevage Royal Pomsky</h1>
                         <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                            Découvrez plus en détail notre élevage professionnel de Pomsky toy en France.
+                            Chez Royal Pomsky, notre travail commence bien avant la naissance. Cette page explique les choix qui structurent notre élevage : sélection des parents, lignées importées des États-Unis, exigences sanitaires, portées raisonnées et accompagnement sérieux de chaque chiot.
                         </p>
-                        <p className="text-muted-foreground max-w-2xl mx-auto">
-                            Bien que nous soyons spécialisés dans l'élevage de Pomsky toy, nous proposons également les deux autres formats (Miniature et Standard) avec un engagement envers le bien-être animal et la satisfaction des familles adoptantes. Explorez notre élevage, nos valeurs et notre passion pour cette race exceptionnelle.
-                        </p>
-                        <p className="text-muted-foreground max-w-2xl mx-auto">Nous abordons plusieurs aspects, tels que la sélection rigoureuse des parents, la socialisation progressive, le suivi vétérinaire complet et l’accompagnement des familles.
+                        <p className="text-muted-foreground max-w-2xl mx-auto">Si vous voulez comprendre notre méthode d’élevage et la manière dont nous cherchons à faire naître des chiots Pomsky sains, stables et bien préparés, vous êtes au bon endroit.
                         </p>
                         <div className="w-24 h-1 bg-primary mx-auto rounded-full" aria-hidden="true" />
                     </section>
@@ -107,19 +104,13 @@ export default function PresentationPage() {
                                     Notre philosophie
                                 </Badge>
                                 <h2 className="text-xl md:text-2xl font-bold">
-                                    Faire naître des Pomsky équilibrés
+                                    Faire naître des chiots en bonne santé commence par les bons choix
                                 </h2>
                                 <p className="text-muted-foreground leading-relaxed">
-                                    Notre travail commence bien avant la naissance, car le choix des parents en fonction de leurs caractéristiques génétiques est essentiel.
-                                    Le suivi vétérinaire doit être rigoureux et demande une attention constante à la qualité de vie des femelles,
-                                    afin de garantir que les mamans, en bonne santé, puissent s’occuper de leurs bébés Pomsky
-                                    et offrir aux chiots un départ progressif et serein dans leur future vie de Pomsky.
+                                    Notre programme d’élevage repose sur une idée simple : la qualité d’un chiot se prépare en amont. Nous accordons une attention majeure à la sélection des reproducteurs, à leur santé, à leur tempérament et à la cohérence des mariages, pour construire des portées réfléchies plutôt que de multiplier les naissances.
                                 </p>
                                 <p className="text-muted-foreground leading-relaxed">
-                                    Les petits Pomsky grandissent dans des espaces pensés pour l’apprentissage, afin de créer des repères stables.
-                                    Nous pratiquons des manipulations douces, habituons nos Pomsky aux bruits du quotidien,
-                                    avec des sorties en plein air et des découvertes guidées.
-                                    L’objectif est de former un Pomsky Toy confiant, bien socialisé et prêt à rejoindre sa famille.
+                                    Nous avons fait le choix de bâtir notre élevage autour de lignées américaines soigneusement sélectionnées. Ce travail sur les origines, les profils et le suivi sanitaire nous permet de viser des chiots plus homogènes, plus sains et mieux préparés pour la vie de famille.
                                 </p>
                             </div>
                             <div className="relative h-64 md:h-100 rounded-lg overflow-hidden">
@@ -140,7 +131,7 @@ export default function PresentationPage() {
                     <section className="mb-16 bg-muted/30 -mx-4 px-4 py-16 rounded-lg">
                         <div className="text-center mb-12">
                             <h2
-                                className="text-xl md:text-2xl font-bold mb-4">Nos valeurs pour des pomsky heureux</h2>
+                                className="text-xl md:text-2xl font-bold mb-4">Les piliers de notre programme d’élevage</h2>
                             <div className="w-24 h-1 bg-primary mx-auto rounded-full" aria-hidden="true" />
                         </div>
                         <div className="grid md:grid-cols-3 gap-8">
@@ -151,9 +142,9 @@ export default function PresentationPage() {
                                             <HeartPulse className="h-6 w-6 text-primary-foreground" />
                                         </div>
                                     </div>
-                                    <h3 className="text-xl font-semibold mb-2">Lien maternel & autonomie progressive</h3>
+                                    <h3 className="text-xl font-semibold mb-2">Sélection et cohérence des mariages</h3>
                                     <p className="text-muted-foreground text-sm">
-                                        Les premières semaines se déroulent au contact de la mère, puis des phases de découverte progressive sont mises en place pour accompagner le chiot vers plus d'autonomie, sans rupture brutale.
+                                        Chaque portée est pensée en fonction de la santé, du tempérament, de la construction et de l’objectif de notre programme, afin d’éviter les choix approximatifs.
                                     </p>
                                 </CardContent>
                             </Card>
@@ -164,9 +155,9 @@ export default function PresentationPage() {
                                             <Heart className="h-6 w-6 text-primary-foreground" />
                                         </div>
                                     </div>
-                                    <h3 className="text-xl font-semibold mb-2">Santé & équilibre</h3>
+                                    <h3 className="text-xl font-semibold mb-2">Lignées américaines choisies avec exigence</h3>
                                     <p className="text-muted-foreground text-sm">
-                                        Contrôles vétérinaires réguliers, alimentation adaptée et environnement sain pour des chiots solides et épanouis.
+                                        Nos reproducteurs ont été importés des États-Unis pour construire un élevage fondé sur des bases solides et sur des lignées que nous avons réellement choisies.
                                     </p>
                                 </CardContent>
                             </Card>
@@ -178,9 +169,9 @@ export default function PresentationPage() {
                                             <Leaf className="h-6 w-6 text-primary-foreground" />
                                         </div>
                                     </div>
-                                    <h3 className="text-xl font-semibold mb-2">Socialisation progressive</h3>
+                                    <h3 className="text-xl font-semibold mb-2">Suivi sanitaire et préparation du départ</h3>
                                     <p className="text-muted-foreground text-sm">
-                                        Stimulation douce, jeux d&apos;éveil et mises en situation variées pour des Pomsky à l&apos;aise partout.
+                                        Tests, suivi vétérinaire, observation et préparation des familles font partie intégrante du travail qui entoure chaque chiot avant son départ.
                                     </p>
                                 </CardContent>
                             </Card>
@@ -212,40 +203,40 @@ export default function PresentationPage() {
                                     Notre approche
                                 </Badge>
                                 <h2
-                                    className="text-xl md:text-2xl font-bold">Une approche respectueuse et exigeante</h2>
+                                    className="text-xl md:text-2xl font-bold">Une méthode d’élevage pensée dans la durée</h2>
                                 <p className="text-muted-foreground leading-relaxed">
-                                    Portées raisonnées, temps dédié à chaque chiot et à chaque famille, et un accompagnement personnalisé selon le caractère.
+                                    Notre objectif n’est pas seulement de faire naître de beaux Pomsky, mais de construire un élevage cohérent, lisible et exigeant, avec des choix assumés sur les origines, la santé et l’accompagnement.
                                 </p>
                                 <div className="space-y-3">
                                     <div className="flex items-start space-x-3">
                                         <div className="w-2 h-2 bg-primary rounded-full mt-2" />
-                                        <p className="text-sm">Parents sélectionnés pour la santé, le tempérament et la morphologie</p>
+                                        <p className="text-sm">Parents choisis pour la santé, le tempérament et la qualité de leurs lignées</p>
                                     </div>
                                     <div className="flex items-start space-x-3">
                                         <div className="w-2 h-2 bg-primary rounded-full mt-2" />
-                                        <p className="text-sm">Stimulation sensorielle progressive dès les premiers jours</p>
+                                        <p className="text-sm">Importation de reproducteurs américains pour travailler sur des bases solides</p>
                                     </div>
                                     <div className="flex items-start space-x-3">
                                         <div className="w-2 h-2 bg-primary rounded-full mt-2" />
-                                        <p className="text-sm">Kit de départ, conseils d&apos;intégration et suivi post-adoption</p>
+                                        <p className="text-sm">Suivi sanitaire, transparence et accompagnement des familles à chaque étape</p>
                                     </div>
                                 </div>
                                 <Link
                                     href="/bien-etre-animal"
                                     className="flex items-center bg-primary h-10 text-white hover:bg-primary/80 px-4 font-semibold  dark:text-[#5b3a1a] rounded-md w-fit"
-                                >Voir les conditions de bien-être des Pomsky</Link>
+                                >Voir comment vivent nos chiots au quotidien</Link>
                             </div>
 
                         </div>
                         <div className="w-24 my-12 h-1 bg-primary mx-auto rounded-full" aria-hidden="true" />
                         <div className="max-w-3xl mx-auto text-center md:col-span-2 mt-12"><p className="text-muted-foreground text-sm mt-4">
-                            Nous avons à cœur de vous accompagner dans le choix de votre pomsky qui sera votre futur compagnon de vie, en vous apportant des conseils personnalisés et en vous aidant à trouver le chiot qui correspondra le mieux à votre mode de vie et à vos attentes.
+                            Nous prenons aussi le temps de vous accompagner dans le choix de votre futur compagnon, avec une lecture honnête des caractères, des besoins et de l’adéquation entre un chiot et votre mode de vie.
                         </p>
                         </div>
                         <div className="text-center my-6 max-w-4xl mx-auto">
-                            <h3 className="md:text-lg  font-semibold mb-2 my-6">Découvrez nos pomsky reproducteurs sélectionnés, les piliers de notre élevage</h3>
+                            <h3 className="md:text-lg  font-semibold mb-2 my-6">Découvrez les reproducteurs qui portent notre vision de l’élevage</h3>
                             <p className="text-muted-foreground text-sm mb-4">
-                                Nos pomsky, chiens reproducteurs sont soigneusement sélectionnés pour leur santé, leur tempérament et leur conformité au standard du Pomsky toy. Ils sont au cœur de notre programme d'élevage de Pomsky et participent activement à la transmission de nos valeurs.
+                                Nos reproducteurs ne sont pas choisis au hasard. Ils représentent la base de notre programme, avec un vrai travail sur les origines, la santé, la stabilité et le type de Pomsky que nous souhaitons développer au fil des générations.
                             </p>
                         </div>
                         <Link
@@ -268,7 +259,7 @@ export default function PresentationPage() {
                                 Notre expérience est désormais devenue une expertise complète de cette merveilleuse race en devenir.
                             </p>
                             <p className="text-muted-foreground leading-relaxed">
-                                Nous avons sélectionné nos reproducteurs Pomsky au sein même du berceau de la race, pour vous apporter les meilleures lignées de Pomsky au monde. Nos adultes sont nés aux quatre coins des États-Unis d'Amérique : d'est en ouest, de New York à Seattle, en passant par la Californie et en revenant par la Floride. Ils sont arrivés en France pour faire partie de notre programme d'élevage canin, afin que nous puissions vous proposer les meilleures lignées de Pomsky, parce que nous visons l'excellence pour notre programme d'élevage ainsi que pour le devenir de la race.
+                                Nous avons sélectionné nos reproducteurs Pomsky au sein même du berceau de la race, afin de construire notre élevage sur des lignées américaines choisies avec exigence. Nos adultes sont nés aux quatre coins des États-Unis, de New York à Seattle, en passant par la Californie et la Floride. Ils ont rejoint la France pour devenir les fondations de notre programme d’élevage.
 
 
                             </p>
@@ -276,10 +267,7 @@ export default function PresentationPage() {
                                 Notre histoire s'est construite au fil des années, rencontres avec les éleveurs américains créateurs de cette race et des familles adoptantes. Nous recherchons depuis notre première portée née en 2018 à obtenir un Pomsky au physique abouti, bien dans sa tête, stable et joyeux, qui s'intègre facilement à la vie de famille.
                             </p>
                             <p className="text-muted-foreground leading-relaxed">
-                                Les chiens vivent à nos côtés, avec des espaces sécurisés et des moments de détente en extérieur pour nourrir leur curiosité.
-                                Des balades sont régulièrement organisées en extérieur avec d'autres races de chiens.
-                                Notre priorité : des chiots équilibrés, sociables et prêts à démarrer une belle histoire avec leur future famille.
-                                Les familles repartent avec un accompagnement concret, des conseils pratiques et des nouvelles régulières et un groupe whatsapp avec les familles adoptantes de leur fratrie.
+                                Au fil des années, nous avons aussi construit une relation de confiance avec les familles adoptantes. Elles repartent avec des explications claires, un accompagnement concret et une vision plus juste du travail réalisé avant l’arrivée du chiot à la maison. Pour découvrir plus en détail le quotidien et les conditions de vie offertes à nos chiens, nous avons dédié une page spécifique à ce sujet.
                             </p>
                         </div>
                     </section>
@@ -299,16 +287,16 @@ export default function PresentationPage() {
                                         <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-primary">
                                             <PawPrint className="h-5 w-5 text-primary-foreground" aria-hidden="true" />
                                         </div>
-                                        <h3 className="text-xl font-semibold">Bien-être animal</h3>
+                                        <h3 className="text-xl font-semibold">Sélection des reproducteurs</h3>
                                     </div>
                                     <p className="text-muted-foreground text-sm leading-relaxed">
-                                        Élever des Pomsky ne consiste pas uniquement à faire naître des chiots. C'est un travail de sélection, d'observation et d'accompagnement, mené sur plusieurs années. Nos pomsky ont besoin d'un rythmes respectés, de sorties adaptées et d&apos;activités d&apos;éveil pour des Pomsky sereins et curieux.
+                                        Élever des Pomsky ne consiste pas uniquement à faire naître des chiots. C’est d’abord un travail de sélection, de cohérence génétique et d’observation mené sur plusieurs années pour construire un programme sérieux.
                                     </p>
                                     <Link
-                                        href="/bien-etre-animal"
+                                        href="/femelles-reproductrices"
                                         className="mt-3 inline-flex text-sm font-medium text-primary underline underline-offset-4"
                                     >
-                                        Découvrez nos conditions de bien-être animal
+                                        Découvrez nos reproducteurs sélectionnés
                                     </Link>
                                 </CardContent>
                             </Card>

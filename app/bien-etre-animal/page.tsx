@@ -105,7 +105,7 @@ export default function WellnessPage() {
         url: siteConfig.pages.wellness,
         imageUrl: wellnessOgJpg,
         dateModified: pageLastModValue,
-        about: ["Bien-être animal", "Pomsky", "Socialisation du chiot", "Élevage responsable"],
+        about: ["Conditions de vie des chiots", "Confort de vie du Pomsky", "Socialisation quotidienne", "Bien-être animal"],
     })
     const lastMod = returnLastmod(siteConfig.pages.wellness)
 
@@ -137,13 +137,13 @@ export default function WellnessPage() {
                                         Bien-être animal
                                     </Badge>
                                     <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary/80">
-                                        Conditions de vie, socialisation et respect du rythme
+                                        Conditions de vie, confort quotidien et respect du rythme
                                     </p>
                                     <h1 className="max-w-3xl text-3xl font-bold leading-tight md:text-5xl">
-                                        Le bien-être animal chez Royal Pomsky
+                                        Les conditions de vie de nos chiots chez Royal Pomsky
                                     </h1>
                                     <p className="max-w-3xl text-base leading-relaxed text-muted-foreground md:text-lg">
-                                        Le bien-être animal fait partie des fondations de notre élevage. Chez Royal Pomsky, nous accordons une attention constante à l’environnement de vie de nos chiots et de nos adultes, à leur rythme quotidien, à leur socialisation et à leur équilibre émotionnel. Notre objectif est simple : faire grandir nos Pomsky dans un cadre rassurant, cohérent et respectueux, afin de favoriser leur développement et leur future adaptation en famille.
+                                        Cette page est dédiée à la vie quotidienne de nos chiots et de nos adultes. Chez Royal Pomsky, nous accordons une attention constante à leur environnement, à leur confort, à leur rythme, à la qualité de présence humaine et à la manière dont ils découvrent le monde autour d’eux. Notre objectif est de leur offrir un cadre stable, rassurant et respectueux dès leurs premières semaines.
                                     </p>
                                 </div>
 
@@ -239,10 +239,10 @@ export default function WellnessPage() {
                                 Notre approche au quotidien
                             </p>
                             <h2 className="text-2xl font-bold md:text-3xl">
-                                Un élevage responsable se voit dans la structure du quotidien
+                                Le bien-être se voit d’abord dans la manière dont les chiots vivent chaque jour
                             </h2>
                             <p className="leading-relaxed text-muted-foreground">
-                                Le bien-être animal ne repose pas sur une promesse marketing. Il se mesure dans l’environnement, la qualité des interactions, la progressivité des expériences proposées et la capacité à respecter le rythme réel de chaque chiot.
+                                Le bien-être animal ne repose pas sur une promesse abstraite. Il se lit dans les espaces de vie, la qualité du repos, la régularité des soins, la douceur des interactions et la capacité à respecter le rythme réel de chaque chiot.
                             </p>
                         </div>
 

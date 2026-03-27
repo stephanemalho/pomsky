@@ -365,14 +365,15 @@ export const pageMetadata = {
     },
 
     presentation: {
-        title: pageContent.presentation.h1,
-        description: pageContent.presentation.description,
+        title: "Royal Pomsky : notre politique d’élevage, de la sélection des parents au suivi des chiots",
+        description:
+            "Découvrez comment Royal Pomsky construit son élevage : sélection de parents importés des États-Unis, programme sanitaire, portées raisonnées et travail en amont pour faire naître des chiots bien dans leurs pattes.",
         keywords: [
             "elevage pomsky responsable",
             "elevage canin professionnel",
             "selection lignee pomsky",
-            "socialisation chiot pomsky",
-            "bien etre chiot elevage",
+            "parents pomsky importes etats unis",
+            "programme sanitaire pomsky",
             "adoption pomsky accompagnee",
             "visite elevage pomsky",
             "elevage pomsky france"
@@ -394,9 +395,9 @@ export const pageMetadata = {
     },
 
     wellness: {
-        title: "Bien-être animal en élevage Pomsky | Conditions de vie et socialisation",
+        title: "Conditions de vie de nos chiots Pomsky | Bien-être, confort et rythme quotidien",
         description:
-            "Découvrez comment nos chiots et adultes Pomsky vivent au quotidien : environnement rassurant, socialisation progressive, sorties, repos, soins et respect du rythme de chaque chien.",
+            "Découvrez comment vivent nos chiots et adultes Pomsky au quotidien chez Royal Pomsky : espaces pensés pour eux, repos, présence humaine, sorties, découvertes progressives et confort de vie.",
         keywords: [
             "bien etre animal elevage pomsky",
             "conditions de vie chiot pomsky",
@@ -521,7 +522,7 @@ export const sitemapPages = [
         url: "/presentation-elevage",
         changefreq: "monthly",
         priority: 0.7,
-        lastmod: "2026-03-26"
+        lastmod: "2026-03-27"
     },
     {
         url: "/presentation-eleveuses",
@@ -533,7 +534,7 @@ export const sitemapPages = [
         url: "/bien-etre-animal",
         changefreq: "monthly",
         priority: 0.7,
-        lastmod: "2026-03-26"
+        lastmod: "2026-03-27"
     },
     {
         url: "/contact",
