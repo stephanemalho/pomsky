@@ -62,8 +62,7 @@ export function TikTokFeatureSpotlightInteractive({
                             className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-300 ${isPlaying ? "opacity-100" : "pointer-events-none opacity-0"}`}
                             controls={isPlaying}
                             playsInline
-                            preload="metadata"
-                            poster={posterSrc}
+                            preload="none"
                             aria-hidden={!isPlaying}
                         >
                             <source src={videoSrc} type="video/mp4" />

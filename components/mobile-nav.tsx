@@ -15,7 +15,7 @@ const navigation = [
     { name: "L'elevage", href: "/presentation-elevage" },
     { name: "Les éleveuses", href: "/presentation-eleveuses" },
     { name: "Nos reproducteurs", href: "/femelles-reproductrices" },
-    { name: "Nos chiots", href: "/chiots-disponibles" },
+    { name: "Nos chiots disponibles", href: "/chiots-disponibles" },
     { name: "Les conditions de vie", href: "/bien-etre-animal" },
     { name: "Blog", href: "/blog/pomsky" },
     { name: "Contact", href: "/contact" },

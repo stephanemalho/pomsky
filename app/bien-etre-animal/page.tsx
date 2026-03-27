@@ -20,7 +20,7 @@ const calmVideoSchema = generateVideoObjectSchema({
         "Vidéo montrant un petit chiot Royal POMSKY détendu dans l'herbe lors d'un moment calme au contact humain.",
     pageUrl: calmVideoAnchor,
     contentUrl: "/assets/tiktok/7503509177734548758.mp4",
-    thumbnailUrl: "/assets/tiktok/7503509177734548758.webp",
+    thumbnailUrl: "/assets/tiktok/7503509177734548758.optimized.webp",
     uploadDate: "2025-05-12",
 })
 
@@ -255,7 +255,7 @@ export default function WellnessPage() {
                         description="Parfois, le bien-être d'un chiot se raconte mieux dans une scène très simple que dans un long discours. Ici, on voit un petit Pomsky dans l'herbe, détendu, absorbé par un contact doux, sans agitation ni mise en scène. C'est ce genre d'instant presque ordinaire qui dit beaucoup sur l'ambiance réelle du quotidien: la qualité de présence humaine, le calme, et la façon dont un chiot apprend à se sentir bien dans son environnement."
                         videoTitle="Un petit Pomsky dans l'herbe, au calme et au contact"
                         videoSummary="Une courte vidéo qui montre un moment apaisé, sans mise en scène lourde, pour illustrer le rythme et le contact humain."
-                        posterSrc="/assets/tiktok/7503509177734548758.webp"
+                        posterSrc="/assets/tiktok/7503509177734548758.optimized.webp"
                         posterAlt="Petit Pomsky dans l'herbe lors d'un moment calme"
                         videoSrc="/assets/tiktok/7503509177734548758.mp4"
                         tiktokHref="https://www.tiktok.com/@royalpomsky/video/7503509177734548758"

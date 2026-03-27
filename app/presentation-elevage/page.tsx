@@ -20,7 +20,7 @@ const breedingVideoSchema = generateVideoObjectSchema({
         "Vidéo montrant plusieurs chiots Royal POMSKY qui jouent ensemble dans un espace extérieur de l'élevage.",
     pageUrl: breedingVideoAnchor,
     contentUrl: "/assets/tiktok/7208154621523627269.mp4",
-    thumbnailUrl: "/assets/tiktok/7208154621523627269.webp",
+    thumbnailUrl: "/assets/tiktok/7208154621523627269.optimized.webp",
     uploadDate: "2023-03-08",
 })
 
@@ -149,7 +149,7 @@ export default function PresentationPage() {
                         description="Un élevage ne se résume pas à des mots comme sélection, méthode ou programme. Il se lit aussi dans la vie qui circule entre les chiots. Dans cette séquence, on les voit évoluer ensemble dehors, jouer, se suivre, explorer et occuper l'espace avec naturel. C'est une image très parlante de ce que nous voulons montrer ici: un quotidien vivant, du mouvement, des repères, et un cadre concret dans lequel les chiots grandissent vraiment."
                         videoTitle="Des chiots Royal Pomsky qui jouent ensemble à l'élevage"
                         videoSummary="Une séquence courte, utile et directe pour rendre visible l'ambiance, le mouvement et la vie du groupe."
-                        posterSrc="/assets/tiktok/7208154621523627269.webp"
+                        posterSrc="/assets/tiktok/7208154621523627269.optimized.webp"
                         posterAlt="Chiots Royal Pomsky qui jouent ensemble à l'élevage"
                         videoSrc="/assets/tiktok/7208154621523627269.mp4"
                         tiktokHref="https://www.tiktok.com/@royalpomsky/video/7208154621523627269"

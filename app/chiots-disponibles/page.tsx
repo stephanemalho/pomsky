@@ -21,7 +21,7 @@ const familyVideoSchema = generateVideoObjectSchema({
         "Vidéo montrant la surprise d'adoption d'un chiot Royal POMSKY au moment de la rencontre avec sa future famille.",
     pageUrl: familyVideoAnchor,
     contentUrl: "/assets/tiktok/7101955478313356549.mp4",
-    thumbnailUrl: "/assets/tiktok/7101955478313356549.webp",
+    thumbnailUrl: "/assets/tiktok/7101955478313356549.optimized.webp",
     uploadDate: "2022-05-26",
 })
 
@@ -126,7 +126,7 @@ export default function NosChiotsPage() {
                         description="Il y a des adoptions qui marquent dès les premières secondes. Dans cette scène, on ne voit pas seulement un chiot rejoindre son foyer: on voit un père qui a gardé le secret, des enfants qui découvrent la surprise, puis cet instant très particulier où tout bascule dans la joie. C'est exactement le type de moment qui rappelle qu'un chiot n'arrive jamais seulement dans une maison, mais dans une histoire de famille qui commence."
                         videoTitle="Une surprise de famille autour d'un chiot Royal Pomsky"
                         videoSummary="Un moment simple et sincère qui montre la rencontre réelle entre un chiot et sa future famille."
-                        posterSrc="/assets/tiktok/7101955478313356549.webp"
+                        posterSrc="/assets/tiktok/7101955478313356549.optimized.webp"
                         posterAlt="Surprise d'adoption Royal Pomsky en famille"
                         videoSrc="/assets/tiktok/7101955478313356549.mp4"
                         tiktokHref="https://www.tiktok.com/@royalpomsky/video/7101955478313356549"
