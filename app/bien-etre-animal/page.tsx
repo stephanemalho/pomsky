@@ -126,7 +126,7 @@ export default function WellnessPage() {
 
             <div className="py-16">
                 <div className="container mx-auto space-y-16">
-                    <section className="relative overflow-hidden rounded-[2rem] border border-primary/10 bg-[linear-gradient(135deg,rgba(170,126,88,0.12),rgba(255,255,255,0.94),rgba(170,126,88,0.04))] p-6 shadow-[0_24px_80px_rgba(66,40,18,0.08)] md:p-10 lg:p-12">
+                    <section className="relative overflow-hidden rounded-4xl border border-primary/10 bg-[linear-gradient(135deg,rgba(170,126,88,0.12),rgba(255,255,255,0.94),rgba(170,126,88,0.04))] p-6 shadow-[0_24px_80px_rgba(66,40,18,0.08)] md:p-10 lg:p-12">
                         <div className="absolute -right-20 -top-20 h-52 w-52 rounded-full bg-primary/10 blur-3xl" aria-hidden="true" />
                         <div className="absolute -left-16 bottom-0 h-44 w-44 rounded-full bg-primary/5 blur-3xl" aria-hidden="true" />
 
@@ -180,7 +180,7 @@ export default function WellnessPage() {
                             </div>
 
                             <div className="space-y-4">
-                                <div className="relative min-h-80 overflow-hidden rounded-[1.75rem] border border-white/50 bg-muted shadow-lg md:min-h-[32rem]">
+                                <div className="relative min-h-80 overflow-hidden rounded-[1.75rem] border border-white/50 bg-muted shadow-lg md:min-h-128">
                                     <Image
                                         src={wellnessOgWebp}
                                         alt="Chiot Pomsky fixe sa balle en plastique"
@@ -317,7 +317,7 @@ export default function WellnessPage() {
                         </div>
                     </section>
 
-                    <section className="grid gap-8 rounded-[2rem] border border-border/70 bg-muted/25 p-6 md:p-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+                    <section className="grid gap-8 rounded-4xl border border-border/70 bg-muted/25 p-6 md:p-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
                         <div className="space-y-4">
                             <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary/80">
                                 Rythme et relation
@@ -371,7 +371,7 @@ export default function WellnessPage() {
                                         sizes="(min-width: 1024px) 35vw, 100vw"
                                     />
                                 </div>
-                                <div className="relative min-h-80 overflow-hidden rounded-[1.5rem] bg-muted shadow-sm">
+                                <div className="relative min-h-80 overflow-hidden rounded-3xl bg-muted shadow-sm">
                                     <Image
                                         src={sectionImages.presence}
                                         alt="Présence humaine régulière auprès des chiots Pomsky"
@@ -384,7 +384,7 @@ export default function WellnessPage() {
                     </section>
 
                     <section className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr]">
-                        <Card className="rounded-[2rem] border border-border/70 bg-background/85 shadow-sm">
+                        <Card className="rounded-4xl border border-border/70 bg-background/85 shadow-sm">
                             <CardHeader className="space-y-4">
                                 <div className="flex items-center gap-2 text-primary">
                                     <Utensils className="h-4 w-4" aria-hidden="true" />
@@ -416,7 +416,7 @@ export default function WellnessPage() {
                         </Card>
 
                         <div className="grid gap-6">
-                            <Card className="rounded-[2rem] border border-primary/10 bg-primary/5 shadow-sm">
+                            <Card className="rounded-4xl border border-primary/10 bg-primary/5 shadow-sm">
                                 <CardHeader className="space-y-4">
                                     <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary/80">
                                         Pour les familles
@@ -435,7 +435,7 @@ export default function WellnessPage() {
                                 </CardContent>
                             </Card>
 
-                            <Card className="rounded-[2rem] border border-primary/15 bg-background shadow-sm">
+                            <Card className="rounded-4xl border border-primary/15 bg-background shadow-sm">
                                 <CardHeader>
                                     <div className="flex items-center gap-2">
                                         <NotebookText className="h-4 w-4 text-primary" aria-hidden="true" />
@@ -454,7 +454,7 @@ export default function WellnessPage() {
                         </div>
                     </section>
 
-                    <section className="overflow-hidden rounded-[2rem] border border-primary/10 bg-[linear-gradient(135deg,rgba(170,126,88,0.08),rgba(255,255,255,1),rgba(170,126,88,0.03))]">
+                    <section className="overflow-hidden rounded-4xl border border-primary/10 bg-[linear-gradient(135deg,rgba(170,126,88,0.08),rgba(255,255,255,1),rgba(170,126,88,0.03))]">
                         <div className="grid gap-8 p-6 md:p-8 lg:grid-cols-[1.1fr_0.9fr] lg:p-10">
                             <div className="space-y-5">
                                 <div className="flex items-center gap-2 text-primary">
