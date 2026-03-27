@@ -34,7 +34,7 @@ export const pageContent = {
         description:
             "Les chiens présentés ici sont les reproducteurs de notre élevage Royal POMSKY. Ils constituent le cœur de notre lignée de pomsky toy pour la plupart, et participent activement à la transmission de nos valeurs, tant sur le plan physique que comportemental.",
         descriptionSecondary:
-            "Chaque mariage est soigneusement réfléchi et réalisé exclusivement au sein de notre élevage, dans une démarche responsable visant à préserver la santé, l'équilibre émotionnel et le type propre aux pomsky Toy rares et exotiques."
+            "Chaque mariage est soigneusement réfléchi et réalisé exclusivement au sein de notre élevage, dans une démarche responsable visant à préserver la santé, l'équilibre émotionnel et le type propre au Pomsky Toy de lignée américaine."
     },
     presentation: {
         h1: "Notre élevage est spécialisé en Pomsky Toy de lignée américaine",
