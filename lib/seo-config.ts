@@ -411,7 +411,8 @@ export const pageMetadata = {
 
     contact: {
         title: pageContent.contact.h1,
-        description: pageContent.contact.description,
+        description:
+            "Prenez contact avec Royal Pomsky pour poser vos questions, échanger sur votre projet d’adoption et organiser une visite des Pomsky à l’élevage sur rendez-vous.",
         keywords: [
             "contact elevage pomsky",
             "visiter elevage pomsky",

@@ -52,9 +52,9 @@ export const pageContent = {
             "Le bien-être animal fait partie des fondations de notre élevage. Chez Royal Pomsky, nous accordons une attention constante à l’environnement de vie de nos chiots et de nos adultes, à leur rythme quotidien, à leur socialisation et à leur équilibre émotionnel."
     },
     contact: {
-        h1: "Contact & visites",
+        h1: "Contact & visites des chiots disponibles à l'élevage Royal POMSKY",
         description:
-            "Parlons de votre futur compagnon. Les visites se font uniquement sur rendez-vous pour respecter le rythme des chiots."
+            "Vous envisagez l’adoption d’un Pomsky et vous avez des questions ? Nous vous répondons avec plaisir pour vous guider dans votre réflexion. Les visites de l’élevage et des chiots disponibles se font uniquement sur rendez-vous, dans le respect de leur rythme."
     },
     legalNotice: {
         h1: "Mentions légales",
