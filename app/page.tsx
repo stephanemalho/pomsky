@@ -6,12 +6,23 @@ import { faqHome } from "@/lib/faq-data"
 import Link from "next/link"
 import type { Metadata } from "next"
 import { buildOpenGraph, buildTwitter, pageMetadata, returnLastmod, siteConfig, sitemapPages } from "@/lib/seo-config"
-import { generateLocalBusinessSchema, generateFAQSchema, generateBreadcrumbSchema, generateWebPageSchema } from "@/lib/schema-generators"
+import { generateLocalBusinessSchema, generateFAQSchema, generateBreadcrumbSchema, generateVideoObjectSchema, generateWebPageSchema } from "@/lib/schema-generators"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
 import { pomskyBenefits } from "@/components/content/home/pomsky/pomskyBenefits"
 import { pageContent } from "@/lib/page-content"
+import { TikTokFeatureSpotlight } from "@/components/client/tiktok/TikTokFeatureSpotlight"
 
 const HOME_OG_IMAGE = "/pomsky-and-his-pet-family-parent.jpg"
+const homeVideoAnchor = `${siteConfig.pages.home}#instant-a-l-elevage`
+const homeVideoSchema = generateVideoObjectSchema({
+  name: "Moment de vie à l'élevage Royal POMSKY",
+  description:
+    "Vidéo montrant plusieurs chiots Royal POMSKY dans un moment simple du quotidien, dehors dans l'herbe et au contact de l'humain.",
+  pageUrl: homeVideoAnchor,
+  contentUrl: "/assets/tiktok/7241509462060616987.mp4",
+  thumbnailUrl: "/assets/tiktok/7241509462060616987.jpg",
+  uploadDate: "2021-03-03",
+})
 
 export const metadata: Metadata = {
   title: pageMetadata.home.title,
@@ -101,6 +112,10 @@ export default function HomePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homeVideoSchema) }}
       />
 
       <div className="flex flex-col">
@@ -292,6 +307,24 @@ export default function HomePage() {
             En savoir plus sur le pomsky
           </Link>
         </section>
+
+        <section className="py-16 my-8">
+          <div className="container mx-auto px-2">
+            <TikTokFeatureSpotlight
+              id="instant-a-l-elevage"
+              badge="Vie à l'élevage"
+              title="Un aperçu simple et vrai de la vie chez Royal Pomsky"
+              description="Chez Royal Pomsky, nous aimons aussi montrer les choses telles qu'elles sont. Dans cette séquence, on découvre un moment calme du quotidien, dehors dans l'herbe, avec des chiots proches de l'humain, curieux et à l'aise. C'est une façon très simple de ressentir l'ambiance de l'élevage, le contact que nous entretenons avec eux et l'environnement dans lequel ils grandissent."
+              videoTitle="Un moment du quotidien avec les chiots Royal Pomsky"
+              videoSummary="Une vidéo courte, naturelle et sincère pour découvrir l'ambiance de l'élevage et la proximité avec nos chiots."
+              posterSrc="/assets/tiktok/7241509462060616987.jpg"
+              posterAlt="Personne assise dans l'herbe avec plusieurs chiots Royal Pomsky"
+              videoSrc="/assets/tiktok/7241509462060616987.mp4"
+              tiktokHref="https://www.tiktok.com/@royalpomsky/video/7241509462060616987"
+              buttonLabel="Lire la vidéo"
+            />
+          </div>
+        </section>
         {/* éleveurs */}
         <section className="py-16 my-8 bg-muted/30">
           <div className="container mx-auto p-2">
@@ -367,6 +400,7 @@ export default function HomePage() {
             </Link>
           </div>
         </section>
+        
         <FAQSection
           title="FAQ pomsky en bref"
           description="Les points clés sur l'élevage Royal POMSKY en bref."
