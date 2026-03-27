@@ -9,6 +9,7 @@ import { convertFAQsToSchema } from "@/lib/faq-utils"
 import { buildOpenGraph, buildTwitter, pageMetadata, returnLastmod, siteConfig, sitemapPages } from "@/lib/seo-config"
 import { generateBreadcrumbSchema, generateFAQSchema, generateWebPageSchema } from "@/lib/schema-generators"
 import { Bed, Heart, NotebookText, PawPrint, Sprout, Utensils } from "lucide-react"
+import { TikTokFeatureSpotlight } from "@/components/client/tiktok/TikTokFeatureSpotlight"
 
 const wellnessOgJpg = "/pages/conditions-de-vie/la-maman-et-son-chiot-avec-marine.jpg"
 const wellnessOgWebp = "/pages/conditions-de-vie/la-maman-et-son-chiot-avec-marine.webp"
@@ -232,6 +233,19 @@ export default function WellnessPage() {
                             </div>
                         </div>
                     </section>
+
+                    <TikTokFeatureSpotlight
+                        badge="Moment calme"
+                        title="Le bien-être se lit aussi dans les gestes simples du quotidien"
+                        description="Parfois, le bien-être d'un chiot se raconte mieux dans une scène très simple que dans un long discours. Ici, on voit un petit Pomsky dans l'herbe, détendu, absorbé par un contact doux, sans agitation ni mise en scène. C'est ce genre d'instant presque ordinaire qui dit beaucoup sur l'ambiance réelle du quotidien: la qualité de présence humaine, le calme, et la façon dont un chiot apprend à se sentir bien dans son environnement."
+                        videoTitle="Un petit Pomsky dans l'herbe, au calme et au contact"
+                        videoSummary="Une courte vidéo qui montre un moment apaisé, sans mise en scène lourde, pour illustrer le rythme et le contact humain."
+                        posterSrc="/assets/tiktok/7503509177734548758.webp"
+                        posterAlt="Petit Pomsky dans l'herbe lors d'un moment calme"
+                        videoSrc="/assets/tiktok/7503509177734548758.mp4"
+                        tiktokHref="https://www.tiktok.com/@royalpomsky/video/7503509177734548758"
+                        buttonLabel="Lire le moment calme"
+                    />
 
                     <section className="space-y-8">
                         <div className="max-w-3xl space-y-3">

@@ -9,6 +9,7 @@ import type { Metadata } from "next"
 import { buildOpenGraph, buildTwitter, pageMetadata, returnLastmod, siteConfig, sitemapPages } from "@/lib/seo-config"
 import { generateBreadcrumbSchema, generateFAQSchema, generateWebPageSchema } from "@/lib/schema-generators"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
+import { TikTokFeatureSpotlight } from "@/components/client/tiktok/TikTokFeatureSpotlight"
 
 const presentationOgJpg = "/pages/presentation-elevage/eleveuse-royal-pomsky-avec-un-pomsky.jpg"
 const presentationOgWebp = "/pages/presentation-elevage/eleveuse-royal-pomsky-avec-un-pomsky.webp"
@@ -126,6 +127,19 @@ export default function PresentationPage() {
                             </div>
                         </div>
                     </section>
+
+                    <TikTokFeatureSpotlight
+                        badge="Vie à l'élevage"
+                        title="Voir plusieurs chiots jouer ensemble aide à comprendre l'ambiance réelle de l'élevage"
+                        description="Un élevage ne se résume pas à des mots comme sélection, méthode ou programme. Il se lit aussi dans la vie qui circule entre les chiots. Dans cette séquence, on les voit évoluer ensemble dehors, jouer, se suivre, explorer et occuper l'espace avec naturel. C'est une image très parlante de ce que nous voulons montrer ici: un quotidien vivant, du mouvement, des repères, et un cadre concret dans lequel les chiots grandissent vraiment."
+                        videoTitle="Des chiots Royal Pomsky qui jouent ensemble à l'élevage"
+                        videoSummary="Une séquence courte, utile et directe pour rendre visible l'ambiance, le mouvement et la vie du groupe."
+                        posterSrc="/assets/tiktok/7208154621523627269.webp"
+                        posterAlt="Chiots Royal Pomsky qui jouent ensemble à l'élevage"
+                        videoSrc="/assets/tiktok/7208154621523627269.mp4"
+                        tiktokHref="https://www.tiktok.com/@royalpomsky/video/7208154621523627269"
+                        buttonLabel="Lire la vidéo de l'élevage"
+                    />
 
                     {/* Values Section */}
                     <section className="mb-16 bg-muted/30 -mx-4 px-4 py-16 rounded-lg">

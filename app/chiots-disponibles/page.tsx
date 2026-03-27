@@ -11,6 +11,7 @@ import { puppies } from "./puppies"
 import { Card, CardContent } from "@/components/ui/card"
 import ImageCarousel from "@/components/client/carousel/ImageCarousel"
 import { Badge } from "@/components/ui/badge"
+import { TikTokFeatureSpotlight } from "@/components/client/tiktok/TikTokFeatureSpotlight"
 
 const puppiesOgImage = "/pages/puppies/SNOW-male-pomsky-a-vendre-5.jpeg"
 
@@ -104,6 +105,18 @@ export default function NosChiotsPage() {
                         </p>
                         <div className="w-24 h-1 bg-primary mx-auto rounded-full" aria-hidden="true" />
                     </section>
+                    <TikTokFeatureSpotlight
+                        badge="Souvenir d'adoption"
+                        title="Un chiot Royal Pomsky, c'est aussi une vraie émotion au moment de la rencontre"
+                        description="Il y a des adoptions qui marquent dès les premières secondes. Dans cette scène, on ne voit pas seulement un chiot rejoindre son foyer: on voit un père qui a gardé le secret, des enfants qui découvrent la surprise, puis cet instant très particulier où tout bascule dans la joie. C'est exactement le type de moment qui rappelle qu'un chiot n'arrive jamais seulement dans une maison, mais dans une histoire de famille qui commence."
+                        videoTitle="Une surprise de famille autour d'un chiot Royal Pomsky"
+                        videoSummary="Un moment simple et sincère qui montre la rencontre réelle entre un chiot et sa future famille."
+                        posterSrc="/assets/tiktok/7101955478313356549.webp"
+                        posterAlt="Surprise d'adoption Royal Pomsky en famille"
+                        videoSrc="/assets/tiktok/7101955478313356549.mp4"
+                        tiktokHref="https://www.tiktok.com/@royalpomsky/video/7101955478313356549"
+                        buttonLabel="Lire le souvenir de famille"
+                    />
                     {/* <NoAvailable /> */}
                     <section className="mx-auto md:bg-muted/30 md:border border-muted rounded-2xl p-0 md:p-10 space-y-4 text-center mb-12">
                         <h2 className="text-xl md:text-2xl font-semibold leading-tight">
