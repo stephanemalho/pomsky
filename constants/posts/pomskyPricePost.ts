@@ -52,9 +52,9 @@ export const pomskyPrixPost: BlogPost = {
             ]
         },
         {
-            subtitle: "Alimentation: le poste le plus constant au quotidien",
+            subtitle: "Alimentation: une dépense régulière au quotidien",
             paragraphs: [
-                "L'alimentation est le poste le plus régulier et l'un des plus faciles à sous-estimer. Un Pomsky a besoin d'une nourriture cohérente avec son âge, son gabarit, son niveau d'activité et sa sensibilité digestive éventuelle. En pratique, beaucoup de familles se situent dans une fourchette d'environ 45 a 90 euros par mois pour une alimentation de qualité correcte, parfois davantage si elles choisissent une gamme très premium ou une ration spécifique.",
+                "L'alimentation est l'une des dépenses les plus régulières et aussi l'une des plus faciles à sous-estimer. Un Pomsky a besoin d'une nourriture cohérente avec son âge, son gabarit, son niveau d'activité et sa sensibilité digestive éventuelle. En pratique, beaucoup de familles se situent dans une fourchette d'environ 45 a 90 euros par mois pour une alimentation de qualité correcte, parfois davantage si elles choisissent une gamme très premium ou une ration spécifique.",
                 "Sur une année, cela représente souvent 540 a 1 080 euros rien que pour les repas, sans compter les friandises d'éducation, les compléments occasionnels ou les transitions alimentaires. Cette dépense semble banale parce qu'elle est fractionnée, mais elle finit par peser lourd dans le coût total de possession. Sur 12 ans, l'alimentation seule peut donc représenter plusieurs milliers d'euros.",
                 "Le bon réflexe n'est pas de chercher la nourriture la moins chère, mais celle qui reste digeste, stable et adaptée à votre chien. Une alimentation trop bas de gamme peut parfois entraîner plus de selles, plus de problèmes de peau, un état de poil moins bon ou des sensibilités digestives qui coûtent ensuite plus cher à corriger. Un budget alimentation bien calibré est souvent plus économique sur la durée qu'une succession d'essais ou de compromis."
             ]
