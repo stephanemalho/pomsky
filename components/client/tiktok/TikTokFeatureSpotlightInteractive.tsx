@@ -48,8 +48,8 @@ export function TikTokFeatureSpotlightInteractive({
     return (
         <div className="grid gap-6 lg:grid-cols-[360px_minmax(0,1fr)] lg:items-center">
             <div className="flex justify-center p-6 md:p-8 lg:p-10 lg:pr-0">
-                <div className="w-full max-w-[320px] overflow-hidden rounded-[2rem] border border-border/60 bg-black shadow-[0_18px_40px_rgba(0,0,0,0.18)]">
-                    <div className="relative aspect-[9/16]">
+                <div className="w-full max-w-80 overflow-hidden rounded-4xl border border-border/60 bg-black shadow-[0_18px_40px_rgba(0,0,0,0.18)]">
+                    <div className="relative aspect-9/16">
                         <Image
                             src={posterSrc}
                             alt={posterAlt}

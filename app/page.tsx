@@ -10,13 +10,8 @@ import { generateLocalBusinessSchema, generateFAQSchema, generateBreadcrumbSchem
 import { convertFAQsToSchema } from "@/lib/faq-utils"
 import { pomskyBenefits } from "@/components/content/home/pomsky/pomskyBenefits"
 import { pageContent } from "@/lib/page-content"
-import { puppies } from "./chiots-disponibles/puppies"
 
 const HOME_OG_IMAGE = "/pomsky-and-his-pet-family-parent.jpg"
-
-function lowerFirst(value: string) {
-  return value ? value.charAt(0).toLowerCase() + value.slice(1) : value
-}
 
 export const metadata: Metadata = {
   title: pageMetadata.home.title,
@@ -61,9 +56,6 @@ export default function HomePage() {
     about: ["Élevage de chiots Pomsky", "Pomsky Toy", "Pomsky Miniature", "Chiots disponibles"],
   })
   const lastMod = returnLastmod(siteConfig.pages.home)
-  const availablePuppies = puppies.filter((puppy) => puppy.isReserved !== true)
-  const featuredPuppies = availablePuppies.slice(0, 2)
-  const allPuppiesReserved = puppies.length > 0 && puppies.every((puppy) => puppy.isReserved === true)
   const founders = [
     {
       name: "Aurélie",
@@ -130,7 +122,7 @@ export default function HomePage() {
                   />
                 </div>
 
-                <div className="mx-auto max-w-6xl rounded-xl md:rounded-[1.75rem] border border-white/12 bg-[#47131b]/72 px-6 py-6 text-center text-white shadow-[0_30px_100px_rgba(0,0,0,0.32)] backdrop-blur-sm md:px-8">
+                <div className="mx-auto max-w-6xl rounded-xl md:rounded-4xl border border-white/12 bg-[#47131b]/72 px-6 py-6 text-center text-white shadow-[0_30px_100px_rgba(0,0,0,0.32)] backdrop-blur-sm md:px-8">
                   <div className="mx-auto max-w-4xl">
                     <div className="mx-auto inline-flex items-center gap-3 rounded-full border border-white/20 bg-white/10 px-4 py-1 text-[11px] uppercase tracking-[0.35em] text-white/80">
                       Royal Pomsky
@@ -141,8 +133,8 @@ export default function HomePage() {
                   </div>
                 </div>
 
-                <div className="mx-auto max-w-6xl overflow-hidden rounded-xl md:rounded-[1.75rem] border border-white/12 bg-[#3a1117]/55 shadow-[0_30px_100px_rgba(0,0,0,0.28)] backdrop-blur-sm">
-                  <div className="relative aspect-[4/3] sm:aspect-[16/11] md:aspect-[16/8] lg:aspect-[16/7]">
+                <div className="mx-auto max-w-6xl overflow-hidden rounded-xl md:rounded-4xl border border-white/12 bg-[#3a1117]/55 shadow-[0_30px_100px_rgba(0,0,0,0.28)] backdrop-blur-sm">
+                  <div className="relative aspect-4/3 sm:aspect-16/11 md:aspect-16/8 lg:aspect-16/7">
                     <Image
                       src="/pomsky-and-his-pet-family-parent.jpg"
                       alt="Pomsky auprès de sa famille dans un moment tendre"

@@ -55,7 +55,7 @@ export function TikTokVideoShowcase({
                             }`}
                         >
                             <CardContent className="flex h-full flex-col p-0">
-                                <div className="relative aspect-[9/16] overflow-hidden bg-black">
+                                <div className="relative aspect-9/16 overflow-hidden bg-black">
                                     <Image
                                         src={video.posterSrc}
                                         alt={video.title}
@@ -123,8 +123,8 @@ export function TikTokVideoShowcase({
                             <h3 className="text-lg font-semibold">{selectedVideo.title}</h3>
                             <p className="text-sm text-muted-foreground">{selectedVideo.summary}</p>
                         </div>
-                        <div className="mx-auto max-w-sm overflow-hidden rounded-[1.5rem] border border-border bg-black shadow-lg">
-                            <div className="relative aspect-[9/16]">
+                        <div className="mx-auto max-w-sm overflow-hidden rounded-3xl border border-border bg-black shadow-lg">
+                            <div className="relative aspect-9/16">
                                 <video
                                     key={selectedVideo.id}
                                     className="absolute inset-0 h-full w-full object-cover"

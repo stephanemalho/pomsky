@@ -222,7 +222,7 @@ export default function DogPage() {
                             </div>
                         </div>
 
-                        <div className="relative h-80 overflow-hidden rounded-2xl bg-black md:h-[28rem]">
+                        <div className="relative h-80 overflow-hidden rounded-2xl bg-black md:h-112">
                             <Image
                                 src="/pages/le-pomsky/pomsky-f4-et-une-citrouille.webp"
                                 alt="Pomsky au regard expressif sur une citrouille"
@@ -306,7 +306,7 @@ export default function DogPage() {
                                                 <h3 className="text-xl font-semibold">{size.title}</h3>
                                                 <PawPrint className="h-5 w-5 text-primary" aria-hidden="true" />
                                             </div>
-                                            <div className="relative aspect-[4/3] overflow-hidden rounded-xl bg-black/80">
+                                            <div className="relative aspect-4/3 overflow-hidden rounded-xl bg-black/80">
                                                 <Image
                                                     src={size.image}
                                                     alt={size.alt}

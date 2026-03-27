@@ -237,7 +237,7 @@ export default function PomskyPricePage() {
                             </div>
                         </div>
 
-                        <div className="relative h-80 overflow-hidden rounded-2xl bg-muted lg:h-[30rem]">
+                        <div className="relative h-80 overflow-hidden rounded-2xl bg-muted lg:h-120">
                             <Image
                                 src="/BAMBOU-pomsky-miniature-f5.webp"
                                 alt="Pomsky miniature de Royal Pomsky"
@@ -404,7 +404,7 @@ export default function PomskyPricePage() {
 
                     <section className="space-y-8">
                         <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
-                            <div className="relative h-80 overflow-hidden rounded-2xl bg-muted lg:h-[30rem]">
+                            <div className="relative h-80 overflow-hidden rounded-2xl bg-muted lg:h-120">
                                 <Image
                                     src="/SALLY-pomsky-miniature.webp"
                                     alt="Pomsky miniature adulte chez Royal Pomsky"
