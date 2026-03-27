@@ -116,6 +116,16 @@ export const pomskyBeigeYeuxBleusPost: BlogPost = {
     ],
     image: "/assets/blog/Pomsky-beige-aux-yeux-bleus-1038x576.webp",
     imageAlt: "Pomsky beige aux yeux bleus au rendu doux et lumineux",
+    recommendedLinks: [
+        {
+            label: "Voir le Pomsky renard",
+            href: "/blog/pomsky/apparence/le-pomsky-renard-decouvrez-ce-chien-au-look-de-petit-renard"
+        },
+        {
+            label: "Voir le Pomsky blanc aux yeux bleus",
+            href: "/blog/pomsky/apparence/pomsky-blanc-et-yeux-bleus-immersion-dans-lunivers-de-cette-race-captivante"
+        }
+    ],
     contactCta: {
         label: "Contacter l'élevage"
     }

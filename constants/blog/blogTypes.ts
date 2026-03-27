@@ -34,6 +34,10 @@ export type BlogPost = {
     tags: string[];
     image?: string;
     imageAlt?: string;
+    recommendedLinks?: Array<{
+        label: string;
+        href: string;
+    }>;
     contactCta?: {
         label?: string;
     };
@@ -55,6 +59,8 @@ export type BlogTheme = {
     slug: string;
     label: string;
     description?: string;
+    seoTitle?: string;
+    seoDescription?: string;
 };
 
 export type BlogHero = {

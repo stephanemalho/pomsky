@@ -45,7 +45,7 @@ export const pomskyToyGuidePost: BlogPost = {
             ],
             links: [
                 {
-                    label: "Lire notre guide de vigilance sur le Pomsky Toy",
+                    label: "Lire notre guide sur les fausses promesses et annonces trompeuses",
                     href: "/blog/pomsky/prix/pomsky-toy-comprendre-les-promesses-et-choisir-un-elevage-serieux"
                 }
             ]
@@ -124,6 +124,16 @@ export const pomskyToyGuidePost: BlogPost = {
     ],
     image: "/assets/blog/pomsky-6-semaine-chiot-blanc-gris.webp",
     imageAlt: "Pomsky Toy au regard expressif et petit format",
+    recommendedLinks: [
+        {
+            label: "Lire notre guide sur les fausses promesses et annonces trompeuses",
+            href: "/blog/pomsky/prix/pomsky-toy-comprendre-les-promesses-et-choisir-un-elevage-serieux"
+        },
+        {
+            label: "Comparer avec le format Pomsky miniature",
+            href: "/blog/pomsky/caracteristique/decouvrez-le-pomsky-nain-un-adorable-compagnon-a-quatre-pattes"
+        }
+    ],
     contactCta: {
         label: "Contacter l'élevage"
     }

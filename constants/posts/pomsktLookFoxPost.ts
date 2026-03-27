@@ -107,6 +107,16 @@ export const pomskyRenardPost: BlogPost = {
     image: "/assets/blog/white-and-brown-pomsky-look-fox-1038x576.webp",
     imageAlt:
         "Pomsky au look de petit renard avec expression vive et robe nuancée",
+    recommendedLinks: [
+        {
+            label: "Voir notre article sur le Pomsky beige aux yeux bleus",
+            href: "/blog/pomsky/apparence/pomsky-beige-aux-yeux-bleus-decouverte-de-cette-incroyable-variete-de-chien"
+        },
+        {
+            label: "Comprendre les apparences du Pomsky",
+            href: "/le-pomsky"
+        }
+    ],
     contactCta: {
         label: "Contacter l'élevage"
     }

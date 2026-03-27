@@ -18,12 +18,13 @@ import { chienPomskyPost } from "../posts/pomskyHybridRacePost";
 import { pomskyBlancPost } from "../posts/pomskyWhiteLookGreatPost";
 import { pomskyToyTransparencePost } from "../posts/pomskyToyTransparencePost";
 import { pomskyEmbarkPost } from "../posts/pomskyEmbarkPost";
+import { pomskyClandestineBreedingPost } from "../posts/pomskyClandestineBreedingPost";
 
 export const blog: BlogContentType = {
     hero: {
         title: "Actualités & conseils autour du Pomsky",
         subtitle:
-            "Race, élevage responsable, éducation et bien-être du Pomsky au quotidien.",
+            "Guides clairs sur la race, les formats, l'apparence, la génétique, le budget et l'adoption du Pomsky.",
         cta: "Découvrir nos chiots",
         linkTo: "/chiots-disponibles",
         Icon: "paw",
@@ -68,36 +69,55 @@ export const blog: BlogContentType = {
         {
             slug: "caracteristique",
             label: "Caractéristiques",
-            description: "Taille, caractère et vie avec le chien"
+            description: "Taille, formats, projection adulte et vie quotidienne avec le Pomsky.",
+            seoTitle: "Caractéristiques du Pomsky | Taille, formats et vie quotidienne",
+            seoDescription:
+                "Découvrez nos articles sur les caractéristiques du Pomsky: formats Toy, Miniature ou Standard, projection adulte, vie quotidienne et compréhension de la race."
         },
         {
             slug: "apparence",
             label: "Apparence & robe",
-            description: "Couleurs, pelages et variations physiques"
+            description: "Couleurs, robes, contrastes visuels et lectures d'apparence du Pomsky.",
+            seoTitle: "Apparence du Pomsky | Robes, couleurs et looks recherches",
+            seoDescription:
+                "Explorez nos articles sur l'apparence du Pomsky: robe blanche, noire, beige, yeux bleus, look renard et autres profils visuels recherches."
         },
         {
             slug: "origine",
             label: "Origines",
-            description: "Histoire et racines des races"
+            description: "Histoire du Pomsky, race hybride et racines des lignées.",
+            seoTitle: "Origines du Pomsky | Histoire, race hybride et racines",
+            seoDescription:
+                "Retrouvez nos contenus sur les origines du Pomsky, son histoire, sa construction comme race hybride et l'influence de ses races parentes."
         },
         {
             slug: "genetique",
             label: "Génétique",
-            description: "Générations, ADN et croisements"
+            description: "Generations F1 a F5, ADN, tests et travail de selection.",
+            seoTitle: "Genetique du Pomsky | Generations, ADN et selection",
+            seoDescription:
+                "Découvrez nos articles sur la génétique du Pomsky: générations F1 à F5, tests ADN, Embark, sélection des lignées et lecture des mariages."
         },
         {
             slug: "prix",
             label: "Prix & adoption",
-            description: "Budget, éleveurs et conseils d'achat"
+            description: "Prix, budget global, choix de l'elevage et reflexion avant adoption.",
+            seoTitle: "Prix et adoption du Pomsky | Tarifs, budget et choix de l'elevage",
+            seoDescription:
+                "Lisez nos articles sur le prix du Pomsky, le budget global, le choix d'un élevage professionnel et les repères utiles avant adoption."
         },
         {
             slug: "sante",
             label: "Santé & bien-être",
-            description: "Longévité, soins et entretien"
+            description: "Longevite, soins, entretien et suivi du Pomsky dans le temps.",
+            seoTitle: "Sante du Pomsky | Longevite, soins et entretien",
+            seoDescription:
+                "Consultez nos contenus sur la santé du Pomsky, son espérance de vie, son entretien, son suivi et les repères de bien-être au quotidien."
         }
     ],
     posts: [
         pomskyEmbarkPost,
+        pomskyClandestineBreedingPost,
         pomskyToyTransparencePost,
         pomskyNainPost,
         pomskyToyGuidePost,

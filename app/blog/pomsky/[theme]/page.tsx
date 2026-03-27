@@ -33,9 +33,9 @@ export async function generateMetadata({
         };
     }
 
-    const title = `${themeData.label} | Blog Pomsky`;
+    const title = themeData.seoTitle ?? `${themeData.label} | Blog Pomsky`;
     const description =
-        themeData.description ?? pageMetadata.blog.description;
+        themeData.seoDescription ?? themeData.description ?? pageMetadata.blog.description;
     const canonicalPath = `/blog/pomsky/${themeData.slug}`;
 
     return {

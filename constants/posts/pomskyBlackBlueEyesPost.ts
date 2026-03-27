@@ -106,6 +106,16 @@ export const pomskyNoirYeuxBleusPost: BlogPost = {
     ],
     image: "/assets/blog/pomsky-chiot-noir-aux-yeux-bleus-1038x576.webp",
     imageAlt: "Chiot Pomsky noir aux yeux bleus au contraste visuel marqué",
+    recommendedLinks: [
+        {
+            label: "Voir le Pomsky blanc aux yeux bleus",
+            href: "/blog/pomsky/apparence/pomsky-blanc-et-yeux-bleus-immersion-dans-lunivers-de-cette-race-captivante"
+        },
+        {
+            label: "Comprendre les apparences du Pomsky",
+            href: "/le-pomsky"
+        }
+    ],
     contactCta: {
         label: "Contacter l'élevage"
     }

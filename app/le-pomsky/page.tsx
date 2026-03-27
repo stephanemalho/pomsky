@@ -60,7 +60,7 @@ const sizes = [
         text: "Le Pomsky Toy est le plus petit gabarit. Très proche de ses humains, expressif et joueur, il combine une petite taille avec une vraie énergie. Son format le rend plus simple à transporter et souvent plus pratique pour une vie citadine, à condition de respecter ses besoins d’activité, de stimulation et d’éducation. Sa petite taille ne fait pas de lui un chien passif ou fragile par nature.",
         image: "/size-for-toy-pomsky.webp",
         alt: "Comparatif de taille d'un Pomsky Toy et d'un Husky",
-        linkHref: "/blog/pomsky/prix/pomsky-toy-comprendre-les-promesses-et-choisir-un-elevage-serieux",
+        linkHref: "/blog/pomsky/caracteristique/tout-savoir-sur-le-pomsky-toy-race-caracteristiques-et-conseils",
     },
     {
         title: "Le Pomsky miniature",
@@ -690,7 +690,7 @@ export default function DogPage() {
                                         href="/blog/pomsky/prix/pomsky-toy-comprendre-les-promesses-et-choisir-un-elevage-serieux"
                                         className="inline-flex text-primary underline underline-offset-4"
                                     >
-                                        Lire notre guide sur le Pomsky Toy
+                                        Lire notre guide sur les fausses promesses
                                     </Link>
                                 </CardContent>
                             </Card>

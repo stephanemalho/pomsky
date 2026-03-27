@@ -120,6 +120,16 @@ export const pomskyAdultePost: BlogPost = {
     ],
     image: "/assets/blog/le-pomsky-adulte-1038x576.webp",
     imageAlt: "Pomsky adulte au pelage dense et expression affirmée",
+    recommendedLinks: [
+        {
+            label: "Comparer les formats du Pomsky",
+            href: "/le-pomsky"
+        },
+        {
+            label: "Estimer le budget global d'un Pomsky adulte",
+            href: "/blog/pomsky/prix/pomsky-prix-guide-complet-pour-comprendre-le-cout-dadoption-et-dentretien"
+        }
+    ],
     contactCta: {
         label: "Contacter l'élevage"
     }

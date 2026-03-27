@@ -71,7 +71,7 @@ export const pomskyAVendrePost: BlogPost = {
             ],
             links: [
                 {
-                    label: "Lire notre guide de vigilance sur le Pomsky Toy",
+                    label: "Lire notre guide sur les fausses promesses et annonces trompeuses",
                     href: "/blog/pomsky/prix/pomsky-toy-comprendre-les-promesses-et-choisir-un-elevage-serieux"
                 },
                 {
@@ -153,6 +153,16 @@ export const pomskyAVendrePost: BlogPost = {
     ],
     image: "/assets/blog/pomsky-for-sale-blog-page.webp",
     imageAlt: "Chiot Pomsky disponible à l'adoption dans un élevage sérieux",
+    recommendedLinks: [
+        {
+            label: "Voir les prix Royal Pomsky",
+            href: "/pomsky-prix"
+        },
+        {
+            label: "Estimer le budget global d'un Pomsky",
+            href: "/blog/pomsky/prix/pomsky-prix-guide-complet-pour-comprendre-le-cout-dadoption-et-dentretien"
+        }
+    ],
     contactCta: {
         label: "Contacter l'élevage"
     }

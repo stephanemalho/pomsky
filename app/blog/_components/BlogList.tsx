@@ -20,10 +20,15 @@ const getThemeFromSlug = (slug: string) => slug.split("/")[1] ?? "caracteristiqu
 export default function BlogList({ base, theme }: BlogListProps) {
     const { hero, posts, filterLabels, themes } = blog;
     const basePosts = posts.filter((post) => post.slug.startsWith(`${base}/`));
-    const activeTheme = themes.find((item) => item.slug === theme)?.slug;
+    const activeThemeData = themes.find((item) => item.slug === theme);
+    const activeTheme = activeThemeData?.slug;
     const visiblePosts = activeTheme
         ? basePosts.filter((post) => getThemeFromSlug(post.slug) === activeTheme)
         : basePosts;
+    const heading = activeThemeData
+        ? `Blog Pomsky : ${activeThemeData.label}`
+        : hero.title;
+    const subtitle = activeThemeData?.description ?? hero.subtitle;
 
     return (
         <div className="bg-background text-foreground">
@@ -34,10 +39,10 @@ export default function BlogList({ base, theme }: BlogListProps) {
                             Journal du Pomsky
                         </p>
                         <h1 className="text-3xl md:text-5xl font-sans font-semibold leading-tight bg-linear-to-r from-foreground via-primary to-foreground text-transparent bg-clip-text">
-                            {hero.title}
+                            {heading}
                         </h1>
                         <p className="text-base md:text-lg text-muted-foreground max-w-2xl">
-                            {hero.subtitle}
+                            {subtitle}
                         </p>
                         <div className="flex flex-wrap items-center gap-3 text-sm">
                             <Link
@@ -50,6 +55,12 @@ export default function BlogList({ base, theme }: BlogListProps) {
                                 {visiblePosts.length} articles
                             </span>
                         </div>
+                        {activeThemeData ? (
+                            <div className="max-w-3xl rounded-2xl border border-primary/15 bg-primary/5 px-5 py-4 text-sm leading-relaxed text-muted-foreground">
+                                Cette page regroupe les contenus du theme {activeThemeData.label.toLowerCase()}.
+                                Chaque article y traite un angle precis pour eviter de melanger les sujets et faciliter la navigation.
+                            </div>
+                        ) : null}
                         <nav aria-label="Filtrer les articles par theme">
                             <ul className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.2em]">
                                 <li className="my-2">

@@ -124,6 +124,16 @@ export const pomskyNainPost: BlogPost = {
     ],
     image: "/assets/blog/pomsky-nain-f3-blog-illustration.webp",
     imageAlt: "Pomsky miniature au regard expressif et format intermédiaire",
+    recommendedLinks: [
+        {
+            label: "Comparer avec le format Pomsky Toy",
+            href: "/blog/pomsky/caracteristique/tout-savoir-sur-le-pomsky-toy-race-caracteristiques-et-conseils"
+        },
+        {
+            label: "Voir les prix Royal Pomsky",
+            href: "/pomsky-prix"
+        }
+    ],
     contactCta: {
         label: "Contacter l'élevage"
     }

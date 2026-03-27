@@ -126,6 +126,16 @@ export const chienPomskyPost: BlogPost = {
     ],
     image: "/assets/blog/two-pomsky-puppy.webp",
     imageAlt: "Deux chiots Pomsky illustrant la lecture d'une race hybride",
+    recommendedLinks: [
+        {
+            label: "Comprendre les générations F1 à F5",
+            href: "/blog/pomsky/genetique/pomsky-f1-f2-f3-cest-quoi"
+        },
+        {
+            label: "Voir notre guide complet sur le Pomsky",
+            href: "/le-pomsky"
+        }
+    ],
     contactCta: {
         label: "Contacter l'élevage"
     }

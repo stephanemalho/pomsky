@@ -107,6 +107,16 @@ export const pomskyBlancYeuxBleusPost: BlogPost = {
     image: "/assets/blog/pomsky-blanc-yeux-bleu-1038x576.webp",
     imageAlt:
         "Pomsky blanc aux yeux bleus au pelage lumineux et regard intense",
+    recommendedLinks: [
+        {
+            label: "Voir notre article sur le Pomsky blanc",
+            href: "/blog/pomsky/apparence/le-pomsky-blanc-une-race-de-chien-au-look-irresistible"
+        },
+        {
+            label: "Voir le Pomsky noir aux yeux bleus",
+            href: "/blog/pomsky/apparence/pomsky-noir-aux-yeux-bleus-decouvrez-ce-magnifique-chien-au-regard-envoutant"
+        }
+    ],
     contactCta: {
         label: "Contacter l'élevage"
     }

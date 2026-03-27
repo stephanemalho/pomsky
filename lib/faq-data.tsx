@@ -648,7 +648,7 @@ export const faqPomsky: FAQItem[] = [
             href="/blog/pomsky/prix/pomsky-toy-comprendre-les-promesses-et-choisir-un-elevage-serieux"
             className="underline underline-offset-4"
           >
-            Pomsky Toy: comprendre les promesses et choisir un élevage sérieux
+            Pomsky pas cher : attention aux fausses promesses
           </Link>
           .
         </p>

@@ -103,7 +103,7 @@ export const pomskyPrixPost: BlogPost = {
             ],
             links: [
                 {
-                    label: "Lire aussi: comprendre les promesses et rester vigilant",
+                    label: "Lire aussi: Pomsky pas cher, attention aux fausses promesses",
                     href: "/blog/pomsky/prix/pomsky-toy-comprendre-les-promesses-et-choisir-un-elevage-serieux"
                 }
             ]
@@ -165,6 +165,20 @@ export const pomskyPrixPost: BlogPost = {
     ],
     image: "/assets/blog/LILY-6-semaines-illustrate-puppy-price-1038x576.webp",
     imageAlt: "Chiot Pomsky illustrant le budget global d'adoption et d'entretien",
+    recommendedLinks: [
+        {
+            label: "Voir les prix Royal Pomsky",
+            href: "/pomsky-prix"
+        },
+        {
+            label: "Choisir un élevage sérieux avant adoption",
+            href: "/blog/pomsky/prix/pomsky-a-vendre-comment-choisir-le-bon-eleveur-et-le-chiot-parfait-pour-vous"
+        },
+        {
+            label: "Préparer l'arrivée du chiot à la maison",
+            href: "/adoption/reussir-son-adoption"
+        }
+    ],
     contactCta: {
         label: "Contacter l'élevage"
     }

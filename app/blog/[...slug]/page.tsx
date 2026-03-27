@@ -26,38 +26,6 @@ const formatDate = (value: string) =>
         day: "numeric",
     });
 
-const normalizeToken = (value: string) =>
-    value
-        .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, "")
-        .toLowerCase()
-        .trim();
-
-const getRelatedPosts = (currentPost: BlogPost, limit = 3): BlogPost[] => {
-    const currentTags = new Set(currentPost.tags.map(normalizeToken));
-    const currentCategory = normalizeToken(currentPost.category);
-    const currentRoot = currentPost.slug.split("/")[0] ?? "";
-
-    return blog.posts
-        .filter((candidate) => candidate.slug !== currentPost.slug)
-        .map((candidate) => {
-            const candidateTags = candidate.tags.map(normalizeToken);
-            const sharedTags = candidateTags.filter((tag) =>
-                currentTags.has(tag)
-            ).length;
-            const sameCategory =
-                normalizeToken(candidate.category) === currentCategory ? 1 : 0;
-            const sameRoot =
-                (candidate.slug.split("/")[0] ?? "") === currentRoot ? 1 : 0;
-            const score = sharedTags * 3 + sameCategory * 2 + sameRoot;
-
-            return { candidate, score };
-        })
-        .sort((a, b) => b.score - a.score)
-        .slice(0, limit)
-        .map(({ candidate }) => candidate);
-};
-
 export function generateStaticParams() {
     return blog.posts.map((post) => ({ slug: post.slug.split("/") }));
 }
@@ -148,7 +116,7 @@ export default async function BlogArticlePage({
     }
 
     const { articleLabels } = blog;
-    const relatedPosts = getRelatedPosts(post);
+    const recommendedLinks = post.recommendedLinks ?? [];
     const articleUrl = new URL(`/blog/${post.slug}`, siteConfig.siteUrl).toString();
     const hasModifiedDate = Boolean(post.modifiedDate && post.modifiedDate !== post.date);
     const displayedDate = hasModifiedDate ? post.modifiedDate! : post.date;
@@ -256,20 +224,20 @@ export default async function BlogArticlePage({
                 </div>
             </article>
 
-            {relatedPosts.length > 0 ? (
+            {recommendedLinks.length > 0 ? (
                 <section className="max-w-3xl mx-auto px-6 pb-10">
                     <div className="rounded-3xl border border-border bg-card p-6 md:p-8">
                         <h2 className="text-xl md:text-2xl font-sans font-semibold text-foreground">
                             Articles liés
                         </h2>
                         <div className="mt-4 grid gap-3">
-                            {relatedPosts.map((relatedPost) => (
+                            {recommendedLinks.map((link) => (
                                 <Link
-                                    key={relatedPost.slug}
-                                    href={`/blog/${relatedPost.slug}`}
+                                    key={`${post.slug}-${link.href}`}
+                                    href={link.href}
                                     className="rounded-xl border border-border px-4 py-3 text-sm text-foreground hover:bg-muted/60"
                                 >
-                                    {relatedPost.title}
+                                    {link.label}
                                 </Link>
                             ))}
                         </div>
