@@ -236,6 +236,21 @@ export default async function BlogArticlePage({
                                     <p key={`${section.subtitle}-${index}`}>{paragraph}</p>
                                 ))}
                             </div>
+                            {section.links?.length ? (
+                                <div className="mt-6 flex flex-col gap-3">
+                                    {section.links.map((link) => (
+                                        <a
+                                            key={`${section.subtitle}-${link.href}`}
+                                            href={link.href}
+                                            target={link.external ? "_blank" : undefined}
+                                            rel={link.external ? "noreferrer noopener" : undefined}
+                                            className="w-fit rounded-xl border border-primary/20 bg-primary/5 px-4 py-3 text-sm font-medium text-foreground hover:bg-primary/10"
+                                        >
+                                            {link.label}
+                                        </a>
+                                    ))}
+                                </div>
+                            ) : null}
                         </section>
                     ))}
                 </div>

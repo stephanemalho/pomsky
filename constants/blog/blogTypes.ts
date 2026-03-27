@@ -3,6 +3,11 @@ export type IconColorType = 'green' | 'blue' | 'red' | 'orange' ;
 export type BlogSection = {
     subtitle: string;
     paragraphs: string[];
+    links?: Array<{
+        label: string;
+        href: string;
+        external?: boolean;
+    }>;
 };
 
 export type BlogPost = {

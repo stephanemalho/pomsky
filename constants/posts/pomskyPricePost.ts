@@ -70,6 +70,27 @@ export const pomskyPrixPost: BlogPost = {
             ]
         },
         {
+            subtitle: "Assurer son Pomsky",
+            paragraphs: [
+                "L’assurance santé pour chien n’est pas obligatoire en France, mais elle peut être intéressante si vous souhaitez lisser les dépenses vétérinaires sur l’année et éviter qu’un accident ou une maladie ne déséquilibre votre budget. Souscrire quand le Pomsky est encore jeune permet souvent de profiter d’un dossier plus simple et de limiter les exclusions liées aux antécédents.",
+                "En 2026, les comparateurs français observent des formules chien autour de 12 euros par mois en entrée de gamme, environ 28 euros par mois pour une couverture intermédiaire, et autour de 44 euros par mois pour une formule premium. Pour un Pomsky, beaucoup de familles se situent donc dans une enveloppe réaliste d’environ 20 à 40 euros par mois selon le niveau de remboursement, le plafond annuel et la présence ou non d’un forfait prévention.",
+                "Faut-il assurer son Pomsky ? Oui, si vous voulez plus de sérénité sur les gros frais imprévus, un meilleur remboursement en cas de chirurgie, d’examens ou de maladie, et une gestion plus régulière du budget santé. Pas forcément, si vous avez déjà une épargne de précaution dédiée et si vous acceptez d’assumer vous-même les dépenses vétérinaires ponctuelles. Dans tous les cas, il faut vérifier le taux de remboursement, le plafond annuel, la franchise, les délais de carence et la prise en charge des maladies comme des accidents.",
+                "Parmi les acteurs sérieux à comparer, SantéVet reste une référence historique en France avec des formules pouvant aller jusqu’à 100 % de remboursement et un budget prévention. Lassie est aussi un choix intéressant pour les jeunes chiens grâce à son approche digitale, ses formules jusqu’à 100 %, son forfait prévention et l’absence de franchise selon les offres affichées."
+            ],
+            links: [
+                {
+                    label: "Découvrir les formules SantéVet",
+                    href: "https://www.santevet.com/",
+                    external: true
+                },
+                {
+                    label: "Découvrir l'assurance Lassie",
+                    href: "https://fr.lassie.co/",
+                    external: true
+                }
+            ]
+        },
+        {
             subtitle: "Prévention et sélection des reproducteurs",
             paragraphs: [
                 "Les Pomskies sont généralement robustes grâce à leur patrimoine génétique varié.",
