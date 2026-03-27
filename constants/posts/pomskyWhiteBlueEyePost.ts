@@ -65,8 +65,8 @@ export const pomskyBlancYeuxBleusPost: BlogPost = {
                     href: "/blog/pomsky/prix/pomsky-a-vendre-comment-choisir-le-bon-eleveur-et-le-chiot-parfait-pour-vous"
                 },
                 {
-                    label: "Voir nos chiots disponibles",
-                    href: "/chiots-disponibles"
+                    label: "Voir notre article sur le Pomsky blanc",
+                    href: "/blog/pomsky/apparence/le-pomsky-blanc-une-race-de-chien-au-look-irresistible"
                 }
             ]
         },
@@ -87,7 +87,7 @@ export const pomskyBlancYeuxBleusPost: BlogPost = {
     ],
     author: {
         name: "Marine",
-        role: "Éleveur de Pomsky passionnée",
+        role: "Éleveuse professionnelle de Pomsky",
         imageSrc: "/assets/authors/marine-eleveuse-royal-pomsky.webp",
         imageAlt: "Portrait de l'éleveuse Marine de Royal Pomsky",
         linkedinUrl: "",

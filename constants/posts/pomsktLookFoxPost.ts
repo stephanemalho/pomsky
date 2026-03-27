@@ -61,12 +61,12 @@ export const pomskyRenardPost: BlogPost = {
             ],
             links: [
                 {
-                    label: "Voir nos chiots disponibles",
-                    href: "/chiots-disponibles"
+                    label: "Voir le Pomsky beige aux yeux bleus",
+                    href: "/blog/pomsky/apparence/pomsky-beige-aux-yeux-bleus-decouverte-de-cette-incroyable-variete-de-chien"
                 },
                 {
-                    label: "Nous contacter pour parler du profil recherché",
-                    href: "/contact"
+                    label: "Voir le Pomsky noir aux yeux bleus",
+                    href: "/blog/pomsky/apparence/pomsky-noir-aux-yeux-bleus-decouvrez-ce-magnifique-chien-au-regard-envoutant"
                 }
             ]
         },
@@ -87,7 +87,7 @@ export const pomskyRenardPost: BlogPost = {
     ],
     author: {
         name: "Marine",
-        role: "Éleveur de Pomsky passionnée",
+        role: "Éleveuse professionnelle de Pomsky",
         imageSrc: "/assets/authors/marine-eleveuse-royal-pomsky.webp",
         imageAlt: "Portrait de l'éleveuse Marine de Royal Pomsky",
         linkedinUrl: "",

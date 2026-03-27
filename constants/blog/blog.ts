@@ -78,9 +78,9 @@ export const blog: BlogContentType = {
             slug: "apparence",
             label: "Apparence & robe",
             description: "Couleurs, robes, contrastes visuels et lectures d'apparence du Pomsky.",
-            seoTitle: "Apparence du Pomsky | Robes, couleurs et looks recherches",
+            seoTitle: "Apparence du Pomsky | Robes, couleurs et looks recherchés",
             seoDescription:
-                "Explorez nos articles sur l'apparence du Pomsky: robe blanche, noire, beige, yeux bleus, look renard et autres profils visuels recherches."
+                "Explorez nos articles sur l'apparence du Pomsky: robe blanche, noire, beige, yeux bleus, look renard et autres profils visuels recherchés."
         },
         {
             slug: "origine",
@@ -93,24 +93,24 @@ export const blog: BlogContentType = {
         {
             slug: "genetique",
             label: "Génétique",
-            description: "Generations F1 a F5, ADN, tests et travail de selection.",
-            seoTitle: "Genetique du Pomsky | Generations, ADN et selection",
+            description: "Générations F1 à F5, ADN, tests et travail de sélection.",
+            seoTitle: "Génétique du Pomsky | Générations, ADN et sélection",
             seoDescription:
                 "Découvrez nos articles sur la génétique du Pomsky: générations F1 à F5, tests ADN, Embark, sélection des lignées et lecture des mariages."
         },
         {
             slug: "prix",
             label: "Prix & adoption",
-            description: "Prix, budget global, choix de l'elevage et reflexion avant adoption.",
-            seoTitle: "Prix et adoption du Pomsky | Tarifs, budget et choix de l'elevage",
+            description: "Prix, budget global, choix de l'élevage et réflexion avant adoption.",
+            seoTitle: "Prix et adoption du Pomsky | Tarifs, budget et choix de l'élevage",
             seoDescription:
                 "Lisez nos articles sur le prix du Pomsky, le budget global, le choix d'un élevage professionnel et les repères utiles avant adoption."
         },
         {
             slug: "sante",
             label: "Santé & bien-être",
-            description: "Longevite, soins, entretien et suivi du Pomsky dans le temps.",
-            seoTitle: "Sante du Pomsky | Longevite, soins et entretien",
+            description: "Longévité, soins, entretien et suivi du Pomsky dans le temps.",
+            seoTitle: "Santé du Pomsky | Longévité, soins et entretien",
             seoDescription:
                 "Consultez nos contenus sur la santé du Pomsky, son espérance de vie, son entretien, son suivi et les repères de bien-être au quotidien."
         }

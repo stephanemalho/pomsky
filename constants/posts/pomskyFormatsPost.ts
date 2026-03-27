@@ -81,7 +81,7 @@ export const pomskyGenerationsPost: BlogPost = {
     ],
     author: {
         name: "Aurélie Violette",
-        role: "Éleveur & spécialiste du Pomsky",
+        role: "Éleveuse professionnelle de Pomsky",
         imageSrc: "/assets/authors/aurelie-violette-portrait.webp",
         imageAlt: "Portrait de l'auteur Aurélie Violette",
         linkedinUrl: "",

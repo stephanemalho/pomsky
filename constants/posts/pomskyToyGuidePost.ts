@@ -93,19 +93,19 @@ export const pomskyToyGuidePost: BlogPost = {
             ],
             links: [
                 {
-                    label: "Découvrir nos chiots disponibles",
-                    href: "/chiots-disponibles"
+                    label: "Lire notre guide sur les fausses promesses et annonces trompeuses",
+                    href: "/blog/pomsky/prix/pomsky-toy-comprendre-les-promesses-et-choisir-un-elevage-serieux"
                 },
                 {
-                    label: "Nous contacter pour parler de votre projet",
-                    href: "/contact"
+                    label: "Comparer avec le format Pomsky miniature",
+                    href: "/blog/pomsky/caracteristique/decouvrez-le-pomsky-nain-un-adorable-compagnon-a-quatre-pattes"
                 }
             ]
         }
     ],
     author: {
         name: "Aurélie Violette",
-        role: "Éleveur & spécialiste du Pomsky Toy",
+        role: "Éleveuse professionnelle de Pomsky",
         imageSrc: "/assets/authors/aurelie-violette-portrait.webp",
         imageAlt: "Portrait de l'auteur Aurélie Violette",
         linkedinUrl: "",

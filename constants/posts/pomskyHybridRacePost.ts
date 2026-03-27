@@ -99,15 +99,15 @@ export const chienPomskyPost: BlogPost = {
                     href: "/le-pomsky"
                 },
                 {
-                    label: "Voir nos chiots disponibles",
-                    href: "/chiots-disponibles"
+                    label: "Comprendre les générations F1 à F5",
+                    href: "/blog/pomsky/genetique/pomsky-f1-f2-f3-cest-quoi"
                 }
             ]
         }
     ],
     author: {
         name: "Marine",
-        role: "Éleveur de Pomsky passionnée",
+        role: "Éleveuse professionnelle de Pomsky",
         imageSrc: "/assets/authors/marine-eleveuse-royal-pomsky.webp",
         imageAlt: "Portrait de l'éleveuse Marine de Royal Pomsky",
         linkedinUrl: "",

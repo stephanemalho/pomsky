@@ -122,19 +122,19 @@ export const pomskyAVendrePost: BlogPost = {
             ],
             links: [
                 {
-                    label: "Découvrir nos chiots disponibles",
-                    href: "/chiots-disponibles"
+                    label: "Voir les prix Royal Pomsky",
+                    href: "/pomsky-prix"
                 },
                 {
-                    label: "Nous contacter pour échanger sur votre projet",
-                    href: "/contact"
+                    label: "Préparer son adoption pas à pas",
+                    href: "/adoption/reussir-son-adoption"
                 }
             ]
         }
     ],
     author: {
         name: "Marine",
-        role: "Éleveur de Pomsky passionnée",
+        role: "Éleveuse professionnelle de Pomsky",
         imageSrc: "/assets/authors/marine-eleveuse-royal-pomsky.webp",
         imageAlt: "Portrait de l'éleveuse Marine de Royal Pomsky",
         linkedinUrl: "",

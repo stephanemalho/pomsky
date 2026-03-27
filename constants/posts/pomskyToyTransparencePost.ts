@@ -8,6 +8,8 @@ export const pomskyToyTransparencePost: BlogPost = {
         "Pomsky pas cher : comment repérer les fausses promesses avant réservation",
     excerpt:
         "Un Pomsky affiché à bas prix peut sembler attirant, mais une annonce trop séduisante cache parfois des promesses floues, des informations incomplètes ou une vraie absence de transparence. Voici comment garder du recul.",
+    seoDescription:
+        "Un Pomsky pas cher peut cacher des promesses floues ou des annonces trompeuses. Voici les vérifications utiles avant réservation et les repères pour lire une annonce avec recul.",
     introduction:
         "L'expression 'Pomsky pas cher' attire naturellement les familles, surtout lorsqu'elle s'accompagne de promesses très séduisantes: très petit format, yeux bleus, robe rare, disponibilité immédiate ou taille adulte garantie. Le problème n'est pas de comparer les prix. Le problème, c'est de confondre un tarif attractif avec une bonne opportunité. Dans cet article, nous expliquons comment lire ces annonces avec recul, quels signaux doivent vous alerter et pourquoi la transparence compte bien davantage qu'un prix d'appel.",
     sections: [
@@ -61,7 +63,7 @@ export const pomskyToyTransparencePost: BlogPost = {
     ],
     author: {
         name: "Aurélie Violette",
-        role: "Éleveur & spécialiste du Pomsky Toy",
+        role: "Éleveuse professionnelle de Pomsky",
         imageSrc: "/assets/authors/aurelie-violette-portrait.webp",
         imageAlt: "Portrait d'Aurélie Violette",
         linkedinUrl: "",

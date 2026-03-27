@@ -89,8 +89,8 @@ export const pomskyAdultePost: BlogPost = {
             ],
             links: [
                 {
-                    label: "Découvrir nos chiots disponibles",
-                    href: "/chiots-disponibles"
+                    label: "Comparer les formats du Pomsky",
+                    href: "/le-pomsky"
                 },
                 {
                     label: "Voir les prix Royal Pomsky",
@@ -101,7 +101,7 @@ export const pomskyAdultePost: BlogPost = {
     ],
     author: {
         name: "Marine",
-        role: "Éleveur de Pomsky passionnée",
+        role: "Éleveuse professionnelle de Pomsky",
         imageSrc: "/assets/authors/marine-eleveuse-royal-pomsky.webp",
         imageAlt: "Portrait de l'éleveuse Marine de Royal Pomsky",
         linkedinUrl: "",

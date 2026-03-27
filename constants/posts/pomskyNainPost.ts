@@ -93,19 +93,19 @@ export const pomskyNainPost: BlogPost = {
             ],
             links: [
                 {
-                    label: "Découvrir nos chiots disponibles",
-                    href: "/chiots-disponibles"
+                    label: "Comparer les formats du Pomsky",
+                    href: "/le-pomsky"
                 },
                 {
-                    label: "Nous contacter pour parler de votre projet",
-                    href: "/contact"
+                    label: "Estimer le budget global d'un Pomsky",
+                    href: "/blog/pomsky/prix/pomsky-prix-guide-complet-pour-comprendre-le-cout-dadoption-et-dentretien"
                 }
             ]
         }
     ],
     author: {
         name: "Marine",
-        role: "Éleveur de Pomsky passionnée",
+        role: "Éleveuse professionnelle de Pomsky",
         imageSrc: "/assets/authors/marine-eleveuse-royal-pomsky.webp",
         imageAlt: "Portrait de l'éleveuse Marine de Royal Pomsky",
         linkedinUrl: "",
