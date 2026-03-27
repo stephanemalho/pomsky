@@ -283,6 +283,41 @@ export function generateWebPageSchema(page: {
     };
 }
 
+export function generateVideoObjectSchema(video: {
+    name: string;
+    description: string;
+    pageUrl: string;
+    contentUrl: string;
+    thumbnailUrl: string;
+    uploadDate: string;
+    publisherName?: string;
+}) {
+    return {
+        "@context": "https://schema.org",
+        "@type": "VideoObject",
+        name: video.name,
+        description: video.description,
+        uploadDate: normalizeSchemaDateTime(video.uploadDate),
+        url: toAbsoluteUrl(video.pageUrl),
+        contentUrl: toAbsoluteUrl(video.contentUrl),
+        thumbnailUrl: [toAbsoluteUrl(video.thumbnailUrl)],
+        inLanguage: siteConfig.locale,
+        isPartOf: {
+            "@type": "WebPage",
+            "@id": toAbsoluteUrl(video.pageUrl)
+        },
+        publisher: {
+            "@type": "Organization",
+            name: video.publisherName ?? siteConfig.name,
+            url: siteConfig.siteUrl,
+            logo: {
+                "@type": "ImageObject",
+                url: `${siteConfig.siteUrl}/icon.png`
+            }
+        }
+    };
+}
+
 export function generateBlogPostingSchema(post: {
     title: string;
     excerpt: string;

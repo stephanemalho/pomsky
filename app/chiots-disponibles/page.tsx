@@ -5,7 +5,7 @@ import Link from "next/link"
 import type { Metadata } from "next"
 import { buildOpenGraph, buildTwitter, pageMetadata, returnLastmod, siteConfig, sitemapPages } from "@/lib/seo-config"
 import { pageContent } from "@/lib/page-content"
-import { generateBreadcrumbSchema, generateFAQSchema, generatePuppyListSchema, generateWebPageSchema } from "@/lib/schema-generators"
+import { generateBreadcrumbSchema, generateFAQSchema, generatePuppyListSchema, generateVideoObjectSchema, generateWebPageSchema } from "@/lib/schema-generators"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
 import { puppies } from "./puppies"
 import { Card, CardContent } from "@/components/ui/card"
@@ -14,6 +14,16 @@ import { Badge } from "@/components/ui/badge"
 import { TikTokFeatureSpotlight } from "@/components/client/tiktok/TikTokFeatureSpotlight"
 
 const puppiesOgImage = "/pages/puppies/SNOW-male-pomsky-a-vendre-5.jpeg"
+const familyVideoAnchor = `${siteConfig.pages.puppies}#souvenir-d-adoption`
+const familyVideoSchema = generateVideoObjectSchema({
+    name: "Souvenir d'adoption d'un chiot Royal POMSKY",
+    description:
+        "Vidéo montrant la surprise d'adoption d'un chiot Royal POMSKY au moment de la rencontre avec sa future famille.",
+    pageUrl: familyVideoAnchor,
+    contentUrl: "/assets/tiktok/7101955478313356549.mp4",
+    thumbnailUrl: "/assets/tiktok/7101955478313356549.webp",
+    uploadDate: "2022-05-26",
+})
 
 export const metadata: Metadata = {
     title: pageMetadata.puppies.title,
@@ -92,6 +102,10 @@ export default function NosChiotsPage() {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
             />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(familyVideoSchema) }}
+            />
             <div className="pb-16 ">
                 <div className="container mx-auto my-12">
                     <section className="text-center space-y-4 mb-12">
@@ -106,6 +120,7 @@ export default function NosChiotsPage() {
                         <div className="w-24 h-1 bg-primary mx-auto rounded-full" aria-hidden="true" />
                     </section>
                     <TikTokFeatureSpotlight
+                        id="souvenir-d-adoption"
                         badge="Souvenir d'adoption"
                         title="Un chiot Royal Pomsky, c'est aussi une vraie émotion au moment de la rencontre"
                         description="Il y a des adoptions qui marquent dès les premières secondes. Dans cette scène, on ne voit pas seulement un chiot rejoindre son foyer: on voit un père qui a gardé le secret, des enfants qui découvrent la surprise, puis cet instant très particulier où tout bascule dans la joie. C'est exactement le type de moment qui rappelle qu'un chiot n'arrive jamais seulement dans une maison, mais dans une histoire de famille qui commence."

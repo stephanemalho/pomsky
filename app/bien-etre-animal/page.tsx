@@ -7,12 +7,22 @@ import { FAQSection } from "@/components/faq"
 import { faqBienEtre } from "@/lib/faq-data"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
 import { buildOpenGraph, buildTwitter, pageMetadata, returnLastmod, siteConfig, sitemapPages } from "@/lib/seo-config"
-import { generateBreadcrumbSchema, generateFAQSchema, generateWebPageSchema } from "@/lib/schema-generators"
+import { generateBreadcrumbSchema, generateFAQSchema, generateVideoObjectSchema, generateWebPageSchema } from "@/lib/schema-generators"
 import { Bed, Heart, NotebookText, PawPrint, Sprout, Utensils } from "lucide-react"
 import { TikTokFeatureSpotlight } from "@/components/client/tiktok/TikTokFeatureSpotlight"
 
 const wellnessOgJpg = "/pages/conditions-de-vie/la-maman-et-son-chiot-avec-marine.jpg"
 const wellnessOgWebp = "/pages/conditions-de-vie/la-maman-et-son-chiot-avec-marine.webp"
+const calmVideoAnchor = `${siteConfig.pages.wellness}#moment-calme`
+const calmVideoSchema = generateVideoObjectSchema({
+    name: "Moment calme d'un chiot Royal POMSKY dans l'herbe",
+    description:
+        "Vidéo montrant un petit chiot Royal POMSKY détendu dans l'herbe lors d'un moment calme au contact humain.",
+    pageUrl: calmVideoAnchor,
+    contentUrl: "/assets/tiktok/7503509177734548758.mp4",
+    thumbnailUrl: "/assets/tiktok/7503509177734548758.webp",
+    uploadDate: "2025-05-12",
+})
 
 export const metadata: Metadata = {
     title: pageMetadata.wellness.title,
@@ -123,6 +133,10 @@ export default function WellnessPage() {
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(calmVideoSchema) }}
             />
 
             <div className="py-16">
@@ -235,6 +249,7 @@ export default function WellnessPage() {
                     </section>
 
                     <TikTokFeatureSpotlight
+                        id="moment-calme"
                         badge="Moment calme"
                         title="Le bien-être se lit aussi dans les gestes simples du quotidien"
                         description="Parfois, le bien-être d'un chiot se raconte mieux dans une scène très simple que dans un long discours. Ici, on voit un petit Pomsky dans l'herbe, détendu, absorbé par un contact doux, sans agitation ni mise en scène. C'est ce genre d'instant presque ordinaire qui dit beaucoup sur l'ambiance réelle du quotidien: la qualité de présence humaine, le calme, et la façon dont un chiot apprend à se sentir bien dans son environnement."
