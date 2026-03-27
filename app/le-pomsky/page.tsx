@@ -50,7 +50,7 @@ export const metadata: Metadata = {
 
 const heroTitle = "Pomsky : taille, caractère, origines, générations F1 à F5 et adoption"
 const heroDescription =
-    "Le Pomsky est un chien issu du croisement entre le Husky sibérien et le Spitz nain. Apprécié pour son apparence de Husky miniature, il séduit par son intelligence, sa proximité avec l’humain et ses différents formats, du Pomsky Toy au Pomsky standard. Dans ce guide complet, découvrez la taille adulte du Pomsky, son caractère, ses origines, les générations F1 à F5, son prix et les points essentiels à connaître avant une adoption responsable."
+    "Le Pomsky est un chien issu du croisement entre le Husky sibérien et le Spitz nain. Apprécié pour son apparence de Husky miniature, il séduit par son intelligence, sa proximité avec l’humain et ses différents formats, du Pomsky Toy au Pomsky standard. Cette page vous donne une vue d’ensemble claire sur la race. Pour chaque sujet plus précis, comme le prix, le budget global, les générations ou l’adoption, nous vous renvoyons ensuite vers nos pages dédiées."
 
 const sizes = [
     {
@@ -143,6 +143,29 @@ const adoptionChecks = [
     "La préparation de la famille avant l’arrivée du chiot à la maison.",
 ]
 
+const furtherReadingCards = [
+    {
+        title: "Comprendre le prix d'adoption",
+        text: "Consultez notre page dédiée aux tarifs Royal Pomsky pour comparer les catégories Standard, Miniature et Toy.",
+        href: "/pomsky-prix",
+    },
+    {
+        title: "Estimer le budget global",
+        text: "Alimentation, vétérinaire, entretien, imprévus: notre guide vous aide à projeter le coût réel d'un Pomsky sur sa vie.",
+        href: "/blog/pomsky/prix/pomsky-prix-guide-complet-pour-comprendre-le-cout-dadoption-et-dentretien",
+    },
+    {
+        title: "Comprendre les générations",
+        text: "F1, F2, F3, F4, F5: voyez ce que ces appellations signifient vraiment et ce qu'elles changent dans la lecture d'un chiot.",
+        href: "/blog/pomsky/genetique/pomsky-f1-f2-f3-cest-quoi",
+    },
+    {
+        title: "Préparer l'adoption",
+        text: "Trajet, arrivée à la maison, première semaine et repères de départ: tout ce qu'il faut anticiper avant l'accueil du chiot.",
+        href: "/adoption/reussir-son-adoption",
+    },
+]
+
 export default function DogPage() {
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Accueil", url: "/" },
@@ -220,6 +243,9 @@ export default function DogPage() {
                                 Le Pomsky est un chien de compagnie né du croisement entre le Husky sibérien et le Spitz nain, aussi appelé Poméranien.
                                 Encore non reconnu par la FCI, il attire par son allure nordique, son regard expressif et son format plus adapté à la vie moderne.
                                 Le Pomsky est un compagnon intelligent, actif et proche de sa famille, qui demande une éducation cohérente, du temps et un cadre adapté.
+                            </p>
+                            <p className="max-w-4xl leading-relaxed text-muted-foreground">
+                                Cette page a volontairement un rôle de synthèse. Son objectif est de vous aider à comprendre rapidement la race, puis de vous orienter vers les bons contenus si vous souhaitez approfondir un sujet précis comme le prix, le budget global, les générations ou l'adoption.
                             </p>
                         </div>
 
@@ -565,6 +591,9 @@ export default function DogPage() {
                                 Le prix d’un Pomsky se situe généralement entre 2500 et 6000 euros selon la taille, la génération, la qualité des lignées, la rareté de certains traits physiques et le niveau de sélection effectué par l’éleveur.
                                 Au-delà du prix, il est essentiel d’évaluer le sérieux de l’élevage, la transparence sur les parents, les tests de santé, l’accompagnement proposé et les conditions d’élevage.
                             </p>
+                            <p className="max-w-4xl leading-relaxed text-muted-foreground">
+                                Ici, nous restons volontairement sur un repère général. Si votre question porte sur les tarifs Royal Pomsky, consultez notre page prix. Si vous cherchez plutôt à savoir combien coûte réellement un Pomsky sur 10 à 15 ans, le bon contenu est notre guide dédié au budget global.
+                            </p>
                         </div>
 
                         <Card className="border-primary/15 bg-primary/5">
@@ -577,7 +606,13 @@ export default function DogPage() {
                                         href="/pomsky-prix"
                                         className="inline-flex w-fit rounded-md border border-primary px-5 py-3 font-semibold text-primary transition-colors hover:bg-primary/10"
                                     >
-                                        Comprendre le prix du Pomsky
+                                        Voir les prix Royal Pomsky
+                                    </Link>
+                                    <Link
+                                        href="/blog/pomsky/prix/pomsky-prix-guide-complet-pour-comprendre-le-cout-dadoption-et-dentretien"
+                                        className="inline-flex w-fit rounded-md border border-primary px-5 py-3 font-semibold text-primary transition-colors hover:bg-primary/10"
+                                    >
+                                        Estimer le budget global
                                     </Link>
                                     <Link
                                         href="/chiots-disponibles"
@@ -588,6 +623,33 @@ export default function DogPage() {
                                 </div>
                             </CardContent>
                         </Card>
+                    </section>
+
+                    <section className="space-y-8">
+                        <div className="space-y-3">
+                            <h2 className="text-xl font-bold md:text-2xl">Pour aller plus loin selon votre question</h2>
+                            <p className="max-w-4xl leading-relaxed text-muted-foreground">
+                                Une page pilier doit vous aider à vous orienter rapidement. Voici les contenus les plus utiles selon que vous cherchiez un tarif, un budget de vie, une explication sur les générations ou des repères concrets avant l'adoption.
+                            </p>
+                        </div>
+
+                        <div className="grid gap-6 md:grid-cols-2">
+                            {furtherReadingCards.map((item) => (
+                                <Link key={item.title} href={item.href} className="group block h-full">
+                                    <Card className="flex h-full flex-col bg-muted/50 transition-colors group-hover:border-primary/50">
+                                        <CardHeader>
+                                            <h3 className="text-lg font-semibold">{item.title}</h3>
+                                        </CardHeader>
+                                        <CardContent className="space-y-4 text-sm leading-relaxed text-muted-foreground">
+                                            <p>{item.text}</p>
+                                            <span className="inline-flex text-primary underline underline-offset-4">
+                                                Lire la page dédiée
+                                            </span>
+                                        </CardContent>
+                                    </Card>
+                                </Link>
+                            ))}
+                        </div>
                     </section>
 
                     <section className="space-y-8">
