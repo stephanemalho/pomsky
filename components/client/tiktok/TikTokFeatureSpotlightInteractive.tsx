@@ -103,7 +103,7 @@ export function TikTokFeatureSpotlightInteractive({
                         ) : (
                             <Play className="h-4 w-4" aria-hidden="true" />
                         )}
-                        {isPlaying ? "Revenir à l'image" : buttonLabel}
+                        {isPlaying ? "Stopper la vidéo" : buttonLabel}
                     </button>
                     <Link
                         href={tiktokHref}
