@@ -451,15 +451,15 @@ export default function PomskyPricePage() {
                                     <Sprout className="h-4 w-4" aria-hidden="true" />
                                     <span className="text-sm font-medium">Complément pédagogique</span>
                                 </div>
-                                <h2 className="text-xl font-bold md:text-2xl">Vous souhaitez comprendre le prix du Pomsky plus en détail ?</h2>
+                                <h2 className="text-xl font-bold md:text-2xl">Vous voulez aussi estimer le coût d’entretien d’un Pomsky au quotidien ?</h2>
                                 <p className="max-w-4xl leading-relaxed text-muted-foreground">
-                                Cette page vous donne une vision claire de nos catégories tarifaires 2026. Si vous souhaitez aller plus loin et mieux comprendre l’ensemble des éléments qui composent le coût d’adoption et d’entretien d’un Pomsky, nous vous invitons à consulter notre guide complet dédié au prix du Pomsky.
+                                Cette page vous aide à comprendre le prix d’adoption d’un chiot Pomsky chez Royal Pomsky. Si vous souhaitez ensuite vous projeter plus concrètement dans la vie avec un Pomsky, nous vous conseillons de lire notre guide dédié au budget du quotidien tel que l'alimentation, le toilettage, les frais vétérinaires, ou les soins courants comme le traitements antiparasitaires et autres dépenses à anticiper pour bien accueillir votre futur compagnon.
                                 </p>
                                 <Link
                                     href="/blog/pomsky/prix/pomsky-prix-guide-complet-pour-comprendre-le-cout-dadoption-et-dentretien"
                                     className="inline-flex rounded-md border border-primary px-5 py-3 font-semibold text-primary transition-colors hover:bg-primary/10"
                                 >
-                                    Lire notre guide complet sur le prix du Pomsky
+                                    Lire notre guide sur le budget d’un Pomsky au quotidien
                                 </Link>
                             </CardContent>
                         </Card>
