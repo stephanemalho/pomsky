@@ -43,7 +43,7 @@ export const siteConfig = {
         "pomsky miniature",
         "chiot pomsky a vendre",
         "adoption pomsky",
-        "premier elevage pomsky toy americain en france",
+        "premier elevage pomsky toy americain en france"
     ],
 
     /* ------------------------------ Contact ---------------------------------- */
@@ -111,7 +111,8 @@ export const siteConfig = {
     richResults: {
         googleReviews: {
             source: "Google Business Profile",
-            sourceUrl: "https://www.google.com/search?sca_esv=c9866652b0fe63dd&hl=fr&gl=fr&sxsrf=ANbL-n5ecBJ5-lGW48M3Fg0pXurxqgy2TA:1773084430943&q=%C3%89levage%20Pomsky%20-%20ROYAL%20POMSKY%20Avis&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxI2NDQxtbQ0MzazNDa3MDE2MTQ028DI-IpR-XBnTmpZYnqqQkB-bnF2pYKuQpB_pKOPQoC_b7B3pIJjWWbxIlZiVAEAZiihkGYAAAA&rldimm=1145996369378434116&tbm=lcl&sa=X&ved=0CAcQ5foLahcKEwiA-NedxpOTAxUAAAAAHQAAAAAQBQ#lkt=LocalPoiReviews&arid=Ci9DQUlRQUNvZENodHljRjlvT2xWT2FEQXhjVTVNTms4eFVHdDZWMk5yVTNoNmExRRAB",
+            sourceUrl:
+                "https://www.google.com/search?sca_esv=c9866652b0fe63dd&hl=fr&gl=fr&sxsrf=ANbL-n5ecBJ5-lGW48M3Fg0pXurxqgy2TA:1773084430943&q=%C3%89levage%20Pomsky%20-%20ROYAL%20POMSKY%20Avis&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxI2NDQxtbQ0MzazNDa3MDE2MTQ028DI-IpR-XBnTmpZYnqqQkB-bnF2pYKuQpB_pKOPQoC_b7B3pIJjWWbxIlZiVAEAZiihkGYAAAA&rldimm=1145996369378434116&tbm=lcl&sa=X&ved=0CAcQ5foLahcKEwiA-NedxpOTAxUAAAAAHQAAAAAQBQ#lkt=LocalPoiReviews&arid=Ci9DQUlRQUNvZENodHljRjlvT2xWT2FEQXhjVTVNTms4eFVHdDZWMk5yVTNoNmExRRAB",
             ratingValue: 4.9,
             reviewCount: 110,
             bestRating: 5,
@@ -190,8 +191,9 @@ export const buildOpenGraph = ({
                   }
               ];
 
-    const hasJpg = normalizedImages.some((image) =>
-        image.type === "image/jpeg" || /\.jpe?g($|\?)/i.test(image.url)
+    const hasJpg = normalizedImages.some(
+        (image) =>
+            image.type === "image/jpeg" || /\.jpe?g($|\?)/i.test(image.url)
     );
     const jpgFallbackUrl = new URL(
         siteConfig.ogImageJpg,
@@ -260,18 +262,16 @@ export const buildTwitter = ({
 
 export const pageMetadata = {
     home: {
-        title: pageContent.home.h1 + " | " + pageContent.home.h1Subtitle,
-        description: pageContent.home.description,
+        title: "Pomsky France : lignées américaines sélectionnées | Royal Pomsky",
+        description:
+            "Chiots Pomsky Toy, Miniature et Standard élevés en France. Lignées américaines sélectionnées, santé et équilibre prioritaires. Découvrez Royal Pomsky.",
         keywords: [
-            "elevage pomsky toy",
-            "le pomsky",
-            "elevage pomsky miniature",
-            "chiot pomsky a vendre france",
-            "adopter un pomsky",
-            "elevage pomsky professionnel",
-            "elevage pomsky jura",
-            "pomsky france",
-            "royal pomsky"
+            "élevage pomsky France",
+            "chiot pomsky",
+            "pomsky toy miniature standard",
+            "pomsky lignées américaines",
+            "élevage pomsky Jura",
+            "adopter pomsky"
         ]
     },
 
@@ -289,12 +289,12 @@ export const pageMetadata = {
             "generations pomsky f1 f2 f3 f4 f5",
             "pomsky vs klee kai",
             "caractere pomsky",
-            "sante pomsky",
+            "sante pomsky"
         ]
     },
 
     pomskyPrice: {
-        title: "Prix Royal Pomsky 2026 | Tarifs Pomsky Standard, Miniature et Toy",
+        title: "Tarifs de nos Pomsky Standard, Miniature et Toy | Prix 2026 et repères pour comprendre nos écarts de prix",
         description:
             "Consultez les tarifs 2026 des chiots Royal Pomsky : prix par catégorie, profils Standard, Miniature et Toy, et repères utiles pour comprendre nos écarts de tarif.",
         keywords: [
@@ -309,7 +309,7 @@ export const pageMetadata = {
             "prix elevage pomsky france",
             "prix pomsky standard",
             "tarif pomsky",
-            "pomsky prix france",
+            "pomsky prix france"
         ]
     },
 
@@ -364,9 +364,9 @@ export const pageMetadata = {
     },
 
     presentation: {
-        title: "Royal Pomsky : notre politique d’élevage, de la sélection des parents au suivi des chiots",
+        title: "Découvrez notre politique d’élevage, de la sélection des parents au suivi des chiots",
         description:
-            "Découvrez comment Royal Pomsky construit son élevage : sélection de parents importés des États-Unis, programme sanitaire, portées raisonnées et travail en amont pour faire naître des chiots bien dans leurs pattes.",
+            "Comment Royal Pomsky construit son élevage : sélection de parents importés des États-Unis, programme sanitaire, portées raisonnées et travail en amont pour faire naître des chiots bien dans leurs pattes.",
         keywords: [
             "elevage pomsky responsable",
             "elevage canin professionnel",
@@ -486,7 +486,7 @@ export const sitemapPages = [
         url: "/",
         changefreq: "monthly",
         priority: 1.0,
-        lastmod: "2026-03-26"
+        lastmod: "2026-03-28"
     },
     {
         url: "/le-pomsky",

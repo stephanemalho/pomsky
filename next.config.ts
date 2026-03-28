@@ -26,7 +26,7 @@ const contentSecurityPolicy = [
 const nextConfig: NextConfig = {
     poweredByHeader: false,
     images: {
-        qualities: [50, 60, 65, 70, 75, 80],
+        qualities: [50, 60, 65, 70, 75, 80]
     },
     async headers() {
         return [
@@ -158,7 +158,8 @@ const nextConfig: NextConfig = {
             },
             {
                 source: "/a-quoi-sert-test-adn-chien",
-                destination: "/blog/pomsky/genetique/a-quoi-sert-test-adn-chien",
+                destination:
+                    "/blog/pomsky/genetique/a-quoi-sert-test-adn-chien",
                 permanent: true
             },
             {
@@ -211,7 +212,8 @@ const nextConfig: NextConfig = {
             },
             {
                 source: "/le-pomsky-renard-decouvrez-ce-chien-au-look-de-petit-renard",
-                destination: "/blog/pomsky/apparence/le-pomsky-renard-decouvrez-ce-chien-au-look-de-petit-renard",
+                destination:
+                    "/blog/pomsky/apparence/le-pomsky-renard-decouvrez-ce-chien-au-look-de-petit-renard",
                 permanent: true
             },
             {
@@ -232,6 +234,11 @@ const nextConfig: NextConfig = {
             },
             {
                 source: "/2020/:path*",
+                destination: "/",
+                permanent: true
+            },
+            {
+                source: "/remerciements",
                 destination: "/",
                 permanent: true
             }
