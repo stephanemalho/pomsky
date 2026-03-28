@@ -141,7 +141,7 @@ export default function WellnessPage() {
 
             <div className="py-16">
                 <div className="container mx-auto space-y-16">
-                    <section className="relative overflow-hidden rounded-4xl border border-primary/10 bg-[linear-gradient(135deg,rgba(170,126,88,0.12),rgba(255,255,255,0.94),rgba(170,126,88,0.04))] p-6 shadow-[0_24px_80px_rgba(66,40,18,0.08)] md:p-10 lg:p-12">
+                    <section className="relative overflow-hidden rounded-4xl border border-primary/10 bg-[linear-gradient(135deg,rgba(170,126,88,0.12),rgba(255,255,255,0.94),rgba(170,126,88,0.04))] p-6 shadow-[0_24px_80px_rgba(66,40,18,0.08)] dark:border-white/10 dark:bg-[linear-gradient(135deg,rgba(39,19,16,0.98),rgba(72,38,31,0.95),rgba(28,13,11,0.98))] dark:shadow-[0_24px_80px_rgba(0,0,0,0.42)] md:p-10 lg:p-12">
                         <div className="absolute -right-20 -top-20 h-52 w-52 rounded-full bg-primary/10 blur-3xl" aria-hidden="true" />
                         <div className="absolute -left-16 bottom-0 h-44 w-44 rounded-full bg-primary/5 blur-3xl" aria-hidden="true" />
 
@@ -483,7 +483,7 @@ export default function WellnessPage() {
                         </div>
                     </section>
 
-                    <section className="overflow-hidden rounded-4xl border border-primary/10 bg-[linear-gradient(135deg,rgba(170,126,88,0.08),rgba(255,255,255,1),rgba(170,126,88,0.03))]">
+                    <section className="overflow-hidden rounded-4xl border border-primary/10 bg-[linear-gradient(135deg,rgba(170,126,88,0.08),rgba(255,255,255,1),rgba(170,126,88,0.03))] dark:border-white/10 dark:bg-[linear-gradient(135deg,rgba(39,19,16,0.98),rgba(72,38,31,0.95),rgba(28,13,11,0.98))]">
                         <div className="grid gap-8 p-6 md:p-8 lg:grid-cols-[1.1fr_0.9fr] lg:p-10">
                             <div className="space-y-5">
                                 <div className="flex items-center gap-2 text-primary">

@@ -7,12 +7,22 @@ import { Heart, Leaf, Star, HeartPulse, PawPrint, Stethoscope, Eye, Handshake } 
 import Link from "next/link"
 import type { Metadata } from "next"
 import { buildOpenGraph, buildTwitter, pageMetadata, returnLastmod, siteConfig, sitemapPages } from "@/lib/seo-config"
-import { generateBreadcrumbSchema, generateFAQSchema, generateWebPageSchema } from "@/lib/schema-generators"
+import { generateBreadcrumbSchema, generateFAQSchema, generateVideoObjectSchema, generateWebPageSchema } from "@/lib/schema-generators"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
 import { TikTokFeatureSpotlight } from "@/components/client/tiktok/TikTokFeatureSpotlight"
 
 const presentationOgJpg = "/pages/presentation-elevage/eleveuse-royal-pomsky-avec-un-pomsky.jpg"
 const presentationOgWebp = "/pages/presentation-elevage/eleveuse-royal-pomsky-avec-un-pomsky.webp"
+const breedingVideoAnchor = `${siteConfig.pages.presentation}#vie-a-l-elevage`
+const breedingVideoSchema = generateVideoObjectSchema({
+    name: "Chiots Royal POMSKY qui jouent ensemble à l'élevage",
+    description:
+        "Vidéo montrant plusieurs chiots Royal POMSKY qui jouent ensemble dans un espace extérieur de l'élevage.",
+    pageUrl: breedingVideoAnchor,
+    contentUrl: "/assets/tiktok/7208154621523627269.mp4",
+    thumbnailUrl: "/assets/tiktok/7208154621523627269.optimized.webp",
+    uploadDate: "2023-03-08",
+})
 
 export const metadata: Metadata = {
     title: pageMetadata.presentation.title,
@@ -81,6 +91,10 @@ export default function PresentationPage() {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
             />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breedingVideoSchema) }}
+            />
             <div className="py-16">
                 <div className="container mx-auto">
                     {/* Hero Section */}
@@ -130,13 +144,15 @@ export default function PresentationPage() {
                     <TikTokFeatureSpotlight
                         id="vie-a-l-elevage"
                         badge="Vie à l'élevage"
-                        title="Voir nos chiots et nos adultes évoluer ensemble montre la vie réelle de l'élevage"
-                        description="Au-delà des mots, un élevage se comprend aussi dans les scènes du quotidien. Cette vidéo TikTok montre nos Pomsky ensemble, dans un moment vivant et naturel, avec du mouvement, de l'interaction et un cadre concret. C'est une bonne façon d'illustrer l'ambiance que nous cherchons à offrir à nos chiens chaque jour."
-                        videoTitle="Nos chiots Pomsky et adultes qui s'amusent ensemble"
-                        videoSummary="Une séquence TikTok partagée par Royal POMSKY pour montrer un moment de vie simple, joyeux et très représentatif de l'élevage."
-                        posterSrc="/assets/tiktok/7095821232146271494.jpg"
-                        posterAlt="Chiots et adultes Royal POMSKY qui s'amusent ensemble"
-                        tiktokHref="https://www.tiktok.com/@royalpomsky/video/7095821232146271494"
+                        title="Voir plusieurs chiots jouer ensemble aide à comprendre l'ambiance réelle de l'élevage"
+                        description="Un élevage ne se résume pas à des mots comme sélection, méthode ou programme. Il se lit aussi dans la vie qui circule entre les chiots. Dans cette séquence, on les voit évoluer ensemble dehors, jouer, se suivre, explorer et occuper l'espace avec naturel. C'est une image très parlante de ce que nous voulons montrer ici: un quotidien vivant, du mouvement, des repères, et un cadre concret dans lequel les chiots grandissent vraiment."
+                        videoTitle="Des chiots Royal Pomsky qui jouent ensemble à l'élevage"
+                        videoSummary="Une séquence courte, utile et directe pour rendre visible l'ambiance, le mouvement et la vie du groupe."
+                        posterSrc="/assets/tiktok/7208154621523627269.optimized.webp"
+                        posterAlt="Chiots Royal Pomsky qui jouent ensemble à l'élevage"
+                        videoSrc="/assets/tiktok/7208154621523627269.mp4"
+                        tiktokHref="https://www.tiktok.com/@royalpomsky/video/7208154621523627269"
+                        buttonLabel="Lire la vidéo de l'élevage"
                     />
 
                     {/* Values Section */}
