@@ -16,14 +16,13 @@ export function Navigation() {
                     Aller au contenu principal
                 </a>
                 <Link href="/" className="flex items-center space-x-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded">
-                    <div className="h-10 w-10 relative">
+                    <div className="relative h-10 w-10 overflow-hidden rounded-full border border-primary/15 bg-white shadow-sm dark:border-primary/40 dark:bg-primary">
                         <Image
-                            src="/royal-pomsky-icon.webp"
+                            src="/royal-pomsky-icon-transparent.webp"
                             alt="logo Royal POMSKY - Elevage de pomsky"
-                            width={40}
-                            height={40}
+                            fill
                             sizes="40px"
-                            className="object-contain"
+                            className="object-contain p-0.5"
                             priority
                         />
                     </div>
