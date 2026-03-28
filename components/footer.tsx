@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { Instagram } from "lucide-react"
-import { FaTiktok } from "react-icons/fa6";
+import { FaFacebookF, FaTiktok } from "react-icons/fa6";
 import Image from "next/image"
 import { siteConfig } from "@/lib/seo-config"
 
@@ -169,7 +169,7 @@ export function Footer() {
                         <h3 className="font-semibold mb-4">Suivez-nous</h3>
                         <div className="flex space-x-4">
                             <a
-                                href="https://www.instagram.com/royalpomsky/"
+                                href={siteConfig.socialLinks.instagram}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-muted-foreground hover:text-primary transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded p-1"
@@ -178,7 +178,16 @@ export function Footer() {
                                 <Instagram className="h-5 w-5" aria-hidden="true" />
                             </a>
                             <a
-                                href="https://www.tiktok.com/@royalpomsky"
+                                href={siteConfig.socialLinks.facebook}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-muted-foreground hover:text-primary transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded p-1"
+                                aria-label="Suivez-nous sur Facebook (lien externe)"
+                            >
+                                <FaFacebookF className="h-5 w-5" aria-hidden="true" />
+                            </a>
+                            <a
+                                href={siteConfig.socialLinks.tiktok}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-muted-foreground hover:text-primary transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded p-1"

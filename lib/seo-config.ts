@@ -104,7 +104,9 @@ export const siteConfig = {
     ogImageHeight: 630,
 
     socialLinks: {
-        instagram: "https://www.instagram.com/royalpomsky/"
+        instagram: "https://www.instagram.com/royalpomsky/",
+        facebook: "https://www.facebook.com/people/Royal-Pomsky/61575288855968/?locale=fr_FR",
+        tiktok: "https://www.tiktok.com/@royalpomsky"
     },
 
     /* ------------------------- Rich results / Merchant ------------------------ */
