@@ -56,6 +56,11 @@ export const pageContent = {
         description:
             "Vous envisagez l’adoption d’un Pomsky et vous avez des questions ? Nous vous répondons avec plaisir pour vous guider dans votre réflexion. Les visites de l’élevage et des chiots disponibles se font uniquement sur rendez-vous, dans le respect de leur rythme."
     },
+    gallery: {
+        h1: "Galerie photo et vidéo de l'élevage Royal POMSKY",
+        description:
+            "Découvrez une galerie de photos de nos Pomsky et une sélection de vidéos publiées par Royal POMSKY sur Instagram, YouTube, TikTok et Facebook. Une page utile pour mieux voir l'élevage, l'ambiance sur place et le quotidien de nos chiens."
+    },
     legalNotice: {
         h1: "Mentions légales",
         description:

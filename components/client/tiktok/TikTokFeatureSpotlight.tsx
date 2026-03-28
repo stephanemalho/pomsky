@@ -12,7 +12,7 @@ type TikTokFeatureSpotlightProps = {
     videoSummary: string
     posterSrc: string
     posterAlt: string
-    videoSrc: string
+    videoSrc?: string
     tiktokHref: string
     buttonLabel?: string
 }

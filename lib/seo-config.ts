@@ -106,7 +106,8 @@ export const siteConfig = {
     socialLinks: {
         instagram: "https://www.instagram.com/royalpomsky/",
         facebook: "https://www.facebook.com/people/Royal-Pomsky/61575288855968/?locale=fr_FR",
-        tiktok: "https://www.tiktok.com/@royalpomsky"
+        tiktok: "https://www.tiktok.com/@royalpomsky",
+        youtube: "https://www.youtube.com/@royalpomsky6732"
     },
 
     /* ------------------------- Rich results / Merchant ------------------------ */
@@ -139,6 +140,7 @@ export const siteConfig = {
         presentation: "/presentation-elevage",
         eleveuses: "/presentation-eleveuses",
         wellness: "/bien-etre-animal",
+        gallery: "/galerie",
         contact: "/contact",
         legalNotice: "/mentions-legales",
         terms: "/conditions-generales",
@@ -426,6 +428,26 @@ export const pageMetadata = {
             "royal pomsky contact"
         ]
     },
+    gallery: {
+        title: "Galerie Pomsky | Photos et vidéos de l'élevage Royal POMSKY",
+        description:
+            "Consultez la galerie Royal POMSKY pour découvrir des photos de Pomsky, des scènes du quotidien à l'élevage et une sélection de vidéos Instagram, YouTube, TikTok et Facebook dans une page claire, rapide et agréable à parcourir.",
+        keywords: [
+            "galerie royal pomsky",
+            "galerie photo pomsky",
+            "photos pomsky",
+            "vidéos pomsky",
+            "elevage pomsky photos",
+            "elevage pomsky vidéos",
+            "videos instagram pomsky",
+            "shorts youtube pomsky",
+            "videos tiktok pomsky",
+            "facebook royal pomsky",
+            "reels instagram pomsky",
+            "reels facebook pomsky",
+            "reseaux sociaux royal pomsky"
+        ]
+    },
 
     legalNotice: {
         title: pageContent.legalNotice.h1,
@@ -543,6 +565,12 @@ export const sitemapPages = [
         changefreq: "monthly",
         priority: 0.8,
         lastmod: "2026-03-27"
+    },
+    {
+        url: "/galerie",
+        changefreq: "weekly",
+        priority: 0.75,
+        lastmod: "2026-03-28"
     },
     {
         url: "/mentions-legales",

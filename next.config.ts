@@ -26,7 +26,13 @@ const contentSecurityPolicy = [
 const nextConfig: NextConfig = {
     poweredByHeader: false,
     images: {
-        qualities: [50, 60, 65, 70, 75, 80]
+        qualities: [50, 60, 65, 70, 75, 80],
+        remotePatterns: [
+            {
+                protocol: "https",
+                hostname: "i.ytimg.com"
+            }
+        ]
     },
     async headers() {
         return [
@@ -100,11 +106,6 @@ const nextConfig: NextConfig = {
             },
             {
                 source: "/videos-tiktok-royalpomsky",
-                destination: "/chiots-disponibles",
-                permanent: true
-            },
-            {
-                source: "/galerie",
                 destination: "/chiots-disponibles",
                 permanent: true
             },
@@ -241,7 +242,7 @@ const nextConfig: NextConfig = {
                 source: "/remerciements",
                 destination: "/",
                 permanent: true
-            }
+            }       
         ];
     }
 };
