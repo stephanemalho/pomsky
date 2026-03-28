@@ -515,7 +515,7 @@ export const sitemapPages = [
     {
         url: "/le-pomsky",
         changefreq: "monthly",
-        priority: 0.75,
+        priority: 0.8,
         lastmod: "2026-03-27"
     },
     {
@@ -539,13 +539,13 @@ export const sitemapPages = [
     {
         url: "/femelles-reproductrices",
         changefreq: "monthly",
-        priority: 0.8,
+        priority: 0.9,
         lastmod: "2026-03-26"
     },
     {
         url: "/presentation-elevage",
         changefreq: "monthly",
-        priority: 0.7,
+        priority: 0.8,
         lastmod: "2026-03-27"
     },
     {
