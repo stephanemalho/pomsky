@@ -207,9 +207,9 @@ export default function HomePage() {
         {/* Contenu centré */}
         {/* Présentation élevage */}
         <section className="py-16 bg-muted/30 my-8">
-          <div className="container mx-auto">
-            <div className="grid md:grid-cols-2 gap-12 items-center p-2">
-              <div className="space-y-6">
+          <div className="container mx-auto px-2 sm:px-0">
+            <div className="grid grid-cols-1 gap-12 overflow-hidden p-2 md:grid-cols-2 md:items-center">
+              <div className="min-w-0 space-y-6">
                 <Badge variant="secondary" className="w-fit">
                   Notre élevage
                 </Badge>
@@ -256,8 +256,8 @@ export default function HomePage() {
                 </Link>
               </div>
 
-              <figure className="space-y-3">
-                <div className="relative w-full aspect-video md:h-200 h-125 md:aspect-4/5 overflow-hidden rounded-lg">
+              <figure className="min-w-0 space-y-3">
+                <div className="relative h-auto w-full max-w-full overflow-hidden rounded-lg aspect-[4/5] sm:aspect-video md:h-[50rem] md:aspect-[4/5]">
                   <Image
                     src="/AKASHA-pomsky-toy-f4.webp"
                     alt="Portrait d'Akasha, femelle Pomsky toy F4 de l'élevage Royal POMSKY"
