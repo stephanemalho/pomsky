@@ -234,29 +234,35 @@ type TwitterParams = {
     title: string;
     description: string;
     imageUrl?: string;
+    images?: string[];
 };
 
 export const buildTwitter = ({
     title,
     description,
-    imageUrl
+    imageUrl,
+    images
 }: TwitterParams) => {
-    const primaryImage = imageUrl
-        ? imageUrl
-        : new URL(siteConfig.ogImage, siteConfig.siteUrl).toString();
+    const providedImages =
+        images && images.length > 0
+            ? images
+            : imageUrl
+              ? [imageUrl]
+              : [new URL(siteConfig.ogImage, siteConfig.siteUrl).toString()];
     const jpgFallbackUrl = new URL(
         siteConfig.ogImageJpg,
         siteConfig.siteUrl
     ).toString();
+    const hasJpg = providedImages.some((image) =>
+        /\.jpe?g($|\?)/i.test(image)
+    );
 
     return {
         card: "summary_large_image",
         title,
         description,
         // Put JPEG first for social clients that are inconsistent with WebP.
-        images: /\.jpe?g($|\?)/i.test(primaryImage)
-            ? [primaryImage]
-            : [jpgFallbackUrl, primaryImage]
+        images: hasJpg ? providedImages : [jpgFallbackUrl, ...providedImages]
     };
 };
 
@@ -266,9 +272,9 @@ export const buildTwitter = ({
 
 export const pageMetadata = {
     home: {
-        title: "Pomsky France : lignées américaines sélectionnées | Royal Pomsky",
+        title: "Élevage de Pomsky - Royal POMSKY",
         description:
-            "Chiots Pomsky Toy, Miniature et Standard élevés en France. Lignées américaines sélectionnées, santé et équilibre prioritaires. Découvrez Royal Pomsky.",
+            "Nos chiots Pomsky Toy, Miniature et Standard sont élevés en France, issus de lignées américaines et sélectionnés pour leur santé et leur équilibre. Découvrez notre élevage Royal Pomsky.",
         keywords: [
             "élevage pomsky France",
             "chiot pomsky",

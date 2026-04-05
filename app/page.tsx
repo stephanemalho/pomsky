@@ -13,6 +13,8 @@ import { pageContent } from "@/lib/page-content"
 import { TikTokFeatureSpotlight } from "@/components/client/tiktok/TikTokFeatureSpotlight"
 
 const HOME_OG_IMAGE = "/pomsky-and-his-pet-family-parent.jpg"
+const HOME_METADATA_WEBP_IMAGE = "/assets/authors/marine-ava.webp"
+const HOME_METADATA_FALLBACK_IMAGE = "/assets/authors/marine-and-pomsky-in-grass.jpeg"
 const homeVideoAnchor = `${siteConfig.pages.home}#instant-a-l-elevage`
 const homeVideoSchema = generateVideoObjectSchema({
   name: "Moment de vie à l'élevage Royal POMSKY",
@@ -34,8 +36,15 @@ export const metadata: Metadata = {
     url: siteConfig.siteUrl,
     images: [
       {
-        url: `${siteConfig.siteUrl}${HOME_OG_IMAGE}`,
-        alt: "Pomsky et sa famille",
+        url: `${siteConfig.siteUrl}${HOME_METADATA_WEBP_IMAGE}`,
+        alt: "Marine avec un Pomsky",
+        width: siteConfig.ogImageWidth,
+        height: siteConfig.ogImageHeight,
+        type: "image/webp",
+      },
+      {
+        url: `${siteConfig.siteUrl}${HOME_METADATA_FALLBACK_IMAGE}`,
+        alt: "Marine avec un Pomsky dans l'herbe",
         width: siteConfig.ogImageWidth,
         height: siteConfig.ogImageHeight,
         type: "image/jpeg",
@@ -45,7 +54,10 @@ export const metadata: Metadata = {
   twitter: buildTwitter({
     title: pageMetadata.home.title,
     description: pageMetadata.home.description,
-    imageUrl: `${siteConfig.siteUrl}${HOME_OG_IMAGE}`,
+    images: [
+      `${siteConfig.siteUrl}${HOME_METADATA_WEBP_IMAGE}`,
+      `${siteConfig.siteUrl}${HOME_METADATA_FALLBACK_IMAGE}`,
+    ],
   }),
   alternates: {
     canonical: siteConfig.siteUrl,
