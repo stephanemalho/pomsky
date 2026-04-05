@@ -374,8 +374,14 @@ export default function PresentationPage() {
                                     </p>
                                     <div className="flex flex-col">
                                         <Link
-                                            href="/chiots-disponibles"
+                                            href="/galerie"
                                             className="mt-3 inline-flex text-sm font-medium text-primary underline underline-offset-4"
+                                        >
+                                            Voir notre galerie photos et vidéos
+                                        </Link>
+                                        <Link
+                                            href="/chiots-disponibles"
+                                            className="mt-2 inline-flex text-sm font-medium text-primary underline underline-offset-4"
                                         >
                                             Voir les dernières photos de nos chiots disponibles
                                         </Link>

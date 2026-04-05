@@ -323,6 +323,14 @@ export default function HomePage() {
               tiktokHref="https://www.tiktok.com/@royalpomsky/video/7241509462060616987"
               buttonLabel="Lire la vidéo"
             />
+            <div className="mt-6 text-center">
+              <Link
+                href="/galerie"
+                className="inline-flex rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary text-sm font-medium text-primary underline underline-offset-4"
+              >
+                Voir plus de photos et vidéos dans notre galerie
+              </Link>
+            </div>
           </div>
         </section>
         {/* éleveurs */}
