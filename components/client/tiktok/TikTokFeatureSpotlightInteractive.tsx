@@ -11,6 +11,7 @@ type TikTokFeatureSpotlightInteractiveProps = {
     badge: string
     posterSrc: string
     posterAlt: string
+    mediaCaption?: string
     videoSrc?: string
     tiktokHref: string
     buttonLabel: string
@@ -21,6 +22,7 @@ export function TikTokFeatureSpotlightInteractive({
     badge,
     posterSrc,
     posterAlt,
+    mediaCaption,
     videoSrc,
     tiktokHref,
     buttonLabel,
@@ -51,7 +53,7 @@ export function TikTokFeatureSpotlightInteractive({
     }, [hasLocalVideo, isPlaying])
 
     const mediaBlock = (
-        <div className="w-full max-w-80 overflow-hidden rounded-4xl border border-border/60 bg-black shadow-[0_18px_40px_rgba(0,0,0,0.18)]">
+        <figure className="w-full max-w-80 overflow-hidden rounded-4xl border border-border/60 bg-black shadow-[0_18px_40px_rgba(0,0,0,0.18)]">
             <div className="relative aspect-9/16">
                 <Image
                     src={posterSrc}
@@ -85,7 +87,12 @@ export function TikTokFeatureSpotlightInteractive({
                     </Badge>
                 </div>
             </div>
-        </div>
+            {mediaCaption ? (
+                <figcaption className="border-t border-border/60 bg-background/95 px-4 py-3 text-xs leading-relaxed text-muted-foreground">
+                    {mediaCaption}
+                </figcaption>
+            ) : null}
+        </figure>
     )
 
     return (

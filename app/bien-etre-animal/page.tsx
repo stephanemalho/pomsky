@@ -195,26 +195,31 @@ export default function WellnessPage() {
                             </div>
 
                             <div className="space-y-4">
-                                <div className="relative min-h-80 overflow-hidden rounded-[1.75rem] border border-white/50 bg-muted shadow-lg md:min-h-128">
-                                    <Image
-                                        src={wellnessOgWebp}
-                                        alt="Chiot Pomsky fixe sa balle en plastique"
-                                        fill
-                                        priority
-                                        fetchPriority="high"
-                                        className="object-cover"
-                                        sizes="(min-width: 1024px) 420px, 100vw"
-                                    />
-                                    <div className="absolute inset-0 bg-linear-to-t from-black/35 via-transparent to-transparent" aria-hidden="true" />
-                                    <div className="absolute inset-x-0 bottom-0 p-5 text-white">
-                                        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/80">
-                                            Cadre de vie
-                                        </p>
-                                        <p className="mt-2 max-w-xs text-sm leading-relaxed text-white/90">
-                                            Un environnement pensé pour les repères, le calme et l’adaptation progressive.
-                                        </p>
+                                <figure className="space-y-3">
+                                    <div className="relative min-h-80 overflow-hidden rounded-[1.75rem] border border-white/50 bg-muted shadow-lg md:min-h-128">
+                                        <Image
+                                            src={wellnessOgWebp}
+                                            alt="Chiot Pomsky dans son environnement de vie, attentif et détendu"
+                                            fill
+                                            priority
+                                            fetchPriority="high"
+                                            className="object-cover"
+                                            sizes="(min-width: 1024px) 420px, 100vw"
+                                        />
+                                        <div className="absolute inset-0 bg-linear-to-t from-black/35 via-transparent to-transparent" aria-hidden="true" />
+                                        <div className="absolute inset-x-0 bottom-0 p-5 text-white">
+                                            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/80">
+                                                Cadre de vie
+                                            </p>
+                                            <p className="mt-2 max-w-xs text-sm leading-relaxed text-white/90">
+                                                Un environnement pensé pour les repères, le calme et l’adaptation progressive.
+                                            </p>
+                                        </div>
                                     </div>
-                                </div>
+                                    <figcaption className="text-sm leading-relaxed text-muted-foreground">
+                                        Un visuel d&apos;ouverture qui illustre le cadre quotidien proposé aux chiots à l&apos;élevage.
+                                    </figcaption>
+                                </figure>
 
                                 <Card className="border-primary/10 bg-background/88 backdrop-blur-sm">
                                     <CardContent className="grid gap-3 p-5 sm:grid-cols-3 lg:grid-cols-1">
@@ -256,7 +261,8 @@ export default function WellnessPage() {
                         videoTitle="Un petit Pomsky dans l'herbe, au calme et au contact"
                         videoSummary="Une courte vidéo qui montre un moment apaisé, sans mise en scène lourde, pour illustrer le rythme et le contact humain."
                         posterSrc="/assets/tiktok/7503509177734548758.optimized.webp"
-                        posterAlt="Petit Pomsky dans l'herbe lors d'un moment calme"
+                        posterAlt="Petit Pomsky dans l'herbe lors d'un moment calme au contact humain"
+                        mediaCaption="Une scène très simple qui rend visible le calme, la qualité de présence humaine et le respect du rythme du chiot."
                         videoSrc="/assets/tiktok/7503509177734548758.mp4"
                         tiktokHref="https://www.tiktok.com/@royalpomsky/video/7503509177734548758"
                         buttonLabel="Lire le moment calme"
@@ -300,50 +306,65 @@ export default function WellnessPage() {
                     </section>
 
                     <section className="grid gap-6 md:grid-cols-3">
-                        <div className="group relative min-h-80 overflow-hidden rounded-[1.75rem] border border-border/70 bg-muted shadow-sm">
-                            <Image
-                                src={sectionImages.environment}
-                                alt="Nursery et espace structuré pour les chiots Pomsky"
-                                fill
-                                className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                                sizes="(min-width: 768px) 33vw, 100vw"
-                            />
-                            <div className="absolute inset-0 bg-linear-to-t from-black/45 via-black/10 to-transparent" aria-hidden="true" />
-                            <div className="absolute inset-x-0 bottom-0 p-5 text-white">
-                                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/80">Environnement</p>
-                                <p className="mt-2 text-base font-semibold">Un cadre stable pour créer de vrais repères</p>
+                        <figure className="space-y-3">
+                            <div className="group relative min-h-80 overflow-hidden rounded-[1.75rem] border border-border/70 bg-muted shadow-sm">
+                                <Image
+                                    src={sectionImages.environment}
+                                    alt="Nursery et espace structuré conçus pour les chiots Pomsky"
+                                    fill
+                                    className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                                    sizes="(min-width: 768px) 33vw, 100vw"
+                                />
+                                <div className="absolute inset-0 bg-linear-to-t from-black/45 via-black/10 to-transparent" aria-hidden="true" />
+                                <div className="absolute inset-x-0 bottom-0 p-5 text-white">
+                                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/80">Environnement</p>
+                                    <p className="mt-2 text-base font-semibold">Un cadre stable pour créer de vrais repères</p>
+                                </div>
                             </div>
-                        </div>
+                            <figcaption className="text-xs leading-relaxed text-muted-foreground">
+                                Un espace pensé pour le repos, les repères et la stabilité du quotidien.
+                            </figcaption>
+                        </figure>
 
-                        <div className="group relative min-h-80 overflow-hidden rounded-[1.75rem] border border-border/70 bg-muted shadow-sm">
-                            <Image
-                                src="/pages/conditions-de-vie/chiots-jouent-dans-bac-a-boules.webp"
-                                alt="Chiot Pomsky en socialisation avec jeux de bac à balles"
-                                fill
-                                className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                                sizes="(min-width: 768px) 33vw, 100vw"
-                            />
-                            <div className="absolute inset-0 bg-linear-to-t from-black/45 via-black/10 to-transparent" aria-hidden="true" />
-                            <div className="absolute inset-x-0 bottom-0 p-5 text-white">
-                                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/80">Socialisation</p>
-                                <p className="mt-2 text-base font-semibold">Des découvertes progressives, sans surstimulation</p>
+                        <figure className="space-y-3">
+                            <div className="group relative min-h-80 overflow-hidden rounded-[1.75rem] border border-border/70 bg-muted shadow-sm">
+                                <Image
+                                    src="/pages/conditions-de-vie/chiots-jouent-dans-bac-a-boules.webp"
+                                    alt="Chiots Pomsky en découverte et socialisation autour d'un bac à balles"
+                                    fill
+                                    className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                                    sizes="(min-width: 768px) 33vw, 100vw"
+                                />
+                                <div className="absolute inset-0 bg-linear-to-t from-black/45 via-black/10 to-transparent" aria-hidden="true" />
+                                <div className="absolute inset-x-0 bottom-0 p-5 text-white">
+                                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/80">Socialisation</p>
+                                    <p className="mt-2 text-base font-semibold">Des découvertes progressives, sans surstimulation</p>
+                                </div>
                             </div>
-                        </div>
+                            <figcaption className="text-xs leading-relaxed text-muted-foreground">
+                                Une situation de jeu qui sert à enrichir les expériences sans brusquer le chiot.
+                            </figcaption>
+                        </figure>
 
-                        <div className="group relative min-h-80 overflow-hidden rounded-[1.75rem] border border-border/70 bg-muted shadow-sm">
-                            <Image
-                                src="/pages/conditions-de-vie/sortie-encadree-avec-marine.webp"
-                                alt="Sorties et découvertes extérieures des Pomsky"
-                                fill
-                                className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                                sizes="(min-width: 768px) 33vw, 100vw"
-                            />
-                            <div className="absolute inset-0 bg-linear-to-t from-black/45 via-black/10 to-transparent" aria-hidden="true" />
-                            <div className="absolute inset-x-0 bottom-0 p-5 text-white">
-                                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/80">Découvertes</p>
-                                <p className="mt-2 text-base font-semibold">Des expériences pensées pour l’équilibre futur</p>
+                        <figure className="space-y-3">
+                            <div className="group relative min-h-80 overflow-hidden rounded-[1.75rem] border border-border/70 bg-muted shadow-sm">
+                                <Image
+                                    src="/pages/conditions-de-vie/sortie-encadree-avec-marine.webp"
+                                    alt="Sortie encadrée de Pomsky avec Marine dans un contexte de découverte"
+                                    fill
+                                    className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                                    sizes="(min-width: 768px) 33vw, 100vw"
+                                />
+                                <div className="absolute inset-0 bg-linear-to-t from-black/45 via-black/10 to-transparent" aria-hidden="true" />
+                                <div className="absolute inset-x-0 bottom-0 p-5 text-white">
+                                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/80">Découvertes</p>
+                                    <p className="mt-2 text-base font-semibold">Des expériences pensées pour l’équilibre futur</p>
+                                </div>
                             </div>
-                        </div>
+                            <figcaption className="text-xs leading-relaxed text-muted-foreground">
+                                Une sortie pensée pour familiariser les chiens avec l&apos;extérieur en douceur.
+                            </figcaption>
+                        </figure>
                     </section>
 
                     <section className="grid gap-8 rounded-4xl border border-border/70 bg-muted/25 p-6 md:p-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
@@ -391,25 +412,35 @@ export default function WellnessPage() {
                         </div>
 
                             <div className="grid gap-4">
-                                <div className="relative min-h-80 overflow-hidden rounded-[1.75rem] bg-muted shadow-sm">
-                                    <Image
-                                        src={sectionImages.discovery}
-                                        alt="Sorties progressives des Pomsky en extérieur"
-                                        fill
-                                        className="object-cover"
-                                        sizes="(min-width: 1024px) 35vw, 100vw"
-                                    />
-                                </div>
-                                <div className="relative min-h-80 overflow-hidden rounded-3xl bg-muted shadow-sm">
-                                    <Image
-                                        src={sectionImages.presence}
-                                        alt="Présence humaine régulière auprès des chiots Pomsky"
-                                        fill
-                                    className="object-cover"
-                                    sizes="(min-width: 1024px) 35vw, 100vw"
-                                />
+                                <figure className="space-y-3">
+                                    <div className="relative min-h-80 overflow-hidden rounded-[1.75rem] bg-muted shadow-sm">
+                                        <Image
+                                            src={sectionImages.discovery}
+                                            alt="Pomsky en sortie progressive dans un environnement extérieur"
+                                            fill
+                                            className="object-cover"
+                                            sizes="(min-width: 1024px) 35vw, 100vw"
+                                        />
+                                    </div>
+                                    <figcaption className="text-xs leading-relaxed text-muted-foreground">
+                                        Une sortie progressive qui aide les chiens à intégrer l&apos;extérieur à leur rythme.
+                                    </figcaption>
+                                </figure>
+                                <figure className="space-y-3">
+                                    <div className="relative min-h-80 overflow-hidden rounded-3xl bg-muted shadow-sm">
+                                        <Image
+                                            src={sectionImages.presence}
+                                            alt="Présence humaine régulière auprès d'une mère Pomsky et de son chiot"
+                                            fill
+                                            className="object-cover"
+                                            sizes="(min-width: 1024px) 35vw, 100vw"
+                                        />
+                                    </div>
+                                    <figcaption className="text-xs leading-relaxed text-muted-foreground">
+                                        La relation humaine fait partie du cadre rassurant offert dès les premières étapes de vie.
+                                    </figcaption>
+                                </figure>
                             </div>
-                        </div>
                     </section>
 
                     <section className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr]">
@@ -510,16 +541,21 @@ export default function WellnessPage() {
                                 </div>
                             </div>
 
-                            <div className="relative min-h-80 overflow-hidden rounded-[1.75rem] bg-muted shadow-sm">
-                                <Image
-                                    src="/pages/conditions-de-vie/groupe-de-chiots-en-siestes.webp"
-                                    alt="Espace de vie des chiots Pomsky"
-                                    fill
-                                    className="object-cover"
-                                    sizes="(min-width: 1024px) 30vw, 100vw"
-                                />
-                                <div className="absolute inset-0 bg-linear-to-t from-black/30 via-transparent to-transparent" aria-hidden="true" />
-                            </div>
+                            <figure className="space-y-3">
+                                <div className="relative min-h-80 overflow-hidden rounded-[1.75rem] bg-muted shadow-sm">
+                                    <Image
+                                        src="/pages/conditions-de-vie/groupe-de-chiots-en-siestes.webp"
+                                        alt="Groupe de chiots Pomsky dans leur espace de repos"
+                                        fill
+                                        className="object-cover"
+                                        sizes="(min-width: 1024px) 30vw, 100vw"
+                                    />
+                                    <div className="absolute inset-0 bg-linear-to-t from-black/30 via-transparent to-transparent" aria-hidden="true" />
+                                </div>
+                                <figcaption className="text-sm leading-relaxed text-muted-foreground">
+                                    Un moment de repos collectif qui rappelle l&apos;importance des temps calmes dans le développement des chiots.
+                                </figcaption>
+                            </figure>
                         </div>
                     </section>
 

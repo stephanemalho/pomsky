@@ -82,7 +82,7 @@ function PhotoGallerySection({ id, items }: { id: string; items: GalleryImageIte
 
             <div className="grid gap-4 md:auto-rows-[220px] xl:auto-rows-[250px] md:grid-cols-12">
                 {items.map((item) => (
-                    <article
+                    <figure
                         key={item.id}
                         className={cn(
                             "group relative overflow-hidden rounded-[1.75rem] border border-primary/10 bg-background shadow-[0_16px_48px_rgba(66,40,18,0.08)]",
@@ -101,13 +101,13 @@ function PhotoGallerySection({ id, items }: { id: string; items: GalleryImageIte
                             className="absolute inset-0 bg-[linear-gradient(180deg,rgba(20,12,8,0.04),rgba(20,12,8,0.62))]"
                             aria-hidden="true"
                         />
-                        <div className="absolute inset-x-0 bottom-0 space-y-2 p-5 text-white">
+                        <figcaption className="absolute inset-x-0 bottom-0 space-y-2 p-5 text-white">
                             <p className="text-lg font-semibold leading-snug">{item.title}</p>
                             <p className="max-w-xl text-sm leading-relaxed text-white/85">
                                 {item.summary}
                             </p>
-                        </div>
-                    </article>
+                        </figcaption>
+                    </figure>
                 ))}
             </div>
         </section>
@@ -183,29 +183,31 @@ function SocialSection({
                                 className="overflow-hidden border-primary/10 bg-background/90 p-0 shadow-[0_14px_40px_rgba(66,40,18,0.06)]"
                             >
                                 <CardContent className="p-0">
-                                    <SocialThumbnail item={item} />
-                                    <div className="space-y-4 p-5">
-                                        {publishedAt ? (
-                                            <p className="text-xs font-medium uppercase tracking-[0.18em] text-primary/80">
-                                                {publishedAt}
-                                            </p>
-                                        ) : null}
-                                        <div className="space-y-2">
-                                            <h3 className="text-lg font-semibold leading-snug">{item.title}</h3>
-                                            <p className="text-sm leading-relaxed text-muted-foreground">
-                                                {item.summary}
-                                            </p>
-                                        </div>
-                                        <Link
-                                            href={item.href}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="inline-flex items-center gap-2 rounded-md bg-primary px-4 py-3 text-sm font-semibold text-white transition-colors hover:bg-primary/85 dark:text-[#5b3a1a]"
-                                        >
-                                            {ctaLabel}
-                                            <Play className="h-4 w-4" aria-hidden="true" />
-                                        </Link>
-                                    </div>
+                                    <figure className="flex h-full flex-col">
+                                        <SocialThumbnail item={item} />
+                                        <figcaption className="space-y-4 p-5">
+                                            {publishedAt ? (
+                                                <p className="text-xs font-medium uppercase tracking-[0.18em] text-primary/80">
+                                                    {publishedAt}
+                                                </p>
+                                            ) : null}
+                                            <div className="space-y-2">
+                                                <h3 className="text-lg font-semibold leading-snug">{item.title}</h3>
+                                                <p className="text-sm leading-relaxed text-muted-foreground">
+                                                    {item.summary}
+                                                </p>
+                                            </div>
+                                            <Link
+                                                href={item.href}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="inline-flex items-center gap-2 rounded-md bg-primary px-4 py-3 text-sm font-semibold text-white transition-colors hover:bg-primary/85 dark:text-[#5b3a1a]"
+                                            >
+                                                {ctaLabel}
+                                                <Play className="h-4 w-4" aria-hidden="true" />
+                                            </Link>
+                                        </figcaption>
+                                    </figure>
                                 </CardContent>
                             </Card>
                         )

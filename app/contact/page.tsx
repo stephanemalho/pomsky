@@ -236,15 +236,20 @@ export default function ContactPage() {
                                     </div>
                                 </div>
                                 <div className="flex justify-between items-center flex-col lg:flex-row gap-3">
-                                    <div className="relative w-40 aspect-square my-4">
-                                        <Image
-                                            src="/qr-code-contact-exotic-perle-teckel.webp"
-                                            alt="QR code pour contacter Royal POMSKY"
-                                            fill
-                                            className="object-cover"
-                                            sizes="160px"
-                                        />
-                                    </div>
+                                    <figure className="space-y-3">
+                                        <div className="relative w-40 aspect-square my-4">
+                                            <Image
+                                                src="/qr-code-contact-exotic-perle-teckel.webp"
+                                                alt="QR code permettant d'ouvrir le formulaire de contact Royal POMSKY"
+                                                fill
+                                                className="object-cover"
+                                                sizes="160px"
+                                            />
+                                        </div>
+                                        <figcaption className="max-w-40 text-center text-xs leading-relaxed text-muted-foreground">
+                                            Scannez ce QR code pour accéder rapidement au formulaire de contact.
+                                        </figcaption>
+                                    </figure>
                                     <div className="flex flex-col items-center space-y-2">
                                         <a rel="noopener" target="_blank" href="https://forms.gle/2ZtWVzEzJ9QQhZfa8" className="flex items-center bg-primary text-white hover:bg-primary/80 px-4 font-semibold dark:text-[#5b3a1a] rounded-md h-10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">Remplir le questionnaire
                                         </a>

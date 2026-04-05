@@ -18,36 +18,36 @@ export const pomskyBenefits: BenefitCard[] = [
         title: "Pomsky de taille standard, mini ou Toy : comment choisir ?",
         text: "Un chien Pomsky de taille standard mesure environ 39 à 45 cm au garrot à l'âge adulte. Il y'a également les mini Pomsky  qui mesurent entre 36 et 40 cm au garrot. En dessous de cette taille, c'est un Pomsky toy. ",
         image: pomskySize,
-        alt: "Un Pomsky de taille standard se tenant debout sur l'herbe"
+        alt: "Pomsky de l'élevage Royal POMSKY debout dans l'herbe, utilisé pour illustrer les différents formats"
     },
     {
         title: "Quel type de poils pour le Pomsky ?",
         text: "Le Pomsky possède en général un poil assez épais, il peut être de type standard polaire Husky,  intermédiaire appelé aussi Plush Coat ou de type « Whooly » c'est à dire d'aspect laineux, mi long à long, plus proche du poil du Loulou de Poméranie.",
         image: pomskyFur,
-        alt: "Deux chiots pomsky de génération F2 à l'âge de deux mois, pelage fluffy, marquage husky, chocolat et blanc, noir et blanc."
+        alt: "Deux chiots Pomsky de l'élevage Royal POMSKY illustrant la texture et la densité du pelage"
     },
     {
         title: "Les traits physiques du Pomsky",
         text: "Le Pomsky a de nombreuses caractéristiques physiques qui lui viennent du Husky. On retrouve parmi celles-ci, la couleur de ses yeux : (bleus, verts, ambre, bruns ou hétérochromes) ainsi que la couleur de sa robe, le marquage ( notamment le masque ), la texture et la densité de son poil.",
         image: wetPomsky,
-        alt: "Pomsky mouillé après une baignade nocturne, ressemblant à un renard"
+        alt: "Pomsky au pelage marqué et à l'expression vive, utilisé pour illustrer les traits physiques de la race"
     },
     {
         title: "Un regard unique et expressif",
         text: "Le Pomsky se distingue par un regard intense et expressif. Ses yeux peuvent être bleus, verts, ambre, bruns, gris ou noirs, parfois vairons ou particolor, hérités du Husky sibérien. Cette richesse visuelle renforce son expressivité et le lien qu'il crée avec ses adoptants.",
         image: pomskyEyeColors,
-        alt: "Pomsky regardant l'objectif avec beaucoup de caractère"
+        alt: "Portrait rapproché d'un Pomsky au regard expressif, pour illustrer la variété des yeux chez la race"
     },
     {
         title: "Un lien fort avec ses adoptants",
         text: "Très communicatif, le Pomsky utilise son regard, ses attitudes et son comportement pour interagir avec son entourage. Cette expressivité naturelle lui permet de créer un lien fort, complice et durable avec ses adoptants.",
         image: pomskyExpressive,
-        alt: "Pomsky attentif et expressif dans l'herbe qui semble regarder son maître en levant une patte"
+        alt: "Pomsky attentif dans l'herbe, illustrant la proximité et la communication avec l'humain"
     },
     {
         title: "Un chien polyvalent",
         text: "Malgré son gabarit compact, le Pomsky est un chien actif et polyvalent. Il peut s'épanouir dans des activités comme le pistage, le mantrailing, l'agility ou la cani-rando, toujours dans le respect de son rythme.",
         image: pomskyPolyvalent,
-        alt: "Pomsky pratiquant une activité physique en extérieur sur l'herbe verte"
+        alt: "Pomsky en mouvement dans l'herbe, pour illustrer son côté actif et polyvalent"
     }
 ];

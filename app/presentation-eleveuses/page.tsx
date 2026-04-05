@@ -78,21 +78,24 @@ export default function PresentationEleveusesPage() {
     const aurelieGallery = [
         {
             src: "/assets/authors/aurelie-magnetisme-past-work.webp",
-            alt: "Magnetisme première activité d'aurelie avant l'élevage de pomsky",
+            alt: "Aurélie dans le cadre de son activité de magnétisme avant l'élevage de Pomsky",
+            caption: "Une image liée au parcours d'Aurélie avant la création de l'élevage.",
             className: "col-span-6 md:col-span-3 row-span-6 md:row-span-6",
             sizes: galleryHalfDesktopMobileFullSizes,
             priority: { mobile: true, tablet: true, desktop: true },
         },
         {
             src: "/assets/authors/aurelie-violette-elevage-royal-pomsky.webp",
-            alt: "Aurélie avec un Pomsky",
+            alt: "Aurélie avec un Pomsky de l'élevage Royal POMSKY",
+            caption: "Aurélie avec l'un des chiens de l'élevage.",
             className: "col-span-3 md:col-span-3 row-span-3",
             sizes: galleryHalfDesktopSizes,
             priority: { mobile: false, tablet: true, desktop: true },
         },
         {
             src: "/assets/authors/aurelie-and-puppies-and-children.webp",
-            alt: "Aurélie avec les enfants et les chiots jouant dans l'herbe",
+            alt: "Aurélie avec des enfants et des chiots Pomsky dans l'herbe",
+            caption: "Un moment partagé autour des chiots et de la vie de famille.",
             className: "col-span-3 md:col-span-3 row-span-3",
             sizes: galleryHalfDesktopSizes,
             priority: { mobile: false, tablet: false, desktop: true },
@@ -100,20 +103,23 @@ export default function PresentationEleveusesPage() {
         {
             src: "/assets/authors/aurelie-and-pomsky-see-view.webp",
             alt: "Aurélie avec un Pomsky assis au bord d'un lac",
+            caption: "Une image d'Aurélie avec un Pomsky dans un cadre extérieur apaisé.",
             className: "col-span-3 md:col-span-3 row-span-3",
             sizes: galleryHalfDesktopSizes,
             priority: { mobile: false, tablet: false, desktop: false },
         },
         {
             src: "/assets/authors/aurelie-and-pomsky-on-a-bike.webp",
-            alt: "Aurélie et un Pomsky prets pour la route",
+            alt: "Aurélie et un Pomsky prêts pour la route",
+            caption: "Un portrait d'Aurélie avec un Pomsky dans une scène du quotidien.",
             className: "col-span-3 md:col-span-3 row-span-3",
             sizes: galleryHalfDesktopSizes,
             priority: { mobile: false, tablet: false, desktop: false },
         },
         {
             src: "/assets/authors/aurelie-and-pomsky-walking-street.jpeg",
-            alt: "Aurélie dans les rues chics promène un pomsky",
+            alt: "Aurélie promenant un Pomsky dans la rue",
+            caption: "Une promenade qui rappelle la place du chien dans la vie quotidienne.",
             className: "col-span-6 md:col-span-6 row-span-6 md:row-span-6",
             sizes: galleryFullSizes,
             priority: { mobile: false, tablet: false, desktop: false },
@@ -122,42 +128,48 @@ export default function PresentationEleveusesPage() {
     const marineGallery = [
         {
             src: "/assets/authors/marine-walking-dogs.jpeg",
-            alt: "Marine en promenade des chiens",
+            alt: "Marine en promenade avec les chiens de l'élevage",
+            caption: "Marine au contact des chiens dans un moment de sortie.",
             className: "col-span-6 md:col-span-3 row-span-6 md:row-span-6",
             sizes: galleryHalfDesktopMobileFullSizes,
             priority: { mobile: false, tablet: false, desktop: false },
         },
         {
             src: "/assets/authors/portrait-aurelie-and-pomsky.jpeg",
-            alt: "Marine avec un Pomsky",
+            alt: "Marine avec un Pomsky de l'élevage Royal POMSKY",
+            caption: "Marine avec l'un des Pomsky de l'élevage.",
             className: "col-span-3 md:col-span-3 row-span-3",
             sizes: galleryHalfDesktopSizes,
             priority: { mobile: false, tablet: false, desktop: false },
         },
         {
             src: "/assets/authors/marine-in-a-chair-with-pomsky.webp",
-            alt: "Marine sur une chaise avec son bebe pomsky",
+            alt: "Marine assise avec un jeune Pomsky",
+            caption: "Un moment calme entre Marine et un jeune Pomsky.",
             className: "col-span-3 md:col-span-3 row-span-3",
             sizes: galleryHalfDesktopSizes,
             priority: { mobile: false, tablet: false, desktop: false },
         },
         {
             src: "/assets/authors/marine-and-a-new-puppy.webp",
-            alt: "Marine avec un Pomsky sur une chaise",
+            alt: "Marine avec un jeune chiot Pomsky",
+            caption: "Marine avec un chiot dans une scène simple du quotidien.",
             className: "col-span-3 md:col-span-3 row-span-3",
             sizes: galleryHalfDesktopSizes,
             priority: { mobile: false, tablet: false, desktop: false },
         },
         {
             src: "/assets/authors/marine-and-pomsky-in-grass.webp",
-            alt: "Marine et un pomsky dans le jardin vert",
+            alt: "Marine avec un Pomsky dans l'herbe",
+            caption: "Une image de Marine avec un Pomsky en extérieur.",
             className: "col-span-3 md:col-span-3 row-span-3",
             sizes: galleryHalfDesktopSizes,
             priority: { mobile: false, tablet: false, desktop: false },
         },
         {
             src: "/assets/authors/marine-and-a-puppy-pomsky-in-sofa.jpeg",
-            alt: "Marine sur le canapé avec un chiot pomsky",
+            alt: "Marine sur un canapé avec un chiot Pomsky",
+            caption: "Une scène qui traduit la proximité et la douceur du lien au quotidien.",
             className: "col-span-6 md:col-span-6 row-span-6 md:row-span-6",
             sizes: galleryFullSizes,
             priority: { mobile: false, tablet: false, desktop: false },
@@ -204,7 +216,7 @@ export default function PresentationEleveusesPage() {
                             <article id="aurelie" className="grid md:grid-cols-2 gap-12 items-start scroll-mt-28">
                                 <div className="grid grid-cols-6 auto-rows-[70px] sm:auto-rows-[90px] md:auto-rows-[105px] lg:auto-rows-[118px] gap-3">
                                     {aurelieGallery.map((image, index) => (
-                                        <div
+                                        <figure
                                             key={`${image.src}-${index}`}
                                             className={`relative overflow-hidden rounded-xl ${image.className}`}
                                         >
@@ -218,7 +230,10 @@ export default function PresentationEleveusesPage() {
                                                 loading={resolveLoading(image.priority)}
                                                 fetchPriority={resolveFetchPriority(image.priority)}
                                             />
-                                        </div>
+                                            <figcaption className="absolute inset-x-0 bottom-0 bg-linear-to-t from-black/60 via-black/20 to-transparent px-3 py-2 text-[11px] leading-relaxed text-white">
+                                                {image.caption}
+                                            </figcaption>
+                                        </figure>
                                     ))}
                                 </div>
                                 <div className="space-y-6">
@@ -275,7 +290,7 @@ export default function PresentationEleveusesPage() {
                             <article id="marine" className="grid md:grid-cols-2 gap-12 items-start scroll-mt-28">
                                 <div className="grid grid-cols-6 auto-rows-[70px] sm:auto-rows-[90px] md:auto-rows-[105px] lg:auto-rows-[118px] gap-3 md:order-2">
                                     {marineGallery.map((image, index) => (
-                                        <div
+                                        <figure
                                             key={`${image.src}-${index}`}
                                             className={`relative overflow-hidden rounded-xl ${image.className}`}
                                         >
@@ -289,7 +304,10 @@ export default function PresentationEleveusesPage() {
                                                 loading={resolveLoading(image.priority)}
                                                 fetchPriority={resolveFetchPriority(image.priority)}
                                             />
-                                        </div>
+                                            <figcaption className="absolute inset-x-0 bottom-0 bg-linear-to-t from-black/60 via-black/20 to-transparent px-3 py-2 text-[11px] leading-relaxed text-white">
+                                                {image.caption}
+                                            </figcaption>
+                                        </figure>
                                     ))}
                                 </div>
                                 <div className="space-y-6 md:order-1">
@@ -352,20 +370,25 @@ export default function PresentationEleveusesPage() {
                                         <p className="text-muted-foreground leading-relaxed">Objectif : informer, rassurer et accompagner les futurs adoptants grâce à un contenu fiable, transparent et orienté bien-être animal.</p>
                                     </div>
                                     <div className="space-y-6 md:justify-self-end lg:justify-self-stretch">
-                                        <div className="relative w-full overflow-hidden rounded-2xl">
-                                            <div className="relative aspect-4/5 lg:aspect-4/3">
-                                                <Image
-                                                    src="/BANDIT-pomsky-toy-f5.webp"
-                                                    alt="Pomsky noir et blanc de g?n?ration F3"
-                                                    fill
-                                                    sizes="(min-width: 1280px) 360px, (min-width: 1024px) 320px, (min-width: 768px) 34vw, 100vw"
-                                                    quality={70}
-                                                    className="object-cover"
-                                                    loading="lazy"
-                                                    fetchPriority="low"
-                                                />
+                                        <figure className="space-y-3">
+                                            <div className="relative w-full overflow-hidden rounded-2xl">
+                                                <div className="relative aspect-4/5 lg:aspect-4/3">
+                                                    <Image
+                                                        src="/BANDIT-pomsky-toy-f5.webp"
+                                                        alt="Bandit, Pomsky de l'élevage Royal POMSKY, illustrant la section blog"
+                                                        fill
+                                                        sizes="(min-width: 1280px) 360px, (min-width: 1024px) 320px, (min-width: 768px) 34vw, 100vw"
+                                                        quality={70}
+                                                        className="object-cover"
+                                                        loading="lazy"
+                                                        fetchPriority="low"
+                                                    />
+                                                </div>
                                             </div>
-                                        </div>
+                                            <figcaption className="text-xs leading-relaxed text-muted-foreground">
+                                                Un visuel qui accompagne la présentation du blog et de son angle terrain.
+                                            </figcaption>
+                                        </figure>
                                     </div>
                                     {/* Image */}
                                     <div className="flex md:justify-end">

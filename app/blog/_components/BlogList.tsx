@@ -104,17 +104,22 @@ export default function BlogList({ base, theme }: BlogListProps) {
                                 className="grid gap-6 md:grid-cols-[1.1fr_1.5fr] items-start border-b border-border/70 pb-10"
                             >
                                 {post.image ? (
-                                    <div className="relative aspect-4/3 w-full overflow-hidden rounded-2xl bg-muted">
-                                        <Image
-                                            src={post.image}
-                                            alt={post.imageAlt ?? post.title}
-                                            fill
-                                            className="object-cover"
-                                            sizes="(min-width: 768px) 40vw, 100vw"
-                                            priority={index === 0}
-                                            fetchPriority={index === 0 ? "high" : "auto"}
-                                        />
-                                    </div>
+                                    <figure className="space-y-3">
+                                        <div className="relative aspect-4/3 w-full overflow-hidden rounded-2xl bg-muted">
+                                            <Image
+                                                src={post.image}
+                                                alt={post.imageAlt ?? post.title}
+                                                fill
+                                                className="object-cover"
+                                                sizes="(min-width: 768px) 40vw, 100vw"
+                                                priority={index === 0}
+                                                fetchPriority={index === 0 ? "high" : "auto"}
+                                            />
+                                        </div>
+                                        <figcaption className="text-xs leading-relaxed text-muted-foreground">
+                                            Illustration de l&apos;article : {post.title}
+                                        </figcaption>
+                                    </figure>
                                 ) : (
                                     <div className="aspect-4/3 w-full rounded-2xl bg-muted" />
                                 )}

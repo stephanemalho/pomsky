@@ -170,17 +170,22 @@ export default async function BlogArticlePage({
 
             {post.image ? (
                 <section className="max-w-5xl mx-auto px-6">
-                    <div className="relative aspect-video w-full overflow-hidden rounded-3xl bg-muted">
-                        <Image
-                            src={post.image}
-                            alt={post.imageAlt ?? post.title}
-                            fill
-                            className="object-cover"
-                            sizes="(min-width: 1024px) 70vw, 100vw"
-                            priority
-                            fetchPriority="high"
-                        />
-                    </div>
+                    <figure className="space-y-3">
+                        <div className="relative aspect-video w-full overflow-hidden rounded-3xl bg-muted">
+                            <Image
+                                src={post.image}
+                                alt={post.imageAlt ?? post.title}
+                                fill
+                                className="object-cover"
+                                sizes="(min-width: 1024px) 70vw, 100vw"
+                                priority
+                                fetchPriority="high"
+                            />
+                        </div>
+                        <figcaption className="text-sm leading-relaxed text-muted-foreground">
+                            Illustration principale de l&apos;article : {post.title}
+                        </figcaption>
+                    </figure>
                 </section>
             ) : null}
 
@@ -271,15 +276,20 @@ export default async function BlogArticlePage({
 
             <aside className="max-w-3xl mx-auto px-6 pb-16">
                 <div className="rounded-3xl border border-border bg-card p-6 md:p-8 flex flex-col md:flex-row gap-6 items-center md:items-start">
-                    <div className="relative h-20 w-20 overflow-hidden rounded-full bg-muted">
-                        <Image
-                            src={post.author.imageSrc}
-                            alt={post.author.imageAlt}
-                            fill
-                            className="object-cover"
-                            sizes="80px"
-                        />
-                    </div>
+                    <figure className="space-y-2">
+                        <div className="relative h-20 w-20 overflow-hidden rounded-full bg-muted">
+                            <Image
+                                src={post.author.imageSrc}
+                                alt={post.author.imageAlt}
+                                fill
+                                className="object-cover"
+                                sizes="80px"
+                            />
+                        </div>
+                        <figcaption className="max-w-24 text-center text-[11px] leading-relaxed text-muted-foreground">
+                            Portrait de {post.author.name}
+                        </figcaption>
+                    </figure>
                     <div className="flex-1 text-center md:text-left">
                         <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">
                             {articleLabels.contactAuthorTemplate.replace(

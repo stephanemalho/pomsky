@@ -127,17 +127,22 @@ export default function PresentationPage() {
                                     Nous avons fait le choix de bâtir notre élevage autour de lignées américaines soigneusement sélectionnées. Ce travail sur les origines, les profils et le suivi sanitaire nous permet de viser des chiots plus homogènes, plus sains et mieux préparés pour la vie de famille.
                                 </p>
                             </div>
-                            <div className="relative h-64 md:h-100 rounded-lg overflow-hidden">
-                                <Image
-                                    src="/pages/presentation-elevage/chiot-pomsky-yeux-bleu-pelage-standard.webp"
-                                    alt="Chiot Pomsky aux yeux bleu assis a coté d'une citrouille d'halloween"
-                                    fill
-                                    className="object-cover"
-                                    priority
-                                    fetchPriority="high"
-                                    sizes="(min-width: 768px) 50vw, 100vw"
-                                />
-                            </div>
+                            <figure className="space-y-3">
+                                <div className="relative h-64 md:h-100 rounded-lg overflow-hidden">
+                                    <Image
+                                        src="/pages/presentation-elevage/chiot-pomsky-yeux-bleu-pelage-standard.webp"
+                                        alt="Chiot Pomsky au regard bleu, présenté comme illustration de la sélection menée à l'élevage"
+                                        fill
+                                        className="object-cover"
+                                        priority
+                                        fetchPriority="high"
+                                        sizes="(min-width: 768px) 50vw, 100vw"
+                                    />
+                                </div>
+                                <figcaption className="text-sm leading-relaxed text-muted-foreground">
+                                    Un chiot qui illustre le type recherché à l&apos;élevage, avec une expression marquée et une construction harmonieuse.
+                                </figcaption>
+                            </figure>
                         </div>
                     </section>
 
@@ -150,6 +155,7 @@ export default function PresentationPage() {
                         videoSummary="Une séquence courte, utile et directe pour rendre visible l'ambiance, le mouvement et la vie du groupe."
                         posterSrc="/assets/tiktok/7208154621523627269.optimized.webp"
                         posterAlt="Chiots Royal Pomsky qui jouent ensemble à l'élevage"
+                        mediaCaption="Une courte séquence pour montrer le mouvement du groupe, la liberté d'exploration et l'ambiance réelle de l'élevage."
                         videoSrc="/assets/tiktok/7208154621523627269.mp4"
                         tiktokHref="https://www.tiktok.com/@royalpomsky/video/7208154621523627269"
                         buttonLabel="Lire la vidéo de l'élevage"
@@ -216,15 +222,20 @@ export default function PresentationPage() {
                     {/* Approach Section */}
                     <section className="mb-16">
                         <div className="grid md:grid-cols-2 gap-12 items-center">
-                            <div className="relative h-64 md:h-100 rounded-lg overflow-hidden md:order-2">
-                                <Image
-                                    src="/pages/presentation-elevage/eleveuse-royal-pomsky-avec-un-pomsky.webp"
-                                    alt="Aurélie de l'élevage Royal Pomsky et un pomsky qui attend son jouet"
-                                    fill
-                                    className="object-cover"
-                                    sizes="(min-width: 768px) 50vw, 100vw"
-                                />
-                            </div>
+                            <figure className="space-y-3 md:order-2">
+                                <div className="relative h-64 md:h-100 rounded-lg overflow-hidden">
+                                    <Image
+                                        src="/pages/presentation-elevage/eleveuse-royal-pomsky-avec-un-pomsky.webp"
+                                        alt="Aurélie avec un Pomsky de l'élevage Royal POMSKY dans un moment de calme et d'attention"
+                                        fill
+                                        className="object-cover"
+                                        sizes="(min-width: 768px) 50vw, 100vw"
+                                    />
+                                </div>
+                                <figcaption className="text-sm leading-relaxed text-muted-foreground">
+                                    Une image qui relie le travail d&apos;élevage à la relation quotidienne avec les chiens, au-delà des seuls critères techniques.
+                                </figcaption>
+                            </figure>
                             <div className="space-y-6 md:order-1">
                                 <Badge variant="secondary" className="w-fit">
                                     <Star className="h-4 w-4 mr-2" />

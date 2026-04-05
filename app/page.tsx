@@ -124,17 +124,22 @@ export default function HomePage() {
             <div className="container mx-auto px-4 py-6 md:px-6 md:py-8 lg:px-8 lg:py-10">
               <div className="mx-auto max-w-6xl space-y-5 md:space-y-6">
                 <div className="overflow-hidden rounded-xl md:rounded-4xl border border-white/10 bg-[#3a1117] shadow-[0_35px_120px_rgba(0,0,0,0.35)]">
-                  <Image
-                    src="/bandeau-presentaion-royal-pomsky-toy.jpeg"
-                    alt="Bandeau de presentation Royal Pomsky Toy"
-                    width={1260}
-                    height={400}
-                    priority
-                    fetchPriority="high"
-                    loading="eager"
-                    sizes="(min-width: 1280px) 1152px, (min-width: 768px) calc(100vw - 48px), calc(100vw - 32px)"
-                    className="block h-auto w-full"
-                  />
+                  <figure>
+                    <Image
+                      src="/bandeau-presentaion-royal-pomsky-toy.jpeg"
+                      alt="Bannière d'accueil de Royal POMSKY présentant l'univers de l'élevage"
+                      width={1260}
+                      height={400}
+                      priority
+                      fetchPriority="high"
+                      loading="eager"
+                      sizes="(min-width: 1280px) 1152px, (min-width: 768px) calc(100vw - 48px), calc(100vw - 32px)"
+                      className="block h-auto w-full"
+                    />
+                    <figcaption className="px-5 py-3 text-xs leading-relaxed text-white/72">
+                      Montage photo des chiots et chiens de Royal POMSKY pour vous présenter l&apos;univers de l&apos;élevage.
+                    </figcaption>
+                  </figure>
                 </div>
 
                 <div className="mx-auto max-w-6xl rounded-xl md:rounded-4xl border border-white/12 bg-[#47131b]/72 px-6 py-6 text-center text-white shadow-[0_30px_100px_rgba(0,0,0,0.32)] backdrop-blur-sm md:px-8">
@@ -149,16 +154,21 @@ export default function HomePage() {
                 </div>
 
                 <div className="mx-auto max-w-6xl overflow-hidden rounded-xl md:rounded-4xl border border-white/12 bg-[#3a1117]/55 shadow-[0_30px_100px_rgba(0,0,0,0.28)] backdrop-blur-sm">
-                  <div className="relative aspect-4/3 sm:aspect-16/11 md:aspect-16/8 lg:aspect-16/7">
-                    <Image
-                      src="/pomsky-and-his-pet-family-parent.jpg"
-                      alt="Pomsky auprès de sa famille dans un moment tendre"
-                      fill
-                      className="object-cover object-center"
-                      sizes="(min-width: 1280px) 960px, (min-width: 1024px) 80vw, (min-width: 768px) calc(100vw - 80px), calc(100vw - 32px)"
-                    />
-                    <div className="absolute inset-0 bg-linear-to-t from-[#2a0d12]/35 via-transparent to-transparent" aria-hidden="true" />
-                  </div>
+                  <figure>
+                    <div className="relative aspect-4/3 sm:aspect-16/11 md:aspect-16/8 lg:aspect-16/7">
+                      <Image
+                        src="/pomsky-and-his-pet-family-parent.jpg"
+                        alt="Pomsky Royal POMSKY auprès de sa famille dans un moment de complicité"
+                        fill
+                        className="object-cover object-center"
+                        sizes="(min-width: 1280px) 960px, (min-width: 1024px) 80vw, (min-width: 768px) calc(100vw - 80px), calc(100vw - 32px)"
+                      />
+                      <div className="absolute inset-0 bg-linear-to-t from-[#2a0d12]/35 via-transparent to-transparent" aria-hidden="true" />
+                    </div>
+                    <figcaption className="px-5 py-3 text-xs leading-relaxed text-white/72">
+                      Les pets parents de Koda, lui offrent une vie heureuse.
+                    </figcaption>
+                  </figure>
                 </div>
 
                 <div className="mx-auto max-w-6xl rounded-xl md:rounded-4xl border border-white/12 bg-[#2b0d13]/82 px-6 py-6 text-white shadow-[0_35px_120px_rgba(0,0,0,0.4)] backdrop-blur-md md:px-8 md:py-8 lg:px-10">
@@ -246,15 +256,20 @@ export default function HomePage() {
                 </Link>
               </div>
 
-              <div className="relative w-full aspect-video md:h-200 h-125 md:aspect-4/5 overflow-hidden rounded-lg">
-                <Image
-                  src="/AKASHA-pomsky-toy-f4.webp"
-                  alt="Pomsky f4 Akasha, une femelle pomsky toy de couleur sable et blanche avec des yeux bleus"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 85vw, 50vw"
-                />
-              </div>
+              <figure className="space-y-3">
+                <div className="relative w-full aspect-video md:h-200 h-125 md:aspect-4/5 overflow-hidden rounded-lg">
+                  <Image
+                    src="/AKASHA-pomsky-toy-f4.webp"
+                    alt="Portrait d'Akasha, femelle Pomsky toy F4 de l'élevage Royal POMSKY"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 85vw, 50vw"
+                  />
+                </div>
+                <figcaption className="text-sm leading-relaxed text-muted-foreground">
+                  Akasha illustre ici le type recherché à l&apos;élevage, avec un format compact, une expression marquée et une vraie présence.
+                </figcaption>
+              </figure>
             </div>
           </div>
         </section>
@@ -280,15 +295,20 @@ export default function HomePage() {
             <div className="grid md:grid-cols-3 gap-6">
               {pomskyBenefits.map((item) => (
                 <Card key={item.title} className="overflow-hidden bg-muted/70 p-2">
-                  <div className="relative aspect-4/3 rounded-lg overflow-hidden">
-                    <Image
-                      src={item.image}
-                      alt={item.alt}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    />
-                  </div>
+                  <figure className="space-y-3">
+                    <div className="relative aspect-4/3 rounded-lg overflow-hidden">
+                      <Image
+                        src={item.image}
+                        alt={item.alt}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      />
+                    </div>
+                    <figcaption className="px-2 text-xs leading-relaxed text-muted-foreground">
+                      Illustration liée au thème : {item.title}
+                    </figcaption>
+                  </figure>
 
                   <CardContent className="p-6 space-y-3">
                     <h3 className="text-xl font-semibold">{item.title}</h3>
@@ -318,7 +338,8 @@ export default function HomePage() {
               videoTitle="Un moment du quotidien avec les chiots Royal Pomsky"
               videoSummary="Une vidéo courte, naturelle et sincère pour découvrir l'ambiance de l'élevage et la proximité avec nos chiots."
               posterSrc="/assets/tiktok/7241509462060616987.jpg"
-              posterAlt="Personne assise dans l'herbe avec plusieurs chiots Royal Pomsky"
+              posterAlt="Personne assise dans l'herbe avec plusieurs chiots Royal POMSKY au contact de l'humain"
+              mediaCaption="Un aperçu visuel de la vie quotidienne à l'élevage, avec des chiots proches de l'humain dans un moment calme en extérieur."
               videoSrc="/assets/tiktok/7241509462060616987.mp4"
               tiktokHref="https://www.tiktok.com/@royalpomsky/video/7241509462060616987"
               buttonLabel="Lire la vidéo"
@@ -370,15 +391,20 @@ export default function HomePage() {
                         </Badge>
                       ))}
                     </div>
-                    <div className="relative w-full aspect-square">
-                      <Image
-                        src={founder.image || "/placeholder.svg"}
-                        alt={`Photo d'${founder.name}, fondatrice de l'élevage`}
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 1024px) 100vw, 50vw"
-                      />
-                    </div>
+                    <figure className="space-y-3">
+                      <div className="relative w-full aspect-square">
+                        <Image
+                          src={founder.image || "/placeholder.svg"}
+                          alt={`Portrait de ${founder.name}, cofondatrice de l'élevage Royal POMSKY`}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 1024px) 100vw, 50vw"
+                        />
+                      </div>
+                      <figcaption className="px-6 text-xs leading-relaxed text-muted-foreground">
+                        Portrait de {founder.name}, présenté dans la section dédiée aux éleveuses et à leur rôle au sein de Royal POMSKY.
+                      </figcaption>
+                    </figure>
 
                     <div className="p-6">
                       <h3 className="text-xl font-semibold mb-2">{founder.name}</h3>

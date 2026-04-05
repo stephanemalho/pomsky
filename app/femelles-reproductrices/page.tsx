@@ -108,7 +108,8 @@ export default function NosChiotsPage() {
                                         <ImageCarousel
                                             className={index % 2 === 1 ? "md:order-2" : undefined}
                                             images={puppy.images}
-                                            alt={"Carrousel d'images du Pomsky reproducteur " + puppy.name}
+                                            alt={"Photos du Pomsky reproducteur " + puppy.name}
+                                            caption={`Photos de ${puppy.name}, pour visualiser sa morphologie, son type et sa place dans notre programme d'élevage.`}
                                             priority={index === 0}
                                             sizes="(min-width: 1024px) 50vw, (min-width: 768px) 50vw, 100vw"
                                         />

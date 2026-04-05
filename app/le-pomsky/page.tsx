@@ -59,7 +59,7 @@ const sizes = [
         weight: "3,5 à 5 kg",
         text: "Le Pomsky Toy est le plus petit gabarit. Très proche de ses humains, expressif et joueur, il combine une petite taille avec une vraie énergie. Son format le rend plus simple à transporter et souvent plus pratique pour une vie citadine, à condition de respecter ses besoins d’activité, de stimulation et d’éducation. Sa petite taille ne fait pas de lui un chien passif ou fragile par nature.",
         image: "/size-for-toy-pomsky.webp",
-        alt: "Comparatif de taille d'un Pomsky Toy et d'un Husky",
+        alt: "Schéma comparatif de taille entre un Pomsky Toy et un Husky sibérien",
         linkHref: "/blog/pomsky/caracteristique/tout-savoir-sur-le-pomsky-toy-race-caracteristiques-et-conseils",
     },
     {
@@ -68,7 +68,7 @@ const sizes = [
         weight: "6 à 9 kg",
         text: "Le Pomsky miniature représente souvent le format le plus recherché pour son équilibre entre allure nordique, maniabilité et confort de vie. Vif, proche de l’humain et facile à intégrer dans le quotidien, il conserve une morphologie harmonieuse et un gabarit pratique pour de nombreuses familles.",
         image: "/size-for-mini-pomsky.webp",
-        alt: "Comparatif de taille d'un Pomsky miniature et d'un Husky",
+        alt: "Schéma comparatif de taille entre un Pomsky miniature et un Husky sibérien",
         linkHref: "/blog/pomsky/caracteristique/decouvrez-le-pomsky-nain-un-adorable-compagnon-a-quatre-pattes",
     },
     {
@@ -77,7 +77,7 @@ const sizes = [
         weight: "9 à 12 kg",
         text: "Le Pomsky standard est le plus grand des trois formats. Il conserve davantage la prestance du Husky tout en restant plus compact. Son gabarit plus grand ne signifie pas forcément qu’il est plus difficile à vivre : bien sélectionné et bien éduqué, il peut être tout aussi équilibré, proche de sa famille et agréable au quotidien.",
         image: "/size-for-standard-pomsky.webp",
-        alt: "Comparatif de taille d'un Pomsky standard et d'un Husky",
+        alt: "Schéma comparatif de taille entre un Pomsky standard et un Husky sibérien",
         linkHref: "/blog/pomsky/caracteristique/le-pomsky-adulte-tout-ce-que-vous-devez-savoir-sur-cette-race-unique",
     },
 ]
@@ -114,25 +114,25 @@ const generations = [
         title: "Pomsky F1",
         text: "Première génération issue du croisement initial entre Husky sibérien et Spitz nain. Les chiots peuvent être plus variables en taille, en morphologie et en caractère.",
         image: "/pages/le-pomsky/femmelle-pomsky-f1.webp",
-        alt: "Pomsky F1 debout",
+        alt: "Pomsky F1 debout, utilisé pour illustrer la première génération",
     },
     {
         title: "Pomsky F2",
         text: "Croisement entre deux Pomskys F1. L’homogénéité progresse, mais des variations restent possibles.",
         image: "/pages/le-pomsky/chiot-pomsky-f2-avec-citrouille.webp",
-        alt: "Pomsky F2 assis près d'une citrouille",
+        alt: "Pomsky F2 assis près d'une citrouille, utilisé pour illustrer la deuxième génération",
     },
     {
         title: "Pomsky F3 à F5",
         text: "À mesure que les générations avancent, le type, le marquage, la taille et le comportement deviennent généralement plus stables. À partir de F5, on parle souvent de Pomsky multigénérationnel.",
         image: "/pages/le-pomsky/pomsky-male-f3-pelage-fluffy.webp",
-        alt: "Pomsky F3 à la fourrure fluffy",
+        alt: "Pomsky des générations avancées F3 à F5, avec fourrure fluffy",
     },
     {
         title: "Le cas des Pomsky B ou backcross",
         text: "Un Pomsky peut être recroisé avec un Husky ou un Poméranien pour renforcer certaines caractéristiques physiques. Ces recroisements peuvent influencer la taille, le type et parfois le tempérament.",
         image: "/pages/le-pomsky/male-pomsky-chocolat.webp",
-        alt: "Pomsky chocolat adulte",
+        alt: "Pomsky adulte chocolat utilisé pour illustrer le cas des backcross",
     },
 ]
 
@@ -222,18 +222,23 @@ export default function DogPage() {
                             </div>
                         </div>
 
-                        <div className="relative h-80 overflow-hidden rounded-2xl bg-black md:h-112">
-                            <Image
-                                src="/pages/le-pomsky/pomsky-f4-et-une-citrouille.webp"
-                                alt="Pomsky au regard expressif sur une citrouille"
-                                fill
-                                priority
-                                fetchPriority="high"
-                                className="object-cover"
-                                sizes="(min-width: 768px) 50vw, 100vw"
-                            />
-                            <div className="absolute inset-0 bg-linear-to-t from-black/45 via-transparent to-transparent" aria-hidden="true" />
-                        </div>
+                        <figure className="space-y-3">
+                            <div className="relative h-80 overflow-hidden rounded-2xl bg-black md:h-112">
+                                <Image
+                                    src="/pages/le-pomsky/pomsky-f4-et-une-citrouille.webp"
+                                    alt="Pomsky adulte au regard expressif, utilisé comme visuel d'introduction à la race"
+                                    fill
+                                    priority
+                                    fetchPriority="high"
+                                    className="object-cover"
+                                    sizes="(min-width: 768px) 50vw, 100vw"
+                                />
+                                <div className="absolute inset-0 bg-linear-to-t from-black/45 via-transparent to-transparent" aria-hidden="true" />
+                            </div>
+                            <figcaption className="text-sm leading-relaxed text-muted-foreground">
+                                Un visuel d&apos;ouverture pour présenter le type Pomsky, son expression nordique et son allure compacte.
+                            </figcaption>
+                        </figure>
                     </section>
 
                     <section className="space-y-6">
@@ -306,15 +311,20 @@ export default function DogPage() {
                                                 <h3 className="text-xl font-semibold">{size.title}</h3>
                                                 <PawPrint className="h-5 w-5 text-primary" aria-hidden="true" />
                                             </div>
-                                            <div className="relative aspect-4/3 overflow-hidden rounded-xl bg-black/80">
-                                                <Image
-                                                    src={size.image}
-                                                    alt={size.alt}
-                                                    fill
-                                                    className="object-contain"
-                                                    sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-                                                />
-                                            </div>
+                                            <figure className="space-y-3">
+                                                <div className="relative aspect-4/3 overflow-hidden rounded-xl bg-black/80">
+                                                    <Image
+                                                        src={size.image}
+                                                        alt={size.alt}
+                                                        fill
+                                                        className="object-contain"
+                                                        sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                                                    />
+                                                </div>
+                                                <figcaption className="text-xs leading-relaxed text-muted-foreground">
+                                                    Repère visuel pour comprendre le gabarit du {size.title.toLowerCase()} par rapport au Husky sibérien.
+                                                </figcaption>
+                                            </figure>
                                         </CardHeader>
                                         <CardContent className="space-y-3 text-sm leading-relaxed text-muted-foreground">
                                             <div className="flex items-center gap-2">
@@ -418,15 +428,20 @@ export default function DogPage() {
                             {generations.map((generation) => (
                                 <Card key={generation.title} className="flex h-full flex-col overflow-hidden bg-muted/50">
                                     <div className="grid h-full gap-6 md:grid-cols-[1fr_1.1fr]">
-                                        <div className="relative min-h-64 bg-black/80">
-                                            <Image
-                                                src={generation.image}
-                                                alt={generation.alt}
-                                                fill
-                                                className="object-cover"
-                                                sizes="(min-width: 1024px) 25vw, 100vw"
-                                            />
-                                        </div>
+                                        <figure className="flex h-full flex-col">
+                                            <div className="relative min-h-64 bg-black/80">
+                                                <Image
+                                                    src={generation.image}
+                                                    alt={generation.alt}
+                                                    fill
+                                                    className="object-cover"
+                                                    sizes="(min-width: 1024px) 25vw, 100vw"
+                                                />
+                                            </div>
+                                            <figcaption className="px-4 py-3 text-xs leading-relaxed text-muted-foreground">
+                                                Illustration associée à {generation.title}, pour visualiser l&apos;évolution du type selon les générations.
+                                            </figcaption>
+                                        </figure>
                                         <div className="flex flex-col justify-center p-6">
                                             <h3 className="text-lg font-semibold">{generation.title}</h3>
                                             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{generation.text}</p>
@@ -496,15 +511,20 @@ export default function DogPage() {
                                         <p>
                                             Les yeux peuvent être bleus, bruns, ambre, verts ou vairons. Le pelage peut être standard, plush ou wooly selon les lignées.
                                         </p>
-                                        <div className="relative min-h-64 overflow-hidden rounded-xl bg-background">
-                                            <Image
-                                                src="/pomsky-eye-colors-blue-brown-heterochromia.webp"
-                                                alt="Différentes couleurs d’yeux chez le Pomsky"
-                                                fill
-                                                className="object-contain"
-                                                sizes="(min-width: 768px) 50vw, 100vw"
-                                            />
-                                        </div>
+                                        <figure className="space-y-3">
+                                            <div className="relative min-h-64 overflow-hidden rounded-xl bg-background">
+                                                <Image
+                                                    src="/pomsky-eye-colors-blue-brown-heterochromia.webp"
+                                                    alt="Montage illustrant différentes couleurs d'yeux observées chez le Pomsky"
+                                                    fill
+                                                    className="object-contain"
+                                                    sizes="(min-width: 768px) 50vw, 100vw"
+                                                />
+                                            </div>
+                                            <figcaption className="text-xs leading-relaxed text-muted-foreground">
+                                                Un repère visuel pour illustrer la diversité des couleurs d&apos;yeux et l&apos;expressivité du Pomsky.
+                                            </figcaption>
+                                        </figure>
                                     </CardContent>
                                 </Card>
                             </Link>
@@ -521,15 +541,20 @@ export default function DogPage() {
                                         <p>
                                             Sa silhouette reste compacte, avec des oreilles dressées, une queue fournie et une expression très marquée qui rappelle le Husky sibérien.
                                         </p>
-                                        <div className="relative min-h-64 overflow-hidden rounded-xl bg-background">
-                                            <Image
-                                                src="/pages/le-pomsky/male-pomsky-chocolat.webp"
-                                                alt="Pomsky adulte chocolat"
-                                                fill
-                                                className="object-cover"
-                                                sizes="(min-width: 768px) 50vw, 100vw"
-                                            />
-                                        </div>
+                                        <figure className="space-y-3">
+                                            <div className="relative min-h-64 overflow-hidden rounded-xl bg-background">
+                                                <Image
+                                                    src="/pages/le-pomsky/male-pomsky-chocolat.webp"
+                                                    alt="Pomsky adulte chocolat illustrant la morphologie générale de la race"
+                                                    fill
+                                                    className="object-cover"
+                                                    sizes="(min-width: 768px) 50vw, 100vw"
+                                                />
+                                            </div>
+                                            <figcaption className="text-xs leading-relaxed text-muted-foreground">
+                                                Un exemple de silhouette adulte pour visualiser la construction, la queue fournie et l&apos;expression typique du Pomsky.
+                                            </figcaption>
+                                        </figure>
                                     </CardContent>
                                 </Card>
                             </Link>
