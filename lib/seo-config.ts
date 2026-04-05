@@ -570,7 +570,7 @@ export const sitemapPages = [
         url: "/galerie",
         changefreq: "weekly",
         priority: 0.75,
-        lastmod: "2026-03-28"
+        lastmod: "2026-04-05"
     },
     {
         url: "/mentions-legales",
