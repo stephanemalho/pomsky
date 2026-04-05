@@ -52,7 +52,7 @@ export const puppies: Puppy[] = [
         ],
         linkTo: "https://forms.gle/wtcxuo84YEQzposV9",
         isReserved: false,
-        price: 3800,
+        price: 3500,
         priceCurrency: "EUR",
         priceIncludes: "ttc",
         priceValidUntil: "2026-12-31"
