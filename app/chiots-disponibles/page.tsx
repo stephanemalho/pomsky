@@ -73,7 +73,8 @@ export default function NosChiotsPage() {
     ])
     const faqSchema = generateFAQSchema(convertFAQsToSchema(faqNosChiots))
     const pageLastModValue = sitemapPages.find((page) => page.url === siteConfig.pages.puppies)?.lastmod
-    const puppyListSchema = generatePuppyListSchema(puppies)
+    const availablePuppies = puppies.filter((puppy) => !puppy.isReserved)
+    const puppyListSchema = generatePuppyListSchema(availablePuppies)
     const webPageSchema = generateWebPageSchema({
         name: pageMetadata.puppies.title,
         description: pageMetadata.puppies.description,
