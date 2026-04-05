@@ -17,6 +17,7 @@ const navigation = [
     { name: "Nos reproducteurs", href: "/femelles-reproductrices" },
     { name: "Nos chiots disponibles", href: "/chiots-disponibles" },
     { name: "Les conditions de vie", href: "/bien-etre-animal" },
+    { name: "Galerie", href: "/galerie" },
     { name: "Blog", href: "/blog/pomsky" },
     { name: "Contact", href: "/contact" },
     { name: "Réussir son adoption", href: "/adoption/reussir-son-adoption" },

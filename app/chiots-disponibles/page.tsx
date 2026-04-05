@@ -73,7 +73,8 @@ export default function NosChiotsPage() {
     ])
     const faqSchema = generateFAQSchema(convertFAQsToSchema(faqNosChiots))
     const pageLastModValue = sitemapPages.find((page) => page.url === siteConfig.pages.puppies)?.lastmod
-    const puppyListSchema = generatePuppyListSchema(puppies)
+    const availablePuppies = puppies.filter((puppy) => !puppy.isReserved)
+    const puppyListSchema = generatePuppyListSchema(availablePuppies)
     const webPageSchema = generateWebPageSchema({
         name: pageMetadata.puppies.title,
         description: pageMetadata.puppies.description,
@@ -175,7 +176,8 @@ export default function NosChiotsPage() {
                                                 <ImageCarousel
                                                     className={index % 2 === 1 ? "md:order-2" : undefined}
                                                     images={puppy.images}
-                                                    alt={"Carrousel d'images du chiots pomsky " + puppy.name}
+                                                    alt={"Photos du chiot Pomsky " + puppy.name}
+                                                    caption={`Photos récentes de ${puppy.name}, pour découvrir son évolution, son type et son expression.`}
                                                     priority={index === 0}
                                                     sizes="(min-width: 1024px) 50vw, (min-width: 768px) 50vw, 100vw"
                                                 />
@@ -217,7 +219,7 @@ export default function NosChiotsPage() {
                                                             <Weight className="h-4 w-4 text-primary" aria-hidden="true" />
                                                             <dd>{puppy.weight}</dd>
                                                         </div>
-                                                        {typeof puppy.price === "number" ? (
+                                                        {!puppy.isReserved && typeof puppy.price === "number" ? (
                                                             <div className="flex items-center gap-2 text-muted-foreground sm:col-span-2">
                                                                 <Banknote className="min-h-4 min-w-4 text-primary" aria-hidden="true" />
                                                                 <dt className="sr-only">Prix</dt>
@@ -280,7 +282,8 @@ export default function NosChiotsPage() {
                         videoTitle="Une surprise de famille autour d'un chiot Royal Pomsky"
                         videoSummary="Un moment simple et sincère qui montre la rencontre réelle entre un chiot et sa future famille."
                         posterSrc="/assets/tiktok/7101955478313356549.optimized.webp"
-                        posterAlt="Surprise d'adoption Royal Pomsky en famille"
+                        posterAlt="Rencontre entre un chiot Royal POMSKY et sa future famille lors d'une surprise d'adoption"
+                        mediaCaption="Une scène de rencontre qui illustre l'émotion du départ et l'entrée du chiot dans sa nouvelle histoire de famille."
                         videoSrc="/assets/tiktok/7101955478313356549.mp4"
                         tiktokHref="https://www.tiktok.com/@royalpomsky/video/7101955478313356549"
                         buttonLabel="Lire le souvenir de famille"

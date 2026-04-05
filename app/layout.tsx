@@ -97,7 +97,7 @@ export default function RootLayout({
   const websiteSchema = generateWebsiteSchema()
 
   return (
-    <html lang="fr" suppressHydrationWarning className={questrial.variable}>
+    <html lang="fr" suppressHydrationWarning className={`${questrial.variable} scroll-smooth`}>
       <head>
         {/* Google Analytics will be injected by the client cookie consent manager */}
 

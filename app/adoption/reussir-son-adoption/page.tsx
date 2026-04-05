@@ -338,17 +338,22 @@ export default function AdoptionSuccessPage() {
                         </div>
 
                         <div className="grid gap-4">
-                            <div className="relative min-h-70 overflow-hidden rounded-2xl">
-                                <Image
-                                    src="/nurcery-panier.webp"
-                                    alt="Chiot pomsky dans un panier prêt pour une arrivée douce dans sa nouvelle famille"
-                                    fill
-                                    className="object-cover"
-                                    priority
-                                    fetchPriority="high"
-                                    sizes="(min-width: 768px) 40vw, 100vw"
-                                />
-                            </div>
+                            <figure className="space-y-3">
+                                <div className="relative min-h-70 overflow-hidden rounded-2xl">
+                                    <Image
+                                        src="/nurcery-panier.webp"
+                                        alt="Chiot Pomsky dans un panier, prêt pour un départ en douceur"
+                                        fill
+                                        className="object-cover"
+                                        priority
+                                        fetchPriority="high"
+                                        sizes="(min-width: 768px) 40vw, 100vw"
+                                    />
+                                </div>
+                                <figcaption className="text-sm leading-relaxed text-muted-foreground">
+                                    Une image qui accompagne l&apos;idée d&apos;un départ préparé, calme et rassurant pour le chiot.
+                                </figcaption>
+                            </figure>
                             <div className="rounded-2xl border border-primary/20 bg-background/85 p-5">
                                 <div className="flex items-start gap-3">
                                     <HeartHandshake className="mt-1 min-h-5 min-w-5 text-primary" />
@@ -366,15 +371,20 @@ export default function AdoptionSuccessPage() {
                     </section>
 
                     <section className="grid gap-8 md:grid-cols-[0.95fr_1.05fr] md:items-center">
-                        <div className="relative min-h-96 overflow-hidden rounded-3xl">
-                            <Image
-                                src="/pomsky-black-and-white-f3-generation.webp"
-                                alt="Chiot pomsky attentif et calme pendant ses premières découvertes"
-                                fill
-                                className="object-cover"
-                                sizes="(min-width: 768px) 45vw, 100vw"
-                            />
-                        </div>
+                        <figure className="space-y-3">
+                            <div className="relative min-h-96 overflow-hidden rounded-3xl">
+                                <Image
+                                    src="/pomsky-black-and-white-f3-generation.webp"
+                                    alt="Chiot Pomsky attentif et calme pendant ses premières découvertes"
+                                    fill
+                                    className="object-cover"
+                                    sizes="(min-width: 768px) 45vw, 100vw"
+                                />
+                            </div>
+                            <figcaption className="text-sm leading-relaxed text-muted-foreground">
+                                Un chiot dans une phase d&apos;observation, pour illustrer l&apos;importance d&apos;une transition sans agitation.
+                            </figcaption>
+                        </figure>
                         <div className="space-y-6">
                             <div className="space-y-3">
                                 <Badge variant="secondary" className="w-fit">
@@ -564,15 +574,20 @@ export default function AdoptionSuccessPage() {
                                 sur les bases éducatives, la propreté et la socialisation progressive du chiot. Nous n&apos;avons aucun lien commercial avec
                                 Esprit Dog, mais c&apos;est pour nous une référence sérieuse en matière d&apos;apprentissage et de bien-être du chiot.
                             </p>
-                            <div className="relative min-h-96 overflow-hidden rounded-3xl">
-                                <Image
-                                    src="/pomsky-and-his-pet-family-parent.jpg"
-                                    alt="Jeune pomsky avec sa famille humaine dans un moment calme"
-                                    fill
-                                    className="object-cover"
-                                    sizes="(min-width: 768px) 40vw, 100vw"
-                                />
-                            </div>
+                            <figure className="space-y-3">
+                                <div className="relative min-h-96 overflow-hidden rounded-3xl">
+                                    <Image
+                                        src="/pomsky-and-his-pet-family-parent.jpg"
+                                        alt="Jeune Pomsky avec sa famille humaine dans un moment calme"
+                                        fill
+                                        className="object-cover"
+                                        sizes="(min-width: 768px) 40vw, 100vw"
+                                    />
+                                </div>
+                                <figcaption className="text-sm leading-relaxed text-muted-foreground">
+                                    Une image qui illustre la relation de confiance à construire après l&apos;arrivée à la maison.
+                                </figcaption>
+                            </figure>
                         </div>
                         <div className="grid gap-4">
                             {resources.map((resource) => (

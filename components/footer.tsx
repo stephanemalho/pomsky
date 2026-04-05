@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { Instagram } from "lucide-react"
-import { FaFacebookF, FaTiktok } from "react-icons/fa6";
+import { FaFacebookF, FaTiktok, FaYoutube } from "react-icons/fa6";
 import Image from "next/image"
 import { siteConfig } from "@/lib/seo-config"
 
@@ -102,6 +102,14 @@ export function Footer() {
                                     Les conditions de vie
                                 </Link>
                             </li>
+                            <li>
+                                <Link
+                                    href="/galerie"
+                                    className="text-muted-foreground hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded px-1 py-0.5"
+                                >
+                                    Galerie
+                                </Link>
+                            </li>
                         </ul>
                     </nav>
 
@@ -194,6 +202,15 @@ export function Footer() {
                                 aria-label="Suivez-nous sur TikTok (lien externe)"
                             >
                                 <FaTiktok className="h-5 w-5" aria-hidden="true" />
+                            </a>
+                            <a
+                                href={siteConfig.socialLinks.youtube}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-muted-foreground hover:text-primary transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded p-1"
+                                aria-label="Suivez-nous sur YouTube (lien externe)"
+                            >
+                                <FaYoutube className="h-5 w-5" aria-hidden="true" />
                             </a>
                             {/* <a
                                 href="https://twitter.com"

@@ -237,18 +237,23 @@ export default function PomskyPricePage() {
                             </div>
                         </div>
 
-                        <div className="relative h-80 overflow-hidden rounded-2xl bg-muted lg:h-120">
-                            <Image
-                                src="/BAMBOU-pomsky-miniature-f5.webp"
-                                alt="Pomsky miniature de Royal Pomsky"
-                                fill
-                                priority
-                                fetchPriority="high"
-                                className="object-cover"
-                                sizes="(min-width: 1024px) 40vw, 100vw"
-                            />
-                            <div className="absolute inset-0 bg-linear-to-t from-black/25 via-transparent to-transparent" aria-hidden="true" />
-                        </div>
+                        <figure className="space-y-3">
+                            <div className="relative h-80 overflow-hidden rounded-2xl bg-muted lg:h-120">
+                                <Image
+                                    src="/BAMBOU-pomsky-miniature-f5.webp"
+                                    alt="Pomsky miniature Royal POMSKY illustrant la page de tarifs 2026"
+                                    fill
+                                    priority
+                                    fetchPriority="high"
+                                    className="object-cover"
+                                    sizes="(min-width: 1024px) 40vw, 100vw"
+                                />
+                                <div className="absolute inset-0 bg-linear-to-t from-black/25 via-transparent to-transparent" aria-hidden="true" />
+                            </div>
+                            <figcaption className="text-sm leading-relaxed text-muted-foreground">
+                                Un visuel d&apos;introduction pour incarner les catégories de prix présentées sur cette page.
+                            </figcaption>
+                        </figure>
                     </section>
 
                     <section className="space-y-8">
@@ -380,15 +385,20 @@ export default function PomskyPricePage() {
                             </Card>
 
                             <Card className="overflow-hidden bg-background/85">
-                                <div className="relative min-h-72">
-                                    <Image
-                                        src="/INUIT-pomsky-toy-f5.webp"
-                                        alt="Pomsky Toy de Royal Pomsky"
-                                        fill
-                                        className="object-cover"
-                                        sizes="(min-width: 1024px) 30vw, 100vw"
-                                    />
-                                </div>
+                                <figure className="space-y-3">
+                                    <div className="relative min-h-72">
+                                        <Image
+                                            src="/INUIT-pomsky-toy-f5.webp"
+                                            alt="Pomsky Toy Royal POMSKY illustrant un profil rare et recherché"
+                                            fill
+                                            className="object-cover"
+                                            sizes="(min-width: 1024px) 30vw, 100vw"
+                                        />
+                                    </div>
+                                    <figcaption className="px-6 text-xs leading-relaxed text-muted-foreground">
+                                        Un exemple de profil Toy, souvent recherché pour son petit gabarit et sa forte attractivité visuelle.
+                                    </figcaption>
+                                </figure>
                                 <CardContent className="space-y-3 p-6 text-sm leading-relaxed text-muted-foreground">
                                     <div className="flex items-center gap-2 text-primary">
                                         <Heart className="h-4 w-4" aria-hidden="true" />
@@ -404,15 +414,20 @@ export default function PomskyPricePage() {
 
                     <section className="space-y-8">
                         <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
-                            <div className="relative h-80 overflow-hidden rounded-2xl bg-muted lg:h-120">
-                                <Image
-                                    src="/SALLY-pomsky-miniature.webp"
-                                    alt="Pomsky miniature adulte chez Royal Pomsky"
-                                    fill
-                                    className="object-cover"
-                                    sizes="(min-width: 1024px) 35vw, 100vw"
-                                />
-                            </div>
+                            <figure className="space-y-3">
+                                <div className="relative h-80 overflow-hidden rounded-2xl bg-muted lg:h-120">
+                                    <Image
+                                        src="/SALLY-pomsky-miniature.webp"
+                                        alt="Pomsky miniature adulte illustrant un format intermédiaire chez Royal POMSKY"
+                                        fill
+                                        className="object-cover"
+                                        sizes="(min-width: 1024px) 35vw, 100vw"
+                                    />
+                                </div>
+                                <figcaption className="text-sm leading-relaxed text-muted-foreground">
+                                    Un exemple de format miniature, souvent choisi pour son équilibre entre gabarit et praticité au quotidien.
+                                </figcaption>
+                            </figure>
                             <div className="space-y-4">
                                 <Badge variant="secondary" className="w-fit">
                                     Bien choisir

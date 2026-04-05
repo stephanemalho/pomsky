@@ -58,6 +58,11 @@ const navGroups = [
                 href: "/bien-etre-animal",
                 description: "Le quotidien de nos chiens et chiots.",
             },
+            {
+                title: "Galerie photos et vidéos",
+                href: "/galerie",
+                description: "Une sélection d'images, de shorts et de vidéos pour découvrir l'élevage.",
+            },
         ],
     },
     {

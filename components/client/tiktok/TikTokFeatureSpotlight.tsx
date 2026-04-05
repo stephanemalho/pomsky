@@ -12,7 +12,8 @@ type TikTokFeatureSpotlightProps = {
     videoSummary: string
     posterSrc: string
     posterAlt: string
-    videoSrc: string
+    mediaCaption?: string
+    videoSrc?: string
     tiktokHref: string
     buttonLabel?: string
 }
@@ -26,6 +27,7 @@ export function TikTokFeatureSpotlight({
     videoSummary,
     posterSrc,
     posterAlt,
+    mediaCaption,
     videoSrc,
     tiktokHref,
     buttonLabel = "Lire la vidéo",
@@ -38,6 +40,7 @@ export function TikTokFeatureSpotlight({
                         badge={badge}
                         posterSrc={posterSrc}
                         posterAlt={posterAlt}
+                        mediaCaption={mediaCaption}
                         videoSrc={videoSrc}
                         tiktokHref={tiktokHref}
                         buttonLabel={buttonLabel}
