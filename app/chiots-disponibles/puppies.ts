@@ -116,7 +116,11 @@ export const puppies: Puppy[] = [
             "pages/puppies/THOR-male-pomsky-left.webp"
         ],
         linkTo: "https://forms.gle/oQT8xEvuTFgm753TA",
-        isReserved: true
+        isReserved: true,
+        price: 4500,
+        priceCurrency: "EUR",
+        priceIncludes: "ttc",
+        priceValidUntil: "2026-12-31"
     },
     {
         name: "ASH",
@@ -147,6 +151,10 @@ export const puppies: Puppy[] = [
             "pages/puppies/ASH-popppy-pomsky-5-week.webp"
         ],
         linkTo: "https://forms.gle/PCvEkzSfpdWTXt8A9",
-        isReserved: true
+        isReserved: true,
+        price: 3500,
+        priceCurrency: "EUR",
+        priceIncludes: "ttc",
+        priceValidUntil: "2026-12-31"
     }
 ];

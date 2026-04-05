@@ -219,11 +219,16 @@ export default function NosChiotsPage() {
                                                             <Weight className="h-4 w-4 text-primary" aria-hidden="true" />
                                                             <dd>{puppy.weight}</dd>
                                                         </div>
-                                                        {!puppy.isReserved && typeof puppy.price === "number" ? (
+                                                        {typeof puppy.price === "number" ? (
                                                             <div className="flex items-center gap-2 text-muted-foreground sm:col-span-2">
-                                                                <Banknote className="min-h-4 min-w-4 text-primary" aria-hidden="true" />
+                                                                <Banknote
+                                                                    className={`min-h-4 min-w-4 ${puppy.isReserved ? "text-muted-foreground" : "text-primary"}`}
+                                                                    aria-hidden="true"
+                                                                />
                                                                 <dt className="sr-only">Prix</dt>
-                                                                <dd className="flex gap-2 items-center text-lg font-semibold text-primary">
+                                                                <dd
+                                                                    className={`flex gap-2 items-center text-lg font-semibold ${puppy.isReserved ? "text-muted-foreground line-through" : "text-primary"}`}
+                                                                >
                                                                     {formatPuppyPrice(puppy.price, puppy.priceCurrency ?? "EUR")}
                                                                     <p className="text-xs text-muted-foreground mt-1">
                                                                         {puppy.priceIncludes}
