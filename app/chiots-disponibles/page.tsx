@@ -13,7 +13,7 @@ import ImageCarousel from "@/components/client/carousel/ImageCarousel"
 import { Badge } from "@/components/ui/badge"
 import { TikTokFeatureSpotlight } from "@/components/client/tiktok/TikTokFeatureSpotlight"
 
-const puppiesOgImage = "/pages/puppies/SNOW-male-pomsky-a-vendre-5.jpeg"
+const puppiesOgImage = "/pages/puppies/VUK-male-pomsky-f5-2.jpeg"
 const familyVideoAnchor = `${siteConfig.pages.puppies}#souvenir-d-adoption`
 const familyVideoSchema = generateVideoObjectSchema({
     name: "Souvenir d'adoption d'un chiot Royal POMSKY",
@@ -180,14 +180,18 @@ export default function NosChiotsPage() {
                                                     caption={`Photos récentes de ${puppy.name}, pour découvrir son évolution, son type et son expression.`}
                                                     priority={index === 0}
                                                     sizes="(min-width: 1024px) 50vw, (min-width: 768px) 50vw, 100vw"
+                                                    ratioClassName="aspect-[5/6] sm:aspect-[4/5] md:aspect-[4/3]"
+                                                    imageClassName={puppy.name === "VUK" ? "object-top" : undefined}
                                                 />
-                                                <div className={`px-8 space-y-4 flex flex-col justify-center ${index % 2 === 1 ? "md:order-1" : ""}`}>
-                                                    <div className="flex items-center gap-2">
+                                                <div className={`p-8 space-y-4 flex flex-col justify-center min-w-0 ${index % 2 === 1 ? "md:order-1" : ""}`}>
+                                                    <div className="flex flex-wrap items-center gap-2">
                                                         <Badge variant="secondary">
                                                             <PawPrint className="h-4 w-4 mr-1" />
                                                             {puppy.coat}
                                                         </Badge>
-                                                        <Badge variant="outline">{puppy.color}</Badge>
+                                                        <Badge variant="outline" className="min-w-0 whitespace-normal break-words">
+                                                            {puppy.color}
+                                                        </Badge>
                                                     </div>
                                                     <div className="space-y-2">
                                                         <h3 id={puppyAnchorId} className="scroll-mt-28 text-2xl font-bold">{puppy.name}</h3>
@@ -205,7 +209,7 @@ export default function NosChiotsPage() {
                                                             <dd>{puppy.parents}</dd>
                                                         </div>
                                                         <div className="flex items-center gap-2 text-muted-foreground">
-                                                        <dt className="sr-only">Départ possible</dt>
+                                                            <dt className="sr-only">Départ possible</dt>
                                                             <Calendar className="h-4 w-4 text-primary" aria-hidden="true" />
                                                             <dd>{puppy.readyDate}</dd>
                                                         </div>

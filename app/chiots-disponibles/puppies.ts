@@ -23,7 +23,7 @@ export type Puppy = {
 
 export const puppies: Puppy[] = [
     {
-        name: "SNOW",
+        name: "VUK",
         coat: "Pomsky F5 (ADN Poméranian / Husky)",
         color: "Noir et blanc",
         sexe: "Mâle",
@@ -34,21 +34,19 @@ export const puppies: Puppy[] = [
         readyDate: "Peut rejoindre sa famille dès maintenant",
         age: "Né le 10 janvier 2026",
         description:
-            "Snow est un mâle Pomsky F5 aux yeux vairons et il est le plus grand chiot de la portée (il va faire 7 à 8 kg adulte) : gourmand, joueur et affectueux, il ressemble beaucoup à sa maman Shadow. Voici les caractéristiques de Snow : un masque en Fleur de Lys, une robe noire et blanche, des yeux vairons (un bleu et un marron) et une taille miniature. Snow est un chiot très sociable qui adore les câlins et les jeux avec les enfants. Profitez de cette liste de photos pour découvrir son évolution et son caractère attachant ! (à 8 semaines)",
+            "VUK est un mâle Pomsky F5 aux yeux vairons et il est le plus grand chiot de la portée (il va faire 7 à 8 kg adulte) : gourmand, joueur et affectueux, il ressemble beaucoup à sa maman Shadow. Voici les caractéristiques de VUK : un masque en Fleur de Lys, une robe noire et blanche, des yeux vairons (un bleu et un marron) et une taille miniature. VUK est un chiot très sociable qui adore les câlins et les jeux avec les enfants. Profitez de cette liste de photos pour découvrir son évolution et son caractère attachant ! (à 8 semaines)",
         highlights: [
             "Mâle",
             "Masque Fleur de Lys",
             "Vairons",
-            "Taille miniature",
+            "Taille miniature"
         ],
         health: ["Suivi vétérinaire en cours"],
         images: [
-            "pages/puppies/SNOW-male-pomsky-a-vendre-3.jpeg",
-            "pages/puppies/SNOW-male-pomsky-a-vendre-5.jpeg",
-            "pages/puppies/SNOW-male-pomsky-a-vendre-6.jpeg",
-            "pages/puppies/SNOW-male-pomsky-a-vendre-1.jpeg",
-            "pages/puppies/SNOW-male-pomsky-a-vendre-2.jpeg",
-            "pages/puppies/SNOW-male-pomsky-a-vendre-4.jpeg"
+            "pages/puppies/VUK-male-pomsky-f5-3.jpeg",
+            "pages/puppies/VUK-male-pomsky-f5-1.jpeg",
+            "pages/puppies/VUK-male-pomsky-f5-2.jpeg",
+            "pages/puppies/VUK-male-pomsky-f5-4.jpeg"
         ],
         linkTo: "https://forms.gle/wtcxuo84YEQzposV9",
         isReserved: false,

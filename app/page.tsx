@@ -269,7 +269,7 @@ export default function HomePage() {
               </div>
 
               <figure className="min-w-0 space-y-3">
-                <div className="relative h-auto w-full max-w-full overflow-hidden rounded-lg aspect-[4/5] sm:aspect-video md:h-[50rem] md:aspect-[4/5]">
+                <div className="relative h-auto w-full max-w-full overflow-hidden rounded-lg aspect-4/5 sm:aspect-video md:h-200 md:aspect-4/5">
                   <Image
                     src="/AKASHA-pomsky-toy-f4.webp"
                     alt="Portrait d'Akasha, femelle Pomsky toy F4 de l'élevage Royal POMSKY"
