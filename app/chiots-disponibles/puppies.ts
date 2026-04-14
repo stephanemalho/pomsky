@@ -29,16 +29,16 @@ export const puppies: Puppy[] = [
         sexe: "Mâle",
         size: "miniature",
         ruler: "Pelage fluffy",
-        weight: "7-8kg",
+        weight: "7kg adulte",
         parents: "Parents : SHADOW & BANDIT",
         readyDate: "Peut rejoindre sa famille dès maintenant",
         age: "Né le 10 janvier 2026",
         description:
-            "VUK est un mâle Pomsky F5 aux yeux vairons et il est le plus grand chiot de la portée (il va faire 7 à 8 kg adulte) : gourmand, joueur et affectueux, il ressemble beaucoup à sa maman Shadow. Voici les caractéristiques de VUK : un masque en Fleur de Lys, une robe noire et blanche, des yeux vairons (un bleu et un marron) et une taille miniature. VUK est un chiot très sociable qui adore les câlins et les jeux avec les enfants. Profitez de cette liste de photos pour découvrir son évolution et son caractère attachant ! (à 8 semaines)",
+            "VUK est un magnifique chiot Pomsky F5, une génération rare, au format miniature et au superbe pelage fluffy noir et blanc. Très proche de l’humain, c’est un chiot affectueux, intelligent, attentif et déjà très agréable à vivre au quotidien. Il est propre, ne mordille pas, connaît les bases comme le « assis », marche en laisse au pied et revient très bien au rappel. VUK pourra rejoindre sa famille dès maintenant. Il est né le 10 janvier 2026, est issu de SHADOW et BANDIT, et atteindra environ 7 kg à l’âge adulte. Il partira avec son passeport, son schéma vaccinal complet et un certificat vétérinaire de bonne santé. Ses parents ont été testés ADN via Embark, et il est issu d’une lignée avec pedigree de la Fédération Française du Pomsky.",
         highlights: [
             "Mâle",
             "Masque Fleur de Lys",
-            "Vairons",
+            "Yeux vairons",
             "Taille miniature"
         ],
         health: ["Suivi vétérinaire en cours"],
