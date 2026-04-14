@@ -30,8 +30,8 @@ function ImageCarousel({
     const resolvedSizes = sizes ?? "(min-width: 1024px) 50vw, (min-width: 768px) 50vw, 100vw"
     const figureClassName = ["min-w-0", className].filter(Boolean).join(" ")
     const containerClassName = [
-        "relative mb-6 w-full overflow-hidden bg-stone-950",
-        ratioClassName ?? "aspect-4/3",
+        "relative mb-6 w-full overflow-hidden bg-linear-to-br from-muted via-accent/45 to-secondary ring-1 ring-border/60",
+        ratioClassName ?? "aspect-square sm:aspect-4/3",
     ]
         .filter(Boolean)
         .join(" ")
@@ -47,10 +47,10 @@ function ImageCarousel({
                     alt=""
                     fill
                     aria-hidden="true"
-                    className="scale-110 object-cover opacity-30 blur-2xl"
+                    className="scale-110 object-cover opacity-25 blur-2xl"
                     sizes={resolvedSizes}
                 />
-                <div className="absolute inset-0 bg-black/20" />
+                <div className="absolute inset-0 bg-linear-to-b from-background/10 via-transparent to-background/30" />
                 <Image
                     src={`/${images[index]}`}
                     alt={`${alt} - photo ${index + 1}`}
@@ -66,8 +66,8 @@ function ImageCarousel({
                     fetchPriority={priority ? "high" : "auto"}
                     loading={priority ? "eager" : "lazy"}
                 />
-                <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-linear-to-t from-black/45 via-black/10 to-transparent" />
-                <div className="absolute top-3 right-3 rounded-full bg-black/60 px-3 py-1 text-xs text-white backdrop-blur-sm">
+                <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-linear-to-t from-background/55 via-background/12 to-transparent" />
+                <div className="absolute top-3 right-3 rounded-full bg-card/90 px-3 py-1 text-xs text-foreground ring-1 ring-border/70 backdrop-blur-sm shadow-sm">
                     {index + 1}/{total}
                 </div>
                 {!isOneImage && (
@@ -75,14 +75,14 @@ function ImageCarousel({
                         <button
                             aria-label="Précédent"
                             onClick={prev}
-                            className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-black/55 p-2 text-white backdrop-blur-sm transition hover:bg-black/70"
+                            className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-card/88 p-2 text-foreground ring-1 ring-border/70 backdrop-blur-sm shadow-sm transition hover:bg-accent"
                         >
                             <ChevronLeft className="h-5 w-5" />
                         </button>
                         <button
                             aria-label="Suivant"
                             onClick={next}
-                            className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-black/55 p-2 text-white backdrop-blur-sm transition hover:bg-black/70"
+                            className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-card/88 p-2 text-foreground ring-1 ring-border/70 backdrop-blur-sm shadow-sm transition hover:bg-accent"
                         >
                             <ChevronRight className="h-5 w-5" />
                         </button>
@@ -92,7 +92,7 @@ function ImageCarousel({
                     {images.map((_, i) => (
                         <span
                             key={i}
-                            className={`h-2 w-2 rounded-full ${i === index ? "bg-primary" : "bg-white/60"}`}
+                            className={`h-2 w-2 rounded-full ${i === index ? "bg-primary" : "bg-foreground/25"}`}
                         />
                     ))}
                 </div>
