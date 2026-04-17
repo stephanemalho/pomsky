@@ -516,7 +516,7 @@ export const sitemapPages = [
         url: "/",
         changefreq: "monthly",
         priority: 1.0,
-        lastmod: "2026-03-28"
+        lastmod: "2026-04-18"
     },
     {
         url: "/le-pomsky",
