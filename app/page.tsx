@@ -157,7 +157,7 @@ export default function HomePage() {
 
       <div className="flex flex-col">
         <section className="bg-accent-foreground">
-          <div className="overflow-hidden bg-linear-to-b from-[#6a1820] via-[#3a1016] to-[#1a090d]">
+          <div className="overflow-hidden bg-linear-to-b from-[#1a090d] via-[#870518] to-[#1a090d]">
             <div className="container mx-auto px-4 py-6 md:px-6 md:py-8 lg:px-8 lg:py-10">
               <div className="mx-auto max-w-6xl space-y-5 md:space-y-6">
                 <div className="overflow-hidden rounded-xl md:rounded-4xl border border-white/10 bg-[#3a1117] shadow-[0_35px_120px_rgba(0,0,0,0.35)]">
@@ -181,7 +181,7 @@ export default function HomePage() {
 
                 <div className="mx-auto max-w-6xl rounded-xl md:rounded-4xl border border-white/12 bg-[#47131b]/72 px-6 py-6 text-center text-white shadow-[0_30px_100px_rgba(0,0,0,0.32)] backdrop-blur-sm md:px-8">
                   <div className="mx-auto max-w-4xl">
-                    <div className="mx-auto inline-flex items-center gap-3 rounded-full border border-white/20 bg-white/10 px-4 py-1 text-[11px] uppercase tracking-[0.35em] text-white/80">
+                    <div className="mx-auto inline-flex items-center gap-3 px-4 py-1 text-md uppercase tracking-[0.35em] text-white/80">
                       Royal Pomsky
                     </div>
                     <h1 className="mt-4 text-3xl font-semibold tracking-[0.03em] text-white md:text-4xl lg:text-5xl">
@@ -429,7 +429,7 @@ export default function HomePage() {
                       <figure className="space-y-3">
                         <div className="relative aspect-[4/5] overflow-hidden rounded-[1.5rem] border border-primary/10 bg-muted">
                           <div className="absolute inset-0 z-10 bg-linear-to-t from-[#2b0d13]/55 via-transparent to-transparent" aria-hidden="true" />
-                          
+
                           <div className="absolute inset-x-0 bottom-0 z-20 p-4 text-white">
                             <p className="text-xs uppercase tracking-[0.28em] text-white/72">Royal Pomsky</p>
                             <p className="mt-2 text-xl font-semibold">{founder.name}</p>
@@ -446,7 +446,7 @@ export default function HomePage() {
                           Portrait de {founder.name}, présenté dans la section dédiée aux éleveuses et à leur rôle au sein de Royal POMSKY.
                         </figcaption>
                       </figure>
-                      
+
 
                       <div className="min-w-0 space-y-5 py-1">
                         <div className="space-y-3">

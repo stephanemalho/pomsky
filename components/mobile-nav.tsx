@@ -52,7 +52,7 @@ export function MobileNav() {
                     <SheetTitle>Menu de navigation</SheetTitle>
                     <SheetDescription>Liens principaux du site</SheetDescription>
                 </div>
-                <nav className="flex flex-col space-y-4 mt-8 p-4" aria-label="Navigation mobile">
+                <nav className="flex flex-col space-y-4 mt-8 p-4 overflow-y-auto" aria-label="Navigation mobile">
                     {navigation.map((item: NavigationItem) => {
                         const Icon = item.icon
 
