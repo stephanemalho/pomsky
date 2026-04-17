@@ -23,7 +23,7 @@ export function Footer() {
                             <span className="text-lg font-bold text-primary">Royal POMSKY</span>
                         </div>
                         <p className="text-sm text-muted-foreground">
-                            Élevage Professionnel de Pomsky Toys, miniatures et standards. Siège social en Saône-et-Loire (71), élevage et visites à Saint-Amour (39).
+                            Élevage Professionnel de Pomsky Toys, miniatures et standards. Siège social et élevage à Dommartin-lès-Cuiseaux, Saône-et-Loire (71).
                         </p>
                     </div>
 

@@ -3,25 +3,32 @@
 import { useState } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
+import type { LucideIcon } from "lucide-react"
+import { Banknote, BookOpen, Camera, Dog, Heart, Home, Menu, PawPrint, Phone, Users } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetDescription, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
-import { Menu } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 const navigation = [
-    { name: "Accueil", href: "/" },
-    { name: "Le Pomsky", href: "/le-pomsky" },
-    { name: "Prix du Pomsky", href: "/pomsky-prix" },
-    { name: "L'elevage", href: "/presentation-elevage" },
-    { name: "Les éleveuses", href: "/presentation-eleveuses" },
-    { name: "Nos reproducteurs", href: "/femelles-reproductrices" },
-    { name: "Nos chiots disponibles", href: "/chiots-disponibles" },
-    { name: "Les conditions de vie", href: "/bien-etre-animal" },
-    { name: "Galerie", href: "/galerie" },
-    { name: "Blog", href: "/blog/pomsky" },
-    { name: "Contact", href: "/contact" },
-    { name: "Réussir son adoption", href: "/adoption/reussir-son-adoption" },
+    { name: "Accueil", href: "/", icon: Home },
+    { name: "Le Pomsky", href: "/le-pomsky", icon: PawPrint },
+    { name: "Prix du Pomsky", href: "/pomsky-prix", icon: Banknote },
+    { name: "L'elevage", href: "/presentation-elevage", icon: Home },
+    { name: "Les éleveuses", href: "/presentation-eleveuses", icon: Users },
+    { name: "Nos reproducteurs", href: "/femelles-reproductrices", icon: Dog },
+    { name: "Nos chiots disponibles", href: "/chiots-disponibles", icon: PawPrint },
+    { name: "Les conditions de vie", href: "/bien-etre-animal", icon: Heart },
+    { name: "Galerie", href: "/galerie", icon: Camera },
+    { name: "Blog", href: "/blog/pomsky", icon: BookOpen },
+    { name: "Contact", href: "/contact", icon: Phone },
+    { name: "Réussir son adoption", href: "/adoption/reussir-son-adoption", icon: BookOpen },
 ]
+
+type NavigationItem = {
+    name: string
+    href: string
+    icon: LucideIcon
+}
 
 export function MobileNav() {
     const [isOpen, setIsOpen] = useState(false)
@@ -46,20 +53,27 @@ export function MobileNav() {
                     <SheetDescription>Liens principaux du site</SheetDescription>
                 </div>
                 <nav className="flex flex-col space-y-4 mt-8 p-4" aria-label="Navigation mobile">
-                    {navigation.map((item) => (
+                    {navigation.map((item: NavigationItem) => {
+                        const Icon = item.icon
+
+                        return (
                         <Link
                             key={item.name}
                             href={item.href}
                             onClick={() => setIsOpen(false)}
                             className={cn(
-                                "text-sm font-medium transition-colors hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded px-2 py-1",
+                                "flex items-center gap-3 rounded px-2 py-2 text-[15px] font-semibold transition-colors hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary",
                                 pathname === item.href ? "text-primary" : "text-muted-foreground",
                             )}
                             aria-current={pathname === item.href ? "page" : undefined}
                         >
+                            <span className="inline-flex h-8 min-h-8 w-8 min-w-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+                                <Icon className="h-4 w-4" aria-hidden="true" />
+                            </span>
                             {item.name}
                         </Link>
-                    ))}
+                        )
+                    })}
                 </nav>
             </SheetContent>
         </Sheet>

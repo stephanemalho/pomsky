@@ -37,7 +37,7 @@ export const siteConfig = {
     keywords: [
         "elevage pomsky",
         "elevage pomsky france",
-        "elevage pomsky jura",
+        "elevage pomsky",
         "royal pomsky",
         "pomsky toy",
         "pomsky miniature",
@@ -75,11 +75,11 @@ export const siteConfig = {
     location: {
         region: "Bourgogne-Franche-Comté",
         department: "Saône-et-Loire (71)",
-        nearbyCity: "Saint-Amour (39)",
+        nearbyCity: "Cuiseaux (71)",
         breedingLocation: {
-            city: "Saint-Amour",
-            postalCode: "39160",
-            department: "Jura (39)",
+            city: "Dommartin-lès-Cuiseaux",
+            postalCode: "71480",
+            department: "Saône-et-Loire (71)",
             country: "France",
             countryCode: "FR"
         }
@@ -280,7 +280,7 @@ export const pageMetadata = {
             "chiot pomsky",
             "pomsky toy miniature standard",
             "pomsky lignées américaines",
-            "élevage pomsky Jura",
+            "élevage pomsky responsable",
             "adopter pomsky"
         ]
     },
@@ -428,7 +428,7 @@ export const pageMetadata = {
             "visiter elevage pomsky",
             "rdv adoption pomsky",
             "reserver chiot pomsky",
-            "elevage pomsky jura contact",
+            "elevage pomsky contact",
             "informations adoption pomsky",
             "prix pomsky toy contact",
             "royal pomsky contact"
