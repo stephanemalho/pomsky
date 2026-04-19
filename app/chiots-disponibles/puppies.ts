@@ -15,6 +15,7 @@ export type Puppy = {
     images: string[];
     linkTo: string;
     isReserved?: boolean;
+    isAdopted?: boolean;
     price?: number;
     priceCurrency?: string;
     priceIncludes?: string;
@@ -31,7 +32,7 @@ export const puppies: Puppy[] = [
         ruler: "Pelage fluffy",
         weight: "7kg adulte",
         parents: "Parents : SHADOW & BANDIT",
-        readyDate: "Peut rejoindre sa famille dès maintenant",
+        readyDate: "Réservé",
         age: "Né le 10 janvier 2026",
         description:
             "VUK est un magnifique chiot Pomsky F5, une génération rare, au format miniature et au superbe pelage fluffy noir et blanc. Très proche de l’humain, c’est un chiot affectueux, intelligent, attentif et déjà très agréable à vivre au quotidien. Il est propre, ne mordille pas, connaît les bases comme le « assis », marche en laisse au pied et revient très bien au rappel. VUK pourra rejoindre sa famille dès maintenant. Il est né le 10 janvier 2026, est issu de SHADOW et BANDIT, et atteindra environ 7 kg à l’âge adulte. Il partira avec son passeport, son schéma vaccinal complet et un certificat vétérinaire de bonne santé. Ses parents ont été testés ADN via Embark, et il est issu d’une lignée avec pedigree de la Fédération Française du Pomsky.",
@@ -49,7 +50,7 @@ export const puppies: Puppy[] = [
             "pages/puppies/VUK-male-pomsky-f5-4.jpeg"
         ],
         linkTo: "https://forms.gle/wtcxuo84YEQzposV9",
-        isReserved: false,
+        isReserved: true,
         price: 3500,
         priceCurrency: "EUR",
         priceIncludes: "ttc",
@@ -64,7 +65,7 @@ export const puppies: Puppy[] = [
         ruler: "Pelage fluffy",
         weight: "4-5kg",
         parents: "Parents : SHADOW & BANDIT",
-        readyDate: "Peut rejoindre sa famille dès maintenant",
+        readyDate: "A rejoint sa famille",
         age: "Née le 10 janvier 2026",
         description:
             "Aluna est une femelle Pomsky Toy F5 issue du mariage entre Shadow et Bandit. Son masque husky en Fleur de Lys est absolument parfait, c'est une femelle douce curieuse et intelligente qui ressemblera fortement à sa maman Shadow.",
@@ -80,7 +81,7 @@ export const puppies: Puppy[] = [
             "pages/puppies/Aluna-chiot-pomsky-toy-de-face.jpeg"
         ],
         linkTo: "https://forms.gle/aDbQtgwXUtoaH5QFA",
-        isReserved: true,
+        isAdopted: true,
         price: 4500,
         priceCurrency: "EUR",
         priceIncludes: "ttc",
@@ -95,7 +96,7 @@ export const puppies: Puppy[] = [
         weight: " 6-8kg adulte",
         sexe: "Mâle",
         parents: "Parents : SHADOW & BANDIT",
-        readyDate: "Peut rejoindre sa famille dès maintenant",
+        readyDate: "A rejoint sa famille",
         age: "Né le 10 janvier 2026",
         description:
             "THOR est un superbe Pomsky bleu à la robe exotique lumineuse et extraordinaire  Son masque Fleur de Lys est déjà bien visible. Son caractère : doux, docile, câlin et joueur ! Il ressemblera à la fois à sa maman Shadow et à son papa bandit.",
@@ -114,7 +115,7 @@ export const puppies: Puppy[] = [
             "pages/puppies/THOR-male-pomsky-left.webp"
         ],
         linkTo: "https://forms.gle/oQT8xEvuTFgm753TA",
-        isReserved: true,
+        isAdopted: true,
         price: 4500,
         priceCurrency: "EUR",
         priceIncludes: "ttc",
@@ -129,7 +130,7 @@ export const puppies: Puppy[] = [
         ruler: "fluffy",
         weight: "7-8kg adulte",
         parents: "Parents : SHADOW & BANDIT",
-        readyDate: "Peut rejoindre sa famille dès maintenant",
+        readyDate: "A rejoint sa famille",
         age: "Né le 10 janvier 2026",
         description:
             "Ash est un mâle Pomsky F5 issu du mariage entre Shadow et Bandit. Sa robe noire et blanche est sublime et brillante, rappelle celle de sa maman Shadow, son caractère est affectueux, proche de l'humain et très sociable.",
@@ -149,7 +150,7 @@ export const puppies: Puppy[] = [
             "pages/puppies/ASH-popppy-pomsky-5-week.webp"
         ],
         linkTo: "https://forms.gle/PCvEkzSfpdWTXt8A9",
-        isReserved: true,
+        isAdopted: true,
         price: 3500,
         priceCurrency: "EUR",
         priceIncludes: "ttc",

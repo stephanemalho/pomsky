@@ -15,6 +15,10 @@ import { pageContent } from "@/lib/page-content"
 const reproductorsOgJpg = "/BEAUTY-pomsky-miniature-f4.jpg"
 const reproductorsOgWebp = "/BEAUTY-pomsky-miniature-f4.webp"
 
+function getReproductorAnchorId(name: string) {
+    return name.replace(/['"]/g, "").trim().toLowerCase().replace(/\s+/g, "-")
+}
+
 export const metadata: Metadata = {
     title: pageMetadata.reproductors.title,
     description: pageMetadata.reproductors.description,
@@ -122,7 +126,7 @@ export default function NosChiotsPage() {
                                                 <Badge variant="outline" className="min-w-0 whitespace-normal wrap-break-words">{puppy.color}</Badge>
                                             </div>
                                             <div className="space-y-2">
-                                                <h3 className="text-2xl font-bold">{puppy.name}</h3>
+                                                <h3 id={getReproductorAnchorId(puppy.name)} className="scroll-mt-28 text-2xl font-bold">{puppy.name}</h3>
                                                 <p className="text-muted-foreground">{puppy.description}</p>
                                                 <div>
                                                     {puppy.health && puppy.health.length > 0 && (

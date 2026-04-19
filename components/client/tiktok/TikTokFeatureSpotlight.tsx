@@ -34,7 +34,7 @@ export function TikTokFeatureSpotlight({
 }: TikTokFeatureSpotlightProps) {
     return (
         <section id={id} className="mb-16 scroll-mt-28">
-            <Card className="overflow-hidden border border-primary/10 bg-[linear-gradient(135deg,rgba(170,126,88,0.08),rgba(255,255,255,0.98),rgba(170,126,88,0.03))] shadow-[0_18px_60px_rgba(66,40,18,0.08)] dark:border-white/10 dark:bg-[linear-gradient(135deg,rgba(39,19,16,0.98),rgba(64,30,25,0.94),rgba(28,13,11,0.98))] dark:shadow-[0_18px_60px_rgba(0,0,0,0.42)]">
+            <Card className="overflow-hidden border rounded-[2rem]  border-primary/10 bg-[linear-gradient(135deg,rgba(170,126,88,0.08),rgba(255,255,255,0.98),rgba(170,126,88,0.03))] shadow-[0_18px_60px_rgba(66,40,18,0.08)] dark:border-white/10 dark:bg-[linear-gradient(135deg,rgba(39,19,16,0.98),rgba(64,30,25,0.94),rgba(28,13,11,0.98))] dark:shadow-[0_18px_60px_rgba(0,0,0,0.42)]">
                 <CardContent className="p-0">
                     <TikTokFeatureSpotlightInteractive
                         badge={badge}
