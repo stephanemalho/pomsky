@@ -136,7 +136,7 @@ export default function NosChiotsPage() {
                         <div className="w-24 h-1 bg-primary mx-auto rounded-full" aria-hidden="true" />
                     </section>
                     {/* <NoAvailable /> */}
-                    <section className="relative mx-auto mb-12 overflow-hidden rounded-[2rem] border border-primary/12 bg-[radial-gradient(circle_at_top_right,_rgba(196,86,55,0.12),_transparent_32%),linear-gradient(180deg,_rgba(255,255,255,0.92),_rgba(248,240,236,0.86))] p-6 text-center shadow-sm dark:border-white/10 dark:bg-[linear-gradient(135deg,rgba(39,19,16,0.98),rgba(64,30,25,0.94),rgba(28,13,11,0.98))] dark:shadow-[0_18px_60px_rgba(0,0,0,0.42)] md:p-10">
+                    <section className="relative mx-auto mb-12 overflow-hidden rounded-4xl border border-primary/12 bg-[radial-gradient(circle_at_top_right,rgba(196,86,55,0.12),transparent_32%),linear-gradient(180deg,rgba(255,255,255,0.92),rgba(248,240,236,0.86))] p-6 text-center shadow-sm dark:border-white/10 dark:bg-[linear-gradient(135deg,rgba(39,19,16,0.98),rgba(64,30,25,0.94),rgba(28,13,11,0.98))] dark:shadow-[0_18px_60px_rgba(0,0,0,0.42)] md:p-10">
                         <div className="absolute -left-10 top-8 h-28 w-28 rounded-full bg-primary/8 blur-3xl dark:bg-primary/12" aria-hidden="true" />
                         <div className="absolute right-0 top-0 h-36 w-36 rounded-full bg-primary/8 blur-3xl dark:bg-primary/12" aria-hidden="true" />
                         <div className="relative space-y-5">
@@ -232,7 +232,7 @@ export default function NosChiotsPage() {
                                 return (
                                     <Card
                                         key={puppy.name}
-                                        className={`relative overflow-hidden rounded-[1.75rem] border border-primary/10 bg-[linear-gradient(180deg,_rgba(255,255,255,0.84),_rgba(246,237,233,0.76))] p-0 shadow-sm dark:border-white/10 dark:bg-[linear-gradient(135deg,rgba(39,19,16,0.98),rgba(64,30,25,0.94),rgba(28,13,11,0.98))] dark:shadow-[0_18px_60px_rgba(0,0,0,0.32)] md:p-5 ${cardStatusClasses}`}
+                                        className={`relative overflow-hidden rounded-[1.75rem] border border-primary/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.84),rgba(246,237,233,0.76))] p-0 shadow-sm dark:border-white/10 dark:bg-[linear-gradient(135deg,rgba(39,19,16,0.98),rgba(64,30,25,0.94),rgba(28,13,11,0.98))] dark:shadow-[0_18px_60px_rgba(0,0,0,0.32)] md:p-5 ${cardStatusClasses}`}
                                     >
                                         <CardContent className="p-0">
                                             {isUnavailable ? (
@@ -257,7 +257,7 @@ export default function NosChiotsPage() {
                                                             <PawPrint className="h-4 w-4 mr-1" />
                                                             {puppy.coat}
                                                         </Badge>
-                                                        <Badge variant="outline" className="min-w-0 whitespace-normal break-words border-primary/20 bg-background/55 dark:border-primary/25 dark:bg-white/5">
+                                                        <Badge variant="outline" className="min-w-0 whitespace-normal wrap-break-word border-primary/20 bg-background/55 dark:border-primary/25 dark:bg-white/5">
                                                             {puppy.color}
                                                         </Badge>
                                                     </div>
@@ -353,7 +353,7 @@ export default function NosChiotsPage() {
                     </section>
                     <section
                         id="portee-charm-beauty"
-                        className="relative my-6 mt-12 overflow-hidden rounded-[2rem] border border-primary/15 bg-[radial-gradient(circle_at_top_left,_rgba(196,86,55,0.16),_transparent_38%),linear-gradient(135deg,_rgba(255,255,255,0.94),_rgba(251,240,235,0.96)_48%,_rgba(246,228,220,0.98))] p-6 dark:border-white/10 dark:bg-[linear-gradient(135deg,rgba(39,19,16,0.98),rgba(64,30,25,0.94),rgba(28,13,11,0.98))] dark:shadow-[0_18px_60px_rgba(0,0,0,0.42)] md:p-10"
+                        className="relative my-6 mt-12 overflow-hidden rounded-4xl border border-primary/15 bg-[radial-gradient(circle_at_top_left,rgba(196,86,55,0.16),transparent_38%),linear-gradient(135deg,rgba(255,255,255,0.94),rgba(251,240,235,0.96)_48%,rgba(246,228,220,0.98))] p-6 dark:border-white/10 dark:bg-[linear-gradient(135deg,rgba(39,19,16,0.98),rgba(64,30,25,0.94),rgba(28,13,11,0.98))] dark:shadow-[0_18px_60px_rgba(0,0,0,0.42)] md:p-10"
                     >
                         <div className="absolute -left-12 top-10 h-32 w-32 rounded-full bg-primary/10 blur-3xl dark:bg-primary/14" aria-hidden="true" />
                         <div className="absolute -right-16 bottom-6 h-40 w-40 rounded-full bg-primary/10 blur-3xl dark:bg-primary/14" aria-hidden="true" />
@@ -403,7 +403,7 @@ export default function NosChiotsPage() {
                                     ))}
                                 </div>
 
-                                <div className="rounded-[1.5rem] border border-primary/10 bg-background/70 p-5 shadow-sm dark:border-primary/18 dark:bg-white/6">
+                                <div className="rounded-3xl border border-primary/10 bg-background/70 p-5 shadow-sm dark:border-primary/18 dark:bg-white/6">
                                     <div className="grid gap-4 sm:grid-cols-2">
                                         <div className="space-y-2">
                                             <p className="text-sm font-semibold text-foreground">Une portée suivie avec attention</p>
@@ -445,8 +445,8 @@ export default function NosChiotsPage() {
                             </div>
 
                             <div className="grid gap-4 lg:justify-items-end">
-                                <figure className="w-full max-w-md overflow-hidden rounded-[1.5rem] border border-primary/10 bg-background/70 shadow-md dark:border-primary/18 dark:bg-white/6">
-                                    <div className="relative aspect-[6/4] w-full">
+                                <figure className="w-full max-w-md overflow-hidden rounded-3xl border border-primary/10 bg-background/70 shadow-md dark:border-primary/18 dark:bg-white/6">
+                                    <div className="relative aspect-6/4 w-full">
                                         <div className="absolute left-4 top-5 z-10 -rotate-6 rounded-[1.25rem] border-[3px] border-amber-700 bg-[#fff1c9] px-5 py-2 text-sm font-extrabold uppercase tracking-[0.08em] text-amber-800 shadow-[0_0_0_4px_#d97706] md:text-base">
                                             En cours
                                         </div>
@@ -463,8 +463,8 @@ export default function NosChiotsPage() {
                                     </figcaption>
                                 </figure>
 
-                                <figure className="w-full max-w-md overflow-hidden rounded-[1.5rem] border border-primary/10 bg-background/70 shadow-md dark:border-primary/18 dark:bg-white/6">
-                                    <div className="relative aspect-[6/4] w-full">
+                                <figure className="w-full max-w-md overflow-hidden rounded-3xl border border-primary/10 bg-background/70 shadow-md dark:border-primary/18 dark:bg-white/6">
+                                    <div className="relative aspect-6/4 w-full">
                                         <Image
                                             src="/pages/reproducteurs/echographie-chiot.jpg"
                                             alt="Radiographie confirmant 4 chiots pour la portée de Charm et Beauty"
@@ -480,7 +480,7 @@ export default function NosChiotsPage() {
                             </div>
                         </div>
                     </section>
-                    <section id="portee-sky-sally" className="relative mx-auto mt-12 mb-12 overflow-hidden rounded-[2rem] border border-primary/12 bg-[radial-gradient(circle_at_bottom_right,_rgba(196,86,55,0.12),_transparent_30%),linear-gradient(180deg,_rgba(255,255,255,0.94),_rgba(247,238,234,0.88))] p-8 text-left shadow-sm dark:border-white/10 dark:bg-[linear-gradient(135deg,rgba(39,19,16,0.98),rgba(64,30,25,0.94),rgba(28,13,11,0.98))] dark:shadow-[0_18px_60px_rgba(0,0,0,0.42)] md:p-10">
+                    <section id="portee-sky-sally" className="relative mx-auto mt-12 mb-12 overflow-hidden rounded-4xl border border-primary/12 bg-[radial-gradient(circle_at_bottom_right,rgba(196,86,55,0.12),transparent_30%),linear-gradient(180deg,rgba(255,255,255,0.94),rgba(247,238,234,0.88))] p-8 text-left shadow-sm dark:border-white/10 dark:bg-[linear-gradient(135deg,rgba(39,19,16,0.98),rgba(64,30,25,0.94),rgba(28,13,11,0.98))] dark:shadow-[0_18px_60px_rgba(0,0,0,0.42)] md:p-10">
                         <div className="absolute -right-8 top-12 h-28 w-28 rounded-full bg-primary/8 blur-3xl dark:bg-primary/12" aria-hidden="true" />
                         <div className="relative grid gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
                             <div className="space-y-6">
@@ -489,7 +489,7 @@ export default function NosChiotsPage() {
                                         Portée annoncée
                                     </Badge>
                                     <Badge variant="secondary" className="bg-background/85 text-foreground dark:bg-white/8">
-                                        Mariage Sky × Sally
+                                        Mariage Sky x Sally
                                     </Badge>
                                     <Badge variant="outline" className="border-primary/30 bg-background/75 dark:border-primary/25 dark:bg-white/6">
                                         Portée Pomsky F4
@@ -532,7 +532,7 @@ export default function NosChiotsPage() {
                                     ))}
                                 </div>
 
-                                <div className="rounded-[1.5rem] border border-primary/10 bg-background/70 p-5 shadow-sm dark:border-primary/18 dark:bg-white/6">
+                                <div className="rounded-3xl border border-primary/10 bg-background/70 p-5 shadow-sm dark:border-primary/18 dark:bg-white/6">
                                     <div className="grid gap-4 sm:grid-cols-2">
                                         <div className="space-y-2">
                                             <p className="text-sm font-semibold text-foreground">Un mariage suivi avec exigence</p>
@@ -608,8 +608,8 @@ export default function NosChiotsPage() {
                             </div>
 
                             <div className="grid gap-4 lg:justify-items-end">
-                                <figure className="w-full max-w-md overflow-hidden rounded-[1.5rem] border border-primary/10 bg-background/70 shadow-md dark:border-primary/18 dark:bg-white/6">
-                                    <div className="relative aspect-[6/4] w-full">
+                                <figure className="w-full max-w-md overflow-hidden rounded-3xl border border-primary/10 bg-background/70 shadow-md dark:border-primary/18 dark:bg-white/6">
+                                    <div className="relative aspect-6/4 w-full">
                                         <div className="absolute left-4 top-5 z-10 -rotate-6 rounded-[1.25rem] border-[3px] border-amber-700 bg-[#fff1c9] px-5 py-2 text-sm font-extrabold uppercase tracking-[0.08em] text-amber-800 shadow-[0_0_0_4px_#d97706] md:text-base">
                                             À venir
                                         </div>
@@ -642,7 +642,7 @@ export default function NosChiotsPage() {
                         tiktokHref="https://www.tiktok.com/@royalpomsky/video/7101955478313356549"
                         buttonLabel="Lire le souvenir de famille"
                     />
-                    <section className="relative mx-auto overflow-hidden rounded-[2rem] border border-primary/12 bg-[radial-gradient(circle_at_top_left,_rgba(196,86,55,0.12),_transparent_28%),linear-gradient(180deg,_rgba(255,255,255,0.94),_rgba(246,239,235,0.9))] p-8 text-left shadow-sm dark:border-white/10 dark:bg-[linear-gradient(135deg,rgba(39,19,16,0.98),rgba(64,30,25,0.94),rgba(28,13,11,0.98))] dark:shadow-[0_18px_60px_rgba(0,0,0,0.42)] md:p-10">
+                    <section className="relative mx-auto overflow-hidden rounded-4xl border border-primary/12 bg-[radial-gradient(circle_at_top_left,rgba(196,86,55,0.12),transparent_28%),linear-gradient(180deg,rgba(255,255,255,0.94),rgba(246,239,235,0.9))] p-8 text-left shadow-sm dark:border-white/10 dark:bg-[linear-gradient(135deg,rgba(39,19,16,0.98),rgba(64,30,25,0.94),rgba(28,13,11,0.98))] dark:shadow-[0_18px_60px_rgba(0,0,0,0.42)] md:p-10">
                         <div className="absolute -left-10 bottom-0 h-32 w-32 rounded-full bg-primary/8 blur-3xl dark:bg-primary/12" aria-hidden="true" />
                         <div className="relative space-y-6">
                             <div className="flex items-start gap-3">
