@@ -109,8 +109,8 @@ export default function NosChiotsPage() {
             `${siteConfig.siteUrl}/pages/reproducteurs/mariage-de-charm-et-beauty-pomsky.jpg`,
             `${siteConfig.siteUrl}/pages/reproducteurs/echographie-chiot.jpg`,
         ],
-        datePublished: "2026-04-19",
-        dateModified: "2026-04-19",
+        datePublished: "2026-04-22",
+        dateModified: "2026-04-22",
         articleSection: "Portées à venir",
         author: {
             "@type": "Organization",
@@ -135,6 +135,47 @@ export default function NosChiotsPage() {
         ],
         mentions: [
             { "@type": "Thing", name: "Naissances prévues entre le 20 et le 26 avril 2026" },
+        ],
+    }
+    const skySallyAnnouncementSchema = {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        headline: "Mariage Sky et Sally : une future portée Pomsky F4 est annoncée",
+        description:
+            "Le mariage entre Sky et Sally fait partie des projets de portées à venir chez Royal POMSKY. Une future portée Pomsky F4 est annoncée pour les familles qui souhaitent suivre ce mariage.",
+        mainEntityOfPage: {
+            "@type": "WebPage",
+            "@id": `${siteConfig.siteUrl}${siteConfig.pages.puppies}#portee-sky-sally`,
+        },
+        image: [
+            `${siteConfig.siteUrl}/pages/reproducteurs/mariage-sky-et-sally-pomsky.jpg`,
+        ],
+        datePublished: "2026-04-22",
+        dateModified: "2026-04-22",
+        articleSection: "Portées à venir",
+        author: {
+            "@type": "Organization",
+            name: siteConfig.name,
+            url: siteConfig.siteUrl,
+        },
+        publisher: {
+            "@type": "Organization",
+            name: siteConfig.name,
+            url: siteConfig.siteUrl,
+            logo: {
+                "@type": "ImageObject",
+                url: `${siteConfig.siteUrl}/icon.png`,
+            },
+        },
+        about: [
+            { "@type": "Thing", name: "Pomsky" },
+            { "@type": "Thing", name: "Sky" },
+            { "@type": "Thing", name: "Sally" },
+            { "@type": "Thing", name: "Mariage à venir" },
+            { "@type": "Thing", name: "Portée Pomsky F4" },
+        ],
+        mentions: [
+            { "@type": "Thing", name: "Projet de future portée chez Royal POMSKY" },
         ],
     }
     const lastMod = returnLastmod(siteConfig.pages.puppies)
@@ -167,6 +208,10 @@ export default function NosChiotsPage() {
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(charmBeautyAnnouncementSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(skySallyAnnouncementSchema) }}
             />
             <div className="pb-16 ">
                 <div className="container mx-auto my-12">
@@ -526,7 +571,7 @@ export default function NosChiotsPage() {
                             </div>
                         </div>
                     </section>
-                    <section className="relative mx-auto mt-12 mb-12 overflow-hidden rounded-[2rem] border border-primary/12 bg-[radial-gradient(circle_at_bottom_right,_rgba(196,86,55,0.12),_transparent_30%),linear-gradient(180deg,_rgba(255,255,255,0.94),_rgba(247,238,234,0.88))] p-8 text-left shadow-sm dark:border-white/10 dark:bg-[linear-gradient(135deg,rgba(39,19,16,0.98),rgba(64,30,25,0.94),rgba(28,13,11,0.98))] dark:shadow-[0_18px_60px_rgba(0,0,0,0.42)] md:p-10">
+                    <section id="portee-sky-sally" className="relative mx-auto mt-12 mb-12 overflow-hidden rounded-[2rem] border border-primary/12 bg-[radial-gradient(circle_at_bottom_right,_rgba(196,86,55,0.12),_transparent_30%),linear-gradient(180deg,_rgba(255,255,255,0.94),_rgba(247,238,234,0.88))] p-8 text-left shadow-sm dark:border-white/10 dark:bg-[linear-gradient(135deg,rgba(39,19,16,0.98),rgba(64,30,25,0.94),rgba(28,13,11,0.98))] dark:shadow-[0_18px_60px_rgba(0,0,0,0.42)] md:p-10">
                         <div className="absolute -right-8 top-12 h-28 w-28 rounded-full bg-primary/8 blur-3xl dark:bg-primary/12" aria-hidden="true" />
                         <div className="relative grid gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
                             <div className="space-y-6">
