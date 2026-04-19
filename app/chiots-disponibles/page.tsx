@@ -95,89 +95,6 @@ export default function NosChiotsPage() {
         dateModified: pageLastModValue,
         about: ["Chiots Pomsky disponibles", "Adoption Pomsky", "Élevage Pomsky"]
     })
-    const charmBeautyAnnouncementSchema = {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        headline: "Mariage Charm et Beauty : 4 chiots attendus chez Royal POMSKY",
-        description:
-            "Le mariage entre Charm et Beauty est confirmé chez Royal POMSKY. La radiographie a révélé 4 chiots et les naissances sont prévues la semaine du 20 avril 2026.",
-        mainEntityOfPage: {
-            "@type": "WebPage",
-            "@id": `${siteConfig.siteUrl}${siteConfig.pages.puppies}#portee-charm-beauty`,
-        },
-        image: [
-            `${siteConfig.siteUrl}/pages/reproducteurs/mariage-de-charm-et-beauty-pomsky.jpg`,
-            `${siteConfig.siteUrl}/pages/reproducteurs/echographie-chiot.jpg`,
-        ],
-        datePublished: "2026-04-22",
-        dateModified: "2026-04-22",
-        articleSection: "Portées à venir",
-        author: {
-            "@type": "Organization",
-            name: siteConfig.name,
-            url: siteConfig.siteUrl,
-        },
-        publisher: {
-            "@type": "Organization",
-            name: siteConfig.name,
-            url: siteConfig.siteUrl,
-            logo: {
-                "@type": "ImageObject",
-                url: `${siteConfig.siteUrl}/icon.png`,
-            },
-        },
-        about: [
-            { "@type": "Thing", name: "Pomsky" },
-            { "@type": "Thing", name: "Charm" },
-            { "@type": "Thing", name: "Beauty" },
-            { "@type": "Thing", name: "Gestation confirmée" },
-            { "@type": "Thing", name: "4 chiots attendus" },
-        ],
-        mentions: [
-            { "@type": "Thing", name: "Naissances prévues entre le 20 et le 26 avril 2026" },
-        ],
-    }
-    const skySallyAnnouncementSchema = {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        headline: "Mariage Sky et Sally : une future portée Pomsky F4 est annoncée",
-        description:
-            "Le mariage entre Sky et Sally fait partie des projets de portées à venir chez Royal POMSKY. Une future portée Pomsky F4 est annoncée pour les familles qui souhaitent suivre ce mariage.",
-        mainEntityOfPage: {
-            "@type": "WebPage",
-            "@id": `${siteConfig.siteUrl}${siteConfig.pages.puppies}#portee-sky-sally`,
-        },
-        image: [
-            `${siteConfig.siteUrl}/pages/reproducteurs/mariage-sky-et-sally-pomsky.jpg`,
-        ],
-        datePublished: "2026-04-22",
-        dateModified: "2026-04-22",
-        articleSection: "Portées à venir",
-        author: {
-            "@type": "Organization",
-            name: siteConfig.name,
-            url: siteConfig.siteUrl,
-        },
-        publisher: {
-            "@type": "Organization",
-            name: siteConfig.name,
-            url: siteConfig.siteUrl,
-            logo: {
-                "@type": "ImageObject",
-                url: `${siteConfig.siteUrl}/icon.png`,
-            },
-        },
-        about: [
-            { "@type": "Thing", name: "Pomsky" },
-            { "@type": "Thing", name: "Sky" },
-            { "@type": "Thing", name: "Sally" },
-            { "@type": "Thing", name: "Mariage à venir" },
-            { "@type": "Thing", name: "Portée Pomsky F4" },
-        ],
-        mentions: [
-            { "@type": "Thing", name: "Projet de future portée chez Royal POMSKY" },
-        ],
-    }
     const lastMod = returnLastmod(siteConfig.pages.puppies)
 
     return (
@@ -204,14 +121,6 @@ export default function NosChiotsPage() {
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(familyVideoSchema) }}
-            />
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(charmBeautyAnnouncementSchema) }}
-            />
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(skySallyAnnouncementSchema) }}
             />
             <div className="pb-16 ">
                 <div className="container mx-auto my-12">
