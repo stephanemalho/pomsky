@@ -35,12 +35,68 @@ type PuppySchemaInput = {
     description: string;
 };
 
+type PuppyCatalogSchemaInput = {
+    name: string;
+    description: string;
+    url: string;
+    color?: string;
+    sexe?: string;
+    size?: string;
+    weight?: string;
+    parents?: string;
+    age?: string;
+    coat?: string;
+    ruler?: string;
+    highlights?: string[];
+    health?: string[];
+    images?: string[];
+    price?: number;
+    priceCurrency?: string;
+    priceIncludes?: string;
+    priceValidUntil?: string;
+    interestFormUrl?: string;
+    status: "available" | "reserved" | "adopted";
+};
+
+type FutureLitterSchemaInput = {
+    name: string;
+    description: string;
+    url: string;
+    image?: string;
+    parents: string;
+    generation?: string;
+    stage: string;
+    expectedBirthWindow?: string;
+    observedCount?: string;
+};
+
 function toPuppyAnchorId(name: string) {
     return name.trim().toLowerCase().replace(/\s+/g, "-");
 }
 
 function getPuppyUrl(puppy: PuppySchemaInput) {
     return toAbsoluteUrl(`${siteConfig.pages.puppies}#${toPuppyAnchorId(puppy.name)}`);
+}
+
+function getStructuredStatusLabel(status: PuppyCatalogSchemaInput["status"]) {
+    if (status === "reserved") return "Reserve"
+    if (status === "adopted") return "A rejoint sa famille"
+    return "Disponible"
+}
+
+function toAdditionalProperty(
+    name: string,
+    value?: string | number
+) {
+    if (value == null || value === "") {
+        return null;
+    }
+
+    return {
+        "@type": "PropertyValue",
+        name,
+        value
+    };
 }
 
 export function generateOrganizationSchema() {
@@ -211,6 +267,125 @@ export function generatePuppyListSchema(puppies: PuppySchemaInput[]) {
                 url: getPuppyUrl(puppy)
             }
         }))
+    };
+}
+
+export function generatePuppyCatalogSchema(puppies: PuppyCatalogSchemaInput[]) {
+    const itemListId = `${toAbsoluteUrl(siteConfig.pages.puppies)}#chiots-catalogue`;
+    const puppyNodes = puppies.map((puppy) => {
+        const additionalProperty = [
+            toAdditionalProperty("Statut", getStructuredStatusLabel(puppy.status)),
+            toAdditionalProperty("Sexe", puppy.sexe),
+            toAdditionalProperty("Couleur", puppy.color),
+            toAdditionalProperty("Generation", puppy.coat),
+            toAdditionalProperty("Format", puppy.size),
+            toAdditionalProperty("Poids adulte estime", puppy.weight),
+            toAdditionalProperty("Parents", puppy.parents),
+            toAdditionalProperty("Age", puppy.age),
+            toAdditionalProperty("Pelage", puppy.ruler),
+            toAdditionalProperty("Prix affiche", typeof puppy.price === "number" ? puppy.price : undefined),
+            toAdditionalProperty("Prix inclut", puppy.priceIncludes),
+            toAdditionalProperty(
+                "Points forts",
+                puppy.highlights && puppy.highlights.length > 0 ? puppy.highlights.join(", ") : undefined
+            ),
+            toAdditionalProperty(
+                "Suivi sante",
+                puppy.health && puppy.health.length > 0 ? puppy.health.join(", ") : undefined
+            )
+        ].filter(Boolean);
+
+        return {
+            "@type": "IndividualProduct",
+            "@id": toAbsoluteUrl(puppy.url),
+            name: puppy.name,
+            description: puppy.description,
+            url: toAbsoluteUrl(puppy.url),
+            image: (puppy.images ?? []).map((image) => toAbsoluteUrl(image)),
+            brand: {
+                "@id": organizationId
+            },
+            category: "Chiot Pomsky",
+            ...(puppy.color ? { color: puppy.color } : {}),
+            ...(puppy.size ? { size: puppy.size } : {}),
+            additionalProperty,
+            ...(puppy.interestFormUrl
+                ? {
+                      subjectOf: {
+                          "@type": "WebPage",
+                          url: puppy.interestFormUrl,
+                          name: `Formulaire d'interet pour ${puppy.name}`
+                      }
+                  }
+                : {})
+        };
+    });
+
+    return {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "ItemList",
+                "@id": itemListId,
+                name: "Catalogue des chiots Royal POMSKY presentes sur la page",
+                description:
+                    "Liste descriptive des chiots presents sur la page chiots disponibles, avec leur statut actuel.",
+                numberOfItems: puppies.length,
+                itemListElement: puppies.map((puppy, index) => ({
+                    "@type": "ListItem",
+                    position: index + 1,
+                    item: {
+                        "@id": toAbsoluteUrl(puppy.url)
+                    }
+                }))
+            },
+            ...puppyNodes
+        ]
+    };
+}
+
+export function generateFutureLittersSchema(litters: FutureLitterSchemaInput[]) {
+    const itemListId = `${toAbsoluteUrl(siteConfig.pages.puppies)}#future-litters`;
+
+    return {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "ItemList",
+                "@id": itemListId,
+                name: "Futures portees Royal POMSKY",
+                description:
+                    "Portees a venir ou en cours de suivi presentees sur la page chiots disponibles.",
+                numberOfItems: litters.length,
+                itemListElement: litters.map((litter, index) => ({
+                    "@type": "ListItem",
+                    position: index + 1,
+                    item: {
+                        "@id": toAbsoluteUrl(litter.url)
+                    }
+                }))
+            },
+            ...litters.map((litter) => ({
+                "@type": "ProductCollection",
+                "@id": toAbsoluteUrl(litter.url),
+                name: litter.name,
+                description: litter.description,
+                url: toAbsoluteUrl(litter.url),
+                ...(litter.image ? { image: [toAbsoluteUrl(litter.image)] } : {}),
+                brand: {
+                    "@id": organizationId
+                },
+                category: "Future portee Pomsky",
+                isFamilyFriendly: true,
+                additionalProperty: [
+                    toAdditionalProperty("Parents", litter.parents),
+                    toAdditionalProperty("Generation", litter.generation),
+                    toAdditionalProperty("Etape du projet", litter.stage),
+                    toAdditionalProperty("Fenetre de naissance attendue", litter.expectedBirthWindow),
+                    toAdditionalProperty("Observation veterinaire", litter.observedCount)
+                ].filter(Boolean)
+            }))
+        ]
     };
 }
 

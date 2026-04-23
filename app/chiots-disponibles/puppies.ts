@@ -45,9 +45,6 @@ export const puppies: Puppy[] = [
         health: ["Suivi vétérinaire en cours"],
         images: [
             "pages/puppies/VUK-male-pomsky-f5-3.jpeg",
-            "pages/puppies/VUK-male-pomsky-f5-1.jpeg",
-            "pages/puppies/VUK-male-pomsky-f5-2.jpeg",
-            "pages/puppies/VUK-male-pomsky-f5-4.jpeg"
         ],
         linkTo: "https://forms.gle/wtcxuo84YEQzposV9",
         isReserved: true,
@@ -78,7 +75,6 @@ export const puppies: Puppy[] = [
         health: ["Suivi vétérinaire en cours"],
         images: [
             "pages/puppies/Aluna-pomsky-chiot-femellle-a-vendre.jpeg",
-            "pages/puppies/Aluna-chiot-pomsky-toy-de-face.jpeg"
         ],
         linkTo: "https://forms.gle/aDbQtgwXUtoaH5QFA",
         isAdopted: true,
@@ -109,10 +105,6 @@ export const puppies: Puppy[] = [
         health: ["Suivi vétérinaire en cours"],
         images: [
             "pages/puppies/THOR-puppy-eye-open.webp",
-            "pages/puppies/THOR-6-week-puppy-paw-rased.webp",
-            "pages/puppies/THOR-pet-for-sale-rpyal-pomsky.webp",
-            "pages/puppies/THOR-6-week-puppy-profile.webp",
-            "pages/puppies/THOR-male-pomsky-left.webp"
         ],
         linkTo: "https://forms.gle/oQT8xEvuTFgm753TA",
         isAdopted: true,
@@ -144,10 +136,6 @@ export const puppies: Puppy[] = [
         health: ["Suivi vétérinaire en cours"],
         images: [
             "pages/puppies/ASH-pomsky-eyes-open.webp",
-            "pages/puppies/ASH-pomsky-face.webp",
-            "pages/puppies/ASH-pomsky-left.webp",
-            "pages/puppies/ASH-femal-poppy-profile.webp",
-            "pages/puppies/ASH-popppy-pomsky-5-week.webp"
         ],
         linkTo: "https://forms.gle/PCvEkzSfpdWTXt8A9",
         isAdopted: true,

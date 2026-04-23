@@ -22,7 +22,7 @@ export const pageContent = {
         googToKnow: "Adopter un Pomsky : ce qu'il faut savoir"
     },
     puppies: {
-        h1: "Nos Pomsky toy, miniature et standard, disponibles à l'adoption",
+        h1: "Nos Pomsky disponibles à l'adoption ou à la réservation",
         description:
             "Les chiots Pomsky petit format présentés sur cette page sont proposés à l'adoption chez Royal POMSKY, dans un cadre professionnel et réglementé. Notre élevage assure un suivi vétérinaire rigoureux et un accompagnement personnalisé des familles.",
         descriptionSecondary:

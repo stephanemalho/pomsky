@@ -6,7 +6,15 @@ import Link from "next/link"
 import type { Metadata } from "next"
 import { buildOpenGraph, buildTwitter, pageMetadata, returnLastmod, siteConfig, sitemapPages } from "@/lib/seo-config"
 import { pageContent } from "@/lib/page-content"
-import { generateBreadcrumbSchema, generateFAQSchema, generatePuppyListSchema, generateVideoObjectSchema, generateWebPageSchema } from "@/lib/schema-generators"
+import {
+    generateBreadcrumbSchema,
+    generateFAQSchema,
+    generateFutureLittersSchema,
+    generatePuppyCatalogSchema,
+    generatePuppyListSchema,
+    generateVideoObjectSchema,
+    generateWebPageSchema
+} from "@/lib/schema-generators"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
 import { puppies, type Puppy } from "./puppies"
 import { Card, CardContent } from "@/components/ui/card"
@@ -25,6 +33,30 @@ const familyVideoSchema = generateVideoObjectSchema({
     thumbnailUrl: "/assets/tiktok/7101955478313356549.optimized.webp",
     uploadDate: "2022-05-26",
 })
+const futureLitters = [
+    {
+        name: "Portée de Charm et Beauty - Pomsky F4",
+        description:
+            "Gestation confirmée chez Royal POMSKY pour le mariage entre Charm et Beauty. La radiographie a montré 4 chiots et la portée est suivie à l'élevage.",
+        url: `${siteConfig.pages.puppies}#portee-charm-beauty`,
+        image: "/pages/reproducteurs/mariage-de-charm-et-beauty-pomsky.jpg",
+        parents: "Charm et Beauty",
+        generation: "Pomsky F4",
+        stage: "Gestation confirmée",
+        expectedBirthWindow: "Entre le 20 et le 28 avril 2026",
+        observedCount: "4 chiots observés à la radiographie",
+    },
+    {
+        name: "Portée de Sky et Sally - Pomsky F4",
+        description:
+            "Projet de portée à venir chez Royal POMSKY, issu du mariage entre Sky et Sally. Cette future portée s'adresse aux familles souhaitant suivre l'ouverture prochaine des réservations.",
+        url: `${siteConfig.pages.puppies}#portee-sky-sally`,
+        image: "/pages/reproducteurs/mariage-sky-et-sally-pomsky.jpg",
+        parents: "Sky et Sally",
+        generation: "Pomsky F4",
+        stage: "Portée annoncée",
+    },
+]
 
 export const metadata: Metadata = {
     title: pageMetadata.puppies.title,
@@ -88,6 +120,15 @@ export default function NosChiotsPage() {
     const puppyListSchema = availablePuppies.length > 0
         ? generatePuppyListSchema(availablePuppies)
         : null
+    const puppyCatalogSchema = generatePuppyCatalogSchema(
+        puppies.map((puppy) => ({
+            ...puppy,
+            status: getPuppyStatus(puppy),
+            url: `${siteConfig.pages.puppies}#${getPuppyAnchorId(puppy.name)}`,
+            interestFormUrl: puppy.linkTo,
+        }))
+    )
+    const futureLittersSchema = generateFutureLittersSchema(futureLitters)
     const webPageSchema = generateWebPageSchema({
         name: pageMetadata.puppies.title,
         description: pageMetadata.puppies.description,
@@ -114,6 +155,14 @@ export default function NosChiotsPage() {
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(puppyListSchema) }}
                 />
             ) : null}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(puppyCatalogSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(futureLittersSchema) }}
+            />
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
@@ -367,7 +416,7 @@ export default function NosChiotsPage() {
                                         4 chiots visibles à la radiographie
                                     </Badge>
                                     <Badge variant="outline" className="border-primary/30 bg-background/75 dark:border-primary/25 dark:bg-white/6">
-                                        Naissances prévues du 20 au 26 avril 2026
+                                        Naissances prévues entre 20 et le 28 avril 2026
                                     </Badge>
                                 </div>
 
@@ -379,7 +428,7 @@ export default function NosChiotsPage() {
                                         Le mariage entre Charm et Beauty est confirmé à l&apos;élevage. La radiographie a montré 4 chiots, une belle nouvelle que nous avions envie de partager avec les familles qui suivent nos futures portées.
                                     </p>
                                     <p className="max-w-2xl text-base leading-relaxed text-foreground/75">
-                                        Les naissances sont attendues durant la semaine du 20 avril 2026. Nous partagerons l&apos;évolution de la portée et les premières nouvelles des bébés dès que tout ce petit monde sera arrivé.
+                                        Les naissances sont attendues durant les prochains jours. Nous partagerons l&apos;évolution de la portée et les premières nouvelles des bébés dès que tout ce petit monde sera arrivé.
                                     </p>
                                 </div>
 
@@ -387,7 +436,7 @@ export default function NosChiotsPage() {
                                     {[
                                         { label: "Parents", value: "Charm × Beauty" },
                                         { label: "Radiographie", value: "4 chiots pomsky F4" },
-                                        { label: "Naissances", value: "Semaine du 20 avril 2026" },
+                                        { label: "Naissances", value: "Dans les prochains jours 🐾" },
                                     ].map((item) => (
                                         <div
                                             key={item.label}
@@ -421,12 +470,14 @@ export default function NosChiotsPage() {
                                 </div>
 
                                 <div className="flex flex-col gap-3 sm:flex-row">
-                                    <Link
-                                        href="/contact"
+                                    <a
+                                        href="https://forms.gle/SNPeTUMNJ7jKSJWv9"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         className="flex items-center justify-center rounded-md bg-primary px-5 py-3 font-semibold text-white transition hover:bg-primary/85 dark:text-[#5b3a1a]"
                                     >
                                         Être informé de la naissance
-                                    </Link>
+                                    </a>
                                     <div className="flex flex-col gap-3 sm:flex-row">
                                         <Link
                                             href={`/femelles-reproductrices#${getReproductorAnchorId("CHARM")}`}
@@ -474,7 +525,7 @@ export default function NosChiotsPage() {
                                         />
                                     </div>
                                     <figcaption className="p-4 text-sm leading-relaxed text-muted-foreground">
-                                        Radiographie réalisée : 4 chiots ont été observés. Les naissances sont attendues durant la semaine du 20 avril 2026.
+                                        Radiographie réalisée : 4 chiots ont été observés. Les naissances sont attendues entre la semaine du 20 avril 2026 et la semaine du 28 avril 2026.
                                     </figcaption>
                                 </figure>
                             </div>
@@ -583,12 +634,14 @@ export default function NosChiotsPage() {
                                 </p>
 
                                 <div className="flex flex-col gap-3 sm:flex-row">
-                                    <Link
-                                        href="/contact"
+                                    <a
+                                        href="https://forms.gle/f1hawYGshqtjCkrU8"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         className="flex items-center justify-center rounded-xl bg-primary px-5 py-3 font-semibold text-white transition hover:bg-primary/80 dark:text-[#5b3a1a] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                                     >
                                         Rejoindre la liste d&apos;attente
-                                    </Link>
+                                    </a>
                                     <div className="flex flex-col gap-3 sm:flex-row">
                                         <Link
                                             href={`/femelles-reproductrices#${getReproductorAnchorId("SKY")}`}
