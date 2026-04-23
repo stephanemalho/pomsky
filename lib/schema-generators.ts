@@ -349,43 +349,39 @@ export function generateFutureLittersSchema(litters: FutureLitterSchemaInput[]) 
 
     return {
         "@context": "https://schema.org",
-        "@graph": [
-            {
-                "@type": "ItemList",
-                "@id": itemListId,
-                name: "Futures portées Royal POMSKY",
-                description:
-                    "Portées à venir ou en cours de suivi présentées sur la page chiots disponibles.",
-                numberOfItems: litters.length,
-                itemListElement: litters.map((litter, index) => ({
-                    "@type": "ListItem",
-                    position: index + 1,
-                    item: {
-                        "@id": toAbsoluteUrl(litter.url)
-                    }
-                }))
-            },
-            ...litters.map((litter) => ({
-                "@type": "ProductCollection",
-                "@id": toAbsoluteUrl(litter.url),
-                name: litter.name,
-                description: litter.description,
-                url: toAbsoluteUrl(litter.url),
-                ...(litter.image ? { image: [toAbsoluteUrl(litter.image)] } : {}),
-                brand: {
-                    "@id": organizationId
-                },
-                category: "Future portée Pomsky",
-                isFamilyFriendly: true,
-                additionalProperty: [
-                    toAdditionalProperty("Parents", litter.parents),
-                    toAdditionalProperty("Génération", litter.generation),
-                    toAdditionalProperty("Étape du projet", litter.stage),
-                    toAdditionalProperty("Fenêtre de naissance attendue", litter.expectedBirthWindow),
-                    toAdditionalProperty("Observation vétérinaire", litter.observedCount)
-                ].filter(Boolean)
-            }))
-        ]
+        "@type": "ItemList",
+        "@id": itemListId,
+        name: "Futures portées Royal POMSKY",
+        description:
+            "Portées à venir ou en cours de suivi présentées sur la page chiots disponibles.",
+        numberOfItems: litters.length,
+        itemListElement: litters.map((litter, index) => {
+            const details = [
+                litter.description,
+                `Parents : ${litter.parents}`,
+                litter.generation ? `Génération : ${litter.generation}` : null,
+                `Étape du projet : ${litter.stage}`,
+                litter.expectedBirthWindow
+                    ? `Fenêtre de naissance attendue : ${litter.expectedBirthWindow}`
+                    : null,
+                litter.observedCount
+                    ? `Observation vétérinaire : ${litter.observedCount}`
+                    : null
+            ].filter(Boolean).join(" ");
+
+            return {
+                "@type": "ListItem",
+                position: index + 1,
+                item: {
+                    "@type": "Thing",
+                    "@id": toAbsoluteUrl(litter.url),
+                    name: litter.name,
+                    description: details,
+                    url: toAbsoluteUrl(litter.url),
+                    ...(litter.image ? { image: toAbsoluteUrl(litter.image) } : {})
+                }
+            };
+        })
     };
 }
 
