@@ -79,7 +79,7 @@ function getPuppyUrl(puppy: PuppySchemaInput) {
 }
 
 function getStructuredStatusLabel(status: PuppyCatalogSchemaInput["status"]) {
-    if (status === "reserved") return "Reserve"
+    if (status === "reserved") return "Réservé"
     if (status === "adopted") return "A rejoint sa famille"
     return "Disponible"
 }
@@ -277,20 +277,20 @@ export function generatePuppyCatalogSchema(puppies: PuppyCatalogSchemaInput[]) {
             toAdditionalProperty("Statut", getStructuredStatusLabel(puppy.status)),
             toAdditionalProperty("Sexe", puppy.sexe),
             toAdditionalProperty("Couleur", puppy.color),
-            toAdditionalProperty("Generation", puppy.coat),
+            toAdditionalProperty("Génération", puppy.coat),
             toAdditionalProperty("Format", puppy.size),
-            toAdditionalProperty("Poids adulte estime", puppy.weight),
+            toAdditionalProperty("Poids adulte estimé", puppy.weight),
             toAdditionalProperty("Parents", puppy.parents),
             toAdditionalProperty("Age", puppy.age),
             toAdditionalProperty("Pelage", puppy.ruler),
-            toAdditionalProperty("Prix affiche", typeof puppy.price === "number" ? puppy.price : undefined),
+            toAdditionalProperty("Prix affiché", typeof puppy.price === "number" ? puppy.price : undefined),
             toAdditionalProperty("Prix inclut", puppy.priceIncludes),
             toAdditionalProperty(
                 "Points forts",
                 puppy.highlights && puppy.highlights.length > 0 ? puppy.highlights.join(", ") : undefined
             ),
             toAdditionalProperty(
-                "Suivi sante",
+                "Suivi santé",
                 puppy.health && puppy.health.length > 0 ? puppy.health.join(", ") : undefined
             )
         ].filter(Boolean);
@@ -314,7 +314,7 @@ export function generatePuppyCatalogSchema(puppies: PuppyCatalogSchemaInput[]) {
                       subjectOf: {
                           "@type": "WebPage",
                           url: puppy.interestFormUrl,
-                          name: `Formulaire d'interet pour ${puppy.name}`
+                          name: `Formulaire d'intérêt pour ${puppy.name}`
                       }
                   }
                 : {})
@@ -327,9 +327,9 @@ export function generatePuppyCatalogSchema(puppies: PuppyCatalogSchemaInput[]) {
             {
                 "@type": "ItemList",
                 "@id": itemListId,
-                name: "Catalogue des chiots Royal POMSKY presentes sur la page",
+                name: "Catalogue des chiots Royal POMSKY présentés sur la page",
                 description:
-                    "Liste descriptive des chiots presents sur la page chiots disponibles, avec leur statut actuel.",
+                    "Liste descriptive des chiots présents sur la page chiots disponibles, avec leur statut actuel.",
                 numberOfItems: puppies.length,
                 itemListElement: puppies.map((puppy, index) => ({
                     "@type": "ListItem",
@@ -353,9 +353,9 @@ export function generateFutureLittersSchema(litters: FutureLitterSchemaInput[]) 
             {
                 "@type": "ItemList",
                 "@id": itemListId,
-                name: "Futures portees Royal POMSKY",
+                name: "Futures portées Royal POMSKY",
                 description:
-                    "Portees a venir ou en cours de suivi presentees sur la page chiots disponibles.",
+                    "Portées à venir ou en cours de suivi présentées sur la page chiots disponibles.",
                 numberOfItems: litters.length,
                 itemListElement: litters.map((litter, index) => ({
                     "@type": "ListItem",
@@ -375,14 +375,14 @@ export function generateFutureLittersSchema(litters: FutureLitterSchemaInput[]) 
                 brand: {
                     "@id": organizationId
                 },
-                category: "Future portee Pomsky",
+                category: "Future portée Pomsky",
                 isFamilyFriendly: true,
                 additionalProperty: [
                     toAdditionalProperty("Parents", litter.parents),
-                    toAdditionalProperty("Generation", litter.generation),
-                    toAdditionalProperty("Etape du projet", litter.stage),
-                    toAdditionalProperty("Fenetre de naissance attendue", litter.expectedBirthWindow),
-                    toAdditionalProperty("Observation veterinaire", litter.observedCount)
+                    toAdditionalProperty("Génération", litter.generation),
+                    toAdditionalProperty("Étape du projet", litter.stage),
+                    toAdditionalProperty("Fenêtre de naissance attendue", litter.expectedBirthWindow),
+                    toAdditionalProperty("Observation vétérinaire", litter.observedCount)
                 ].filter(Boolean)
             }))
         ]
