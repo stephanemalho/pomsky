@@ -49,7 +49,7 @@ export const puppies: Puppy[] = [
             "pages/puppies/Sano-chiot-pomsky-f4-noir-et-blanc.jpg",
             "pages/puppies/sano-chiot-pomsky-f4-disponoble-adoption.jpg",
         ],
-        linkTo: "https://forms.gle/SNPeTUMNJ7jKSJWv9",
+        linkTo: "https://forms.gle/vk4BX8T1ifDXug8TA",
     },
     {
         name: "KIRO",
@@ -75,7 +75,7 @@ export const puppies: Puppy[] = [
             "pages/puppies/Kiro-chiot-pomsky-f4.jpg",
             "pages/puppies/kiro-chiot-pomsky-f4-disponible-adoption.jpg",
         ],
-        linkTo: "https://forms.gle/SNPeTUMNJ7jKSJWv9",
+        linkTo: "https://forms.gle/vk4BX8T1ifDXug8TA",
     },
     {
         name: "NAYA",
@@ -101,7 +101,7 @@ export const puppies: Puppy[] = [
             "pages/puppies/naya-chiot-pomsky-f4-nee-24-avril-2026.jpg",
             "pages/puppies/naya-chiot-pomsky-f4-noir-et-blanc.jpg",
         ],
-        linkTo: "https://forms.gle/SNPeTUMNJ7jKSJWv9",
+        linkTo: "https://forms.gle/vk4BX8T1ifDXug8TA",
     },
     {
         name: "LUMA",
@@ -128,7 +128,7 @@ export const puppies: Puppy[] = [
             "pages/puppies/luna-pomsky-nee-le-24-avril.jpg",
             "pages/puppies/Luna-chiot-disponible-royal-pomsky.jpg",
         ],
-        linkTo: "https://forms.gle/SNPeTUMNJ7jKSJWv9",
+        linkTo: "https://forms.gle/vk4BX8T1ifDXug8TA",
     },
     {
         name: "VUK",

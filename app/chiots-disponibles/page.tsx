@@ -125,6 +125,13 @@ function getPuppyStatus(puppy: Puppy) {
     return "available"
 }
 
+const breedingCtaPanelClass =
+    "rounded-3xl border border-primary/18 bg-primary/[0.07] p-4 shadow-sm dark:border-primary/25 dark:bg-primary/[0.12]"
+const breedingPrimaryCtaClass =
+    "flex min-h-12 items-center justify-center rounded-xl bg-primary px-5 py-3 text-center font-semibold text-white shadow-[0_14px_34px_rgba(196,86,55,0.22)] transition hover:-translate-y-0.5 hover:bg-primary/90 hover:shadow-[0_18px_38px_rgba(196,86,55,0.28)] dark:text-[#5b3a1a] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+const breedingSecondaryCtaClass =
+    "flex min-h-12 items-center justify-center rounded-xl border border-primary/30 bg-background/88 px-5 py-3 text-center font-semibold text-primary transition hover:bg-primary/10 dark:border-primary/30 dark:bg-white/8 dark:hover:bg-white/12"
+
 export default function NosChiotsPage() {
     // Schémas JSON-LD
     const breadcrumbSchema = generateBreadcrumbSchema([
@@ -486,28 +493,33 @@ export default function NosChiotsPage() {
                                     </div>
                                 </div>
 
-                                <div className="flex flex-col gap-3 sm:flex-row">
-                                    <a
-                                        href="https://forms.gle/f1hawYGshqtjCkrU8"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="flex items-center justify-center rounded-md bg-primary px-5 py-3 font-semibold text-white transition hover:bg-primary/85 dark:text-[#5b3a1a]"
-                                    >
-                                        Rejoindre la liste d&apos;attente
-                                    </a>
+                                <div className={breedingCtaPanelClass}>
+                                    <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-primary/80">
+                                        Suivre Cette Portée
+                                    </p>
                                     <div className="flex flex-col gap-3 sm:flex-row">
-                                        <Link
-                                            href={`/femelles-reproductrices#${getReproductorAnchorId("SKY")}`}
-                                            className="flex items-center justify-center rounded-md border border-primary/25 bg-background/75 px-5 py-3 font-semibold text-primary transition hover:bg-primary/10 dark:border-primary/30 dark:bg-white/6 dark:hover:bg-white/10"
+                                        <a
+                                            href="https://forms.gle/av3Tv3bbZ6T8ZF4Z7"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className={breedingPrimaryCtaClass}
                                         >
-                                            Voir Sky
-                                        </Link>
-                                        <Link
-                                            href={`/femelles-reproductrices#${getReproductorAnchorId("SALLY")}`}
-                                            className="flex items-center justify-center rounded-md border border-primary/25 bg-background/75 px-5 py-3 font-semibold text-primary transition hover:bg-primary/10 dark:border-primary/30 dark:bg-white/6 dark:hover:bg-white/10"
-                                        >
-                                            Voir Sally
-                                        </Link>
+                                            Rejoindre la liste d&apos;attente
+                                        </a>
+                                        <div className="flex flex-col gap-3 sm:flex-row">
+                                            <Link
+                                                href={`/femelles-reproductrices#${getReproductorAnchorId("SKY")}`}
+                                                className={breedingSecondaryCtaClass}
+                                            >
+                                                Voir Sky
+                                            </Link>
+                                            <Link
+                                                href={`/femelles-reproductrices#${getReproductorAnchorId("SALLY")}`}
+                                                className={breedingSecondaryCtaClass}
+                                            >
+                                                Voir Sally
+                                            </Link>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -646,28 +658,33 @@ export default function NosChiotsPage() {
                                     Contactez-nous si vous souhaitez recevoir les prochaines nouvelles, poser vos questions ou être orienté vers la portée la plus adaptée à votre projet de vie.
                                 </p>
 
-                                <div className="flex flex-col gap-3 sm:flex-row">
-                                    <a
-                                        href="https://forms.gle/bCgG99K9ijccQ9ub7"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="flex items-center justify-center rounded-xl bg-primary px-5 py-3 font-semibold text-white transition hover:bg-primary/80 dark:text-[#5b3a1a] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-                                    >
-                                        Rejoindre la liste d&apos;attente
-                                    </a>
+                                <div className={breedingCtaPanelClass}>
+                                    <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-primary/80">
+                                        Suivre Cette Portée
+                                    </p>
                                     <div className="flex flex-col gap-3 sm:flex-row">
-                                        <Link
-                                            href={`/femelles-reproductrices#${getReproductorAnchorId("INUIT")}`}
-                                            className="flex items-center justify-center rounded-xl border border-primary/25 bg-background/75 px-5 py-3 font-semibold text-primary transition hover:bg-primary/10 dark:border-primary/30 dark:bg-white/6 dark:hover:bg-white/10"
+                                        <a
+                                            href="https://forms.gle/7a9kRVTysftzNGwS7"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className={breedingPrimaryCtaClass}
                                         >
-                                            Voir Inuit
-                                        </Link>
-                                        <Link
-                                            href={`/femelles-reproductrices#${getReproductorAnchorId("MOGU")}`}
-                                            className="flex items-center justify-center rounded-xl border border-primary/25 bg-background/75 px-5 py-3 font-semibold text-primary transition hover:bg-primary/10 dark:border-primary/30 dark:bg-white/6 dark:hover:bg-white/10"
-                                        >
-                                            Voir Mogu
-                                        </Link>
+                                            Rejoindre la liste d&apos;attente
+                                        </a>
+                                        <div className="flex flex-col gap-3 sm:flex-row">
+                                            <Link
+                                                href={`/femelles-reproductrices#${getReproductorAnchorId("INUIT")}`}
+                                                className={breedingSecondaryCtaClass}
+                                            >
+                                                Voir Inuit
+                                            </Link>
+                                            <Link
+                                                href={`/femelles-reproductrices#${getReproductorAnchorId("MOGU")}`}
+                                                className={breedingSecondaryCtaClass}
+                                            >
+                                                Voir Mogu
+                                            </Link>
+                                        </div>
                                     </div>
                                 </div>
                                 </div>
@@ -816,26 +833,31 @@ export default function NosChiotsPage() {
                                         ))}
                                     </div>
 
-                                    <div className="flex flex-col gap-3 sm:flex-row">
-                                        <Link
-                                            href="/contact"
-                                            className="flex items-center justify-center rounded-xl bg-primary px-5 py-3 font-semibold text-white transition hover:bg-primary/80 dark:text-[#5b3a1a] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-                                        >
-                                            Nous contacter pour suivre cette portée
-                                        </Link>
+                                    <div className={breedingCtaPanelClass}>
+                                        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-primary/80">
+                                            Suivre Ce Projet
+                                        </p>
                                         <div className="flex flex-col gap-3 sm:flex-row">
                                             <Link
-                                                href={`/femelles-reproductrices#${getReproductorAnchorId("CHARM")}`}
-                                                className="flex items-center justify-center rounded-xl border border-primary/25 bg-background/75 px-5 py-3 font-semibold text-primary transition hover:bg-primary/10 dark:border-primary/30 dark:bg-white/6 dark:hover:bg-white/10"
+                                                href="/contact"
+                                                className={breedingPrimaryCtaClass}
                                             >
-                                                Voir Charm
+                                                Nous contacter pour suivre cette portée
                                             </Link>
-                                            <Link
-                                                href={`/femelles-reproductrices#${getReproductorAnchorId("ALOU")}`}
-                                                className="flex items-center justify-center rounded-xl border border-primary/25 bg-background/75 px-5 py-3 font-semibold text-primary transition hover:bg-primary/10 dark:border-primary/30 dark:bg-white/6 dark:hover:bg-white/10"
-                                            >
-                                                Voir Alou
-                                            </Link>
+                                            <div className="flex flex-col gap-3 sm:flex-row">
+                                                <Link
+                                                    href={`/femelles-reproductrices#${getReproductorAnchorId("CHARM")}`}
+                                                    className={breedingSecondaryCtaClass}
+                                                >
+                                                    Voir Charm
+                                                </Link>
+                                                <Link
+                                                    href={`/femelles-reproductrices#${getReproductorAnchorId("ALOU")}`}
+                                                    className={breedingSecondaryCtaClass}
+                                                >
+                                                    Voir Alou
+                                                </Link>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -955,26 +977,31 @@ export default function NosChiotsPage() {
                                         ))}
                                     </div>
 
-                                    <div className="flex flex-col gap-3 sm:flex-row">
-                                        <Link
-                                            href="/contact"
-                                            className="flex items-center justify-center rounded-xl bg-primary px-5 py-3 font-semibold text-white transition hover:bg-primary/80 dark:text-[#5b3a1a] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-                                        >
-                                            Nous contacter pour suivre cette portée
-                                        </Link>
+                                    <div className={breedingCtaPanelClass}>
+                                        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-primary/80">
+                                            Suivre Ce Projet
+                                        </p>
                                         <div className="flex flex-col gap-3 sm:flex-row">
                                             <Link
-                                                href={`/femelles-reproductrices#${getReproductorAnchorId("CHARM")}`}
-                                                className="flex items-center justify-center rounded-xl border border-primary/25 bg-background/75 px-5 py-3 font-semibold text-primary transition hover:bg-primary/10 dark:border-primary/30 dark:bg-white/6 dark:hover:bg-white/10"
+                                                href="/contact"
+                                                className={breedingPrimaryCtaClass}
                                             >
-                                                Voir Charm
+                                                Nous contacter pour suivre cette portée
                                             </Link>
-                                            <Link
-                                                href={`/femelles-reproductrices#${getReproductorAnchorId("PWEEK")}`}
-                                                className="flex items-center justify-center rounded-xl border border-primary/25 bg-background/75 px-5 py-3 font-semibold text-primary transition hover:bg-primary/10 dark:border-primary/30 dark:bg-white/6 dark:hover:bg-white/10"
-                                            >
-                                                Voir Puik
-                                            </Link>
+                                            <div className="flex flex-col gap-3 sm:flex-row">
+                                                <Link
+                                                    href={`/femelles-reproductrices#${getReproductorAnchorId("CHARM")}`}
+                                                    className={breedingSecondaryCtaClass}
+                                                >
+                                                    Voir Charm
+                                                </Link>
+                                                <Link
+                                                    href={`/femelles-reproductrices#${getReproductorAnchorId("PWEEK")}`}
+                                                    className={breedingSecondaryCtaClass}
+                                                >
+                                                    Voir Puik
+                                                </Link>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
