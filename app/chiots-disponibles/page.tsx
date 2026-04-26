@@ -35,25 +35,42 @@ const familyVideoSchema = generateVideoObjectSchema({
 })
 const futureLitters = [
     {
-        name: "Portée de Charm et Beauty - Pomsky F4",
-        description:
-            "Gestation confirmée chez Royal POMSKY pour le mariage entre Charm et Beauty. La radiographie a montré 4 chiots et la portée est suivie à l'élevage.",
-        url: `${siteConfig.pages.puppies}#portee-charm-beauty`,
-        image: "/pages/reproducteurs/mariage-de-charm-et-beauty-pomsky.jpg",
-        parents: "Charm et Beauty",
-        generation: "Pomsky F4",
-        stage: "Gestation confirmée",
-        expectedBirthWindow: "Entre le 20 et le 28 avril 2026",
-        observedCount: "4 chiots observés à la radiographie",
-    },
-    {
         name: "Portée de Sky et Sally - Pomsky F4",
         description:
-            "Projet de portée à venir chez Royal POMSKY, issu du mariage entre Sky et Sally. Cette future portée s'adresse aux familles souhaitant suivre l'ouverture prochaine des réservations.",
+            "Gestation confirmée chez Royal POMSKY pour le mariage entre Sky et Sally. Le suivi échographique est en cours et la portée est suivie attentivement à l'élevage.",
         url: `${siteConfig.pages.puppies}#portee-sky-sally`,
         image: "/pages/reproducteurs/mariage-sky-et-sally-pomsky.jpg",
         parents: "Sky et Sally",
         generation: "Pomsky F4",
+        stage: "Gestation confirmée",
+        observedCount: "7 chiots observés à l'échographie",
+    },
+    {
+        name: "Portée d'Inuit et Mogu",
+        description:
+            "Gestation confirmée chez Royal POMSKY pour le mariage entre Inuit et Mogu. L'échographie a confirmé 4 chiots et la portée est suivie à l'élevage.",
+        url: `${siteConfig.pages.puppies}#portee-inuit-mogu`,
+        image: "/pages/reproducteurs/mariage-de-inuit-et-mogu.jpg",
+        parents: "Inuit et Mogu",
+        stage: "Gestation confirmée",
+        observedCount: "4 chiots observés à l'échographie",
+    },
+    {
+        name: "Projet de portée Charm et Alou",
+        description:
+            "Projet de portée à venir chez Royal POMSKY, issu du mariage entre Charm et Alou. Cette future portée s'adresse aux familles souhaitant suivre l'ouverture prochaine des réservations.",
+        url: `${siteConfig.pages.puppies}#projet-charm-alou`,
+        image: "/pages/reproducteurs/mariage-de-charm-et-alou.jpg",
+        parents: "Charm et Alou",
+        stage: "Portée annoncée",
+    },
+    {
+        name: "Projet de portée Charm et Puik",
+        description:
+            "Projet de portée à venir chez Royal POMSKY, issu du mariage entre Charm et Puik. Cette future portée s'adresse aux familles souhaitant suivre l'ouverture prochaine des réservations.",
+        url: `${siteConfig.pages.puppies}#projet-charm-puik`,
+        image: "/pages/reproducteurs/mariage-de-charm-et-puik.jpg",
+        parents: "Charm et Puik",
         stage: "Portée annoncée",
     },
 ]
@@ -401,7 +418,7 @@ export default function NosChiotsPage() {
                         </div>
                     </section>
                     <section
-                        id="portee-charm-beauty"
+                        id="portee-sky-sally"
                         className="relative my-6 mt-12 overflow-hidden rounded-4xl border border-primary/15 bg-[radial-gradient(circle_at_top_left,rgba(196,86,55,0.16),transparent_38%),linear-gradient(135deg,rgba(255,255,255,0.94),rgba(251,240,235,0.96)_48%,rgba(246,228,220,0.98))] p-6 dark:border-white/10 dark:bg-[linear-gradient(135deg,rgba(39,19,16,0.98),rgba(64,30,25,0.94),rgba(28,13,11,0.98))] dark:shadow-[0_18px_60px_rgba(0,0,0,0.42)] md:p-10"
                     >
                         <div className="absolute -left-12 top-10 h-32 w-32 rounded-full bg-primary/10 blur-3xl dark:bg-primary/14" aria-hidden="true" />
@@ -410,33 +427,33 @@ export default function NosChiotsPage() {
                             <div className="space-y-6">
                                 <div className="flex flex-wrap gap-3">
                                     <Badge className="border-0 bg-primary text-primary-foreground hover:bg-primary">
-                                        Mariage confirmé
+                                        Gestation confirmée
                                     </Badge>
                                     <Badge variant="secondary" className="bg-background/85 text-foreground dark:bg-white/8">
-                                        4 chiots visibles à la radiographie
+                                        7 chiots visibles à l&apos;échographie
                                     </Badge>
                                     <Badge variant="outline" className="border-primary/30 bg-background/75 dark:border-primary/25 dark:bg-white/6">
-                                        Naissances prévues entre 20 et le 28 avril 2026
+                                        Portée Pomsky F4
                                     </Badge>
                                 </div>
 
                                 <div className="space-y-4">
                                     <h2 className="max-w-2xl text-2xl font-semibold leading-tight md:text-4xl">
-                                        Charm et Beauty attendent 4 chiots
+                                        Sky et Sally attendent une portée suivie de près
                                     </h2>
                                     <p className="max-w-2xl text-base leading-relaxed text-foreground/80 md:text-lg">
-                                        Le mariage entre Charm et Beauty est confirmé à l&apos;élevage. La radiographie a montré 4 chiots, une belle nouvelle que nous avions envie de partager avec les familles qui suivent nos futures portées.
+                                        Le mariage entre Sky et Sally est désormais confirmé à l&apos;élevage. L&apos;échographie permet de suivre l&apos;évolution de cette portée, accompagnée avec attention dans le cadre de notre programme de sélection.
                                     </p>
                                     <p className="max-w-2xl text-base leading-relaxed text-foreground/75">
-                                        Les naissances sont attendues durant les prochains jours. Nous partagerons l&apos;évolution de la portée et les premières nouvelles des bébés dès que tout ce petit monde sera arrivé.
+                                        Sky, mâle bleu et blanc au regard perçant et à la fourrure whooly, et Sally, femelle chocolat et blanc au masque Fleur de Lys, forment un duo très recherché pour leur équilibre, leur type et leur belle qualité de lignée.
                                     </p>
                                 </div>
 
                                 <div className="grid gap-3 sm:grid-cols-3">
                                     {[
-                                        { label: "Parents", value: "Charm × Beauty" },
-                                        { label: "Radiographie", value: "4 chiots pomsky F4" },
-                                        { label: "Naissances", value: "Dans les prochains jours 🐾" },
+                                        { label: "Parents", value: "Sky × Sally" },
+                                        { label: "Échographie", value: "7 chiots observés" },
+                                        { label: "Suivi", value: "Gestation confirmée" },
                                     ].map((item) => (
                                         <div
                                             key={item.label}
@@ -457,13 +474,13 @@ export default function NosChiotsPage() {
                                         <div className="space-y-2">
                                             <p className="text-sm font-semibold text-foreground">Une portée suivie avec attention</p>
                                             <p className="text-sm leading-relaxed text-muted-foreground">
-                                                Cette annonce correspond à une gestation déjà confirmée, avec un suivi vétérinaire en cours et une communication transparente sur l&apos;avancée de la portée.
+                                                Cette annonce correspond à une gestation confirmée, avec un suivi vétérinaire en cours et une communication régulière sur l&apos;avancée de la portée.
                                             </p>
                                         </div>
                                         <div className="space-y-2">
                                             <p className="text-sm font-semibold text-foreground">Pour les familles intéressées</p>
                                             <p className="text-sm leading-relaxed text-muted-foreground">
-                                                Si vous souhaitez être prévenu des naissances ou recevoir les prochaines nouvelles, vous pouvez nous contacter dès maintenant.
+                                                Si vous souhaitez suivre cette portée et recevoir les prochaines nouvelles, vous pouvez rejoindre la liste d&apos;attente dès maintenant.
                                             </p>
                                         </div>
                                     </div>
@@ -471,25 +488,25 @@ export default function NosChiotsPage() {
 
                                 <div className="flex flex-col gap-3 sm:flex-row">
                                     <a
-                                        href="https://forms.gle/SNPeTUMNJ7jKSJWv9"
+                                        href="https://forms.gle/f1hawYGshqtjCkrU8"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="flex items-center justify-center rounded-md bg-primary px-5 py-3 font-semibold text-white transition hover:bg-primary/85 dark:text-[#5b3a1a]"
                                     >
-                                        Être informé de la naissance
+                                        Rejoindre la liste d&apos;attente
                                     </a>
                                     <div className="flex flex-col gap-3 sm:flex-row">
                                         <Link
-                                            href={`/femelles-reproductrices#${getReproductorAnchorId("CHARM")}`}
+                                            href={`/femelles-reproductrices#${getReproductorAnchorId("SKY")}`}
                                             className="flex items-center justify-center rounded-md border border-primary/25 bg-background/75 px-5 py-3 font-semibold text-primary transition hover:bg-primary/10 dark:border-primary/30 dark:bg-white/6 dark:hover:bg-white/10"
                                         >
-                                            Voir Charm
+                                            Voir Sky
                                         </Link>
                                         <Link
-                                            href={`/femelles-reproductrices#${getReproductorAnchorId("BEAUTY")}`}
+                                            href={`/femelles-reproductrices#${getReproductorAnchorId("SALLY")}`}
                                             className="flex items-center justify-center rounded-md border border-primary/25 bg-background/75 px-5 py-3 font-semibold text-primary transition hover:bg-primary/10 dark:border-primary/30 dark:bg-white/6 dark:hover:bg-white/10"
                                         >
-                                            Voir Beauty
+                                            Voir Sally
                                         </Link>
                                     </div>
                                 </div>
@@ -502,48 +519,48 @@ export default function NosChiotsPage() {
                                             En cours
                                         </div>
                                         <Image
-                                            src="/pages/reproducteurs/mariage-de-charm-et-beauty-pomsky.jpg"
-                                            alt="Charm et Beauty, deux Pomsky de l'élevage Royal POMSKY, présentés pour annoncer leur mariage"
+                                            src="/pages/reproducteurs/mariage-sky-et-sally-pomsky.jpg"
+                                            alt="Sky et Sally, deux Pomsky de l'élevage Royal POMSKY, présentés pour suivre leur portée"
                                             fill
                                             className="object-cover"
                                             sizes="(min-width: 1024px) 26rem, (min-width: 640px) 70vw, 100vw"
                                         />
                                     </div>
                                     <figcaption className="p-4 text-sm leading-relaxed text-muted-foreground">
-                                        Charm et Beauty, un mariage annoncé à l&apos;élevage pour une future portée suivie de près.
+                                        Sky et Sally, un mariage suivi à l&apos;élevage pour une portée Pomsky F4 en cours.
                                     </figcaption>
                                 </figure>
 
                                 <figure className="w-full max-w-md overflow-hidden rounded-3xl border border-primary/10 bg-background/70 shadow-md dark:border-primary/18 dark:bg-white/6">
                                     <div className="relative aspect-6/4 w-full">
                                         <Image
-                                            src="/pages/reproducteurs/echographie-chiot.jpg"
-                                            alt="Radiographie confirmant 4 chiots pour la portée de Charm et Beauty"
+                                            src="/pages/reproducteurs/echographie-sky-et-sally.jpg"
+                                            alt="Échographie de suivi pour la portée de Sky et Sally"
                                             fill
                                             className="object-cover"
                                             sizes="(min-width: 1024px) 20rem, (min-width: 640px) 45vw, 100vw"
                                         />
                                     </div>
                                     <figcaption className="p-4 text-sm leading-relaxed text-muted-foreground">
-                                        Radiographie réalisée : 4 chiots ont été observés. Les naissances sont attendues entre la semaine du 20 avril 2026 et la semaine du 28 avril 2026.
+                                        L&apos;échographie de Sky et Sally confirme une portée de 7 chiots, suivie avec attention à l&apos;élevage.
                                     </figcaption>
                                 </figure>
                             </div>
                         </div>
                     </section>
-                    <section id="portee-sky-sally" className="relative mx-auto mt-12 mb-12 overflow-hidden rounded-4xl border border-primary/12 bg-[radial-gradient(circle_at_bottom_right,rgba(196,86,55,0.12),transparent_30%),linear-gradient(180deg,rgba(255,255,255,0.94),rgba(247,238,234,0.88))] p-8 text-left shadow-sm dark:border-white/10 dark:bg-[linear-gradient(135deg,rgba(39,19,16,0.98),rgba(64,30,25,0.94),rgba(28,13,11,0.98))] dark:shadow-[0_18px_60px_rgba(0,0,0,0.42)] md:p-10">
+                    <section id="portee-inuit-mogu" className="relative mx-auto mt-12 mb-12 overflow-hidden rounded-4xl border border-primary/12 bg-[radial-gradient(circle_at_bottom_right,rgba(196,86,55,0.12),transparent_30%),linear-gradient(180deg,rgba(255,255,255,0.94),rgba(247,238,234,0.88))] p-8 text-left shadow-sm dark:border-white/10 dark:bg-[linear-gradient(135deg,rgba(39,19,16,0.98),rgba(64,30,25,0.94),rgba(28,13,11,0.98))] dark:shadow-[0_18px_60px_rgba(0,0,0,0.42)] md:p-10">
                         <div className="absolute -right-8 top-12 h-28 w-28 rounded-full bg-primary/8 blur-3xl dark:bg-primary/12" aria-hidden="true" />
                         <div className="relative grid gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
                             <div className="space-y-6">
                                 <div className="flex flex-wrap gap-3">
                                     <Badge className="border-0 bg-primary text-primary-foreground hover:bg-primary">
-                                        Portée annoncée
+                                        Gestation confirmée
                                     </Badge>
                                     <Badge variant="secondary" className="bg-background/85 text-foreground dark:bg-white/8">
-                                        Mariage Sky x Sally
+                                        4 chiots visibles à l&apos;échographie
                                     </Badge>
                                     <Badge variant="outline" className="border-primary/30 bg-background/75 dark:border-primary/25 dark:bg-white/6">
-                                        Portée Pomsky F4
+                                        Portée suivie à l&apos;élevage
                                     </Badge>
                                 </div>
 
@@ -554,10 +571,10 @@ export default function NosChiotsPage() {
                                         </div>
                                         <div>
                                             <h2 className="text-xl md:text-3xl font-semibold leading-tight">
-                                                Une portée Pomsky rare est attendue
+                                                Inuit et Mogu attendent eux aussi une portée suivie de près
                                             </h2>
                                             <p className="text-muted-foreground mt-2">
-                                                Issue du mariage entre Sky et Sally, deux reproducteurs parfaitement typés et équilibrés.
+                                                Le mariage entre Inuit et Mogu est confirmé à l&apos;élevage. L&apos;échographie a mis en évidence 4 chiots, et la portée bénéficie d&apos;un suivi attentif au quotidien.
                                             </p>
                                         </div>
                                     </div>
@@ -565,9 +582,9 @@ export default function NosChiotsPage() {
 
                                 <div className="grid gap-3 sm:grid-cols-3">
                                     {[
-                                        { label: "Parents", value: "Sky × Sally" },
-                                        { label: "Génération", value: "Pomsky F4" },
-                                        { label: "Projet", value: "Portée à venir" },
+                                        { label: "Parents", value: "Inuit × Mogu" },
+                                        { label: "Échographie", value: "4 chiots observés" },
+                                        { label: "Suivi", value: "Gestation confirmée" },
                                     ].map((item) => (
                                         <div
                                             key={item.label}
@@ -586,15 +603,15 @@ export default function NosChiotsPage() {
                                 <div className="rounded-3xl border border-primary/10 bg-background/70 p-5 shadow-sm dark:border-primary/18 dark:bg-white/6">
                                     <div className="grid gap-4 sm:grid-cols-2">
                                         <div className="space-y-2">
-                                            <p className="text-sm font-semibold text-foreground">Un mariage suivi avec exigence</p>
+                                            <p className="text-sm font-semibold text-foreground">Une portée suivie avec attention</p>
                                             <p className="text-sm leading-relaxed text-muted-foreground">
-                                                Sky et Sally sont sélectionnés pour leur stabilité, leur morphologie harmonieuse et la cohérence du type recherché dans notre programme.
+                                                Cette annonce correspond à une gestation confirmée, avec un suivi vétérinaire en cours et une communication régulière autour de l&apos;évolution de la portée.
                                             </p>
                                         </div>
                                         <div className="space-y-2">
                                             <p className="text-sm font-semibold text-foreground">Pour les familles intéressées</p>
                                             <p className="text-sm leading-relaxed text-muted-foreground">
-                                                Cette portée s&apos;adresse aux familles qui souhaitent suivre un projet à venir et être informées dès l&apos;ouverture concrète des réservations.
+                                                Si vous souhaitez suivre cette portée et recevoir les prochaines nouvelles, vous pouvez rejoindre la liste d&apos;attente dès maintenant.
                                             </p>
                                         </div>
                                     </div>
@@ -602,17 +619,15 @@ export default function NosChiotsPage() {
 
                                 <div className="space-y-6">
                                 <p className="text-muted-foreground">
-                                    Sky et Sally, sont deux véritables trésors de douceur, reconnus pour leur stabilité émotionnelle,
-                                    leur morphologie harmonieuse et leur excellente qualité de lignée.
-                                    Leur union donne naissance à des chiots Pomsky F4 à la fois rares, équilibrés et très recherchés.
+                                    Inuit, mâle toy chocolat et blanc au masque bien affirmé, et Mogu, femelle miniature noire et blanche au masque Fleur de Lys, composent un duo particulièrement complémentaire par leur type, leur équilibre et leur qualité de lignée.
                                 </p>
 
                                 <div className="grid gap-3 md:grid-cols-2">
                                     {[
-                                        "gabarits mini et toy soigneusement maîtrisés,",
-                                        "chiots bien équilibrés mentalement,",
-                                        "look irrésistible : yeux expressifs, oreilles bien placées, pelage fourni,",
-                                        "génération Pomsky F4, gage de stabilité et de conformité.",
+                                        "alliance de formats toy et miniature soigneusement travaillés,",
+                                        "chiots attendus avec de belles expressions husky et une morphologie harmonieuse,",
+                                        "tempéraments suivis avec attention dans la continuité de notre programme,",
+                                        "4 chiots déjà visibles à l'échographie.",
                                     ].map((item) => (
                                         <div key={item} className="flex gap-4 items-center rounded-2xl border border-primary/10 bg-background/72 px-4 py-3 shadow-sm dark:border-primary/18 dark:bg-white/6">
                                             <div className="rounded-full bg-primary/10 p-2 text-primary" aria-hidden="true">
@@ -624,18 +639,16 @@ export default function NosChiotsPage() {
                                 </div>
 
                                 <p className="text-muted-foreground">
-                                    Ces Pomsky représentent une opportunité rare.
-                                    Les réservations sont ouvertes dès maintenant pour les familles sérieuses et engagées.
+                                    Cette portée représente une belle opportunité pour les familles qui souhaitent suivre son évolution dès maintenant et se positionner sur une future adoption.
                                 </p>
 
                                 <p className="text-muted-foreground">
-                                    Contactez-nous pour recevoir des photos, des vidéos ou organiser une visite.
-                                    Nous serons ravies de vous accompagner et de vous guider vers le chiot idéal pour votre projet de vie.
+                                    Contactez-nous si vous souhaitez recevoir les prochaines nouvelles, poser vos questions ou être orienté vers la portée la plus adaptée à votre projet de vie.
                                 </p>
 
                                 <div className="flex flex-col gap-3 sm:flex-row">
                                     <a
-                                        href="https://forms.gle/f1hawYGshqtjCkrU8"
+                                        href="https://forms.gle/bCgG99K9ijccQ9ub7"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="flex items-center justify-center rounded-xl bg-primary px-5 py-3 font-semibold text-white transition hover:bg-primary/80 dark:text-[#5b3a1a] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
@@ -644,16 +657,16 @@ export default function NosChiotsPage() {
                                     </a>
                                     <div className="flex flex-col gap-3 sm:flex-row">
                                         <Link
-                                            href={`/femelles-reproductrices#${getReproductorAnchorId("SKY")}`}
+                                            href={`/femelles-reproductrices#${getReproductorAnchorId("INUIT")}`}
                                             className="flex items-center justify-center rounded-xl border border-primary/25 bg-background/75 px-5 py-3 font-semibold text-primary transition hover:bg-primary/10 dark:border-primary/30 dark:bg-white/6 dark:hover:bg-white/10"
                                         >
-                                            Voir Sky
+                                            Voir Inuit
                                         </Link>
                                         <Link
-                                            href={`/femelles-reproductrices#${getReproductorAnchorId("SALLY")}`}
+                                            href={`/femelles-reproductrices#${getReproductorAnchorId("MOGU")}`}
                                             className="flex items-center justify-center rounded-xl border border-primary/25 bg-background/75 px-5 py-3 font-semibold text-primary transition hover:bg-primary/10 dark:border-primary/30 dark:bg-white/6 dark:hover:bg-white/10"
                                         >
-                                            Voir Sally
+                                            Voir Mogu
                                         </Link>
                                     </div>
                                 </div>
@@ -664,18 +677,33 @@ export default function NosChiotsPage() {
                                 <figure className="w-full max-w-md overflow-hidden rounded-3xl border border-primary/10 bg-background/70 shadow-md dark:border-primary/18 dark:bg-white/6">
                                     <div className="relative aspect-6/4 w-full">
                                         <div className="absolute left-4 top-5 z-10 -rotate-6 rounded-[1.25rem] border-[3px] border-amber-700 bg-[#fff1c9] px-5 py-2 text-sm font-extrabold uppercase tracking-[0.08em] text-amber-800 shadow-[0_0_0_4px_#d97706] md:text-base">
-                                            À venir
+                                            En cours
                                         </div>
                                         <Image
-                                            src="/pages/reproducteurs/mariage-sky-et-sally-pomsky.jpg"
-                                            alt="Sky et Sally, présentés pour annoncer un futur mariage Pomsky à l'élevage Royal POMSKY"
+                                            src="/pages/reproducteurs/mariage-de-inuit-et-mogu.jpg"
+                                            alt="Inuit et Mogu, présentés pour suivre leur portée Pomsky à l'élevage Royal POMSKY"
                                             fill
                                             className="object-cover"
                                             sizes="(min-width: 1024px) 26rem, (min-width: 640px) 70vw, 100vw"
                                         />
                                     </div>
                                     <figcaption className="p-4 text-sm leading-relaxed text-muted-foreground">
-                                        Sky et Sally, un futur mariage envisagé dans nos projets de portées à venir.
+                                        Inuit et Mogu, un mariage suivi à l&apos;élevage pour une portée en cours.
+                                    </figcaption>
+                                </figure>
+
+                                <figure className="w-full max-w-md overflow-hidden rounded-3xl border border-primary/10 bg-background/70 shadow-md dark:border-primary/18 dark:bg-white/6">
+                                    <div className="relative aspect-6/4 w-full">
+                                        <Image
+                                            src="/pages/reproducteurs/echographie-de-inuit-et-mogu.jpg"
+                                            alt="Échographie de suivi pour la portée d'Inuit et Mogu"
+                                            fill
+                                            className="object-cover"
+                                            sizes="(min-width: 1024px) 20rem, (min-width: 640px) 45vw, 100vw"
+                                        />
+                                    </div>
+                                    <figcaption className="p-4 text-sm leading-relaxed text-muted-foreground">
+                                        L&apos;échographie d&apos;Inuit et Mogu confirme une portée de 4 chiots, suivie avec attention à l&apos;élevage.
                                     </figcaption>
                                 </figure>
                             </div>
@@ -695,48 +723,282 @@ export default function NosChiotsPage() {
                         tiktokHref="https://www.tiktok.com/@royalpomsky/video/7101955478313356549"
                         buttonLabel="Lire le souvenir de famille"
                     />
-                    <section className="relative mx-auto overflow-hidden rounded-4xl border border-primary/12 bg-[radial-gradient(circle_at_top_left,rgba(196,86,55,0.12),transparent_28%),linear-gradient(180deg,rgba(255,255,255,0.94),rgba(246,239,235,0.9))] p-8 text-left shadow-sm dark:border-white/10 dark:bg-[linear-gradient(135deg,rgba(39,19,16,0.98),rgba(64,30,25,0.94),rgba(28,13,11,0.98))] dark:shadow-[0_18px_60px_rgba(0,0,0,0.42)] md:p-10">
-                        <div className="absolute -left-10 bottom-0 h-32 w-32 rounded-full bg-primary/8 blur-3xl dark:bg-primary/12" aria-hidden="true" />
-                        <div className="relative space-y-6">
-                            <div className="flex items-start gap-3">
-                                <div className="rounded-full bg-primary/10 p-2.5 text-primary">
-                                    <Sprout className="h-5 w-5 text-2xl text-primary" />
+                    <section
+                        id="projet-charm-alou"
+                        className="relative mx-auto mt-12 mb-12 overflow-hidden rounded-4xl border border-primary/12 bg-[radial-gradient(circle_at_bottom_right,rgba(196,86,55,0.12),transparent_30%),linear-gradient(180deg,rgba(255,255,255,0.94),rgba(247,238,234,0.88))] p-8 text-left shadow-sm dark:border-white/10 dark:bg-[linear-gradient(135deg,rgba(39,19,16,0.98),rgba(64,30,25,0.94),rgba(28,13,11,0.98))] dark:shadow-[0_18px_60px_rgba(0,0,0,0.42)] md:p-10"
+                    >
+                        <div className="absolute -right-8 top-12 h-28 w-28 rounded-full bg-primary/8 blur-3xl dark:bg-primary/12" aria-hidden="true" />
+                        <div className="relative grid gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
+                            <div className="space-y-6">
+                                <div className="flex flex-wrap gap-3">
+                                    <Badge className="border-0 bg-primary text-primary-foreground hover:bg-primary">
+                                        Portée annoncée
+                                    </Badge>
+                                    <Badge variant="secondary" className="bg-background/85 text-foreground dark:bg-white/8">
+                                        Mariage Charm × Alou
+                                    </Badge>
+                                    <Badge variant="outline" className="border-primary/30 bg-background/75 dark:border-primary/25 dark:bg-white/6">
+                                        Projet à venir
+                                    </Badge>
                                 </div>
-                                <div>
-                                    <Badge variant="secondary" className="mb-3 bg-background/80 dark:bg-white/8">Portées à venir</Badge>
-                                    <h2
-                                        className="text-xl md:text-3xl font-semibold leading-tight">Ces perles rares prennent le temps de naître</h2>
-                                    <p className="text-muted-foreground mt-2">
-                                        Chez Royal POMSKY, nous croyons que les plus belles portées ne se précipitent pas.
+
+                                <div className="space-y-4">
+                                    <div className="flex items-start gap-3">
+                                        <div className="rounded-full bg-primary/10 p-2.5 text-primary">
+                                            <Sprout className="h-5 w-5 text-2xl text-primary" />
+                                        </div>
+                                        <div>
+                                            <h2 className="text-xl md:text-3xl font-semibold leading-tight">
+                                                Charm et Alou font partie des prochains mariages suivis
+                                            </h2>
+                                            <p className="text-muted-foreground mt-2">
+                                                Ce projet réunit Charm, mâle toy très typé au masque Fleur de Lys, et Alou, femelle toy expressive au regard vairon.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="grid gap-3 sm:grid-cols-3">
+                                    {[
+                                        { label: "Parents", value: "Charm × Alou" },
+                                        { label: "Projet", value: "À venir" },
+                                        { label: "Format", value: "Toy" },
+                                    ].map((item) => (
+                                        <div
+                                            key={item.label}
+                                            className="rounded-2xl border border-primary/10 bg-background/75 p-4 shadow-sm backdrop-blur dark:border-primary/18 dark:bg-white/6"
+                                        >
+                                            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+                                                {item.label}
+                                            </p>
+                                            <p className="mt-2 text-base font-semibold text-foreground">
+                                                {item.value}
+                                            </p>
+                                        </div>
+                                    ))}
+                                </div>
+
+                                <div className="rounded-3xl border border-primary/10 bg-background/70 p-5 shadow-sm dark:border-primary/18 dark:bg-white/6">
+                                    <div className="grid gap-4 sm:grid-cols-2">
+                                        <div className="space-y-2">
+                                            <p className="text-sm font-semibold text-foreground">Une portée pensée avec soin</p>
+                                            <p className="text-sm leading-relaxed text-muted-foreground">
+                                                Cette union est envisagée avec la même exigence que nos autres mariages, autour du type, de la stabilité et de la qualité de lignée recherchés à l&apos;élevage.
+                                            </p>
+                                        </div>
+                                        <div className="space-y-2">
+                                            <p className="text-sm font-semibold text-foreground">Pour les familles intéressées</p>
+                                            <p className="text-sm leading-relaxed text-muted-foreground">
+                                                Si vous souhaitez suivre ce projet et être tenu au courant de son évolution, vous pouvez nous contacter dès maintenant.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="space-y-6">
+                                    <p className="text-muted-foreground">
+                                        Une union pensée pour des chiots harmonieux, bien typés et suivis avec la même attention que les autres portées présentées sur cette page.
                                     </p>
+
+                                    <div className="grid gap-3 md:grid-cols-2">
+                                        {[
+                                            "mariage réfléchi autour de deux profils toy complémentaires,",
+                                            "expressions husky marquées et morphologies harmonieuses recherchées,",
+                                            "tempéraments suivis avec exigence dans la continuité du programme,",
+                                            "projet pensé pour des familles souhaitant anticiper leur adoption.",
+                                        ].map((item) => (
+                                            <div key={item} className="flex gap-4 items-center rounded-2xl border border-primary/10 bg-background/72 px-4 py-3 shadow-sm dark:border-primary/18 dark:bg-white/6">
+                                                <div className="rounded-full bg-primary/10 p-2 text-primary" aria-hidden="true">
+                                                    <Sprout className="h-4 w-4" />
+                                                </div>
+                                                <p className="text-muted-foreground">{item}</p>
+                                            </div>
+                                        ))}
+                                    </div>
+
+                                    <div className="flex flex-col gap-3 sm:flex-row">
+                                        <Link
+                                            href="/contact"
+                                            className="flex items-center justify-center rounded-xl bg-primary px-5 py-3 font-semibold text-white transition hover:bg-primary/80 dark:text-[#5b3a1a] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                                        >
+                                            Nous contacter pour suivre cette portée
+                                        </Link>
+                                        <div className="flex flex-col gap-3 sm:flex-row">
+                                            <Link
+                                                href={`/femelles-reproductrices#${getReproductorAnchorId("CHARM")}`}
+                                                className="flex items-center justify-center rounded-xl border border-primary/25 bg-background/75 px-5 py-3 font-semibold text-primary transition hover:bg-primary/10 dark:border-primary/30 dark:bg-white/6 dark:hover:bg-white/10"
+                                            >
+                                                Voir Charm
+                                            </Link>
+                                            <Link
+                                                href={`/femelles-reproductrices#${getReproductorAnchorId("ALOU")}`}
+                                                className="flex items-center justify-center rounded-xl border border-primary/25 bg-background/75 px-5 py-3 font-semibold text-primary transition hover:bg-primary/10 dark:border-primary/30 dark:bg-white/6 dark:hover:bg-white/10"
+                                            >
+                                                Voir Alou
+                                            </Link>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
-                            <p className="text-muted-foreground">
-                                Nos chiots sont élevés comme de véritables perles : rares, précieuses, uniques, révélées au bon moment.
-                            </p>
-                            <p className="text-muted-foreground">
-                                Chaque future portée est pensée avec soin :
-                            </p>
-                            <div className="grid gap-3 md:grid-cols-2">
-                                {[
-                                    "sélection rigoureuse des lignées,",
-                                    "suivi vétérinaire attentif,",
-                                    "respect du rythme naturel de nos reproducteurs,",
-                                    "accompagnement des familles avant, pendant et après l'adoption.",
-                                ].map((item) => (
-                                    <div key={item} className="flex gap-4 items-center rounded-2xl border border-primary/10 bg-background/72 px-4 py-3 shadow-sm dark:border-primary/18 dark:bg-white/6">
-                                        <div className="rounded-full bg-primary/10 p-2 text-primary">
-                                            <Sprout className="h-4 w-4" />
+                            <div className="grid gap-4 lg:justify-items-end">
+                                <figure className="w-full max-w-md overflow-hidden rounded-3xl border border-primary/10 bg-background/70 shadow-md dark:border-primary/18 dark:bg-white/6">
+                                    <div className="relative aspect-6/4 w-full">
+                                        <div className="absolute left-4 top-5 z-10 -rotate-6 rounded-[1.25rem] border-[3px] border-amber-700 bg-[#fff1c9] px-5 py-2 text-sm font-extrabold uppercase tracking-[0.08em] text-amber-800 shadow-[0_0_0_4px_#d97706] md:text-base">
+                                            À venir
                                         </div>
-                                        <p className="text-muted-foreground">{item}</p>
+                                        <Image
+                                            src="/pages/reproducteurs/mariage-de-charm-et-alou.jpg"
+                                            alt="Charm et Alou, présentés pour annoncer un futur mariage Pomsky à l'élevage Royal POMSKY"
+                                            fill
+                                            className="object-cover"
+                                            sizes="(min-width: 1024px) 26rem, (min-width: 640px) 70vw, 100vw"
+                                        />
                                     </div>
-                                ))}
+                                    <figcaption className="p-4 text-sm leading-relaxed text-muted-foreground">
+                                        Charm et Alou, un futur mariage suivi à l&apos;élevage dans nos projets de portées à venir.
+                                    </figcaption>
+                                </figure>
                             </div>
-                            <Link
-                                href="/bien-etre-animal"
-                                className="flex items-center justify-center rounded-xl bg-primary p-4 font-semibold text-white transition hover:bg-primary/80 dark:text-[#5b3a1a] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-                            >Voir les conditions de vie des chiots</Link>
+                        </div>
+                    </section>
+                    <section
+                        id="projet-charm-puik"
+                        className="relative mx-auto mb-12 overflow-hidden rounded-4xl border border-primary/12 bg-[radial-gradient(circle_at_bottom_right,rgba(196,86,55,0.12),transparent_30%),linear-gradient(180deg,rgba(255,255,255,0.94),rgba(247,238,234,0.88))] p-8 text-left shadow-sm dark:border-white/10 dark:bg-[linear-gradient(135deg,rgba(39,19,16,0.98),rgba(64,30,25,0.94),rgba(28,13,11,0.98))] dark:shadow-[0_18px_60px_rgba(0,0,0,0.42)] md:p-10"
+                    >
+                        <div className="absolute -right-8 top-12 h-28 w-28 rounded-full bg-primary/8 blur-3xl dark:bg-primary/12" aria-hidden="true" />
+                        <div className="relative grid gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
+                            <div className="space-y-6">
+                                <div className="flex flex-wrap gap-3">
+                                    <Badge className="border-0 bg-primary text-primary-foreground hover:bg-primary">
+                                        Portée annoncée
+                                    </Badge>
+                                    <Badge variant="secondary" className="bg-background/85 text-foreground dark:bg-white/8">
+                                        Mariage Charm × Puik
+                                    </Badge>
+                                    <Badge variant="outline" className="border-primary/30 bg-background/75 dark:border-primary/25 dark:bg-white/6">
+                                        Projet à venir
+                                    </Badge>
+                                </div>
+
+                                <div className="space-y-4">
+                                    <div className="flex items-start gap-3">
+                                        <div className="rounded-full bg-primary/10 p-2.5 text-primary">
+                                            <Sprout className="h-5 w-5 text-2xl text-primary" />
+                                        </div>
+                                        <div>
+                                            <h2 className="text-xl md:text-3xl font-semibold leading-tight">
+                                                Charm et Puik rejoignent eux aussi les prochains mariages suivis
+                                            </h2>
+                                            <p className="text-muted-foreground mt-2">
+                                                Ce futur mariage associe Charm à Puik pour une portée pensée avec soin autour de la stabilité, du type et de l&apos;expression recherchée chez le Pomsky.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="grid gap-3 sm:grid-cols-3">
+                                    {[
+                                        { label: "Parents", value: "Charm × Puik" },
+                                        { label: "Projet", value: "À venir" },
+                                        { label: "Format", value: "Toy" },
+                                    ].map((item) => (
+                                        <div
+                                            key={item.label}
+                                            className="rounded-2xl border border-primary/10 bg-background/75 p-4 shadow-sm backdrop-blur dark:border-primary/18 dark:bg-white/6"
+                                        >
+                                            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+                                                {item.label}
+                                            </p>
+                                            <p className="mt-2 text-base font-semibold text-foreground">
+                                                {item.value}
+                                            </p>
+                                        </div>
+                                    ))}
+                                </div>
+
+                                <div className="rounded-3xl border border-primary/10 bg-background/70 p-5 shadow-sm dark:border-primary/18 dark:bg-white/6">
+                                    <div className="grid gap-4 sm:grid-cols-2">
+                                        <div className="space-y-2">
+                                            <p className="text-sm font-semibold text-foreground">Un projet préparé avec exigence</p>
+                                            <p className="text-sm leading-relaxed text-muted-foreground">
+                                                Cette future portée est envisagée dans le respect du rythme naturel des reproducteurs, avec un choix réfléchi autour de la cohérence du type et de la qualité du programme.
+                                            </p>
+                                        </div>
+                                        <div className="space-y-2">
+                                            <p className="text-sm font-semibold text-foreground">Pour les familles intéressées</p>
+                                            <p className="text-sm leading-relaxed text-muted-foreground">
+                                                Si vous souhaitez suivre ce projet et être averti dès qu&apos;il avance concrètement, nous pouvons vous accompagner dès maintenant.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="space-y-6">
+                                    <p className="text-muted-foreground">
+                                        Un projet suivi dès maintenant pour les familles qui souhaitent anticiper leur adoption et rester proches des prochaines étapes.
+                                    </p>
+
+                                    <div className="grid gap-3 md:grid-cols-2">
+                                        {[
+                                            "mariage pensé autour de profils typés et équilibrés,",
+                                            "sélection rigoureuse fidèle à la ligne de l'élevage,",
+                                            "portée suivie dès les premières étapes du projet,",
+                                            "accompagnement possible pour les familles qui souhaitent se positionner en amont.",
+                                        ].map((item) => (
+                                            <div key={item} className="flex gap-4 items-center rounded-2xl border border-primary/10 bg-background/72 px-4 py-3 shadow-sm dark:border-primary/18 dark:bg-white/6">
+                                                <div className="rounded-full bg-primary/10 p-2 text-primary" aria-hidden="true">
+                                                    <Sprout className="h-4 w-4" />
+                                                </div>
+                                                <p className="text-muted-foreground">{item}</p>
+                                            </div>
+                                        ))}
+                                    </div>
+
+                                    <div className="flex flex-col gap-3 sm:flex-row">
+                                        <Link
+                                            href="/contact"
+                                            className="flex items-center justify-center rounded-xl bg-primary px-5 py-3 font-semibold text-white transition hover:bg-primary/80 dark:text-[#5b3a1a] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                                        >
+                                            Nous contacter pour suivre cette portée
+                                        </Link>
+                                        <div className="flex flex-col gap-3 sm:flex-row">
+                                            <Link
+                                                href={`/femelles-reproductrices#${getReproductorAnchorId("CHARM")}`}
+                                                className="flex items-center justify-center rounded-xl border border-primary/25 bg-background/75 px-5 py-3 font-semibold text-primary transition hover:bg-primary/10 dark:border-primary/30 dark:bg-white/6 dark:hover:bg-white/10"
+                                            >
+                                                Voir Charm
+                                            </Link>
+                                            <Link
+                                                href={`/femelles-reproductrices#${getReproductorAnchorId("PWEEK")}`}
+                                                className="flex items-center justify-center rounded-xl border border-primary/25 bg-background/75 px-5 py-3 font-semibold text-primary transition hover:bg-primary/10 dark:border-primary/30 dark:bg-white/6 dark:hover:bg-white/10"
+                                            >
+                                                Voir Puik
+                                            </Link>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="grid gap-4 lg:justify-items-end">
+                                <figure className="w-full max-w-md overflow-hidden rounded-3xl border border-primary/10 bg-background/70 shadow-md dark:border-primary/18 dark:bg-white/6">
+                                    <div className="relative aspect-6/4 w-full">
+                                        <div className="absolute left-4 top-5 z-10 -rotate-6 rounded-[1.25rem] border-[3px] border-amber-700 bg-[#fff1c9] px-5 py-2 text-sm font-extrabold uppercase tracking-[0.08em] text-amber-800 shadow-[0_0_0_4px_#d97706] md:text-base">
+                                            À venir
+                                        </div>
+                                        <Image
+                                            src="/pages/reproducteurs/mariage-de-charm-et-puik.jpg"
+                                            alt="Charm et Puik, présentés pour annoncer un futur mariage Pomsky à l'élevage Royal POMSKY"
+                                            fill
+                                            className="object-cover"
+                                            sizes="(min-width: 1024px) 26rem, (min-width: 640px) 70vw, 100vw"
+                                        />
+                                    </div>
+                                    <figcaption className="p-4 text-sm leading-relaxed text-muted-foreground">
+                                        Charm et Puik, un futur mariage suivi à l&apos;élevage dans nos projets de portées à venir.
+                                    </figcaption>
+                                </figure>
+                            </div>
                         </div>
                     </section>
                     <FAQSection

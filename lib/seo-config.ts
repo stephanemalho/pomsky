@@ -521,7 +521,7 @@ export const sitemapPages = [
     {
         url: "/le-pomsky",
         changefreq: "monthly",
-        priority: 0.8,
+        priority: 0.9,
         lastmod: "2026-03-27"
     },
     {
@@ -534,7 +534,7 @@ export const sitemapPages = [
         url: "/chiots-disponibles",
         changefreq: "weekly",
         priority: 0.9,
-        lastmod: "2026-04-23"
+        lastmod: "2026-04-26"
     },
     {
         url: "/adoption/reussir-son-adoption",
@@ -557,7 +557,7 @@ export const sitemapPages = [
     {
         url: "/presentation-eleveuses",
         changefreq: "monthly",
-        priority: 0.7,
+        priority: 0.6,
         lastmod: "2026-03-26"
     },
     {
@@ -575,7 +575,7 @@ export const sitemapPages = [
     {
         url: "/galerie",
         changefreq: "weekly",
-        priority: 0.75,
+        priority: 0.7,
         lastmod: "2026-04-05"
     },
     {
