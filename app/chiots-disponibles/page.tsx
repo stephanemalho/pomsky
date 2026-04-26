@@ -838,12 +838,14 @@ export default function NosChiotsPage() {
                                             Suivi des naissances
                                         </p>
                                         <div className="flex flex-col gap-3 sm:flex-row">
-                                            <Link
-                                                href="/contact"
-                                                className={breedingPrimaryCtaClass}
-                                            >
-                                                Nous contacter pour suivre cette portée
-                                            </Link>
+                                        <a
+                                            href="https://forms.gle/7o7g6MptyDDkP611A"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className={breedingPrimaryCtaClass}
+                                        >
+                                            Nous contacter pour suivre cette portée
+                                        </a>
                                             <div className="flex flex-col gap-3 sm:flex-row">
                                                 <Link
                                                     href={`/femelles-reproductrices#${getReproductorAnchorId("CHARM")}`}
@@ -982,12 +984,14 @@ export default function NosChiotsPage() {
                                             Suivi des naissances
                                         </p>
                                         <div className="flex flex-col gap-3 sm:flex-row">
-                                            <Link
-                                                href="/contact"
-                                                className={breedingPrimaryCtaClass}
-                                            >
-                                                Nous contacter pour suivre cette portée
-                                            </Link>
+                                        <a
+                                            href="https://forms.gle/DJCcN9iHtUSCAhZE7"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className={breedingPrimaryCtaClass}
+                                        >
+                                            Nous contacter pour suivre cette portée
+                                        </a>
                                             <div className="flex flex-col gap-3 sm:flex-row">
                                                 <Link
                                                     href={`/femelles-reproductrices#${getReproductorAnchorId("CHARM")}`}
