@@ -630,63 +630,63 @@ export default function NosChiotsPage() {
                                 </div>
 
                                 <div className="space-y-6">
-                                <p className="text-muted-foreground">
-                                    Inuit, mâle toy chocolat et blanc au masque bien affirmé, et Mogu, femelle miniature noire et blanche au masque Fleur de Lys, composent un duo particulièrement complémentaire par leur type, leur équilibre et leur qualité de lignée.
-                                </p>
-
-                                <div className="grid gap-3 md:grid-cols-2">
-                                    {[
-                                        "alliance de formats toy et miniature soigneusement travaillés,",
-                                        "chiots attendus avec de belles expressions husky et une morphologie harmonieuse,",
-                                        "tempéraments suivis avec attention dans la continuité de notre programme,",
-                                        "4 chiots déjà visibles à l'échographie.",
-                                    ].map((item) => (
-                                        <div key={item} className="flex gap-4 items-center rounded-2xl border border-primary/10 bg-background/72 px-4 py-3 shadow-sm dark:border-primary/18 dark:bg-white/6">
-                                            <div className="rounded-full bg-primary/10 p-2 text-primary" aria-hidden="true">
-                                                <NotebookText className="h-4 w-4" />
-                                            </div>
-                                            <p className="text-muted-foreground">{item}</p>
-                                        </div>
-                                    ))}
-                                </div>
-
-                                <p className="text-muted-foreground">
-                                    Cette portée représente une belle opportunité pour les familles qui souhaitent suivre son évolution dès maintenant et se positionner sur une future adoption.
-                                </p>
-
-                                <p className="text-muted-foreground">
-                                    Contactez-nous si vous souhaitez recevoir les prochaines nouvelles, poser vos questions ou être orienté vers la portée la plus adaptée à votre projet de vie.
-                                </p>
-
-                                <div className={breedingCtaPanelClass}>
-                                    <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-primary/80">
-                                        Suivre Cette Portée
+                                    <p className="text-muted-foreground">
+                                        Inuit, mâle toy chocolat et blanc au masque bien affirmé, et Mogu, femelle miniature noire et blanche au masque Fleur de Lys, composent un duo particulièrement complémentaire par leur type, leur équilibre et leur qualité de lignée.
                                     </p>
-                                    <div className="flex flex-col gap-3 sm:flex-row">
-                                        <a
-                                            href="https://forms.gle/7a9kRVTysftzNGwS7"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className={breedingPrimaryCtaClass}
-                                        >
-                                            Rejoindre la liste d&apos;attente
-                                        </a>
+
+                                    <div className="grid gap-3 md:grid-cols-2">
+                                        {[
+                                            "alliance de formats toy et miniature soigneusement travaillés,",
+                                            "chiots attendus avec de belles expressions husky et une morphologie harmonieuse,",
+                                            "tempéraments suivis avec attention dans la continuité de notre programme,",
+                                            "4 chiots déjà visibles à l'échographie.",
+                                        ].map((item) => (
+                                            <div key={item} className="flex gap-4 items-center rounded-2xl border border-primary/10 bg-background/72 px-4 py-3 shadow-sm dark:border-primary/18 dark:bg-white/6">
+                                                <div className="rounded-full bg-primary/10 p-2 text-primary" aria-hidden="true">
+                                                    <NotebookText className="h-4 w-4" />
+                                                </div>
+                                                <p className="text-muted-foreground">{item}</p>
+                                            </div>
+                                        ))}
+                                    </div>
+
+                                    <p className="text-muted-foreground">
+                                        Cette portée représente une belle opportunité pour les familles qui souhaitent suivre son évolution dès maintenant et se positionner sur une future adoption.
+                                    </p>
+
+                                    <p className="text-muted-foreground">
+                                        Contactez-nous si vous souhaitez recevoir les prochaines nouvelles, poser vos questions ou être orienté vers la portée la plus adaptée à votre projet de vie.
+                                    </p>
+
+                                    <div className={breedingCtaPanelClass}>
+                                        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-primary/80">
+                                            Suivre Cette Portée
+                                        </p>
                                         <div className="flex flex-col gap-3 sm:flex-row">
-                                            <Link
-                                                href={`/femelles-reproductrices#${getReproductorAnchorId("INUIT")}`}
-                                                className={breedingSecondaryCtaClass}
+                                            <a
+                                                href="https://forms.gle/7a9kRVTysftzNGwS7"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className={breedingPrimaryCtaClass}
                                             >
-                                                Voir Inuit
-                                            </Link>
-                                            <Link
-                                                href={`/femelles-reproductrices#${getReproductorAnchorId("MOGU")}`}
-                                                className={breedingSecondaryCtaClass}
-                                            >
-                                                Voir Mogu
-                                            </Link>
+                                                Rejoindre la liste d&apos;attente
+                                            </a>
+                                            <div className="flex flex-col gap-3 sm:flex-row">
+                                                <Link
+                                                    href={`/femelles-reproductrices#${getReproductorAnchorId("INUIT")}`}
+                                                    className={breedingSecondaryCtaClass}
+                                                >
+                                                    Voir Inuit
+                                                </Link>
+                                                <Link
+                                                    href={`/femelles-reproductrices#${getReproductorAnchorId("MOGU")}`}
+                                                    className={breedingSecondaryCtaClass}
+                                                >
+                                                    Voir Mogu
+                                                </Link>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
                                 </div>
                             </div>
 
@@ -806,7 +806,7 @@ export default function NosChiotsPage() {
                                         <div className="space-y-2">
                                             <p className="text-sm font-semibold text-foreground">Pour les familles intéressées</p>
                                             <p className="text-sm leading-relaxed text-muted-foreground">
-                                                Si vous souhaitez suivre ce projet et être tenu au courant de son évolution, vous pouvez nous contacter dès maintenant.
+                                                Si vous souhaitez suivre les naissances et être tenu au courant de son évolution, vous pouvez nous contacter dès maintenant.
                                             </p>
                                         </div>
                                     </div>
@@ -835,7 +835,7 @@ export default function NosChiotsPage() {
 
                                     <div className={breedingCtaPanelClass}>
                                         <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-primary/80">
-                                            Suivre Ce Projet
+                                            Suivi des naissances
                                         </p>
                                         <div className="flex flex-col gap-3 sm:flex-row">
                                             <Link
@@ -950,7 +950,7 @@ export default function NosChiotsPage() {
                                         <div className="space-y-2">
                                             <p className="text-sm font-semibold text-foreground">Pour les familles intéressées</p>
                                             <p className="text-sm leading-relaxed text-muted-foreground">
-                                                Si vous souhaitez suivre ce projet et être averti dès qu&apos;il avance concrètement, nous pouvons vous accompagner dès maintenant.
+                                                Si vous souhaitez suivre les naissances et être averti dès qu&apos;il avance concrètement, nous pouvons vous accompagner dès maintenant.
                                             </p>
                                         </div>
                                     </div>
@@ -979,7 +979,7 @@ export default function NosChiotsPage() {
 
                                     <div className={breedingCtaPanelClass}>
                                         <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-primary/80">
-                                            Suivre Ce Projet
+                                            Suivi des naissances
                                         </p>
                                         <div className="flex flex-col gap-3 sm:flex-row">
                                             <Link
