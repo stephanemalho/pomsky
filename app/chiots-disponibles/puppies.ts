@@ -44,8 +44,8 @@ export const puppies: Puppy[] = [
         ],
         health: ["Suivi vétérinaire en cours"],
         images: [
-            "pages/puppies/Sano-chiot-pomsky-f4-nee-24-avril-2026.jpg",
             "pages/puppies/Sano-chiot-pomsky-f4-1.jpg",
+            "pages/puppies/Sano-chiot-pomsky-f4-nee-24-avril-2026.jpg",
             "pages/puppies/Sano-chiot-pomsky-f4-noir-et-blanc.jpg",
             "pages/puppies/sano-chiot-pomsky-f4-disponoble-adoption.jpg",
         ],

@@ -1,7 +1,7 @@
 import Image from "next/image"
 import { FAQSection } from "@/components/faq"
 import { faqNosChiots } from "@/lib/faq-data"
-import { Banknote, Calendar, Dog, Heart, NotebookText, PawPrint, Sprout, Weight } from "lucide-react"
+import { BadgeCheck, Banknote, Calendar, Dog, Heart, NotebookText, PawPrint, Sprout, Weight } from "lucide-react"
 import Link from "next/link"
 import type { Metadata } from "next"
 import { buildOpenGraph, buildTwitter, pageMetadata, returnLastmod, siteConfig, sitemapPages } from "@/lib/seo-config"
@@ -19,6 +19,7 @@ import { convertFAQsToSchema } from "@/lib/faq-utils"
 import { puppies, type Puppy } from "./puppies"
 import { Card, CardContent } from "@/components/ui/card"
 import ImageCarousel from "@/components/client/carousel/ImageCarousel"
+import BreedingRecordModal from "@/components/client/puppies/BreedingRecordModal"
 import { Badge } from "@/components/ui/badge"
 import { TikTokFeatureSpotlight } from "@/components/client/tiktok/TikTokFeatureSpotlight"
 
@@ -295,6 +296,7 @@ export default function NosChiotsPage() {
                                 const priceTextClass = isUnavailable
                                     ? "text-muted-foreground line-through"
                                     : "text-primary"
+                                const hasCharmBeautyAdministrativeRecord = puppy.parents === "Parents : CHARM & BEAUTY"
                                 const availabilityLabel =
                                     puppyStatus === "available"
                                         ? "Départ possible"
@@ -347,7 +349,16 @@ export default function NosChiotsPage() {
                                                         <div className="flex items-center gap-2 rounded-2xl border border-primary/8 bg-background/58 px-3 py-2 text-muted-foreground dark:border-primary/15 dark:bg-white/5">
                                                             <dt className="sr-only">Parents</dt>
                                                             <Heart className="h-4 w-4 text-primary" aria-hidden="true" />
-                                                            <dd>{puppy.parents}</dd>
+                                                            <div className="flex min-w-0 flex-1 items-center justify-between gap-3">
+                                                                <dd className="min-w-0">{puppy.parents}</dd>
+                                                                {hasCharmBeautyAdministrativeRecord ? (
+                                                                    <BreedingRecordModal
+                                                                        imageSrc="/pages/puppies/fiche-administrative-mariage-pomsky-f4-et-pomsky-f3.jpg"
+                                                                        title="Fiche administrative du mariage Charm et Beauty"
+                                                                        description="Document récapitulatif du mariage à l'origine de cette portée, consultable en grand format."
+                                                                    />
+                                                                ) : null}
+                                                            </div>
                                                         </div>
                                                         <div className="flex items-center gap-2 rounded-2xl border border-primary/8 bg-background/58 px-3 py-2 text-muted-foreground dark:border-primary/15 dark:bg-white/5">
                                                             <dt className="sr-only">{availabilityLabel}</dt>
@@ -364,6 +375,13 @@ export default function NosChiotsPage() {
                                                             <Weight className="h-4 w-4 text-primary" aria-hidden="true" />
                                                             <dd>{puppy.weight}</dd>
                                                         </div>
+                                                        {!isUnavailable ? (
+                                                            <div className="flex items-center gap-2 rounded-2xl border border-primary/8 bg-background/58 px-3 py-2 text-muted-foreground dark:border-primary/15 dark:bg-white/5">
+                                                                <dt className="sr-only">Pédigré</dt>
+                                                                <BadgeCheck className="h-4 w-4 min-h-4 min-w-4 text-primary" aria-hidden="true" />
+                                                                <dd>Fédération Française du Pomsky</dd>
+                                                            </div>
+                                                        ) : null}
                                                         {typeof puppy.price === "number" ? (
                                                             <div className="flex items-center gap-2 rounded-2xl border border-primary/8 bg-background/58 px-3 py-2 text-muted-foreground sm:col-span-2 dark:border-primary/15 dark:bg-white/5">
                                                                 <Banknote
