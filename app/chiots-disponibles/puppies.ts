@@ -24,6 +24,113 @@ export type Puppy = {
 
 export const puppies: Puppy[] = [
     {
+        name: "SANO",
+        coat: "Pomsky F4+ (ADN Poméranian / Husky)",
+        color: "Noir et blanc",
+        sexe: "Mâle",
+        size: "Toy ou miniature",
+        ruler: "Longueur du pelage indéterminée (évolution en cours)",
+        weight: "Poids adulte en cours d'estimation",
+        parents: "Parents : CHARM & BEAUTY",
+        readyDate: "Disponible à la réservation",
+        age: "Né le 24 avril 2026",
+        description:
+            "Sano est un mâle Pomsky F4+ né le 24 avril 2026, issu du mariage entre Charm et Beauty. Sa robe noire et blanche présente déjà un masque husky bien défini avec un très beau contraste. À ce stade néonatal, ses yeux ne sont pas encore ouverts et son pelage comme son gabarit continuent d'évoluer, avec un format attendu toy ou miniature.",
+        highlights: [
+            "Mâle",
+            "Masque husky marqué",
+            "Né le 24 avril 2026",
+            "Format toy ou miniature"
+        ],
+        health: ["Suivi vétérinaire en cours"],
+        images: [
+            "pages/puppies/Sano-chiot-pomsky-f4-nee-24-avril-2026.jpg",
+            "pages/puppies/Sano-chiot-pomsky-f4-1.jpg",
+            "pages/puppies/Sano-chiot-pomsky-f4-noir-et-blanc.jpg",
+            "pages/puppies/sano-chiot-pomsky-f4-disponoble-adoption.jpg",
+        ],
+        linkTo: "https://forms.gle/SNPeTUMNJ7jKSJWv9",
+    },
+    {
+        name: "KIRO",
+        coat: "Pomsky F4+ (ADN Poméranian / Husky)",
+        color: "Noir et blanc",
+        sexe: "Mâle",
+        size: "Toy ou miniature",
+        ruler: "Longueur du pelage indéterminée (évolution en cours)",
+        weight: "Poids adulte en cours d'estimation",
+        parents: "Parents : CHARM & BEAUTY",
+        readyDate: "Disponible à la réservation",
+        age: "Né le 24 avril 2026",
+        description:
+            "Kiro est un mâle Pomsky F4+ né le 24 avril 2026, issu du mariage entre Charm et Beauty. Sa robe noire et blanche laisse déjà voir un masque husky bien défini et un contraste marqué. Ses yeux sont encore fermés à cet âge néonatal, et l'évolution de son pelage ainsi que de son gabarit reste à suivre, avec un format attendu toy ou miniature.",
+        highlights: [
+            "Mâle",
+            "Masque husky marqué",
+            "Né le 24 avril 2026",
+            "Format toy ou miniature"
+        ],
+        health: ["Suivi vétérinaire en cours"],
+        images: [
+            "pages/puppies/Kiro-chiot-pomsky-f4.jpg",
+            "pages/puppies/kiro-chiot-pomsky-f4-disponible-adoption.jpg",
+        ],
+        linkTo: "https://forms.gle/SNPeTUMNJ7jKSJWv9",
+    },
+    {
+        name: "NAYA",
+        coat: "Pomsky F4+ (ADN Poméranian / Husky)",
+        color: "Chocolat et blanc",
+        sexe: "Femelle",
+        size: "Toy",
+        ruler: "Longueur du pelage indéterminée (évolution en cours)",
+        weight: "Poids adulte en cours d'estimation",
+        parents: "Parents : CHARM & BEAUTY",
+        readyDate: "Disponible à la réservation",
+        age: "Née le 24 avril 2026",
+        description:
+            "Naya est une femelle Pomsky F4+ née le 24 avril 2026, issue du mariage entre Charm et Beauty. Sa robe chocolat et blanche présente déjà un masque husky bien défini avec un contraste marqué. À ce stade néonatal, ses yeux ne sont pas encore ouverts et son évolution reste à suivre, avec un format attendu toy.",
+        highlights: [
+            "Femelle",
+            "Chocolat et blanc",
+            "Née le 24 avril 2026",
+            "Format toy"
+        ],
+        health: ["Suivi vétérinaire en cours"],
+        images: [
+            "pages/puppies/naya-chiot-pomsky-f4-nee-24-avril-2026.jpg",
+            "pages/puppies/naya-chiot-pomsky-f4-noir-et-blanc.jpg",
+        ],
+        linkTo: "https://forms.gle/SNPeTUMNJ7jKSJWv9",
+    },
+    {
+        name: "LUMA",
+        coat: "Pomsky F4+ (ADN Poméranian / Husky)",
+        color: "Noir et blanc",
+        sexe: "Femelle",
+        size: "Toy ou miniature",
+        ruler: "Longueur du pelage indéterminée (évolution en cours)",
+        weight: "Poids adulte en cours d'estimation",
+        parents: "Parents : CHARM & BEAUTY",
+        readyDate: "Disponible à la réservation",
+        age: "Née le 24 avril 2026",
+        description:
+            "Luma est une femelle Pomsky F4+ née le 24 avril 2026, issue du mariage entre Charm et Beauty. Sa robe noire et blanche montre déjà un masque husky bien défini et un joli contraste. Ses yeux sont encore fermés à cet âge néonatal, et son pelage comme son gabarit sont encore en cours d'évolution, avec un format attendu toy ou miniature.",
+        highlights: [
+            "Femelle",
+            "Masque husky marqué",
+            "Née le 24 avril 2026",
+            "Format toy ou miniature"
+        ],
+        health: ["Suivi vétérinaire en cours"],
+        images: [
+            "pages/puppies/Luna-chiot-pomsky-f4-femelle-disponible.jpg",
+            "pages/puppies/luna-pomsky-nee-le-24-avril.jpg",
+            "pages/puppies/Luna-chiot-disponible-royal-pomsky.jpg",
+        ],
+        linkTo: "https://forms.gle/SNPeTUMNJ7jKSJWv9",
+    },
+    {
         name: "VUK",
         coat: "Pomsky F5 (ADN Poméranian / Husky)",
         color: "Noir et blanc",
