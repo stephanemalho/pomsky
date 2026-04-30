@@ -325,6 +325,7 @@ export default function NosChiotsPage() {
                                                     caption={`Photos récentes de ${puppy.name}, pour découvrir son évolution, son type et son expression.`}
                                                     priority={index === 0}
                                                     sizes="(min-width: 1024px) 50vw, (min-width: 768px) 50vw, 100vw"
+                                                    ratioClassName="aspect-[4/5] sm:aspect-4/3"
                                                 />
                                                 <div className={`p-8 space-y-5 flex flex-col justify-center min-w-0 ${index % 2 === 1 ? "md:order-1" : ""}`}>
                                                     <div className="flex flex-wrap items-center gap-2">
