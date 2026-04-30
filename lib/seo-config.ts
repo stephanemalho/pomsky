@@ -335,7 +335,8 @@ export const pageMetadata = {
             "adoption chiot pomsky france",
             "prix chiot pomsky toy",
             "elevage pomsky chiots disponibles",
-            "reservation pomsky"
+            "reservation pomsky",
+            "cherche chiot a vendre"
         ]
     },
 

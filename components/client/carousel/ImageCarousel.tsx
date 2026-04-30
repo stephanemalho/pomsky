@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 
 type ImageCarouselProps = {
-    images: string[]
+    images: Array<string | { src: string; alt?: string }>
     alt: string
     caption?: string
     priority?: boolean
@@ -38,12 +38,17 @@ function ImageCarousel({
 
     const prev = () => setIndex((i) => (i - 1 + total) % total)
     const next = () => setIndex((i) => (i + 1) % total)
+    const currentImage = images[index]
+    const currentSrc = typeof currentImage === "string" ? currentImage : currentImage.src
+    const currentAlt = typeof currentImage === "string"
+        ? `${alt} - photo ${index + 1}`
+        : currentImage.alt?.trim() || `${alt} - photo ${index + 1}`
 
     return (
         <figure className={figureClassName}>
             <div className={containerClassName}>
                 <Image
-                    src={`/${images[index]}`}
+                    src={`/${currentSrc}`}
                     alt=""
                     fill
                     aria-hidden="true"
@@ -52,8 +57,8 @@ function ImageCarousel({
                 />
                 <div className="absolute inset-0 bg-linear-to-b from-background/10 via-transparent to-background/30" />
                 <Image
-                    src={`/${images[index]}`}
-                    alt={`${alt} - photo ${index + 1}`}
+                    src={`/${currentSrc}`}
+                    alt={currentAlt}
                     fill
                     className={[
                         "object-contain object-center p-3 transition duration-300 sm:p-4 md:p-5",

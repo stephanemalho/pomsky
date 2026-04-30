@@ -1,3 +1,8 @@
+export type PuppyImage = {
+    src: string;
+    alt: string;
+};
+
 export type Puppy = {
     name: string;
     coat: string;
@@ -12,7 +17,7 @@ export type Puppy = {
     description: string;
     health?: string[];
     highlights: string[];
-    images: string[];
+    images: PuppyImage[];
     linkTo: string;
     isReserved?: boolean;
     isAdopted?: boolean;
@@ -44,10 +49,10 @@ export const puppies: Puppy[] = [
         ],
         health: ["Suivi vétérinaire en cours"],
         images: [
-            "pages/puppies/Sano-chiot-pomsky-f4-1.jpg",
-            "pages/puppies/Sano-chiot-pomsky-f4-nee-24-avril-2026.jpg",
-            "pages/puppies/Sano-chiot-pomsky-f4-noir-et-blanc.jpg",
-            "pages/puppies/sano-chiot-pomsky-f4-disponoble-adoption.jpg",
+            { src: "pages/puppies/Sano-chiot-pomsky-f4-1.jpg", alt: "SANO, chiot Pomsky male F4+ noir et blanc" },
+            { src: "pages/puppies/Sano-chiot-pomsky-f4-nee-24-avril-2026.jpg", alt: "SANO, jeune chiot Pomsky male issu de Charm et Beauty" },
+            { src: "pages/puppies/Sano-chiot-pomsky-f4-noir-et-blanc.jpg", alt: "SANO, chiot Pomsky noir et blanc au masque husky marque" },
+            { src: "pages/puppies/sano-chiot-pomsky-f4-disponoble-adoption.jpg", alt: "SANO, chiot Pomsky male disponible a la reservation" },
         ],
         linkTo: "https://forms.gle/vk4BX8T1ifDXug8TA",
     },
@@ -72,9 +77,9 @@ export const puppies: Puppy[] = [
         ],
         health: ["Suivi vétérinaire en cours"],
         images: [
-            "pages/puppies/Aika-femelle-pomsky-a-vendre.jpg",
-            "pages/puppies/Aika-femelle-pomsky-disponible.jpg",
-            "pages/puppies/AIka-femelle-pomsky-noir-et-blanche.jpg",
+            { src: "pages/puppies/Aika-femelle-pomsky-a-vendre.jpg", alt: "AIKA, chiot Pomsky femelle F4+ noire et blanche" },
+            { src: "pages/puppies/Aika-femelle-pomsky-disponible.jpg", alt: "AIKA, jeune chiot Pomsky femelle disponible a la reservation" },
+            { src: "pages/puppies/AIka-femelle-pomsky-noir-et-blanche.jpg", alt: "AIKA, chiot Pomsky femelle au masque husky marque" },
         ],
         linkTo: "https://forms.gle/av3Tv3bbZ6T8ZF4Z7",
     },
@@ -99,10 +104,10 @@ export const puppies: Puppy[] = [
         ],
         health: ["Suivi vétérinaire en cours"],
         images: [
-            "pages/puppies/Balto-chiot-f4-male.jpg",
-            "pages/puppies/Balto-pomsky-f4-male-disponible-pour-adoption.jpg",
-            "pages/puppies/Balto-chiot-disponible-royal-pomsky.jpg",
-            "pages/puppies/Balto-male-pomsky-a-vendre.jpg",
+            { src: "pages/puppies/Balto-chiot-f4-male.jpg", alt: "BALTO, chiot Pomsky male F4+ bleu et blanc" },
+            { src: "pages/puppies/Balto-pomsky-f4-male-disponible-pour-adoption.jpg", alt: "BALTO, jeune chiot Pomsky male a robe bleue et blanche" },
+            { src: "pages/puppies/Balto-chiot-disponible-royal-pomsky.jpg", alt: "BALTO, chiot Pomsky male disponible chez Royal POMSKY" },
+            { src: "pages/puppies/Balto-male-pomsky-a-vendre.jpg", alt: "BALTO, chiot Pomsky male au masque husky marque" },
         ],
         linkTo: "https://forms.gle/av3Tv3bbZ6T8ZF4Z7",
     },
@@ -127,8 +132,8 @@ export const puppies: Puppy[] = [
         ],
         health: ["Suivi vétérinaire en cours"],
         images: [
-            "pages/puppies/Kiro-chiot-pomsky-f4.jpg",
-            "pages/puppies/kiro-chiot-pomsky-f4-disponible-adoption.jpg",
+            { src: "pages/puppies/Kiro-chiot-pomsky-f4.jpg", alt: "KIRO, chiot Pomsky male F4+ noir et blanc" },
+            { src: "pages/puppies/kiro-chiot-pomsky-f4-disponible-adoption.jpg", alt: "KIRO, jeune chiot Pomsky male disponible a la reservation" },
         ],
         linkTo: "https://forms.gle/vk4BX8T1ifDXug8TA",
     },
@@ -153,9 +158,9 @@ export const puppies: Puppy[] = [
         ],
         health: ["Suivi vétérinaire en cours"],
         images: [
-            "pages/puppies/Loup-male-pomsky-a-vendre.jpg",
-            "pages/puppies/Loup-male-pomsky-f4-a-vendre.jpg",
-            "pages/puppies/Loup-pomsky-disponible-royal-pomsky.jpg",
+            { src: "pages/puppies/Loup-male-pomsky-a-vendre.jpg", alt: "LOUP, chiot Pomsky male F4+ noir et blanc" },
+            { src: "pages/puppies/Loup-male-pomsky-f4-a-vendre.jpg", alt: "LOUP, jeune chiot PomSky male au masque husky marque" },
+            { src: "pages/puppies/Loup-pomsky-disponible-royal-pomsky.jpg", alt: "LOUP, chiot Pomsky male disponible chez Royal POMSKY" },
         ],
         linkTo: "https://forms.gle/av3Tv3bbZ6T8ZF4Z7",
     },
@@ -180,8 +185,8 @@ export const puppies: Puppy[] = [
         ],
         health: ["Suivi vétérinaire en cours"],
         images: [
-            "pages/puppies/naya-chiot-pomsky-f4-nee-24-avril-2026.jpg",
-            "pages/puppies/naya-chiot-pomsky-f4-noir-et-blanc.jpg",
+            { src: "pages/puppies/naya-chiot-pomsky-f4-nee-24-avril-2026.jpg", alt: "NAYA, chiot Pomsky femelle F4+ chocolat et blanc" },
+            { src: "pages/puppies/naya-chiot-pomsky-f4-noir-et-blanc.jpg", alt: "NAYA, jeune chiot Pomsky femelle au masque husky bien defini" },
         ],
         linkTo: "https://forms.gle/vk4BX8T1ifDXug8TA",
     },
@@ -206,9 +211,9 @@ export const puppies: Puppy[] = [
         ],
         health: ["Suivi vétérinaire en cours"],
         images: [
-            "pages/puppies/Luna-femelle-pomsky-f4-disponible.jpg",
-            "pages/puppies/Luna-pomsky-femelle-disponible.jpg",
-            "pages/puppies/Luna-pomsky-a-vendre-royal-pomsky.jpg",
+            { src: "pages/puppies/Luna-femelle-pomsky-f4-disponible.jpg", alt: "LUNA, chiot Pomsky femelle F4+ noire et blanche" },
+            { src: "pages/puppies/Luna-pomsky-femelle-disponible.jpg", alt: "LUNA, jeune chiot Pomsky femelle disponible a la reservation" },
+            { src: "pages/puppies/Luna-pomsky-a-vendre-royal-pomsky.jpg", alt: "LUNA, chiot Pomsky femelle au masque husky bien dessine" },
         ],
         linkTo: "https://forms.gle/av3Tv3bbZ6T8ZF4Z7",
     },
@@ -233,9 +238,9 @@ export const puppies: Puppy[] = [
         ],
         health: ["Suivi vétérinaire en cours"],
         images: [
-            "pages/puppies/Luna-chiot-pomsky-f4-femelle-disponible.jpg",
-            "pages/puppies/luna-pomsky-nee-le-24-avril.jpg",
-            "pages/puppies/Luna-chiot-disponible-royal-pomsky.jpg",
+            { src: "pages/puppies/Luna-chiot-pomsky-f4-femelle-disponible.jpg", alt: "LUMA, chiot Pomsky femelle F4+ noir et blanc" },
+            { src: "pages/puppies/luna-pomsky-nee-le-24-avril.jpg", alt: "LUMA, jeune chiot Pomsky femelle issue de Charm et Beauty" },
+            { src: "pages/puppies/Luna-chiot-disponible-royal-pomsky.jpg", alt: "LUMA, chiot Pomsky femelle disponible a la reservation" },
         ],
         linkTo: "https://forms.gle/vk4BX8T1ifDXug8TA",
     },
@@ -260,9 +265,9 @@ export const puppies: Puppy[] = [
         ],
         health: ["Suivi vétérinaire en cours"],
         images: [
-            "pages/puppies/Miyu-pomsky-f4-disponible.jpg",
-            "pages/puppies/MIYU-pomsky-male-a-vendre-royal-pomsky.jpg",
-            "pages/puppies/Miyu-omsky-chiots-disponible-royal-pomsky.jpg",
+            { src: "pages/puppies/Miyu-pomsky-f4-disponible.jpg", alt: "MIYU, chiot Pomsky male F4+ chocolat clair et blanc" },
+            { src: "pages/puppies/MIYU-pomsky-male-a-vendre-royal-pomsky.jpg", alt: "MIYU, jeune chiot Pomsky male disponible chez Royal POMSKY" },
+            { src: "pages/puppies/Miyu-omsky-chiots-disponible-royal-pomsky.jpg", alt: "MIYU, chiot Pomsky male au masque husky marque" },
         ],
         linkTo: "https://forms.gle/av3Tv3bbZ6T8ZF4Z7",
     },
@@ -287,9 +292,9 @@ export const puppies: Puppy[] = [
         ],
         health: ["Suivi vétérinaire en cours"],
         images: [
-            "pages/puppies/Orion-pomsky-a-vendre-royal-pomsky.jpg",
-            "pages/puppies/Orion-pomsky-f4-disponible.jpg",
-            "pages/puppies/Orion-pomsky-male-robe-exotique.jpg",
+            { src: "pages/puppies/Orion-pomsky-a-vendre-royal-pomsky.jpg", alt: "ORION, chiot Pomsky male F4+ lilac lavande et blanc" },
+            { src: "pages/puppies/Orion-pomsky-f4-disponible.jpg", alt: "ORION, jeune chiot Pomsky male disponible a la reservation" },
+            { src: "pages/puppies/Orion-pomsky-male-robe-exotique.jpg", alt: "ORION, chiot Pomsky male a robe exotique lavande" },
         ],
         linkTo: "https://forms.gle/av3Tv3bbZ6T8ZF4Z7",
     },
@@ -314,9 +319,9 @@ export const puppies: Puppy[] = [
         ],
         health: ["Suivi vétérinaire en cours"],
         images: [
-            "pages/puppies/Sora-femelle-a-vendre-royal-pomsky.jpg",
-            "pages/puppies/Sora-disponible-royal-pomsky-f4-rara.jpg",
-            "pages/puppies/Sora-pomsky-exotique-disponible.jpg",
+            { src: "pages/puppies/Sora-femelle-a-vendre-royal-pomsky.jpg", alt: "SORA, chiot Pomsky femelle F4+ bleue et blanche" },
+            { src: "pages/puppies/Sora-disponible-royal-pomsky-f4-rara.jpg", alt: "SORA, jeune chiot Pomsky femelle disponible chez Royal POMSKY" },
+            { src: "pages/puppies/Sora-pomsky-exotique-disponible.jpg", alt: "SORA, chiot Pomsky femelle a robe exotique bleue et blanche" },
         ],
         linkTo: "https://forms.gle/av3Tv3bbZ6T8ZF4Z7",
     }

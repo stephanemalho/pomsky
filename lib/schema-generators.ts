@@ -49,7 +49,7 @@ type PuppyCatalogSchemaInput = {
     ruler?: string;
     highlights?: string[];
     health?: string[];
-    images?: string[];
+    images?: Array<string | { src: string; alt?: string }>;
     price?: number;
     priceCurrency?: string;
     priceIncludes?: string;
@@ -57,6 +57,10 @@ type PuppyCatalogSchemaInput = {
     interestFormUrl?: string;
     status: "available" | "reserved" | "adopted";
 };
+
+function getSchemaImagePath(image: string | { src: string; alt?: string }) {
+    return typeof image === "string" ? image : image.src;
+}
 
 type FutureLitterSchemaInput = {
     name: string;
@@ -301,7 +305,7 @@ export function generatePuppyCatalogSchema(puppies: PuppyCatalogSchemaInput[]) {
             name: puppy.name,
             description: puppy.description,
             url: toAbsoluteUrl(puppy.url),
-            image: (puppy.images ?? []).map((image) => toAbsoluteUrl(image)),
+            image: (puppy.images ?? []).map((image) => toAbsoluteUrl(getSchemaImagePath(image))),
             brand: {
                 "@id": organizationId
             },
