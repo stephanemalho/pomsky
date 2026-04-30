@@ -324,9 +324,9 @@ export const pageMetadata = {
     },
 
     puppies: {
-        title: pageContent.puppies.h1,
+        title: "CHIOTS POMSKY DISPONIBLES - ROYAL POMSKY",
         description:
-            "Chiots Pomsky disponibles à l’adoption chez Royal POMSKY. Adoption possible partout en France et en Suisse, retrait à l’élevage sur rendez-vous.",
+            "Adoption en France et en Suisse avec accompagnement personnalisé, retrait à notre élevage sur rendez-vous et chiots de formats Toy, Miniature ou Standard selon les portées.",
         keywords: [
             "chiot pomsky disponible",
             "chiot pomsky a reserver",
@@ -534,7 +534,7 @@ export const sitemapPages = [
         url: "/chiots-disponibles",
         changefreq: "weekly",
         priority: 0.9,
-        lastmod: "2026-04-26"
+        lastmod: "2026-04-30"
     },
     {
         url: "/adoption/reussir-son-adoption",
