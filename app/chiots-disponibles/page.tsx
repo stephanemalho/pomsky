@@ -23,7 +23,7 @@ import BreedingRecordModal from "@/components/client/puppies/BreedingRecordModal
 import { Badge } from "@/components/ui/badge"
 import { TikTokFeatureSpotlight } from "@/components/client/tiktok/TikTokFeatureSpotlight"
 
-const puppiesOgImage = "/pages/puppies/VUK-male-pomsky-f5-2.jpeg"
+const puppiesOgImage = "/pages/puppies/Aika-femelle-pomsky-a-vendre.jpg"
 const familyVideoAnchor = `${siteConfig.pages.puppies}#souvenir-d-adoption`
 const familyVideoSchema = generateVideoObjectSchema({
     name: "Souvenir d'adoption d'un chiot Royal POMSKY",
@@ -38,13 +38,13 @@ const futureLitters = [
     {
         name: "Portée de Sky et Sally - Pomsky F4",
         description:
-            "Gestation confirmée chez Royal POMSKY pour le mariage entre Sky et Sally. Le suivi échographique est en cours et la portée est suivie attentivement à l'élevage.",
+            "Portée née chez Royal POMSKY le 28 avril 2026, issue du mariage entre Sky et Sally. Sept chiots sont désormais suivis à l'élevage et présentés sur cette page.",
         url: `${siteConfig.pages.puppies}#portee-sky-sally`,
         image: "/pages/reproducteurs/mariage-sky-et-sally-pomsky.jpg",
         parents: "Sky et Sally",
-        generation: "Pomsky F4",
-        stage: "Gestation confirmée",
-        observedCount: "7 chiots observés à l'échographie",
+        generation: "Pomsky F4+",
+        stage: "Portée née",
+        observedCount: "7 chiots nés le 28 avril 2026",
     },
     {
         name: "Portée d'Inuit et Mogu",
@@ -146,7 +146,7 @@ export default function NosChiotsPage() {
         ? generatePuppyListSchema(availablePuppies)
         : null
     const puppyCatalogSchema = generatePuppyCatalogSchema(
-        puppies.map((puppy) => ({
+        availablePuppies.map((puppy) => ({
             ...puppy,
             status: getPuppyStatus(puppy),
             url: `${siteConfig.pages.puppies}#${getPuppyAnchorId(puppy.name)}`,
@@ -268,7 +268,7 @@ export default function NosChiotsPage() {
                             </p>
                         </div>
                         <div className="grid gap-10 my-12">
-                            {puppies.map((puppy, index) => {
+                            {availablePuppies.map((puppy, index) => {
                                 const puppyAnchorId = getPuppyAnchorId(puppy.name)
                                 const puppyStatus = getPuppyStatus(puppy)
                                 const isUnavailable = puppyStatus !== "available"
@@ -452,22 +452,22 @@ export default function NosChiotsPage() {
                             <div className="space-y-6">
                                 <div className="flex flex-wrap gap-3">
                                     <Badge className="border-0 bg-primary text-primary-foreground hover:bg-primary">
-                                        Gestation confirmée
+                                        Portée née
                                     </Badge>
                                     <Badge variant="secondary" className="bg-background/85 text-foreground dark:bg-white/8">
-                                        7 chiots visibles à l&apos;échographie
+                                        7 chiots nés le 28 avril 2026
                                     </Badge>
                                     <Badge variant="outline" className="border-primary/30 bg-background/75 dark:border-primary/25 dark:bg-white/6">
-                                        Portée Pomsky F4
+                                        Portée Pomsky F4+
                                     </Badge>
                                 </div>
 
                                 <div className="space-y-4">
                                     <h2 className="max-w-2xl text-2xl font-semibold leading-tight md:text-4xl">
-                                        Sky et Sally attendent une portée suivie de près
+                                        Sky et Sally ont donné naissance à 7 chiots
                                     </h2>
                                     <p className="max-w-2xl text-base leading-relaxed text-foreground/80 md:text-lg">
-                                        Le mariage entre Sky et Sally est désormais confirmé à l&apos;élevage. L&apos;échographie permet de suivre l&apos;évolution de cette portée, accompagnée avec attention dans le cadre de notre programme de sélection.
+                                        La portée née le 28 avril 2026 à l&apos;élevage est désormais visible sur cette page. Sept chiots issus du mariage entre Sky et Sally sont présentés parmi les chiots actuellement disponibles.
                                     </p>
                                     <p className="max-w-2xl text-base leading-relaxed text-foreground/75">
                                         Sky, mâle bleu et blanc au regard perçant et à la fourrure whooly, et Sally, femelle chocolat et blanc au masque Fleur de Lys, forment un duo très recherché pour leur équilibre, leur type et leur belle qualité de lignée.
@@ -477,8 +477,8 @@ export default function NosChiotsPage() {
                                 <div className="grid gap-3 sm:grid-cols-3">
                                     {[
                                         { label: "Parents", value: "Sky × Sally" },
-                                        { label: "Échographie", value: "7 chiots observés" },
-                                        { label: "Suivi", value: "Gestation confirmée" },
+                                        { label: "Naissance", value: "28 avril 2026" },
+                                        { label: "Portée", value: "7 chiots disponibles" },
                                     ].map((item) => (
                                         <div
                                             key={item.label}
@@ -499,13 +499,13 @@ export default function NosChiotsPage() {
                                         <div className="space-y-2">
                                             <p className="text-sm font-semibold text-foreground">Une portée suivie avec attention</p>
                                             <p className="text-sm leading-relaxed text-muted-foreground">
-                                                Cette annonce correspond à une gestation confirmée, avec un suivi vétérinaire en cours et une communication régulière sur l&apos;avancée de la portée.
+                                                Les chiots de cette portée sont désormais nés et suivis quotidiennement à l&apos;élevage, avec des nouvelles régulières, des photos et un accompagnement pour les familles intéressées.
                                             </p>
                                         </div>
                                         <div className="space-y-2">
                                             <p className="text-sm font-semibold text-foreground">Pour les familles intéressées</p>
                                             <p className="text-sm leading-relaxed text-muted-foreground">
-                                                Si vous souhaitez suivre cette portée et recevoir les prochaines nouvelles, vous pouvez rejoindre la liste d&apos;attente dès maintenant.
+                                                Si vous souhaitez réserver une visite ou demander plus de photos et de vidéos, vous pouvez nous contacter dès maintenant.
                                             </p>
                                         </div>
                                     </div>
@@ -513,7 +513,7 @@ export default function NosChiotsPage() {
 
                                 <div className={breedingCtaPanelClass}>
                                     <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-primary/80">
-                                        Suivre Cette Portée
+                                        Découvrir Cette Portée
                                     </p>
                                     <div className="flex flex-col gap-3 sm:flex-row">
                                         <a
@@ -522,7 +522,7 @@ export default function NosChiotsPage() {
                                             rel="noopener noreferrer"
                                             className={breedingPrimaryCtaClass}
                                         >
-                                            Rejoindre la liste d&apos;attente
+                                            Réserver une visite ou demander plus de photos/vidéos
                                         </a>
                                         <div className="flex flex-col gap-3 sm:flex-row">
                                             <Link
@@ -557,7 +557,7 @@ export default function NosChiotsPage() {
                                         />
                                     </div>
                                     <figcaption className="p-4 text-sm leading-relaxed text-muted-foreground">
-                                        Sky et Sally, un mariage suivi à l&apos;élevage pour une portée Pomsky F4 en cours.
+                                        Sky et Sally, à l&apos;origine d&apos;une portée née le 28 avril 2026, aujourd&apos;hui présentée parmi les chiots disponibles.
                                     </figcaption>
                                 </figure>
 
@@ -572,7 +572,7 @@ export default function NosChiotsPage() {
                                         />
                                     </div>
                                     <figcaption className="p-4 text-sm leading-relaxed text-muted-foreground">
-                                        L&apos;échographie de Sky et Sally confirme une portée de 7 chiots, suivie avec attention à l&apos;élevage.
+                                        L&apos;échographie de Sky et Sally annonçait 7 chiots, désormais nés et suivis avec attention à l&apos;élevage.
                                     </figcaption>
                                 </figure>
                             </div>
