@@ -389,7 +389,7 @@ export default function NosChiotsPage() {
                                                             <div className="grid gap-1 border-t border-primary/8 px-4 py-3 sm:grid-cols-[minmax(140px,0.7fr)_1fr] sm:items-center dark:border-primary/15">
                                                                 <dt className="flex items-center gap-2 font-semibold text-muted-foreground">
                                                                     <BadgeCheck className="h-4 w-4 text-primary" aria-hidden="true" />
-                                                                    Pédigré
+                                                                    Pédigrée
                                                                 </dt>
                                                                 <dd className="text-foreground sm:text-right">Fédération Française du Pomsky</dd>
                                                             </div>
