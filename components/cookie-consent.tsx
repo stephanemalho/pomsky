@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useCallback, useEffect, useState } from "react"
 import Script from "next/script"
 import { Button } from "./ui/button"
 import { Cookie } from "lucide-react"
@@ -9,6 +9,9 @@ const GA_ID = process.env.NEXT_PUBLIC_GA_ID
 type WindowWithGA = Window & {
     gtag?: (...args: unknown[]) => void
     dataLayer?: unknown[]
+    google_tag_data?: unknown
+    gaGlobal?: unknown
+    [key: `ga-disable-${string}`]: boolean | undefined
 }
 
 export default function CookieConsent() {
@@ -41,25 +44,54 @@ export default function CookieConsent() {
         try {
             localStorage.setItem("cookie_consent", "accepted")
         } catch { }
+        try {
+            if (GA_ID) {
+                const win = window as unknown as WindowWithGA
+                win[`ga-disable-${GA_ID}`] = false
+            }
+        } catch { }
         setConsent("accepted")
         setOpen(false)
         notifyConsentChange()
     }
 
-    function clearGACookies() {
+    const clearGACookies = useCallback(() => {
         try {
-            // Best-effort remove common GA cookies
+            const hostParts = location.hostname.split(".")
+            const domainCandidates = new Set([
+                undefined,
+                location.hostname,
+                `.${location.hostname}`,
+                hostParts.length > 2 ? `.${hostParts.slice(-2).join(".")}` : undefined,
+            ])
             const cookies = document.cookie.split(";")
             cookies.forEach((c) => {
                 const name = c.split("=")[0].trim()
-                if (/_ga|_gid|_gat|gac_/.test(name)) {
-                    document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=${location.hostname}`
+                if (/^(_ga|_gid|_gat|_gac_|_ga_)/.test(name)) {
+                    domainCandidates.forEach((domain) => {
+                        const domainPart = domain ? `; domain=${domain}` : ""
+                        document.cookie = `${name}=; Max-Age=0; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/${domainPart}`
+                    })
                 }
             })
         } catch { }
-    }
+    }, [])
 
-    function removeGAScript() {
+    const clearGAStorage = useCallback(() => {
+        try {
+            const removeMatchingKeys = (storage: Storage) => {
+                Array.from({ length: storage.length }, (_, index) => storage.key(index))
+                    .filter((key): key is string => Boolean(key))
+                    .filter((key) => /^(_ga|_gid|_gat|_gac_|ga:|google_analytics)/i.test(key))
+                    .forEach((key) => storage.removeItem(key))
+            }
+
+            removeMatchingKeys(localStorage)
+            removeMatchingKeys(sessionStorage)
+        } catch { }
+    }, [])
+
+    const removeGAScript = useCallback(() => {
         if (!GA_ID) return
         try {
             const scripts = Array.from(
@@ -69,40 +101,51 @@ export default function CookieConsent() {
             )
             scripts.forEach((s) => s.parentElement?.removeChild(s))
             try {
-                const win = window as WindowWithGA
+                const win = window as unknown as WindowWithGA
+                win[`ga-disable-${GA_ID}`] = true
                 delete win.gtag
                 delete win.dataLayer
+                delete win.google_tag_data
+                delete win.gaGlobal
             } catch { }
         } catch (error) {
             console.warn("cookie-consent: failed to remove GA scripts", error)
         }
-    }
+    }, [])
+
+    const revokeAnalyticsConsent = useCallback(() => {
+        try {
+            const win = window as unknown as WindowWithGA
+            if (GA_ID) {
+                win[`ga-disable-${GA_ID}`] = true
+            }
+            if (win.gtag) {
+                win.gtag("consent", "update", { analytics_storage: "denied" })
+            }
+        } catch { }
+
+        clearGACookies()
+        clearGAStorage()
+        removeGAScript()
+    }, [clearGACookies, clearGAStorage, removeGAScript])
 
     function decline() {
         try {
             localStorage.setItem("cookie_consent", "denied")
         } catch { }
-        // If GA already loaded, inform Google Consent Mode and try to clear cookies
-        try {
-            const win = window as WindowWithGA
-            if (win.gtag) {
-                win.gtag("consent", "update", { analytics_storage: "denied" })
-            }
-            clearGACookies()
-            removeGAScript()
-        } catch { }
         setConsent("denied")
         setOpen(false)
+        revokeAnalyticsConsent()
+        window.setTimeout(revokeAnalyticsConsent, 0)
         notifyConsentChange()
     }
 
     // Remove GA scripts and cookies when refused.
     useEffect(() => {
         if (consent === "denied") {
-            removeGAScript()
-            clearGACookies()
+            revokeAnalyticsConsent()
         }
-    }, [consent])
+    }, [consent, revokeAnalyticsConsent])
 
     return (
         <>
