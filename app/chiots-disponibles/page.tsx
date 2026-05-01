@@ -309,17 +309,17 @@ export default function NosChiotsPage() {
                                                     {ribbonLabel}
                                                 </div>
                                             ) : null}
-                                            <div className={`grid items-start gap-6 lg:grid-cols-[minmax(320px,0.9fr)_minmax(520px,1.1fr)] xl:grid-cols-[minmax(380px,0.86fr)_minmax(620px,1.14fr)] ${index % 2 === 1 ? "lg:grid-flow-col-dense" : ""}`}>
+                                            <div className={`grid items-start gap-6 xl:grid-cols-[minmax(360px,0.82fr)_minmax(640px,1.18fr)] ${index % 2 === 1 ? "xl:grid-flow-col-dense" : ""}`}>
                                                 <ImageCarousel
-                                                    className={`mx-auto w-full max-w-[680px] ${index % 2 === 1 ? "lg:order-2" : ""}`}
+                                                    className={`mx-auto w-full max-w-[620px] ${index % 2 === 1 ? "xl:order-2" : ""}`}
                                                     images={puppy.images.map((image) => image.src)}
                                                     alt={"Photos du chiot Pomsky " + puppy.name}
                                                     caption={`Photos récentes de ${puppy.name}, pour découvrir son évolution, son type et son expression.`}
                                                     priority={index === 0}
-                                                    sizes="(min-width: 1280px) 42vw, (min-width: 1024px) 44vw, 100vw"
-                                                    ratioClassName="aspect-[4/5]"
+                                                    sizes="(min-width: 1280px) 38vw, 100vw"
+                                                    ratioClassName="aspect-[4/5] sm:aspect-[5/4] xl:aspect-[4/5]"
                                                 />
-                                                <div className={`min-w-0 space-y-5 p-6 text-left md:p-8 lg:py-4 ${index % 2 === 1 ? "lg:order-1" : ""}`}>
+                                                <div className={`mx-auto w-full max-w-4xl min-w-0 space-y-5 p-6 text-left md:p-8 xl:max-w-none xl:py-4 ${index % 2 === 1 ? "xl:order-1" : ""}`}>
                                                     <div className="flex flex-wrap items-center gap-2">
                                                         <Badge variant="secondary" className="bg-background/80 dark:bg-white/8">
                                                             <PawPrint className="h-4 w-4 mr-1" />
@@ -422,7 +422,7 @@ export default function NosChiotsPage() {
                                                             >
                                                                 Ses parents
                                                             </h4>
-                                                            <div className="grid gap-3 sm:grid-cols-2">
+                                                            <div className="grid gap-3 min-[900px]:grid-cols-2 xl:grid-cols-2">
                                                                 {parentProfiles.map((parent) => {
                                                                     const ParentIcon = parent.role === "Mère" ? Venus : Mars
                                                                     const iconClassName = parent.role === "Mère"
@@ -470,7 +470,7 @@ export default function NosChiotsPage() {
                                                             </Badge>
                                                         ))}
                                                     </div>
-                                                    <div className="flex m-auto flex-col sm:flex-row gap-3 mb-2">
+                                                    <div className="mx-auto mb-2 flex w-full flex-col gap-3 min-[900px]:max-w-2xl min-[900px]:flex-row min-[900px]:justify-center xl:max-w-none">
                                                         {isUnavailable ? (
                                                             <span
                                                                 aria-disabled="true"
@@ -479,7 +479,7 @@ export default function NosChiotsPage() {
                                                                 {statusPillLabel}
                                                             </span>
                                                         ) : (
-                                                            <div className="flex flex-col sm:flex-row gap-3">
+                                                            <div className="flex w-full flex-col gap-3 min-[900px]:flex-row min-[900px]:justify-center">
                                                                 <Link
                                                                     href="/contact"
                                                                     className="rounded-xl border border-primary/25 bg-background/70 px-4 py-2 text-center text-primary shadow-xs transition hover:bg-primary/10 dark:border-primary/30 dark:bg-white/6 dark:hover:bg-white/10"
@@ -489,7 +489,7 @@ export default function NosChiotsPage() {
                                                                 <a
                                                                     target="_blank"
                                                                     rel="noopener noreferrer"
-                                                                    className="rounded-xl bg-primary px-4 py-2 text-center text-primary-foreground shadow-xs transition hover:bg-primary/90"
+                                                                    className="rounded-xl bg-primary px-4 py-2 text-center text-primary-foreground shadow-xs transition hover:bg-primary/90 min-[900px]:min-w-[340px]"
                                                                     href={puppy.linkTo}
                                                                 >
                                                                     Réserver une visite ou demander plus de photos/vidéos
