@@ -142,25 +142,33 @@ export default function NosChiotsPage() {
                                                 </div>
                                             </div>
                                             <dl className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
-                                                <div className="flex items-center gap-2 text-muted-foreground">
+                                                <div className="text-muted-foreground">
                                                     <dt className="sr-only">Format</dt>
-                                                    <Dog className="max-h-4 max-w-4 text-primary" aria-hidden="true" />
-                                                    <dd>{puppy.size}</dd>
+                                                    <dd className="flex items-center gap-2">
+                                                        <Dog className="max-h-4 max-w-4 text-primary" aria-hidden="true" />
+                                                        {puppy.size}
+                                                    </dd>
                                                 </div>
-                                                <div className="flex items-center gap-2 text-muted-foreground">
+                                                <div className="text-muted-foreground">
                                                     <dt className="sr-only">Taille</dt>
-                                                    <Ruler className="max-h-4 max-w-4 text-primary" aria-hidden="true" />
-                                                    <dd>{puppy.height}</dd>
+                                                    <dd className="flex items-center gap-2">
+                                                        <Ruler className="max-h-4 max-w-4 text-primary" aria-hidden="true" />
+                                                        {puppy.height}
+                                                    </dd>
                                                 </div>
-                                                <div className="flex items-center gap-2 text-muted-foreground">
+                                                <div className="text-muted-foreground">
                                                     <dt className="sr-only">Poids</dt>
-                                                    <Weight className="max-h-4 max-w-4 text-primary" aria-hidden="true" />
-                                                    <dd>{puppy.weight}</dd>
+                                                    <dd className="flex items-center gap-2">
+                                                        <Weight className="max-h-4 max-w-4 text-primary" aria-hidden="true" />
+                                                        {puppy.weight}
+                                                    </dd>
                                                 </div>
-                                                <div className="flex items-center gap-2 text-muted-foreground">
+                                                <div className="text-muted-foreground">
                                                     <dt className="sr-only">Fourrure</dt>
-                                                    <Scissors className="max-h-4 max-w-4 text-primary" aria-hidden="true" />
-                                                    <dd>{puppy.ruler}</dd>
+                                                    <dd className="flex items-center gap-2">
+                                                        <Scissors className="max-h-4 max-w-4 text-primary" aria-hidden="true" />
+                                                        {puppy.ruler}
+                                                    </dd>
                                                 </div>
                                             </dl>
                                             <div className="flex flex-wrap gap-2">

@@ -286,64 +286,76 @@ export default function NosChiotsPage() {
                                                         <p className="text-muted-foreground">{puppy.description}</p>
                                                     </div>
                                                     <dl className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
-                                                        <div className="flex items-center gap-2 rounded-2xl border border-primary/8 bg-background/58 px-3 py-2 text-muted-foreground dark:border-primary/15 dark:bg-white/5">
+                                                        <div className="rounded-2xl border border-primary/8 bg-background/58 px-3 py-2 text-muted-foreground dark:border-primary/15 dark:bg-white/5">
                                                             <dt className="sr-only">Sexe</dt>
-                                                            <Dog className="h-4 w-4 text-primary" aria-hidden="true" />
-                                                            <dd>{puppy.sexe}</dd>
+                                                            <dd className="flex items-center gap-2">
+                                                                <Dog className="h-4 w-4 text-primary" aria-hidden="true" />
+                                                                {puppy.sexe}
+                                                            </dd>
                                                         </div>
-                                                        <div className="flex items-center gap-2 rounded-2xl border border-primary/8 bg-background/58 px-3 py-2 text-muted-foreground dark:border-primary/15 dark:bg-white/5">
+                                                        <div className="rounded-2xl border border-primary/8 bg-background/58 px-3 py-2 text-muted-foreground dark:border-primary/15 dark:bg-white/5">
                                                             <dt className="sr-only">Parents</dt>
-                                                            <Heart className="h-4 w-4 text-primary" aria-hidden="true" />
-                                                            <div className="flex min-w-0 flex-1 items-center justify-between gap-3">
-                                                                <dd className="min-w-0">
+                                                            <dd className="flex items-center gap-2">
+                                                                <Heart className="h-4 w-4 shrink-0 text-primary" aria-hidden="true" />
+                                                                <span className="flex min-w-0 flex-1 items-center justify-between gap-3">
+                                                                    <span className="min-w-0">
                                                                     <span>{puppy.parents}</span>
                                                                     {litterCertification ? (
                                                                         <span className="mt-1 block text-xs leading-relaxed text-muted-foreground">
                                                                             {litterCertification.certificationIdentification} · portée née le 24/04/2026 · {getCertificationParentLine(litterCertification)}
                                                                         </span>
                                                                     ) : null}
-                                                                </dd>
-                                                                {hasCharmBeautyAdministrativeRecord ? (
-                                                                    <BreedingRecordModal
-                                                                        imageSrc={litterCertification?.imageSrc ?? "/pages/puppies/fiche-administrative-mariage-pomsky-f4-et-pomsky-f3.jpg"}
-                                                                        title={litterCertification?.name ?? "Fiche administrative du mariage Charm et Beauty"}
-                                                                        description={litterCertification?.description ?? "Document récapitulatif du mariage à l'origine de cette portée, consultable en grand format."}
-                                                                    />
-                                                                ) : null}
-                                                            </div>
+                                                                    </span>
+                                                                    {hasCharmBeautyAdministrativeRecord ? (
+                                                                        <BreedingRecordModal
+                                                                            imageSrc={litterCertification?.imageSrc ?? "/pages/puppies/fiche-administrative-mariage-pomsky-f4-et-pomsky-f3.jpg"}
+                                                                            title={litterCertification?.name ?? "Fiche administrative du mariage Charm et Beauty"}
+                                                                            description={litterCertification?.description ?? "Document récapitulatif du mariage à l'origine de cette portée, consultable en grand format."}
+                                                                        />
+                                                                    ) : null}
+                                                                </span>
+                                                            </dd>
                                                         </div>
-                                                        <div className="flex items-center gap-2 rounded-2xl border border-primary/8 bg-background/58 px-3 py-2 text-muted-foreground dark:border-primary/15 dark:bg-white/5">
+                                                        <div className="rounded-2xl border border-primary/8 bg-background/58 px-3 py-2 text-muted-foreground dark:border-primary/15 dark:bg-white/5">
                                                             <dt className="sr-only">{availabilityLabel}</dt>
-                                                            <Calendar className="h-4 w-4 text-primary" aria-hidden="true" />
-                                                            <dd>{puppy.readyDate}</dd>
+                                                            <dd className="flex items-center gap-2">
+                                                                <Calendar className="h-4 w-4 text-primary" aria-hidden="true" />
+                                                                {puppy.readyDate}
+                                                            </dd>
                                                         </div>
-                                                        <div className="flex items-center gap-2 rounded-2xl border border-primary/8 bg-background/58 px-3 py-2 text-muted-foreground dark:border-primary/15 dark:bg-white/5">
+                                                        <div className="rounded-2xl border border-primary/8 bg-background/58 px-3 py-2 text-muted-foreground dark:border-primary/15 dark:bg-white/5">
                                                             <dt className="sr-only">Âge</dt>
-                                                            <PawPrint className="h-4 w-4 text-primary" aria-hidden="true" />
-                                                            <dd>{puppy.age}</dd>
+                                                            <dd className="flex items-center gap-2">
+                                                                <PawPrint className="h-4 w-4 text-primary" aria-hidden="true" />
+                                                                {puppy.age}
+                                                            </dd>
                                                         </div>
-                                                        <div className="flex items-center gap-2 rounded-2xl border border-primary/8 bg-background/58 px-3 py-2 text-muted-foreground dark:border-primary/15 dark:bg-white/5">
+                                                        <div className="rounded-2xl border border-primary/8 bg-background/58 px-3 py-2 text-muted-foreground dark:border-primary/15 dark:bg-white/5">
                                                             <dt className="sr-only">Poids</dt>
-                                                            <Weight className="h-4 w-4 text-primary" aria-hidden="true" />
-                                                            <dd>{puppy.weight}</dd>
+                                                            <dd className="flex items-center gap-2">
+                                                                <Weight className="h-4 w-4 text-primary" aria-hidden="true" />
+                                                                {puppy.weight}
+                                                            </dd>
                                                         </div>
                                                         {!isUnavailable ? (
-                                                            <div className="flex items-center gap-2 rounded-2xl border border-primary/8 bg-background/58 px-3 py-2 text-muted-foreground dark:border-primary/15 dark:bg-white/5">
+                                                            <div className="rounded-2xl border border-primary/8 bg-background/58 px-3 py-2 text-muted-foreground dark:border-primary/15 dark:bg-white/5">
                                                                 <dt className="sr-only">Pédigré</dt>
-                                                                <BadgeCheck className="h-4 w-4 min-h-4 min-w-4 text-primary" aria-hidden="true" />
-                                                                <dd>Fédération Française du Pomsky</dd>
+                                                                <dd className="flex items-center gap-2">
+                                                                    <BadgeCheck className="h-4 w-4 min-h-4 min-w-4 text-primary" aria-hidden="true" />
+                                                                    Fédération Française du Pomsky
+                                                                </dd>
                                                             </div>
                                                         ) : null}
                                                         {typeof puppy.price === "number" ? (
-                                                            <div className="flex items-center gap-2 rounded-2xl border border-primary/8 bg-background/58 px-3 py-2 text-muted-foreground sm:col-span-2 dark:border-primary/15 dark:bg-white/5">
-                                                                <Banknote
-                                                                    className={`min-h-4 min-w-4 ${priceToneClass}`}
-                                                                    aria-hidden="true"
-                                                                />
+                                                            <div className="rounded-2xl border border-primary/8 bg-background/58 px-3 py-2 text-muted-foreground sm:col-span-2 dark:border-primary/15 dark:bg-white/5">
                                                                 <dt className="sr-only">Prix</dt>
                                                                 <dd
                                                                     className={`flex gap-2 items-center text-lg font-semibold ${priceTextClass}`}
                                                                 >
+                                                                    <Banknote
+                                                                        className={`min-h-4 min-w-4 ${priceToneClass}`}
+                                                                        aria-hidden="true"
+                                                                    />
                                                                     {formatPuppyPrice(puppy.price, puppy.priceCurrency ?? "EUR")}
                                                                     <p className="text-xs text-muted-foreground mt-1">
                                                                         {puppy.priceIncludes}
