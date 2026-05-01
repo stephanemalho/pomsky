@@ -1,7 +1,7 @@
 import Image from "next/image"
 import { FAQSection } from "@/components/faq"
 import { faqNosChiots } from "@/lib/faq-data"
-import { BadgeCheck, Banknote, Calendar, Dog, Heart, NotebookText, PawPrint, Sprout, Weight } from "lucide-react"
+import { BadgeCheck, Banknote, Calendar, Dog, Heart, Mars, NotebookText, PawPrint, Sprout, Venus, Weight } from "lucide-react"
 import Link from "next/link"
 import type { Metadata } from "next"
 import { buildOpenGraph, buildTwitter, pageMetadata, returnLastmod, siteConfig, sitemapPages } from "@/lib/seo-config"
@@ -142,6 +142,53 @@ const breedingPrimaryCtaClass =
 const breedingSecondaryCtaClass =
     "flex min-h-12 items-center justify-center rounded-xl border border-primary/30 bg-background/88 px-5 py-3 text-center font-semibold text-primary transition hover:bg-primary/10 dark:border-primary/30 dark:bg-white/8 dark:hover:bg-white/12"
 
+type PuppyParentProfile = {
+    role: "Mère" | "Père"
+    name: string
+    image: string
+    generation: string
+    href: string
+}
+
+const puppyParentProfilesByLabel: Record<string, PuppyParentProfile[]> = {
+    "Parents : CHARM & BEAUTY": [
+        {
+            role: "Mère",
+            name: "Beauty",
+            image: "/BEAUTY-pomsky-miniature-f4.webp",
+            generation: "Pomsky F4",
+            href: `/femelles-reproductrices#${getReproductorAnchorId("BEAUTY")}`,
+        },
+        {
+            role: "Père",
+            name: "Charm",
+            image: "/pages/reproducteurs/CHARM-pomsky-toy-f3.webp",
+            generation: "Pomsky F3",
+            href: `/femelles-reproductrices#${getReproductorAnchorId("CHARM")}`,
+        },
+    ],
+    "Parents : SKY & SALLY": [
+        {
+            role: "Mère",
+            name: "Sally",
+            image: "/SALLY-pomsky-miniature.webp",
+            generation: "Pomsky miniature",
+            href: `/femelles-reproductrices#${getReproductorAnchorId("SALLY")}`,
+        },
+        {
+            role: "Père",
+            name: "Sky",
+            image: "/SKY-pomsky-miniature-f3.webp",
+            generation: "Pomsky F3",
+            href: `/femelles-reproductrices#${getReproductorAnchorId("SKY")}`,
+        },
+    ],
+}
+
+function getPuppyParentProfiles(puppy: Puppy) {
+    return puppyParentProfilesByLabel[puppy.parents] ?? []
+}
+
 export default function NosChiotsPage() {
     // Schémas JSON-LD
     const breadcrumbSchema = generateBreadcrumbSchema([
@@ -247,6 +294,7 @@ export default function NosChiotsPage() {
                                         : puppyStatus === "reserved"
                                             ? "Statut"
                                             : "Adoption"
+                                const parentProfiles = getPuppyParentProfiles(puppy)
 
                                 return (
                                     <Card
@@ -261,17 +309,17 @@ export default function NosChiotsPage() {
                                                     {ribbonLabel}
                                                 </div>
                                             ) : null}
-                                            <div className={`grid md:grid-cols-2 gap-0 ${index % 2 === 1 ? "md:grid-flow-col-dense" : ""}`}>
+                                            <div className={`grid items-start gap-6 lg:grid-cols-[minmax(320px,0.9fr)_minmax(520px,1.1fr)] xl:grid-cols-[minmax(380px,0.86fr)_minmax(620px,1.14fr)] ${index % 2 === 1 ? "lg:grid-flow-col-dense" : ""}`}>
                                                 <ImageCarousel
-                                                    className={index % 2 === 1 ? "md:order-2" : undefined}
+                                                    className={`mx-auto w-full max-w-[680px] ${index % 2 === 1 ? "lg:order-2" : ""}`}
                                                     images={puppy.images.map((image) => image.src)}
                                                     alt={"Photos du chiot Pomsky " + puppy.name}
                                                     caption={`Photos récentes de ${puppy.name}, pour découvrir son évolution, son type et son expression.`}
                                                     priority={index === 0}
-                                                    sizes="(min-width: 1024px) 50vw, (min-width: 768px) 50vw, 100vw"
-                                                    ratioClassName="aspect-[4/5] sm:aspect-4/3"
+                                                    sizes="(min-width: 1280px) 42vw, (min-width: 1024px) 44vw, 100vw"
+                                                    ratioClassName="aspect-[4/5]"
                                                 />
-                                                <div className={`p-8 space-y-5 flex flex-col justify-center min-w-0 ${index % 2 === 1 ? "md:order-1" : ""}`}>
+                                                <div className={`min-w-0 space-y-5 p-6 text-left md:p-8 lg:py-4 ${index % 2 === 1 ? "lg:order-1" : ""}`}>
                                                     <div className="flex flex-wrap items-center gap-2">
                                                         <Badge variant="secondary" className="bg-background/80 dark:bg-white/8">
                                                             <PawPrint className="h-4 w-4 mr-1" />
@@ -281,89 +329,140 @@ export default function NosChiotsPage() {
                                                             {puppy.color}
                                                         </Badge>
                                                     </div>
-                                                    <div className="space-y-2">
+                                                    <div className="space-y-2 text-center">
                                                         <h3 id={puppyAnchorId} className="scroll-mt-28 text-2xl font-bold">{puppy.name}</h3>
                                                         <p className="text-muted-foreground">{puppy.description}</p>
                                                     </div>
-                                                    <dl className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
-                                                        <div className="rounded-2xl border border-primary/8 bg-background/58 px-3 py-2 text-muted-foreground dark:border-primary/15 dark:bg-white/5">
-                                                            <dt className="sr-only">Sexe</dt>
-                                                            <dd className="flex items-center gap-2">
+                                                    <dl className="overflow-hidden rounded-3xl border border-primary/10 bg-background/55 text-left text-sm shadow-sm dark:border-primary/18 dark:bg-white/5">
+                                                        <div className="grid gap-1 px-4 py-3 sm:grid-cols-[minmax(140px,0.7fr)_1fr] sm:items-center">
+                                                            <dt className="flex items-center gap-2 font-semibold text-muted-foreground">
                                                                 <Dog className="h-4 w-4 text-primary" aria-hidden="true" />
-                                                                {puppy.sexe}
-                                                            </dd>
+                                                                Sexe
+                                                            </dt>
+                                                            <dd className="text-foreground sm:text-right">{puppy.sexe}</dd>
                                                         </div>
-                                                        <div className="rounded-2xl border border-primary/8 bg-background/58 px-3 py-2 text-muted-foreground dark:border-primary/15 dark:bg-white/5">
-                                                            <dt className="sr-only">Parents</dt>
-                                                            <dd className="flex items-center gap-2">
-                                                                <Heart className="h-4 w-4 shrink-0 text-primary" aria-hidden="true" />
-                                                                <span className="flex min-w-0 flex-1 items-center justify-between gap-3">
-                                                                    <span className="min-w-0">
-                                                                    <span>{puppy.parents}</span>
+                                                        <div className="grid gap-2 border-t border-primary/8 px-4 py-3 sm:grid-cols-[minmax(140px,0.7fr)_1fr] sm:items-center dark:border-primary/15">
+                                                            <dt className="flex items-center gap-2 font-semibold text-muted-foreground">
+                                                                <Heart className="h-4 w-4 text-primary" aria-hidden="true" />
+                                                                Parents
+                                                            </dt>
+                                                            <dd className="flex min-w-0 items-center justify-between gap-3 text-foreground sm:text-right">
+                                                                <span className="min-w-0">
+                                                                    <span>{puppy.parents.replace("Parents : ", "")}</span>
                                                                     {litterCertification ? (
                                                                         <span className="mt-1 block text-xs leading-relaxed text-muted-foreground">
                                                                             {litterCertification.certificationIdentification} · portée née le 24/04/2026 · {getCertificationParentLine(litterCertification)}
                                                                         </span>
                                                                     ) : null}
-                                                                    </span>
-                                                                    {hasCharmBeautyAdministrativeRecord ? (
-                                                                        <BreedingRecordModal
-                                                                            imageSrc={litterCertification?.imageSrc ?? "/pages/puppies/fiche-administrative-mariage-pomsky-f4-et-pomsky-f3.jpg"}
-                                                                            title={litterCertification?.name ?? "Fiche administrative du mariage Charm et Beauty"}
-                                                                            description={litterCertification?.description ?? "Document récapitulatif du mariage à l'origine de cette portée, consultable en grand format."}
-                                                                        />
-                                                                    ) : null}
                                                                 </span>
+                                                                {hasCharmBeautyAdministrativeRecord ? (
+                                                                    <BreedingRecordModal
+                                                                        imageSrc={litterCertification?.imageSrc ?? "/pages/puppies/fiche-administrative-mariage-pomsky-f4-et-pomsky-f3.jpg"}
+                                                                        title={litterCertification?.name ?? "Fiche administrative du mariage Charm et Beauty"}
+                                                                        description={litterCertification?.description ?? "Document récapitulatif du mariage à l'origine de cette portée, consultable en grand format."}
+                                                                    />
+                                                                ) : null}
                                                             </dd>
                                                         </div>
-                                                        <div className="rounded-2xl border border-primary/8 bg-background/58 px-3 py-2 text-muted-foreground dark:border-primary/15 dark:bg-white/5">
-                                                            <dt className="sr-only">{availabilityLabel}</dt>
-                                                            <dd className="flex items-center gap-2">
+                                                        <div className="grid gap-1 border-t border-primary/8 px-4 py-3 sm:grid-cols-[minmax(140px,0.7fr)_1fr] sm:items-center dark:border-primary/15">
+                                                            <dt className="flex items-center gap-2 font-semibold text-muted-foreground">
                                                                 <Calendar className="h-4 w-4 text-primary" aria-hidden="true" />
-                                                                {puppy.readyDate}
-                                                            </dd>
+                                                                {availabilityLabel}
+                                                            </dt>
+                                                            <dd className="text-foreground sm:text-right">{puppy.readyDate}</dd>
                                                         </div>
-                                                        <div className="rounded-2xl border border-primary/8 bg-background/58 px-3 py-2 text-muted-foreground dark:border-primary/15 dark:bg-white/5">
-                                                            <dt className="sr-only">Âge</dt>
-                                                            <dd className="flex items-center gap-2">
+                                                        <div className="grid gap-1 border-t border-primary/8 px-4 py-3 sm:grid-cols-[minmax(140px,0.7fr)_1fr] sm:items-center dark:border-primary/15">
+                                                            <dt className="flex items-center gap-2 font-semibold text-muted-foreground">
                                                                 <PawPrint className="h-4 w-4 text-primary" aria-hidden="true" />
-                                                                {puppy.age}
-                                                            </dd>
+                                                                Naissance
+                                                            </dt>
+                                                            <dd className="text-foreground sm:text-right">{puppy.age}</dd>
                                                         </div>
-                                                        <div className="rounded-2xl border border-primary/8 bg-background/58 px-3 py-2 text-muted-foreground dark:border-primary/15 dark:bg-white/5">
-                                                            <dt className="sr-only">Poids</dt>
-                                                            <dd className="flex items-center gap-2">
+                                                        <div className="grid gap-1 border-t border-primary/8 px-4 py-3 sm:grid-cols-[minmax(140px,0.7fr)_1fr] sm:items-center dark:border-primary/15">
+                                                            <dt className="flex items-center gap-2 font-semibold text-muted-foreground">
                                                                 <Weight className="h-4 w-4 text-primary" aria-hidden="true" />
-                                                                {puppy.weight}
-                                                            </dd>
+                                                                Poids estimé
+                                                            </dt>
+                                                            <dd className="text-foreground sm:text-right">{puppy.weight}</dd>
                                                         </div>
                                                         {!isUnavailable ? (
-                                                            <div className="rounded-2xl border border-primary/8 bg-background/58 px-3 py-2 text-muted-foreground dark:border-primary/15 dark:bg-white/5">
-                                                                <dt className="sr-only">Pédigré</dt>
-                                                                <dd className="flex items-center gap-2">
-                                                                    <BadgeCheck className="h-4 w-4 min-h-4 min-w-4 text-primary" aria-hidden="true" />
-                                                                    Fédération Française du Pomsky
-                                                                </dd>
+                                                            <div className="grid gap-1 border-t border-primary/8 px-4 py-3 sm:grid-cols-[minmax(140px,0.7fr)_1fr] sm:items-center dark:border-primary/15">
+                                                                <dt className="flex items-center gap-2 font-semibold text-muted-foreground">
+                                                                    <BadgeCheck className="h-4 w-4 text-primary" aria-hidden="true" />
+                                                                    Pédigré
+                                                                </dt>
+                                                                <dd className="text-foreground sm:text-right">Fédération Française du Pomsky</dd>
                                                             </div>
                                                         ) : null}
                                                         {typeof puppy.price === "number" ? (
-                                                            <div className="rounded-2xl border border-primary/8 bg-background/58 px-3 py-2 text-muted-foreground sm:col-span-2 dark:border-primary/15 dark:bg-white/5">
-                                                                <dt className="sr-only">Prix</dt>
-                                                                <dd
-                                                                    className={`flex gap-2 items-center text-lg font-semibold ${priceTextClass}`}
-                                                                >
-                                                                    <Banknote
-                                                                        className={`min-h-4 min-w-4 ${priceToneClass}`}
-                                                                        aria-hidden="true"
-                                                                    />
-                                                                    {formatPuppyPrice(puppy.price, puppy.priceCurrency ?? "EUR")}
-                                                                    <p className="text-xs text-muted-foreground mt-1">
+                                                            <div className="grid gap-1 border-t border-primary/8 px-4 py-3 sm:grid-cols-[minmax(140px,0.7fr)_1fr] sm:items-center dark:border-primary/15">
+                                                                <dt className="flex items-center gap-2 font-semibold text-muted-foreground">
+                                                                    <Banknote className={`h-4 w-4 ${priceToneClass}`} aria-hidden="true" />
+                                                                    Prix
+                                                                </dt>
+                                                                <dd className={`sm:text-right ${priceTextClass}`}>
+                                                                    <span className="block text-lg font-semibold">
+                                                                        {formatPuppyPrice(puppy.price, puppy.priceCurrency ?? "EUR")}
+                                                                    </span>
+                                                                    <span className="mt-1 block text-xs text-muted-foreground">
                                                                         {puppy.priceIncludes}
-                                                                    </p>
+                                                                    </span>
                                                                 </dd>
                                                             </div>
                                                         ) : null}
                                                     </dl>
+                                                    {parentProfiles.length > 0 ? (
+                                                        <section
+                                                            aria-labelledby={`${puppyAnchorId}-parents-title`}
+                                                            className="space-y-3 rounded-3xl border border-primary/10 bg-background/45 p-4 text-left dark:border-primary/18 dark:bg-white/5"
+                                                        >
+                                                            <h4
+                                                                id={`${puppyAnchorId}-parents-title`}
+                                                                className="text-xs font-bold uppercase tracking-[0.24em] text-primary/75"
+                                                            >
+                                                                Ses parents
+                                                            </h4>
+                                                            <div className="grid gap-3 sm:grid-cols-2">
+                                                                {parentProfiles.map((parent) => {
+                                                                    const ParentIcon = parent.role === "Mère" ? Venus : Mars
+                                                                    const iconClassName = parent.role === "Mère"
+                                                                        ? "text-rose-500"
+                                                                        : "text-sky-500"
+
+                                                                    return (
+                                                                        <Link
+                                                                            key={`${puppy.name}-${parent.role}-${parent.name}`}
+                                                                            href={parent.href}
+                                                                            className="group flex min-w-0 items-center gap-3 rounded-2xl border border-primary/12 bg-background/72 p-3 transition hover:border-primary/30 hover:bg-primary/8 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary dark:border-primary/20 dark:bg-white/6 dark:hover:bg-white/10"
+                                                                            aria-label={`Voir la fiche de ${parent.name}, ${parent.role.toLowerCase()} de ${puppy.name}`}
+                                                                        >
+                                                                            <span className="relative h-16 w-16 shrink-0 overflow-hidden rounded-full border-2 border-primary/15 bg-muted shadow-sm group-hover:border-primary/30">
+                                                                                <Image
+                                                                                    src={parent.image}
+                                                                                    alt={`${parent.name}, ${parent.role.toLowerCase()} de ${puppy.name}`}
+                                                                                    fill
+                                                                                    className="object-cover"
+                                                                                    sizes="64px"
+                                                                                />
+                                                                            </span>
+                                                                            <span className="min-w-0">
+                                                                                <span className="flex items-center gap-1.5 text-sm font-semibold text-muted-foreground">
+                                                                                    <ParentIcon className={`h-4 w-4 ${iconClassName}`} aria-hidden="true" />
+                                                                                    {parent.role}
+                                                                                </span>
+                                                                                <span className="block truncate text-lg font-bold text-foreground">
+                                                                                    {parent.name}
+                                                                                </span>
+                                                                                <span className="block truncate text-xs text-muted-foreground">
+                                                                                    {parent.generation}
+                                                                                </span>
+                                                                            </span>
+                                                                        </Link>
+                                                                    )
+                                                                })}
+                                                            </div>
+                                                        </section>
+                                                    ) : null}
                                                     <div className="flex flex-wrap gap-2">
                                                         {puppy.highlights.map((item) => (
                                                             <Badge key={item} variant="secondary">
