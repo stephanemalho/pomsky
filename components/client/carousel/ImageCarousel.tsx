@@ -12,6 +12,7 @@ type ImageCarouselProps = {
     className?: string
     ratioClassName?: string
     imageClassName?: string
+    showBackdrop?: boolean
 }
 
 function ImageCarousel({
@@ -23,6 +24,7 @@ function ImageCarousel({
     className,
     ratioClassName,
     imageClassName,
+    showBackdrop = false,
 }: ImageCarouselProps) {
     const [index, setIndex] = useState(0)
     const total = images.length
@@ -47,14 +49,16 @@ function ImageCarousel({
     return (
         <figure className={figureClassName}>
             <div className={containerClassName}>
-                <Image
-                    src={`/${currentSrc}`}
-                    alt=""
-                    fill
-                    aria-hidden="true"
-                    className="scale-110 object-cover opacity-25 blur-2xl"
-                    sizes={resolvedSizes}
-                />
+                {showBackdrop ? (
+                    <Image
+                        src={`/${currentSrc}`}
+                        alt=""
+                        fill
+                        aria-hidden="true"
+                        className="scale-110 object-cover opacity-25 blur-2xl"
+                        sizes={resolvedSizes}
+                    />
+                ) : null}
                 <div className="absolute inset-0 bg-linear-to-b from-background/10 via-transparent to-background/30" />
                 <Image
                     src={`/${currentSrc}`}

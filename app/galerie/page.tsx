@@ -19,7 +19,7 @@ import {
 import { generateBreadcrumbSchema, generateWebPageSchema } from "@/lib/schema-generators"
 import { cn } from "@/lib/utils"
 
-const galleryOgImage = "/pages/presentation-elevage/eleveuse-royal-pomsky-avec-un-pomsky.jpg"
+const galleryOgImage = "/pages/galerie/jose-mourinho-et-un-pomsky-royal-pomsky.png"
 
 export const revalidate = 21600
 
@@ -34,10 +34,10 @@ export const metadata: Metadata = {
         images: [
             {
                 url: `${siteConfig.siteUrl}${galleryOgImage}`,
-                alt: "Galerie Royal Pomsky",
+                alt: "Jose Mourinho avec un Pomsky Royal Pomsky",
                 width: siteConfig.ogImageWidth,
                 height: siteConfig.ogImageHeight,
-                type: "image/jpeg"
+                type: "image/png"
             }
         ]
     }),

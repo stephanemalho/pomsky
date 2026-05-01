@@ -93,7 +93,7 @@ export default function PresentationEleveusesPage() {
             priority: { mobile: false, tablet: true, desktop: true },
         },
         {
-            src: "/assets/authors/aurelie-and-puppies-and-children.webp",
+            src: "/assets/authors/aurelie-and-puppies-and-children-optimized.webp",
             alt: "Aurélie avec des enfants et des chiots Pomsky dans l'herbe",
             caption: "Un moment partagé autour des chiots et de la vie de famille.",
             className: "col-span-3 md:col-span-3 row-span-3",
@@ -127,7 +127,7 @@ export default function PresentationEleveusesPage() {
     ]
     const marineGallery = [
         {
-            src: "/assets/authors/marine-walking-dogs.jpeg",
+            src: "/assets/authors/marine-walking-dogs.webp",
             alt: "Marine en promenade avec les chiens de l'élevage",
             caption: "Marine au contact des chiens dans un moment de sortie.",
             className: "col-span-6 md:col-span-3 row-span-6 md:row-span-6",

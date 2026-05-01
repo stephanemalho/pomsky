@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import Script from "next/script"
 import { Button } from "./ui/button"
 import { Cookie } from "lucide-react"
 
@@ -13,26 +14,6 @@ type WindowWithGA = Window & {
 export default function CookieConsent() {
     const [consent, setConsent] = useState<"accepted" | "denied" | "unknown">("unknown")
     const [open, setOpen] = useState(false)
-
-    function injectGAScript() {
-        if (!GA_ID) return
-        const alreadyLoaded = document.querySelector('script[data-cookie-consent="ga-loader"]')
-        if (alreadyLoaded) return
-
-        const s1 = document.createElement("script")
-        s1.async = true
-        s1.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`
-        s1.dataset.cookieConsent = "ga-loader"
-        document.head.appendChild(s1)
-
-        const s2 = document.createElement("script")
-        s2.dataset.cookieConsent = "ga-inline"
-        s2.innerHTML = `window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', '${GA_ID}');`
-        document.head.appendChild(s2)
-    }
 
     useEffect(() => {
         try {
@@ -81,7 +62,11 @@ gtag('config', '${GA_ID}');`
     function removeGAScript() {
         if (!GA_ID) return
         try {
-            const scripts = Array.from(document.querySelectorAll('script[data-cookie-consent^="ga"]'))
+            const scripts = Array.from(
+                document.querySelectorAll(
+                    'script[data-cookie-consent^="ga"], script[id^="ga-"], script[src*="googletagmanager.com/gtag/js"]'
+                )
+            )
             scripts.forEach((s) => s.parentElement?.removeChild(s))
             try {
                 const win = window as WindowWithGA
@@ -111,12 +96,9 @@ gtag('config', '${GA_ID}');`
         notifyConsentChange()
     }
 
-    // Inject GA script when accepted, remove when refused
+    // Remove GA scripts and cookies when refused.
     useEffect(() => {
-        if (consent === "accepted") {
-            injectGAScript()
-        } else if (consent === "denied") {
-            // Remove GA scripts and cookies
+        if (consent === "denied") {
             removeGAScript()
             clearGACookies()
         }
@@ -124,7 +106,23 @@ gtag('config', '${GA_ID}');`
 
     return (
         <>
-            {/* scripts are injected manually into <head> when consent is given */}
+            {consent === "accepted" && GA_ID ? (
+                <>
+                    <Script
+                        id="ga-loader"
+                        src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+                        strategy="afterInteractive"
+                    />
+                    <Script id="ga-inline-config" strategy="afterInteractive">
+                        {`
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${GA_ID}');
+`}
+                    </Script>
+                </>
+            ) : null}
 
             {/* Banner/modal */}
             {open && (

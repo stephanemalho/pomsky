@@ -19,7 +19,7 @@ const calmVideoSchema = generateVideoObjectSchema({
     description:
         "Vidéo montrant un petit chiot Royal POMSKY détendu dans l'herbe lors d'un moment calme au contact humain.",
     pageUrl: calmVideoAnchor,
-    contentUrl: "/assets/tiktok/7503509177734548758.mp4",
+    contentUrl: "/assets/tiktok/7503509177734548758.optimized.mp4",
     thumbnailUrl: "/assets/tiktok/7503509177734548758.optimized.webp",
     uploadDate: "2025-05-12",
 })
@@ -263,7 +263,7 @@ export default function WellnessPage() {
                         posterSrc="/assets/tiktok/7503509177734548758.optimized.webp"
                         posterAlt="Petit Pomsky dans l'herbe lors d'un moment calme au contact humain"
                         mediaCaption="Une scène très simple qui rend visible le calme, la qualité de présence humaine et le respect du rythme du chiot."
-                        videoSrc="/assets/tiktok/7503509177734548758.mp4"
+                        videoSrc="/assets/tiktok/7503509177734548758.optimized.mp4"
                         tiktokHref="https://www.tiktok.com/@royalpomsky/video/7503509177734548758"
                         buttonLabel="Lire le moment calme"
                     />

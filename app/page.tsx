@@ -23,7 +23,7 @@ const homeVideoSchema = generateVideoObjectSchema({
   description:
     "Vidéo montrant plusieurs chiots Royal POMSKY dans un moment simple du quotidien, dehors dans l'herbe et au contact de l'humain.",
   pageUrl: homeVideoAnchor,
-  contentUrl: "/assets/tiktok/7241509462060616987.mp4",
+  contentUrl: "/assets/tiktok/7241509462060616987.optimized.mp4",
   thumbnailUrl: "/assets/tiktok/7241509462060616987.jpg",
   uploadDate: "2021-03-03",
 })
@@ -377,7 +377,7 @@ export default function HomePage() {
               posterSrc="/assets/tiktok/7241509462060616987.jpg"
               posterAlt="Personne assise dans l'herbe avec plusieurs chiots Royal POMSKY au contact de l'humain"
               mediaCaption="Un aperçu visuel de la vie quotidienne à l'élevage, avec des chiots proches de l'humain dans un moment calme en extérieur."
-              videoSrc="/assets/tiktok/7241509462060616987.mp4"
+              videoSrc="/assets/tiktok/7241509462060616987.optimized.mp4"
               tiktokHref="https://www.tiktok.com/@royalpomsky/video/7241509462060616987"
               buttonLabel="Lire la vidéo"
             />

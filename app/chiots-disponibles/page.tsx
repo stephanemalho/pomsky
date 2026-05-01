@@ -13,6 +13,7 @@ import {
     generateLitterCertificationsSchema,
     generatePuppyCatalogSchema,
     generatePuppyListSchema,
+    generateStructuredDataGraph,
     generateWebPageSchema
 } from "@/lib/schema-generators"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
@@ -146,8 +147,8 @@ export default function NosChiotsPage() {
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Accueil", url: "/" },
         { name: "Nos chiots", url: siteConfig.pages.puppies },
-    ])
-    const faqSchema = generateFAQSchema(convertFAQsToSchema(faqNosChiots))
+    ], siteConfig.pages.puppies)
+    const faqSchema = generateFAQSchema(convertFAQsToSchema(faqNosChiots), siteConfig.pages.puppies)
     const pageLastModValue = sitemapPages.find((page) => page.url === siteConfig.pages.puppies)?.lastmod
     const availablePuppies = puppies.filter((puppy) => !puppy.isReserved && !puppy.isAdopted)
     const puppyListSchema = availablePuppies.length > 0
@@ -171,6 +172,15 @@ export default function NosChiotsPage() {
         dateModified: pageLastModValue,
         about: ["Chiots Pomsky disponibles", "Adoption Pomsky", "Élevage Pomsky"]
     })
+    const structuredDataSchema = generateStructuredDataGraph([
+        breadcrumbSchema,
+        faqSchema,
+        puppyListSchema,
+        puppyCatalogSchema,
+        futureLittersSchema,
+        litterCertificationsSchema,
+        webPageSchema
+    ])
     const lastMod = returnLastmod(siteConfig.pages.puppies)
 
     return (
@@ -178,33 +188,7 @@ export default function NosChiotsPage() {
             {/* JSON-LD Schemas */}
             <script
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-            />
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-            />
-            {puppyListSchema ? (
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{ __html: JSON.stringify(puppyListSchema) }}
-                />
-            ) : null}
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(puppyCatalogSchema) }}
-            />
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(futureLittersSchema) }}
-            />
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(litterCertificationsSchema) }}
-            />
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredDataSchema) }}
             />
             <div className="pb-16 ">
                 <div className="container mx-auto my-12">
@@ -280,7 +264,7 @@ export default function NosChiotsPage() {
                                             <div className={`grid md:grid-cols-2 gap-0 ${index % 2 === 1 ? "md:grid-flow-col-dense" : ""}`}>
                                                 <ImageCarousel
                                                     className={index % 2 === 1 ? "md:order-2" : undefined}
-                                                    images={puppy.images}
+                                                    images={puppy.images.map((image) => image.src)}
                                                     alt={"Photos du chiot Pomsky " + puppy.name}
                                                     caption={`Photos récentes de ${puppy.name}, pour découvrir son évolution, son type et son expression.`}
                                                     priority={index === 0}

@@ -257,11 +257,13 @@ export function generateContactPointSchema() {
 }
 
 export function generateFAQSchema(
-    faqs: Array<{ question: string; answer: string }>
+    faqs: Array<{ question: string; answer: string }>,
+    pageUrl?: string
 ) {
     return {
         "@context": "https://schema.org",
         "@type": "FAQPage",
+        ...(pageUrl ? { "@id": `${toAbsoluteUrl(pageUrl)}#faq` } : {}),
         mainEntity: faqs.map((faq) => ({
             "@type": "Question",
             name: faq.question,
@@ -277,6 +279,7 @@ export function generatePuppyListSchema(puppies: PuppySchemaInput[]) {
     return {
         "@context": "https://schema.org",
         "@type": "ItemList",
+        "@id": `${toAbsoluteUrl(siteConfig.pages.puppies)}#chiots-disponibles`,
         name: "Chiots pomsky disponibles",
         description:
             "Liste des chiots pomsky Royal POMSKY disponibles à l'adoption.",
@@ -422,6 +425,25 @@ export function generateLitterCertificationsSchema(
     };
 }
 
+export function generateStructuredDataGraph(schemas: Array<Record<string, unknown> | null>) {
+    const graph = schemas.flatMap((schema) => {
+        if (!schema) return [];
+
+        if (Array.isArray(schema["@graph"])) {
+            return schema["@graph"] as Record<string, unknown>[];
+        }
+
+        const node = { ...schema };
+        delete node["@context"];
+        return [node];
+    });
+
+    return {
+        "@context": "https://schema.org",
+        "@graph": graph
+    };
+}
+
 export function generateFutureLittersSchema(litters: FutureLitterSchemaInput[]) {
     const itemListId = `${toAbsoluteUrl(siteConfig.pages.puppies)}#future-litters`;
 
@@ -464,11 +486,13 @@ export function generateFutureLittersSchema(litters: FutureLitterSchemaInput[]) 
 }
 
 export function generateBreadcrumbSchema(
-    breadcrumbs: Array<{ name: string; url: string }>
+    breadcrumbs: Array<{ name: string; url: string }>,
+    pageUrl?: string
 ) {
     return {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
+        ...(pageUrl ? { "@id": `${toAbsoluteUrl(pageUrl)}#breadcrumb` } : {}),
         itemListElement: breadcrumbs.map((crumb, index) => ({
             "@type": "ListItem",
             position: index + 1,

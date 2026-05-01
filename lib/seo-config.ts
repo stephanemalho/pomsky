@@ -304,9 +304,9 @@ export const pageMetadata = {
     },
 
     pomskyPrice: {
-        title: "Tarifs de nos Pomsky Standard, Miniature et Toy | Prix 2026 et repères pour comprendre nos écarts de prix",
+        title: "Prix Pomsky 2026 | Toy, Miniature et Standard",
         description:
-            "Consultez les tarifs 2026 des chiots Royal Pomsky : prix par catégorie, profils Standard, Miniature et Toy, et repères utiles pour comprendre nos écarts de tarif.",
+            "Consultez les prix 2026 des chiots Royal Pomsky : tarifs Toy, Miniature et Standard, critères de prix et accompagnement inclus.",
         keywords: [
             "pomsky prix",
             "prix pomsky",
@@ -324,9 +324,9 @@ export const pageMetadata = {
     },
 
     puppies: {
-        title: "CHIOTS POMSKY DISPONIBLES - ROYAL POMSKY",
+        title: "Chiots Pomsky disponibles chez Royal Pomsky",
         description:
-            "Adoption en France et en Suisse avec accompagnement personnalisé, retrait à notre élevage sur rendez-vous et chiots de formats Toy, Miniature ou Standard selon les portées.",
+            "Découvrez nos chiots Pomsky disponibles à la réservation, avec adoption accompagnée en France et en Suisse depuis notre élevage.",
         keywords: [
             "chiot pomsky disponible",
             "chiot pomsky a reserver",
@@ -375,9 +375,9 @@ export const pageMetadata = {
     },
 
     presentation: {
-        title: "Découvrez notre politique d’élevage, de la sélection des parents au suivi des chiots",
+        title: "Élevage Pomsky en France | Royal Pomsky",
         description:
-            "Comment Royal Pomsky construit son élevage : sélection de parents importés des États-Unis, programme sanitaire, portées raisonnées et travail en amont pour faire naître des chiots bien dans leurs pattes.",
+            "Découvrez notre élevage Pomsky : lignées américaines, sélection des parents, suivi sanitaire, socialisation et accompagnement des familles.",
         keywords: [
             "elevage pomsky responsable",
             "elevage canin professionnel",
@@ -535,13 +535,13 @@ export const sitemapPages = [
         url: "/chiots-disponibles",
         changefreq: "weekly",
         priority: 0.9,
-        lastmod: "2026-04-30"
+        lastmod: "2026-05-01"
     },
     {
         url: "/adoption/reussir-son-adoption",
         changefreq: "monthly",
         priority: 0.8,
-        lastmod: "2026-03-26"
+        lastmod: "2026-05-01"
     },
     {
         url: "/femelles-reproductrices",
@@ -553,7 +553,7 @@ export const sitemapPages = [
         url: "/presentation-elevage",
         changefreq: "monthly",
         priority: 0.8,
-        lastmod: "2026-03-27"
+        lastmod: "2026-05-01"
     },
     {
         url: "/presentation-eleveuses",

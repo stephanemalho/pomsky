@@ -19,7 +19,7 @@ const breedingVideoSchema = generateVideoObjectSchema({
     description:
         "Vidéo montrant plusieurs chiots Royal POMSKY qui jouent ensemble dans un espace extérieur de l'élevage.",
     pageUrl: breedingVideoAnchor,
-    contentUrl: "/assets/tiktok/7208154621523627269.mp4",
+    contentUrl: "/assets/tiktok/7208154621523627269.optimized.mp4",
     thumbnailUrl: "/assets/tiktok/7208154621523627269.optimized.webp",
     uploadDate: "2023-03-08",
 })
@@ -167,7 +167,7 @@ export default function PresentationPage() {
                         posterSrc="/assets/tiktok/7208154621523627269.optimized.webp"
                         posterAlt="Chiots Royal Pomsky qui jouent ensemble à l'élevage"
                         mediaCaption="Une courte séquence pour montrer le mouvement du groupe, la liberté d'exploration et l'ambiance réelle de l'élevage."
-                        videoSrc="/assets/tiktok/7208154621523627269.mp4"
+                        videoSrc="/assets/tiktok/7208154621523627269.optimized.mp4"
                         tiktokHref="https://www.tiktok.com/@royalpomsky/video/7208154621523627269"
                         buttonLabel="Lire la vidéo de l'élevage"
                     />

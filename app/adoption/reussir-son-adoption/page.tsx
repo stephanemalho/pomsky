@@ -29,7 +29,7 @@ const familyVideoSchema = generateVideoObjectSchema({
     description:
         "Vidéo montrant la surprise d'adoption d'un chiot Royal POMSKY au moment de la rencontre avec sa future famille.",
     pageUrl: familyVideoAnchor,
-    contentUrl: "/assets/tiktok/7101955478313356549.mp4",
+    contentUrl: "/assets/tiktok/7101955478313356549.optimized.mp4",
     thumbnailUrl: "/assets/tiktok/7101955478313356549.optimized.webp",
     uploadDate: "2022-05-26",
 })
@@ -635,7 +635,7 @@ export default function AdoptionSuccessPage() {
                         posterSrc="/assets/tiktok/7101955478313356549.optimized.webp"
                         posterAlt="Rencontre entre un chiot Royal POMSKY et sa future famille lors d'une surprise d'adoption"
                         mediaCaption="Une scène de rencontre qui illustre l'émotion du départ et l'entrée du chiot dans sa nouvelle histoire de famille."
-                        videoSrc="/assets/tiktok/7101955478313356549.mp4"
+                        videoSrc="/assets/tiktok/7101955478313356549.optimized.mp4"
                         tiktokHref="https://www.tiktok.com/@royalpomsky/video/7101955478313356549"
                         buttonLabel="Lire le souvenir de famille"
                     />

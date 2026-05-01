@@ -127,7 +127,7 @@ export const galleryInstagramItems: SocialGalleryItem[] = [
         id: "instagram-djpckuc",
         title: "Anyblue, Pomsky F5, aux côtés de Jose Mourinho",
         href: "https://www.instagram.com/reel/DJPckUcIoB5/",
-        thumbnailSrc: "/pages/galerie/insta/jose-mourinho-avec-anyblue-pomsky-de-royal-pomsky.png",
+        thumbnailSrc: "/pages/galerie/insta/jose-mourinho-avec-anyblue-pomsky-de-royal-pomsky.webp",
         thumbnailAlt: "Aperçu du reel Instagram montrant Anyblue aux côtés de Jose Mourinho",
         summary:
             "Un reel Instagram choisi pour montrer un Pomsky au profil marquant et l'univers partagé par Royal POMSKY sur ses réseaux.",
@@ -137,7 +137,7 @@ export const galleryInstagramItems: SocialGalleryItem[] = [
         id: "instagram-dwwuzk5",
         title: "Rromaaaane et Mister Boo chez Royal POMSKY",
         href: "https://www.instagram.com/reel/C4i8ah1ooe0/",
-        thumbnailSrc: "/pages/galerie/insta/rromaaaane-et-mister-boo-pomsky-de-royal-pomsky.png",
+        thumbnailSrc: "/pages/galerie/insta/rromaaaane-et-mister-boo-pomsky-de-royal-pomsky.webp",
         thumbnailAlt: "Aperçu du reel Instagram avec Rromaaaane et Mister Boo chez Royal POMSKY",
         summary:
             "Un reel Instagram sélectionné pour montrer un moment tendre du quotidien et la relation créée autour des Pomsky à l'élevage.",
@@ -147,7 +147,7 @@ export const galleryInstagramItems: SocialGalleryItem[] = [
         id: "instagram-cgu1yba",
         title: "Les aventures de Sirius et sa famille",
         href: "https://www.instagram.com/tv/CgU1yBAFW23/",
-        thumbnailSrc: "/pages/galerie/insta/Sirius-le-pomsky-conduit-un-scooter-a-paris.png",
+        thumbnailSrc: "/pages/galerie/insta/Sirius-le-pomsky-conduit-un-scooter-a-paris.webp",
         thumbnailAlt: "Aperçu du reel Instagram montrant Sirius le Pomsky avec sa famille à Paris",
         summary:
             "Un souvenir partagé autour de la vie après adoption et du lien qui se crée entre Royal POMSKY et les familles.",
@@ -193,7 +193,7 @@ export const galleryFacebookItems: SocialGalleryItem[] = [
         id: "facebook-reel-26399232579693211",
         title: "Vuk est disponible",
         href: "https://www.facebook.com/reel/26399232579693211/",
-        thumbnailSrc: "/pages/galerie/facebook/vuk-et-marine-jouent-dans-le-parc-de-royal-pomsky.png",
+        thumbnailSrc: "/pages/galerie/facebook/vuk-et-marine-jouent-dans-le-parc-de-royal-pomsky.webp",
         thumbnailAlt: "Aperçu du reel Facebook montrant Vuk et Marine dans le parc de Royal POMSKY",
         summary:
             "Dans ce premier reel Facebook, Vuk apparaît comme un mini Pomsky F5 joueur, curieux et très attachant."
@@ -202,7 +202,7 @@ export const galleryFacebookItems: SocialGalleryItem[] = [
         id: "facebook-reel-2371708993341957",
         title: "Nos petits loustics au soleil",
         href: "https://www.facebook.com/reel/2371708993341957/",
-        thumbnailSrc: "/pages/galerie/facebook/les-pomsky-jouent-pendant-la-recreation.png",
+        thumbnailSrc: "/pages/galerie/facebook/les-pomsky-jouent-pendant-la-recreation.webp",
         thumbnailAlt: "Aperçu du reel Facebook montrant des Pomsky en récréation au soleil",
         summary:
             "Un reel Facebook lumineux qui montre nos petits loustics dehors, heureux de profiter d'un moment de récréation au soleil."
@@ -211,7 +211,7 @@ export const galleryFacebookItems: SocialGalleryItem[] = [
         id: "facebook-reel-885166760972417",
         title: "Thor a passé la barre des 5 semaines",
         href: "https://www.facebook.com/reel/885166760972417/",
-        thumbnailSrc: "/pages/galerie/facebook/thor-aime-les-gratouilles.png",
+        thumbnailSrc: "/pages/galerie/facebook/thor-aime-les-gratouilles.webp",
         thumbnailAlt: "Aperçu du reel Facebook consacré à Thor à l'âge de 5 semaines",
         summary:
             "Un reel Facebook consacré à Thor, au moment où il passe le cap des 5 semaines avec toute son expression déjà bien révélée."

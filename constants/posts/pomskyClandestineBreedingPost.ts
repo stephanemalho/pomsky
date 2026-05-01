@@ -130,7 +130,7 @@ export const pomskyClandestineBreedingPost: BlogPost = {
         "élevage clandestin chien",
         "vigilance adoption"
     ],
-    image: "/assets/blog/elevage-clandestin.png",
+    image: "/assets/blog/elevage-clandestin.webp",
     imageAlt: "Illustration d'un article sur les signaux d'alerte liés aux élevages clandestins de chiots",
     recommendedLinks: [
         {
