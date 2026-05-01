@@ -251,11 +251,13 @@ export default function AdoptionSuccessPage() {
         dateModified: "2026-03-07T09:00:00+01:00",
         author: {
             "@type": "Organization",
+            "@id": `${siteConfig.siteUrl}#organization`,
             name: siteConfig.name,
             url: siteConfig.siteUrl,
         },
         publisher: {
             "@type": "Organization",
+            "@id": `${siteConfig.siteUrl}#organization`,
             name: siteConfig.name,
             logo: {
                 "@type": "ImageObject",

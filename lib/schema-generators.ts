@@ -11,6 +11,26 @@ function toAbsoluteUrl(pathOrUrl: string) {
 
 const defaultImageUrl = toAbsoluteUrl(siteConfig.ogImage);
 const organizationId = `${siteConfig.siteUrl}#organization`;
+const localBusinessId = `${siteConfig.siteUrl}#local-business`;
+
+type SchemaAddressInput = {
+    streetAddress?: string;
+    city: string;
+    postalCode: string;
+    countryCode: string;
+    department?: string;
+};
+
+function generatePostalAddressSchema(address: SchemaAddressInput) {
+    return {
+        "@type": "PostalAddress",
+        ...(address.streetAddress ? { streetAddress: address.streetAddress } : {}),
+        addressLocality: address.city,
+        postalCode: address.postalCode,
+        addressCountry: address.countryCode,
+        ...(address.department ? { addressRegion: address.department } : {})
+    };
+}
 
 function normalizeSchemaDateTime(value: string) {
     if (/^\d{4}-\d{2}-\d{2}$/.test(value)) {
@@ -167,12 +187,7 @@ export function generateOrganizationSchema() {
         industry: legal.activity,
         areaServed: "FR",
         identifier: identifiers,
-        address: {
-            "@type": "PostalAddress",
-            addressLocality: address.city,
-            postalCode: address.postalCode,
-            addressCountry: address.countryCode
-        },
+        address: generatePostalAddressSchema(address),
         additionalProperty: [
             {
                 "@type": "PropertyValue",
@@ -207,23 +222,16 @@ export function generateLocalBusinessSchema() {
     return {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
+        "@id": localBusinessId,
         name: siteConfig.name,
         url: siteConfig.siteUrl,
         image: defaultImageUrl,
         email: siteConfig.contact.email,
         telephone: siteConfig.contact.phone,
-        address: {
-            "@type": "PostalAddress",
-            addressLocality: address.city,
-            postalCode: address.postalCode,
-            addressCountry: address.countryCode,
-            ...((breedingLocation?.department || siteConfig.location?.region)
-                ? {
-                      addressRegion:
-                          breedingLocation?.department ?? siteConfig.location?.region
-                  }
-                : {})
-        },
+        address: generatePostalAddressSchema({
+            ...address,
+            department: breedingLocation?.department ?? siteConfig.location?.region
+        }),
         ...(coordinates?.latitude != null && coordinates?.longitude != null
             ? {
                   geo: {
@@ -236,6 +244,7 @@ export function generateLocalBusinessSchema() {
         openingHoursSpecification,
         parentOrganization: {
             "@type": "Organization",
+            "@id": organizationId,
             name: legal.tradeName || siteConfig.name,
             legalName: legal.legalName
         },
@@ -581,6 +590,7 @@ export function generateVideoObjectSchema(video: {
         },
         publisher: {
             "@type": "Organization",
+            "@id": organizationId,
             name: video.publisherName ?? siteConfig.name,
             url: siteConfig.siteUrl,
             logo: {
@@ -639,6 +649,7 @@ export function generateBlogPostingSchema(post: {
         })),
         publisher: {
             "@type": "Organization",
+            "@id": organizationId,
             name: post.publisherName ?? siteConfig.name,
             url: siteConfig.siteUrl,
             logo: {
