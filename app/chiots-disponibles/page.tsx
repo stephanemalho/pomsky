@@ -10,30 +10,20 @@ import {
     generateBreadcrumbSchema,
     generateFAQSchema,
     generateFutureLittersSchema,
+    generateLitterCertificationsSchema,
     generatePuppyCatalogSchema,
     generatePuppyListSchema,
-    generateVideoObjectSchema,
     generateWebPageSchema
 } from "@/lib/schema-generators"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
-import { puppies, type Puppy } from "./puppies"
+import { litterCertifications, puppies, type LitterCertification, type Puppy } from "./puppies"
 import { Card, CardContent } from "@/components/ui/card"
 import ImageCarousel from "@/components/client/carousel/ImageCarousel"
 import BreedingRecordModal from "@/components/client/puppies/BreedingRecordModal"
 import { Badge } from "@/components/ui/badge"
-import { TikTokFeatureSpotlight } from "@/components/client/tiktok/TikTokFeatureSpotlight"
 
 const puppiesOgImage = "/pages/puppies/Aika-femelle-pomsky-a-vendre.jpg"
-const familyVideoAnchor = `${siteConfig.pages.puppies}#souvenir-d-adoption`
-const familyVideoSchema = generateVideoObjectSchema({
-    name: "Souvenir d'adoption d'un chiot Royal POMSKY",
-    description:
-        "Vidéo montrant la surprise d'adoption d'un chiot Royal POMSKY au moment de la rencontre avec sa future famille.",
-    pageUrl: familyVideoAnchor,
-    contentUrl: "/assets/tiktok/7101955478313356549.mp4",
-    thumbnailUrl: "/assets/tiktok/7101955478313356549.optimized.webp",
-    uploadDate: "2022-05-26",
-})
+
 const futureLitters = [
     {
         name: "Portée de Sky et Sally - Pomsky F4",
@@ -126,6 +116,24 @@ function getPuppyStatus(puppy: Puppy) {
     return "available"
 }
 
+function getLitterCertificationForPuppy(puppy: Puppy) {
+    return litterCertifications.find((certification) =>
+        certification.parentLabel === puppy.parents && certification.puppyNames.includes(puppy.name)
+    )
+}
+
+function getCertificationParentLine(certification: LitterCertification) {
+    return certification.parents
+        .map((parent) => `${parent.role} : ${parent.name} (${parent.generation}, ${parent.pedigree})`)
+        .join(" · ")
+}
+
+function getCertificationIdsForPuppy(puppy: Puppy) {
+    const certification = getLitterCertificationForPuppy(puppy)
+
+    return certification ? [certification.id] : undefined
+}
+
 const breedingCtaPanelClass =
     "rounded-3xl border border-primary/18 bg-primary/[0.07] p-4 shadow-sm dark:border-primary/25 dark:bg-primary/[0.12]"
 const breedingPrimaryCtaClass =
@@ -151,9 +159,11 @@ export default function NosChiotsPage() {
             status: getPuppyStatus(puppy),
             url: `${siteConfig.pages.puppies}#${getPuppyAnchorId(puppy.name)}`,
             interestFormUrl: puppy.linkTo,
+            certificationIds: getCertificationIdsForPuppy(puppy),
         }))
     )
     const futureLittersSchema = generateFutureLittersSchema(futureLitters)
+    const litterCertificationsSchema = generateLitterCertificationsSchema(litterCertifications)
     const webPageSchema = generateWebPageSchema({
         name: pageMetadata.puppies.title,
         description: pageMetadata.puppies.description,
@@ -190,11 +200,11 @@ export default function NosChiotsPage() {
             />
             <script
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(litterCertificationsSchema) }}
             />
             <script
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(familyVideoSchema) }}
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
             />
             <div className="pb-16 ">
                 <div className="container mx-auto my-12">
@@ -202,71 +212,20 @@ export default function NosChiotsPage() {
                         <h1
                             className="text-xl md:text-3xl font-bold">{pageContent.puppies.h1}</h1>
                         <p className="text-md text-muted-foreground max-w-3xl mx-auto">
-                            {pageContent.puppies.description}
-                        </p>
-                        <p className="text-md text-muted-foreground max-w-3xl mx-auto">
                             {pageContent.puppies.descriptionSecondary}
                         </p>
-                        <div className="w-24 h-1 bg-primary mx-auto rounded-full" aria-hidden="true" />
                     </section>
                     {/* <NoAvailable /> */}
                     <section className="relative mx-auto mb-12 overflow-hidden rounded-4xl border border-primary/12 bg-[radial-gradient(circle_at_top_right,rgba(196,86,55,0.12),transparent_32%),linear-gradient(180deg,rgba(255,255,255,0.92),rgba(248,240,236,0.86))] p-6 text-center shadow-sm dark:border-white/10 dark:bg-[linear-gradient(135deg,rgba(39,19,16,0.98),rgba(64,30,25,0.94),rgba(28,13,11,0.98))] dark:shadow-[0_18px_60px_rgba(0,0,0,0.42)] md:p-10">
                         <div className="absolute -left-10 top-8 h-28 w-28 rounded-full bg-primary/8 blur-3xl dark:bg-primary/12" aria-hidden="true" />
                         <div className="absolute right-0 top-0 h-36 w-36 rounded-full bg-primary/8 blur-3xl dark:bg-primary/12" aria-hidden="true" />
-                        <div className="relative space-y-5">
-                            <Badge className="border-0 bg-primary text-primary-foreground hover:bg-primary">
-                                Adoption accompagnee
-                            </Badge>
-                            <h2 className="text-xl md:text-3xl font-semibold leading-tight">
-                                Un processus d&apos;adoption transparent et accompagné
-                            </h2>
-                            <p className="mx-auto max-w-3xl text-muted-foreground">
-                                Chaque adoption chez Royal POMSKY s&apos;inscrit dans un parcours réfléchi : échanges préalables avec les familles, conseils personnalisés, transparence sur les lignées et accompagnement avant et après l&apos;arrivée du chiot. Cette approche garantit une adoption durable et respectueuse du bien-être animal.
-                            </p>
-                            <div className="grid gap-3 pt-2 md:grid-cols-3">
-                                {[
-                                    { label: "Accompagnement", value: "Avant et après l'arrivée" },
-                                    { label: "Retrait", value: "Uniquement à l'élevage" },
-                                    { label: "Zone", value: "France et Suisse" },
-                                ].map((item) => (
-                                    <div key={item.label} className="rounded-2xl border border-primary/10 bg-background/72 p-4 text-left shadow-sm backdrop-blur dark:border-primary/18 dark:bg-white/6">
-                                        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-                                            {item.label}
-                                        </p>
-                                        <p className="mt-2 text-sm font-semibold text-foreground md:text-base">
-                                            {item.value}
-                                        </p>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                        <div className="relative mx-auto mt-10 w-24 h-1 rounded-full bg-primary" aria-hidden="true" />
-                        <div className="relative space-y-4 max-w-3xl mx-auto pt-10">
-                            <h3 id="adoption-france-suisse" className="text-lg font-medium pt-16">
-                                Adoption possible partout en France et en Suisse, avec retrait des chiots à l&apos;élevage uniquement sur rendez-vous.
-                            </h3>
-                            <p className="text-muted-foreground">
-                                Vous résidez à l&apos;étranger ? Nous pouvons vous aider pour le départ de votre chiot sous conditions, avec un accompagnement
-                                personnalisé pour chaque étape administrative et sanitaire. Pour un transport international sécurisé, nous recommandons{" "}
-                                <a
-                                    href="https://anivetvoyage.com/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="font-medium text-primary underline underline-offset-4 hover:no-underline"
-                                >
-                                    Anivet Voyage
-                                </a>.
-                            </p>
-                            <p className="text-sm text-muted-foreground">
-                                Pour préparer le trajet, l&apos;installation à la maison et les premiers jours, consultez aussi notre guide{" "}
-                                <Link
-                                    href="/adoption/reussir-son-adoption"
-                                    className="font-medium text-primary underline underline-offset-4 hover:no-underline"
-                                >
-                                    Réussir son adoption
-                                </Link>.
-                            </p>
-                        </div>
+                        <h2 className="text-xl md:text-3xl font-semibold leading-tight">
+                            Liste des chiots actuellement disponibles à l&apos;adoption
+                        </h2>
+                        <div className="relative mx-auto my-10 w-24 h-1 rounded-full bg-primary" aria-hidden="true" />
+                        <p className="text-md text-muted-foreground max-w-3xl mx-auto">
+                            {pageContent.puppies.description}
+                        </p>
                         <div className="grid gap-10 my-12">
                             {availablePuppies.map((puppy, index) => {
                                 const puppyAnchorId = getPuppyAnchorId(puppy.name)
@@ -297,6 +256,7 @@ export default function NosChiotsPage() {
                                     ? "text-muted-foreground line-through"
                                     : "text-primary"
                                 const hasCharmBeautyAdministrativeRecord = puppy.parents === "Parents : CHARM & BEAUTY"
+                                const litterCertification = getLitterCertificationForPuppy(puppy)
                                 const availabilityLabel =
                                     puppyStatus === "available"
                                         ? "Départ possible"
@@ -351,12 +311,19 @@ export default function NosChiotsPage() {
                                                             <dt className="sr-only">Parents</dt>
                                                             <Heart className="h-4 w-4 text-primary" aria-hidden="true" />
                                                             <div className="flex min-w-0 flex-1 items-center justify-between gap-3">
-                                                                <dd className="min-w-0">{puppy.parents}</dd>
+                                                                <dd className="min-w-0">
+                                                                    <span>{puppy.parents}</span>
+                                                                    {litterCertification ? (
+                                                                        <span className="mt-1 block text-xs leading-relaxed text-muted-foreground">
+                                                                            {litterCertification.certificationIdentification} · portée née le 24/04/2026 · {getCertificationParentLine(litterCertification)}
+                                                                        </span>
+                                                                    ) : null}
+                                                                </dd>
                                                                 {hasCharmBeautyAdministrativeRecord ? (
                                                                     <BreedingRecordModal
-                                                                        imageSrc="/pages/puppies/fiche-administrative-mariage-pomsky-f4-et-pomsky-f3.jpg"
-                                                                        title="Fiche administrative du mariage Charm et Beauty"
-                                                                        description="Document récapitulatif du mariage à l'origine de cette portée, consultable en grand format."
+                                                                        imageSrc={litterCertification?.imageSrc ?? "/pages/puppies/fiche-administrative-mariage-pomsky-f4-et-pomsky-f3.jpg"}
+                                                                        title={litterCertification?.name ?? "Fiche administrative du mariage Charm et Beauty"}
+                                                                        description={litterCertification?.description ?? "Document récapitulatif du mariage à l'origine de cette portée, consultable en grand format."}
                                                                     />
                                                                 ) : null}
                                                             </div>
@@ -443,142 +410,7 @@ export default function NosChiotsPage() {
                             })}
                         </div>
                     </section>
-                    <section
-                        id="portee-sky-sally"
-                        className="relative my-6 mt-12 overflow-hidden rounded-4xl border border-primary/15 bg-[radial-gradient(circle_at_top_left,rgba(196,86,55,0.16),transparent_38%),linear-gradient(135deg,rgba(255,255,255,0.94),rgba(251,240,235,0.96)_48%,rgba(246,228,220,0.98))] p-6 dark:border-white/10 dark:bg-[linear-gradient(135deg,rgba(39,19,16,0.98),rgba(64,30,25,0.94),rgba(28,13,11,0.98))] dark:shadow-[0_18px_60px_rgba(0,0,0,0.42)] md:p-10"
-                    >
-                        <div className="absolute -left-12 top-10 h-32 w-32 rounded-full bg-primary/10 blur-3xl dark:bg-primary/14" aria-hidden="true" />
-                        <div className="absolute -right-16 bottom-6 h-40 w-40 rounded-full bg-primary/10 blur-3xl dark:bg-primary/14" aria-hidden="true" />
-                        <div className="relative grid gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
-                            <div className="space-y-6">
-                                <div className="flex flex-wrap gap-3">
-                                    <Badge className="border-0 bg-primary text-primary-foreground hover:bg-primary">
-                                        Portée née
-                                    </Badge>
-                                    <Badge variant="secondary" className="bg-background/85 text-foreground dark:bg-white/8">
-                                        7 chiots nés le 28 avril 2026
-                                    </Badge>
-                                    <Badge variant="outline" className="border-primary/30 bg-background/75 dark:border-primary/25 dark:bg-white/6">
-                                        Portée Pomsky F4+
-                                    </Badge>
-                                </div>
 
-                                <div className="space-y-4">
-                                    <h2 className="max-w-2xl text-2xl font-semibold leading-tight md:text-4xl">
-                                        Sky et Sally ont donné naissance à 7 chiots
-                                    </h2>
-                                    <p className="max-w-2xl text-base leading-relaxed text-foreground/80 md:text-lg">
-                                        La portée née le 28 avril 2026 à l&apos;élevage est désormais visible sur cette page. Sept chiots issus du mariage entre Sky et Sally sont présentés parmi les chiots actuellement disponibles.
-                                    </p>
-                                    <p className="max-w-2xl text-base leading-relaxed text-foreground/75">
-                                        Sky, mâle bleu et blanc au regard perçant et à la fourrure whooly, et Sally, femelle chocolat et blanc au masque Fleur de Lys, forment un duo très recherché pour leur équilibre, leur type et leur belle qualité de lignée.
-                                    </p>
-                                </div>
-
-                                <div className="grid gap-3 sm:grid-cols-3">
-                                    {[
-                                        { label: "Parents", value: "Sky × Sally" },
-                                        { label: "Naissance", value: "28 avril 2026" },
-                                        { label: "Portée", value: "7 chiots disponibles" },
-                                    ].map((item) => (
-                                        <div
-                                            key={item.label}
-                                            className="rounded-2xl border border-primary/10 bg-background/75 p-4 shadow-sm backdrop-blur dark:border-primary/18 dark:bg-white/6"
-                                        >
-                                            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-                                                {item.label}
-                                            </p>
-                                            <p className="mt-2 text-base font-semibold text-foreground">
-                                                {item.value}
-                                            </p>
-                                        </div>
-                                    ))}
-                                </div>
-
-                                <div className="rounded-3xl border border-primary/10 bg-background/70 p-5 shadow-sm dark:border-primary/18 dark:bg-white/6">
-                                    <div className="grid gap-4 sm:grid-cols-2">
-                                        <div className="space-y-2">
-                                            <p className="text-sm font-semibold text-foreground">Une portée suivie avec attention</p>
-                                            <p className="text-sm leading-relaxed text-muted-foreground">
-                                                Les chiots de cette portée sont désormais nés et suivis quotidiennement à l&apos;élevage, avec des nouvelles régulières, des photos et un accompagnement pour les familles intéressées.
-                                            </p>
-                                        </div>
-                                        <div className="space-y-2">
-                                            <p className="text-sm font-semibold text-foreground">Pour les familles intéressées</p>
-                                            <p className="text-sm leading-relaxed text-muted-foreground">
-                                                Si vous souhaitez réserver une visite ou demander plus de photos et de vidéos, vous pouvez nous contacter dès maintenant.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className={breedingCtaPanelClass}>
-                                    <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-primary/80">
-                                        Découvrir Cette Portée
-                                    </p>
-                                    <div className="flex flex-col gap-3 sm:flex-row">
-                                        <a
-                                            href="https://forms.gle/av3Tv3bbZ6T8ZF4Z7"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className={breedingPrimaryCtaClass}
-                                        >
-                                            Réserver une visite ou demander plus de photos/vidéos
-                                        </a>
-                                        <div className="flex flex-col gap-3 sm:flex-row">
-                                            <Link
-                                                href={`/femelles-reproductrices#${getReproductorAnchorId("SKY")}`}
-                                                className={breedingSecondaryCtaClass}
-                                            >
-                                                Voir Sky
-                                            </Link>
-                                            <Link
-                                                href={`/femelles-reproductrices#${getReproductorAnchorId("SALLY")}`}
-                                                className={breedingSecondaryCtaClass}
-                                            >
-                                                Voir Sally
-                                            </Link>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="grid gap-4 lg:justify-items-end">
-                                <figure className="w-full max-w-md overflow-hidden rounded-3xl border border-primary/10 bg-background/70 shadow-md dark:border-primary/18 dark:bg-white/6">
-                                    <div className="relative aspect-6/4 w-full">
-                                        <div className="absolute left-4 top-5 z-10 -rotate-6 rounded-[1.25rem] border-[3px] border-amber-700 bg-[#fff1c9] px-5 py-2 text-sm font-extrabold uppercase tracking-[0.08em] text-amber-800 shadow-[0_0_0_4px_#d97706] md:text-base">
-                                            En cours
-                                        </div>
-                                        <Image
-                                            src="/pages/reproducteurs/mariage-sky-et-sally-pomsky.jpg"
-                                            alt="Sky et Sally, deux Pomsky de l'élevage Royal POMSKY, présentés pour suivre leur portée"
-                                            fill
-                                            className="object-cover"
-                                            sizes="(min-width: 1024px) 26rem, (min-width: 640px) 70vw, 100vw"
-                                        />
-                                    </div>
-                                    <figcaption className="p-4 text-sm leading-relaxed text-muted-foreground">
-                                        Sky et Sally, à l&apos;origine d&apos;une portée née le 28 avril 2026, aujourd&apos;hui présentée parmi les chiots disponibles.
-                                    </figcaption>
-                                </figure>
-
-                                <figure className="w-full max-w-md overflow-hidden rounded-3xl border border-primary/10 bg-background/70 shadow-md dark:border-primary/18 dark:bg-white/6">
-                                    <div className="relative aspect-6/4 w-full">
-                                        <Image
-                                            src="/pages/reproducteurs/echographie-sky-et-sally.jpg"
-                                            alt="Échographie de suivi pour la portée de Sky et Sally"
-                                            fill
-                                            className="object-cover"
-                                            sizes="(min-width: 1024px) 20rem, (min-width: 640px) 45vw, 100vw"
-                                        />
-                                    </div>
-                                    <figcaption className="p-4 text-sm leading-relaxed text-muted-foreground">
-                                        L&apos;échographie de Sky et Sally annonçait 7 chiots, désormais nés et suivis avec attention à l&apos;élevage.
-                                    </figcaption>
-                                </figure>
-                            </div>
-                        </div>
-                    </section>
                     <section id="portee-inuit-mogu" className="relative mx-auto mt-12 mb-12 overflow-hidden rounded-4xl border border-primary/12 bg-[radial-gradient(circle_at_bottom_right,rgba(196,86,55,0.12),transparent_30%),linear-gradient(180deg,rgba(255,255,255,0.94),rgba(247,238,234,0.88))] p-8 text-left shadow-sm dark:border-white/10 dark:bg-[linear-gradient(135deg,rgba(39,19,16,0.98),rgba(64,30,25,0.94),rgba(28,13,11,0.98))] dark:shadow-[0_18px_60px_rgba(0,0,0,0.42)] md:p-10">
                         <div className="absolute -right-8 top-12 h-28 w-28 rounded-full bg-primary/8 blur-3xl dark:bg-primary/12" aria-hidden="true" />
                         <div className="relative grid gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
@@ -745,20 +577,6 @@ export default function NosChiotsPage() {
                             </div>
                         </div>
                     </section>
-                    <TikTokFeatureSpotlight
-                        id="souvenir-d-adoption"
-                        badge="Souvenir d'adoption"
-                        title="Un chiot Royal Pomsky, c'est aussi une vraie émotion au moment de la rencontre"
-                        description="Il y a des adoptions qui marquent dès les premières secondes. Dans cette scène, on ne voit pas seulement un chiot rejoindre son foyer: on voit un père qui a gardé le secret, des enfants qui découvrent la surprise, puis cet instant très particulier où tout bascule dans la joie. C'est exactement le type de moment qui rappelle qu'un chiot n'arrive jamais seulement dans une maison, mais dans une histoire de famille qui commence."
-                        videoTitle="Une surprise de famille autour d'un chiot Royal Pomsky"
-                        videoSummary="Un moment simple et sincère qui montre la rencontre réelle entre un chiot et sa future famille."
-                        posterSrc="/assets/tiktok/7101955478313356549.optimized.webp"
-                        posterAlt="Rencontre entre un chiot Royal POMSKY et sa future famille lors d'une surprise d'adoption"
-                        mediaCaption="Une scène de rencontre qui illustre l'émotion du départ et l'entrée du chiot dans sa nouvelle histoire de famille."
-                        videoSrc="/assets/tiktok/7101955478313356549.mp4"
-                        tiktokHref="https://www.tiktok.com/@royalpomsky/video/7101955478313356549"
-                        buttonLabel="Lire le souvenir de famille"
-                    />
                     <section
                         id="projet-charm-alou"
                         className="relative mx-auto mt-12 mb-12 overflow-hidden rounded-4xl border border-primary/12 bg-[radial-gradient(circle_at_bottom_right,rgba(196,86,55,0.12),transparent_30%),linear-gradient(180deg,rgba(255,255,255,0.94),rgba(247,238,234,0.88))] p-8 text-left shadow-sm dark:border-white/10 dark:bg-[linear-gradient(135deg,rgba(39,19,16,0.98),rgba(64,30,25,0.94),rgba(28,13,11,0.98))] dark:shadow-[0_18px_60px_rgba(0,0,0,0.42)] md:p-10"
@@ -857,14 +675,14 @@ export default function NosChiotsPage() {
                                             Suivi des naissances
                                         </p>
                                         <div className="flex flex-col gap-3 sm:flex-row">
-                                        <a
-                                            href="https://forms.gle/7o7g6MptyDDkP611A"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className={breedingPrimaryCtaClass}
-                                        >
-                                            Nous contacter pour suivre cette portée
-                                        </a>
+                                            <a
+                                                href="https://forms.gle/7o7g6MptyDDkP611A"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className={breedingPrimaryCtaClass}
+                                            >
+                                                Nous contacter pour suivre cette portée
+                                            </a>
                                             <div className="flex flex-col gap-3 sm:flex-row">
                                                 <Link
                                                     href={`/femelles-reproductrices#${getReproductorAnchorId("CHARM")}`}
@@ -1003,14 +821,14 @@ export default function NosChiotsPage() {
                                             Suivi des naissances
                                         </p>
                                         <div className="flex flex-col gap-3 sm:flex-row">
-                                        <a
-                                            href="https://forms.gle/DJCcN9iHtUSCAhZE7"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className={breedingPrimaryCtaClass}
-                                        >
-                                            Nous contacter pour suivre cette portée
-                                        </a>
+                                            <a
+                                                href="https://forms.gle/DJCcN9iHtUSCAhZE7"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className={breedingPrimaryCtaClass}
+                                            >
+                                                Nous contacter pour suivre cette portée
+                                            </a>
                                             <div className="flex flex-col gap-3 sm:flex-row">
                                                 <Link
                                                     href={`/femelles-reproductrices#${getReproductorAnchorId("CHARM")}`}
@@ -1049,6 +867,60 @@ export default function NosChiotsPage() {
                                     </figcaption>
                                 </figure>
                             </div>
+                        </div>
+                    </section>
+                    <section className="relative mx-auto mb-12 overflow-hidden rounded-4xl border border-primary/12 bg-[radial-gradient(circle_at_top_right,rgba(196,86,55,0.12),transparent_32%),linear-gradient(180deg,rgba(255,255,255,0.92),rgba(248,240,236,0.86))] p-6 text-center shadow-sm dark:border-white/10 dark:bg-[linear-gradient(135deg,rgba(39,19,16,0.98),rgba(64,30,25,0.94),rgba(28,13,11,0.98))] dark:shadow-[0_18px_60px_rgba(0,0,0,0.42)] md:p-10">
+                        <Badge className="border-0 bg-primary text-primary-foreground hover:bg-primary">
+                            Adoption accompagnée
+                        </Badge>
+                        <div className="relative mx-auto my-10 w-24 h-1 rounded-full bg-primary" aria-hidden="true" />
+                        <h2 className="text-xl md:text-3xl font-semibold leading-tight">
+                            Un processus d&apos;adoption transparent et accompagné
+                        </h2>
+                        <p className="mx-auto max-w-3xl text-muted-foreground">
+                            Chaque adoption chez Royal POMSKY s&apos;inscrit dans un parcours réfléchi : échanges préalables avec les familles, conseils personnalisés, transparence sur les lignées et accompagnement avant et après l&apos;arrivée du chiot. Cette approche garantit une adoption durable et respectueuse du bien-être animal.
+                        </p>
+                        <div className="grid gap-3 mt-12 md:grid-cols-3">
+                            {[
+                                { label: "Accompagnement", value: "Avant et après l'arrivée" },
+                                { label: "Retrait", value: "Uniquement à l'élevage" },
+                                { label: "Zone", value: "France et Suisse" },
+                            ].map((item) => (
+                                <div key={item.label} className="rounded-2xl border border-primary/10 bg-background/72 p-4 text-left shadow-sm backdrop-blur dark:border-primary/18 dark:bg-white/6">
+                                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+                                        {item.label}
+                                    </p>
+                                    <p className="mt-2 text-sm font-semibold text-foreground md:text-base">
+                                        {item.value}
+                                    </p>
+                                </div>
+                            ))}
+                        </div>
+                        <div className="relative space-y-4 max-w-3xl mx-auto pt-10">
+                            <h3 id="adoption-france-suisse" className="text-lg font-medium pt-16">
+                                Adoption possible partout en France et en Suisse, avec retrait des chiots à l&apos;élevage uniquement sur rendez-vous.
+                            </h3>
+                            <p className="text-muted-foreground">
+                                Vous résidez à l&apos;étranger ? Nous pouvons vous aider pour le départ de votre chiot sous conditions, avec un accompagnement
+                                personnalisé pour chaque étape administrative et sanitaire. Pour un transport international sécurisé, nous recommandons{" "}
+                                <a
+                                    href="https://anivetvoyage.com/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="font-medium text-primary underline underline-offset-4 hover:no-underline"
+                                >
+                                    Anivet Voyage
+                                </a>.
+                            </p>
+                            <p className="text-sm text-muted-foreground">
+                                Pour préparer le trajet, l&apos;installation à la maison et les premiers jours, consultez aussi notre guide{" "}
+                                <Link
+                                    href="/adoption/reussir-son-adoption"
+                                    className="font-medium text-primary underline underline-offset-4 hover:no-underline"
+                                >
+                                    Réussir son adoption
+                                </Link>.
+                            </p>
                         </div>
                     </section>
                     <FAQSection

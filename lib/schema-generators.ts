@@ -55,6 +55,7 @@ type PuppyCatalogSchemaInput = {
     priceIncludes?: string;
     priceValidUntil?: string;
     interestFormUrl?: string;
+    certificationIds?: string[];
     status: "available" | "reserved" | "adopted";
 };
 
@@ -72,6 +73,25 @@ type FutureLitterSchemaInput = {
     stage: string;
     expectedBirthWindow?: string;
     observedCount?: string;
+};
+
+type LitterCertificationSchemaInput = {
+    id: string;
+    name: string;
+    description: string;
+    imageSrc: string;
+    issuer: string;
+    breeder: string;
+    certificationIdentification: string;
+    litterBirthDate: string;
+    puppyNames: string[];
+    parents: Array<{
+        role: string;
+        name: string;
+        breed: string;
+        generation: string;
+        pedigree: string;
+    }>;
 };
 
 function toPuppyAnchorId(name: string) {
@@ -313,6 +333,13 @@ export function generatePuppyCatalogSchema(puppies: PuppyCatalogSchemaInput[]) {
             ...(puppy.color ? { color: puppy.color } : {}),
             ...(puppy.size ? { size: puppy.size } : {}),
             additionalProperty,
+            ...(puppy.certificationIds && puppy.certificationIds.length > 0
+                ? {
+                      hasCertification: puppy.certificationIds.map((certificationId) => ({
+                          "@id": `${toAbsoluteUrl(siteConfig.pages.puppies)}#${certificationId}`
+                      }))
+                  }
+                : {}),
             ...(puppy.interestFormUrl
                 ? {
                       subjectOf: {
@@ -345,6 +372,53 @@ export function generatePuppyCatalogSchema(puppies: PuppyCatalogSchemaInput[]) {
             },
             ...puppyNodes
         ]
+    };
+}
+
+export function generateLitterCertificationsSchema(
+    certifications: LitterCertificationSchemaInput[]
+) {
+    return {
+        "@context": "https://schema.org",
+        "@graph": certifications.map((certification) => {
+            const certificationUrl = `${toAbsoluteUrl(siteConfig.pages.puppies)}#${certification.id}`;
+            const parentSummary = certification.parents
+                .map((parent) => `${parent.role} : ${parent.name} - ${parent.breed} ${parent.generation} - ${parent.pedigree}`)
+                .join(" ; ");
+
+            return {
+                "@type": "Certification",
+                "@id": certificationUrl,
+                name: certification.name,
+                description: certification.description,
+                certificationIdentification: certification.certificationIdentification,
+                datePublished: certification.litterBirthDate,
+                issuedBy: {
+                    "@type": "Organization",
+                    name: certification.issuer
+                },
+                image: {
+                    "@type": "ImageObject",
+                    url: toAbsoluteUrl(certification.imageSrc),
+                    caption: certification.name
+                },
+                about: {
+                    "@type": "Thing",
+                    name: `Portée ${certification.parents.map((parent) => parent.name).join(" et ")} née le ${certification.litterBirthDate}`,
+                    additionalProperty: [
+                        toAdditionalProperty("Élevage", certification.breeder),
+                        toAdditionalProperty("Date de naissance de la portée", certification.litterBirthDate),
+                        toAdditionalProperty("Numéro de déclaration", certification.certificationIdentification),
+                        toAdditionalProperty("Parents", parentSummary),
+                        toAdditionalProperty("Chiots de la portée", certification.puppyNames.join(", "))
+                    ].filter(Boolean)
+                },
+                subjectOf: {
+                    "@type": "WebPage",
+                    "@id": `${toAbsoluteUrl(siteConfig.pages.puppies)}#webpage`
+                }
+            };
+        })
     };
 }
 

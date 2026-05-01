@@ -79,7 +79,7 @@ const navGroups = [
         label: "Adoption",
         items: [
             {
-                title: "Nos chiots",
+                title: "Nos chiots disponibles",
                 href: "/chiots-disponibles",
                 description: "Portées disponibles et informations d'adoption.",
                 icon: PawPrint,

@@ -27,6 +27,58 @@ export type Puppy = {
     priceValidUntil?: string;
 };
 
+export type LitterCertification = {
+    id: string;
+    parentLabel: string;
+    name: string;
+    description: string;
+    imageSrc: string;
+    issuer: string;
+    breeder: string;
+    certificationIdentification: string;
+    litterBirthDate: string;
+    puppyNames: string[];
+    parents: Array<{
+        role: "Père" | "Mère";
+        name: string;
+        breed: string;
+        generation: string;
+        pedigree: string;
+    }>;
+};
+
+export const litterCertifications: LitterCertification[] = [
+    {
+        id: "declaration-portee-charm-beauty",
+        parentLabel: "Parents : CHARM & BEAUTY",
+        name: "Déclaration de portée FFP Charm et Beauty",
+        description:
+            "Déclaration de portée établie par la Fédération Française du Pomsky pour la portée Charm et Beauty née le 24 avril 2026.",
+        imageSrc: "/pages/puppies/fiche-administrative-mariage-pomsky-f4-et-pomsky-f3.jpg",
+        issuer: "Fédération Française du Pomsky",
+        breeder: "Élevage Royal Pomsky",
+        certificationIdentification: "DP FFP 2026.080-083",
+        litterBirthDate: "2026-04-24",
+        puppyNames: ["SANO", "KIRO", "NAYA", "LUMA"],
+        parents: [
+            {
+                role: "Père",
+                name: "Paramout pomsky Charm",
+                breed: "Pomsky",
+                generation: "F3",
+                pedigree: "CE FFP 2025.059",
+            },
+            {
+                role: "Mère",
+                name: "Royal Pomsky Beauty",
+                breed: "Pomsky",
+                generation: "F4",
+                pedigree: "CG FFP 2025.159",
+            },
+        ],
+    },
+];
+
 export const puppies: Puppy[] = [
     {
         name: "SANO",

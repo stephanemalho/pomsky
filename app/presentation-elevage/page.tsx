@@ -76,6 +76,17 @@ export default function PresentationPage() {
     })
     const lastMod = returnLastmod(siteConfig.pages.presentation)
 
+    function getReproductorAnchorId(name: string) {
+    return name.replace(/['"]/g, "").trim().toLowerCase().replace(/\s+/g, "-")
+}
+
+    const breedingCtaPanelClass =
+        "rounded-3xl border border-primary/18 bg-primary/[0.07] p-4 shadow-sm dark:border-primary/25 dark:bg-primary/[0.12]"
+    const breedingPrimaryCtaClass =
+        "flex min-h-12 items-center justify-center rounded-xl bg-primary px-5 py-3 text-center font-semibold text-white shadow-[0_14px_34px_rgba(196,86,55,0.22)] transition hover:-translate-y-0.5 hover:bg-primary/90 hover:shadow-[0_18px_38px_rgba(196,86,55,0.28)] dark:text-[#5b3a1a] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+    const breedingSecondaryCtaClass =
+        "flex min-h-12 items-center justify-center rounded-xl border border-primary/30 bg-background/88 px-5 py-3 text-center font-semibold text-primary transition hover:bg-primary/10 dark:border-primary/30 dark:bg-white/8 dark:hover:bg-white/12"
+
     return (
         <>
             {/* JSON-LD Schemas */}
@@ -438,6 +449,145 @@ export default function PresentationPage() {
                                     </div>
                                 </CardContent>
                             </Card>
+                        </div>
+                    </section>
+                    <section
+                        id="portee-sky-sally"
+                        className="relative my-6 mt-12 overflow-hidden rounded-4xl border border-primary/15 bg-[radial-gradient(circle_at_top_left,rgba(196,86,55,0.16),transparent_38%),linear-gradient(135deg,rgba(255,255,255,0.94),rgba(251,240,235,0.96)_48%,rgba(246,228,220,0.98))] p-6 dark:border-white/10 dark:bg-[linear-gradient(135deg,rgba(39,19,16,0.98),rgba(64,30,25,0.94),rgba(28,13,11,0.98))] dark:shadow-[0_18px_60px_rgba(0,0,0,0.42)] md:p-10"
+                    >
+                        <div className="absolute -left-12 top-10 h-32 w-32 rounded-full bg-primary/10 blur-3xl dark:bg-primary/14" aria-hidden="true" />
+                        <div className="absolute -right-16 bottom-6 h-40 w-40 rounded-full bg-primary/10 blur-3xl dark:bg-primary/14" aria-hidden="true" />
+                        <div className="relative grid gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
+                            <div className="space-y-6">
+                                <div className="flex flex-wrap gap-3">
+                                    <Badge className="border-0 bg-primary text-primary-foreground hover:bg-primary">
+                                        Portée née
+                                    </Badge>
+                                    <Badge variant="secondary" className="bg-background/85 text-foreground dark:bg-white/8">
+                                        7 chiots nés le 28 avril 2026
+                                    </Badge>
+                                    <Badge variant="outline" className="border-primary/30 bg-background/75 dark:border-primary/25 dark:bg-white/6">
+                                        Portée Pomsky F4+
+                                    </Badge>
+                                </div>
+
+                                <div className="space-y-4">
+                                    <h2 className="max-w-2xl text-2xl font-semibold leading-tight md:text-4xl">
+                                        Sky et Sally ont donné naissance à 7 chiots
+                                    </h2>
+                                    <p className="max-w-2xl text-base leading-relaxed text-foreground/80 md:text-lg">
+                                        La portée née le 28 avril 2026 à l&apos;élevage est désormais visible sur cette page. Sept chiots issus du mariage entre Sky et Sally sont présentés parmi les chiots actuellement disponibles.
+                                    </p>
+                                    <p className="max-w-2xl text-base leading-relaxed text-foreground/75">
+                                        Sky, mâle bleu et blanc au regard perçant et à la fourrure whooly, et Sally, femelle chocolat et blanc au masque Fleur de Lys, forment un duo très recherché pour leur équilibre, leur type et leur belle qualité de lignée.
+                                    </p>
+                                </div>
+
+                                <div className="grid gap-3 sm:grid-cols-3">
+                                    {[
+                                        { label: "Parents", value: "Sky × Sally" },
+                                        { label: "Naissance", value: "28 avril 2026" },
+                                        { label: "Portée", value: "7 chiots disponibles" },
+                                    ].map((item) => (
+                                        <div
+                                            key={item.label}
+                                            className="rounded-2xl border border-primary/10 bg-background/75 p-4 shadow-sm backdrop-blur dark:border-primary/18 dark:bg-white/6"
+                                        >
+                                            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+                                                {item.label}
+                                            </p>
+                                            <p className="mt-2 text-base font-semibold text-foreground">
+                                                {item.value}
+                                            </p>
+                                        </div>
+                                    ))}
+                                </div>
+
+                                <div className="rounded-3xl border border-primary/10 bg-background/70 p-5 shadow-sm dark:border-primary/18 dark:bg-white/6">
+                                    <div className="grid gap-4 sm:grid-cols-2">
+                                        <div className="space-y-2">
+                                            <p className="text-sm font-semibold text-foreground">Une portée suivie avec attention</p>
+                                            <p className="text-sm leading-relaxed text-muted-foreground">
+                                                Les chiots de cette portée sont désormais nés et suivis quotidiennement à l&apos;élevage, avec des nouvelles régulières, des photos et un accompagnement pour les familles intéressées.
+                                            </p>
+                                        </div>
+                                        <div className="space-y-2">
+                                            <p className="text-sm font-semibold text-foreground">Pour les familles intéressées</p>
+                                            <p className="text-sm leading-relaxed text-muted-foreground">
+                                                Si vous souhaitez réserver une visite ou demander plus de photos et de vidéos, vous pouvez nous contacter dès maintenant.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className={breedingCtaPanelClass}>
+                                    <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-primary/80">
+                                        Découvrir Cette Portée
+                                    </p>
+                                    <div className="flex flex-col gap-3 sm:flex-row">
+                                        <a
+                                            href="https://forms.gle/av3Tv3bbZ6T8ZF4Z7"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className={breedingPrimaryCtaClass}
+                                        >
+                                            Réserver une visite ou demander plus de photos/vidéos
+                                        </a>
+                                        <Link href="/chiots-disponibles#portee-sky-sally" className={breedingSecondaryCtaClass}>
+                                            Voir les chiots disponibles
+                                        </Link>
+                                        <div className="flex flex-col gap-3 sm:flex-row">
+                                            <Link
+                                                href={`/femelles-reproductrices#${getReproductorAnchorId("SKY")}`}
+                                                className={breedingSecondaryCtaClass}
+                                            >
+                                                Voir Sky
+                                            </Link>
+                                            <Link
+                                                href={`/femelles-reproductrices#${getReproductorAnchorId("SALLY")}`}
+                                                className={breedingSecondaryCtaClass}
+                                            >
+                                                Voir Sally
+                                            </Link>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="grid gap-4 lg:justify-items-end">
+                                <figure className="w-full max-w-md overflow-hidden rounded-3xl border border-primary/10 bg-background/70 shadow-md dark:border-primary/18 dark:bg-white/6">
+                                    <div className="relative aspect-6/4 w-full">
+                                        <div className="absolute left-4 top-5 z-10 -rotate-6 rounded-[1.25rem] border-[3px] border-amber-700 bg-[#fff1c9] px-5 py-2 text-sm font-extrabold uppercase tracking-[0.08em] text-amber-800 shadow-[0_0_0_4px_#d97706] md:text-base">
+                                            En cours
+                                        </div>
+                                        <Image
+                                            src="/pages/reproducteurs/mariage-sky-et-sally-pomsky.jpg"
+                                            alt="Sky et Sally, deux Pomsky de l'élevage Royal POMSKY, présentés pour suivre leur portée"
+                                            fill
+                                            className="object-cover"
+                                            sizes="(min-width: 1024px) 26rem, (min-width: 640px) 70vw, 100vw"
+                                        />
+                                    </div>
+                                    <figcaption className="p-4 text-sm leading-relaxed text-muted-foreground">
+                                        Sky et Sally, à l&apos;origine d&apos;une portée née le 28 avril 2026, aujourd&apos;hui présentée parmi les chiots disponibles.
+                                    </figcaption>
+                                </figure>
+
+                                <figure className="w-full max-w-md overflow-hidden rounded-3xl border border-primary/10 bg-background/70 shadow-md dark:border-primary/18 dark:bg-white/6">
+                                    <div className="relative aspect-6/4 w-full">
+                                        <Image
+                                            src="/pages/reproducteurs/echographie-sky-et-sally.jpg"
+                                            alt="Échographie de suivi pour la portée de Sky et Sally"
+                                            fill
+                                            className="object-cover"
+                                            sizes="(min-width: 1024px) 20rem, (min-width: 640px) 45vw, 100vw"
+                                        />
+                                    </div>
+                                    <figcaption className="p-4 text-sm leading-relaxed text-muted-foreground">
+                                        L&apos;échographie de Sky et Sally annonçait 7 chiots, désormais nés et suivis avec attention à l&apos;élevage.
+                                    </figcaption>
+                                </figure>
+                            </div>
                         </div>
                     </section>
 

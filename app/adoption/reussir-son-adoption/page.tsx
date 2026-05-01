@@ -20,7 +20,19 @@ import { Card, CardContent } from "@/components/ui/card"
 import { FAQSection } from "@/components/faq"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
 import { buildOpenGraph, buildTwitter, pageMetadata, returnLastmod, siteConfig } from "@/lib/seo-config"
-import { generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema-generators"
+import { generateBreadcrumbSchema, generateFAQSchema, generateVideoObjectSchema } from "@/lib/schema-generators"
+import { TikTokFeatureSpotlight } from "@/components/client/tiktok/TikTokFeatureSpotlight"
+
+const familyVideoAnchor = `${siteConfig.pages.puppies}#souvenir-d-adoption`
+const familyVideoSchema = generateVideoObjectSchema({
+    name: "Souvenir d'adoption d'un chiot Royal POMSKY",
+    description:
+        "Vidéo montrant la surprise d'adoption d'un chiot Royal POMSKY au moment de la rencontre avec sa future famille.",
+    pageUrl: familyVideoAnchor,
+    contentUrl: "/assets/tiktok/7101955478313356549.mp4",
+    thumbnailUrl: "/assets/tiktok/7101955478313356549.optimized.webp",
+    uploadDate: "2022-05-26",
+})
 
 const adoptionGuideOgJpg = "/nurcery-panier.jpg"
 const adoptionGuideOgWebp = "/nurcery-panier.webp"
@@ -276,6 +288,10 @@ export default function AdoptionSuccessPage() {
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(familyVideoSchema) }}
             />
 
             <div className="py-16">
@@ -609,7 +625,20 @@ export default function AdoptionSuccessPage() {
                             ))}
                         </div>
                     </section>
-
+                    <TikTokFeatureSpotlight
+                        id="souvenir-d-adoption"
+                        badge="Souvenir d'adoption"
+                        title="Réussir son adoption c'est aussi savoir garder un secret jusqu'au bout"
+                        description="Il y a des adoptions qui marquent dès les premières secondes. Dans cette scène, on ne voit pas seulement un chiot rejoindre son foyer : on voit un père qui a gardé le secret, des enfants qui découvrent la surprise, puis cet instant très particulier où tout bascule dans la joie, cet instant où votre Pomsky vous choisit. C’est exactement le type de moment qui rappelle qu’un chiot n’arrive jamais seulement dans une maison, mais dans une histoire de famille qui commence."
+                        videoTitle="Et vous, voulez-vous garder le secret jusqu'au bout ?"
+                        videoSummary="Chez Royal Pomsky, nous savons garder les secrets jusqu'au bout pour offrir à vos proches (ou à vous-mêmes) des souvenirs inoubliables. Alors n'hésitez pas à nous parler de votre projet d'adoption, nous adorons préparer ces surprises et accompagner les familles dans ces moments magiques."
+                        posterSrc="/assets/tiktok/7101955478313356549.optimized.webp"
+                        posterAlt="Rencontre entre un chiot Royal POMSKY et sa future famille lors d'une surprise d'adoption"
+                        mediaCaption="Une scène de rencontre qui illustre l'émotion du départ et l'entrée du chiot dans sa nouvelle histoire de famille."
+                        videoSrc="/assets/tiktok/7101955478313356549.mp4"
+                        tiktokHref="https://www.tiktok.com/@royalpomsky/video/7101955478313356549"
+                        buttonLabel="Lire le souvenir de famille"
+                    />
                     <section className="rounded-3xl bg-muted px-6 py-8 md:px-10">
                         <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
                             <div className="max-w-2xl">
