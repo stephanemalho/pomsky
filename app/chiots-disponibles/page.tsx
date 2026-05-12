@@ -25,47 +25,7 @@ import { Badge } from "@/components/ui/badge"
 
 const puppiesOgImage = "/pages/puppies/Aika-femelle-pomsky-a-vendre.jpg"
 
-const futureLitters = [
-    {
-        name: "Portée de Sky et Sally - Pomsky F4",
-        description:
-            "Portée née chez Royal POMSKY le 28 avril 2026, issue du mariage entre Sky et Sally. Sept chiots sont désormais suivis à l'élevage et présentés sur cette page.",
-        url: `${siteConfig.pages.puppies}#portee-sky-sally`,
-        image: "/pages/reproducteurs/mariage-sky-et-sally-pomsky.jpg",
-        parents: "Sky et Sally",
-        generation: "Pomsky F4+",
-        stage: "Portée née",
-        observedCount: "7 chiots nés le 28 avril 2026",
-    },
-    {
-        name: "Portée d'Inuit et Mogu",
-        description:
-            "Gestation confirmée chez Royal POMSKY pour le mariage entre Inuit et Mogu. L'échographie a confirmé 4 chiots et la portée est suivie à l'élevage.",
-        url: `${siteConfig.pages.puppies}#portee-inuit-mogu`,
-        image: "/pages/reproducteurs/mariage-de-inuit-et-mogu.jpg",
-        parents: "Inuit et Mogu",
-        stage: "Gestation confirmée",
-        observedCount: "4 chiots observés à l'échographie",
-    },
-    {
-        name: "Projet de portée Charm et Alou",
-        description:
-            "Projet de portée à venir chez Royal POMSKY, issu du mariage entre Charm et Alou. Cette future portée s'adresse aux familles souhaitant suivre l'ouverture prochaine des réservations.",
-        url: `${siteConfig.pages.puppies}#projet-charm-alou`,
-        image: "/pages/reproducteurs/mariage-de-charm-et-alou.jpg",
-        parents: "Charm et Alou",
-        stage: "Portée annoncée",
-    },
-    {
-        name: "Projet de portée Charm et Puik",
-        description:
-            "Projet de portée à venir chez Royal POMSKY, issu du mariage entre Charm et Puik. Cette future portée s'adresse aux familles souhaitant suivre l'ouverture prochaine des réservations.",
-        url: `${siteConfig.pages.puppies}#projet-charm-puik`,
-        image: "/pages/reproducteurs/mariage-de-charm-et-puik.jpg",
-        parents: "Charm et Puik",
-        stage: "Portée annoncée",
-    },
-]
+const futureLitters: Parameters<typeof generateFutureLittersSchema>[0] = []
 
 export const metadata: Metadata = {
     title: pageMetadata.puppies.title,
@@ -129,6 +89,14 @@ function getCertificationParentLine(certification: LitterCertification) {
         .join(" · ")
 }
 
+function formatCertificationBirthDate(certification: LitterCertification) {
+    return new Intl.DateTimeFormat("fr-FR", {
+        day: "2-digit",
+        month: "2-digit",
+        year: "numeric",
+    }).format(new Date(`${certification.litterBirthDate}T12:00:00+01:00`))
+}
+
 function getCertificationIdsForPuppy(puppy: Puppy) {
     const certification = getLitterCertificationForPuppy(puppy)
 
@@ -183,6 +151,54 @@ const puppyParentProfilesByLabel: Record<string, PuppyParentProfile[]> = {
             href: `/femelles-reproductrices#${getReproductorAnchorId("SKY")}`,
         },
     ],
+    "Parents : INUIT & MOGU": [
+        {
+            role: "Mère",
+            name: "Mogu",
+            image: "/MOGU-pomsky-miniature-f4.webp",
+            generation: "Pomsky F4",
+            href: `/femelles-reproductrices#${getReproductorAnchorId("MOGU")}`,
+        },
+        {
+            role: "Père",
+            name: "Inuit",
+            image: "/INUIT-pomsky-toy-f5.webp",
+            generation: "Pomsky F5",
+            href: `/femelles-reproductrices#${getReproductorAnchorId("INUIT")}`,
+        },
+    ],
+    "Parents : CHARM & ALOU": [
+        {
+            role: "Mère",
+            name: "Alou",
+            image: "/ALOU-pomsky-toy-f3.webp",
+            generation: "Pomsky F3",
+            href: `/femelles-reproductrices#${getReproductorAnchorId("ALOU")}`,
+        },
+        {
+            role: "Père",
+            name: "Charm",
+            image: "/pages/reproducteurs/CHARM-pomsky-toy-f3.webp",
+            generation: "Pomsky F3",
+            href: `/femelles-reproductrices#${getReproductorAnchorId("CHARM")}`,
+        },
+    ],
+    "Parents : PWEEK & CHARM": [
+        {
+            role: "Mère",
+            name: "Pweek",
+            image: "/PWEEK-pomsky-toy-f3.webp",
+            generation: "Pomsky F3",
+            href: `/femelles-reproductrices#${getReproductorAnchorId("PWEEK")}`,
+        },
+        {
+            role: "Père",
+            name: "Charm",
+            image: "/pages/reproducteurs/CHARM-pomsky-toy-f3.webp",
+            generation: "Pomsky F3",
+            href: `/femelles-reproductrices#${getReproductorAnchorId("CHARM")}`,
+        },
+    ],
 }
 
 function getPuppyParentProfiles(puppy: Puppy) {
@@ -197,12 +213,13 @@ export default function NosChiotsPage() {
     ], siteConfig.pages.puppies)
     const faqSchema = generateFAQSchema(convertFAQsToSchema(faqNosChiots), siteConfig.pages.puppies)
     const pageLastModValue = sitemapPages.find((page) => page.url === siteConfig.pages.puppies)?.lastmod
+    const visiblePuppies = puppies.filter((puppy) => !puppy.isAdopted)
     const availablePuppies = puppies.filter((puppy) => !puppy.isReserved && !puppy.isAdopted)
     const puppyListSchema = availablePuppies.length > 0
         ? generatePuppyListSchema(availablePuppies)
         : null
     const puppyCatalogSchema = generatePuppyCatalogSchema(
-        availablePuppies.map((puppy) => ({
+        visiblePuppies.map((puppy) => ({
             ...puppy,
             status: getPuppyStatus(puppy),
             url: `${siteConfig.pages.puppies}#${getPuppyAnchorId(puppy.name)}`,
@@ -210,7 +227,9 @@ export default function NosChiotsPage() {
             certificationIds: getCertificationIdsForPuppy(puppy),
         }))
     )
-    const futureLittersSchema = generateFutureLittersSchema(futureLitters)
+    const futureLittersSchema = futureLitters.length > 0
+        ? generateFutureLittersSchema(futureLitters)
+        : null
     const litterCertificationsSchema = generateLitterCertificationsSchema(litterCertifications)
     const webPageSchema = generateWebPageSchema({
         name: pageMetadata.puppies.title,
@@ -258,7 +277,7 @@ export default function NosChiotsPage() {
                             {pageContent.puppies.description}
                         </p>
                         <div className="grid gap-10 my-12">
-                            {availablePuppies.map((puppy, index) => {
+                            {visiblePuppies.map((puppy, index) => {
                                 const puppyAnchorId = getPuppyAnchorId(puppy.name)
                                 const puppyStatus = getPuppyStatus(puppy)
                                 const isUnavailable = puppyStatus !== "available"
@@ -286,7 +305,6 @@ export default function NosChiotsPage() {
                                 const priceTextClass = isUnavailable
                                     ? "text-muted-foreground line-through"
                                     : "text-primary"
-                                const hasCharmBeautyAdministrativeRecord = puppy.parents === "Parents : CHARM & BEAUTY"
                                 const litterCertification = getLitterCertificationForPuppy(puppy)
                                 const availabilityLabel =
                                     puppyStatus === "available"
@@ -351,15 +369,15 @@ export default function NosChiotsPage() {
                                                                     <span>{puppy.parents.replace("Parents : ", "")}</span>
                                                                     {litterCertification ? (
                                                                         <span className="mt-1 block text-xs leading-relaxed text-muted-foreground">
-                                                                            {litterCertification.certificationIdentification} · portée née le 24/04/2026 · {getCertificationParentLine(litterCertification)}
+                                                                            {litterCertification.certificationIdentification} · portée née le {formatCertificationBirthDate(litterCertification)} · {getCertificationParentLine(litterCertification)}
                                                                         </span>
                                                                     ) : null}
                                                                 </span>
-                                                                {hasCharmBeautyAdministrativeRecord ? (
+                                                                {litterCertification ? (
                                                                     <BreedingRecordModal
-                                                                        imageSrc={litterCertification?.imageSrc ?? "/pages/puppies/fiche-administrative-mariage-pomsky-f4-et-pomsky-f3.jpg"}
-                                                                        title={litterCertification?.name ?? "Fiche administrative du mariage Charm et Beauty"}
-                                                                        description={litterCertification?.description ?? "Document récapitulatif du mariage à l'origine de cette portée, consultable en grand format."}
+                                                                        imageSrc={litterCertification.imageSrc}
+                                                                        title={litterCertification.name}
+                                                                        description={litterCertification.description}
                                                                     />
                                                                 ) : null}
                                                             </dd>
@@ -506,6 +524,8 @@ export default function NosChiotsPage() {
                         </div>
                     </section>
 
+                    {false ? (
+                        <>
                     <section id="portee-inuit-mogu" className="relative mx-auto mt-12 mb-12 overflow-hidden rounded-4xl border border-primary/12 bg-[radial-gradient(circle_at_bottom_right,rgba(196,86,55,0.12),transparent_30%),linear-gradient(180deg,rgba(255,255,255,0.94),rgba(247,238,234,0.88))] p-8 text-left shadow-sm dark:border-white/10 dark:bg-[linear-gradient(135deg,rgba(39,19,16,0.98),rgba(64,30,25,0.94),rgba(28,13,11,0.98))] dark:shadow-[0_18px_60px_rgba(0,0,0,0.42)] md:p-10">
                         <div className="absolute -right-8 top-12 h-28 w-28 rounded-full bg-primary/8 blur-3xl dark:bg-primary/12" aria-hidden="true" />
                         <div className="relative grid gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
@@ -964,6 +984,8 @@ export default function NosChiotsPage() {
                             </div>
                         </div>
                     </section>
+                        </>
+                    ) : null}
                     <section className="relative mx-auto mb-12 overflow-hidden rounded-4xl border border-primary/12 bg-[radial-gradient(circle_at_top_right,rgba(196,86,55,0.12),transparent_32%),linear-gradient(180deg,rgba(255,255,255,0.92),rgba(248,240,236,0.86))] p-6 text-center shadow-sm dark:border-white/10 dark:bg-[linear-gradient(135deg,rgba(39,19,16,0.98),rgba(64,30,25,0.94),rgba(28,13,11,0.98))] dark:shadow-[0_18px_60px_rgba(0,0,0,0.42)] md:p-10">
                         <Badge className="border-0 bg-primary text-primary-foreground hover:bg-primary">
                             Adoption accompagnée
