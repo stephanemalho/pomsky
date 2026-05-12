@@ -212,7 +212,7 @@ export const litterCertifications: LitterCertification[] = [
     },
 ];
 
-export const puppies: Puppy[] = [
+const puppiesUnsorted: Puppy[] = [
     {
         name: "BAÏKAL",
         coat: "Pomsky F4+ (ADN Poméranian / Husky)",
@@ -512,6 +512,114 @@ export const puppies: Puppy[] = [
         isReserved: true,
     },
     {
+        name: "LUMA",
+        coat: "Pomsky F4+ (ADN Poméranian / Husky)",
+        color: "Noire et blanche",
+        sexe: "Femelle",
+        size: "Toy ou miniature",
+        ruler: "Pelage en cours d'évolution",
+        weight: "Poids adulte en cours d'estimation",
+        parents: "Parents : CHARM & BEAUTY",
+        readyDate: "Disponible à la réservation",
+        age: "Née le 24 avril 2026",
+        description:
+            "Luma est une femelle Pomsky F4+ née le 24 avril 2026, issue de Charm et Beauty. Sa robe noire et blanche montre un masque husky bien défini, avec un format attendu toy ou miniature et une évolution suivie à l'élevage.",
+        highlights: ["Femelle", "Noire et blanche", "Masque husky marqué", "Format toy ou miniature"],
+        health: defaultHealth,
+        images: puppyImages("LUMA", ["luma-pomsky-1.jpg", "luma-pomsky-2.jpg", "luma-pomsky-3.jpg", "luma-pomsky-4.jpg"]),
+        linkTo: formUrls.charmBeauty,
+    },
+    {
+        name: "AÏKA",
+        coat: "Pomsky F4+ (ADN Poméranian / Husky)",
+        color: "Noire et blanche",
+        sexe: "Femelle",
+        size: "Indéterminé",
+        ruler: "Évolution en cours à ce stade néonatal",
+        weight: "Poids adulte en cours d'estimation",
+        parents: "Parents : SKY & SALLY",
+        readyDate: "Disponible à la réservation",
+        age: "Née le 28 avril 2026",
+        description:
+            "Aïka est une femelle Pomsky F4+ née le 28 avril 2026, issue du mariage entre Sky et Sally. Sa robe noire et blanche présente déjà un masque husky bien marqué, avec une évolution suivie au fil des semaines.",
+        highlights: ["Femelle", "Masque husky marqué", "Née le 28 avril 2026", "Format en cours d'évolution"],
+        health: defaultHealth,
+        images: puppyImages("AÏKA", [
+            "Aika-femelle-pomsky-a-vendre.jpg",
+            "Aika-femelle-pomsky-disponible.jpg",
+            "AIka-femelle-pomsky-noir-et-blanche.jpg",
+        ]),
+        linkTo: formUrls.skySally,
+    },
+    {
+        name: "BALTO",
+        coat: "Pomsky F4+ (ADN Poméranian / Husky)",
+        color: "Bleue et blanche",
+        sexe: "Mâle",
+        size: "Toy présumé",
+        ruler: "Évolution en cours à ce stade néonatal",
+        weight: "Poids adulte en cours d'estimation",
+        parents: "Parents : SKY & SALLY",
+        readyDate: "Disponible à la réservation",
+        age: "Né le 28 avril 2026",
+        description:
+            "Balto est un mâle Pomsky F4+ né le 28 avril 2026, issu du mariage entre Sky et Sally. Sa robe bleue et blanche, rare et contrastée, s'accompagne d'un masque husky marqué et d'un format présumé toy.",
+        highlights: ["Mâle", "Robe exotique rare bleue", "Né le 28 avril 2026", "Format toy présumé"],
+        health: defaultHealth,
+        images: puppyImages("BALTO", [
+            "Balto-chiot-f4-male.jpg",
+            "Balto-pomsky-f4-male-disponible-pour-adoption.jpg",
+            "Balto-chiot-disponible-royal-pomsky.jpg",
+            "Balto-male-pomsky-a-vendre.jpg",
+        ]),
+        linkTo: formUrls.skySally,
+    },
+    {
+        name: "LOUP",
+        coat: "Pomsky F4+ (ADN Poméranian / Husky)",
+        color: "Noir et blanc",
+        sexe: "Mâle",
+        size: "Indéterminé",
+        ruler: "Évolution en cours à ce stade néonatal",
+        weight: "Poids adulte en cours d'estimation",
+        parents: "Parents : SKY & SALLY",
+        readyDate: "Disponible à la réservation",
+        age: "Né le 28 avril 2026",
+        description:
+            "Loup est un mâle Pomsky F4+ né le 28 avril 2026, issu de Sky et Sally. Sa robe noire et blanche révèle un masque husky bien marqué, avec un format encore en cours d'évolution.",
+        highlights: ["Mâle", "Masque husky marqué", "Né le 28 avril 2026", "Format en cours d'évolution"],
+        health: defaultHealth,
+        images: puppyImages("LOUP", [
+            "Loup-pomsky-1.jpg",
+            "loup-pomsky-2.jpg",
+            "Loup-pomsky-3.jpg",
+            "Loup-pomsky-4.jpg",
+        ]),
+        linkTo: formUrls.skySally,
+    },
+    {
+        name: "LUNA",
+        coat: "Pomsky F4+ (ADN Poméranian / Husky)",
+        color: "Noire et blanche",
+        sexe: "Femelle",
+        size: "Indéterminé",
+        ruler: "Évolution en cours à ce stade néonatal",
+        weight: "Poids adulte en cours d'estimation",
+        parents: "Parents : SKY & SALLY",
+        readyDate: "Disponible à la réservation",
+        age: "Née le 28 avril 2026",
+        description:
+            "Luna est une femelle Pomsky F4+ née le 28 avril 2026, issue de Sky et Sally. Sa robe noire et blanche présente un masque husky bien dessiné, avec un format encore suivi pendant sa croissance.",
+        highlights: ["Femelle", "Masque husky marqué", "Née le 28 avril 2026", "Format en cours d'évolution"],
+        health: defaultHealth,
+        images: puppyImages("LUNA", [
+            "Luna-femelle-pomsky-f4-disponible.jpg",
+            "Luna-pomsky-femelle-disponible.jpg",
+            "Luna-pomsky-a-vendre-royal-pomsky.jpg",
+        ]),
+        linkTo: formUrls.skySally,
+    },
+    {
         name: "MIYU",
         coat: "Pomsky F4+ (ADN Poméranian / Husky)",
         color: "Chocolat clair et blanc",
@@ -566,3 +674,11 @@ export const puppies: Puppy[] = [
         linkTo: formUrls.skySally,
     },
 ];
+
+function getLitterBirthDateForPuppy(puppy: Puppy) {
+    return litterCertifications.find((certification) => certification.parentLabel === puppy.parents)?.litterBirthDate ?? "9999-12-31";
+}
+
+export const puppies: Puppy[] = [...puppiesUnsorted].sort((a, b) =>
+    getLitterBirthDateForPuppy(a).localeCompare(getLitterBirthDateForPuppy(b))
+);

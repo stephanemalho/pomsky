@@ -257,7 +257,7 @@ export default function NosChiotsPage() {
                         <div className="absolute -left-10 top-8 h-28 w-28 rounded-full bg-primary/8 blur-3xl dark:bg-primary/12" aria-hidden="true" />
                         <div className="absolute right-0 top-0 h-36 w-36 rounded-full bg-primary/8 blur-3xl dark:bg-primary/12" aria-hidden="true" />
                         <h2 className="text-xl md:text-3xl font-semibold leading-tight">
-                            Liste des chiots actuellement disponibles à l&apos;adoption
+                            {availablePuppies.length} {availablePuppies.length > 1 ? "chiots disponibles" : "chiot disponible"} à l&apos;adoption
                         </h2>
                         <div className="relative mx-auto my-10 w-24 h-1 rounded-full bg-primary" aria-hidden="true" />
                         <p className="text-md text-muted-foreground max-w-3xl mx-auto">
