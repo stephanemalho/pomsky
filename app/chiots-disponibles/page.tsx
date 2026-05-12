@@ -316,7 +316,7 @@ export default function NosChiotsPage() {
                                             ) : null}
                                             <div className={`grid items-start gap-6 xl:grid-cols-[minmax(360px,0.82fr)_minmax(640px,1.18fr)] ${index % 2 === 1 ? "xl:grid-flow-col-dense" : ""}`}>
                                                 <ImageCarousel
-                                                    className={`mx-auto w-full max-w-[620px] ${index % 2 === 1 ? "xl:order-2" : ""}`}
+                                                    className={`mx-auto w-full max-w-155 ${index % 2 === 1 ? "xl:order-2" : ""}`}
                                                     images={puppy.images.map((image) => image.src)}
                                                     alt={"Photos du chiot Pomsky " + puppy.name}
                                                     caption={`Photos récentes de ${puppy.name}, pour découvrir son évolution, son type et son expression.`}
@@ -498,7 +498,7 @@ export default function NosChiotsPage() {
                                                                 <a
                                                                     target="_blank"
                                                                     rel="noopener noreferrer"
-                                                                    className="rounded-xl bg-primary px-4 py-2 text-center text-primary-foreground shadow-xs transition hover:bg-primary/90 min-[900px]:min-w-[340px]"
+                                                                    className="rounded-xl bg-primary px-4 py-2 text-center text-primary-foreground shadow-xs transition hover:bg-primary/90 min-[900px]:min-w-85"
                                                                     href={puppy.linkTo}
                                                                 >
                                                                     Réserver une visite ou demander plus de photos/vidéos

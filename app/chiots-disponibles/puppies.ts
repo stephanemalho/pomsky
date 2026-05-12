@@ -181,6 +181,35 @@ export const litterCertifications: LitterCertification[] = [
             },
         ],
     },
+    {
+        id: "declaration-portee-pweek-charm",
+        parentLabel: "Parents : PWEEK & CHARM",
+        name: "Fiche administrative Pweek et Charm",
+        description:
+            "Fiche administrative de la portée Pweek et Charm, consultable depuis les fiches des chiots concernés.",
+        imageSrc: "/pages/puppies/fiche-administrative-mariage-pweek-et-charm.png",
+        issuer: "Fédération Française du Pomsky",
+        breeder: "Élevage Royal Pomsky",
+        certificationIdentification: "Fiche administrative Pweek et Charm",
+        litterBirthDate: "2026-05-09",
+        puppyNames: ["AMBRE", "RÉMUS", "LOKI", "BELLATRIX", "ARCANA"],
+        parents: [
+            {
+                role: "Père",
+                name: "Paramout Pomsky Charm",
+                breed: "Pomsky",
+                generation: "F3",
+                pedigree: "CE FFP 2025.059",
+            },
+            {
+                role: "Mère",
+                name: "Pweek",
+                breed: "Pomsky",
+                generation: "F3",
+                pedigree: "Pédigrée FFP",
+            },
+        ],
+    },
 ];
 
 export const puppies: Puppy[] = [
