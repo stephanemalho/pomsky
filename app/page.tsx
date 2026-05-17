@@ -406,7 +406,7 @@ export default function HomePage() {
                     />
                     <div className="relative grid gap-6 p-5 md:grid-cols-[minmax(0,240px)_minmax(0,1fr)] md:p-6">
                       <figure className="space-y-3">
-                        <div className="relative aspect-[4/5] overflow-hidden rounded-[1.5rem] border border-primary/10 bg-muted">
+                        <div className="relative aspect-4/5 overflow-hidden rounded-3xl border border-primary/10 bg-muted">
                           <div className="absolute inset-0 z-10 bg-linear-to-t from-[#2b0d13]/55 via-transparent to-transparent" aria-hidden="true" />
 
                           <div className="absolute inset-x-0 bottom-0 z-20 p-4 text-white">
