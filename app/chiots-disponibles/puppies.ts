@@ -22,9 +22,14 @@ export type Puppy = {
     isReserved?: boolean;
     isAdopted?: boolean;
     price?: number;
+    priceLabel?: string;
     priceCurrency?: string;
     priceIncludes?: string;
     priceValidUntil?: string;
+    birthDate?: string;
+    availableFrom?: string;
+    updatedAt?: string;
+    pedigree?: string;
 };
 
 export type LitterCertification = {
@@ -80,7 +85,7 @@ export const litterCertifications: LitterCertification[] = [
         parents: [
             {
                 role: "Père",
-                name: "Paramout Pomsky Charm",
+                name: "Paramount Pomsky Charm",
                 breed: "Pomsky",
                 generation: "F3",
                 pedigree: "CE FFP 2025.059",
@@ -167,7 +172,7 @@ export const litterCertifications: LitterCertification[] = [
         parents: [
             {
                 role: "Père",
-                name: "Paramout Pomsky Charm",
+                name: "Paramount Pomsky Charm",
                 breed: "Pomsky",
                 generation: "F3",
                 pedigree: "CE FFP 2025.059",
@@ -196,7 +201,7 @@ export const litterCertifications: LitterCertification[] = [
         parents: [
             {
                 role: "Père",
-                name: "Paramout Pomsky Charm",
+                name: "Paramount Pomsky Charm",
                 breed: "Pomsky",
                 generation: "F3",
                 pedigree: "CE FFP 2025.059",

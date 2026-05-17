@@ -1,5 +1,7 @@
 import type { MetadataRoute } from "next";
 
+import { puppies } from "@/app/chiots-disponibles/puppies";
+import { getPuppyLastModified, getPuppyUrl } from "@/app/chiots-disponibles/puppy-seo";
 import { blog } from "@/constants/blog/blog";
 import { siteConfig, sitemapPages } from "@/lib/seo-config";
 
@@ -46,5 +48,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
         })
     );
 
-    return [...staticPages, blogListEntry, ...blogThemeEntries, ...blogPostEntries];
+    const puppyEntries: MetadataRoute.Sitemap = puppies.map(
+        (puppy): MetadataRoute.Sitemap[number] => ({
+            url: toUrl(getPuppyUrl(puppy)),
+            lastModified: getPuppyLastModified(puppy) ?? "2026-05-17",
+            changeFrequency: "weekly",
+            priority: puppy.isAdopted ? 0.5 : 0.85,
+        })
+    );
+
+    return [...staticPages, ...puppyEntries, blogListEntry, ...blogThemeEntries, ...blogPostEntries];
 }
