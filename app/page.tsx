@@ -409,49 +409,6 @@ export default function HomePage() {
           </Link>
         </section>
 
-        <section className="py-12 my-8">
-          <div className="container mx-auto px-2">
-            <div className="grid gap-6 md:grid-cols-2">
-              <Card className="border-primary/15 bg-card/80 shadow-sm">
-                <CardContent className="p-6 md:p-8">
-                  <div className="space-y-3">
-                    <div className="flex items-center gap-3">
-                      <SectionTitleIcon icon={MapPin} />
-                      <h2 className="text-xl font-semibold">Un élevage accessible depuis toute la France et la Suisse</h2>
-                    </div>
-                    <p className="text-muted-foreground leading-relaxed">
-                      Royal POMSKY est situé en Bourgogne-Franche-Comté, à Dommartin-lès-Cuiseaux, en Saône-et-Loire, à la frontière du Jura. L'élevage se trouve à environ 1h30 de Lyon, 2h de Genève et moins de 4h de Paris en voiture.
-                    </p>
-                    <div className="flex items-start gap-3 rounded-xl bg-primary/6 px-4 py-3 text-sm text-muted-foreground">
-                      <Route className="mt-0.5 h-4 w-4 shrink-0 text-primary" aria-hidden="true" />
-                      <span>
-                        Nous accueillons sur rendez-vous les familles venant de toute la France, de Suisse et des pays limitrophes, avec un retrait des chiots à l'élevage pour préserver leur sécurité.
-                      </span>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="border-primary/15 bg-card/80 shadow-sm">
-                <CardContent className="p-6 md:p-8">
-                  <div className="space-y-3">
-                    <div className="flex items-center gap-3">
-                      <SectionTitleIcon icon={Sparkles} />
-                      <h2 className="text-xl font-semibold">Une passion née du chien nordique en miniature</h2>
-                    </div>
-                    <p className="text-muted-foreground leading-relaxed">
-                      Notre passion pour les chiens nordiques, l'éducation canine et les lignées américaines nous a menées vers une évidence : construire un Pomsky harmonieux, proche de l'humain et adapté à la vie de famille.
-                    </p>
-                    <p className="text-muted-foreground leading-relaxed">
-                      Cette exigence guide Royal POMSKY depuis 2018, avec une sélection portée par le tempérament, la santé, le type physique et la transparence auprès des familles.
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
-
         <section className="py-16 my-8">
           <div className="container mx-auto p-2">
             <div className="grid gap-8 rounded-2xl border border-primary/10 bg-muted/30 p-6 md:grid-cols-[0.85fr_1.15fr] md:p-10">
