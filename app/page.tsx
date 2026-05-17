@@ -273,9 +273,7 @@ export default function HomePage() {
                     <div className="flex lg:justify-end">
                       <Link
                         href="/chiots-disponibles"
-                        className="inline-flex items-center justify-center 
-                         md:rounded-full 
-                         rounded-md
+                        className="inline-flex items-center justify-center rounded-md
                          border border-white/30 bg-white/10 px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-white transition hover:bg-white/20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                       >
                         Voir les chiots Pomsky disponibles
