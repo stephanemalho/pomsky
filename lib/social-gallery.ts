@@ -220,7 +220,7 @@ export const galleryFacebookItems: SocialGalleryItem[] = [
 
 async function getYouTubeOEmbed(videoId: string) {
     const oEmbedUrl = new URL("https://www.youtube.com/oembed")
-    oEmbedUrl.searchParams.set("url", `https://www.youtube.com/shorts/${videoId}`)
+    oEmbedUrl.searchParams.set("url", `https://www.youtube.com/watch?v=${videoId}`)
     oEmbedUrl.searchParams.set("format", "json")
 
     const response = await fetch(oEmbedUrl, {
@@ -237,23 +237,33 @@ async function getYouTubeOEmbed(videoId: string) {
     return (await response.json()) as YouTubeOEmbedResponse
 }
 
-export async function getLatestYouTubeShorts(limit = 3): Promise<SocialGalleryItem[]> {
-    try {
-        const channelUrl = `${siteConfig.socialLinks.youtube.replace(/\/$/, "")}/shorts`
-        const response = await fetch(channelUrl, {
-            headers: browserHeaders,
-            next: {
-                revalidate: GALLERY_REVALIDATE_SECONDS
-            }
-        })
-
-        if (!response.ok) {
-            return []
+async function getYouTubeVideoIdsFromTab(tab: "videos" | "shorts", limit: number) {
+    const channelUrl = `${siteConfig.socialLinks.youtube.replace(/\/$/, "")}/${tab}`
+    const response = await fetch(channelUrl, {
+        headers: browserHeaders,
+        next: {
+            revalidate: GALLERY_REVALIDATE_SECONDS
         }
+    })
 
-        const html = await response.text()
-        const videoIds = Array.from(html.matchAll(/"videoId":"([A-Za-z0-9_-]{11})"/g))
-            .map((match) => match[1])
+    if (!response.ok) {
+        return []
+    }
+
+    const html = await response.text()
+
+    return Array.from(html.matchAll(/"videoId":"([A-Za-z0-9_-]{11})"/g))
+        .map((match) => match[1])
+        .filter((videoId, index, values) => values.indexOf(videoId) === index)
+        .slice(0, limit)
+}
+
+export async function getLatestYouTubeVideos(limit = 3): Promise<SocialGalleryItem[]> {
+    try {
+        const videoIds = [
+            ...(await getYouTubeVideoIdsFromTab("videos", limit)),
+            ...(await getYouTubeVideoIdsFromTab("shorts", limit))
+        ]
             .filter((videoId, index, values) => values.indexOf(videoId) === index)
             .slice(0, limit)
 
@@ -261,23 +271,25 @@ export async function getLatestYouTubeShorts(limit = 3): Promise<SocialGalleryIt
             return []
         }
 
-        const shorts = await Promise.all(
+        const videos = await Promise.all(
             videoIds.map(async (videoId, index) => {
                 const oEmbed = await getYouTubeOEmbed(videoId)
 
                 return {
                     id: videoId,
-                    title: oEmbed?.title || `Short YouTube Royal Pomsky ${index + 1}`,
-                    href: `https://www.youtube.com/shorts/${videoId}`,
-                    thumbnailSrc: oEmbed?.thumbnail_url || `https://i.ytimg.com/vi/${videoId}/hq2.jpg`,
-                    thumbnailAlt: `Aperçu du short YouTube Royal POMSKY : ${oEmbed?.title || `vidéo ${index + 1}`}`,
-                    summary: "Short YouTube publié sur la chaîne Royal POMSKY pour montrer un moment de vie, un chiot ou l'ambiance de l'élevage."
+                    title: oEmbed?.title || `Vidéo YouTube Royal Pomsky ${index + 1}`,
+                    href: `https://www.youtube.com/watch?v=${videoId}`,
+                    thumbnailSrc: oEmbed?.thumbnail_url || `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`,
+                    thumbnailAlt: `Aperçu de la vidéo YouTube Royal POMSKY : ${oEmbed?.title || `vidéo ${index + 1}`}`,
+                    summary: "Vidéo publiée sur la chaîne YouTube Royal POMSKY pour montrer un moment de vie, un chiot ou l'ambiance de l'élevage."
                 } satisfies SocialGalleryItem
             })
         )
 
-        return shorts
+        return videos
     } catch {
         return []
     }
 }
+
+export const getLatestYouTubeShorts = getLatestYouTubeVideos

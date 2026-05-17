@@ -12,7 +12,7 @@ import {
     galleryImageItems,
     galleryInstagramItems,
     galleryTikTokItems,
-    getLatestYouTubeShorts,
+    getLatestYouTubeVideos,
     type GalleryImageItem,
     type SocialGalleryItem
 } from "@/lib/social-gallery"
@@ -225,7 +225,7 @@ function SocialSection({
 }
 
 export default async function GaleriePage() {
-    const youtubeShorts = await getLatestYouTubeShorts(3)
+    const youtubeVideos = await getLatestYouTubeVideos(3)
 
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Accueil", url: "/" },
@@ -242,7 +242,7 @@ export default async function GaleriePage() {
             "Galerie photo de Pomsky",
             "Élevage Pomsky en photos",
             "Reels Instagram Royal Pomsky",
-            "Shorts YouTube Royal Pomsky",
+            "Vidéos YouTube Royal Pomsky",
             "Vidéos TikTok Royal Pomsky",
             "Reels Facebook Royal Pomsky"
         ]
@@ -319,11 +319,11 @@ export default async function GaleriePage() {
                                 <CardContent className="flex h-full px-6 py-6">
                                     <div className="space-y-2">
                                         <div className="flex items-center justify-between gap-3">
-                                            <p className="font-semibold">YouTube Shorts</p>
+                                            <p className="font-semibold">YouTube</p>
                                             <Youtube className="h-6 w-6 shrink-0 text-primary" aria-hidden="true" />
                                         </div>
                                         <p className="text-sm text-muted-foreground">
-                                            Les derniers shorts de notre chaîne YouTube pour voir les Pomsky
+                                            Les dernières vidéos de notre chaîne YouTube pour voir les Pomsky
                                             en mouvement et suivre la vie de l'élevage.
                                         </p>
                                     </div>
@@ -380,14 +380,14 @@ export default async function GaleriePage() {
 
                     <SocialSection
                         id="galerie-youtube"
-                        badge="YouTube Shorts"
-                        title="Les derniers shorts YouTube de l'élevage"
-                        description="Cette section affiche les shorts récents publiés sur notre chaîne YouTube. C'est un bon moyen de découvrir nos Pomsky, leur énergie et l'ambiance quotidienne de l'élevage."
+                        badge="YouTube"
+                        title="Les dernières vidéos YouTube de l'élevage"
+                        description="Cette section affiche les vidéos récentes publiées sur notre chaîne YouTube. C'est un bon moyen de découvrir nos Pomsky, leur énergie et l'ambiance quotidienne de l'élevage."
                         profileHref={siteConfig.socialLinks.youtube}
                         profileLabel="Ouvrir YouTube"
-                        ctaLabel="Voir le short"
-                        items={youtubeShorts}
-                        emptyMessage="Les shorts YouTube n'ont pas pu être récupérés automatiquement pour le moment. Vous pouvez ouvrir directement la chaîne via le bouton ci-dessus."
+                        ctaLabel="Voir la vidéo"
+                        items={youtubeVideos}
+                        emptyMessage="Les vidéos YouTube n'ont pas pu être récupérées automatiquement pour le moment. Vous pouvez ouvrir directement la chaîne via le bouton ci-dessus."
                     />
 
                     <SocialSection

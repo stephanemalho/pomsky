@@ -6,13 +6,17 @@ import { faqHome } from "@/lib/faq-data"
 import Link from "next/link"
 import type { Metadata } from "next"
 import type { LucideIcon } from "lucide-react"
-import { ArrowRight, ClipboardList, HeartHandshake, PawPrint, ShieldCheck, Sparkles, Stethoscope, Users } from "lucide-react"
+import { ArrowRight, ClipboardList, Heart, HeartHandshake, MapPin, PawPrint, Route, ShieldCheck, Sparkles, Stethoscope, Users } from "lucide-react"
 import { buildOpenGraph, buildTwitter, pageMetadata, returnLastmod, siteConfig, sitemapPages } from "@/lib/seo-config"
 import { generateLocalBusinessSchema, generateFAQSchema, generateBreadcrumbSchema, generateVideoObjectSchema, generateWebPageSchema } from "@/lib/schema-generators"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
 import { pomskyBenefits } from "@/components/content/home/pomsky/pomskyBenefits"
 import { pageContent } from "@/lib/page-content"
 import { TikTokFeatureSpotlight } from "@/components/client/tiktok/TikTokFeatureSpotlight"
+import { puppies } from "@/app/chiots-disponibles/puppies"
+import { getPuppyImageSrc, getPuppyUrl } from "@/app/chiots-disponibles/puppy-seo"
+import { InternalLinksSection, type InternalLinkItem } from "@/components/InternalLinksSection"
+import { SectionTitleIcon } from "@/components/section-title-icon"
 
 const HOME_OG_IMAGE = "/pomsky-and-his-pet-family-parent.jpg"
 const HOME_METADATA_WEBP_IMAGE = "/assets/authors/marine-ava.webp"
@@ -27,6 +31,64 @@ const homeVideoSchema = generateVideoObjectSchema({
   thumbnailUrl: "/assets/tiktok/7241509462060616987.jpg",
   uploadDate: "2021-03-03",
 })
+
+const homeInternalLinks: InternalLinkItem[] = [
+  {
+    href: "/le-pomsky",
+    title: "Comprendre le Pomsky",
+    description: "Origines, générations, formats Toy et Miniature, caractère et points clés avant une adoption.",
+  },
+  {
+    href: "/pomsky-prix",
+    title: "Prix du Pomsky",
+    description: "Repères de tarif, sélection des lignées, rareté des formats et accompagnement inclus à l'élevage.",
+  },
+  {
+    href: "/presentation-elevage",
+    title: "Présentation de l'élevage",
+    description: "Notre histoire, notre philosophie et la manière dont nous travaillons les lignées Royal POMSKY.",
+  },
+  {
+    href: "/presentation-eleveuses",
+    title: "Les éleveuses",
+    description: "Découvrir Aurélie et Marine, leur parcours, leur exigence et leur rôle auprès des chiots.",
+  },
+  {
+    href: "/femelles-reproductrices",
+    title: "Nos reproducteurs",
+    description: "Relier les portées aux adultes de l'élevage, avec leurs lignées, caractères et formats.",
+  },
+  {
+    href: "/chiots-disponibles",
+    title: "Chiots disponibles",
+    description: "Consulter les chiots Pomsky actuellement présentés, leur statut et leurs informations d'adoption.",
+  },
+  {
+    href: "/adoption/reussir-son-adoption",
+    title: "Réussir son adoption",
+    description: "Préparer l'arrivée du chiot, le trajet, les premières semaines et les bons repères à la maison.",
+  },
+  {
+    href: "/bien-etre-animal",
+    title: "Bien-être animal",
+    description: "Voir les conditions de vie, la socialisation, les espaces et le suivi quotidien des chiens.",
+  },
+  {
+    href: "/galerie",
+    title: "Galerie photos et vidéos",
+    description: "Découvrir des images de nos Pomsky, des chiots, des adultes et des moments de vie à l'élevage.",
+  },
+  {
+    href: "/blog/pomsky",
+    title: "Blog Pomsky",
+    description: "Lire nos articles pour mieux comprendre la race, les prix, la génétique, la santé et l'adoption.",
+  },
+  {
+    href: "/contact",
+    title: "Contact adoption",
+    description: "Présenter votre projet, poser vos questions et échanger avec l'élevage avant une réservation.",
+  },
+]
 
 export const metadata: Metadata = {
   title: pageMetadata.home.title,
@@ -86,6 +148,11 @@ export default function HomePage() {
     about: ["Élevage de chiots Pomsky", "Pomsky Toy", "Pomsky Miniature", "Chiots disponibles"],
   })
   const lastMod = returnLastmod(siteConfig.pages.home)
+  const availablePuppies = puppies.filter((puppy) => !puppy.isReserved && !puppy.isAdopted)
+  const availablePuppiesCount = availablePuppies.length
+  const availablePuppiesTitle = availablePuppiesCount > 0
+    ? `${availablePuppiesCount} chiot${availablePuppiesCount > 1 ? "s" : ""} Pomsky disponible${availablePuppiesCount > 1 ? "s" : ""} à l'adoption`
+    : "Aucun chiot Pomsky disponible à l'adoption actuellement"
   const founders = [
     {
       name: "Aurélie",
@@ -342,6 +409,124 @@ export default function HomePage() {
           >
             En savoir plus sur le Pomsky
           </Link>
+        </section>
+
+        <section className="py-12 my-8">
+          <div className="container mx-auto px-2">
+            <div className="grid gap-6 md:grid-cols-2">
+              <Card className="border-primary/15 bg-card/80 shadow-sm">
+                <CardContent className="p-6 md:p-8">
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-3">
+                      <SectionTitleIcon icon={MapPin} />
+                      <h2 className="text-xl font-semibold">Un élevage accessible depuis toute la France et la Suisse</h2>
+                    </div>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Royal POMSKY est situé en Bourgogne-Franche-Comté, à Dommartin-lès-Cuiseaux, en Saône-et-Loire, à la frontière du Jura. L'élevage se trouve à environ 1h30 de Lyon, 2h de Genève et moins de 4h de Paris en voiture.
+                    </p>
+                    <div className="flex items-start gap-3 rounded-xl bg-primary/6 px-4 py-3 text-sm text-muted-foreground">
+                      <Route className="mt-0.5 h-4 w-4 shrink-0 text-primary" aria-hidden="true" />
+                      <span>
+                        Nous accueillons sur rendez-vous les familles venant de toute la France, de Suisse et des pays limitrophes, avec un retrait des chiots à l'élevage pour préserver leur sécurité.
+                      </span>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-primary/15 bg-card/80 shadow-sm">
+                <CardContent className="p-6 md:p-8">
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-3">
+                      <SectionTitleIcon icon={Sparkles} />
+                      <h2 className="text-xl font-semibold">Une passion née du chien nordique en miniature</h2>
+                    </div>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Notre passion pour les chiens nordiques, l'éducation canine et les lignées américaines nous a menées vers une évidence : construire un Pomsky harmonieux, proche de l'humain et adapté à la vie de famille.
+                    </p>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Cette exigence guide Royal POMSKY depuis 2018, avec une sélection portée par le tempérament, la santé, le type physique et la transparence auprès des familles.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 my-8">
+          <div className="container mx-auto p-2">
+            <div className="grid gap-8 rounded-2xl border border-primary/10 bg-muted/30 p-6 md:grid-cols-[0.85fr_1.15fr] md:p-10">
+              <div className="space-y-4">
+                <Badge variant="secondary" className="w-fit">
+                  <Heart className="mr-2 h-4 w-4" aria-hidden="true" />
+                  Chiots à adopter
+                </Badge>
+                <div className="flex items-start gap-3">
+                  <SectionTitleIcon icon={PawPrint} />
+                  <h2 className="text-2xl font-bold md:text-3xl">
+                    {availablePuppiesTitle}
+                  </h2>
+                </div>
+              </div>
+              <div className="space-y-5">
+                {availablePuppies.length > 0 ? (
+                  <div className="flex flex-wrap gap-4">
+                    {availablePuppies.map((puppy) => {
+                      const firstImage = puppy.images[0]
+
+                      return (
+                        <Link
+                          key={puppy.name}
+                          href={getPuppyUrl(puppy)}
+                          className="group flex w-20 flex-col items-center gap-2 text-center focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                          aria-label={`Voir la fiche de ${puppy.name}`}
+                        >
+                          <span className="relative h-16 w-16 overflow-hidden rounded-full border-2 border-primary/15 bg-background shadow-sm ring-4 ring-background transition-transform group-hover:scale-105">
+                            {firstImage ? (
+                              <Image
+                                src={getPuppyImageSrc(firstImage.src)}
+                                alt={firstImage.alt}
+                                fill
+                                className="object-cover"
+                                sizes="64px"
+                                quality={60}
+                              />
+                            ) : null}
+                          </span>
+                          <span className="max-w-full truncate text-xs font-semibold text-foreground group-hover:text-primary">
+                            {puppy.name}
+                          </span>
+                        </Link>
+                      )
+                    })}
+                  </div>
+                ) : null}
+                <p className="text-muted-foreground leading-relaxed">
+                  La disponibilité des chiots est mise à jour depuis la liste officielle de l'élevage. Le nombre affiché exclut les chiots déjà réservés ou adoptés afin de donner une indication claire aux familles qui souhaitent adopter un Pomsky.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  Sur la page dédiée, chaque fiche présente les photos, les parents, le statut de réservation, la fiche administrative de portée et les informations utiles pour préparer une adoption sérieuse.
+                </p>
+                <Link
+                  href="/chiots-disponibles"
+                  className="inline-flex items-center justify-center rounded-md bg-primary px-5 py-3 font-semibold text-primary-foreground transition-colors hover:bg-primary/85 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                >
+                  Voir tous les chiots Pomsky
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 my-8 bg-muted/30">
+          <div className="container mx-auto p-2">
+            <InternalLinksSection
+              title="Explorer l'élevage Royal POMSKY"
+              description="Retrouvez les pages essentielles pour comprendre le Pomsky, découvrir notre élevage, consulter les chiots disponibles et préparer votre adoption."
+              items={homeInternalLinks}
+            />
+          </div>
         </section>
 
         <section className="py-16 my-8">
