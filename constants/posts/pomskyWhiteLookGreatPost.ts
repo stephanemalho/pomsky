@@ -11,7 +11,7 @@ export const pomskyBlancPost: BlogPost = {
     seoDescription:
         "Vous aimez le Pomsky blanc ? Découvrez comment lire cette robe claire, ce qui la distingue du blanc aux yeux bleus et ce qu'elle implique vraiment au quotidien.",
     introduction:
-        "Le Pomsky blanc attire pour une raison simple: il capte la lumière et donne au chien une présence très nette, très douce et parfois très nordique. Pourtant, derrière ce mot blanc, plusieurs réalités visuelles peuvent coexister. Certains chiens sont presque uniformément clairs, d'autres présentent des nuances, des marquages ou des contrastes qui changent beaucoup la lecture d'ensemble. Cet article est donc consacré à la robe blanche elle-même: ce qu'elle évoque, comment la regarder et ce qu'il ne faut pas lui faire dire sur le chien dans son ensemble.",
+        "Le Pomsky blanc attire pour une raison simple : il capte la lumière et donne au chien une présence très nette, très douce et parfois très nordique. Pourtant, derrière ce mot blanc, plusieurs réalités visuelles peuvent coexister. Certains chiens sont presque uniformément clairs, d'autres présentent des nuances, des marquages ou des contrastes qui changent beaucoup la lecture d'ensemble. Cet article est donc consacré à la robe blanche elle-même : ce qu'elle évoque, comment la regarder et ce qu'il ne faut pas lui faire dire sur le chien dans son ensemble.",
     modifiedDate: "2026-03-27",
     sections: [
         {

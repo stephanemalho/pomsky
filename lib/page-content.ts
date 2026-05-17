@@ -4,11 +4,11 @@ export const pageContent = {
         h1Subtitle:
             "Premier élevage français de Pomsky issus de lignées américaines",
         description:
-            "Royal Pomsky se situe en région Bourgogne Franche Comté. C'est le premier élevage de Pomsky en France ayant fait le choix de débuter sa sélection en 2017 avec des lignées Américaines : directement au berceau de la race, pour amener en France le Pomsky absolument parfait.",
+            "Royal Pomsky se situe en région Bourgogne-Franche-Comté. C'est le premier élevage de Pomsky en France ayant fait le choix de débuter sa sélection en 2017 avec des lignées américaines, directement au berceau de la race, pour amener en France le Pomsky le plus abouti possible.",
         descriptionSecondary:
             "Depuis notre première portée née en 2018, notre objectif est de vous apporter le meilleur et l'excellence version Pomsky : un physique parfait, une santé de fer, une expertise comportementale, une socialisation parfaite, un suivi tout au long de la vie du chiot.",
         descriptionTertiary:
-            "Nous avons rédigé plusieurs articles contenant de très nombreuses informations, merci d'en prendre connaissance avant d'envisager l'adoption de votre chiot ! Vous pourrez ensuite consulter la page de nos chiots pomsky disponibles en cliquant ci-dessous :"
+            "Nous avons rédigé plusieurs articles contenant de très nombreuses informations. Merci d'en prendre connaissance avant d'envisager l'adoption de votre chiot. Vous pourrez ensuite consulter la page de nos chiots Pomsky disponibles en cliquant ci-dessous :"
     },
     pomsky: {
         h1: "Pomsky : taille, caractère, origines, générations F1 à F5 et adoption",
@@ -32,7 +32,7 @@ export const pageContent = {
         h1: "NOS POMSKY ADULTES REPRODUCTEURS",
         subtitle: "La famille - Royal POMSKY",
         description:
-            "Les chiens présentés ici sont les reproducteurs de notre élevage Royal POMSKY. Ils constituent le cœur de notre lignée de pomsky toy pour la plupart, et participent activement à la transmission de nos valeurs, tant sur le plan physique que comportemental.",
+            "Les chiens présentés ici sont les reproducteurs de notre élevage Royal POMSKY. Ils constituent le cœur de notre lignée de Pomsky Toy pour la plupart, et participent activement à la transmission de nos valeurs, tant sur le plan physique que comportemental.",
         descriptionSecondary:
             "Chaque mariage est soigneusement réfléchi et réalisé exclusivement au sein de notre élevage, dans une démarche responsable visant à préserver la santé, l'équilibre émotionnel et le type propre au Pomsky Toy de lignée américaine."
     },
@@ -44,7 +44,7 @@ export const pageContent = {
     eleveuses: {
         h1: "Les éleveuses de Royal POMSKY",
         description:
-            "Nous sommes Aurélie et Marine, pionnières dans l'importation de Pomskys d'Amérique depuis 2017. Cette page raconte notre parcours de vie, notre passion pour le Pomsky et l'accompagnement que nous proposons aux familles adoptives dès leurs premiers pas."
+            "Nous sommes Aurélie et Marine, pionnières dans l'importation de Pomsky d'Amérique depuis 2017. Cette page raconte notre parcours de vie, notre passion pour le Pomsky et l'accompagnement que nous proposons aux familles adoptives dès leurs premiers pas."
     },
     wellness: {
         h1: "Le bien-être animal chez Royal Pomsky",

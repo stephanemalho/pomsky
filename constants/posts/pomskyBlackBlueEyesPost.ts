@@ -23,7 +23,7 @@ export const pomskyNoirYeuxBleusPost: BlogPost = {
             ]
         },
         {
-            subtitle: "Robe noire, marquages et nuances: tout n'est pas uniforme",
+            subtitle: "Robe noire, marquages et nuances : tout n'est pas uniforme",
             paragraphs: [
                 "Quand on parle d'un Pomsky noir, on imagine parfois une robe entièrement uniforme. En réalité, les choses sont souvent plus nuancées. Certains chiens présentent un noir très dense, d'autres un fond sombre relevé de marques plus claires, d'autres encore un masque ou des contrastes qui modifient beaucoup la perception d'ensemble.",
                 "C'est important, car de simples photos peuvent donner l'impression d'un profil plus noir, plus lisse ou plus contrasté qu'il ne l'est vraiment. La lumière, l'âge du chiot, la densité du pelage et la qualité des images changent beaucoup la lecture.",
@@ -55,7 +55,7 @@ export const pomskyNoirYeuxBleusPost: BlogPost = {
         {
             subtitle: "Comment lire sérieusement un Pomsky noir aux yeux bleus dans une annonce",
             paragraphs: [
-                "La bonne démarche consiste à regarder plusieurs niveaux à la fois: la robe réelle, les marquages, l'expression, la qualité des photos, l'âge du chiot et la capacité de l'élevage professionnel à parler de son évolution sans exagération. Un profil très photogénique peut évoluer, se densifier ou se nuancer avec le temps.",
+                "La bonne démarche consiste à regarder plusieurs niveaux à la fois : la robe réelle, les marquages, l'expression, la qualité des photos, l'âge du chiot et la capacité de l'élevage professionnel à parler de son évolution sans exagération. Un profil très photogénique peut évoluer, se densifier ou se nuancer avec le temps.",
                 "Il faut aussi garder en tête que ce type de look très recherché peut pousser certaines annonces à surjouer la rareté ou le spectaculaire. Plus un visuel impressionne, plus il faut revenir à des questions simples: qui sont les parents, quel est le format estimé, quel est le cadre d'élevage, et quel chien ce chiot a des chances de devenir ?",
                 "Cette méthode ne casse pas le charme. Elle le remet simplement à sa juste place dans une décision sérieuse."
             ],

@@ -13,7 +13,7 @@ const navigation = [
     { name: "Accueil", href: "/", icon: Home },
     { name: "Le Pomsky", href: "/le-pomsky", icon: PawPrint },
     { name: "Prix du Pomsky", href: "/pomsky-prix", icon: Banknote },
-    { name: "L'elevage", href: "/presentation-elevage", icon: Home },
+    { name: "L'élevage", href: "/presentation-elevage", icon: Home },
     { name: "Les éleveuses", href: "/presentation-eleveuses", icon: Users },
     { name: "Nos reproducteurs", href: "/femelles-reproductrices", icon: Dog },
     { name: "Nos chiots disponibles", href: "/chiots-disponibles", icon: PawPrint },

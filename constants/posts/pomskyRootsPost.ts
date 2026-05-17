@@ -11,7 +11,7 @@ export const pomskyHistoryPost: BlogPost = {
     seoDescription:
         "Découvrez l'histoire du Pomsky, ses origines américaines, le rôle du Husky et du Spitz nain et la manière dont cette race hybride s'est développée.",
     introduction:
-        "Parler des origines du Pomsky, ce n'est pas seulement raconter un croisement entre Husky sibérien et Spitz nain. C'est aussi comprendre comment une idée de chien de compagnie au look nordique compact est devenue une vraie dynamique d'élevage. Cet article est donc centré sur l'histoire du Pomsky: son apparition, le contexte de sa création, le rôle de ses races parentes et la manière dont il s'est développé au fil du temps. Pour tout ce qui concerne ensuite le caractère, les formats ou le prix, il faut se tourner vers les pages dédiées.",
+        "Parler des origines du Pomsky, ce n'est pas seulement raconter un croisement entre Husky sibérien et Spitz nain. C'est aussi comprendre comment une idée de chien de compagnie au look nordique compact est devenue une vraie dynamique d'élevage. Cet article est donc centré sur l'histoire du Pomsky : son apparition, le contexte de sa création, le rôle de ses races parentes et la manière dont il s'est développé au fil du temps. Pour tout ce qui concerne ensuite le caractère, les formats ou le prix, il faut se tourner vers les pages dédiées.",
     modifiedDate: "2026-03-27",
     sections: [
         {

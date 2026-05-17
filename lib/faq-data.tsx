@@ -27,13 +27,13 @@ export const faqHome: FAQItem[] = [
         </p>
         <p>
           Les chiots sont habitués aux bruits du quotidien, aux interactions humaines
-          et aux différentes textures afin de favoriser confiance et stabilité.
+          et aux différentes textures afin de favoriser leur confiance et leur stabilité.
         </p>
       </div>
     ),
   },
   {
-    question: "Avez-vous uniquement des pomsky toy chez royal pomsky ?",
+    question: "Avez-vous uniquement des Pomsky Toy chez Royal POMSKY ?",
     answer: (
       <div className="space-y-3">
         <p>
@@ -45,7 +45,7 @@ export const faqHome: FAQItem[] = [
         <p>
           C&apos;est pourquoi chaque chiot est évalué individuellement au fil de sa croissance avant de confirmer sa catégorie de format.
         </p>
-        <p> Nous avons également des chiots de taille standard qui sont très mignons et très appréciés par les familles qui souhaitent un Pomsky plus grand que le Toy.</p>
+        <p>Nous avons également des chiots de taille standard, très appréciés par les familles qui souhaitent un Pomsky plus grand que le Toy.</p>
       </div>
     ),
   },
@@ -54,7 +54,7 @@ export const faqHome: FAQItem[] = [
     answer: (
       <div className="space-y-3">
         <p>
-          L'élevage travaille plusieurs formats de Pomsky : miniature et Toy.
+          L'élevage travaille plusieurs formats de Pomsky : Toy, Miniature et Standard.
         </p>
         <p>
           Les chiens présentent une grande variété de robes et de couleurs,
@@ -68,7 +68,7 @@ export const faqHome: FAQItem[] = [
     answer: (
       <div className="space-y-3">
         <p>
-          Un accompagnement est assuré avant, pendant le processus d'adoption et également après le départ du chiot et tout au long de sa vie afin de répondre aux questions liées à l'alimentation, à l'adaptation et aux premiers mois de vie particulièrement.
+          Un accompagnement est assuré avant l'adoption, pendant le processus d'adoption, puis après le départ du chiot et tout au long de sa vie afin de répondre aux questions liées à l'alimentation, à l'adaptation et aux premiers mois de vie.
         </p>
         <p>
           Ce suivi permet d'accompagner chaque adoptant pour que chaque chiot soit heureux et équilibré dans son nouveau foyer.
@@ -81,12 +81,12 @@ export const faqHome: FAQItem[] = [
     answer: (
       <div className="space-y-3">
         <p>
-          Un élevage professionnel comme le nôtre offre une génétique des lignées saine, une sélection de grande qualité.
-          Nous avons un suivi vétérinaire rigoureux et un cahier des charges élevé. Chez nous, les locaux sont adaptés au bien-être animal, nous avons une connaissance accrue des soins à prodiguer aux animaux, des actes de premiers secours et des urgences médicales, et il y a également une présence permanente.
-          Un suivi des parents, des chiots, de la socialisation, de la gestion émotionnelle et un cadre structuré pour le développement des chiots est nécessaire.
+          Un élevage professionnel comme le nôtre offre des lignées suivies, une sélection de grande qualité et un cadre structuré.
+          Nous assurons un suivi vétérinaire rigoureux et appliquons un cahier des charges exigeant. Chez nous, les locaux sont adaptés au bien-être animal, nous disposons de connaissances solides sur les soins, les premiers secours et les urgences médicales, et une présence quotidienne est assurée.
+          Le suivi des parents, des chiots, de la socialisation et de la gestion émotionnelle est indispensable au bon développement des chiots.
         </p>
         <p>
-          Cela permet de faire un choix réfléchi et responsable, basé sur des critères objectifs, basé sur le choix d'avoir choisi un chiot élevé dans des conditions optimales et sérieuses plutôt que sur une simple annonce ne respectant aucun cadre légal, et dont les conditions d'hygiène et les connaissances du naisseur laissent à désirer.
+          Cela permet de faire un choix réfléchi et responsable, fondé sur des critères objectifs et sur la certitude de choisir un chiot élevé dans des conditions sérieuses, plutôt que sur une simple annonce ne respectant aucun cadre légal, avec des conditions d'hygiène ou des connaissances parfois insuffisantes.
         </p>
       </div>
     ),
@@ -101,10 +101,10 @@ export const faqPresentation: FAQItem[] = [
         <p>
           Les futurs parents sont sélectionnés aux USA pour éviter tout risque de consanguinité, ainsi que parmi nos chiots nés à la maison : nous les retenons tout d'abord pour leur beauté physique et, en particulier, leur correspondance au standard du Pomsky établi selon la Fédération française du Pomsky et l'IPA (premier club américain fondateur de la race), ainsi que selon nos objectifs d'avancer en génération.
         </p>
-        <p>À l'âge d'un an, nous faisons les tests ADN de santé et de dépistage des tares liées au poméranien et au Husky. Suite à cela, un bilan comportemental du chien sélectionné est réalisé.</p>
+        <p>À l'âge d'un an, nous faisons les tests ADN de santé et de dépistage des tares liées au Poméranien et au Husky. Ensuite, un bilan comportemental du chien sélectionné est réalisé.</p>
         <p>Si le bilan est positif et que le comportement correspond à ce qui est souhaité pour la race en devenir (Pomsky sociable, avenant, facile à éduquer, peu aboyeur, proche de l'humain et équilibré), il sera sélectionné pour notre programme d'élevage et reproduira à l'âge de 2 ans.</p>
         <p>Si le comportement n'est pas adapté à la reproduction (peur, méfiance, aboiements excessifs), le chien est placé en famille d'accueil et stérilisé.</p>
-        <p>Tout ceci dans le but de vous garantir d'adopter un chien équilibré, avec une santé parfaite.</p>
+        <p>Tout cela a pour objectif de vous permettre d'adopter un chien équilibré, avec une santé suivie avec sérieux.</p>
       </div>
     ),
   },
@@ -113,12 +113,12 @@ export const faqPresentation: FAQItem[] = [
     answer: (
       <div className="space-y-3">
         <p>
-          Ce nombre est variable, mais en moyenne une dizaine de portées par année.
+          Ce nombre est variable, mais nous réalisons en moyenne une dizaine de portées par an.
         </p>
         <p>
           Ce cadre favorise l'équilibre émotionnel, la confiance et la sociabilité des chiots.
         </p>
-        <p>Chez Royal POMSKY nous privilégions la qualité à la quantité.</p>
+        <p>Chez Royal POMSKY, nous privilégions la qualité à la quantité.</p>
         <p>Nous n'hésitons pas à travailler la taille Toy, qui est la taille la moins prolifique en Pomsky.</p>
         <p>
           Les femelles ont leur année de repos après gestation, le nombre de portées est volontairement limité afin de garantir :
@@ -159,7 +159,7 @@ export const faqPresentation: FAQItem[] = [
     answer: (
       <div className="space-y-3">
         <p>
-          Absolument. L'équilibre émotionnel est une partie essentielle de notre travail, de par mon ancien métier d'éducatrice dans lequel j'ai vu bien trop de chiens souffrant de troubles du comportement. Je donne à mes chiots toutes les clés possibles.
+          Absolument. L'équilibre émotionnel est une partie essentielle de notre travail. Mon ancien métier d'éducatrice m'a permis de rencontrer de nombreux chiens souffrant de troubles du comportement, et je souhaite donner à mes chiots toutes les clés possibles.
         </p>
         <p>Un chiot bien dans sa tête devient un adulte stable, confiant et agréable à vivre. </p>
         <p>C'est pourquoi chaque interaction est pensée pour renforcer la sécurité affective, la confiance en l'humain et en lui-même.</p>
@@ -456,12 +456,12 @@ export const faqReproducteurs: FAQItem[] = [
     answer: (
       <div className="space-y-3">
         <p>
-          Oui. Chaque reproducteur s'inscrit dans un projet d'élevage cohérent et durable pour la réaction de la race Pomsky, visant à améliorer la qualité, l'équilibre et le type des générations futures.
+          Oui. Chaque reproducteur s'inscrit dans un projet d'élevage cohérent et durable pour la création de la race Pomsky, visant à améliorer la qualité, l'équilibre et le type des générations futures.
         </p>
       </div>
     ),
   }, {
-    question: "Les mâles et les femelles s'entendent ils entre eux ? ",
+    question: "Les mâles et les femelles s'entendent-ils entre eux ?",
     answer: (
       <div className="space-y-3">
         <p>

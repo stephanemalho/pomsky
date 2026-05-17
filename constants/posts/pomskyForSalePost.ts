@@ -11,7 +11,7 @@ export const pomskyAVendrePost: BlogPost = {
     seoDescription:
         "Vous cherchez un Pomsky à vendre ? Voici les vérifications essentielles pour choisir un élevage sérieux, comparer les annonces et réserver un chiot cohérent avec votre foyer.",
     introduction:
-        "Lorsqu'une famille tape 'Pomsky à vendre', elle cherche souvent deux choses à la fois: trouver un chiot disponible et savoir à qui faire confiance. C'est justement là que beaucoup d'erreurs commencent. Une belle photo, un petit format annoncé ou un prix attractif ne suffisent pas à juger la qualité d'un élevage ni la cohérence d'un chiot avec votre foyer. Cet article a donc un objectif simple: vous aider à lire les annonces avec recul, à poser les bonnes questions et à choisir un Pomsky dans des conditions réellement rassurantes, pour vous comme pour le chiot.",
+        "Lorsqu'une famille tape 'Pomsky à vendre', elle cherche souvent deux choses à la fois : trouver un chiot disponible et savoir à qui faire confiance. C'est justement là que beaucoup d'erreurs commencent. Une belle photo, un petit format annoncé ou un prix attractif ne suffisent pas à juger la qualité d'un élevage ni la cohérence d'un chiot avec votre foyer. Cet article a donc un objectif simple : vous aider à lire les annonces avec recul, à poser les bonnes questions et à choisir un Pomsky dans des conditions réellement rassurantes, pour vous comme pour le chiot.",
     modifiedDate: "2026-03-27",
     sections: [
         {
@@ -52,7 +52,7 @@ export const pomskyAVendrePost: BlogPost = {
             subtitle: "Quels documents et informations faut-il demander ?",
             paragraphs: [
                 "Avant le départ du chiot, certaines informations doivent être clairement transmises: son identification, son suivi vétérinaire de base, les soins déjà réalisés, son alimentation actuelle, les consignes de transition, ainsi que les documents remis au moment de l'adoption. L'objectif n'est pas d'accumuler du papier pour se rassurer, mais de pouvoir accueillir le chiot avec des repères précis et exploitables.",
-                "Il est aussi utile de demander les informations qui vous aideront dans les premières semaines: habitudes alimentaires, rythme observé, sensibilité éventuelle, type d'interactions déjà proposées, réactions à la manipulation, au transport, au repos et à la découverte de l'environnement. Un éleveur qui connaît bien ses chiots doit pouvoir vous donner une lecture concrète, pas seulement une description flatteuse.",
+                "Il est aussi utile de demander les informations qui vous aideront dans les premières semaines : habitudes alimentaires, rythme observé, sensibilité éventuelle, type d'interactions déjà proposées, réactions à la manipulation, au transport, au repos et à la découverte de l'environnement. Un éleveur qui connaît bien ses chiots doit pouvoir vous donner une lecture concrète, pas seulement une description flatteuse.",
                 "Plus les informations de départ sont claires, plus la transition vers votre foyer sera fluide. C'est aussi pour cela que le sérieux d'un élevage se mesure autant dans ce qu'il transmet que dans ce qu'il affiche."
             ],
             links: [
@@ -101,7 +101,7 @@ export const pomskyAVendrePost: BlogPost = {
         {
             subtitle: "Les signaux d'alerte qui doivent vous faire ralentir",
             paragraphs: [
-                "Certaines situations méritent une vraie prudence: des parents impossibles à identifier, une taille adulte garantie de façon trop catégorique, des prix anormalement bas, des photos trop génériques, un discours flou sur les lignées ou les tests, une pression pour réserver très vite, ou encore une difficulté à obtenir des réponses simples à des questions pourtant basiques.",
+                "Certaines situations méritent une vraie prudence : des parents impossibles à identifier, une taille adulte garantie de façon trop catégorique, des prix anormalement bas, des photos trop génériques, un discours flou sur les lignées ou les tests, une pression pour réserver très vite, ou encore une difficulté à obtenir des réponses simples à des questions pourtant basiques.",
                 "Il faut aussi se méfier d'un discours qui mise presque uniquement sur l'urgence, la rareté ou l'émotion. Plus une annonce vous pousse à décider vite sans vous permettre de vérifier, plus il faut reprendre de la distance. Une adoption réfléchie supporte très bien quelques questions de plus. Une annonce douteuse, beaucoup moins.",
                 "Le but n'est pas de soupçonner tout le monde, mais de garder une grille de lecture stable. En matière de chiot, la précipitation coûte souvent plus cher que l'attente."
             ]

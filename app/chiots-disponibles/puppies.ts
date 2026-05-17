@@ -225,7 +225,7 @@ const puppiesUnsorted: Puppy[] = [
         readyDate: "Disponible à la réservation",
         age: "Née le 27 avril 2026",
         description:
-            "Baïkal est une femelle Pomsky noire et blanche issue de la portée Inuit et Mogu, née le 27 avril 2026. Son masque husky marqué, son pelage fluffy et son format attendu toy ou miniature en font une chiot très typée, suivie avec attention au fil de son évolution.",
+            "Baïkal est une femelle Pomsky noire et blanche issue de la portée Inuit et Mogu, née le 27 avril 2026. Son masque husky marqué, son pelage fluffy et son format attendu toy ou miniature en font un chiot très typé, suivi avec attention au fil de son évolution.",
         highlights: ["Femelle", "Masque husky marqué", "Pelage fluffy", "Format toy ou miniature"],
         health: defaultHealth,
         images: puppyImages("BAÏKAL", [

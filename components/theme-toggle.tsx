@@ -18,18 +18,18 @@ export function ThemeToggle() {
             <Button
                 variant="ghost"
                 size="icon"
-                aria-label="Basculer le theme"
+                aria-label="Basculer le thème"
                 className="focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary cursor-pointer"
             >
                 <Sun className="h-[1.2rem] w-[1.2rem] opacity-0" />
-                <span className="sr-only">Basculer le theme</span>
+                <span className="sr-only">Basculer le thème</span>
             </Button>
         )
     }
 
     const currentTheme = theme === "system" ? resolvedTheme : theme
     const nextTheme = currentTheme === "light" ? "dark" : "light"
-    const ariaLabel = `Passer au theme ${nextTheme === "light" ? "clair" : "sombre"}`
+    const ariaLabel = `Passer au thème ${nextTheme === "light" ? "clair" : "sombre"}`
 
     return (
         <Button
@@ -44,7 +44,7 @@ export function ThemeToggle() {
             ) : (
                 <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all" />
             )}
-            <span className="sr-only">Basculer le theme</span>
+            <span className="sr-only">Basculer le thème</span>
         </Button>
     )
 }

@@ -85,7 +85,7 @@ export const galleryImageItems: GalleryImageItem[] = [
         src: "/SHADOW-pomsky-F4.webp",
         alt: "Portrait de Shadow, femelle Pomsky miniature F4 noire et blanche",
         title: "SHADOW",
-        summary: "Femelle Pomsky miniature F4, caractère stable, regard bleu particolor et belle prestance.",
+        summary: "Femelle Pomsky miniature F4, caractère stable, regard bleu particolore et belle prestance.",
         className: "md:col-span-6"
     },
     {
@@ -93,7 +93,7 @@ export const galleryImageItems: GalleryImageItem[] = [
         src: "/SKY-pomsky-miniature-f3.webp",
         alt: "Portrait de Sky, mâle Pomsky miniature F3+ bleu et blanc",
         title: "SKY",
-        summary: "Mâle Pomsky miniature F3+, import USA, couleur rare bleu et blanc et fourrure whooly.",
+        summary: "Mâle Pomsky miniature F3+, import USA, couleur rare bleu et blanc et fourrure wooly.",
         className: "md:col-span-6"
     },
     {
@@ -117,7 +117,7 @@ export const galleryImageItems: GalleryImageItem[] = [
         src: "/PWEEK-pomsky-toy-f3.webp",
         alt: "Portrait de Pweek, femelle Pomsky toy F3 noire et blanche",
         title: "PWEEK",
-        summary: "Femelle Pomsky toy F3, import Russie, masque bandit et yeux particolor très singuliers.",
+        summary: "Femelle Pomsky toy F3, import Russie, masque bandit et yeux particolores très singuliers.",
         className: "md:col-span-4"
     }
 ]

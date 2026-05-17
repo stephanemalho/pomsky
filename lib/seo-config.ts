@@ -33,7 +33,7 @@ export const siteConfig = {
     /* ------------------------------ SEO Global -------------------------------- */
     title: "Élevage de Pomsky | Royal POMSKY",
     description:
-        "Royal POMSKY est le premier élevage spécialisé dans les pomskys Toy de lignée Américaines. Chiots sélectionnés, élevage responsable, reproducteurs suivis depuis 2017.",
+        "Royal POMSKY est le premier élevage spécialisé dans les Pomsky Toy de lignées américaines. Chiots sélectionnés, élevage responsable, reproducteurs suivis depuis 2017.",
     keywords: [
         "elevage pomsky",
         "elevage pomsky france",
@@ -126,7 +126,7 @@ export const siteConfig = {
                 authorName: "Alisson Terwagne",
                 reviewRating: 5,
                 reviewBody:
-                    "Je remercie Aurelie, pour son professionnalisme, pour l'amour qu'elle donne à ses chiens. Son elevage est de loin une perle rare : élevage éthique..."
+                    "Je remercie Aurélie pour son professionnalisme, pour l'amour qu'elle donne à ses chiens. Son élevage est de loin une perle rare : élevage éthique..."
             }
         }
     },
@@ -494,9 +494,9 @@ export const pageMetadata = {
         ]
     },
     blog: {
-        title: "Blog Pomsky | Conseils, race et bien-etre",
+        title: "Blog Pomsky | Conseils, race et bien-être",
         description:
-            "Articles sur le Pomsky : race, genetique, sante, caractere, prix et conseils d'adoption.",
+            "Articles sur le Pomsky : race, génétique, santé, caractère, prix et conseils d'adoption.",
         keywords: [
             "blog pomsky",
             "conseils pomsky toy",

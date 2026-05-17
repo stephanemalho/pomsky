@@ -87,7 +87,7 @@ export const pomskyToyGuidePost: BlogPost = {
         {
             subtitle: "Ce qu'il faut retenir avant d'adopter un Pomsky Toy",
             paragraphs: [
-                "Le Pomsky Toy séduit pour de bonnes raisons: son format, sa présence, son look et sa praticité apparente. Mais il doit être choisi comme un vrai compagnon, pas comme une version réduite d'un chien sans exigences. Son quotidien reste celui d'un Pomsky: présence, éducation, interactions, entretien et projection sérieuse sur la croissance.",
+                "Le Pomsky Toy séduit pour de bonnes raisons : son format, sa présence, son look et sa praticité apparente. Mais il doit être choisi comme un vrai compagnon, pas comme une version réduite d'un chien sans exigences. Son quotidien reste celui d'un Pomsky : présence, éducation, interactions, entretien et projection sérieuse sur la croissance.",
                 "Si vous abordez ce format avec lucidité, il peut être un choix formidable. Si vous l'abordez uniquement par le visuel ou par une promesse de taille, vous risquez de passer à côté de l'essentiel.",
                 "La meilleure démarche consiste donc à combiner trois choses: comprendre le format, lire les promesses avec prudence et choisir un élevage professionnel capable de vous parler honnêtement du chiot proposé."
             ],

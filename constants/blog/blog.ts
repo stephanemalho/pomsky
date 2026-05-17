@@ -72,7 +72,7 @@ export const blog: BlogContentType = {
             description: "Taille, formats, projection adulte et vie quotidienne avec le Pomsky.",
             seoTitle: "Caractéristiques du Pomsky | Taille, formats et vie quotidienne",
             seoDescription:
-                "Découvrez nos articles sur les caractéristiques du Pomsky: formats Toy, Miniature ou Standard, projection adulte, vie quotidienne et compréhension de la race."
+                "Découvrez nos articles sur les caractéristiques du Pomsky : formats Toy, Miniature ou Standard, projection adulte, vie quotidienne et compréhension de la race."
         },
         {
             slug: "apparence",
@@ -80,7 +80,7 @@ export const blog: BlogContentType = {
             description: "Couleurs, robes, contrastes visuels et lectures d'apparence du Pomsky.",
             seoTitle: "Apparence du Pomsky | Robes, couleurs et looks recherchés",
             seoDescription:
-                "Explorez nos articles sur l'apparence du Pomsky: robe blanche, noire, beige, yeux bleus, look renard et autres profils visuels recherchés."
+                "Explorez nos articles sur l'apparence du Pomsky : robe blanche, noire, beige, yeux bleus, look renard et autres profils visuels recherchés."
         },
         {
             slug: "origine",
@@ -96,7 +96,7 @@ export const blog: BlogContentType = {
             description: "Générations F1 à F5, ADN, tests et travail de sélection.",
             seoTitle: "Génétique du Pomsky | Générations, ADN et sélection",
             seoDescription:
-                "Découvrez nos articles sur la génétique du Pomsky: générations F1 à F5, tests ADN, Embark, sélection des lignées et lecture des mariages."
+                "Découvrez nos articles sur la génétique du Pomsky : générations F1 à F5, tests ADN, Embark, sélection des lignées et lecture des mariages."
         },
         {
             slug: "prix",

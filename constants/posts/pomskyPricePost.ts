@@ -77,7 +77,7 @@ export const pomskyPrixPost: BlogPost = {
             ]
         },
         {
-            subtitle: "Entretien spécifique du Pomsky: pelage, hygiène et activité",
+            subtitle: "Entretien spécifique du Pomsky : pelage, hygiène et activité",
             paragraphs: [
                 "Le Pomsky n'est pas seulement un chien à nourrir et à vacciner. Son entretien quotidien a un coût concret, surtout à cause de son pelage dense et de ses périodes de mue. Il faut prévoir une ou plusieurs brosses adaptées, un entretien régulier du poil, le remplacement de certains accessoires, ainsi que du temps ou un budget ponctuel si vous déléguez une partie du toilettage.",
                 "À la maison, beaucoup de choses peuvent être gérées soi-même: brossage, surveillance des oreilles, nettoyage léger, coupe de griffes si vous êtes à l'aise, lavage occasionnel avec un shampoing adapté. Mais cela suppose d'être équipé correctement et de renouveler certains produits. Un budget annuel modeste pour l'hygiène et le petit entretien peut vite représenter 100 a 300 euros, même sans toilettage professionnel régulier.",
@@ -129,7 +129,7 @@ export const pomskyPrixPost: BlogPost = {
             subtitle: "Ce budget est-il compatible avec votre projet de vie ?",
             paragraphs: [
                 "Avant d'adopter, la bonne question n'est donc pas seulement 'est-ce que je peux acheter un Pomsky ?', mais 'est-ce que je peux lui offrir une stabilité matérielle et sanitaire sur la durée ?'. Cela suppose un peu de visibilité budgétaire, une capacité à absorber des imprévus et une vraie cohérence entre votre rythme de vie et les besoins du chien.",
-                "Si vous hésitez encore, faites un exercice très simple: notez le prix d'achat visé, ajoutez une enveloppe d'installation, estimez un budget mensuel réaliste sur 12 mois, puis demandez-vous ce qui se passe si une dépense vétérinaire imprévue arrive dans les six premiers mois. Cette projection est beaucoup plus parlante qu'un simple coup de coeur sur une annonce.",
+                "Si vous hésitez encore, faites un exercice très simple : notez le prix d'achat visé, ajoutez une enveloppe d'installation, estimez un budget mensuel réaliste sur 12 mois, puis demandez-vous ce qui se passe si une dépense vétérinaire imprévue arrive dans les six premiers mois. Cette projection est beaucoup plus parlante qu'un simple coup de cœur sur une annonce.",
                 "Un Pomsky bien choisi et bien accompagné peut être un compagnon formidable. Mais une adoption sereine commence par une projection honnête. Lorsque le budget global est clair dès le départ, les décisions du quotidien deviennent plus simples, plus cohérentes et souvent meilleures pour le chien comme pour sa famille."
             ],
             links: [

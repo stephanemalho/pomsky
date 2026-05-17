@@ -119,7 +119,7 @@ const homeChecklist = [
     "deux gamelles, dont une dédiée à l'eau fraîche en permanence",
     "des jouets simples à mâcher et adaptés à l'âge du chiot",
     "un espace sécurisé pour la nuit et les temps de repos",
-    "un rythme simple: sorties, repas, sommeil, présence humaine calme",
+    "un rythme simple : sorties, repas, sommeil, présence humaine calme",
 ]
 
 const firstWeekAvoid = [
@@ -305,7 +305,7 @@ export default function AdoptionSuccessPage() {
                             </Badge>
                             <div className="space-y-4">
                                 <h1 className="text-2xl font-bold md:text-3xl">
-                                    Réussir l&apos;adoption de son chiot Pomsky: le jour du départ, l&apos;arrivée à la maison et les premières semaines
+                                    Réussir l&apos;adoption de son chiot Pomsky : le jour du départ, l&apos;arrivée à la maison et les premières semaines
                                 </h1>
                                 <p className="max-w-3xl text-muted-foreground">
                                     Une adoption réussie se prépare avant même le trajet. Le jour J, l&apos;objectif n&apos;est pas d&apos;en faire trop, mais

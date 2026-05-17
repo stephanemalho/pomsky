@@ -16,25 +16,25 @@ type BenefitCard = {
 export const pomskyBenefits: BenefitCard[] = [
     {
         title: "Pomsky de taille standard, mini ou Toy : comment choisir ?",
-        text: "Un chien Pomsky de taille standard mesure environ 39 à 45 cm au garrot à l'âge adulte. Il y'a également les mini Pomsky  qui mesurent entre 36 et 40 cm au garrot. En dessous de cette taille, c'est un Pomsky toy. ",
+        text: "Un chien Pomsky de taille standard mesure environ 39 à 45 cm au garrot à l'âge adulte. Il existe également des Pomsky Miniature, qui mesurent entre 36 et 40 cm au garrot. En dessous de cette taille, on parle plutôt de Pomsky Toy.",
         image: pomskySize,
         alt: "Pomsky de l'élevage Royal POMSKY debout dans l'herbe, utilisé pour illustrer les différents formats"
     },
     {
         title: "Quel type de poils pour le Pomsky ?",
-        text: "Le Pomsky possède en général un poil assez épais, il peut être de type standard polaire Husky,  intermédiaire appelé aussi Plush Coat ou de type « Whooly » c'est à dire d'aspect laineux, mi long à long, plus proche du poil du Loulou de Poméranie.",
+        text: "Le Pomsky possède en général un poil assez épais. Il peut être de type standard polaire Husky, intermédiaire, aussi appelé Plush Coat, ou de type « wooly », c'est-à-dire d'aspect laineux, mi-long à long, plus proche du poil du Loulou de Poméranie.",
         image: pomskyFur,
         alt: "Deux chiots Pomsky de l'élevage Royal POMSKY illustrant la texture et la densité du pelage"
     },
     {
         title: "Les traits physiques du Pomsky",
-        text: "Le Pomsky a de nombreuses caractéristiques physiques qui lui viennent du Husky. On retrouve parmi celles-ci, la couleur de ses yeux : (bleus, verts, ambre, bruns ou hétérochromes) ainsi que la couleur de sa robe, le marquage ( notamment le masque ), la texture et la densité de son poil.",
+        text: "Le Pomsky a de nombreuses caractéristiques physiques qui lui viennent du Husky. On retrouve notamment la couleur de ses yeux (bleus, verts, ambre, bruns ou hétérochromes), la couleur de sa robe, le marquage, notamment le masque, la texture et la densité de son poil.",
         image: wetPomsky,
         alt: "Pomsky au pelage marqué et à l'expression vive, utilisé pour illustrer les traits physiques de la race"
     },
     {
         title: "Un regard unique et expressif",
-        text: "Le Pomsky se distingue par un regard intense et expressif. Ses yeux peuvent être bleus, verts, ambre, bruns, gris ou noirs, parfois vairons ou particolor, hérités du Husky sibérien. Cette richesse visuelle renforce son expressivité et le lien qu'il crée avec ses adoptants.",
+        text: "Le Pomsky se distingue par un regard intense et expressif. Ses yeux peuvent être bleus, verts, ambre, bruns, gris ou noirs, parfois vairons ou particolores, hérités du Husky sibérien. Cette richesse visuelle renforce son expressivité et le lien qu'il crée avec ses adoptants.",
         image: pomskyEyeColors,
         alt: "Portrait rapproché d'un Pomsky au regard expressif, pour illustrer la variété des yeux chez la race"
     },

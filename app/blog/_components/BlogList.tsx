@@ -57,11 +57,11 @@ export default function BlogList({ base, theme }: BlogListProps) {
                         </div>
                         {activeThemeData ? (
                             <div className="max-w-3xl rounded-2xl border border-primary/15 bg-primary/5 px-5 py-4 text-sm leading-relaxed text-muted-foreground">
-                                Cette page regroupe les contenus du theme {activeThemeData.label.toLowerCase()}.
-                                Chaque article y traite un angle precis pour eviter de melanger les sujets et faciliter la navigation.
+                                Cette page regroupe les contenus du thème {activeThemeData.label.toLowerCase()}.
+                                Chaque article y traite un angle précis pour éviter de mélanger les sujets et faciliter la navigation.
                             </div>
                         ) : null}
-                        <nav aria-label="Filtrer les articles par theme">
+                        <nav aria-label="Filtrer les articles par thème">
                             <ul className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.2em]">
                                 <li className="my-2">
                                     <Link

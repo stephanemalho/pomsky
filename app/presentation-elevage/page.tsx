@@ -479,7 +479,7 @@ export default function PresentationPage() {
                                         La portée née le 28 avril 2026 à l&apos;élevage est désormais visible sur cette page. Sept chiots issus du mariage entre Sky et Sally sont présentés parmi les chiots actuellement disponibles.
                                     </p>
                                     <p className="max-w-2xl text-base leading-relaxed text-foreground/75">
-                                        Sky, mâle bleu et blanc au regard perçant et à la fourrure whooly, et Sally, femelle chocolat et blanc au masque Fleur de Lys, forment un duo très recherché pour leur équilibre, leur type et leur belle qualité de lignée.
+                                        Sky, mâle bleu et blanc au regard perçant et à la fourrure wooly, et Sally, femelle chocolat et blanc au masque Fleur de Lys, forment un duo très recherché pour leur équilibre, leur type et leur belle qualité de lignée.
                                     </p>
                                 </div>
 

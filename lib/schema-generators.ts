@@ -289,9 +289,9 @@ export function generatePuppyListSchema(puppies: PuppySchemaInput[]) {
         "@context": "https://schema.org",
         "@type": "ItemList",
         "@id": `${toAbsoluteUrl(siteConfig.pages.puppies)}#chiots-disponibles`,
-        name: "Chiots pomsky disponibles",
+        name: "Chiots Pomsky disponibles",
         description:
-            "Liste des chiots pomsky Royal POMSKY disponibles à l'adoption.",
+            "Liste des chiots Pomsky Royal POMSKY disponibles à l'adoption.",
         numberOfItems: puppies.length,
         itemListElement: puppies.map((puppy, index) => ({
             "@type": "ListItem",
@@ -317,7 +317,7 @@ export function generatePuppyCatalogSchema(puppies: PuppyCatalogSchemaInput[]) {
             toAdditionalProperty("Format", puppy.size),
             toAdditionalProperty("Poids adulte estimé", puppy.weight),
             toAdditionalProperty("Parents", puppy.parents),
-            toAdditionalProperty("Age", puppy.age),
+            toAdditionalProperty("Âge", puppy.age),
             toAdditionalProperty("Pelage", puppy.ruler),
             toAdditionalProperty("Prix affiché", typeof puppy.price === "number" ? puppy.price : undefined),
             toAdditionalProperty("Prix inclut", puppy.priceIncludes),

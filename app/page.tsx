@@ -100,7 +100,7 @@ export default function HomePage() {
         { icon: PawPrint, label: "Socialisation et lecture du tempérament" },
       ] as FounderHighlight[],
       description:
-        "Aurélie est une passionnée par les chiens et courses de traîneaux depuis sa plus tendre enfance: la sélection du cheptel royal Pomsky repose sur son expertise! Éducatrice comportementaliste, elle a collaboré avec de nombreux centres de rééducation, éducation canine ainsi que des associations de protection animale tels que la S.P.A: après des années de pratique en éducation elle se spécialise dans l'élevage canin grâce au Pomsky : depuis 2018. « L'idée la plus extraordinaire créée dans ma génération : un husky miniature possédant toutes les qualités d'un chien de compagnie ! Pour moi, pas question de créer une race en faisant des essais, je me suis tournée vers les éleveurs Américains qui m'ont appris à sélectionner et importer dès la première portée des reproducteurs exceptionnels. Faire naître et voir évoluer un chien ressemblent physiquement au nordique, au husky, ou au malamute, en miniature avec un comportement totalement équilibré est une honneur absolu, un bonheur et un privilège. Je ne trouve absolument aucun « défaut » à mes Pomsky, ils sont juste parfaits et adaptés à tout mode de vie, et c'est'objectif que je m'étais fixée depuis 2018 » Sa grande expérience, sa sensibilité la mène également vers la communication animale depuis 2020. Avec Aurélie votre suivi sera totalement holistique et ce durant toute la vie de votre chiot Pomsky. Ses grandes connaissances en matière de santé et soins prodigués à l'animal pourront également vous être très utiles.",
+        "Aurélie est passionnée par les chiens et les courses de traîneaux depuis sa plus tendre enfance : la sélection du cheptel Royal Pomsky repose sur son expertise. Éducatrice comportementaliste, elle a collaboré avec de nombreux centres de rééducation canine, des structures d'éducation canine ainsi que des associations de protection animale telles que la S.P.A. Après des années de pratique en éducation, elle se spécialise dans l'élevage canin grâce au Pomsky, dès 2018. « L'idée la plus extraordinaire créée dans ma génération : un husky miniature possédant toutes les qualités d'un chien de compagnie ! Pour moi, pas question de créer une race en faisant des essais. Je me suis tournée vers les éleveurs américains qui m'ont appris à sélectionner et à importer, dès la première portée, des reproducteurs exceptionnels. Faire naître et voir évoluer un chien qui ressemble physiquement au nordique, au husky ou au malamute, en miniature et avec un comportement totalement équilibré, est un honneur absolu, un bonheur et un privilège. Je ne trouve absolument aucun « défaut » à mes Pomsky, ils sont juste parfaits et adaptés à tout mode de vie, et c'est l'objectif que je m'étais fixé depuis 2018. » Sa grande expérience et sa sensibilité la mènent également vers la communication animale depuis 2020. Avec Aurélie, votre suivi sera totalement holistique, et ce durant toute la vie de votre chiot Pomsky. Ses grandes connaissances en matière de santé et de soins prodigués à l'animal pourront également vous être très utiles.",
       badges: [
         "diplômée éducateur canin comportementaliste",
         "Ancienne éducatrice comportementaliste",
@@ -122,7 +122,7 @@ export default function HomePage() {
         { icon: ClipboardList, label: "Préparation des formalités de départ" },
       ] as FounderHighlight[],
       description:
-        "Marine a suivi Aurélie dans l'aventure Pomsky, car à deux, la meute est absolument bichonnée ! Autodidacte, carrée, c'est une véritable perfectionniste : ancienne responsable de boutique dans une grande enseigne spécialisée en automobile, Marine a l'esprit de leader. Avec elle, les locaux doivent être entretenus de façon très protocolaire afin que nos chiots évoluent dans des conditions optimales pour leur santé et leur bien-être. Chaque chiot est soigneusement ausculté chaque jour, et elle porte aussi attention à chaque caractère grâce à son instinct d'anticipation. Chaque petit est bichonné dès sa naissance ! Son niveau d'exigence est extrêmement élevé, voire militaire : rien n'échappe aux yeux de Marine ! Chaque jour, elle passe beaucoup de temps avec les chiens adultes et les chiots, qu'elle connaît absolument par cœur. Observatrice, elle sait anticiper ce dont chacun a besoin. Le bien-être animal et les conditions sanitaires sont sa priorité. Marine gère le côté administratif de l'élevage. C'est donc elle qui prépare soigneusement les formalités pour le départ.",
+        "Marine a suivi Aurélie dans l'aventure Pomsky : à deux, elles veillent sur la meute avec une attention constante. Autodidacte, rigoureuse et perfectionniste, Marine a l'esprit de leader. Ancienne responsable de boutique dans une grande enseigne spécialisée en automobile, elle accorde une importance particulière aux protocoles et à l'organisation. Avec elle, les locaux doivent être entretenus avec beaucoup de méthode afin que nos chiots évoluent dans des conditions optimales pour leur santé et leur bien-être. Chaque chiot est soigneusement ausculté chaque jour, et elle porte aussi attention à chaque caractère grâce à son instinct d'anticipation. Chaque petit est bichonné dès sa naissance. Son niveau d'exigence est très élevé : rien n'échappe aux yeux de Marine. Chaque jour, elle passe beaucoup de temps avec les chiens adultes et les chiots, qu'elle connaît absolument par cœur. Observatrice, elle sait anticiper ce dont chacun a besoin. Le bien-être animal et les conditions sanitaires sont sa priorité. Marine gère le côté administratif de l'élevage. C'est donc elle qui prépare soigneusement les formalités pour le départ.",
       badges: [
         "4 ans d'expérience en élevage canin",
         "Protocoles d'hygiène rigoureux",
@@ -154,31 +154,11 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(homeVideoSchema) }}
       />
-
       <div className="flex flex-col">
         <section className="bg-accent-foreground">
           <div className="overflow-hidden bg-linear-to-b from-[#1a090d] via-[#870518] to-[#1a090d]">
             <div className="container mx-auto px-4 py-6 md:px-6 md:py-8 lg:px-8 lg:py-10">
               <div className="mx-auto max-w-6xl space-y-5 md:space-y-6">
-                <div className="overflow-hidden rounded-xl md:rounded-4xl border border-white/10 bg-[#3a1117] shadow-[0_35px_120px_rgba(0,0,0,0.35)]">
-                  <figure>
-                    <Image
-                      src="/bandeau-presentaion-royal-pomsky-toy.jpeg"
-                      alt="Bannière d'accueil de Royal POMSKY présentant l'univers de l'élevage"
-                      width={1260}
-                      height={400}
-                      priority
-                      fetchPriority="high"
-                      loading="eager"
-                      sizes="(min-width: 1280px) 1152px, (min-width: 768px) calc(100vw - 48px), calc(100vw - 32px)"
-                      className="block h-auto w-full"
-                    />
-                    <figcaption className="px-5 py-3 text-xs leading-relaxed text-white/72">
-                      Montage photo des chiots et chiens de Royal POMSKY pour vous présenter l&apos;univers de l&apos;élevage.
-                    </figcaption>
-                  </figure>
-                </div>
-
                 <div className="mx-auto max-w-6xl rounded-xl md:rounded-4xl border border-white/12 bg-[#47131b]/72 px-6 py-6 text-center text-white shadow-[0_30px_100px_rgba(0,0,0,0.32)] backdrop-blur-sm md:px-8">
                   <div className="mx-auto max-w-4xl">
                     <div className="mx-auto inline-flex items-center gap-3 px-4 py-1 text-md uppercase tracking-[0.35em] text-white/80">
@@ -189,7 +169,6 @@ export default function HomePage() {
                     </h1>
                   </div>
                 </div>
-
                 <div className="mx-auto max-w-6xl overflow-hidden rounded-xl md:rounded-4xl border border-white/12 bg-[#3a1117]/55 shadow-[0_30px_100px_rgba(0,0,0,0.28)] backdrop-blur-sm">
                   <figure>
                     <div className="relative aspect-4/3 sm:aspect-16/11 md:aspect-16/8 lg:aspect-16/7">
@@ -203,7 +182,7 @@ export default function HomePage() {
                       <div className="absolute inset-0 bg-linear-to-t from-[#2a0d12]/35 via-transparent to-transparent" aria-hidden="true" />
                     </div>
                     <figcaption className="px-5 py-3 text-xs leading-relaxed text-white/72">
-                      Les pets parents de Koda, lui offrent une vie heureuse.
+                      Koda, Pomsky Toy de Royal Pomsky à sa taille adulte.
                     </figcaption>
                   </figure>
                 </div>
@@ -267,7 +246,7 @@ export default function HomePage() {
                 </h2>
 
                 <p className="text-muted-foreground leading-relaxed">
-                  Alors que la création de la race commençait à arriver en France et s'effectuait par des croisements au résultat aléatoire, aux caractéristiques physiques et comportementales peu précises, <strong>nous avons fait le choix d'importer nos premiers Pomsky directement des États Unis d'Amérique</strong> dans le but d'apporter aux futurs adoptants de nos chiots un physique prévisible, un comportement prévisible, et une construction de la race avec une stabilisation des le départ : chez nous, aucune place pour le hasard depuis le début.
+                  Alors que la création de la race commençait à arriver en France et s'effectuait par des croisements au résultat aléatoire, aux caractéristiques physiques et comportementales peu précises, <strong>nous avons fait le choix d'importer nos premiers Pomsky directement des États-Unis d'Amérique</strong> afin d'apporter aux futurs adoptants de nos chiots un physique plus prévisible, un comportement plus prévisible et une construction de la race avec une stabilisation dès le départ : chez nous, aucune place pour le hasard depuis le début.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
                   <strong>Nos Pomsky sont uniques et font entièrement partie de notre univers</strong>, ce sont nos protégés ! Ils sont aimés et représentent notre passion et notre fierté, ils sont dans nos pensées permanentes, nous accompagnent à chaque instant, et sont constamment au cœur de nos préoccupations.
@@ -278,10 +257,10 @@ export default function HomePage() {
                     Des Pomsky de tailles toy à standard élevés dans le bonheur
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Notre élevage est situé en France, à Dommartin-lès-Cuiseaux, Saône-et-Loire (71), à la frontière du Jura (39). Chez Royal Pomsky, nous n'expédions pas nos chiots à distance,  Ils sont à adopter sur place, après visite de l'élevage et rencontre avec les parents.  <Link
+                    Notre élevage est situé en France, à Dommartin-lès-Cuiseaux, en Saône-et-Loire (71), à la frontière du Jura (39). Chez Royal Pomsky, nous n'expédions pas nos chiots à distance. Ils sont à adopter sur place, après visite de l'élevage et rencontre avec les parents. <Link
                       href="/chiots-disponibles#adoption-france-suisse"
                       className="underline text-accent-foreground hover:text-muted-foreground"
-                    >sauf cas particulier ( raison de santé, impossibilité de déplacement etc… )</Link> votre demande sera étudiée au cas par cas après un entretien en appel visio
+                    >Dans certains cas particuliers (raison de santé, impossibilité de déplacement, etc.)</Link>, votre demande sera étudiée au cas par cas après un entretien en visioconférence.
                   </p>
                 </div>
 
@@ -320,7 +299,7 @@ export default function HomePage() {
 
               <p className="text-muted-foreground max-w-3xl mx-auto">
                 Petit chien au grand cœur, <strong>
-                  le pomsky miniature et le pomsky Toy sont deux
+                  le Pomsky Miniature et le Pomsky Toy sont deux
                   variétés de petit gabarit
                 </strong>, reconnues pour leur intelligence vive et leur
                 grande proximité avec leur famille.
@@ -361,7 +340,7 @@ export default function HomePage() {
             href="/le-pomsky"
             className="flex my-12 bg-primary m-auto text-white hover:bg-primary/80 p-4 font-semibold w-fit dark:text-[#5b3a1a] rounded-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
           >
-            En savoir plus sur le pomsky
+            En savoir plus sur le Pomsky
           </Link>
         </section>
 
@@ -403,7 +382,7 @@ export default function HomePage() {
               <p className="text-muted-foreground max-w-3xl mx-auto text-sm leading-relaxed md:text-base">
                 Derrière l'élevage de Pomsky se trouvent <strong>Aurélie et Marine</strong>, deux
                 éleveuses passionnées par le bien-être animal et unies par un amour
-                profond pour le <strong>pomsky miniature et le pomsky toy</strong>.
+                profond pour le <strong>Pomsky Miniature et le Pomsky Toy</strong>.
                 Issues de parcours complémentaires dans l'éducation, le comportement et
                 l'élevage canin, elles accordent une attention particulière à la
                 socialisation, à l'équilibre émotionnel et au développement harmonieux de

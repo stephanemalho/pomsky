@@ -17,7 +17,7 @@ export const chienPomskyPost: BlogPost = {
         {
             subtitle: "Le terme race hybride ne veut pas dire chien aléatoire",
             paragraphs: [
-                "Dire que le Pomsky est un chien hybride signifie d'abord qu'il est issu de deux races différentes: le Husky sibérien et le Spitz nain, aussi appelé Poméranien. Cela ne veut pas dire qu'il est produit au hasard ni qu'aucune cohérence n'est possible. Comme pour toute race en développement, la sélection, la qualité des lignées et le recul sur plusieurs générations jouent un rôle central.",
+                "Dire que le Pomsky est un chien hybride signifie d'abord qu'il est issu de deux races différentes : le Husky sibérien et le Spitz nain, aussi appelé Poméranien. Cela ne veut pas dire qu'il est produit au hasard ni qu'aucune cohérence n'est possible. Comme pour toute race en développement, la sélection, la qualité des lignées et le recul sur plusieurs générations jouent un rôle central.",
                 "Ce point est important, car le mot hybride est parfois mal compris. Il ne désigne pas un chien 'bâtard' au sens vague du terme, ni un simple effet de mode. Il décrit une construction génétique encore en cours de stabilisation, avec un vrai travail en amont pour orienter le type, le tempérament, la taille et l'équilibre général.",
                 "Autrement dit, le Pomsky n'est pas un chien figé comme une race reconnue depuis très longtemps, mais ce n'est pas non plus un produit sans lecture possible. Entre ces deux extrêmes, il existe tout le travail de sélection."
             ],

@@ -41,7 +41,7 @@ export const pomskyBeigeYeuxBleusPost: BlogPost = {
             paragraphs: [
                 "Le beige aux yeux bleus se situe visuellement entre deux extrêmes souvent très recherchés: le blanc lumineux et le noir très contrasté. Par rapport au blanc, il gagne souvent en chaleur et en nuance. Par rapport au noir, il perd en contraste mais gagne en douceur perçue.",
                 "Cette position intermédiaire en fait un profil très apprécié des familles qui veulent une apparence originale, expressive et lumineuse, sans chercher forcément le rendu le plus spectaculaire possible.",
-                "C'est aussi ce qui en fait une robe intéressante à travailler dans une logique d'apparence: elle propose une personnalité visuelle propre, différente de celle des profils plus tranchés."
+                "C'est aussi ce qui en fait une robe intéressante à travailler dans une logique d'apparence : elle propose une personnalité visuelle propre, différente de celle des profils plus tranchés."
             ],
             links: [
                 {

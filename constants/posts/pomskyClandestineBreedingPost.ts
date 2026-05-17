@@ -11,7 +11,7 @@ export const pomskyClandestineBreedingPost: BlogPost = {
     seoDescription:
         "Comment reconnaître un élevage clandestin de chiots ? Découvrez les signaux d'alerte, les questions à poser et les vérifications utiles avant de réserver un Pomsky.",
     introduction:
-        "Les faits divers liés à des élevages clandestins rappellent une réalité simple: une belle annonce ou un chiot très photogénique ne disent presque rien sur les conditions dans lesquelles il a grandi. Pour un futur adoptant, le vrai sujet n'est pas seulement moral. Il est aussi pratique, sanitaire et comportemental. Quand le cadre d'élevage est opaque, improvisé ou dissimulé, les risques augmentent pour le chiot comme pour la famille. Cet article ne cherche donc pas à commenter une affaire précise, mais à transformer cette actualité en repères utiles: comment reconnaître un contexte à risque, quelles questions poser et à quel moment il vaut mieux renoncer plutôt que se rassurer trop vite.",
+        "Les faits divers liés à des élevages clandestins rappellent une réalité simple : une belle annonce ou un chiot très photogénique ne disent presque rien sur les conditions dans lesquelles il a grandi. Pour un futur adoptant, le vrai sujet n'est pas seulement moral. Il est aussi pratique, sanitaire et comportemental. Quand le cadre d'élevage est opaque, improvisé ou dissimulé, les risques augmentent pour le chiot comme pour la famille. Cet article ne cherche donc pas à commenter une affaire précise, mais à transformer cette actualité en repères utiles : comment reconnaître un contexte à risque, quelles questions poser et à quel moment il vaut mieux renoncer plutôt que se rassurer trop vite.",
     modifiedDate: "2026-03-27",
     sections: [
         {
@@ -33,7 +33,7 @@ export const pomskyClandestineBreedingPost: BlogPost = {
         {
             subtitle: "Les signaux d'alerte qui doivent immédiatement vous faire ralentir",
             paragraphs: [
-                "Plusieurs signaux doivent déclencher une vraie prudence: impossibilité de voir la maman, informations floues sur les parents, absence d'explication claire sur le cadre de vie, difficulté à obtenir des photos cohérentes dans le temps, pression pour réserver vite, promesses très catégoriques sur la taille adulte ou l'apparence, et refus de répondre simplement à des questions pourtant basiques.",
+                "Plusieurs signaux doivent déclencher une vraie prudence : impossibilité de voir la maman, informations floues sur les parents, absence d'explication claire sur le cadre de vie, difficulté à obtenir des photos cohérentes dans le temps, pression pour réserver vite, promesses très catégoriques sur la taille adulte ou l'apparence, et refus de répondre simplement à des questions pourtant basiques.",
                 "Il faut aussi se méfier des discours qui misent presque tout sur l'urgence, la rareté ou le prix. Un cadre sérieux accepte les vérifications. Un cadre douteux cherche souvent à accélérer la décision. Quand la relation commence par une sensation de flou, elle devient rarement plus rassurante ensuite.",
                 "Le bon réflexe n'est pas d'entrer dans une confrontation. C'est de reprendre de la distance et de vérifier ailleurs."
             ],
@@ -48,7 +48,7 @@ export const pomskyClandestineBreedingPost: BlogPost = {
             subtitle: "Ce qu'un élevage professionnel sérieux doit pouvoir montrer",
             paragraphs: [
                 "À l'inverse, un élevage professionnel sérieux doit pouvoir parler clairement de ses reproducteurs, de ses lignées, du suivi des chiots, de la socialisation, de l'environnement quotidien et des étapes de préparation au départ. La transparence ne signifie pas tout exhiber sans filtre. Elle signifie pouvoir expliquer ce qui est fait, pourquoi cela est fait et comment le chiot a été accompagné jusqu'ici.",
-                "Cette cohérence doit se retrouver dans le fond comme dans la forme: réponses stables, informations vérifiables, lecture honnête du chiot, et vraie capacité à poser aussi des questions à la famille. Un bon élevage ne cherche pas seulement à vendre. Il cherche à construire une adoption cohérente.",
+                "Cette cohérence doit se retrouver dans le fond comme dans la forme : réponses stables, informations vérifiables, lecture honnête du chiot, et vraie capacité à poser aussi des questions à la famille. Un bon élevage ne cherche pas seulement à vendre. Il cherche à construire une adoption cohérente.",
                 "C'est ce contraste qui aide le plus à lire une annonce: quand le sérieux existe, il se voit dans la qualité du dialogue autant que dans les réponses données."
             ],
             links: [
@@ -95,7 +95,7 @@ export const pomskyClandestineBreedingPost: BlogPost = {
         {
             subtitle: "Ce qu'il faut retenir avant d'adopter",
             paragraphs: [
-                "Les affaires d'élevages clandestins rappellent une chose essentielle: l'opacité est toujours un mauvais signal. Un futur adoptant doit apprendre à lire le cadre avant de lire la photo, à vérifier le fond avant de se laisser emporter par l'émotion et à préférer la transparence à l'urgence.",
+                "Les affaires d'élevages clandestins rappellent une chose essentielle : l'opacité est toujours un mauvais signal. Un futur adoptant doit apprendre à lire le cadre avant de lire la photo, à vérifier le fond avant de se laisser emporter par l'émotion et à préférer la transparence à l'urgence.",
                 "Le bon chiot se choisit dans un contexte lisible, sérieux et assumé. Si ce contexte n'existe pas, il ne faut pas se convaincre qu'il apparaîtra plus tard.",
                 "Une adoption sereine repose rarement sur une annonce spectaculaire. Elle repose presque toujours sur un cadre clair."
             ],
