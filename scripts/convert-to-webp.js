@@ -27,7 +27,10 @@ async function convertToWebP(filePath) {
         const originalStats = fs.statSync(filePath);
         totalOriginalSize += originalStats.size;
 
-        await sharp(filePath).webp({ quality: 85, effort: 6 }).toFile(webpPath);
+        await sharp(filePath)
+            .rotate()
+            .webp({ quality: 85, effort: 6 })
+            .toFile(webpPath);
 
         const webpStats = fs.statSync(webpPath);
         totalWebpSize += webpStats.size;
