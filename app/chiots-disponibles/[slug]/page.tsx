@@ -95,7 +95,7 @@ export async function generateMetadata({ params }: PuppyPageProps): Promise<Meta
         return {};
     }
 
-    const firstImage = getPuppyImageSrc(puppy.images[0]?.src ?? "/pages/puppies/Aika-femelle-pomsky-a-vendre.jpg");
+    const firstImage = getPuppyImageSrc(puppy.images[0]?.src ?? "/pages/puppies/pomsky-f4-inuk-1.jpeg");
     const description = getPuppySeoDescription(puppy);
     const title = `${puppy.name}, chiot Pomsky ${puppy.color} ${getPuppyStatusLabel(puppy).toLowerCase()}`;
     const url = `${siteConfig.siteUrl}${getPuppyUrl(puppy)}`;

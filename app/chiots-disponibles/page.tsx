@@ -45,7 +45,7 @@ import {
     getPuppyUrl,
 } from "./puppy-seo";
 
-const puppiesOgImage = "/pages/puppies/Aika-femelle-pomsky-a-vendre.jpg";
+const puppiesOgImage = "/pages/puppies/pomsky-f4-inuk-1.jpeg";
 
 export const metadata: Metadata = {
     title: pageMetadata.puppies.title,
@@ -174,17 +174,18 @@ export default function NosChiotsPage() {
                                 const firstImage = puppy.images[0];
                                 const priceTextClass = isReserved ? "text-muted-foreground line-through" : "text-primary";
                                 const certification = getLitterCertificationForPuppy(puppy);
+                                const eyeHighlight = puppy.highlights.find((highlight) => highlight.toLowerCase().startsWith("yeux"));
 
                                 return (
                                     <Card
                                         key={puppy.name}
                                         className={`relative overflow-hidden bg-background ${isReserved ? "border-2 border-green-600 ring-2 ring-green-600/20 ring-offset-2 ring-offset-background" : ""}`}
                                     >
-                                        <CardContent className="p-5 md:p-6">
-                                            <div className="grid gap-5 md:grid-cols-[112px_1fr_auto] md:items-center">
+                                        <CardContent className="p-0">
+                                            <div className="grid md:grid-cols-[220px_1fr_auto] md:items-stretch">
                                                 <Link
                                                     href={puppyUrl}
-                                                    className="relative mx-auto h-28 w-28 overflow-hidden rounded-full border-4 border-primary/10 bg-muted shadow-sm transition-transform hover:scale-105 md:mx-0"
+                                                    className="relative block aspect-[4/3] w-full overflow-hidden bg-muted transition-opacity hover:opacity-90 md:h-full md:min-h-full md:aspect-auto"
                                                     aria-label={`Voir la fiche détaillée de ${puppy.name}`}
                                                 >
                                                     {firstImage ? (
@@ -193,26 +194,29 @@ export default function NosChiotsPage() {
                                                             alt={firstImage.alt}
                                                             fill
                                                             className="object-cover"
-                                                            sizes="112px"
+                                                            sizes="(min-width: 768px) 220px, 100vw"
                                                             priority={index === 0}
                                                         />
                                                     ) : null}
                                                 </Link>
 
-                                                <div className="min-w-0 space-y-3 text-center md:text-left">
+                                                <div className="min-w-0 space-y-2 p-4 text-left md:space-y-3 md:p-6">
                                                     <div className="space-y-1">
-                                                        <h2 className="text-2xl font-bold">{puppy.name}</h2>
-                                                        <p className="text-sm leading-relaxed text-muted-foreground md:text-base">
+                                                        <h2 className="text-xl font-bold md:text-2xl">{puppy.name}</h2>
+                                                        <p className="line-clamp-3 text-sm leading-relaxed text-muted-foreground md:line-clamp-none md:text-base">
                                                             {puppy.description}
                                                         </p>
                                                     </div>
 
-                                                    <div className="flex flex-wrap justify-center gap-2 md:justify-start">
+                                                    <div className="flex flex-wrap gap-1.5 md:gap-2">
                                                         <Badge variant="secondary">
                                                             <PawPrint className="mr-1 h-4 w-4" aria-hidden="true" />
                                                             {puppy.sexe}
                                                         </Badge>
                                                         <Badge variant="outline">{puppy.color}</Badge>
+                                                        {eyeHighlight ? (
+                                                            <Badge variant="outline">{eyeHighlight}</Badge>
+                                                        ) : null}
                                                         <Badge variant="secondary">{puppy.parents.replace("Parents : ", "")}</Badge>
                                                         <Badge variant="outline">{puppy.size}</Badge>
                                                         {certification ? (
@@ -233,7 +237,7 @@ export default function NosChiotsPage() {
                                                     </div>
                                                 </div>
 
-                                                <div className="flex flex-col gap-2 md:min-w-60">
+                                                <div className="flex flex-col justify-center gap-2 border-t border-primary/10 p-4 pt-3 md:min-w-60 md:border-t-0 md:p-6 md:pl-0">
                                                     <Link
                                                         href={puppyUrl}
                                                         className="inline-flex items-center justify-center rounded-md border border-primary px-4 py-2 font-semibold text-primary transition-colors hover:bg-primary/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
