@@ -57,7 +57,7 @@ const formUrls = {
     skySally: "https://forms.gle/av3Tv3bbZ6T8ZF4Z7",
     inuitMogu: "https://forms.gle/7a9kRVTysftzNGwS7",
     charmAlou: "https://forms.gle/7o7g6MptyDDkP611A",
-    pweekCharm: "https://forms.gle/DJCcN9iHtUSCAhZE7",
+    pweekCharm: "https://forms.gle/DJCcN9iHtUSCAhZE7"
 };
 
 const defaultHealth = ["Suivi vétérinaire en cours"];
@@ -65,7 +65,7 @@ const defaultHealth = ["Suivi vétérinaire en cours"];
 function puppyImages(name: string, files: string[]): PuppyImage[] {
     return files.map((file, index) => ({
         src: `pages/puppies/${file}`,
-        alt: `${name}, chiot Pomsky Royal POMSKY - photo ${index + 1}`,
+        alt: `${name}, chiot Pomsky Royal POMSKY - photo ${index + 1}`
     }));
 }
 
@@ -76,7 +76,8 @@ export const litterCertifications: LitterCertification[] = [
         name: "Déclaration de portée FFP Charm et Beauty",
         description:
             "Déclaration de portée établie par la Fédération Française du Pomsky pour la portée Charm et Beauty née le 24 avril 2026.",
-        imageSrc: "/pages/puppies/fiche-administrative-mariage-pomsky-f4-et-pomsky-f3.jpg",
+        imageSrc:
+            "/pages/puppies/fiche-administrative-mariage-pomsky-f4-et-pomsky-f3.jpg",
         issuer: "Fédération Française du Pomsky",
         breeder: "Élevage Royal Pomsky",
         certificationIdentification: "DP FFP 2026.080-083",
@@ -88,16 +89,16 @@ export const litterCertifications: LitterCertification[] = [
                 name: "Paramount Pomsky Charm",
                 breed: "Pomsky",
                 generation: "F3",
-                pedigree: "CE FFP 2025.059",
+                pedigree: "CE FFP 2025.059"
             },
             {
                 role: "Mère",
                 name: "Royal Pomsky Beauty",
                 breed: "Pomsky",
                 generation: "F4",
-                pedigree: "CG FFP 2025.159",
-            },
-        ],
+                pedigree: "CG FFP 2025.159"
+            }
+        ]
     },
     {
         id: "declaration-portee-sky-sally",
@@ -110,23 +111,32 @@ export const litterCertifications: LitterCertification[] = [
         breeder: "Élevage Royal Pomsky",
         certificationIdentification: "Fiche administrative Sky et Sally",
         litterBirthDate: "2026-04-28",
-        puppyNames: ["AÏKA", "BALTO", "LOUP", "LUNA", "LUMA", "MIYU", "ORION", "SORA"],
+        puppyNames: [
+            "AÏKA",
+            "BALTO",
+            "LOUP",
+            "LUNA",
+            "LUMA",
+            "MIYU",
+            "ORION",
+            "SORA"
+        ],
         parents: [
             {
                 role: "Père",
                 name: "Sky",
                 breed: "Pomsky",
                 generation: "F3",
-                pedigree: "Pédigrée FFP",
+                pedigree: "Pédigrée FFP"
             },
             {
                 role: "Mère",
                 name: "Sally",
                 breed: "Pomsky",
                 generation: "Miniature",
-                pedigree: "Pédigrée FFP",
-            },
-        ],
+                pedigree: "Pédigrée FFP"
+            }
+        ]
     },
     {
         id: "declaration-portee-inuit-mogu",
@@ -134,7 +144,8 @@ export const litterCertifications: LitterCertification[] = [
         name: "Fiche administrative Inuit et Mogu",
         description:
             "Fiche administrative de la portée Inuit et Mogu née le 27 avril 2026, présentée avec les chiots de cette portée.",
-        imageSrc: "/pages/puppies/fiche-administrative-mariage-inuit-et-mogu.png",
+        imageSrc:
+            "/pages/puppies/fiche-administrative-mariage-inuit-et-mogu.png",
         issuer: "Fédération Française du Pomsky",
         breeder: "Élevage Royal Pomsky",
         certificationIdentification: "Fiche administrative Inuit et Mogu",
@@ -146,16 +157,16 @@ export const litterCertifications: LitterCertification[] = [
                 name: "Inuit",
                 breed: "Pomsky",
                 generation: "F5",
-                pedigree: "Pédigrée FFP",
+                pedigree: "Pédigrée FFP"
             },
             {
                 role: "Mère",
                 name: "Mogu",
                 breed: "Pomsky",
                 generation: "F4",
-                pedigree: "Pédigrée FFP",
-            },
-        ],
+                pedigree: "Pédigrée FFP"
+            }
+        ]
     },
     {
         id: "declaration-portee-charm-alou",
@@ -175,16 +186,16 @@ export const litterCertifications: LitterCertification[] = [
                 name: "Paramount Pomsky Charm",
                 breed: "Pomsky",
                 generation: "F3",
-                pedigree: "CE FFP 2025.059",
+                pedigree: "CE FFP 2025.059"
             },
             {
                 role: "Mère",
                 name: "Alou",
                 breed: "Pomsky",
                 generation: "F3",
-                pedigree: "Pédigrée FFP",
-            },
-        ],
+                pedigree: "Pédigrée FFP"
+            }
+        ]
     },
     {
         id: "declaration-portee-pweek-charm",
@@ -192,7 +203,8 @@ export const litterCertifications: LitterCertification[] = [
         name: "Fiche administrative Pweek et Charm",
         description:
             "Fiche administrative de la portée Pweek et Charm, consultable depuis les fiches des chiots concernés.",
-        imageSrc: "/pages/puppies/fiche-administrative-mariage-pweek-et-charm.png",
+        imageSrc:
+            "/pages/puppies/fiche-administrative-mariage-pweek-et-charm.png",
         issuer: "Fédération Française du Pomsky",
         breeder: "Élevage Royal Pomsky",
         certificationIdentification: "Fiche administrative Pweek et Charm",
@@ -204,17 +216,17 @@ export const litterCertifications: LitterCertification[] = [
                 name: "Paramount Pomsky Charm",
                 breed: "Pomsky",
                 generation: "F3",
-                pedigree: "CE FFP 2025.059",
+                pedigree: "CE FFP 2025.059"
             },
             {
                 role: "Mère",
                 name: "Pweek",
                 breed: "Pomsky",
                 generation: "F3",
-                pedigree: "Pédigrée FFP",
-            },
-        ],
-    },
+                pedigree: "Pédigrée FFP"
+            }
+        ]
+    }
 ];
 
 const puppiesUnsorted: Puppy[] = [
@@ -231,15 +243,22 @@ const puppiesUnsorted: Puppy[] = [
         age: "Née le 27 avril 2026",
         description:
             "Baïkal est une femelle Pomsky noire et blanche issue de la portée Inuit et Mogu, née le 27 avril 2026. Elle présente des yeux bleus, un pelage fluffy et un format toy, avec un statut réservé.",
-        highlights: ["Femelle", "Yeux bleus", "Pelage fluffy", "Taille toy", "Réservée"],
+        highlights: [
+            "Femelle",
+            "Yeux bleus",
+            "Pelage fluffy",
+            "Taille toy",
+            "Réservée"
+        ],
         health: defaultHealth,
         images: puppyImages("BAÏKAL", [
+            "pomsky-mini-inuit-4.jpeg",
             "pomsky-toy-baikal-1.jpeg",
             "pomsky-toy-baikal-2.jpeg",
-            "pomsky-toy-baikal-3.jpeg",
+            "pomsky-toy-baikal-3.jpeg"
         ]),
         linkTo: formUrls.inuitMogu,
-        isReserved: true,
+        isReserved: true
     },
     {
         name: "INUIT",
@@ -259,9 +278,9 @@ const puppiesUnsorted: Puppy[] = [
         images: puppyImages("INUIT", [
             "pomsky-mini-inuit-1.jpeg",
             "pomsky-mini-inuit-2.jpeg",
-            "pomsky-mini-inuit-3.jpeg",
+            "pomsky-mini-inuit-3.jpeg"
         ]),
-        linkTo: formUrls.inuitMogu,
+        linkTo: formUrls.inuitMogu
     },
     {
         name: "KIT",
@@ -281,9 +300,9 @@ const puppiesUnsorted: Puppy[] = [
         images: puppyImages("KIT", [
             "pomsky-femelle-kit-1.jpeg",
             "pomsky-femelle-kit-2.jpeg",
-            "pomsky-femelle-kit-3.jpeg",
+            "pomsky-femelle-kit-3.jpeg"
         ]),
-        linkTo: formUrls.inuitMogu,
+        linkTo: formUrls.inuitMogu
     },
     {
         name: "STAR",
@@ -298,15 +317,20 @@ const puppiesUnsorted: Puppy[] = [
         age: "Née le 27 avril 2026",
         description:
             "Star est une femelle Pomsky issue de la portée Inuit et Mogu, née le 27 avril 2026. Elle présente des yeux noirs, un pelage fluffy et un format attendu toy ou miniature.",
-        highlights: ["Femelle", "Yeux noirs", "Pelage fluffy", "Format toy ou miniature"],
+        highlights: [
+            "Femelle",
+            "Yeux noirs",
+            "Pelage fluffy",
+            "Format toy ou miniature"
+        ],
         health: defaultHealth,
         images: puppyImages("STAR", [
             "pomsky-toy-femelle-star-1.jpeg",
             "pomsky-toy-femelle-star-2.jpeg",
             "pomsky-toy-femelle-star-3.jpeg",
-            "pomsky-toy-femelle-star-4.jpeg",
+            "pomsky-toy-femelle-star-4.jpeg"
         ]),
-        linkTo: formUrls.inuitMogu,
+        linkTo: formUrls.inuitMogu
     },
     {
         name: "AMAROK",
@@ -321,16 +345,21 @@ const puppiesUnsorted: Puppy[] = [
         age: "Né le 30 avril 2026",
         description:
             "Amarok est un mâle Pomsky noir et blanc né le 30 avril 2026, issu de la portée Charm et Alou. Il présente des yeux bleus, un pelage polaire husky et un format toy.",
-        highlights: ["Mâle", "Yeux bleus", "Pelage polaire husky", "Taille toy"],
+        highlights: [
+            "Mâle",
+            "Yeux bleus",
+            "Pelage polaire husky",
+            "Taille toy"
+        ],
         health: defaultHealth,
         images: puppyImages("AMAROK", [
+            "pomsky-toy-amarok-6.jpeg",
             "pomsky-toy-amarok-1.jpeg",
             "pomsky-toy-amarok-2.jpeg",
             "pomsky-toy-amarok-3.jpeg",
-            "pomsky-toy-amarok-4.jpeg",
-            "pomsky-toy-amarok-5.jpeg",
+            "pomsky-toy-amarok-5.jpeg"
         ]),
-        linkTo: formUrls.charmAlou,
+        linkTo: formUrls.charmAlou
     },
     {
         name: "ALASKA",
@@ -345,15 +374,20 @@ const puppiesUnsorted: Puppy[] = [
         age: "Née le 30 avril 2026",
         description:
             "Alaska est une femelle Pomsky blanche polaire pinto, avec quelques taches noires, née le 30 avril 2026. Elle présente des yeux bleus, un pelage polaire husky et un format toy.",
-        highlights: ["Femelle", "Yeux bleus", "Pelage polaire husky", "Taille toy"],
+        highlights: [
+            "Femelle",
+            "Yeux bleus",
+            "Pelage polaire husky",
+            "Taille toy"
+        ],
         health: defaultHealth,
         images: puppyImages("ALASKA", [
             "pomsky-toy-alaska-1.jpeg",
             "pomsky-toy-alaska-2.jpeg",
             "pomsky-toy-alaska-3.jpeg",
-            "pomsky-toy-alaska-4.jpeg",
+            "pomsky-toy-alaska-4.jpeg"
         ]),
-        linkTo: formUrls.charmAlou,
+        linkTo: formUrls.charmAlou
     },
     {
         name: "INUK",
@@ -368,15 +402,21 @@ const puppiesUnsorted: Puppy[] = [
         age: "Né le 30 avril 2026",
         description:
             "Inuk est un mâle Pomsky né le 30 avril 2026, à la couleur husky marquée. Il présente des yeux bleus, un pelage standard polaire et un format toy.",
-        highlights: ["Mâle", "Yeux bleus", "Pelage standard polaire", "Taille toy"],
+        highlights: [
+            "Mâle",
+            "Yeux bleus",
+            "Pelage standard polaire",
+            "Taille toy"
+        ],
         health: defaultHealth,
         images: puppyImages("INUK", [
             "pomsky-f4-inuk-1.jpeg",
+            "pomsky-f4-inuk-1.jpeg",
             "pomsky-f4-inuk-2.jpeg",
             "pomsky-f4-inuk-3.jpeg",
-            "pomsky-f4-inuk-4.jpeg",
+            "pomsky-f4-inuk-4.jpeg"
         ]),
-        linkTo: formUrls.charmAlou,
+        linkTo: formUrls.charmAlou
     },
     {
         name: "ALOU JUNIOR",
@@ -391,15 +431,20 @@ const puppiesUnsorted: Puppy[] = [
         age: "Née le 30 avril 2026",
         description:
             "Alou Junior est une femelle Pomsky noire et blanche née le 30 avril 2026. Issue de Charm et Alou, elle présente des yeux bleus, un pelage polaire husky et son statut est réservé.",
-        highlights: ["Femelle", "Yeux bleus", "Pelage polaire husky", "Réservée"],
+        highlights: [
+            "Femelle",
+            "Yeux bleus",
+            "Pelage polaire husky",
+            "Réservée"
+        ],
         health: defaultHealth,
         images: puppyImages("ALOU JUNIOR", [
             "pomsky-femelle-alou-junior-1.jpeg",
             "pomsky-femelle-alou-junior-2.jpeg",
-            "pomsky-femelle-alou-junior-3.jpeg",
+            "pomsky-femelle-alou-junior-3.jpeg"
         ]),
         linkTo: formUrls.charmAlou,
-        isReserved: true,
+        isReserved: true
     },
     {
         name: "AMBRE",
@@ -414,10 +459,19 @@ const puppiesUnsorted: Puppy[] = [
         age: "Portée Pweek et Charm",
         description:
             "Ambre est une femelle Pomsky chocolat et blanche issue de la portée Pweek et Charm. Son marquage husky et sa taille adulte estimée toy sont suivis avec attention pendant sa croissance.",
-        highlights: ["Femelle", "Chocolat et blanche", "Marquage husky", "Taille estimée toy"],
+        highlights: [
+            "Femelle",
+            "Chocolat et blanche",
+            "Marquage husky",
+            "Taille estimée toy"
+        ],
         health: defaultHealth,
-        images: puppyImages("AMBRE", ["ambre-pomsky-marron-1.jpg", "ambre-pomsky-marron-2.jpg", "ambre-pomsky-marron-3.jpg"]),
-        linkTo: formUrls.pweekCharm,
+        images: puppyImages("AMBRE", [
+            "ambre-pomsky-marron-1.jpg",
+            "ambre-pomsky-marron-2.jpg",
+            "ambre-pomsky-marron-3.jpg"
+        ]),
+        linkTo: formUrls.pweekCharm
     },
     {
         name: "RÉMUS",
@@ -432,10 +486,19 @@ const puppiesUnsorted: Puppy[] = [
         age: "Portée Pweek et Charm",
         description:
             "Rémus est un mâle Pomsky gris et blanc issu de la portée Pweek et Charm. Il présente un marquage husky, un pelage standard polaire husky et une taille adulte estimée toy.",
-        highlights: ["Mâle", "Gris et blanc", "Marquage husky", "Taille estimée toy"],
+        highlights: [
+            "Mâle",
+            "Gris et blanc",
+            "Marquage husky",
+            "Taille estimée toy"
+        ],
         health: defaultHealth,
-        images: puppyImages("RÉMUS", ["remus-pomsky-1.jpg", "remus-pomsky-2.jpg", "remus-pomsky-3.jpg"]),
-        linkTo: formUrls.pweekCharm,
+        images: puppyImages("RÉMUS", [
+            "remus-pomsky-1.jpg",
+            "remus-pomsky-2.jpg",
+            "remus-pomsky-3.jpg"
+        ]),
+        linkTo: formUrls.pweekCharm
     },
     {
         name: "LOKI",
@@ -450,10 +513,15 @@ const puppiesUnsorted: Puppy[] = [
         age: "Portée Pweek et Charm",
         description:
             "Loki est un mâle Pomsky noir et blanc issu de la portée Pweek et Charm. Son marquage husky et sa taille adulte estimée toy seront confirmés au fil de son développement.",
-        highlights: ["Mâle", "Noir et blanc", "Marquage husky", "Taille estimée toy"],
+        highlights: [
+            "Mâle",
+            "Noir et blanc",
+            "Marquage husky",
+            "Taille estimée toy"
+        ],
         health: defaultHealth,
         images: puppyImages("LOKI", ["loki-pomsky-male-1.jpg"]),
-        linkTo: formUrls.pweekCharm,
+        linkTo: formUrls.pweekCharm
     },
     {
         name: "BELLATRIX",
@@ -468,10 +536,18 @@ const puppiesUnsorted: Puppy[] = [
         age: "Portée Pweek et Charm",
         description:
             "Bellatrix est une femelle Pomsky noire et blanche issue de la portée Pweek et Charm. Son pelage polaire husky et son format présumé toy donnent déjà une belle lecture de type.",
-        highlights: ["Femelle", "Noire et blanche", "Pelage polaire husky", "Toy présumé"],
+        highlights: [
+            "Femelle",
+            "Noire et blanche",
+            "Pelage polaire husky",
+            "Toy présumé"
+        ],
         health: defaultHealth,
-        images: puppyImages("BELLATRIX", ["bellatrix-pomsky-1.jpg", "bellatrix-pomsky-2.jpg"]),
-        linkTo: formUrls.pweekCharm,
+        images: puppyImages("BELLATRIX", [
+            "bellatrix-pomsky-1.jpg",
+            "bellatrix-pomsky-2.jpg"
+        ]),
+        linkTo: formUrls.pweekCharm
     },
     {
         name: "ARCANA",
@@ -486,10 +562,19 @@ const puppiesUnsorted: Puppy[] = [
         age: "Portée Pweek et Charm",
         description:
             "Arcana est une femelle Pomsky chocolat et blanche issue de la portée Pweek et Charm. Sa taille adulte est estimée toy, avec une évolution de pelage et de gabarit suivie à l'élevage.",
-        highlights: ["Femelle", "Chocolat et blanche", "Taille estimée toy", "Portée Pweek et Charm"],
+        highlights: [
+            "Femelle",
+            "Chocolat et blanche",
+            "Taille estimée toy",
+            "Portée Pweek et Charm"
+        ],
         health: defaultHealth,
-        images: puppyImages("ARCANA", ["arkana-pomsky-1.jpg", "arkana-pomsky-2.jpg", "arkana-pomsky-3.jpg"]),
-        linkTo: formUrls.pweekCharm,
+        images: puppyImages("ARCANA", [
+            "arkana-pomsky-1.jpg",
+            "arkana-pomsky-2.jpg",
+            "arkana-pomsky-3.jpg"
+        ]),
+        linkTo: formUrls.pweekCharm
     },
     {
         name: "SANO",
@@ -504,14 +589,19 @@ const puppiesUnsorted: Puppy[] = [
         age: "Né le 24 avril 2026",
         description:
             "Sano est un mâle Pomsky F4+ noir et blanc né le 24 avril 2026, issu de Charm et Beauty. Il présente un pelage fluffy, des yeux bleus et un format attendu toy ou miniature.",
-        highlights: ["Mâle", "Pelage fluffy", "Yeux bleus", "Format toy ou miniature"],
+        highlights: [
+            "Mâle",
+            "Pelage fluffy",
+            "Yeux bleus",
+            "Format toy ou miniature"
+        ],
         health: defaultHealth,
         images: puppyImages("SANO", [
             "pomsky-toy-sano-1.jpeg",
             "pomsky-toy-sano-2.jpeg",
-            "pomsky-toy-sano-3.jpeg",
+            "pomsky-toy-sano-3.jpeg"
         ]),
-        linkTo: formUrls.charmBeauty,
+        linkTo: formUrls.charmBeauty
     },
     {
         name: "KIRO",
@@ -526,14 +616,20 @@ const puppiesUnsorted: Puppy[] = [
         age: "Né le 24 avril 2026",
         description:
             "Kiro est un mâle Pomsky F4+ né le 24 avril 2026, issu de Charm et Beauty. Ses nouvelles photos mettent en avant ses yeux bleus, son pelage polaire husky et son format attendu toy ou miniature.",
-        highlights: ["Mâle", "Yeux bleus", "Pelage polaire husky", "Format toy ou miniature"],
+        highlights: [
+            "Mâle",
+            "Yeux bleus",
+            "Pelage polaire husky",
+            "Format toy ou miniature"
+        ],
         health: defaultHealth,
         images: puppyImages("KIRO", [
+            "pomsky-toy-kiro-4.jpeg",
             "pomsky-toy-kiro-1.jpeg",
             "pomsky-toy-kiro-2.jpeg",
-            "pomsky-toy-kiro-3.jpeg",
+            "pomsky-toy-kiro-3.jpeg"
         ]),
-        linkTo: formUrls.charmBeauty,
+        linkTo: formUrls.charmBeauty
     },
     {
         name: "NAYA",
@@ -553,10 +649,10 @@ const puppiesUnsorted: Puppy[] = [
         images: puppyImages("NAYA", [
             "pomsky-toy-naya-1.jpeg",
             "pomsky-toy-naya-2.jpeg",
-            "pomsky-toy-naya-3.jpeg",
+            "pomsky-toy-naya-3.jpeg"
         ]),
         linkTo: formUrls.charmBeauty,
-        isReserved: true,
+        isReserved: true
     },
     {
         name: "LUMA",
@@ -571,16 +667,20 @@ const puppiesUnsorted: Puppy[] = [
         age: "Née le 24 avril 2026",
         description:
             "Luma est une femelle Pomsky F4+ née le 24 avril 2026, issue de Charm et Beauty. Elle présente des yeux bleus, un pelage polaire husky et son statut est réservé.",
-        highlights: ["Femelle", "Yeux bleus", "Pelage polaire husky", "Réservée"],
+        highlights: [
+            "Femelle",
+            "Yeux bleus",
+            "Pelage polaire husky",
+            "Réservée"
+        ],
         health: defaultHealth,
         images: puppyImages("LUMA", [
-            "luma-pomsky-1.jpg",
-            "luma-pomsky-2.jpg",
-            "luma-pomsky-3.jpg",
-            "luma-pomsky-4.jpg",
+            "pomsky-femelle-luma-1.jpeg",
+            "pomsky-femelle-luma-2.jpeg",
+            "pomsky-femelle-luma-3.jpeg"
         ]),
         linkTo: formUrls.charmBeauty,
-        isReserved: true,
+        isReserved: true
     },
     {
         name: "AÏKA",
@@ -600,10 +700,10 @@ const puppiesUnsorted: Puppy[] = [
         images: puppyImages("AÏKA", [
             "pomsky-mini-aika-1.jpeg",
             "pomsky-mini-aika-2.jpeg",
-            "pomsky-mini-aika-3.jpeg",
+            "pomsky-mini-aika-3.jpeg"
         ]),
         linkTo: formUrls.skySally,
-        isReserved: true,
+        isReserved: true
     },
     {
         name: "BALTO",
@@ -618,15 +718,21 @@ const puppiesUnsorted: Puppy[] = [
         age: "Né le 28 avril 2026",
         description:
             "Balto est un mâle Pomsky F4+ né le 28 avril 2026, issu du mariage entre Sky et Sally. Il présente des yeux bleus, un pelage fluffy, un format miniature et son statut est réservé.",
-        highlights: ["Mâle", "Yeux bleus", "Pelage fluffy", "Taille miniature", "Réservé"],
+        highlights: [
+            "Mâle",
+            "Yeux bleus",
+            "Pelage fluffy",
+            "Taille miniature",
+            "Réservé"
+        ],
         health: defaultHealth,
         images: puppyImages("BALTO", [
             "pomsky-male-balto-1.jpeg",
             "pomsky-male-balto-2.jpeg",
-            "pomsky-male-balto-3.jpeg",
+            "pomsky-male-balto-3.jpeg"
         ]),
         linkTo: formUrls.skySally,
-        isReserved: true,
+        isReserved: true
     },
     {
         name: "LOUP",
@@ -644,12 +750,13 @@ const puppiesUnsorted: Puppy[] = [
         highlights: ["Mâle", "Yeux bleus", "Pelage fluffy", "Taille miniature"],
         health: defaultHealth,
         images: puppyImages("LOUP", [
+            "pomsky-mini-loup-5.jpeg",
             "pomsky-mini-loup-1.jpeg",
             "pomsky-mini-loup-2.jpeg",
             "pomsky-mini-loup-3.jpeg",
-            "pomsky-mini-loup-4.jpeg",
+            "pomsky-mini-loup-4.jpeg"
         ]),
-        linkTo: formUrls.skySally,
+        linkTo: formUrls.skySally
     },
     {
         name: "LUNA",
@@ -664,14 +771,19 @@ const puppiesUnsorted: Puppy[] = [
         age: "Née le 28 avril 2026",
         description:
             "Luna est une femelle Pomsky F4+ née le 28 avril 2026, issue de Sky et Sally. Elle présente des yeux bleus, un pelage fluffy et un format miniature.",
-        highlights: ["Femelle", "Yeux bleus", "Pelage fluffy", "Taille miniature"],
+        highlights: [
+            "Femelle",
+            "Yeux bleus",
+            "Pelage fluffy",
+            "Taille miniature"
+        ],
         health: defaultHealth,
         images: puppyImages("LUNA", [
-            "pomsky-femelle-luna-1.jpeg",
-            "pomsky-femelle-luna-2.jpeg",
-            "pomsky-femelle-luna-3.jpeg",
+            "pomsky-mini-luna-3.jpeg",
+            "pomsky-mini-luna-2.jpeg",
+            "pomsky-mini-luna-1.jpeg"
         ]),
-        linkTo: formUrls.skySally,
+        linkTo: formUrls.skySally
     },
     {
         name: "MIYU",
@@ -686,14 +798,20 @@ const puppiesUnsorted: Puppy[] = [
         age: "Née le 28 avril 2026",
         description:
             "Miyu est une femelle Pomsky toy née le 28 avril 2026. Elle présente des yeux bleus, un pelage polaire husky et un type doux, suivi dans la portée Sky et Sally.",
-        highlights: ["Femelle", "Yeux bleus", "Pelage polaire husky", "Taille toy"],
+        highlights: [
+            "Femelle",
+            "Yeux bleus",
+            "Pelage polaire husky",
+            "Taille toy"
+        ],
         health: defaultHealth,
         images: puppyImages("MIYU", [
+            "pomsky-toy-miyu-4.jpeg",
             "pomsky-toy-miyu-1.jpeg",
             "pomsky-toy-miyu-2.jpeg",
-            "pomsky-toy-miyu-3.jpeg",
+            "pomsky-toy-miyu-3.jpeg"
         ]),
-        linkTo: formUrls.skySally,
+        linkTo: formUrls.skySally
     },
     {
         name: "ORION",
@@ -708,14 +826,20 @@ const puppiesUnsorted: Puppy[] = [
         age: "Né le 28 avril 2026",
         description:
             "Orion est un mâle Pomsky F4+ né le 28 avril 2026, issu du mariage Sky et Sally. Sa robe lavande, ses yeux bleus et son pelage fluffy lui donnent une expression rare. Son format est miniature et son statut est réservé.",
-        highlights: ["Mâle", "Yeux bleus", "Couleur lavande", "Pelage fluffy", "Réservé"],
+        highlights: [
+            "Mâle",
+            "Yeux bleus",
+            "Couleur lavande",
+            "Pelage fluffy",
+            "Réservé"
+        ],
         health: defaultHealth,
         images: puppyImages("ORION", [
             "pomsky-miniature-orion-1.jpeg",
-            "pomsky-miniature-orion-2.jpeg",
+            "pomsky-miniature-orion-2.jpeg"
         ]),
         linkTo: formUrls.skySally,
-        isReserved: true,
+        isReserved: true
     },
     {
         name: "SORA",
@@ -730,19 +854,28 @@ const puppiesUnsorted: Puppy[] = [
         age: "Née le 28 avril 2026",
         description:
             "Sora est une femelle Pomsky F4+ née le 28 avril 2026, issue de Sky et Sally. Elle présente des yeux bleus, un pelage fluffy et un format miniature.",
-        highlights: ["Femelle", "Yeux bleus", "Pelage fluffy", "Taille miniature"],
+        highlights: [
+            "Femelle",
+            "Yeux bleus",
+            "Pelage fluffy",
+            "Taille miniature"
+        ],
         health: defaultHealth,
         images: puppyImages("SORA", [
             "pomsky-mini-sora-1.jpeg",
             "pomsky-mini-sora-2.jpeg",
-            "pomsky-mini-sora-3.jpeg",
+            "pomsky-mini-sora-3.jpeg"
         ]),
-        linkTo: formUrls.skySally,
-    },
+        linkTo: formUrls.skySally
+    }
 ];
 
 function getLitterBirthDateForPuppy(puppy: Puppy) {
-    return litterCertifications.find((certification) => certification.parentLabel === puppy.parents)?.litterBirthDate ?? "9999-12-31";
+    return (
+        litterCertifications.find(
+            (certification) => certification.parentLabel === puppy.parents
+        )?.litterBirthDate ?? "9999-12-31"
+    );
 }
 
 export const puppies: Puppy[] = [...puppiesUnsorted].sort((a, b) =>
