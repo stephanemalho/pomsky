@@ -325,9 +325,9 @@ const puppiesUnsorted: Puppy[] = [
         ],
         health: defaultHealth,
         images: puppyImages("STAR", [
+            "pomsky-toy-femelle-star-3.webp",
             "pomsky-toy-femelle-star-1.webp",
             "pomsky-toy-femelle-star-2.webp",
-            "pomsky-toy-femelle-star-3.webp",
             "pomsky-toy-femelle-star-4.webp"
         ]),
         linkTo: formUrls.inuitMogu
