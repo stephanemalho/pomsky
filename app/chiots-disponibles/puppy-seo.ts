@@ -73,45 +73,80 @@ export function getPuppyLastModified(puppy: Puppy) {
 export function buildPuppyProductStructuredData(puppy: Puppy) {
     const url = getAbsolutePuppyUrl(puppy);
     const statusLabel = getPuppyStatusLabel(puppy);
-    const offer = typeof puppy.price === "number"
-        ? {
-            "@type": "Offer",
+    const images = puppy.images.map((image) => `${siteConfig.siteUrl}${getPuppyImageSrc(image.src)}`);
+
+    if (typeof puppy.price !== "number") {
+        return {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "@id": `${url}#webpage`,
+            name: `${puppy.name} - chiot Pomsky ${puppy.color}`,
+            description: puppy.description,
             url,
-            price: puppy.price.toString(),
-            priceCurrency: puppy.priceCurrency ?? "EUR",
-            availability: getPuppySchemaAvailability(puppy),
-            itemCondition: "https://schema.org/NewCondition",
-            ...(puppy.availableFrom ? { availabilityStarts: puppy.availableFrom } : {}),
-            ...(puppy.priceValidUntil ? { priceValidUntil: puppy.priceValidUntil } : {}),
-            shippingDetails: {
-                "@type": "OfferShippingDetails",
-                shippingDestination: [
-                    {
-                        "@type": "DefinedRegion",
-                        addressCountry: "FR",
-                    },
-                    {
-                        "@type": "DefinedRegion",
-                        addressCountry: "CH",
-                    },
+            primaryImageOfPage: images[0],
+            mainEntity: {
+                "@type": "Thing",
+                "@id": `${url}#puppy`,
+                name: `${puppy.name} - chiot Pomsky ${puppy.color}`,
+                description: puppy.description,
+                image: images,
+                category: "Chiot Pomsky",
+                additionalProperty: [
+                    { "@type": "PropertyValue", name: "Race", value: "Pomsky" },
+                    { "@type": "PropertyValue", name: "Génération", value: puppy.coat },
+                    { "@type": "PropertyValue", name: "Couleur", value: puppy.color },
+                    { "@type": "PropertyValue", name: "Sexe", value: puppy.sexe },
+                    { "@type": "PropertyValue", name: "Format", value: puppy.size },
+                    { "@type": "PropertyValue", name: "Poids adulte estimé", value: puppy.weight },
+                    { "@type": "PropertyValue", name: "Parents", value: puppy.parents.replace("Parents : ", "") },
+                    { "@type": "PropertyValue", name: "Naissance", value: puppy.age },
+                    ...(puppy.birthDate ? [{ "@type": "PropertyValue", name: "Date de naissance", value: puppy.birthDate }] : []),
+                    ...(puppy.availableFrom ? [{ "@type": "PropertyValue", name: "Date de disponibilité", value: puppy.availableFrom }] : []),
+                    { "@type": "PropertyValue", name: "Pédigrée", value: puppy.pedigree ?? "Fédération Française du Pomsky" },
+                    { "@type": "PropertyValue", name: "Statut", value: statusLabel },
                 ],
-                doesNotShip: true,
             },
-            hasMerchantReturnPolicy: {
-                "@type": "MerchantReturnPolicy",
-                returnPolicyCategory: "https://schema.org/MerchantReturnNotPermitted",
-                applicableCountry: ["FR", "CH"],
-                name: "Pas de retour possible pour les animaux vivants",
-                description:
-                    "Les retours ne sont pas possibles pour les animaux vivants, sauf cas particulier étudié avec l'élevage dans l'intérêt du chiot.",
-            },
-            seller: {
-                "@type": "Organization",
-                name: siteConfig.name,
-                url: siteConfig.siteUrl,
-            },
-        }
-        : undefined;
+            ...(getPuppyLastModified(puppy) ? { dateModified: getPuppyLastModified(puppy) } : {}),
+        };
+    }
+
+    const offer = {
+        "@type": "Offer",
+        url,
+        price: puppy.price.toString(),
+        priceCurrency: puppy.priceCurrency ?? "EUR",
+        availability: getPuppySchemaAvailability(puppy),
+        itemCondition: "https://schema.org/NewCondition",
+        ...(puppy.availableFrom ? { availabilityStarts: puppy.availableFrom } : {}),
+        ...(puppy.priceValidUntil ? { priceValidUntil: puppy.priceValidUntil } : {}),
+        shippingDetails: {
+            "@type": "OfferShippingDetails",
+            shippingDestination: [
+                {
+                    "@type": "DefinedRegion",
+                    addressCountry: "FR",
+                },
+                {
+                    "@type": "DefinedRegion",
+                    addressCountry: "CH",
+                },
+            ],
+            doesNotShip: true,
+        },
+        hasMerchantReturnPolicy: {
+            "@type": "MerchantReturnPolicy",
+            returnPolicyCategory: "https://schema.org/MerchantReturnNotPermitted",
+            applicableCountry: ["FR", "CH"],
+            name: "Pas de retour possible pour les animaux vivants",
+            description:
+                "Les retours ne sont pas possibles pour les animaux vivants, sauf cas particulier étudié avec l'élevage dans l'intérêt du chiot.",
+        },
+        seller: {
+            "@type": "Organization",
+            name: siteConfig.name,
+            url: siteConfig.siteUrl,
+        },
+    };
 
     return {
         "@context": "https://schema.org",
@@ -120,7 +155,7 @@ export function buildPuppyProductStructuredData(puppy: Puppy) {
         name: `${puppy.name} - chiot Pomsky ${puppy.color}`,
         description: puppy.description,
         url,
-        image: puppy.images.map((image) => `${siteConfig.siteUrl}${getPuppyImageSrc(image.src)}`),
+        image: images,
         ...(getPuppyLastModified(puppy) ? { dateModified: getPuppyLastModified(puppy) } : {}),
         sku: `pomsky-${getPuppySlug(puppy.name)}`,
         category: "Chiot Pomsky",
@@ -147,7 +182,7 @@ export function buildPuppyProductStructuredData(puppy: Puppy) {
             { "@type": "PropertyValue", name: "Pédigrée", value: puppy.pedigree ?? "Fédération Française du Pomsky" },
             { "@type": "PropertyValue", name: "Statut", value: statusLabel },
         ],
-        ...(offer ? { offers: offer } : {}),
+        offers: offer,
     };
 }
 
