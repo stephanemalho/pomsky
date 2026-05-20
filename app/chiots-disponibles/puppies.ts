@@ -234,7 +234,7 @@ const puppiesUnsorted: Puppy[] = [
         name: "BAÏKAL",
         coat: "Pomsky F4+ (ADN Poméranian / Husky)",
         color: "Noire et blanche",
-        sexe: "Mâle",
+        sexe: "Femelle",
         size: "Toy",
         ruler: "Pelage fluffy",
         weight: "Poids adulte en cours d'estimation",
@@ -252,9 +252,8 @@ const puppiesUnsorted: Puppy[] = [
         ],
         health: defaultHealth,
         images: puppyImages("BAÏKAL", [
-            "pomsky-mini-inuit-4.jpeg",
-            "pomsky-toy-baikal-1.webp",
             "pomsky-toy-baikal-2.webp",
+            "pomsky-toy-baikal-1.webp",
             "pomsky-toy-baikal-3.webp"
         ]),
         linkTo: formUrls.inuitMogu,
@@ -276,6 +275,7 @@ const puppiesUnsorted: Puppy[] = [
         highlights: ["Mâle", "Yeux noirs", "Pelage fluffy", "Taille miniature"],
         health: defaultHealth,
         images: puppyImages("INUIT", [
+            "pomsky-mini-inuit-4.jpeg",
             "pomsky-mini-inuit-1.webp",
             "pomsky-mini-inuit-2.webp",
             "pomsky-mini-inuit-3.webp"
