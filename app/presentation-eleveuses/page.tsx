@@ -117,7 +117,7 @@ export default function PresentationEleveusesPage() {
             priority: { mobile: false, tablet: false, desktop: false },
         },
         {
-            src: "/assets/authors/aurelie-and-pomsky-walking-street.jpeg",
+            src: "/assets/authors/aurelie-and-pomsky-walking-street.webp",
             alt: "Aurélie promenant un Pomsky dans la rue",
             caption: "Une promenade qui rappelle la place du chien dans la vie quotidienne.",
             className: "col-span-6 md:col-span-6 row-span-6 md:row-span-6",
@@ -135,7 +135,7 @@ export default function PresentationEleveusesPage() {
             priority: { mobile: false, tablet: false, desktop: false },
         },
         {
-            src: "/assets/authors/portrait-aurelie-and-pomsky.jpeg",
+            src: "/assets/authors/portrait-aurelie-and-pomsky.webp",
             alt: "Marine avec un Pomsky de l'élevage Royal POMSKY",
             caption: "Marine avec l'un des Pomsky de l'élevage.",
             className: "col-span-3 md:col-span-3 row-span-3",
@@ -167,7 +167,7 @@ export default function PresentationEleveusesPage() {
             priority: { mobile: false, tablet: false, desktop: false },
         },
         {
-            src: "/assets/authors/marine-and-a-puppy-pomsky-in-sofa.jpeg",
+            src: "/assets/authors/marine-and-a-puppy-pomsky-in-sofa.webp",
             alt: "Marine sur un canapé avec un chiot Pomsky",
             caption: "Une scène qui traduit la proximité et la douceur du lien au quotidien.",
             className: "col-span-6 md:col-span-6 row-span-6 md:row-span-6",

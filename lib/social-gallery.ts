@@ -170,7 +170,7 @@ export const galleryTikTokItems: SocialGalleryItem[] = [
         id: "6940582843424738565",
         title: "Pomsky à la plage",
         href: "https://www.tiktok.com/@royalpomsky/video/6940582843424738565",
-        thumbnailSrc: "/assets/tiktok/6940582843424738565.jpg",
+        thumbnailSrc: "/assets/tiktok/6940582843424738565.webp",
         thumbnailAlt: "Aperçu de la vidéo TikTok montrant un Pomsky Royal POMSKY à la plage",
         summary:
             "Une vidéo TikTok plus contemplative, choisie pour montrer les Pomsky dans un décor extérieur et un moment simple à regarder.",

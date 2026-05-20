@@ -31,6 +31,10 @@ export function getPuppyImageSrc(src: string) {
     return src.startsWith("/") ? src : `/${src}`;
 }
 
+export function getPuppyDisplayImageSrc(src: string) {
+    return getPuppyImageSrc(src).replace(/\.(jpe?g|png)$/i, ".webp");
+}
+
 export function getPuppyStatus(puppy: Puppy) {
     if (puppy.isAdopted) return "adopted";
     if (puppy.isReserved) return "reserved";

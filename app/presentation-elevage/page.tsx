@@ -561,7 +561,7 @@ export default function PresentationPage() {
                                             En cours
                                         </div>
                                         <Image
-                                            src="/pages/reproducteurs/mariage-sky-et-sally-pomsky.jpg"
+                                            src="/pages/reproducteurs/mariage-sky-et-sally-pomsky.webp"
                                             alt="Sky et Sally, deux Pomsky de l'élevage Royal POMSKY, présentés pour suivre leur portée"
                                             fill
                                             className="object-cover"
@@ -576,7 +576,7 @@ export default function PresentationPage() {
                                 <figure className="w-full max-w-md overflow-hidden rounded-3xl border border-primary/10 bg-background/70 shadow-md dark:border-primary/18 dark:bg-white/6">
                                     <div className="relative aspect-6/4 w-full">
                                         <Image
-                                            src="/pages/reproducteurs/echographie-sky-et-sally.jpg"
+                                            src="/pages/reproducteurs/echographie-sky-et-sally.webp"
                                             alt="Échographie de suivi pour la portée de Sky et Sally"
                                             fill
                                             className="object-cover"

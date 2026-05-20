@@ -595,7 +595,7 @@ export default function AdoptionSuccessPage() {
                             <figure className="space-y-3">
                                 <div className="relative min-h-96 overflow-hidden rounded-3xl">
                                     <Image
-                                        src="/pomsky-and-his-pet-family-parent.jpg"
+                                        src="/pomsky-and-his-pet-family-parent.webp"
                                         alt="Jeune Pomsky avec sa famille humaine dans un moment calme"
                                         fill
                                         className="object-cover"

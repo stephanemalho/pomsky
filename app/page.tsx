@@ -14,7 +14,7 @@ import { pomskyBenefits } from "@/components/content/home/pomsky/pomskyBenefits"
 import { pageContent } from "@/lib/page-content"
 import { TikTokFeatureSpotlight } from "@/components/client/tiktok/TikTokFeatureSpotlight"
 import { puppies } from "@/app/chiots-disponibles/puppies"
-import { getPuppyImageSrc, getPuppyUrl } from "@/app/chiots-disponibles/puppy-seo"
+import { getPuppyDisplayImageSrc, getPuppyUrl } from "@/app/chiots-disponibles/puppy-seo"
 import { InternalLinksSection, type InternalLinkItem } from "@/components/InternalLinksSection"
 import { SectionTitleIcon } from "@/components/section-title-icon"
 
@@ -240,7 +240,7 @@ export default function HomePage() {
                   <figure>
                     <div className="relative aspect-4/3 sm:aspect-16/11 md:aspect-16/8 lg:aspect-16/7">
                       <Image
-                        src="/pomsky-and-his-pet-family-parent.jpg"
+                        src="/pomsky-and-his-pet-family-parent.webp"
                         alt="Pomsky Royal POMSKY auprès de sa famille dans un moment de complicité"
                         fill
                         className="object-cover object-center"
@@ -440,7 +440,7 @@ export default function HomePage() {
                           <span className="relative h-16 w-16 overflow-hidden rounded-full border-2 border-primary/15 bg-background shadow-sm ring-4 ring-background transition-transform group-hover:scale-105">
                             {firstImage ? (
                               <Image
-                                src={getPuppyImageSrc(firstImage.src)}
+                                src={getPuppyDisplayImageSrc(firstImage.src)}
                                 alt={firstImage.alt}
                                 fill
                                 className="object-cover"
@@ -493,7 +493,7 @@ export default function HomePage() {
               description="Chez Royal Pomsky, nous aimons aussi montrer les choses telles qu'elles sont. Dans cette séquence, on découvre un moment calme du quotidien, dehors dans l'herbe, avec des chiots proches de l'humain, curieux et à l'aise. C'est une façon très simple de ressentir l'ambiance de l'élevage, le contact que nous entretenons avec eux et l'environnement dans lequel ils grandissent."
               videoTitle="Un moment du quotidien avec les chiots Royal Pomsky"
               videoSummary="Une vidéo courte, naturelle et sincère pour découvrir l'ambiance de l'élevage et la proximité avec nos chiots."
-              posterSrc="/assets/tiktok/7241509462060616987.jpg"
+              posterSrc="/assets/tiktok/7241509462060616987.webp"
               posterAlt="Personne assise dans l'herbe avec plusieurs chiots Royal POMSKY au contact de l'humain"
               mediaCaption="Un aperçu visuel de la vie quotidienne à l'élevage, avec des chiots proches de l'humain dans un moment calme en extérieur."
               videoSrc="/assets/tiktok/7241509462060616987.optimized.mp4"

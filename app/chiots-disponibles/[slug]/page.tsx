@@ -28,6 +28,7 @@ import { litterCertifications, puppies, type LitterCertification, type Puppy } f
 import {
     buildPuppyProductStructuredData,
     formatPuppyPrice,
+    getPuppyDisplayImageSrc,
     getPuppyImageSrc,
     getPuppyLastModified,
     getPuppySeoDescription,
@@ -199,7 +200,7 @@ export default async function PuppyDetailPage({ params }: PuppyPageProps) {
                                     }`}
                                 >
                                     <Image
-                                        src={getPuppyImageSrc(image.src)}
+                                        src={getPuppyDisplayImageSrc(image.src)}
                                         alt={image.alt}
                                         fill
                                         priority={index === 0}
@@ -280,7 +281,7 @@ export default async function PuppyDetailPage({ params }: PuppyPageProps) {
                                             </p>
                                         </div>
                                         <BreedingRecordModal
-                                            imageSrc={litterCertification.imageSrc}
+                                            imageSrc={getPuppyDisplayImageSrc(litterCertification.imageSrc)}
                                             title={litterCertification.name}
                                             description={litterCertification.description}
                                         />
@@ -457,7 +458,7 @@ function PuppyNavigationImage({
         <span className="relative h-18 w-18 shrink-0 overflow-hidden rounded-full border-2 border-primary/10 bg-muted">
             {image ? (
                 <Image
-                    src={getPuppyImageSrc(image.src)}
+                    src={getPuppyDisplayImageSrc(image.src)}
                     alt={image.alt}
                     fill
                     className="object-cover"

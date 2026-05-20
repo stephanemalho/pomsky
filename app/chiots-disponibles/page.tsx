@@ -39,7 +39,7 @@ import { litterCertifications, puppies, type Puppy } from "./puppies";
 import {
     buildPuppyItemListStructuredData,
     formatPuppyPrice,
-    getPuppyImageSrc,
+    getPuppyDisplayImageSrc,
     getPuppyStatus,
     getPuppyStatusLabel,
     getPuppyUrl,
@@ -190,7 +190,7 @@ export default function NosChiotsPage() {
                                                 >
                                                     {firstImage ? (
                                                         <Image
-                                                            src={getPuppyImageSrc(firstImage.src)}
+                                                            src={getPuppyDisplayImageSrc(firstImage.src)}
                                                             alt={firstImage.alt}
                                                             fill
                                                             className="object-cover"
