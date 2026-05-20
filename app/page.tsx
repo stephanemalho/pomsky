@@ -411,7 +411,7 @@ export default function HomePage() {
 
         <section className="py-16 my-8">
           <div className="container mx-auto p-2">
-            <div className="grid gap-8 rounded-2xl border border-primary/10 bg-muted/30 p-6 md:grid-cols-[0.85fr_1.15fr] md:p-10">
+            <div className="space-y-8 rounded-2xl border border-primary/10 bg-muted/30 p-6 md:p-10">
               <div className="space-y-4">
                 <Badge variant="secondary" className="w-fit">
                   <Heart className="mr-2 h-4 w-4" aria-hidden="true" />
@@ -424,43 +424,46 @@ export default function HomePage() {
                   </h2>
                 </div>
               </div>
-              <div className="space-y-5">
-                {availablePuppies.length > 0 ? (
-                  <div className="flex flex-wrap gap-4">
-                    {availablePuppies.map((puppy) => {
-                      const firstImage = puppy.images[0]
 
-                      return (
-                        <Link
-                          key={puppy.name}
-                          href={getPuppyUrl(puppy)}
-                          className="group flex w-20 flex-col items-center gap-2 text-center focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-                          aria-label={`Voir la fiche de ${puppy.name}`}
-                        >
-                          <span className="relative h-16 w-16 overflow-hidden rounded-full border-2 border-primary/15 bg-background shadow-sm ring-4 ring-background transition-transform group-hover:scale-105">
-                            {firstImage ? (
-                              <Image
-                                src={getPuppyDisplayImageSrc(firstImage.src)}
-                                alt={firstImage.alt}
-                                fill
-                                className="object-cover"
-                                sizes="64px"
-                                quality={60}
-                              />
-                            ) : null}
-                          </span>
-                          <span className="max-w-full truncate text-xs font-semibold text-foreground group-hover:text-primary">
-                            {puppy.name}
-                          </span>
-                        </Link>
-                      )
-                    })}
-                  </div>
-                ) : null}
-                <p className="text-muted-foreground leading-relaxed">
+              {availablePuppies.length > 0 ? (
+                <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8">
+                  {availablePuppies.map((puppy, index) => {
+                    const firstImage = puppy.images[0]
+
+                    return (
+                      <Link
+                        key={puppy.name}
+                        href={getPuppyUrl(puppy)}
+                        className="group block focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                        aria-label={`Voir la fiche de ${puppy.name}`}
+                      >
+                        <span className="relative block aspect-square overflow-hidden rounded-lg border border-primary/12 bg-background shadow-sm transition group-hover:border-primary/35 group-hover:shadow-md">
+                          {firstImage ? (
+                            <Image
+                              src={getPuppyDisplayImageSrc(firstImage.src)}
+                              alt={firstImage.alt}
+                              fill
+                              className="object-cover transition-transform group-hover:scale-105"
+                              sizes="(min-width: 1280px) 132px, (min-width: 1024px) 15vw, (min-width: 768px) 22vw, (min-width: 640px) 30vw, 46vw"
+                              priority={index < 4}
+                              quality={70}
+                            />
+                          ) : null}
+                        </span>
+                        <span className="mt-2 block truncate text-center text-sm font-semibold text-foreground group-hover:text-primary">
+                          {puppy.name}
+                        </span>
+                      </Link>
+                    )
+                  })}
+                </div>
+              ) : null}
+
+              <div className="space-y-5">
+                <p className="max-w-4xl text-muted-foreground leading-relaxed">
                   La disponibilité des chiots est mise à jour depuis la liste officielle de l'élevage. Le nombre affiché exclut les chiots déjà réservés ou adoptés afin de donner une indication claire aux familles qui souhaitent adopter un Pomsky.
                 </p>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="max-w-4xl text-muted-foreground leading-relaxed">
                   Sur la page dédiée, chaque fiche présente les photos, les parents, le statut de réservation, la fiche administrative de portée et les informations utiles pour préparer une adoption sérieuse.
                 </p>
                 <Link

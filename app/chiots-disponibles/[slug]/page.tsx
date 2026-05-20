@@ -196,7 +196,7 @@ export default async function PuppyDetailPage({ params }: PuppyPageProps) {
                                 <figure
                                     key={image.src}
                                     className={`relative overflow-hidden rounded-2xl border border-primary/10 bg-muted/40 ${
-                                        index === 0 ? "aspect-[4/5] sm:col-span-2 lg:aspect-[16/11]" : "aspect-[4/3]"
+                                        index === 0 ? "aspect-4/5 sm:col-span-2 lg:aspect-16/11" : "aspect-4/3"
                                     }`}
                                 >
                                     <Image
