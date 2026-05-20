@@ -32,7 +32,7 @@ export function getPuppyImageSrc(src: string) {
 }
 
 export function getPuppyDisplayImageSrc(src: string) {
-    return getPuppyImageSrc(src).replace(/\.(jpe?g|png)$/i, ".webp");
+    return getPuppyImageSrc(src);
 }
 
 export function getPuppyStatus(puppy: Puppy) {
