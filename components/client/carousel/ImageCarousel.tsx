@@ -15,6 +15,10 @@ type ImageCarouselProps = {
     showBackdrop?: boolean
 }
 
+function getImageSrc(src: string) {
+    return src.startsWith("/") ? src : `/${src}`
+}
+
 function ImageCarousel({
     images,
     alt,
@@ -42,6 +46,7 @@ function ImageCarousel({
     const next = () => setIndex((i) => (i + 1) % total)
     const currentImage = images[index]
     const currentSrc = typeof currentImage === "string" ? currentImage : currentImage.src
+    const imageSrc = getImageSrc(currentSrc)
     const currentAlt = typeof currentImage === "string"
         ? `${alt} - photo ${index + 1}`
         : currentImage.alt?.trim() || `${alt} - photo ${index + 1}`
@@ -51,7 +56,7 @@ function ImageCarousel({
             <div className={containerClassName}>
                 {showBackdrop ? (
                     <Image
-                        src={`/${currentSrc}`}
+                        src={imageSrc}
                         alt=""
                         fill
                         aria-hidden="true"
@@ -61,7 +66,7 @@ function ImageCarousel({
                 ) : null}
                 <div className="absolute inset-0 bg-linear-to-b from-background/10 via-transparent to-background/30" />
                 <Image
-                    src={`/${currentSrc}`}
+                    src={imageSrc}
                     alt={currentAlt}
                     fill
                     className={[

@@ -26,6 +26,7 @@ const contentSecurityPolicy = [
 const nextConfig: NextConfig = {
     poweredByHeader: false,
     images: {
+        unoptimized: true,
         qualities: [50, 60, 65, 70, 75, 80],
         remotePatterns: [
             {
