@@ -13,11 +13,12 @@ export function Footer() {
                         <div className="flex items-center space-x-2">
                             <div className="relative h-10 w-10 overflow-hidden rounded-full border border-primary/15 bg-white shadow-sm dark:border-primary/40 dark:bg-primary">
                                 <Image
-                                    src="/royal-pomsky-icon-transparent.webp"
+                                    src="/royal-pomsky-icon-transparent-sm.webp"
                                     alt="logo de Royal POMSKY - Elevage de pomsky pour toute la france"
                                     fill
                                     sizes="40px"
                                     className="object-contain p-0.5"
+                                    quality={80}
                                 />
                             </div>
                             <span className="text-lg font-bold text-primary">Royal POMSKY</span>

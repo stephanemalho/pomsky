@@ -247,6 +247,7 @@ export default function HomePage() {
                         fetchPriority="high"
                         className="object-cover object-center"
                         sizes="(min-width: 1280px) 960px, (min-width: 1024px) 80vw, (min-width: 768px) calc(100vw - 80px), calc(100vw - 32px)"
+                        quality={70}
                       />
                       <div className="absolute inset-0 bg-linear-to-t from-[#2a0d12]/35 via-transparent to-transparent" aria-hidden="true" />
                     </div>
@@ -347,6 +348,7 @@ export default function HomePage() {
                     fill
                     className="object-cover"
                     sizes="(max-width: 768px) 85vw, 50vw"
+                    quality={70}
                   />
                 </div>
                 <figcaption className="text-sm leading-relaxed text-muted-foreground">
@@ -386,6 +388,7 @@ export default function HomePage() {
                         fill
                         className="object-cover"
                         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        quality={75}
                       />
                     </div>
                     <figcaption className="px-2 text-xs leading-relaxed text-muted-foreground">

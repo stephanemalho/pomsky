@@ -87,6 +87,7 @@ export function InternalLinksSection({
                     fill
                     className="object-cover"
                     sizes="64px"
+                    quality={60}
                   />
                 </span>
                 <div className="min-w-0 pt-1">

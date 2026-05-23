@@ -18,11 +18,12 @@ export function Navigation() {
                 <Link href="/" className="flex items-center space-x-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded">
                     <div className="relative h-10 w-10 overflow-hidden rounded-full border border-primary/15 bg-white shadow-sm dark:border-primary/40 dark:bg-primary">
                         <Image
-                            src="/royal-pomsky-icon-transparent.webp"
+                            src="/royal-pomsky-icon-transparent-sm.webp"
                             alt="logo Royal POMSKY - Elevage de pomsky"
                             fill
                             sizes="40px"
                             className="object-contain p-0.5"
+                            quality={80}
                             priority
                         />
                     </div>
