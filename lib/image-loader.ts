@@ -22,6 +22,6 @@ export default function imageLoader({ src, width }: { src: string; width: number
 
     const base = src.slice(0, -5); // strip ".webp"
     if (width <= 480) return `${base}-sm.webp`;
-    if (width <= 960) return `${base}-md.webp`;
+    if (width <= 768) return `${base}-md.webp`;
     return src;
 }

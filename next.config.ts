@@ -32,7 +32,7 @@ const nextConfig: NextConfig = {
         loader: "custom",
         loaderFile: "./lib/image-loader.ts",
         // deviceSizes must match the variant breakpoints in image-loader.ts
-        deviceSizes: [480, 960, 1440, 1920],
+        deviceSizes: [480, 768, 1440, 1920],
         imageSizes: [64, 128, 256, 480],
         remotePatterns: [
             {

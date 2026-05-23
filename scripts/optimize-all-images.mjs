@@ -22,9 +22,12 @@ import { fileURLToPath } from "node:url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PUBLIC = path.join(__dirname, "../public");
 
-// Responsive variant breakpoints — must match lib/image-loader.ts
+// Responsive variant breakpoints — must match lib/image-loader.ts and next.config.ts deviceSizes.
+// SM: mobile low-DPR and small containers (360px × 1× DPR = 360px → picks 480w)
+// MD: mobile HiDPI (360px × 2× DPR = 720px → picks 768w; Moto G Power 412px × 1.75 = 721px → 768w)
+// Full: tablet/desktop (1440px+)
 const SM_WIDTH = 480;
-const MD_WIDTH = 960;
+const MD_WIDTH = 768;
 
 // Per-directory config derived from component `sizes=` props × 2× DPR.
 // All directories are non-recursive (subdirs listed explicitly below).
