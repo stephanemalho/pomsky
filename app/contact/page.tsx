@@ -10,7 +10,8 @@ import { convertFAQsToSchema } from "@/lib/faq-utils"
 import Image from "next/image"
 import Link from "next/link"
 
-const contactOgImage = "/assets/authors/marine-and-a-puppy-pomsky-in-sofa.jpeg"
+const contactOgWebp = "/assets/authors/marine-and-a-puppy-pomsky-in-sofa.webp"
+const contactOgJpeg = "/assets/authors/marine-and-a-puppy-pomsky-in-sofa.jpeg"
 
 export const metadata: Metadata = {
     title: pageMetadata.contact.title,
@@ -22,8 +23,15 @@ export const metadata: Metadata = {
         url: `${siteConfig.siteUrl}/contact`,
         images: [
             {
-                url: `${siteConfig.siteUrl}${contactOgImage}`,
-                alt: "Prendre contact avec Royal Pomsky",
+                url: `${siteConfig.siteUrl}${contactOgWebp}`,
+                alt: "Marine de Royal POMSKY avec un chiot Pomsky",
+                width: siteConfig.ogImageWidth,
+                height: siteConfig.ogImageHeight,
+                type: "image/webp",
+            },
+            {
+                url: `${siteConfig.siteUrl}${contactOgJpeg}`,
+                alt: "Marine de Royal POMSKY avec un chiot Pomsky",
                 width: siteConfig.ogImageWidth,
                 height: siteConfig.ogImageHeight,
                 type: "image/jpeg",
@@ -33,7 +41,7 @@ export const metadata: Metadata = {
     twitter: buildTwitter({
         title: pageMetadata.contact.title,
         description: pageMetadata.contact.description,
-        imageUrl: `${siteConfig.siteUrl}${contactOgImage}`,
+        imageUrl: `${siteConfig.siteUrl}${contactOgJpeg}`,
     }),
     alternates: {
         canonical: `${siteConfig.siteUrl}/contact`,
@@ -198,6 +206,21 @@ export default function ContactPage() {
                         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                             {pageContent.contact.description}
                         </p>
+                        <figure className="mx-auto max-w-xs space-y-2 pt-2">
+                            <div className="relative aspect-4/3 overflow-hidden rounded-2xl">
+                                <Image
+                                    src={contactOgWebp}
+                                    alt="Marine de Royal POMSKY sur un canapé avec un chiot Pomsky"
+                                    fill
+                                    className="object-cover"
+                                    sizes="(min-width: 640px) 320px, 100vw"
+                                    priority
+                                />
+                            </div>
+                            <figcaption className="text-xs text-muted-foreground">
+                                Marine, éleveuse Royal POMSKY, avec un chiot Pomsky.
+                            </figcaption>
+                        </figure>
                     </section>
 
                     <div className="grid md:grid-cols-2 gap-8">

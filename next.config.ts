@@ -26,8 +26,10 @@ const contentSecurityPolicy = [
 const nextConfig: NextConfig = {
     poweredByHeader: false,
     images: {
-        unoptimized: true,
-        qualities: [50, 60, 65, 70, 75, 80],
+        // unoptimized removed — Next.js optimization active after running
+        // convert:webp + optimize:images scripts.
+        qualities: [65, 75, 80, 85, 90],
+        formats: ["image/avif", "image/webp"],
         remotePatterns: [
             {
                 protocol: "https",

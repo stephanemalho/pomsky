@@ -119,6 +119,14 @@ export const galleryImageItems: GalleryImageItem[] = [
         title: "PWEEK",
         summary: "Femelle Pomsky toy F3, import Russie, masque bandit et yeux particolores très singuliers.",
         className: "md:col-span-4"
+    },
+    {
+        id: "jose-mourinho-pomsky",
+        src: "/pages/galerie/jose-mourinho-et-un-pomsky-royal-pomsky.png",
+        alt: "Jose Mourinho avec Anyblue, un Pomsky F5 de l'élevage Royal POMSKY",
+        title: "Jose Mourinho & Anyblue",
+        summary: "Anyblue, Pomsky F5 de Royal POMSKY, photographié aux côtés de Jose Mourinho.",
+        className: "md:col-span-12"
     }
 ]
 

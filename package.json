@@ -9,6 +9,8 @@
     "lint": "eslint . --max-warnings=0",
     "convert:webp": "node scripts/convert-to-webp.js",
     "update:images": "node scripts/update-image-references.js",
+    "optimize:images": "node scripts/optimize-all-images.mjs",
+    "images:full": "npm run convert:webp && npm run update:images && npm run optimize:images",
     "audit:schemas": "node scripts/seo-schema-audit.mjs",
     "audit:meta": "node scripts/seo-meta-audit.mjs"
   },

@@ -3,6 +3,14 @@ const fs = require("fs");
 const path = require("path");
 
 const publicDir = path.join(__dirname, "..", "public");
+
+// Optional: pass a subdirectory as first argument
+// e.g. node scripts/convert-to-webp.js pages/puppies
+const targetArg = process.argv[2];
+const targetDir = targetArg
+    ? path.resolve(publicDir, targetArg)
+    : publicDir;
+
 const imageExtensions = [".jpg", ".jpeg", ".png", ".JPG", ".JPEG", ".PNG"];
 
 let totalOriginalSize = 0;
@@ -17,7 +25,6 @@ async function convertToWebP(filePath) {
     const dirName = path.dirname(filePath);
     const webpPath = path.join(dirName, `${fileName}.webp`);
 
-    // Skip si le WebP existe déjà
     if (fs.existsSync(webpPath)) {
         console.log(`⏭️  Skipped (already exists): ${path.basename(filePath)}`);
         return;
@@ -27,8 +34,9 @@ async function convertToWebP(filePath) {
         const originalStats = fs.statSync(filePath);
         totalOriginalSize += originalStats.size;
 
+        // No .rotate() — preserves pixel orientation exactly as-is.
+        // The original file is kept so it can be used as a JPEG fallback in OG metadata.
         await sharp(filePath)
-            .rotate()
             .webp({ quality: 85, effort: 6 })
             .toFile(webpPath);
 
@@ -41,9 +49,7 @@ async function convertToWebP(filePath) {
             100
         ).toFixed(1);
         console.log(
-            `✅ ${path.basename(filePath)} → ${path.basename(
-                webpPath
-            )} (${reduction}% smaller)`
+            `✅ ${path.basename(filePath)} → ${path.basename(webpPath)} (${reduction}% smaller)`
         );
     } catch (error) {
         console.error(`❌ Error converting ${filePath}:`, error.message);
@@ -67,23 +73,29 @@ async function scanDirectory(dir) {
 async function main() {
     console.log("🖼️  Starting image conversion to WebP...\n");
 
-    await scanDirectory(publicDir);
+    if (!fs.existsSync(targetDir)) {
+        throw new Error(`Directory not found: ${targetDir}`);
+    }
+
+    console.log(`   Scanning: ${path.relative(path.join(__dirname, ".."), targetDir) || "public/"}\n`);
+
+    await scanDirectory(targetDir);
 
     console.log("\n📊 Conversion Summary:");
     console.log(`   Files converted: ${convertedCount}`);
-    console.log(
-        `   Original size: ${(totalOriginalSize / 1024 / 1024).toFixed(2)} MB`
-    );
+    console.log(`   Scanned directory: ${targetDir}`);
+    console.log(`   Original size: ${(totalOriginalSize / 1024 / 1024).toFixed(2)} MB`);
     console.log(`   WebP size: ${(totalWebpSize / 1024 / 1024).toFixed(2)} MB`);
     console.log(
-        `   Total reduction: ${(
-            (1 - totalWebpSize / totalOriginalSize) *
-            100
-        ).toFixed(1)}%`
+        `   Total reduction: ${
+            totalOriginalSize > 0
+                ? ((1 - totalWebpSize / totalOriginalSize) * 100).toFixed(1)
+                : "0.0"
+        }%`
     );
-    console.log(
-        "\n✨ Done! You can now update your code to use .webp extensions."
-    );
+    console.log("\n✨ Done! Original files kept as JPEG fallbacks for OG metadata.");
+    console.log("   Next: npm run update:images  (updates src= props to .webp)");
+    console.log("   Then: npm run optimize:images (resize to display-appropriate dimensions)");
 }
 
 main().catch(console.error);

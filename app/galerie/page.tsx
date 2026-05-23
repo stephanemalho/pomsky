@@ -19,7 +19,9 @@ import {
 import { generateBreadcrumbSchema, generateWebPageSchema } from "@/lib/schema-generators"
 import { cn } from "@/lib/utils"
 
-const galleryOgImage = "/pages/galerie/jose-mourinho-et-un-pomsky-royal-pomsky.png"
+// WebP created by convert:webp script — PNG kept as universal fallback
+const galleryOgWebp = "/pages/galerie/jose-mourinho-et-un-pomsky-royal-pomsky.webp"
+const galleryOgPng = "/pages/galerie/jose-mourinho-et-un-pomsky-royal-pomsky.png"
 
 export const revalidate = 21600
 
@@ -33,8 +35,15 @@ export const metadata: Metadata = {
         url: `${siteConfig.siteUrl}${siteConfig.pages.gallery}`,
         images: [
             {
-                url: `${siteConfig.siteUrl}${galleryOgImage}`,
-                alt: "Jose Mourinho avec un Pomsky Royal Pomsky",
+                url: `${siteConfig.siteUrl}${galleryOgWebp}`,
+                alt: "Jose Mourinho avec Anyblue, un Pomsky F5 de Royal POMSKY",
+                width: siteConfig.ogImageWidth,
+                height: siteConfig.ogImageHeight,
+                type: "image/webp"
+            },
+            {
+                url: `${siteConfig.siteUrl}${galleryOgPng}`,
+                alt: "Jose Mourinho avec Anyblue, un Pomsky F5 de Royal POMSKY",
                 width: siteConfig.ogImageWidth,
                 height: siteConfig.ogImageHeight,
                 type: "image/png"
@@ -44,7 +53,7 @@ export const metadata: Metadata = {
     twitter: buildTwitter({
         title: pageMetadata.gallery.title,
         description: pageMetadata.gallery.description,
-        imageUrl: `${siteConfig.siteUrl}${galleryOgImage}`
+        imageUrl: `${siteConfig.siteUrl}${galleryOgPng}`
     }),
     alternates: {
         canonical: `${siteConfig.siteUrl}${siteConfig.pages.gallery}`
@@ -236,7 +245,7 @@ export default async function GaleriePage() {
         name: pageMetadata.gallery.title,
         description: pageMetadata.gallery.description,
         url: siteConfig.pages.gallery,
-        imageUrl: galleryOgImage,
+        imageUrl: galleryOgPng,
         dateModified: pageLastModValue,
         about: [
             "Galerie photo de Pomsky",
