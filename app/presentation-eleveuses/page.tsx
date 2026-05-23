@@ -53,7 +53,7 @@ export default function PresentationEleveusesPage() {
         "(min-width: 1536px) 340px, (min-width: 1280px) 300px, (min-width: 1024px) 260px, (min-width: 768px) calc(25vw - 2rem), calc(100vw - 2rem)"
     const galleryFullSizes =
         "(min-width: 1536px) 700px, (min-width: 1280px) 620px, (min-width: 1024px) 520px, (min-width: 768px) calc(50vw - 2.5rem), calc(100vw - 2rem)"
-    const galleryImageQuality = 62
+    const galleryImageQuality = 80
     const resolveFetchPriority = (policy: GalleryPriorityPolicy): "high" | "auto" | "low" => {
         if (policy.mobile && policy.tablet && policy.desktop) return "high"
         if (policy.mobile || policy.tablet || policy.desktop) return "auto"
@@ -378,7 +378,7 @@ export default function PresentationEleveusesPage() {
                                                         alt="Bandit, Pomsky de l'élevage Royal POMSKY, illustrant la section blog"
                                                         fill
                                                         sizes="(min-width: 1280px) 360px, (min-width: 1024px) 320px, (min-width: 768px) 34vw, 100vw"
-                                                        quality={70}
+                                                        quality={80}
                                                         className="object-cover"
                                                         loading="lazy"
                                                         fetchPriority="low"

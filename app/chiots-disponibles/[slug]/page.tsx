@@ -208,7 +208,7 @@ export default async function PuppyDetailPage({ params }: PuppyPageProps) {
                                             ? "(min-width: 1024px) 52vw, 100vw"
                                             : "(min-width: 1024px) 25vw, 50vw"}
                                         className="object-contain p-2"
-                                        quality={index === 0 ? 80 : 70}
+                                        quality={80}
                                     />
                                 </figure>
                             ))}

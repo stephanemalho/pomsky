@@ -448,7 +448,7 @@ export default function HomePage() {
                               className="object-cover transition-transform group-hover:scale-105"
                               sizes="(min-width: 1280px) 132px, (min-width: 1024px) 15vw, (min-width: 768px) 22vw, (min-width: 640px) 30vw, 46vw"
                               priority={index < 4}
-                              quality={70}
+                              quality={80}
                             />
                           ) : null}
                         </span>

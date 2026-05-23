@@ -34,6 +34,7 @@ const nextConfig: NextConfig = {
         // deviceSizes must match the variant breakpoints in image-loader.ts
         deviceSizes: [480, 768, 1440, 1920],
         imageSizes: [64, 128, 256, 480],
+        qualities: [80],
         remotePatterns: [
             {
                 protocol: "https",
