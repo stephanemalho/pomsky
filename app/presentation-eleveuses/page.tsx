@@ -378,7 +378,7 @@ export default function PresentationEleveusesPage() {
                                                         alt="Bandit, Pomsky de l'élevage Royal POMSKY, illustrant la section blog"
                                                         fill
                                                         sizes="(min-width: 1280px) 360px, (min-width: 1024px) 320px, (min-width: 768px) 34vw, 100vw"
-                                                        quality={80}
+                                                        quality={70}
                                                         className="object-cover"
                                                         loading="lazy"
                                                         fetchPriority="low"

@@ -42,7 +42,7 @@ import { getPuppyParentProfiles } from "./puppy-parents";
 import {
     buildPuppyItemListStructuredData,
     formatPuppyPrice,
-    getPuppyDisplayImageSrc,
+    getPuppyThumbImageSrc,
     getPuppyStatus,
     getPuppyStatusLabel,
     getPuppyUrl,
@@ -194,7 +194,7 @@ export default function NosChiotsPage() {
                                                 >
                                                     {firstImage ? (
                                                         <Image
-                                                            src={getPuppyDisplayImageSrc(firstImage.src)}
+                                                            src={getPuppyThumbImageSrc(firstImage)}
                                                             alt={firstImage.alt}
                                                             fill
                                                             className="object-cover"

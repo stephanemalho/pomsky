@@ -4,6 +4,7 @@ import { Search } from "lucide-react"
 
 import { SectionTitleIcon } from "@/components/section-title-icon"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { getSmallImageSrc } from "@/lib/image-variants"
 import { siteConfig } from "@/lib/seo-config"
 import { cn } from "@/lib/utils"
 
@@ -34,7 +35,7 @@ const internalLinkImagesByHref: Record<string, string> = {
 function getInternalLinkImage(item: InternalLinkItem) {
   const hrefWithoutAnchor = item.href.split("#")[0]?.split("?")[0] || item.href
 
-  return item.image ?? internalLinkImagesByHref[hrefWithoutAnchor] ?? siteConfig.ogImage
+  return getSmallImageSrc(item.image ?? internalLinkImagesByHref[hrefWithoutAnchor] ?? siteConfig.ogImage)
 }
 
 type InternalLinksSectionProps = {
@@ -86,7 +87,6 @@ export function InternalLinksSection({
                     fill
                     className="object-cover"
                     sizes="64px"
-                    quality={80}
                   />
                 </span>
                 <div className="min-w-0 pt-1">

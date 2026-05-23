@@ -1,7 +1,7 @@
 /**
  * Optimizes all site images and generates responsive WebP variants.
  *
- * For each WebP image, produces three variants served by lib/image-loader.ts:
+ * For each WebP image, produces three variants consumed directly by components:
  *   foo.webp        — full desktop size  (maxWidth per directory)
  *   foo-md.webp     — 960px max          (tablet)
  *   foo-sm.webp     — 480px max          (mobile)
@@ -22,7 +22,7 @@ import { fileURLToPath } from "node:url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PUBLIC = path.join(__dirname, "../public");
 
-// Responsive variant breakpoints — must match lib/image-loader.ts and next.config.ts deviceSizes.
+// Responsive variant breakpoints used by lib/image-variants.ts.
 // SM: mobile low-DPR and small containers (360px × 1× DPR = 360px → picks 480w)
 // MD: mobile HiDPI (360px × 2× DPR = 720px → picks 768w; Moto G Power 412px × 1.75 = 721px → 768w)
 // Full: tablet/desktop (1440px+)

@@ -1,5 +1,6 @@
 import { siteConfig } from "@/lib/seo-config";
 import { type Puppy } from "./puppies";
+import { getSmallImageSrc } from "@/lib/image-variants";
 
 export function formatPuppyPrice(price: number, currency = "EUR") {
     return new Intl.NumberFormat("fr-FR", {
@@ -33,6 +34,14 @@ export function getPuppyImageSrc(src: string) {
 
 export function getPuppyDisplayImageSrc(src: string) {
     return getPuppyImageSrc(src);
+}
+
+export function getPuppyThumbImageSrc(image: Puppy["images"][number]) {
+    return getPuppyImageSrc(image.thumbSrc ?? getSmallImageSrc(image.src));
+}
+
+export function getPuppySourceImageSrc(image: Puppy["images"][number]) {
+    return getPuppyImageSrc(image.sourceSrc ?? image.src);
 }
 
 export function getPuppyStatus(puppy: Puppy) {
@@ -73,7 +82,7 @@ export function getPuppyLastModified(puppy: Puppy) {
 export function buildPuppyProductStructuredData(puppy: Puppy) {
     const url = getAbsolutePuppyUrl(puppy);
     const statusLabel = getPuppyStatusLabel(puppy);
-    const images = puppy.images.map((image) => `${siteConfig.siteUrl}${getPuppyImageSrc(image.src)}`);
+    const images = puppy.images.map((image) => `${siteConfig.siteUrl}${getPuppySourceImageSrc(image)}`);
 
     if (typeof puppy.price !== "number") {
         return {

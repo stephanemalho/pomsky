@@ -29,12 +29,13 @@ import {
     buildPuppyProductStructuredData,
     formatPuppyPrice,
     getPuppyDisplayImageSrc,
-    getPuppyImageSrc,
     getPuppyLastModified,
     getPuppySeoDescription,
     getPuppySlug,
+    getPuppySourceImageSrc,
     getPuppyStatus,
     getPuppyStatusLabel,
+    getPuppyThumbImageSrc,
     getPuppyUrl,
 } from "../puppy-seo";
 
@@ -96,7 +97,9 @@ export async function generateMetadata({ params }: PuppyPageProps): Promise<Meta
         return {};
     }
 
-    const firstImage = getPuppyImageSrc(puppy.images[0]?.src ?? "/pages/puppies/pomsky-f4-inuk-1.jpeg");
+    const firstImage = puppy.images[0]
+        ? getPuppySourceImageSrc(puppy.images[0])
+        : "/pages/puppies/pomsky-f4-inuk-1.webp";
     const description = getPuppySeoDescription(puppy);
     const title = `${puppy.name}, chiot Pomsky ${puppy.color} ${getPuppyStatusLabel(puppy).toLowerCase()}`;
     const url = `${siteConfig.siteUrl}${getPuppyUrl(puppy)}`;
@@ -119,7 +122,7 @@ export async function generateMetadata({ params }: PuppyPageProps): Promise<Meta
                 {
                     url: `${siteConfig.siteUrl}${firstImage}`,
                     alt: `${puppy.name}, chiot Pomsky ${puppy.color} de l'élevage Royal POMSKY`,
-                    type: "image/jpeg",
+                    type: "image/webp",
                 },
             ],
         }),
@@ -208,7 +211,7 @@ export default async function PuppyDetailPage({ params }: PuppyPageProps) {
                                             ? "(min-width: 1024px) 52vw, 100vw"
                                             : "(min-width: 1024px) 25vw, 50vw"}
                                         className="object-contain p-2"
-                                        quality={80}
+                                        quality={index === 0 ? 80 : 70}
                                     />
                                 </figure>
                             ))}
@@ -458,7 +461,7 @@ function PuppyNavigationImage({
         <span className="relative h-18 w-18 shrink-0 overflow-hidden rounded-full border-2 border-primary/10 bg-muted">
             {image ? (
                 <Image
-                    src={getPuppyDisplayImageSrc(image.src)}
+                    src={getPuppyThumbImageSrc(image)}
                     alt={image.alt}
                     fill
                     className="object-cover"

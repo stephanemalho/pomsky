@@ -14,7 +14,7 @@ import { pomskyBenefits } from "@/components/content/home/pomsky/pomskyBenefits"
 import { pageContent } from "@/lib/page-content"
 import { TikTokFeatureSpotlight } from "@/components/client/tiktok/TikTokFeatureSpotlight"
 import { puppies } from "@/app/chiots-disponibles/puppies"
-import { getPuppyDisplayImageSrc, getPuppyUrl } from "@/app/chiots-disponibles/puppy-seo"
+import { getPuppyThumbImageSrc, getPuppyUrl } from "@/app/chiots-disponibles/puppy-seo"
 import { InternalLinksSection, type InternalLinkItem } from "@/components/InternalLinksSection"
 import { SectionTitleIcon } from "@/components/section-title-icon"
 
@@ -429,7 +429,7 @@ export default function HomePage() {
 
               {availablePuppies.length > 0 ? (
                 <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8">
-                  {availablePuppies.map((puppy, index) => {
+                  {availablePuppies.map((puppy) => {
                     const firstImage = puppy.images[0]
 
                     return (
@@ -442,13 +442,11 @@ export default function HomePage() {
                         <span className="relative block aspect-square overflow-hidden rounded-lg border border-primary/12 bg-background shadow-sm transition group-hover:border-primary/35 group-hover:shadow-md">
                           {firstImage ? (
                             <Image
-                              src={getPuppyDisplayImageSrc(firstImage.src)}
+                              src={getPuppyThumbImageSrc(firstImage)}
                               alt={firstImage.alt}
                               fill
                               className="object-cover transition-transform group-hover:scale-105"
                               sizes="(min-width: 1280px) 132px, (min-width: 1024px) 15vw, (min-width: 768px) 22vw, (min-width: 640px) 30vw, 46vw"
-                              priority={index < 4}
-                              quality={80}
                             />
                           ) : null}
                         </span>

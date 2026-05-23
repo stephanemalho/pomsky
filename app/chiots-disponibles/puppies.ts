@@ -1,5 +1,7 @@
 export type PuppyImage = {
     src: string;
+    thumbSrc?: string;
+    sourceSrc?: string;
     alt: string;
 };
 
@@ -65,6 +67,8 @@ const defaultHealth = ["Suivi vétérinaire en cours"];
 function puppyImages(name: string, files: string[]): PuppyImage[] {
     return files.map((file, index) => ({
         src: `pages/puppies/${file}`,
+        thumbSrc: `pages/puppies/${file.replace(".webp", "-sm.webp")}`,
+        sourceSrc: `pages/puppies/${file}`,
         alt: `${name}, chiot Pomsky Royal POMSKY - photo ${index + 1}`
     }));
 }
