@@ -12,6 +12,9 @@ const targetDir = targetArg
     : publicDir;
 
 const imageExtensions = [".jpg", ".jpeg", ".png", ".JPG", ".JPEG", ".PNG"];
+const excludedFileNames = new Set([
+    "qr-code-contact-exotic-perle-teckel.png",
+]);
 
 let totalOriginalSize = 0;
 let totalWebpSize = 0;
@@ -20,6 +23,10 @@ let convertedCount = 0;
 async function convertToWebP(filePath) {
     const ext = path.extname(filePath);
     if (!imageExtensions.includes(ext)) return;
+    if (excludedFileNames.has(path.basename(filePath))) {
+        console.log(`⏭️  Skipped QR source: ${path.basename(filePath)}`);
+        return;
+    }
 
     const fileName = path.basename(filePath, ext);
     const dirName = path.dirname(filePath);
