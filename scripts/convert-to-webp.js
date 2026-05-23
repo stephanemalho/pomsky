@@ -34,9 +34,12 @@ async function convertToWebP(filePath) {
         const originalStats = fs.statSync(filePath);
         totalOriginalSize += originalStats.size;
 
-        // No .rotate() — preserves pixel orientation exactly as-is.
+        // Apply EXIF orientation before writing WebP. Browsers honor JPEG EXIF,
+        // but WebP output stores physical pixels, so skipping this can rotate
+        // photos shot on cameras/phones with orientation metadata.
         // The original file is kept so it can be used as a JPEG fallback in OG metadata.
         await sharp(filePath)
+            .rotate()
             .webp({ quality: 85, effort: 6 })
             .toFile(webpPath);
 
