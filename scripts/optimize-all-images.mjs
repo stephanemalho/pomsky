@@ -69,6 +69,10 @@ const CONFIGS = [
 ];
 
 const IMAGE_EXTS = new Set([".webp", ".jpeg", ".jpg", ".png"]);
+const EXCLUDED_FILES = new Set([
+    "qr-code-contact-exotic-perle-teckel.png",
+    "qr-code-contact-exotic-perle-teckel.webp",
+]);
 
 // Suffix pattern — these are generated files, never source files
 const VARIANT_RE = /-(sm|md)\.(webp)$/;
@@ -109,7 +113,7 @@ async function processDir(dirConfig) {
     // Only process source files — skip generated variants and hidden files
     const imageFiles = files.filter((f) => {
         const ext = path.extname(f).toLowerCase();
-        return IMAGE_EXTS.has(ext) && !f.startsWith(".") && !VARIANT_RE.test(f);
+        return IMAGE_EXTS.has(ext) && !f.startsWith(".") && !VARIANT_RE.test(f) && !EXCLUDED_FILES.has(f);
     });
 
     let resized = 0;
