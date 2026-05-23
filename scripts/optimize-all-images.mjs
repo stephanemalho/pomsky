@@ -1,9 +1,13 @@
 /**
- * Optimizes all site images by resizing them to display-appropriate dimensions.
- * Processes files in-place — run after convert-to-webp.js, before each deploy.
+ * Optimizes all site images and generates responsive WebP variants.
  *
- * Sizes are derived from the actual `sizes=` props in each page/component × 2× DPR.
- * Does NOT rotate images. Does NOT convert formats (WebP stays WebP, JPEG stays JPEG).
+ * For each WebP image, produces three variants served by lib/image-loader.ts:
+ *   foo.webp        — full desktop size  (maxWidth per directory)
+ *   foo-md.webp     — 960px max          (tablet)
+ *   foo-sm.webp     — 480px max          (mobile)
+ *
+ * JPEG files are resized in-place with EXIF preserved (OG metadata fallbacks).
+ * Does NOT rotate images. Does NOT convert formats.
  * Original JPEG files are preserved so they can be used as OG metadata fallbacks.
  *
  * Run: node scripts/optimize-all-images.mjs
@@ -17,6 +21,10 @@ import { fileURLToPath } from "node:url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PUBLIC = path.join(__dirname, "../public");
+
+// Responsive variant breakpoints — must match lib/image-loader.ts
+const SM_WIDTH = 480;
+const MD_WIDTH = 960;
 
 // Per-directory config derived from component `sizes=` props × 2× DPR.
 // All directories are non-recursive (subdirs listed explicitly below).
@@ -59,10 +67,28 @@ const CONFIGS = [
 
 const IMAGE_EXTS = new Set([".webp", ".jpeg", ".jpg", ".png"]);
 
+// Suffix pattern — these are generated files, never source files
+const VARIANT_RE = /-(sm|md)\.(webp)$/;
+
 function formatBytes(bytes) {
     if (bytes < 1024) return `${bytes} B`;
     if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(0)} KB`;
     return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
+}
+
+/** Write a WebP variant at targetWidth alongside the source file. */
+async function writeVariant(srcPath, targetWidth, quality, label) {
+    const dir = path.dirname(srcPath);
+    const base = path.basename(srcPath, ".webp");
+    const outPath = path.join(dir, `${base}-${label}.webp`);
+
+    const buffer = await sharp(srcPath)
+        .resize(targetWidth, null, { withoutEnlargement: true })
+        .webp({ quality })
+        .toBuffer();
+
+    await writeFile(outPath, buffer);
+    return buffer.length;
 }
 
 async function processDir(dirConfig) {
@@ -74,63 +100,75 @@ async function processDir(dirConfig) {
         files = await readdir(absDir);
     } catch {
         console.log(`  ⚠ Skipping ${dir} (not found)`);
-        return { resized: 0, skipped: 0, savedBytes: 0 };
+        return { resized: 0, skipped: 0, variants: 0, savedBytes: 0 };
     }
 
-    // Only process immediate files — subdirs are listed explicitly in CONFIGS
+    // Only process source files — skip generated variants and hidden files
     const imageFiles = files.filter((f) => {
         const ext = path.extname(f).toLowerCase();
-        return IMAGE_EXTS.has(ext) && !f.startsWith(".");
+        return IMAGE_EXTS.has(ext) && !f.startsWith(".") && !VARIANT_RE.test(f);
     });
 
     let resized = 0;
     let skipped = 0;
+    let variants = 0;
     let savedBytes = 0;
 
     for (const file of imageFiles) {
         const filePath = path.join(absDir, file);
         const ext = path.extname(file).toLowerCase();
+        const isWebp = ext === ".webp";
+        const isJpeg = ext === ".jpeg" || ext === ".jpg";
 
         const { size: originalSize } = await stat(filePath);
         const meta = await sharp(filePath).metadata();
         const originalWidth = meta.width ?? 0;
 
-        if (originalWidth <= maxWidth) {
+        // ── Step 1: resize main file if oversized ──────────────────────────
+        if (originalWidth > maxWidth) {
+            let pipeline = sharp(filePath).resize(maxWidth, null, { withoutEnlargement: true });
+
+            if (isWebp) {
+                pipeline = pipeline.webp({ quality });
+            } else if (isJpeg) {
+                // Preserve EXIF so browsers apply orientation correction without
+                // physical pixel rotation (withMetadata keeps orientation flag).
+                pipeline = pipeline.withMetadata().jpeg({ quality, mozjpeg: true });
+            } else if (ext === ".png") {
+                pipeline = pipeline.png({ quality });
+            }
+
+            const buffer = await pipeline.toBuffer();
+            await writeFile(filePath, buffer);
+
+            const saved = originalSize - buffer.length;
+            savedBytes += saved;
+            resized++;
+            console.log(
+                `  ✓ ${file.padEnd(55)} ${originalWidth}px → ${maxWidth}px  ${formatBytes(originalSize)} → ${formatBytes(buffer.length)}  (−${formatBytes(saved)})`
+            );
+        } else {
             skipped++;
-            continue;
         }
 
-        // Resize without rotating — withoutEnlargement ensures no upscaling
-        let pipeline = sharp(filePath).resize(maxWidth, null, { withoutEnlargement: true });
-
-        if (ext === ".webp") {
-            pipeline = pipeline.webp({ quality });
-        } else if (ext === ".jpeg" || ext === ".jpg") {
-            // Preserve EXIF (orientation, color profile) — browsers and crawlers
-            // apply orientation from EXIF, no physical pixel rotation needed.
-            pipeline = pipeline.withMetadata().jpeg({ quality, mozjpeg: true });
-        } else if (ext === ".png") {
-            pipeline = pipeline.png({ quality });
+        // ── Step 2: generate responsive variants (WebP only) ──────────────
+        if (isWebp) {
+            await writeVariant(filePath, SM_WIDTH, quality, "sm");
+            if (maxWidth > SM_WIDTH) {
+                await writeVariant(filePath, MD_WIDTH, quality, "md");
+            }
+            variants++;
         }
-
-        const buffer = await pipeline.toBuffer();
-        await writeFile(filePath, buffer);
-
-        const saved = originalSize - buffer.length;
-        savedBytes += saved;
-        resized++;
-        console.log(
-            `  ✓ ${file.padEnd(60)} ${originalWidth}px → ${maxWidth}px  ${formatBytes(originalSize)} → ${formatBytes(buffer.length)}  (−${formatBytes(saved)})`
-        );
     }
 
-    return { resized, skipped, savedBytes };
+    return { resized, skipped, variants, savedBytes };
 }
 
-console.log("Optimizing all site images…\n");
+console.log("Optimizing all site images + generating responsive variants…\n");
 
 let totalResized = 0;
 let totalSkipped = 0;
+let totalVariants = 0;
 let totalSaved = 0;
 
 for (const config of CONFIGS) {
@@ -138,17 +176,19 @@ for (const config of CONFIGS) {
     const result = await processDir(config);
     totalResized += result.resized;
     totalSkipped += result.skipped;
+    totalVariants += result.variants;
     totalSaved += result.savedBytes;
-    if (result.resized === 0) console.log("  → all images already within limits");
+    if (result.resized === 0) console.log("  → all source images already within limits");
     console.log();
 }
 
 console.log("─".repeat(72));
 console.log("Done.");
-console.log(`  Resized : ${totalResized} images`);
-console.log(`  Skipped : ${totalSkipped} images (already within limits)`);
-console.log(`  Saved   : ${formatBytes(totalSaved)} total`);
+console.log(`  Resized  : ${totalResized} source images`);
+console.log(`  Skipped  : ${totalSkipped} source images (already within limits)`);
+console.log(`  Variants : ${totalVariants} WebP images → -sm + -md generated`);
+console.log(`  Saved    : ${formatBytes(totalSaved)} on source files`);
 console.log(`
 Next steps:
-  git add -A && git commit -m "perf: optimize all site images"
+  git add -A && git commit -m "perf: optimize images + generate responsive variants"
 `);
