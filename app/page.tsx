@@ -243,6 +243,7 @@ export default function HomePage() {
                         src="/pomsky-and-his-pet-family-parent.webp"
                         alt="Pomsky Royal POMSKY auprès de sa famille dans un moment de complicité"
                         fill
+                        priority
                         className="object-cover object-center"
                         sizes="(min-width: 1280px) 960px, (min-width: 1024px) 80vw, (min-width: 768px) calc(100vw - 80px), calc(100vw - 32px)"
                       />
