@@ -106,8 +106,9 @@ async function processDir(dirConfig) {
         if (ext === ".webp") {
             pipeline = pipeline.webp({ quality });
         } else if (ext === ".jpeg" || ext === ".jpg") {
-            // Keep as JPEG — original files are used as OG metadata fallbacks
-            pipeline = pipeline.jpeg({ quality, mozjpeg: true });
+            // Preserve EXIF (orientation, color profile) — browsers and crawlers
+            // apply orientation from EXIF, no physical pixel rotation needed.
+            pipeline = pipeline.withMetadata().jpeg({ quality, mozjpeg: true });
         } else if (ext === ".png") {
             pipeline = pipeline.png({ quality });
         }
