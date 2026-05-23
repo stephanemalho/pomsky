@@ -275,7 +275,7 @@ const puppiesUnsorted: Puppy[] = [
         highlights: ["Mâle", "Yeux noirs", "Pelage fluffy", "Taille miniature"],
         health: defaultHealth,
         images: puppyImages("INUIT", [
-            "pomsky-mini-inuit-4.jpeg",
+            "pomsky-mini-inuit-4.webp",
             "pomsky-mini-inuit-1.webp",
             "pomsky-mini-inuit-2.webp",
             "pomsky-mini-inuit-3.webp"
@@ -353,7 +353,7 @@ const puppiesUnsorted: Puppy[] = [
         ],
         health: defaultHealth,
         images: puppyImages("AMAROK", [
-            "pomsky-toy-amarok-6.jpeg",
+            "pomsky-toy-amarok-6.webp",
             "pomsky-toy-amarok-1.webp",
             "pomsky-toy-amarok-2.webp",
             "pomsky-toy-amarok-3.webp",
@@ -624,7 +624,7 @@ const puppiesUnsorted: Puppy[] = [
         ],
         health: defaultHealth,
         images: puppyImages("KIRO", [
-            "pomsky-toy-kiro-4.jpeg",
+            "pomsky-toy-kiro-4.webp",
             "pomsky-toy-kiro-1.webp",
             "pomsky-toy-kiro-2.webp",
             "pomsky-toy-kiro-3.webp"
@@ -675,9 +675,9 @@ const puppiesUnsorted: Puppy[] = [
         ],
         health: defaultHealth,
         images: puppyImages("LUMA", [
-            "pomsky-femelle-luma-1.jpeg",
-            "pomsky-femelle-luma-2.jpeg",
-            "pomsky-femelle-luma-3.jpeg"
+            "pomsky-femelle-luma-1.webp",
+            "pomsky-femelle-luma-2.webp",
+            "pomsky-femelle-luma-3.webp"
         ]),
         linkTo: formUrls.charmBeauty,
         isReserved: true
@@ -750,7 +750,7 @@ const puppiesUnsorted: Puppy[] = [
         highlights: ["Mâle", "Yeux bleus", "Pelage fluffy", "Taille miniature"],
         health: defaultHealth,
         images: puppyImages("LOUP", [
-            "pomsky-mini-loup-5.jpeg",
+            "pomsky-mini-loup-5.webp",
             "pomsky-mini-loup-1.webp",
             "pomsky-mini-loup-2.webp",
             "pomsky-mini-loup-3.webp",
@@ -779,9 +779,9 @@ const puppiesUnsorted: Puppy[] = [
         ],
         health: defaultHealth,
         images: puppyImages("LUNA", [
-            "pomsky-mini-luna-3.jpeg",
-            "pomsky-mini-luna-2.jpeg",
-            "pomsky-mini-luna-1.jpeg"
+            "pomsky-mini-luna-3.webp",
+            "pomsky-mini-luna-2.webp",
+            "pomsky-mini-luna-1.webp"
         ]),
         linkTo: formUrls.skySally
     },
@@ -806,7 +806,7 @@ const puppiesUnsorted: Puppy[] = [
         ],
         health: defaultHealth,
         images: puppyImages("MIYU", [
-            "pomsky-toy-miyu-4.jpeg",
+            "pomsky-toy-miyu-4.webp",
             "pomsky-toy-miyu-1.webp",
             "pomsky-toy-miyu-2.webp",
             "pomsky-toy-miyu-3.webp"
