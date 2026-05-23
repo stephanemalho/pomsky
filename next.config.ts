@@ -26,8 +26,7 @@ const contentSecurityPolicy = [
 const nextConfig: NextConfig = {
     poweredByHeader: false,
     images: {
-        deviceSizes: [480, 768, 1440, 1920],
-        imageSizes: [64, 128, 256, 480],
+        qualities: [80],
         remotePatterns: [
             {
                 protocol: "https",
