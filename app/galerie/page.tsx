@@ -95,7 +95,7 @@ function PhotoGallerySection({ id, items }: { id: string; items: GalleryImageIte
                         key={item.id}
                         className={cn(
                             "group relative overflow-hidden rounded-[1.75rem] border border-primary/10 bg-background shadow-[0_16px_48px_rgba(66,40,18,0.08)]",
-                            "min-h-[320px] md:min-h-0",
+                            "min-h-80 md:min-h-0",
                             item.className
                         )}
                     >
@@ -125,7 +125,7 @@ function PhotoGallerySection({ id, items }: { id: string; items: GalleryImageIte
 
 function SocialThumbnail({ item }: { item: SocialGalleryItem }) {
     return (
-        <div className="relative aspect-[4/5] overflow-hidden bg-muted">
+        <div className="relative aspect-4/5 overflow-hidden bg-muted">
             <Image
                 src={item.thumbnailSrc}
                 alt={item.thumbnailAlt}
