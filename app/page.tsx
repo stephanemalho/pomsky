@@ -9,6 +9,7 @@ import type { LucideIcon } from "lucide-react"
 import { ArrowRight, ClipboardList, Heart, HeartHandshake, PawPrint, ShieldCheck, Sparkles, Stethoscope, Users } from "lucide-react"
 import { buildOpenGraph, buildTwitter, pageMetadata, returnLastmod, siteConfig, sitemapPages } from "@/lib/seo-config"
 import { generateLocalBusinessSchema, generateFAQSchema, generateBreadcrumbSchema, generateVideoObjectSchema, generateWebPageSchema } from "@/lib/schema-generators"
+import { ResponsivePicture } from "@/components/shared/ResponsivePicture"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
 import { pomskyBenefits } from "@/components/content/home/pomsky/pomskyBenefits"
 import { pageContent } from "@/lib/page-content"
@@ -21,6 +22,23 @@ import { SectionTitleIcon } from "@/components/section-title-icon"
 const HOME_OG_IMAGE = "/pomsky-and-his-pet-family-parent.jpg"
 const HOME_METADATA_WEBP_IMAGE = "/assets/authors/marine-ava.webp"
 const HOME_METADATA_FALLBACK_IMAGE = "/assets/authors/marine-and-pomsky-in-grass.jpeg"
+const optimizedImageBase = "/images/optimized"
+const pomskyFamilySources = {
+  avif: `${optimizedImageBase}/pomsky-family-480.avif 480w, ${optimizedImageBase}/pomsky-family-768.avif 768w, ${optimizedImageBase}/pomsky-family-1024.avif 1024w`,
+  webp: `${optimizedImageBase}/pomsky-family-480.webp 480w, ${optimizedImageBase}/pomsky-family-768.webp 768w, ${optimizedImageBase}/pomsky-family-1024.webp 1024w`,
+}
+const akashaSources = {
+  avif: `${optimizedImageBase}/akasha-pomsky-toy-f4-360.avif 360w, ${optimizedImageBase}/akasha-pomsky-toy-f4-480.avif 480w, ${optimizedImageBase}/akasha-pomsky-toy-f4-640.avif 640w, ${optimizedImageBase}/akasha-pomsky-toy-f4-768.avif 768w`,
+  webp: `${optimizedImageBase}/akasha-pomsky-toy-f4-360.webp 360w, ${optimizedImageBase}/akasha-pomsky-toy-f4-480.webp 480w, ${optimizedImageBase}/akasha-pomsky-toy-f4-640.webp 640w, ${optimizedImageBase}/akasha-pomsky-toy-f4-768.webp 768w`,
+}
+const pomskyStandardSources = {
+  avif: `${optimizedImageBase}/pomsky-standard-size-480.avif 480w, ${optimizedImageBase}/pomsky-standard-size-768.avif 768w, ${optimizedImageBase}/pomsky-standard-size-1024.avif 1024w`,
+  webp: `${optimizedImageBase}/pomsky-standard-size-480.webp 480w, ${optimizedImageBase}/pomsky-standard-size-768.webp 768w, ${optimizedImageBase}/pomsky-standard-size-1024.webp 1024w`,
+}
+const pomskyFamilySizes = "(max-width: 768px) calc(100vw - 32px), (max-width: 1024px) calc(100vw - 80px), 680px"
+const akashaSizes = "(max-width: 768px) 85vw, 640px"
+const pomskyStandardSizes = "(max-width: 768px) calc(100vw - 32px), 680px"
+const pomskyStandardAlt = "Pomsky de l'élevage Royal POMSKY debout dans l'herbe, utilisé pour illustrer les différents formats"
 const homeVideoAnchor = `${siteConfig.pages.home}#instant-a-l-elevage`
 const homeVideoSchema = generateVideoObjectSchema({
   name: "Moment de vie à l'élevage Royal POMSKY",
@@ -239,15 +257,18 @@ export default function HomePage() {
                 <div className="mx-auto max-w-6xl overflow-hidden rounded-xl md:rounded-4xl border border-white/12 bg-[#3a1117]/55 shadow-[0_30px_100px_rgba(0,0,0,0.28)] backdrop-blur-sm">
                   <figure>
                     <div className="relative aspect-4/3 sm:aspect-16/11 md:aspect-16/8 lg:aspect-16/7">
-                      <Image
-                        src="/pomsky-and-his-pet-family-parent.webp"
+                      <ResponsivePicture
+                        sources={pomskyFamilySources}
+                        fallback={`${optimizedImageBase}/pomsky-family-1024.webp`}
                         alt="Pomsky Royal POMSKY auprès de sa famille dans un moment de complicité"
-                        fill
-                        priority
+                        width={1300}
+                        height={869}
+                        loading="eager"
                         fetchPriority="high"
-                        className="object-cover object-center"
-                        sizes="(min-width: 1280px) 960px, (min-width: 1024px) 80vw, (min-width: 768px) calc(100vw - 80px), calc(100vw - 32px)"
-                        quality={70}
+                        decoding="async"
+                        sizes={pomskyFamilySizes}
+                        className="absolute inset-0"
+                        imgClassName="h-full w-full object-cover object-center"
                       />
                       <div className="absolute inset-0 bg-linear-to-t from-[#2a0d12]/35 via-transparent to-transparent" aria-hidden="true" />
                     </div>
@@ -342,13 +363,17 @@ export default function HomePage() {
 
               <figure className="min-w-0 space-y-3">
                 <div className="relative h-auto w-full max-w-full overflow-hidden rounded-lg aspect-4/5 sm:aspect-video md:h-200 md:aspect-4/5">
-                  <Image
-                    src="/AKASHA-pomsky-toy-f4.webp"
+                  <ResponsivePicture
+                    sources={akashaSources}
+                    fallback={`${optimizedImageBase}/akasha-pomsky-toy-f4-768.webp`}
                     alt="Portrait d'Akasha, femelle Pomsky toy F4 de l'élevage Royal POMSKY"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 85vw, 50vw"
-                    quality={70}
+                    width={1300}
+                    height={1947}
+                    sizes={akashaSizes}
+                    className="absolute inset-0"
+                    imgClassName="h-full w-full object-cover"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <figcaption className="text-sm leading-relaxed text-muted-foreground">
@@ -382,14 +407,29 @@ export default function HomePage() {
                 <Card key={item.title} className="overflow-hidden bg-muted/70 p-2">
                   <figure className="space-y-3">
                     <div className="relative aspect-4/3 rounded-lg overflow-hidden">
-                      <Image
-                        src={item.image}
-                        alt={item.alt}
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                        quality={75}
-                      />
+                      {item.alt === pomskyStandardAlt ? (
+                        <ResponsivePicture
+                          sources={pomskyStandardSources}
+                          fallback={`${optimizedImageBase}/pomsky-standard-size-1024.webp`}
+                          alt={item.alt}
+                          width={1300}
+                          height={868}
+                          sizes={pomskyStandardSizes}
+                          className="absolute inset-0"
+                          imgClassName="h-full w-full object-cover"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      ) : (
+                        <Image
+                          src={item.image}
+                          alt={item.alt}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                          quality={75}
+                        />
+                      )}
                     </div>
                     <figcaption className="px-2 text-xs leading-relaxed text-muted-foreground">
                       Illustration liée au thème : {item.title}

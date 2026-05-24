@@ -20,49 +20,9 @@ const questrial = Questrial({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.siteUrl),
-  title: siteConfig.title,
-  description: siteConfig.description,
-  keywords: siteConfig.keywords,
   authors: [{ name: siteConfig.author, url: siteConfig.siteUrl }],
   creator: siteConfig.author,
   publisher: siteConfig.author,
-
-  // Open Graph
-  openGraph: {
-    type: "website",
-    locale: siteConfig.locale,
-    url: siteConfig.siteUrl,
-    title: siteConfig.title,
-    description: siteConfig.description,
-    images: [
-      {
-        url: `${siteConfig.siteUrl}${siteConfig.ogImage}`,
-        width: siteConfig.ogImageWidth,
-        height: siteConfig.ogImageHeight,
-        alt: siteConfig.ogImageAlt,
-        type: "image/webp",
-      },
-      {
-        url: `${siteConfig.siteUrl}${siteConfig.ogImageJpg}`,
-        width: siteConfig.ogImageWidth,
-        height: siteConfig.ogImageHeight,
-        alt: siteConfig.ogImageAlt,
-        type: "image/jpeg",
-      },
-    ],
-    siteName: siteConfig.name,
-  },
-
-  // Twitter Card
-  twitter: {
-    card: "summary_large_image",
-    title: siteConfig.title,
-    description: siteConfig.description,
-    images: [
-      `${siteConfig.siteUrl}${siteConfig.ogImage}`,
-      `${siteConfig.siteUrl}${siteConfig.ogImageJpg}`,
-    ],
-  },
 
   robots: {
     index: true,
@@ -83,9 +43,6 @@ export const metadata: Metadata = {
     telephone: true,
     address: true,
   },
-  other: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
-    ? { "google-site-verification": process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION }
-    : undefined,
 }
 
 export default function RootLayout({
