@@ -322,7 +322,8 @@ const puppiesUnsorted: Puppy[] = [
             "pomsky-femelle-kit-2.webp",
             "pomsky-femelle-kit-3.webp"
         ]),
-        linkTo: formUrls.inuitMogu
+        linkTo: formUrls.inuitMogu,
+        isReserved: true
     },
     {
         name: "STAR",
@@ -353,7 +354,7 @@ const puppiesUnsorted: Puppy[] = [
             "pomsky-toy-femelle-star-2.webp",
             "pomsky-toy-femelle-star-4.webp"
         ]),
-        linkTo: formUrls.inuitMogu
+        linkTo: formUrls.inuitMogu,
     },
     {
         name: "AMAROK",
@@ -416,7 +417,8 @@ const puppiesUnsorted: Puppy[] = [
             "pomsky-toy-alaska-3.webp",
             "pomsky-toy-alaska-4.webp"
         ]),
-        linkTo: formUrls.charmAlou
+        linkTo: formUrls.charmAlou,
+        isReserved: true
     },
     {
         name: "INUK",
@@ -485,19 +487,19 @@ const puppiesUnsorted: Puppy[] = [
         coat: "Pomsky F4+ (ADN Poméranian / Husky)",
         color: "Chocolat et blanche",
         sexe: "Femelle",
-        size: "Toy estimé",
-        ruler: "Pelage en cours d'évolution",
-        weight: "Poids adulte en cours d'estimation",
+        size: "Micro / Toy",
+        ruler: "Pelage fluffy",
+        weight: "2,5 à 4 kg adulte estimé",
         parents: "Parents : PWEEK & CHARM",
         readyDate: "Réservé",
         age: "Portée Pweek et Charm",
         description:
-            "Ambre est une femelle Pomsky chocolat et blanche issue de la portée Pweek et Charm. Son marquage husky et sa taille adulte estimée toy sont suivis avec attention pendant sa croissance.",
+            "Ambre est une femelle Pomsky chocolat et blanche issue de la portée Pweek et Charm. De format micro à toy, elle est estimée entre 2,5 et 4 kg adulte. Ses yeux bleus lumineux et son pelage fluffy très dense lui confèrent un charme visuel irrésistible. Un profil rare alliant douceur de robe et format ultra-compact.",
         highlights: [
             "Femelle",
-            "Chocolat et blanche",
-            "Marquage husky",
-            "Taille estimée toy"
+            "Yeux bleus",
+            "Pelage fluffy",
+            "Micro / Toy (2,5–4 kg adulte)"
         ],
         health: defaultHealth,
         images: puppyImages("AMBRE", [
@@ -514,19 +516,19 @@ const puppiesUnsorted: Puppy[] = [
         coat: "Pomsky F4+ (ADN Poméranian / Husky)",
         color: "Gris et blanc",
         sexe: "Mâle",
-        size: "Toy estimé",
-        ruler: "Pelage standard polaire husky",
-        weight: "Poids adulte en cours d'estimation",
+        size: "Micro / Toy",
+        ruler: "Pelage polaire",
+        weight: "2,5 à 4 kg adulte estimé",
         parents: "Parents : PWEEK & CHARM",
         readyDate: "Disponible à la réservation",
         age: "Portée Pweek et Charm",
         description:
-            "Rémus est un mâle Pomsky gris et blanc issu de la portée Pweek et Charm. Il présente un marquage husky, un pelage standard polaire husky et une taille adulte estimée toy.",
+            "Rémus est un mâle Pomsky gris et blanc issu de la portée Pweek et Charm. De format micro à toy, il est estimé entre 2,5 et 4 kg adulte. Il présente des yeux bruns expressifs et un pelage polaire dense qui renforce son type nordique. Un mâle compact et équilibré, au caractère attendu vif et affectueux.",
         highlights: [
             "Mâle",
-            "Gris et blanc",
-            "Marquage husky",
-            "Taille estimée toy"
+            "Yeux bruns",
+            "Pelage polaire",
+            "Micro / Toy (2,5–4 kg adulte)"
         ],
         health: defaultHealth,
         images: puppyImages("RÉMUS", [
@@ -572,19 +574,19 @@ const puppiesUnsorted: Puppy[] = [
         coat: "Pomsky F4+ (ADN Poméranian / Husky)",
         color: "Noire et blanche",
         sexe: "Femelle",
-        size: "Toy présumé",
-        ruler: "Pelage polaire husky",
-        weight: "Poids adulte en cours d'estimation",
+        size: "Micro / Toy",
+        ruler: "Pelage polaire",
+        weight: "2,5 à 4 kg adulte estimé",
         parents: "Parents : PWEEK & CHARM",
         readyDate: "Disponible à la réservation",
         age: "Portée Pweek et Charm",
         description:
-            "Bellatrix est une femelle Pomsky noire et blanche issue de la portée Pweek et Charm. Son pelage polaire husky et son format présumé toy donnent déjà une belle lecture de type.",
+            "Bellatrix est une femelle Pomsky noire et blanche issue de la portée Pweek et Charm. De format micro à toy, elle est estimée entre 2,5 et 4 kg adulte. Son pelage polaire dense et ses yeux bruns lui confèrent une allure nordique élégante. Un profil équilibré et distinctif dans cette portée.",
         highlights: [
             "Femelle",
-            "Noire et blanche",
-            "Pelage polaire husky",
-            "Toy présumé"
+            "Yeux bruns",
+            "Pelage polaire",
+            "Micro / Toy (2,5–4 kg adulte)"
         ],
         health: defaultHealth,
         images: puppyImages("BELLATRIX", [
@@ -601,19 +603,19 @@ const puppiesUnsorted: Puppy[] = [
         coat: "Pomsky F4+ (ADN Poméranian / Husky)",
         color: "Chocolat et blanche",
         sexe: "Femelle",
-        size: "Toy estimé",
-        ruler: "Pelage en cours d'évolution",
-        weight: "Poids adulte en cours d'estimation",
+        size: "Toy",
+        ruler: "Pelage fluffy",
+        weight: "3 à 5 kg adulte estimé",
         parents: "Parents : PWEEK & CHARM",
         readyDate: "Disponible à la réservation",
         age: "Portée Pweek et Charm",
         description:
-            "Arcana est une femelle Pomsky chocolat et blanche issue de la portée Pweek et Charm. Sa taille adulte est estimée toy, avec une évolution de pelage et de gabarit suivie à l'élevage.",
+            "Arcana est une femelle Pomsky chocolat et blanche issue de la portée Pweek et Charm. De format toy, elle est estimée entre 3 et 5 kg adulte. Ses yeux bleus et son pelage fluffy généreux lui donnent un charme naturel que l'on retrouve dans les plus belles lignées Pomsky. Un type très recherché.",
         highlights: [
             "Femelle",
-            "Chocolat et blanche",
-            "Taille estimée toy",
-            "Portée Pweek et Charm"
+            "Yeux bleus",
+            "Pelage fluffy",
+            "Toy (3–5 kg adulte)"
         ],
         health: defaultHealth,
         images: puppyImages("ARCANA", [
@@ -652,7 +654,7 @@ const puppiesUnsorted: Puppy[] = [
             "pomsky-toy-sano-2.webp",
             "pomsky-toy-sano-3.webp"
         ]),
-        linkTo: formUrls.charmBeauty
+        linkTo: formUrls.charmBeauty,
     },
     {
         name: "KIRO",
@@ -682,7 +684,8 @@ const puppiesUnsorted: Puppy[] = [
             "pomsky-toy-kiro-2.webp",
             "pomsky-toy-kiro-3.webp"
         ]),
-        linkTo: formUrls.charmBeauty
+        linkTo: formUrls.charmBeauty,
+        isReserved: true
     },
     {
         name: "NAYA",
@@ -941,7 +944,8 @@ const puppiesUnsorted: Puppy[] = [
             "pomsky-mini-sora-2.webp",
             "pomsky-mini-sora-3.webp"
         ]),
-        linkTo: formUrls.skySally
+        linkTo: formUrls.skySally,
+        isReserved: true
     }
 ];
 
