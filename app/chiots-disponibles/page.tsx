@@ -42,13 +42,17 @@ import { getPuppyParentProfiles } from "./puppy-parents";
 import {
     buildPuppyItemListStructuredData,
     formatPuppyPrice,
+    getPuppyAvifImageSrc,
+    getPuppySourceImageSrc,
     getPuppyThumbImageSrc,
     getPuppyStatus,
     getPuppyStatusLabel,
     getPuppyUrl,
 } from "./puppy-seo";
 
-const puppiesOgImage = "/pages/puppies/pomsky-f4-inuk-1.jpeg";
+const puppiesOgImage = "/pages/puppies/pomsky-f4-inuk-1-6semaine.jpeg";
+const puppiesOgImageWebp = "/pages/puppies/pomsky-f4-inuk-1-6semaine.webp";
+const puppiesOgImageAvif = "/pages/puppies/pomsky-f4-inuk-1-6semaine.avif";
 
 export const metadata: Metadata = {
     title: pageMetadata.puppies.title,
@@ -66,12 +70,30 @@ export const metadata: Metadata = {
                 height: siteConfig.ogImageHeight,
                 type: "image/jpeg",
             },
+            {
+                url: `${siteConfig.siteUrl}${puppiesOgImageWebp}`,
+                alt: "Chiot Pomsky disponible chez Royal Pomsky",
+                width: siteConfig.ogImageWidth,
+                height: siteConfig.ogImageHeight,
+                type: "image/webp",
+            },
+            {
+                url: `${siteConfig.siteUrl}${puppiesOgImageAvif}`,
+                alt: "Chiot Pomsky disponible chez Royal Pomsky",
+                width: siteConfig.ogImageWidth,
+                height: siteConfig.ogImageHeight,
+                type: "image/avif",
+            },
         ],
     }),
     twitter: buildTwitter({
         title: pageMetadata.puppies.title,
         description: pageMetadata.puppies.description,
-        imageUrl: `${siteConfig.siteUrl}${puppiesOgImage}`,
+        images: [
+            `${siteConfig.siteUrl}${puppiesOgImage}`,
+            `${siteConfig.siteUrl}${puppiesOgImageWebp}`,
+            `${siteConfig.siteUrl}${puppiesOgImageAvif}`,
+        ],
     }),
     alternates: {
         canonical: `${siteConfig.siteUrl}/chiots-disponibles`,
@@ -111,6 +133,14 @@ export default function NosChiotsPage() {
     const puppyCatalogSchema = generatePuppyCatalogSchema(
         visiblePuppies.map((puppy) => ({
             ...puppy,
+            images: puppy.images.flatMap((image) => {
+                const avifImage = getPuppyAvifImageSrc(image);
+
+                return [
+                    getPuppySourceImageSrc(image),
+                    ...(avifImage ? [avifImage] : []),
+                ];
+            }),
             status: getPuppyStatus(puppy),
             url: getPuppyUrl(puppy),
             interestFormUrl: puppy.linkTo,

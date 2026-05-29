@@ -28,7 +28,9 @@ import { litterCertifications, puppies, type LitterCertification, type Puppy } f
 import {
     buildPuppyProductStructuredData,
     formatPuppyPrice,
+    getPuppyAvifImageSrc,
     getPuppyDisplayImageSrc,
+    getPuppyJpegImageSrc,
     getPuppyLastModified,
     getPuppySeoDescription,
     getPuppySlug,
@@ -97,9 +99,12 @@ export async function generateMetadata({ params }: PuppyPageProps): Promise<Meta
         return {};
     }
 
-    const firstImage = puppy.images[0]
-        ? getPuppySourceImageSrc(puppy.images[0])
+    const firstPuppyImage = puppy.images[0];
+    const firstImage = firstPuppyImage
+        ? getPuppySourceImageSrc(firstPuppyImage)
         : "/pages/puppies/pomsky-f4-inuk-1.webp";
+    const firstAvifImage = firstPuppyImage ? getPuppyAvifImageSrc(firstPuppyImage) : undefined;
+    const firstJpegImage = firstPuppyImage ? getPuppyJpegImageSrc(firstPuppyImage) : undefined;
     const description = getPuppySeoDescription(puppy);
     const title = `${puppy.name}, chiot Pomsky ${puppy.color} ${getPuppyStatusLabel(puppy).toLowerCase()}`;
     const url = `${siteConfig.siteUrl}${getPuppyUrl(puppy)}`;
@@ -119,17 +124,31 @@ export async function generateMetadata({ params }: PuppyPageProps): Promise<Meta
             description,
             url,
             images: [
+                ...(firstJpegImage ? [{
+                    url: `${siteConfig.siteUrl}${firstJpegImage}`,
+                    alt: `${puppy.name}, chiot Pomsky ${puppy.color} de l'élevage Royal POMSKY`,
+                    type: "image/jpeg",
+                }] : []),
                 {
                     url: `${siteConfig.siteUrl}${firstImage}`,
                     alt: `${puppy.name}, chiot Pomsky ${puppy.color} de l'élevage Royal POMSKY`,
                     type: "image/webp",
                 },
+                ...(firstAvifImage ? [{
+                    url: `${siteConfig.siteUrl}${firstAvifImage}`,
+                    alt: `${puppy.name}, chiot Pomsky ${puppy.color} de l'élevage Royal POMSKY`,
+                    type: "image/avif",
+                }] : []),
             ],
         }),
         twitter: buildTwitter({
             title,
             description,
-            imageUrl: `${siteConfig.siteUrl}${firstImage}`,
+            images: [
+                ...(firstJpegImage ? [`${siteConfig.siteUrl}${firstJpegImage}`] : []),
+                `${siteConfig.siteUrl}${firstImage}`,
+                ...(firstAvifImage ? [`${siteConfig.siteUrl}${firstAvifImage}`] : []),
+            ],
         }),
         alternates: {
             canonical: url,
