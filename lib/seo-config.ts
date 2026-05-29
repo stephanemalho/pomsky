@@ -517,33 +517,21 @@ export const pageMetadata = {
 export const sitemapPages = [
     {
         url: "/",
-        changefreq: "monthly",
+        changefreq: "weekly",
         priority: 1.0,
-        lastmod: "2026-05-20"
-    },
-    {
-        url: "/le-pomsky",
-        changefreq: "monthly",
-        priority: 0.9,
-        lastmod: "2026-03-27"
-    },
-    {
-        url: "/pomsky-prix",
-        changefreq: "monthly",
-        priority: 0.8,
-        lastmod: "2026-03-27"
+        lastmod: "2026-05-29"
     },
     {
         url: "/chiots-disponibles",
         changefreq: "weekly",
-        priority: 0.9,
-        lastmod: "2026-05-21"
+        priority: 0.95,
+        lastmod: "2026-05-29"
     },
     {
-        url: "/adoption/reussir-son-adoption",
-        changefreq: "monthly",
-        priority: 0.8,
-        lastmod: "2026-05-01"
+        url: "/le-pomsky",
+        changefreq: "yearly",
+        priority: 0.9,
+        lastmod: "2026-03-27"
     },
     {
         url: "/femelles-reproductrices",
@@ -552,16 +540,28 @@ export const sitemapPages = [
         lastmod: "2026-03-26"
     },
     {
-        url: "/presentation-elevage",
+        url: "/pomsky-prix",
+        changefreq: "yearly",
+        priority: 0.85,
+        lastmod: "2026-03-27"
+    },
+    {
+        url: "/adoption/reussir-son-adoption",
         changefreq: "monthly",
         priority: 0.8,
         lastmod: "2026-05-01"
     },
     {
-        url: "/presentation-eleveuses",
+        url: "/presentation-elevage",
         changefreq: "monthly",
-        priority: 0.6,
-        lastmod: "2026-03-26"
+        priority: 0.75,
+        lastmod: "2026-05-01"
+    },
+    {
+        url: "/contact",
+        changefreq: "monthly",
+        priority: 0.75,
+        lastmod: "2026-03-27"
     },
     {
         url: "/bien-etre-animal",
@@ -570,33 +570,33 @@ export const sitemapPages = [
         lastmod: "2026-03-27"
     },
     {
-        url: "/contact",
-        changefreq: "monthly",
-        priority: 0.8,
-        lastmod: "2026-03-27"
-    },
-    {
         url: "/galerie",
         changefreq: "weekly",
-        priority: 0.7,
+        priority: 0.65,
         lastmod: "2026-04-05"
+    },
+    {
+        url: "/presentation-eleveuses",
+        changefreq: "monthly",
+        priority: 0.6,
+        lastmod: "2026-03-26"
     },
     {
         url: "/mentions-legales",
         changefreq: "yearly",
-        priority: 0.6,
+        priority: 0.2,
         lastmod: "2026-02-13"
     },
     {
         url: "/conditions-generales",
         changefreq: "yearly",
-        priority: 0.6,
+        priority: 0.2,
         lastmod: "2026-02-13"
     },
     {
         url: "/politique-de-confidentialite",
         changefreq: "yearly",
-        priority: 0.7,
+        priority: 0.2,
         lastmod: "2026-02-13"
     }
 ];

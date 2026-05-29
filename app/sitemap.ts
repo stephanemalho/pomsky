@@ -51,7 +51,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const puppyEntries: MetadataRoute.Sitemap = puppies.map(
         (puppy): MetadataRoute.Sitemap[number] => ({
             url: toUrl(getPuppyUrl(puppy)),
-            lastModified: getPuppyLastModified(puppy) ?? "2026-05-17",
+            lastModified: getPuppyLastModified(puppy) ?? "2026-05-29",
             changeFrequency: "weekly",
             priority: puppy.isAdopted ? 0.5 : 0.85,
         })
