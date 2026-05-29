@@ -15,8 +15,9 @@ import { pomskyBenefits } from "@/components/content/home/pomsky/pomskyBenefits"
 import { pageContent } from "@/lib/page-content"
 import { TikTokFeatureSpotlight } from "@/components/client/tiktok/TikTokFeatureSpotlight"
 import { puppies } from "@/app/chiots-disponibles/puppies"
-import { getPuppyThumbImageSrc, getPuppyUrl } from "@/app/chiots-disponibles/puppy-seo"
+import { getPuppyUrl } from "@/app/chiots-disponibles/puppy-seo"
 import { InternalLinksSection, type InternalLinkItem } from "@/components/InternalLinksSection"
+import { PuppyPicture } from "@/components/puppy-picture"
 import { SectionTitleIcon } from "@/components/section-title-icon"
 
 const HOME_OG_IMAGE = "/pomsky-and-his-pet-family-parent.jpg"
@@ -484,9 +485,8 @@ export default function HomePage() {
                       >
                         <span className="relative block aspect-square overflow-hidden rounded-lg border border-primary/12 bg-background shadow-sm transition group-hover:border-primary/35 group-hover:shadow-md">
                           {firstImage ? (
-                            <Image
-                              src={getPuppyThumbImageSrc(firstImage)}
-                              alt={firstImage.alt}
+                            <PuppyPicture
+                              image={firstImage}
                               fill
                               className="object-cover transition-transform group-hover:scale-105"
                               sizes="(min-width: 1280px) 132px, (min-width: 1024px) 15vw, (min-width: 768px) 22vw, (min-width: 640px) 30vw, 46vw"

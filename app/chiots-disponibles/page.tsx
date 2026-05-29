@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 
 import { FAQSection } from "@/components/faq";
+import { PuppyPicture } from "@/components/puppy-picture";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { faqNosChiots } from "@/lib/faq-data";
@@ -44,7 +45,6 @@ import {
     formatPuppyPrice,
     getPuppyAvifImageSrc,
     getPuppySourceImageSrc,
-    getPuppyThumbImageSrc,
     getPuppyStatus,
     getPuppyStatusLabel,
     getPuppyUrl,
@@ -223,9 +223,8 @@ export default function NosChiotsPage() {
                                                     aria-label={`Voir la fiche détaillée de ${puppy.name}`}
                                                 >
                                                     {firstImage ? (
-                                                        <Image
-                                                            src={getPuppyThumbImageSrc(firstImage)}
-                                                            alt={firstImage.alt}
+                                                        <PuppyPicture
+                                                            image={firstImage}
                                                             fill
                                                             className="object-cover"
                                                             sizes="(min-width: 768px) 220px, 100vw"

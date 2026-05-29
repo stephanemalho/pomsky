@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 
 import BreedingRecordModal from "@/components/client/puppies/BreedingRecordModal";
+import { PuppyPicture } from "@/components/puppy-picture";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { buildOpenGraph, buildTwitter, siteConfig } from "@/lib/seo-config";
@@ -37,7 +38,6 @@ import {
     getPuppySourceImageSrc,
     getPuppyStatus,
     getPuppyStatusLabel,
-    getPuppyThumbImageSrc,
     getPuppyUrl,
 } from "../puppy-seo";
 
@@ -221,16 +221,14 @@ export default async function PuppyDetailPage({ params }: PuppyPageProps) {
                                         index === 0 ? "aspect-4/5 sm:col-span-2 lg:aspect-16/11" : "aspect-4/3"
                                     }`}
                                 >
-                                    <Image
-                                        src={getPuppyDisplayImageSrc(image.src)}
-                                        alt={image.alt}
+                                    <PuppyPicture
+                                        image={image}
                                         fill
                                         priority={index === 0}
                                         sizes={index === 0
                                             ? "(min-width: 1024px) 52vw, 100vw"
                                             : "(min-width: 1024px) 25vw, 50vw"}
                                         className="object-contain p-2"
-                                        quality={index === 0 ? 80 : 70}
                                     />
                                 </figure>
                             ))}
@@ -479,9 +477,8 @@ function PuppyNavigationImage({
     return (
         <span className="relative h-18 w-18 shrink-0 overflow-hidden rounded-full border-2 border-primary/10 bg-muted">
             {image ? (
-                <Image
-                    src={getPuppyThumbImageSrc(image)}
-                    alt={image.alt}
+                <PuppyPicture
+                    image={image}
                     fill
                     className="object-cover"
                     sizes="72px"
