@@ -559,7 +559,12 @@ const puppiesUnsorted: Puppy[] = [
             "Taille estimée toy"
         ],
         health: defaultHealth,
-        images: puppyImages("LOKI", ["loki-pomsky-male-1.webp"]),
+        images: puppyImages("LOKI", [
+            "loki-pomsky-male-1-6semaine.webp",
+            "loki-pomsky-male-2-6semaine.webp",
+            "loki-pomsky-male-3-6semaine.webp",
+            "loki-pomsky-male-1.webp"
+        ]),
         linkTo: formUrls.pweekCharm
     },
     {
