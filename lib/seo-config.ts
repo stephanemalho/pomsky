@@ -396,6 +396,8 @@ export const pageMetadata = {
         description: pageContent.eleveuses.description,
         keywords: [
             "eleveuse pomsky",
+            "eleveur pomsky",
+            "jerome royal pomsky",
             "expert pomsky toy",
             "accompagnement adoption pomsky",
             "conseils elevage pomsky",
@@ -579,7 +581,7 @@ export const sitemapPages = [
         url: "/presentation-eleveuses",
         changefreq: "monthly",
         priority: 0.6,
-        lastmod: "2026-03-26"
+        lastmod: "2026-06-02"
     },
     {
         url: "/mentions-legales",

@@ -9,6 +9,7 @@ import { generateBreadcrumbSchema, generateFAQSchema, generateWebPageSchema } fr
 import { convertFAQsToSchema } from "@/lib/faq-utils"
 import { faqEleveuses } from "@/lib/faq-data"
 import Link from "next/link"
+import { ResponsivePicture } from "@/components/shared/ResponsivePicture"
 
 const eleveusesOgImage = "/assets/authors/portrait-aurelie-and-pomsky.jpeg"
 
@@ -63,7 +64,7 @@ export default function PresentationEleveusesPage() {
 
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Accueil", url: "/" },
-        { name: "Les éleveuses", url: siteConfig.pages.eleveuses },
+        { name: "L'équipe Royal Pomsky", url: siteConfig.pages.eleveuses },
     ])
     const faqSchema = generateFAQSchema(convertFAQsToSchema(faqEleveuses))
     const pageLastModValue = sitemapPages.find((page) => page.url === siteConfig.pages.eleveuses)?.lastmod
@@ -72,7 +73,7 @@ export default function PresentationEleveusesPage() {
         description: pageMetadata.eleveuses.description,
         url: siteConfig.pages.eleveuses,
         dateModified: pageLastModValue,
-        about: ["Éleveuses Pomsky", "Royal Pomsky", "Accompagnement adoption Pomsky"],
+        about: ["Équipe Royal Pomsky", "Élevage Pomsky", "Accompagnement adoption Pomsky"],
     })
     const lastMod = returnLastmod(siteConfig.pages.eleveuses)
     const aurelieGallery = [
@@ -175,6 +176,13 @@ export default function PresentationEleveusesPage() {
             priority: { mobile: false, tablet: false, desktop: false },
         },
     ]
+
+    const jeromePortrait = {
+        avif: "/assets/authors/jerome-eleuveur-de-pomsky-sm.avif 240w, /assets/authors/jerome-eleuveur-de-pomsky-md.avif 360w",
+        webp: "/assets/authors/jerome-eleuveur-de-pomsky-sm.webp 240w, /assets/authors/jerome-eleuveur-de-pomsky-md.webp 360w",
+        fallback: "/assets/authors/jerome-eleuveur-de-pomsky.jpeg",
+        alt: "Jérôme, éleveur de Royal Pomsky, au quotidien avec les chiens",
+    }
 
 
     return (
@@ -352,6 +360,56 @@ export default function PresentationEleveusesPage() {
                                     </div>
                                 </div>
                             </article>
+
+                            {/* Jérôme */}
+                            <article id="jerome" className="grid md:grid-cols-[0.72fr_1.28fr] gap-12 items-start scroll-mt-28">
+                                <figure className="space-y-3">
+                                    <div className="overflow-hidden rounded-xl bg-muted">
+                                        <ResponsivePicture
+                                            sources={{ avif: jeromePortrait.avif, webp: jeromePortrait.webp }}
+                                            fallback={jeromePortrait.fallback}
+                                            alt={jeromePortrait.alt}
+                                            width={360}
+                                            height={480}
+                                            sizes="(min-width: 1024px) 360px, (min-width: 768px) 40vw, 100vw"
+                                            className="block"
+                                            imgClassName="aspect-3/4 h-full w-full object-cover"
+                                            loading="lazy"
+                                            fetchPriority="low"
+                                        />
+                                    </div>
+                                    <figcaption className="text-xs leading-relaxed text-muted-foreground">
+                                        Jérôme, éleveur passionné de Royal Pomsky, présent sur le terrain au quotidien.
+                                    </figcaption>
+                                </figure>
+
+                                <div className="space-y-6">
+                                    <Badge variant="secondary" className="w-fit">
+                                        Le pilier terrain de Royal Pomsky
+                                    </Badge>
+                                    <h3 className="text-xl md:text-2xl font-bold">Jérôme</h3>
+                                    <div className="space-y-4 text-muted-foreground leading-relaxed">
+                                        <p>
+                                            Jérôme a rejoint l'aventure ROYAL POMSKY en 2026. Éleveur passionné, il est animé par l'amour des chiens, de la nature et du travail bien fait. Chasseur responsable et amoureux de la nature, il accorde une grande importance au respect de la faune sauvage, des territoires et des équilibres naturels.
+                                        </p>
+                                        <p>
+                                            Convaincu que l'homme a un rôle à jouer dans la préservation des équilibres naturels, il privilégie une approche responsable, éthique et respectueuse du vivant.
+                                        </p>
+                                        <p>
+                                            Au sein de l'élevage, Jérôme est un pilier du quotidien. Il participe activement à l'ensemble des tâches nécessaires au bien-être des chiens : entretien des espaces de vie, aménagement des parcs, travaux d'amélioration des infrastructures, soins quotidiens, socialisation des chiots et accompagnement des familles adoptantes.
+                                        </p>
+                                        <p>
+                                            Toujours présent sur le terrain, il veille à ce que chaque chien évolue dans un environnement sain, sécurisé et adapté à ses besoins. Son sens pratique, sa rigueur et son dévouement contribuent chaque jour à la qualité de l'élevage.
+                                        </p>
+                                        <p>
+                                            Attaché aux valeurs de respect, de responsabilité et de bien-être animal, Jérôme met tout en œuvre pour offrir aux chiens les meilleures conditions de vie possibles.
+                                        </p>
+                                        <p>
+                                            À travers son engagement quotidien, il participe à la naissance et à l'épanouissement de chiots équilibrés, bien dans leurs pattes et prêts à rejoindre leurs futures familles. Pour lui, l'élevage est bien plus qu'un métier : c'est une véritable passion vécue chaque jour au contact de ses chiens et de la nature.
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
                         </div>
                     </section>
                     <section className="mb-16">
@@ -360,13 +418,13 @@ export default function PresentationEleveusesPage() {
                                 <div className="grid md:grid-cols-[1.3fr_0.7fr] gap-8 items-center">
                                     <div className="space-y-4">
                                         <h2 className="text-xl md:text-2xl font-bold">
-                                            Les articles d'Aurélie et Marine sur l'élevage de Pomsky Toy
+                                            Les articles de l'équipe Royal Pomsky sur l'élevage de Pomsky Toy
                                         </h2>
-                                        <h3 className="text-base md:text-xl font-semibold">Élevage de Pomsky Toy : conseils d'expertes, expériences terrain et adoption responsable.</h3>
+                                        <h3 className="text-base md:text-xl font-semibold">Élevage de Pomsky Toy : conseils d'experts, expériences terrain et adoption responsable.</h3>
                                         <p className="text-muted-foreground leading-relaxed">
-                                            Aurélie et Marine, éleveuses passionnées de Pomsky Toy, partagent à travers leurs articles une vision authentique et professionnelle de l'élevage. Elles y abordent le quotidien d'un élevage éthique, la sélection des lignées, la socialisation des chiots, la santé, l'éducation et les bonnes pratiques pour une adoption réussie.
+                                            L'équipe Royal Pomsky partage à travers ses articles une vision authentique et professionnelle de l'élevage. Elle y aborde le quotidien d'un élevage éthique, la sélection des lignées, la socialisation des chiots, la santé, l'éducation et les bonnes pratiques pour une adoption réussie.
                                         </p>
-                                        <p className="text-muted-foreground leading-relaxed">Chaque article s'appuie sur leur expérience concrète d'éleveuses de Pomsky Toy, avec des conseils clairs et pédagogiques destinés aux familles souhaitant comprendre la race, ses besoins spécifiques et les critères essentiels pour accueillir un chiot Pomsky Toy dans les meilleures conditions.</p>
+                                        <p className="text-muted-foreground leading-relaxed">Chaque article s'appuie sur l'expérience concrète de l'équipe Royal Pomsky, avec des conseils clairs et pédagogiques destinés aux familles souhaitant comprendre la race, ses besoins spécifiques et les critères essentiels pour accueillir un chiot Pomsky Toy dans les meilleures conditions.</p>
                                         <p className="text-muted-foreground leading-relaxed">Objectif : informer, rassurer et accompagner les futurs adoptants grâce à un contenu fiable, transparent et orienté bien-être animal.</p>
                                     </div>
                                     <div className="space-y-6 md:justify-self-end lg:justify-self-stretch">
@@ -420,7 +478,7 @@ export default function PresentationEleveusesPage() {
                                 href="/contact"
                                 className="flex items-center min-h-12 bg-primary text-white hover:bg-primary/80 px-4 font-semibold dark:text-[#5b3a1a] rounded-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                             >
-                                Contacter Aurélie et Marine
+                                Contacter l'équipe Royal Pomsky
                             </Link>
                             <Link
                                 href="/chiots-disponibles"

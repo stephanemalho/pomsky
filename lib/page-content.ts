@@ -42,9 +42,9 @@ export const pageContent = {
             "Cette page vous détaille nos choix d'élevage : nous voulons obtenir pour vous des Pomsky Toy équilibrés, socialisés, avec un suivi vétérinaire et un accompagnement avant et après l'adoption."
     },
     eleveuses: {
-        h1: "Les éleveuses de Royal POMSKY",
+        h1: "L'équipe de Royal POMSKY",
         description:
-            "Nous sommes Aurélie et Marine, pionnières dans l'importation de Pomsky d'Amérique depuis 2017. Cette page raconte notre parcours de vie, notre passion pour le Pomsky et l'accompagnement que nous proposons aux familles adoptives dès leurs premiers pas."
+            "Découvrez Aurélie, Marine et Jérôme, l'équipe qui porte Royal POMSKY au quotidien. Cette page raconte nos parcours de vie, notre passion pour le Pomsky et l'accompagnement que nous proposons aux familles adoptives dès leurs premiers pas."
     },
     wellness: {
         h1: "Le bien-être animal chez Royal Pomsky",
