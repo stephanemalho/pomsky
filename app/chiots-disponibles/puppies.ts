@@ -291,7 +291,8 @@ const puppiesUnsorted: Puppy[] = [
             "pomsky-mini-inuit-1-6semaine.webp",
             "pomsky-mini-inuit-2-6semaine.webp"
         ]),
-        linkTo: formUrls.inuitMogu
+        linkTo: formUrls.inuitMogu,
+        isReserved: true
     },
     {
         name: "KIT",
