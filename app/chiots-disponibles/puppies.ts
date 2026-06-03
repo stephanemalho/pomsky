@@ -808,6 +808,8 @@ const puppiesUnsorted: Puppy[] = [
         ],
         health: defaultHealth,
         images: puppyImages("LUNA", [
+            "pomsky-femelle-luna-1-7semaine.webp",
+            "pomsky-femelle-luna-2-7semaine.webp",
             "pomsky-femelle-luna-1-6semaine.webp",
             "pomsky-femelle-luna-2-6semaine.webp",
             "pomsky-femelle-luna-3-6semaine.webp"
