@@ -14,7 +14,8 @@
     "images:generate": "node scripts/generate-responsive-images.mjs",
     "images:full": "npm run convert:webp && npm run update:images && npm run optimize:images",
     "audit:schemas": "node scripts/seo-schema-audit.mjs",
-    "audit:meta": "node scripts/seo-meta-audit.mjs"
+    "audit:meta": "node scripts/seo-meta-audit.mjs",
+    "audit:seo-images": "node scripts/audit-seo-images.mjs"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.14",

@@ -12,6 +12,7 @@
 
 # codex 
 /docs*
+/scripts*
 
 # testing
 /coverage

@@ -842,7 +842,8 @@ const puppiesUnsorted: Puppy[] = [
             "pomsky-toy-miyu-2-6semaine.webp",
             "pomsky-toy-miyu-3-6semaine.webp"
         ]),
-        linkTo: formUrls.skySally
+        linkTo: formUrls.skySally,
+        isReserved: true
     },
     {
         name: "ORION",

@@ -130,6 +130,7 @@ function SocialThumbnail({ item }: { item: SocialGalleryItem }) {
                 src={item.thumbnailSrc}
                 alt={item.thumbnailAlt}
                 fill
+                unoptimized
                 sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 100vw"
                 className="object-cover"
             />
