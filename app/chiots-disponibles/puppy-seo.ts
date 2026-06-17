@@ -90,10 +90,16 @@ export function getPuppyLastModified(puppy: Puppy) {
 export function buildPuppyProductStructuredData(puppy: Puppy) {
     const url = getAbsolutePuppyUrl(puppy);
     const statusLabel = getPuppyStatusLabel(puppy);
-    const images = puppy.images.flatMap((image) => [
-        `${siteConfig.siteUrl}${getPuppySourceImageSrc(image)}`,
-        ...(getPuppyAvifImageSrc(image) ? [`${siteConfig.siteUrl}${getPuppyAvifImageSrc(image)}`] : []),
-    ]);
+    const images = puppy.images.flatMap((image) => {
+        const jpegImage = getPuppyJpegImageSrc(image);
+        const avifImage = getPuppyAvifImageSrc(image);
+
+        return [
+            ...(jpegImage ? [`${siteConfig.siteUrl}${jpegImage}`] : []),
+            `${siteConfig.siteUrl}${getPuppySourceImageSrc(image)}`,
+            ...(avifImage ? [`${siteConfig.siteUrl}${avifImage}`] : []),
+        ];
+    });
 
     if (typeof puppy.price !== "number") {
         return {
