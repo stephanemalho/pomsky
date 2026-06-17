@@ -657,8 +657,8 @@ const puppiesUnsorted: Puppy[] = [
         ],
         health: defaultHealth,
         images: puppyImages("KIRO", [
+            "pomsky-noir-blanc-kiro/webp/pomsky-noir-blanc-kiro-1.webp",
             "pomsky-toy-kiro-1-6semaine.webp",
-            "pomsky-toy-kiro-2-6semaine.webp"
         ]),
         linkTo: formUrls.charmBeauty,
         isReserved: true
