@@ -434,11 +434,11 @@ const puppiesUnsorted: Puppy[] = [
         ],
         health: defaultHealth,
         images: puppyImages("INUK", [
+            "pomsky-noir-blanc-inuk/webp/pomsky-noir-blanc-inuk-2.webp",
             "pomsky-noir-blanc-inuk/webp/pomsky-noir-blanc-inuk-1.webp",
             "pomsky-f4-inuk-1-7semaine.webp",
             "pomsky-f4-inuk-2-7semaine.webp",
-            "pomsky-f4-inuk-1-6semaine.webp",
-            "pomsky-f4-inuk-2-6semaine.webp"
+            "pomsky-f4-inuk-1-6semaine.webp"
         ]),
         linkTo: formUrls.charmAlou,
         isReserved: true
