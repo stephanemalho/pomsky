@@ -321,9 +321,7 @@ const puppiesUnsorted: Puppy[] = [
         images: puppyImages("KIT", [
             "pomsky-noir-blanc-kit/webp/pomsky-noir-blanc-kit-1.webp",
             "pomsky-femelle-kit-1-7semaine.webp",
-            "pomsky-femelle-kit-1-6semaine.webp",
-            "pomsky-femelle-kit-2-6semaine.webp",
-            "pomsky-femelle-kit-3-6semaine.webp"
+            "pomsky-femelle-kit-1-6semaine.webp"
         ]),
         linkTo: formUrls.inuitMogu,
         isReserved: true
@@ -352,8 +350,7 @@ const puppiesUnsorted: Puppy[] = [
             "pomsky-noir-blanc-star/webp/pomsky-noir-blanc-star-1.webp",
             "pomsky-toy-femelle-star-1-7semaine.webp",
             "pomsky-toy-femelle-star-2-7semaine.webp",
-            "pomsky-toy-femelle-star-1-6semaine.webp",
-            "pomsky-toy-femelle-star-2-6semaine.webp"
+            "pomsky-toy-femelle-star-1-6semaine.webp"
         ]),
         linkTo: formUrls.inuitMogu,
     },
@@ -528,8 +525,7 @@ const puppiesUnsorted: Puppy[] = [
             "pomsky-gris-blanc-remus/webp/pomsky-gris-blanc-remus-1.webp",
             "remus-pomsky-1-7semaine.webp",
             "remus-pomsky-2-7semaine.webp",
-            "remus-pomsky-1-6semaine.webp",
-            "remus-pomsky-2-6semaine.webp"
+            "remus-pomsky-1-6semaine.webp"
         ]),
         linkTo: formUrls.pweekCharm
     },
@@ -554,11 +550,7 @@ const puppiesUnsorted: Puppy[] = [
         ],
         health: defaultHealth,
         images: puppyImages("LOKI", [
-            "pomsky-noir-blanc-loki/webp/pomsky-noir-blanc-loki-1.webp",
-            "loki-pomsky-male-1-7semaine.webp",
-            "loki-pomsky-male-2-7semaine.webp",
-            "loki-pomsky-male-1-6semaine.webp",
-            "loki-pomsky-male-2-6semaine.webp"
+            "pomsky-noir-blanc-loki/webp/pomsky-noir-blanc-loki-1.webp"
         ]),
         linkTo: formUrls.pweekCharm,
         isReserved: true
@@ -587,8 +579,7 @@ const puppiesUnsorted: Puppy[] = [
             "pomsky-noir-blanc-bella/webp/pomsky-noir-blanc-bella-1.webp",
             "bellatrix-pomsky-1-7semaine.webp",
             "bellatrix-pomsky-2-7semaine.webp",
-            "bellatrix-pomsky-1-6semaine.webp",
-            "bellatrix-pomsky-2-6semaine.webp"
+            "bellatrix-pomsky-1-6semaine.webp"
         ]),
         linkTo: formUrls.pweekCharm
     },
@@ -613,10 +604,7 @@ const puppiesUnsorted: Puppy[] = [
         ],
         health: defaultHealth,
         images: puppyImages("ARCANA", [
-            "arkana-pomsky/webp/arkana-pomsky-1.webp",
-            "arkana-pomsky-1-7semaine.webp",
-            "arkana-pomsky-2-7semaine.webp",
-            "arkana-pomsky-1-6semaine.webp"
+            "arkana-pomsky/webp/arkana-pomsky-1.webp"
         ]),
         linkTo: formUrls.pweekCharm,
         isReserved: true
@@ -743,8 +731,7 @@ const puppiesUnsorted: Puppy[] = [
         images: puppyImages("AÏKA", [
             "pomsky-noir-blanc-yeux-bleu-aika/webp/pomsky-noir-blanc-yeux-bleu-aika-1.webp",
             "pomsky-mini-aika-1-7semaine.webp",
-            "pomsky-mini-aika-2-7semaine.webp",
-            "pomsky-mini-aika-1-6semaine.webp"
+            "pomsky-mini-aika-2-7semaine.webp"
         ]),
         linkTo: formUrls.skySally,
         isReserved: true
@@ -773,8 +760,7 @@ const puppiesUnsorted: Puppy[] = [
         images: puppyImages("BALTO", [
             "pomsky-gris-blanc-balto/webp/pomsky-gris-blanc-balto-1.webp",
             "pomsky-male-balto-1-7semaine.webp",
-            "pomsky-male-balto-2-7semaine.webp",
-            "pomsky-male-balto-1-6semaine.webp"
+            "pomsky-male-balto-2-7semaine.webp"
         ]),
         linkTo: formUrls.skySally,
         isReserved: true
@@ -825,8 +811,7 @@ const puppiesUnsorted: Puppy[] = [
             "pomsky-femelle-grise-blanche-luna/webp/pomsky-femelle-grise-blanche-luna-1.webp",
             "pomsky-femelle-grise-blanche-luna/webp/pomsky-femelle-grise-blanche-luna-2.webp",
             "pomsky-femelle-luna-1-7semaine.webp",
-            "pomsky-femelle-luna-2-7semaine.webp",
-            "pomsky-femelle-luna-1-6semaine.webp"
+            "pomsky-femelle-luna-2-7semaine.webp"
         ]),
         linkTo: formUrls.skySally
     },
@@ -851,9 +836,7 @@ const puppiesUnsorted: Puppy[] = [
         ],
         health: defaultHealth,
         images: puppyImages("MIYU", [
-            "pomsky-dore-blanc-miyu/webp/pomsky-dore-blanc-miyu-1.webp",
-            "pomsky-toy-miyu-1-6semaine.webp",
-            "pomsky-toy-miyu-2-6semaine.webp"
+            "pomsky-dore-blanc-miyu/webp/pomsky-dore-blanc-miyu-1.webp"
         ]),
         linkTo: formUrls.skySally,
         isReserved: true
@@ -910,8 +893,7 @@ const puppiesUnsorted: Puppy[] = [
         health: defaultHealth,
         images: puppyImages("SORA", [
             "pomsky-noir-blanc-sora/webp/pomsky-noir-blanc-sora-1.webp",
-            "pomsky-noir-blanc-sora/webp/pomsky-noir-blanc-sora-2.webp",
-            "pomsky-mini-sora-1-7semaine.webp"
+            "pomsky-noir-blanc-sora/webp/pomsky-noir-blanc-sora-2.webp"
         ]),
         linkTo: formUrls.skySally,
         isReserved: true
