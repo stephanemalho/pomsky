@@ -375,11 +375,11 @@ const puppiesUnsorted: Puppy[] = [
         ],
         health: defaultHealth,
         images: puppyImages("AMAROK", [
+            "pomsky-noir-blanc-amarok/webp/pomsky-noir-blanc-amarok-1.webp",
             "pomsky-toy-amarok-1-7semaine.webp",
             "pomsky-toy-amarok-2-7semaine.webp",
             "pomsky-toy-amarok-1-6semaine.webp",
-            "pomsky-toy-amarok-2-6semaine.webp",
-            "pomsky-toy-amarok-3-6semaine.webp"
+            "pomsky-toy-amarok-2-6semaine.webp"
         ]),
         linkTo: formUrls.charmAlou
     },
@@ -706,9 +706,9 @@ const puppiesUnsorted: Puppy[] = [
         ],
         health: defaultHealth,
         images: puppyImages("LUMA", [
+            "pomsky-gris-blanc-luma/webp/pomsky-gris-blanc-luma-1.webp",
             "pomsky-femelle-luma-1-6semaine.webp",
-            "pomsky-femelle-luma-2-6semaine.webp",
-            "pomsky-femelle-luma-3-6semaine.webp"
+            "pomsky-femelle-luma-2-6semaine.webp"
         ]),
         linkTo: formUrls.charmBeauty,
         isReserved: true
