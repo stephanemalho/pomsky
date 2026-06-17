@@ -434,11 +434,11 @@ const puppiesUnsorted: Puppy[] = [
         ],
         health: defaultHealth,
         images: puppyImages("INUK", [
+            "pomsky-noir-blanc-inuk/webp/pomsky-noir-blanc-inuk-1.webp",
             "pomsky-f4-inuk-1-7semaine.webp",
             "pomsky-f4-inuk-2-7semaine.webp",
             "pomsky-f4-inuk-1-6semaine.webp",
-            "pomsky-f4-inuk-2-6semaine.webp",
-            "pomsky-f4-inuk-3-6semaine.webp"
+            "pomsky-f4-inuk-2-6semaine.webp"
         ]),
         linkTo: formUrls.charmAlou,
         isReserved: true
@@ -679,8 +679,8 @@ const puppiesUnsorted: Puppy[] = [
         highlights: ["Femelle", "Pomsky toy", "Yeux bleus", "Réservée"],
         health: defaultHealth,
         images: puppyImages("NAYA", [
-            "pomsky-toy-naya-1-6semaine.webp",
-            "pomsky-toy-naya-2-6semaine.webp"
+            "pomsky-marron-blanc-naya/webp/pomsky-marron-blanc-naya-1.webp",
+            "pomsky-toy-naya-1-6semaine.webp"
         ]),
         linkTo: formUrls.charmBeauty,
         isReserved: true
