@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { FAQSection } from "@/components/faq"
 import { faqPresentation } from "@/lib/faq-data"
-import { Heart, Leaf, Star, HeartPulse, PawPrint, Stethoscope, Eye, Handshake } from "lucide-react"
+import { ArrowUpRight, Heart, Leaf, Star, HeartPulse, PawPrint, Stethoscope, Eye, Handshake } from "lucide-react"
 import Link from "next/link"
 import type { Metadata } from "next"
 import { buildOpenGraph, buildTwitter, pageMetadata, returnLastmod, siteConfig, sitemapPages } from "@/lib/seo-config"
@@ -75,17 +75,6 @@ export default function PresentationPage() {
         about: ["Politique d'élevage Pomsky", "Sélection des reproducteurs", "Lignées américaines", "Suivi sanitaire"],
     })
     const lastMod = returnLastmod(siteConfig.pages.presentation)
-
-    function getReproductorAnchorId(name: string) {
-    return name.replace(/['"]/g, "").trim().toLowerCase().replace(/\s+/g, "-")
-}
-
-    const breedingCtaPanelClass =
-        "rounded-3xl border border-primary/18 bg-primary/[0.07] p-4 shadow-sm dark:border-primary/25 dark:bg-primary/[0.12]"
-    const breedingPrimaryCtaClass =
-        "flex min-h-12 items-center justify-center rounded-xl bg-primary px-5 py-3 text-center font-semibold text-white shadow-[0_14px_34px_rgba(196,86,55,0.22)] transition hover:-translate-y-0.5 hover:bg-primary/90 hover:shadow-[0_18px_38px_rgba(196,86,55,0.28)] dark:text-[#5b3a1a] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-    const breedingSecondaryCtaClass =
-        "flex min-h-12 items-center justify-center rounded-xl border border-primary/30 bg-background/88 px-5 py-3 text-center font-semibold text-primary transition hover:bg-primary/10 dark:border-primary/30 dark:bg-white/8 dark:hover:bg-white/12"
 
     return (
         <>
@@ -319,6 +308,75 @@ export default function PresentationPage() {
                             <p className="text-muted-foreground leading-relaxed">
                                 Au fil des années, nous avons aussi construit une relation de confiance avec les familles adoptantes. Elles repartent avec des explications claires, un accompagnement concret et une vision plus juste du travail réalisé avant l’arrivée du chiot à la maison. Pour découvrir plus en détail le quotidien et les conditions de vie offertes à nos chiens, nous avons dédié une page spécifique à ce sujet.
                             </p>
+                        </div>
+                    </section>
+
+                    <section className="mb-16">
+                        <div className="grid gap-10 md:grid-cols-[1.05fr_0.95fr] md:items-center">
+                            <div className="space-y-6">
+                                <Badge variant="secondary" className="w-fit">
+                                    <PawPrint className="h-4 w-4 mr-2" aria-hidden="true" />
+                                    Notre autre univers
+                                </Badge>
+                                <div className="space-y-4">
+                                    <h2 className="text-xl md:text-2xl font-bold">
+                                        Kawaii Shiba, notre travail autour du Mameshiba
+                                    </h2>
+                                    <p className="text-muted-foreground leading-relaxed">
+                                        Royal Pomsky et Kawaii Shiba sont deux univers portés par le même élevage. En
+                                        parallèle de notre sélection Pomsky, nous consacrons un site au Mameshiba, le
+                                        Shiba Inu miniature issu de lignées japonaises, avec la même exigence sur la
+                                        santé, l’équilibre émotionnel et l’accompagnement des familles.
+                                    </p>
+                                    <p className="text-muted-foreground leading-relaxed">
+                                        Le Mameshiba séduit par son format compact, son regard vif et son tempérament de
+                                        petit primitif japonais. Kawaii Shiba présente notre approche pour préserver ce
+                                        type rare tout en préparant des chiots bien socialisés, confiants et adaptés à
+                                        une vie de famille responsable.
+                                    </p>
+                                </div>
+                                <div className="flex flex-col gap-3 sm:flex-row">
+                                    <a
+                                        href="https://www.kawaii-shiba.com/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex min-h-12 items-center justify-center rounded-md bg-primary px-4 font-semibold text-white hover:bg-primary/80 dark:text-[#5b3a1a] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                                    >
+                                        Découvrir Kawaii Shiba
+                                        <ArrowUpRight className="ml-2 h-4 w-4" aria-hidden="true" />
+                                    </a>
+                                    <a
+                                        href="https://www.kawaii-shiba.com/mameshiba"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex min-h-12 items-center justify-center rounded-md border border-primary/30 px-4 font-semibold text-primary hover:bg-primary/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                                    >
+                                        Comprendre le Mameshiba
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="grid grid-cols-2 gap-4">
+                                <div className="relative h-72 overflow-hidden rounded-lg md:h-96">
+                                    <Image
+                                        src="/pages/presentation-elevage/mameshiba-chiot-blanc-kawaii-shiba.jpeg"
+                                        alt="Chiot Mameshiba blanc de Kawaii Shiba"
+                                        fill
+                                        className="object-cover"
+                                        sizes="(min-width: 768px) 24vw, 50vw"
+                                        quality={75}
+                                    />
+                                </div>
+                                <div className="relative mt-8 h-72 overflow-hidden rounded-lg md:h-96">
+                                    <Image
+                                        src="/pages/presentation-elevage/mameshiba-jardin-kawaii-shiba.webp"
+                                        alt="Mameshiba de Kawaii Shiba dans les espaces extérieurs de l'élevage"
+                                        fill
+                                        className="object-cover"
+                                        sizes="(min-width: 768px) 24vw, 50vw"
+                                        quality={75}
+                                    />
+                                </div>
+                            </div>
                         </div>
                     </section>
 
