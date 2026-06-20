@@ -27,6 +27,16 @@ const images = [
     outputName: "pomsky-standard-size",
     widths: [480, 768, 1024],
   },
+  {
+    input: "pages/presentation-elevage/cloe-et-un-mameshiba-et-un-shiba.jpg",
+    outputName: "mameshiba-cloe-shiba",
+    widths: [360, 480, 640, 768],
+  },
+  {
+    input: "pages/presentation-elevage/marine-et-un-mameshiba.jpg",
+    outputName: "mameshiba-marine",
+    widths: [360, 480, 640, 768],
+  },
 ];
 
 async function generateVariant(inputPath, outputName, sourceWidth, width) {

@@ -10,9 +10,20 @@ import { buildOpenGraph, buildTwitter, pageMetadata, returnLastmod, siteConfig, 
 import { generateBreadcrumbSchema, generateFAQSchema, generateVideoObjectSchema, generateWebPageSchema } from "@/lib/schema-generators"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
 import { TikTokFeatureSpotlight } from "@/components/client/tiktok/TikTokFeatureSpotlight"
+import { ResponsivePicture } from "@/components/shared/ResponsivePicture"
 
 const presentationOgJpg = "/pages/presentation-elevage/eleveuse-royal-pomsky-avec-un-pomsky.jpg"
 const presentationOgWebp = "/pages/presentation-elevage/eleveuse-royal-pomsky-avec-un-pomsky.webp"
+const optimizedImageBase = "/images/optimized"
+const mameshibaCloeSources = {
+    avif: `${optimizedImageBase}/mameshiba-cloe-shiba-360.avif 360w, ${optimizedImageBase}/mameshiba-cloe-shiba-480.avif 480w, ${optimizedImageBase}/mameshiba-cloe-shiba-640.avif 640w, ${optimizedImageBase}/mameshiba-cloe-shiba-768.avif 768w`,
+    webp: `${optimizedImageBase}/mameshiba-cloe-shiba-360.webp 360w, ${optimizedImageBase}/mameshiba-cloe-shiba-480.webp 480w, ${optimizedImageBase}/mameshiba-cloe-shiba-640.webp 640w, ${optimizedImageBase}/mameshiba-cloe-shiba-768.webp 768w`,
+}
+const mameshibaMarineSources = {
+    avif: `${optimizedImageBase}/mameshiba-marine-360.avif 360w, ${optimizedImageBase}/mameshiba-marine-480.avif 480w, ${optimizedImageBase}/mameshiba-marine-640.avif 640w, ${optimizedImageBase}/mameshiba-marine-768.avif 768w`,
+    webp: `${optimizedImageBase}/mameshiba-marine-360.webp 360w, ${optimizedImageBase}/mameshiba-marine-480.webp 480w, ${optimizedImageBase}/mameshiba-marine-640.webp 640w, ${optimizedImageBase}/mameshiba-marine-768.webp 768w`,
+}
+const mameshibaSpotlightSizes = "(min-width: 768px) 24vw, 50vw"
 const breedingVideoAnchor = `${siteConfig.pages.presentation}#vie-a-l-elevage`
 const breedingVideoSchema = generateVideoObjectSchema({
     name: "Chiots Royal POMSKY qui jouent ensemble à l'élevage",
@@ -356,24 +367,28 @@ export default function PresentationPage() {
                                 </div>
                             </div>
                             <div className="grid grid-cols-2 gap-4">
-                                <div className="relative h-72 overflow-hidden rounded-lg md:h-96">
-                                    <Image
-                                        src="/pages/presentation-elevage/mameshiba-chiot-blanc-kawaii-shiba.jpeg"
-                                        alt="Chiot Mameshiba blanc de Kawaii Shiba"
-                                        fill
-                                        className="object-cover"
-                                        sizes="(min-width: 768px) 24vw, 50vw"
-                                        quality={75}
+                                <div className="h-96 overflow-hidden rounded-lg md:h-[34rem]">
+                                    <ResponsivePicture
+                                        sources={mameshibaCloeSources}
+                                        fallback={`${optimizedImageBase}/mameshiba-cloe-shiba-768.webp`}
+                                        alt="Cloé avec un Mameshiba et un Shiba de Kawaii Shiba"
+                                        width={768}
+                                        height={1152}
+                                        sizes={mameshibaSpotlightSizes}
+                                        className="block h-full"
+                                        imgClassName="h-full w-full object-cover"
                                     />
                                 </div>
-                                <div className="relative mt-8 h-72 overflow-hidden rounded-lg md:h-96">
-                                    <Image
-                                        src="/pages/presentation-elevage/mameshiba-jardin-kawaii-shiba.webp"
-                                        alt="Mameshiba de Kawaii Shiba dans les espaces extérieurs de l'élevage"
-                                        fill
-                                        className="object-cover"
-                                        sizes="(min-width: 768px) 24vw, 50vw"
-                                        quality={75}
+                                <div className="mt-8 h-96 overflow-hidden rounded-lg md:h-[34rem]">
+                                    <ResponsivePicture
+                                        sources={mameshibaMarineSources}
+                                        fallback={`${optimizedImageBase}/mameshiba-marine-768.webp`}
+                                        alt="Marine avec un Mameshiba de Kawaii Shiba"
+                                        width={768}
+                                        height={1153}
+                                        sizes={mameshibaSpotlightSizes}
+                                        className="block h-full"
+                                        imgClassName="h-full w-full object-cover"
                                     />
                                 </div>
                             </div>
