@@ -340,10 +340,10 @@ export default function PresentationPage() {
                                         santé, l’équilibre émotionnel et l’accompagnement des familles.
                                     </p>
                                     <p className="text-muted-foreground leading-relaxed">
-                                        Le Mameshiba séduit par son format compact, son regard vif et son tempérament de
-                                        petit primitif japonais. Kawaii Shiba présente notre approche pour préserver ce
-                                        type rare tout en préparant des chiots bien socialisés, confiants et adaptés à
-                                        une vie de famille responsable.
+                                        Le Mameshiba séduit par son format compact, comparable à celui d’un Pomsky Toy. Avec ses 25 à 30 cm au garrot pour environ 3 à 5 kg, il partage ce même petit gabarit recherché, tout en offrant une personnalité similaire et un look de petit chien renard. Là où le Pomsky évoque les chiens nordiques miniatures, le Mameshiba incarne l’élégance du Shiba Inu japonais dans un format exceptionnellement réduit avec un caractère exceptionnellement sociable.
+                                    </p>
+                                    <p className="text-muted-foreground leading-relaxed">
+                                        Chez Kawaii Shiba comme chez Royal Pomsky, notre priorité reste la même : sélectionner des lignées de qualité, élever des chiots parfaitement socialisés et accompagner chaque famille pour que chaque adoption soit une réussite.
                                     </p>
                                 </div>
                                 <div className="flex flex-col gap-3 sm:flex-row">
@@ -353,7 +353,7 @@ export default function PresentationPage() {
                                         rel="noopener noreferrer"
                                         className="inline-flex min-h-12 items-center justify-center rounded-md bg-primary px-4 font-semibold text-white hover:bg-primary/80 dark:text-[#5b3a1a] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                                     >
-                                        Découvrir Kawaii Shiba
+                                        Visiter le site web de Kawaii Shiba
                                         <ArrowUpRight className="ml-2 h-4 w-4" aria-hidden="true" />
                                     </a>
                                     <a
@@ -367,7 +367,7 @@ export default function PresentationPage() {
                                 </div>
                             </div>
                             <div className="grid grid-cols-2 gap-4">
-                                <div className="h-96 overflow-hidden rounded-lg md:h-[34rem]">
+                                <div className="h-96 overflow-hidden rounded-lg md:h-136">
                                     <ResponsivePicture
                                         sources={mameshibaCloeSources}
                                         fallback={`${optimizedImageBase}/mameshiba-cloe-shiba-768.webp`}
@@ -379,7 +379,7 @@ export default function PresentationPage() {
                                         imgClassName="h-full w-full object-cover"
                                     />
                                 </div>
-                                <div className="mt-8 h-96 overflow-hidden rounded-lg md:h-[34rem]">
+                                <div className="mt-8 h-96 overflow-hidden rounded-lg md:h-136">
                                     <ResponsivePicture
                                         sources={mameshibaMarineSources}
                                         fallback={`${optimizedImageBase}/mameshiba-marine-768.webp`}
