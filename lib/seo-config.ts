@@ -557,7 +557,7 @@ export const sitemapPages = [
         url: "/presentation-elevage",
         changefreq: "monthly",
         priority: 0.75,
-        lastmod: "2026-06-23"
+        lastmod: "2026-06-27"
     },
     {
         url: "/contact",
