@@ -1,20 +1,7 @@
-"use client"
-
-import * as React from "react"
 import Link from "next/link"
-import { usePathname } from "next/navigation"
 import type { LucideIcon } from "lucide-react"
 import { Banknote, BookOpen, Camera, Dog, Heart, Home, PawPrint, Phone, Users } from "lucide-react"
 import { cn } from "@/lib/utils"
-import {
-    NavigationMenu,
-    NavigationMenuContent,
-    NavigationMenuItem,
-    NavigationMenuLink,
-    NavigationMenuList,
-    NavigationMenuTrigger,
-    navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu"
 
 const navGroups = [
     {
@@ -101,53 +88,45 @@ const navGroups = [
 ]
 
 export function DesktopNav() {
-    const pathname = usePathname()
-
     return (
-        <NavigationMenu className="hidden lg:flex" aria-label="Navigation principale">
-            <NavigationMenuList>
-                <NavigationMenuItem>
-                    <NavigationMenuLink asChild>
-                        <Link
-                            href="/"
-                            className={cn(
-                                navigationMenuTriggerStyle(),
-                                pathname === "/" ? "text-primary" : "text-muted-foreground",
-                            )}
-                            aria-current={pathname === "/" ? "page" : undefined}
-                        >
-                            Accueil
-                        </Link>
-                    </NavigationMenuLink>
-                </NavigationMenuItem>
-
+        <nav className="hidden lg:flex" aria-label="Navigation principale">
+            <ul className="flex items-center gap-1">
+                <li>
+                    <Link
+                        href="/"
+                        className="inline-flex h-9 items-center justify-center rounded-md px-4 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                    >
+                        Accueil
+                    </Link>
+                </li>
                 {navGroups.map((group) => {
-                    const isActive = group.items.some((item) => pathname === item.href)
                     return (
-                        <NavigationMenuItem key={group.label}>
-                            <NavigationMenuTrigger data-active={isActive}>
+                        <li key={group.label} className="group relative">
+                            <button
+                                type="button"
+                                className="inline-flex h-9 items-center justify-center rounded-md px-4 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                            >
                                 {group.label}
-                            </NavigationMenuTrigger>
-                            <NavigationMenuContent>
-                                <ul className="grid gap-3 p-4 md:w-90 lg:w-105">
+                            </button>
+                            <div className="invisible absolute left-0 top-full z-50 pt-2 opacity-0 transition group-focus-within:visible group-focus-within:opacity-100 group-hover:visible group-hover:opacity-100">
+                                <ul className="grid w-[26rem] gap-3 rounded-md border bg-popover p-4 text-popover-foreground shadow-lg">
                                     {group.items.map((item) => (
                                         <ListItem
                                             key={item.href}
                                             href={item.href}
                                             title={item.title}
                                             icon={item.icon}
-                                            active={pathname === item.href}
                                         >
                                             {item.description}
                                         </ListItem>
                                     ))}
                                 </ul>
-                            </NavigationMenuContent>
-                        </NavigationMenuItem>
+                            </div>
+                        </li>
                     )
                 })}
-            </NavigationMenuList>
-        </NavigationMenu>
+            </ul>
+        </nav>
     )
 }
 
@@ -156,49 +135,32 @@ type ListItemProps = {
     href: string
     icon: LucideIcon
     children: React.ReactNode
-    active?: boolean
 }
 
-const ListItem = React.forwardRef<HTMLAnchorElement, ListItemProps>(
-    ({ title, children, href, icon: Icon, active }, ref) => {
-        return (
-            <li>
-                <NavigationMenuLink asChild>
-                    <Link
-                        ref={ref}
-                        href={href}
-                        className={cn(
-                            "group block select-none space-y-1.5 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-muted/70 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary",
-                            active ? "text-primary bg-muted/40" : "text-muted-foreground"
-                        )}
-                    >
-                        <div className="flex items-start gap-3">
-                            <span
-                                className={cn(
-                                    "mt-0.5 inline-flex h-8 min-h-8 w-8 min-w-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary transition-colors group-hover:bg-primary/15",
-                                    active && "bg-primary/15"
-                                )}
-                            >
-                                <Icon className="h-4 w-4" aria-hidden="true" />
-                            </span>
-                            <div className="space-y-1.5">
-                                <div
-                                    className={cn(
-                                        "text-[15px] font-semibold leading-snug text-foreground transition-colors group-hover:text-primary",
-                                        active && "text-primary"
-                                    )}
-                                >
-                                    {title}
-                                </div>
-                                <p className="line-clamp-2 text-[13px] leading-relaxed text-muted-foreground">
-                                    {children}
-                                </p>
-                            </div>
+function ListItem({ title, children, href, icon: Icon }: ListItemProps) {
+    return (
+        <li>
+            <Link
+                href={href}
+                className={cn(
+                    "group/item block select-none space-y-1.5 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-muted/70 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary",
+                    "text-muted-foreground"
+                )}
+            >
+                <div className="flex items-start gap-3">
+                    <span className="mt-0.5 inline-flex h-8 min-h-8 w-8 min-w-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary transition-colors group-hover/item:bg-primary/15">
+                        <Icon className="h-4 w-4" aria-hidden="true" />
+                    </span>
+                    <div className="space-y-1.5">
+                        <div className="text-[15px] font-semibold leading-snug text-foreground transition-colors group-hover/item:text-primary">
+                            {title}
                         </div>
-                    </Link>
-                </NavigationMenuLink>
-            </li>
-        )
-    }
-)
-ListItem.displayName = "ListItem"
+                        <p className="line-clamp-2 text-[13px] leading-relaxed text-muted-foreground">
+                            {children}
+                        </p>
+                    </div>
+                </div>
+            </Link>
+        </li>
+    )
+}

@@ -1,7 +1,12 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { Analytics } from "@vercel/analytics/next"
+import dynamic from "next/dynamic"
+
+const Analytics = dynamic(
+  () => import("@vercel/analytics/next").then((mod) => mod.Analytics),
+  { ssr: false }
+)
 
 type ConsentState = "accepted" | "denied" | "unknown"
 type WindowWithVercelAnalytics = Window & {

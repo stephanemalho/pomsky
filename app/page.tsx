@@ -170,7 +170,7 @@ export default function HomePage() {
   const availablePuppies = puppies.filter((puppy) => !puppy.isReserved && !puppy.isAdopted)
   const availablePuppiesCount = availablePuppies.length
   const availablePuppiesTitle = availablePuppiesCount > 0
-    ? `${availablePuppiesCount} chiot${availablePuppiesCount > 1 ? "s" : ""} Pomsky disponible${availablePuppiesCount > 1 ? "s" : ""} à l'adoption`
+    ? `${availablePuppiesCount} chiot${availablePuppiesCount > 1 ? "s" : ""} disponible${availablePuppiesCount > 1 ? "s" : ""} à l'adoption`
     : "Aucun chiot Pomsky disponible à l'adoption actuellement"
   const founders = [
     {
@@ -513,7 +513,7 @@ export default function HomePage() {
                   href="/chiots-disponibles"
                   className="inline-flex items-center justify-center rounded-md bg-primary px-5 py-3 font-semibold text-primary-foreground transition-colors hover:bg-primary/85 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                 >
-                  Voir tous les chiots Pomsky
+                  Voir la page des Pomsky disponibles
                 </Link>
               </div>
             </div>
