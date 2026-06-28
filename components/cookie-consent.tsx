@@ -45,10 +45,14 @@ export default function CookieConsent() {
             localStorage.setItem("cookie_consent", "accepted")
         } catch { }
         try {
+            const win = window as unknown as WindowWithGA
             if (GA_ID) {
-                const win = window as unknown as WindowWithGA
                 win[`ga-disable-${GA_ID}`] = false
             }
+            win.gtag?.("consent", "update", {
+                analytics_storage: "granted",
+                ad_storage: "granted",
+            })
         } catch { }
         setConsent("accepted")
         setOpen(false)

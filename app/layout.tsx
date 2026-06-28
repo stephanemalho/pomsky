@@ -56,7 +56,12 @@ export default function RootLayout({
   return (
     <html lang="fr" suppressHydrationWarning className={`${questrial.variable} scroll-smooth`}>
       <head>
-        {/* Google Analytics will be injected by the client cookie consent manager */}
+        {/* Google Consent Mode v2 — must run before any gtag/GA script */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{analytics_storage:'denied',ad_storage:'denied',wait_for_update:500});`,
+          }}
+        />
 
         {/* JSON-LD Schema Markup */}
         <script
