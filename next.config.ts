@@ -70,6 +70,93 @@ const nextConfig: NextConfig = {
     },
     async redirects() {
         return [
+            // Chiots réservés retirés du site : redirection vers un chiot
+            // disponible de même couleur, sinon vers la page générale.
+            {
+                source: "/chiots-disponibles/baikal",
+                destination: "/chiots-disponibles/star",
+                permanent: true
+            },
+            {
+                source: "/chiots-disponibles/inuit",
+                destination: "/chiots-disponibles/star",
+                permanent: true
+            },
+            {
+                source: "/chiots-disponibles/kit",
+                destination: "/chiots-disponibles/star",
+                permanent: true
+            },
+            {
+                source: "/chiots-disponibles/alaska",
+                destination: "/chiots-disponibles",
+                permanent: true
+            },
+            {
+                source: "/chiots-disponibles/inuk",
+                destination: "/chiots-disponibles/amarok",
+                permanent: true
+            },
+            {
+                source: "/chiots-disponibles/alou-junior",
+                destination: "/chiots-disponibles/amarok",
+                permanent: true
+            },
+            {
+                source: "/chiots-disponibles/loki",
+                destination: "/chiots-disponibles/bellatrix",
+                permanent: true
+            },
+            {
+                source: "/chiots-disponibles/arcana",
+                destination: "/chiots-disponibles/ambre",
+                permanent: true
+            },
+            {
+                source: "/chiots-disponibles/sano",
+                destination: "/chiots-disponibles/loup",
+                permanent: true
+            },
+            {
+                source: "/chiots-disponibles/kiro",
+                destination: "/chiots-disponibles/loup",
+                permanent: true
+            },
+            {
+                source: "/chiots-disponibles/naya",
+                destination: "/chiots-disponibles/luna",
+                permanent: true
+            },
+            {
+                source: "/chiots-disponibles/luma",
+                destination: "/chiots-disponibles/luna",
+                permanent: true
+            },
+            {
+                source: "/chiots-disponibles/aika",
+                destination: "/chiots-disponibles/luna",
+                permanent: true
+            },
+            {
+                source: "/chiots-disponibles/balto",
+                destination: "/chiots-disponibles/remus",
+                permanent: true
+            },
+            {
+                source: "/chiots-disponibles/miyu",
+                destination: "/chiots-disponibles/ambre",
+                permanent: true
+            },
+            {
+                source: "/chiots-disponibles/orion",
+                destination: "/chiots-disponibles",
+                permanent: true
+            },
+            {
+                source: "/chiots-disponibles/sora",
+                destination: "/chiots-disponibles/remus",
+                permanent: true
+            },
             {
                 source: "/author/:path*",
                 destination: "/",
