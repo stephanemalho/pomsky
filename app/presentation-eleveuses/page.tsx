@@ -223,9 +223,9 @@ export default function PresentationEleveusesPage() {
                             {/* Aurélie */}
                             <article id="aurelie" className="grid md:grid-cols-2 gap-12 items-start scroll-mt-28">
                                 <div className="grid grid-cols-6 auto-rows-[70px] sm:auto-rows-[90px] md:auto-rows-[105px] lg:auto-rows-[118px] gap-3">
-                                    {aurelieGallery.map((image, index) => (
+                                    {aurelieGallery.map((image) => (
                                         <figure
-                                            key={`${image.src}-${index}`}
+                                            key={image.src}
                                             className={`relative overflow-hidden rounded-xl ${image.className}`}
                                         >
                                             <Image
@@ -297,9 +297,9 @@ export default function PresentationEleveusesPage() {
                             {/* Marine */}
                             <article id="marine" className="grid md:grid-cols-2 gap-12 items-start scroll-mt-28">
                                 <div className="grid grid-cols-6 auto-rows-[70px] sm:auto-rows-[90px] md:auto-rows-[105px] lg:auto-rows-[118px] gap-3 md:order-2">
-                                    {marineGallery.map((image, index) => (
+                                    {marineGallery.map((image) => (
                                         <figure
-                                            key={`${image.src}-${index}`}
+                                            key={image.src}
                                             className={`relative overflow-hidden rounded-xl ${image.className}`}
                                         >
                                             <Image
