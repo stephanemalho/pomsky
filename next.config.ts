@@ -79,7 +79,7 @@ const nextConfig: NextConfig = {
             },
             {
                 source: "/chiots-disponibles/inuit",
-                destination: "/chiots-disponibles/star",
+                destination: "/chiots-disponibles/loup",
                 permanent: true
             },
             {
@@ -94,22 +94,22 @@ const nextConfig: NextConfig = {
             },
             {
                 source: "/chiots-disponibles/inuk",
-                destination: "/chiots-disponibles/amarok",
+                destination: "/chiots-disponibles/loup",
                 permanent: true
             },
             {
                 source: "/chiots-disponibles/alou-junior",
-                destination: "/chiots-disponibles/amarok",
-                permanent: true
-            },
-            {
-                source: "/chiots-disponibles/loki",
                 destination: "/chiots-disponibles/bellatrix",
                 permanent: true
             },
             {
+                source: "/chiots-disponibles/loki",
+                destination: "/chiots-disponibles/loup",
+                permanent: true
+            },
+            {
                 source: "/chiots-disponibles/arcana",
-                destination: "/chiots-disponibles/ambre",
+                destination: "/chiots-disponibles",
                 permanent: true
             },
             {
@@ -124,27 +124,27 @@ const nextConfig: NextConfig = {
             },
             {
                 source: "/chiots-disponibles/naya",
-                destination: "/chiots-disponibles/luna",
+                destination: "/chiots-disponibles/bellatrix",
                 permanent: true
             },
             {
                 source: "/chiots-disponibles/luma",
-                destination: "/chiots-disponibles/luna",
+                destination: "/chiots-disponibles/bellatrix",
                 permanent: true
             },
             {
                 source: "/chiots-disponibles/aika",
-                destination: "/chiots-disponibles/luna",
+                destination: "/chiots-disponibles/bellatrix",
                 permanent: true
             },
             {
                 source: "/chiots-disponibles/balto",
-                destination: "/chiots-disponibles/remus",
+                destination: "/chiots-disponibles",
                 permanent: true
             },
             {
                 source: "/chiots-disponibles/miyu",
-                destination: "/chiots-disponibles/ambre",
+                destination: "/chiots-disponibles",
                 permanent: true
             },
             {
@@ -154,7 +154,27 @@ const nextConfig: NextConfig = {
             },
             {
                 source: "/chiots-disponibles/sora",
-                destination: "/chiots-disponibles/remus",
+                destination: "/chiots-disponibles",
+                permanent: true
+            },
+            {
+                source: "/chiots-disponibles/amarok",
+                destination: "/chiots-disponibles/loup",
+                permanent: true
+            },
+            {
+                source: "/chiots-disponibles/ambre",
+                destination: "/chiots-disponibles",
+                permanent: true
+            },
+            {
+                source: "/chiots-disponibles/remus",
+                destination: "/chiots-disponibles",
+                permanent: true
+            },
+            {
+                source: "/chiots-disponibles/luna",
+                destination: "/chiots-disponibles/star",
                 permanent: true
             },
             {

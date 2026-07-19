@@ -280,91 +280,6 @@ const puppiesUnsorted: Puppy[] = [
         linkTo: formUrls.inuitMogu,
     },
     {
-        name: "AMAROK",
-        coat: "Pomsky F4+ (ADN Poméranian / Husky)",
-        color: "Noir et blanc",
-        sexe: "Mâle",
-        size: "Toy",
-        ruler: "Pelage polaire husky",
-        weight: "Poids adulte en cours d'estimation",
-        parents: "Parents : CHARM & ALOU",
-        readyDate: "Disponible à la réservation",
-        age: "Né le 30 avril 2026",
-        description:
-            "Amarok est un mâle Pomsky noir et blanc né le 30 avril 2026, issu de la portée Charm et Alou. Il présente des yeux bleus, un pelage polaire husky et un format toy.",
-        highlights: [
-            "Mâle",
-            "Yeux bleus",
-            "Pelage polaire husky",
-            "Taille toy"
-        ],
-        health: defaultHealth,
-        images: puppyImages("AMAROK", [
-            "pomsky-noir-blanc-amarok/webp/pomsky-noir-blanc-amarok-1.webp",
-            "pomsky-toy-amarok-1-7semaine.webp",
-            "pomsky-toy-amarok-2-7semaine.webp",
-            "pomsky-toy-amarok-1-6semaine.webp",
-            "pomsky-toy-amarok-2-6semaine.webp"
-        ]),
-        linkTo: formUrls.charmAlou
-    },
-    {
-        name: "AMBRE",
-        coat: "Pomsky F4+ (ADN Poméranian / Husky)",
-        color: "Chocolat et blanche",
-        sexe: "Femelle",
-        size: "Micro / Toy",
-        ruler: "Pelage fluffy",
-        weight: "2,5 à 4 kg adulte estimé",
-        parents: "Parents : PWEEK & CHARM",
-        readyDate: "Réservé",
-        age: "Portée Pweek et Charm",
-        description:
-            "Ambre est une femelle Pomsky chocolat et blanche issue de la portée Pweek et Charm. De format micro à toy, elle est estimée entre 2,5 et 4 kg adulte. Ses yeux bleus lumineux et son pelage fluffy très dense lui confèrent un charme visuel irrésistible. Un profil rare alliant douceur de robe et format ultra-compact.",
-        highlights: [
-            "Femelle",
-            "Yeux bleus",
-            "Pelage fluffy",
-            "Micro / Toy (2,5–4 kg adulte)"
-        ],
-        health: defaultHealth,
-        images: puppyImages("AMBRE", [
-            "pomsky-fauve-blanc-ambre/webp/pomsky-fauve-blanc-ambre-1.webp",
-            "ambre-pomsky-marron-1-7semaine.webp",
-            "ambre-pomsky-marron-2-7semaine.webp",
-            "ambre-pomsky-marron-1-6semaine.webp"
-        ]),
-        linkTo: formUrls.pweekCharm
-    },
-    {
-        name: "RÉMUS",
-        coat: "Pomsky F4+ (ADN Poméranian / Husky)",
-        color: "Gris et blanc",
-        sexe: "Mâle",
-        size: "Micro / Toy",
-        ruler: "Pelage polaire",
-        weight: "2,5 à 4 kg adulte estimé",
-        parents: "Parents : PWEEK & CHARM",
-        readyDate: "Disponible à la réservation",
-        age: "Portée Pweek et Charm",
-        description:
-            "Rémus est un mâle Pomsky gris et blanc issu de la portée Pweek et Charm. De format micro à toy, il est estimé entre 2,5 et 4 kg adulte. Il présente des yeux bruns expressifs et un pelage polaire dense qui renforce son type nordique. Un mâle compact et équilibré, au caractère attendu vif et affectueux.",
-        highlights: [
-            "Mâle",
-            "Yeux bruns",
-            "Pelage polaire",
-            "Micro / Toy (2,5–4 kg adulte)"
-        ],
-        health: defaultHealth,
-        images: puppyImages("RÉMUS", [
-            "pomsky-gris-blanc-remus/webp/pomsky-gris-blanc-remus-1.webp",
-            "remus-pomsky-1-7semaine.webp",
-            "remus-pomsky-2-7semaine.webp",
-            "remus-pomsky-1-6semaine.webp"
-        ]),
-        linkTo: formUrls.pweekCharm
-    },
-    {
         name: "BELLATRIX",
         coat: "Pomsky F4+ (ADN Poméranian / Husky)",
         color: "Noire et blanche",
@@ -412,34 +327,6 @@ const puppiesUnsorted: Puppy[] = [
             "pomsky-noir-blanc-loup/webp/pomsky-noir-et-blanc-yeux-bleu-loup.webp",
             "pomsky-noir-blanc-loup/webp/pomsky-noir-et-blanc-yeux-bleu-loup-2.webp",
             "pomsky-noir-blanc-loup/webp/pomsky-noir-et-blanc-yeux-bleu-loup-3.webp"
-        ]),
-        linkTo: formUrls.skySally
-    },
-    {
-        name: "LUNA",
-        coat: "Pomsky F4+ (ADN Poméranian / Husky)",
-        color: "Noire et blanche",
-        sexe: "Femelle",
-        size: "Miniature",
-        ruler: "Pelage fluffy",
-        weight: "Poids adulte en cours d'estimation",
-        parents: "Parents : SKY & SALLY",
-        readyDate: "Disponible à la réservation",
-        age: "Née le 28 avril 2026",
-        description:
-            "Luna est une femelle Pomsky F4+ née le 28 avril 2026, issue de Sky et Sally. Elle présente des yeux bleus, un pelage fluffy et un format miniature.",
-        highlights: [
-            "Femelle",
-            "Yeux bleus",
-            "Pelage fluffy",
-            "Taille miniature"
-        ],
-        health: defaultHealth,
-        images: puppyImages("LUNA", [
-            "pomsky-femelle-grise-blanche-luna/webp/pomsky-femelle-grise-blanche-luna-1.webp",
-            "pomsky-femelle-grise-blanche-luna/webp/pomsky-femelle-grise-blanche-luna-2.webp",
-            "pomsky-femelle-luna-1-7semaine.webp",
-            "pomsky-femelle-luna-2-7semaine.webp"
         ]),
         linkTo: formUrls.skySally
     },
