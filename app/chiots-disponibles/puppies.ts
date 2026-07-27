@@ -340,7 +340,7 @@ const puppiesUnsorted: Puppy[] = [
             "pomsky-noir-blanc-loup/webp/pomsky-noir-et-blanc-yeux-bleu-loup.webp",
             "pomsky-noir-blanc-loup/webp/pomsky-noir-et-blanc-yeux-bleu-loup-2.webp",
             "pomsky-noir-blanc-loup/webp/pomsky-noir-et-blanc-yeux-bleu-loup-3.webp"
-        ]),
+        ], "png"),
         linkTo: formUrls.skySally
     },
 ];
