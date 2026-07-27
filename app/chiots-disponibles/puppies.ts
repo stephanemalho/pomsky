@@ -264,34 +264,6 @@ export const litterCertifications: LitterCertification[] = [
 
 const puppiesUnsorted: Puppy[] = [
     {
-        name: "STAR",
-        coat: "Pomsky F4+ (ADN Poméranian / Husky)",
-        color: "Noire et blanche",
-        sexe: "Femelle",
-        size: "Toy ou miniature",
-        ruler: "Pelage fluffy",
-        weight: "Poids adulte en cours d'estimation",
-        parents: "Parents : INUIT & MOGU",
-        readyDate: "Disponible à la réservation",
-        age: "Née le 27 avril 2026",
-        description:
-            "Star est une femelle Pomsky issue de la portée Inuit et Mogu, née le 27 avril 2026. Elle présente des yeux noirs, un pelage fluffy et un format attendu toy ou miniature.",
-        highlights: [
-            "Femelle",
-            "Yeux noirs",
-            "Pelage fluffy",
-            "Format toy ou miniature"
-        ],
-        health: defaultHealth,
-        images: puppyImages("STAR", [
-            "pomsky-noir-blanc-star/webp/pomsky-noir-blanc-star-1.webp",
-            "pomsky-toy-femelle-star-1-7semaine.webp",
-            "pomsky-toy-femelle-star-2-7semaine.webp",
-            "pomsky-toy-femelle-star-1-6semaine.webp"
-        ]),
-        linkTo: formUrls.inuitMogu,
-    },
-    {
         name: "BELLATRIX",
         coat: "Pomsky F4+ (ADN Poméranian / Husky)",
         color: "Noire et blanche",

@@ -521,13 +521,13 @@ export const sitemapPages = [
         url: "/",
         changefreq: "weekly",
         priority: 1.0,
-        lastmod: "2026-07-19"
+        lastmod: "2026-07-27"
     },
     {
         url: "/chiots-disponibles",
         changefreq: "weekly",
         priority: 0.95,
-        lastmod: "2026-07-19"
+        lastmod: "2026-07-27"
     },
     {
         url: "/le-pomsky",

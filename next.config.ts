@@ -74,7 +74,7 @@ const nextConfig: NextConfig = {
             // disponible de même couleur, sinon vers la page générale.
             {
                 source: "/chiots-disponibles/baikal",
-                destination: "/chiots-disponibles/star",
+                destination: "/chiots-disponibles/bellatrix",
                 permanent: true
             },
             {
@@ -84,7 +84,12 @@ const nextConfig: NextConfig = {
             },
             {
                 source: "/chiots-disponibles/kit",
-                destination: "/chiots-disponibles/star",
+                destination: "/chiots-disponibles/bellatrix",
+                permanent: true
+            },
+            {
+                source: "/chiots-disponibles/star",
+                destination: "/chiots-disponibles/bellatrix",
                 permanent: true
             },
             {
@@ -174,7 +179,7 @@ const nextConfig: NextConfig = {
             },
             {
                 source: "/chiots-disponibles/luna",
-                destination: "/chiots-disponibles/star",
+                destination: "/chiots-disponibles/bellatrix",
                 permanent: true
             },
             {
