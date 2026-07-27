@@ -32,6 +32,7 @@ import {
     getPuppyAvifImageSrc,
     getPuppyDisplayImageSrc,
     getPuppyJpegImageSrc,
+    getPuppyPngImageSrc,
     getPuppyLastModified,
     getPuppySeoDescription,
     getPuppySlug,
@@ -105,6 +106,7 @@ export async function generateMetadata({ params }: PuppyPageProps): Promise<Meta
         : "/pages/puppies/pomsky-f4-inuk-1.webp";
     const firstAvifImage = firstPuppyImage ? getPuppyAvifImageSrc(firstPuppyImage) : undefined;
     const firstJpegImage = firstPuppyImage ? getPuppyJpegImageSrc(firstPuppyImage) : undefined;
+    const firstPngImage = firstPuppyImage ? getPuppyPngImageSrc(firstPuppyImage) : undefined;
     const description = getPuppySeoDescription(puppy);
     const title = `${puppy.name}, chiot Pomsky ${puppy.color} ${getPuppyStatusLabel(puppy).toLowerCase()}`;
     const url = `${siteConfig.siteUrl}${getPuppyUrl(puppy)}`;
@@ -124,6 +126,11 @@ export async function generateMetadata({ params }: PuppyPageProps): Promise<Meta
             description,
             url,
             images: [
+                ...(firstPngImage ? [{
+                    url: `${siteConfig.siteUrl}${firstPngImage}`,
+                    alt: `${puppy.name}, chiot Pomsky ${puppy.color} de l'élevage Royal POMSKY`,
+                    type: "image/png",
+                }] : []),
                 ...(firstJpegImage ? [{
                     url: `${siteConfig.siteUrl}${firstJpegImage}`,
                     alt: `${puppy.name}, chiot Pomsky ${puppy.color} de l'élevage Royal POMSKY`,
@@ -145,6 +152,7 @@ export async function generateMetadata({ params }: PuppyPageProps): Promise<Meta
             title,
             description,
             images: [
+                ...(firstPngImage ? [`${siteConfig.siteUrl}${firstPngImage}`] : []),
                 ...(firstJpegImage ? [`${siteConfig.siteUrl}${firstJpegImage}`] : []),
                 `${siteConfig.siteUrl}${firstImage}`,
                 ...(firstAvifImage ? [`${siteConfig.siteUrl}${firstAvifImage}`] : []),

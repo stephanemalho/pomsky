@@ -52,6 +52,10 @@ export function getPuppyJpegImageSrc(image: Puppy["images"][number]) {
     return image.jpegSrc ? getPuppyImageSrc(image.jpegSrc) : undefined;
 }
 
+export function getPuppyPngImageSrc(image: Puppy["images"][number]) {
+    return image.pngSrc ? getPuppyImageSrc(image.pngSrc) : undefined;
+}
+
 export function getPuppyStatus(puppy: Puppy) {
     if (puppy.isAdopted) return "adopted";
     if (puppy.isReserved) return "reserved";
@@ -91,10 +95,12 @@ export function buildPuppyProductStructuredData(puppy: Puppy) {
     const url = getAbsolutePuppyUrl(puppy);
     const statusLabel = getPuppyStatusLabel(puppy);
     const images = puppy.images.flatMap((image) => {
+        const pngImage = getPuppyPngImageSrc(image);
         const jpegImage = getPuppyJpegImageSrc(image);
         const avifImage = getPuppyAvifImageSrc(image);
 
         return [
+            ...(pngImage ? [`${siteConfig.siteUrl}${pngImage}`] : []),
             ...(jpegImage ? [`${siteConfig.siteUrl}${jpegImage}`] : []),
             `${siteConfig.siteUrl}${getPuppySourceImageSrc(image)}`,
             ...(avifImage ? [`${siteConfig.siteUrl}${avifImage}`] : []),

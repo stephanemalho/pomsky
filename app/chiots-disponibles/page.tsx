@@ -45,6 +45,7 @@ import {
     formatPuppyPrice,
     getPuppyAvifImageSrc,
     getPuppyJpegImageSrc,
+    getPuppyPngImageSrc,
     getPuppySourceImageSrc,
     getPuppyStatus,
     getPuppyStatusLabel,
@@ -135,10 +136,12 @@ export default function NosChiotsPage() {
         visiblePuppies.map((puppy) => ({
             ...puppy,
             images: puppy.images.flatMap((image) => {
+                const pngImage = getPuppyPngImageSrc(image);
                 const jpegImage = getPuppyJpegImageSrc(image);
                 const avifImage = getPuppyAvifImageSrc(image);
 
                 return [
+                    ...(pngImage ? [pngImage] : []),
                     ...(jpegImage ? [jpegImage] : []),
                     getPuppySourceImageSrc(image),
                     ...(avifImage ? [avifImage] : []),

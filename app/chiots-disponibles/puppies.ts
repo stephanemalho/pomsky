@@ -4,6 +4,7 @@ export type PuppyImage = {
     sourceSrc?: string;
     avifSrc?: string;
     jpegSrc?: string;
+    pngSrc?: string;
     alt: string;
 };
 
@@ -66,7 +67,11 @@ const formUrls = {
 
 const defaultHealth = ["Suivi vétérinaire en cours"];
 
-function puppyImages(name: string, files: string[]): PuppyImage[] {
+function puppyImages(
+    name: string,
+    files: string[],
+    metadataFormat: "jpeg" | "png" = "jpeg"
+): PuppyImage[] {
     return files.map((file, index) => {
         const hasAgeVariants = /-[67]semaines?\.webp$/.test(file);
         const hasDirectoryFormatVariants = file.includes("/webp/");
@@ -85,6 +90,13 @@ function puppyImages(name: string, files: string[]): PuppyImage[] {
                 : hasDirectoryFormatVariants
                     ? `pages/puppies/${file.replace("/webp/", "/jpeg/").replace(".webp", ".jpeg")}`
                     : undefined,
+            pngSrc: metadataFormat === "png"
+                ? hasAgeVariants
+                    ? `pages/puppies/${file.replace(".webp", ".png")}`
+                    : hasDirectoryFormatVariants
+                        ? `pages/puppies/${file.replace("/webp/", "/png/").replace(".webp", ".png")}`
+                        : undefined
+                : undefined,
             alt: `${name}, chiot Pomsky Royal POMSKY - photo ${index + 1}`
         };
     });
@@ -303,8 +315,9 @@ const puppiesUnsorted: Puppy[] = [
             "pomsky-noir-blanc-bella/webp/pomsky-noir-blanc-bella-1.webp",
             "bellatrix-pomsky-1-7semaine.webp",
             "bellatrix-pomsky-2-7semaine.webp",
-            "bellatrix-pomsky-1-6semaine.webp"
-        ]),
+            "bellatrix-pomsky-1-6semaine.webp",
+            "bellatrix-pomsky-2-6semaine.webp"
+        ], "png"),
         linkTo: formUrls.pweekCharm
     },
     {
