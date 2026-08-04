@@ -74,7 +74,7 @@ const nextConfig: NextConfig = {
             // disponible de même couleur, sinon vers la page générale.
             {
                 source: "/chiots-disponibles/baikal",
-                destination: "/chiots-disponibles/bellatrix",
+                destination: "/chiots-disponibles",
                 permanent: true
             },
             {
@@ -84,12 +84,17 @@ const nextConfig: NextConfig = {
             },
             {
                 source: "/chiots-disponibles/kit",
-                destination: "/chiots-disponibles/bellatrix",
+                destination: "/chiots-disponibles",
                 permanent: true
             },
             {
                 source: "/chiots-disponibles/star",
-                destination: "/chiots-disponibles/bellatrix",
+                destination: "/chiots-disponibles",
+                permanent: true
+            },
+            {
+                source: "/chiots-disponibles/bellatrix",
+                destination: "/chiots-disponibles",
                 permanent: true
             },
             {
@@ -104,7 +109,7 @@ const nextConfig: NextConfig = {
             },
             {
                 source: "/chiots-disponibles/alou-junior",
-                destination: "/chiots-disponibles/bellatrix",
+                destination: "/chiots-disponibles",
                 permanent: true
             },
             {
@@ -129,17 +134,17 @@ const nextConfig: NextConfig = {
             },
             {
                 source: "/chiots-disponibles/naya",
-                destination: "/chiots-disponibles/bellatrix",
+                destination: "/chiots-disponibles",
                 permanent: true
             },
             {
                 source: "/chiots-disponibles/luma",
-                destination: "/chiots-disponibles/bellatrix",
+                destination: "/chiots-disponibles",
                 permanent: true
             },
             {
                 source: "/chiots-disponibles/aika",
-                destination: "/chiots-disponibles/bellatrix",
+                destination: "/chiots-disponibles",
                 permanent: true
             },
             {
@@ -179,7 +184,7 @@ const nextConfig: NextConfig = {
             },
             {
                 source: "/chiots-disponibles/luna",
-                destination: "/chiots-disponibles/bellatrix",
+                destination: "/chiots-disponibles",
                 permanent: true
             },
             {

@@ -264,35 +264,6 @@ export const litterCertifications: LitterCertification[] = [
 
 const puppiesUnsorted: Puppy[] = [
     {
-        name: "BELLATRIX",
-        coat: "Pomsky F4+ (ADN Poméranian / Husky)",
-        color: "Noire et blanche",
-        sexe: "Femelle",
-        size: "Micro / Toy",
-        ruler: "Pelage polaire",
-        weight: "2,5 à 4 kg adulte estimé",
-        parents: "Parents : PWEEK & CHARM",
-        readyDate: "Disponible à la réservation",
-        age: "Portée Pweek et Charm",
-        description:
-            "Bellatrix est une femelle Pomsky noire et blanche issue de la portée Pweek et Charm. De format micro à toy, elle est estimée entre 2,5 et 4 kg adulte. Son pelage polaire dense et ses yeux bruns lui confèrent une allure nordique élégante. Un profil équilibré et distinctif dans cette portée.",
-        highlights: [
-            "Femelle",
-            "Yeux bruns",
-            "Pelage polaire",
-            "Micro / Toy (2,5–4 kg adulte)"
-        ],
-        health: defaultHealth,
-        images: puppyImages("BELLATRIX", [
-            "pomsky-noir-blanc-bella/webp/pomsky-noir-blanc-bella-1.webp",
-            "bellatrix-pomsky-1-7semaine.webp",
-            "bellatrix-pomsky-2-7semaine.webp",
-            "bellatrix-pomsky-1-6semaine.webp",
-            "bellatrix-pomsky-2-6semaine.webp"
-        ], "png"),
-        linkTo: formUrls.pweekCharm
-    },
-    {
         name: "LOUP",
         coat: "Pomsky F4+ (ADN Poméranian / Husky)",
         color: "Noir et blanc",
