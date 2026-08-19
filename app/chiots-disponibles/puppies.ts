@@ -83,20 +83,21 @@ function puppyImages(
             avifSrc: hasAgeVariants
                 ? `pages/puppies/${file.replace(".webp", ".avif")}`
                 : hasDirectoryFormatVariants
-                    ? `pages/puppies/${file.replace("/webp/", "/avif/").replace(".webp", ".avif")}`
-                    : undefined,
+                  ? `pages/puppies/${file.replace("/webp/", "/avif/").replace(".webp", ".avif")}`
+                  : undefined,
             jpegSrc: hasAgeVariants
                 ? `pages/puppies/${file.replace(".webp", ".jpeg")}`
                 : hasDirectoryFormatVariants
-                    ? `pages/puppies/${file.replace("/webp/", "/jpeg/").replace(".webp", ".jpeg")}`
+                  ? `pages/puppies/${file.replace("/webp/", "/jpeg/").replace(".webp", ".jpeg")}`
+                  : undefined,
+            pngSrc:
+                metadataFormat === "png"
+                    ? hasAgeVariants
+                        ? `pages/puppies/${file.replace(".webp", ".png")}`
+                        : hasDirectoryFormatVariants
+                          ? `pages/puppies/${file.replace("/webp/", "/png/").replace(".webp", ".png")}`
+                          : undefined
                     : undefined,
-            pngSrc: metadataFormat === "png"
-                ? hasAgeVariants
-                    ? `pages/puppies/${file.replace(".webp", ".png")}`
-                    : hasDirectoryFormatVariants
-                        ? `pages/puppies/${file.replace("/webp/", "/png/").replace(".webp", ".png")}`
-                        : undefined
-                : undefined,
             alt: `${name}, chiot Pomsky Royal POMSKY - photo ${index + 1}`
         };
     });
@@ -264,6 +265,94 @@ export const litterCertifications: LitterCertification[] = [
 
 const puppiesUnsorted: Puppy[] = [
     {
+        name: "AKI BLUE",
+        coat: "Pomsky F4+ (ADN Poméranian / Husky)",
+        color: "Bleu",
+        sexe: "Mâle",
+        size: "Toy",
+        ruler: "Pelage fluffy",
+        weight: "4-5 kg adulte",
+        parents: "Parents : WILLOW & BANDIT",
+        readyDate: "Disponible à la réservation",
+        age: "Né le [date à préciser]",
+        description:
+            "Aki Blue est un mâle Pomsky F4+ issu de Willow et Bandit. Il présente des yeux gris particolor bleu, un pelage fluffy et une couleur bleu distinctive. Format Toy.",
+        highlights: [
+            "Mâle",
+            "Yeux gris particolor bleu",
+            "Pelage fluffy",
+            "Couleur bleue",
+            "Taille Toy"
+        ],
+        health: defaultHealth,
+        images: puppyImages("AKI BLUE", [
+            "pomsky-male-aki/webp/pomsky-male-aki-1.webp",
+            "pomsky-male-aki/webp/pomsky-male-aki-2.webp",
+            "pomsky-male-aki/webp/pomsky-male-aki-3.webp",
+            "pomsky-male-aki/webp/pomsky-male-aki-4.webp",
+            "pomsky-male-aki/webp/pomsky-male-aki-5.webp"
+        ]),
+        linkTo: formUrls.pweekCharm
+    },
+    {
+        name: "SKY BLUE",
+        coat: "Pomsky F4+ (ADN Poméranian / Husky)",
+        color: "Bleu",
+        sexe: "Mâle",
+        size: "Toy - Micro",
+        ruler: "Pelage fluffy",
+        weight: "3 kg adulte",
+        parents: "Parents : WILLOW & BANDIT",
+        readyDate: "Disponible à la réservation",
+        age: "Né le [date à préciser]",
+        description:
+            "Sky Blue est un mâle Pomsky F4+ issu de Willow et Bandit. Il présente des yeux gris, un pelage fluffy et une couleur bleu. Format Toy-micro.",
+        highlights: [
+            "Mâle",
+            "Yeux gris",
+            "Pelage fluffy",
+            "Couleur bleue",
+            "Taille Toy-micro"
+        ],
+        health: defaultHealth,
+        images: puppyImages("SKY BLUE", [
+            "pomsky-fluffly-sky/webp/pomsky-fluffly-sky-1.webp",
+            "pomsky-fluffly-sky/webp/pomsky-fluffly-sky-2.webp",
+            "pomsky-fluffly-sky/webp/pomsky-fluffly-sky-3.webp",
+            "pomsky-fluffly-sky/webp/pomsky-fluffly-sky-4.webp",
+            "pomsky-fluffly-sky/webp/pomsky-fluffly-sky-5.webp"
+        ]),
+        linkTo: formUrls.pweekCharm
+    },
+    {
+        name: "KOA BLUE",
+        coat: "Pomsky F4+ (ADN Poméranian / Husky)",
+        color: "Bleu",
+        sexe: "Femelle",
+        size: "Toy",
+        ruler: "Pelage fluffy",
+        weight: "5 kg adulte",
+        parents: "Parents : WILLOW & BANDIT",
+        readyDate: "Réservé",
+        age: "Né le [date à préciser]",
+        description:
+            "Koa Blue est une femelle Pomsky F4+ issue de Willow et Bandit. Elle présente des yeux bleus, un pelage fluffy et une couleur bleu. Format Toy. RÉSERVÉE.",
+        highlights: [
+            "Femelle",
+            "Yeux bleus",
+            "Pelage fluffy",
+            "Couleur bleue",
+            "Taille Toy"
+        ],
+        health: defaultHealth,
+        images: puppyImages("KOA BLUE", [
+            "pomsky-femelle-koa/webp/pomsky-femelle-koa-1.webp",
+            "pomsky-femelle-koa/webp/pomsky-femelle-koa-2.webp"
+        ]),
+        isReserved: true,
+        linkTo: formUrls.pweekCharm
+    },
+    {
         name: "LOUP",
         coat: "Pomsky F4+ (ADN Poméranian / Husky)",
         color: "Noir et blanc",
@@ -278,14 +367,20 @@ const puppiesUnsorted: Puppy[] = [
             "Loup est un mâle Pomsky F4+ né le 28 avril 2026, issu de Sky et Sally. Il présente des yeux bleus, un pelage fluffy et un format miniature.",
         highlights: ["Mâle", "Yeux bleus", "Pelage fluffy", "Taille miniature"],
         health: defaultHealth,
-        images: puppyImages("LOUP", [
-            "pomsky-noir-blanc-loup/webp/pomsky-noir-et-blanc-loup.webp",
-            "pomsky-noir-blanc-loup/webp/pomsky-noir-et-blanc-yeux-bleu-loup.webp",
-            "pomsky-noir-blanc-loup/webp/pomsky-noir-et-blanc-yeux-bleu-loup-2.webp",
-            "pomsky-noir-blanc-loup/webp/pomsky-noir-et-blanc-yeux-bleu-loup-3.webp"
-        ], "png"),
+        images: puppyImages(
+            "LOUP",
+            [
+                "pomsky-noir-blanc-loup/webp/pomsky-noir-et-blanc-yeux-bleu-loup-2.webp",
+                "pomsky-noir-blanc-loup/webp/pomsky-noir-et-blanc-loup.webp",
+                "pomsky-noir-blanc-loup/webp/pomsky-noir-et-blanc-yeux-bleu-loup.webp",
+                "pomsky-noir-blanc-loup/webp/pomsky-noir-et-blanc-yeux-bleu-loup-3.webp"
+            ],
+            "png"
+        ),
+        price: 3200,
+        priceCurrency: "EUR",
         linkTo: formUrls.skySally
-    },
+    }
 ];
 
 function getLitterBirthDateForPuppy(puppy: Puppy) {

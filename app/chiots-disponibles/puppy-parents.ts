@@ -91,6 +91,22 @@ export const puppyParentProfilesByLabel: Record<string, PuppyParentProfile[]> = 
             href: `/femelles-reproductrices#${getReproductorAnchorId("CHARM")}`,
         },
     ],
+    "Parents : WILLOW & BANDIT": [
+        {
+            role: "Mère",
+            name: "Willow",
+            image: "/WILLOW-pomsky-toy-f2.webp",
+            description: "Femelle Pomsky F2",
+            href: `/femelles-reproductrices#${getReproductorAnchorId("WILLOW")}`,
+        },
+        {
+            role: "Père",
+            name: "Bandit",
+            image: "/BANDIT-pomsky-toy-f5.webp",
+            description: "Mâle Pomsky F5",
+            href: `/femelles-reproductrices#${getReproductorAnchorId("BANDIT")}`,
+        },
+    ],
 };
 
 export function getPuppyParentProfiles(parentLabel: string) {
