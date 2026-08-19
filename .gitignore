@@ -47,4 +47,5 @@ next-env.d.ts
 
 .vercel
 
-.vercel
+# Large PNG files - use WebP/JPEG instead
+public/pages/puppies/**/png/
