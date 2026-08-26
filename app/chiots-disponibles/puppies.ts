@@ -273,7 +273,7 @@ const puppiesUnsorted: Puppy[] = [
         ruler: "Pelage fluffy",
         weight: "4-5 kg adulte",
         parents: "Parents : WILLOW & BANDIT",
-        readyDate: "Disponible à la réservation",
+        readyDate: "Disponible",
         age: "Né le [date à préciser]",
         description:
             "Aki Blue est un mâle Pomsky F4+ issu de Willow et Bandit. Il présente des yeux gris particolor bleu, un pelage fluffy et une couleur bleu distinctive. Format Toy.",
@@ -303,7 +303,7 @@ const puppiesUnsorted: Puppy[] = [
         ruler: "Pelage fluffy",
         weight: "3 kg adulte",
         parents: "Parents : WILLOW & BANDIT",
-        readyDate: "Disponible à la réservation",
+        readyDate: "Disponible",
         age: "Né le [date à préciser]",
         description:
             "Sky Blue est un mâle Pomsky F4+ issu de Willow et Bandit. Il présente des yeux gris, un pelage fluffy et une couleur bleu. Format Toy-micro.",
@@ -328,17 +328,17 @@ const puppiesUnsorted: Puppy[] = [
         name: "KOA BLUE",
         coat: "Pomsky F4+ (ADN Poméranian / Husky)",
         color: "Bleu",
-        sexe: "Femelle",
+        sexe: "Mâle",
         size: "Toy",
         ruler: "Pelage fluffy",
         weight: "5 kg adulte",
         parents: "Parents : WILLOW & BANDIT",
-        readyDate: "Réservé",
+        readyDate: "Disponible",
         age: "Né le [date à préciser]",
         description:
-            "Koa Blue est une femelle Pomsky F4+ issue de Willow et Bandit. Elle présente des yeux bleus, un pelage fluffy et une couleur bleu. Format Toy. RÉSERVÉE.",
+            "Koa Blue est un mâle Pomsky F4+ issue de Willow et Bandit. Il présente des yeux bleus, un pelage fluffy et une couleur bleu. Format Toy.",
         highlights: [
-            "Femelle",
+            "Mâle",
             "Yeux bleus",
             "Pelage fluffy",
             "Couleur bleue",
@@ -349,7 +349,6 @@ const puppiesUnsorted: Puppy[] = [
             "pomsky-femelle-koa/webp/pomsky-femelle-koa-1.webp",
             "pomsky-femelle-koa/webp/pomsky-femelle-koa-2.webp"
         ]),
-        isReserved: true,
         linkTo: formUrls.pweekCharm
     },
     {
@@ -361,7 +360,7 @@ const puppiesUnsorted: Puppy[] = [
         ruler: "Pelage fluffy",
         weight: "Poids adulte en cours d'estimation",
         parents: "Parents : SKY & SALLY",
-        readyDate: "Disponible à la réservation",
+        readyDate: "Disponible",
         age: "Né le 28 avril 2026",
         description:
             "Loup est un mâle Pomsky F4+ né le 28 avril 2026, issu de Sky et Sally. Il présente des yeux bleus, un pelage fluffy et un format miniature.",
