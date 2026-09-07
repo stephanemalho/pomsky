@@ -378,7 +378,8 @@ const puppiesUnsorted: Puppy[] = [
         ),
         price: 3200,
         priceCurrency: "EUR",
-        linkTo: formUrls.skySally
+        linkTo: formUrls.skySally,
+        isReserved: true
     }
 ];
 
