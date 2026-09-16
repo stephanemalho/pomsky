@@ -62,7 +62,10 @@ const formUrls = {
     skySally: "https://forms.gle/av3Tv3bbZ6T8ZF4Z7",
     inuitMogu: "https://forms.gle/7a9kRVTysftzNGwS7",
     charmAlou: "https://forms.gle/7o7g6MptyDDkP611A",
-    pweekCharm: "https://forms.gle/DJCcN9iHtUSCAhZE7"
+    pweekCharm: "https://forms.gle/DJCcN9iHtUSCAhZE7",
+    // TODO : formulaires Google des portées Shadow & Charm et Charm & Dolly
+    shadowCharm: "/contact",
+    charmDolly: "/contact"
 };
 
 const defaultHealth = ["Suivi vétérinaire en cours"];
@@ -319,8 +322,7 @@ const puppiesUnsorted: Puppy[] = [
             "pomsky-fluffly-sky/webp/pomsky-fluffly-sky-1.webp",
             "pomsky-fluffly-sky/webp/pomsky-fluffly-sky-2.webp",
             "pomsky-fluffly-sky/webp/pomsky-fluffly-sky-3.webp",
-            "pomsky-fluffly-sky/webp/pomsky-fluffly-sky-4.webp",
-            "pomsky-fluffly-sky/webp/pomsky-fluffly-sky-5.webp"
+            "pomsky-fluffly-sky/webp/pomsky-fluffly-sky-4.webp"
         ]),
         linkTo: formUrls.pweekCharm
     },
@@ -352,34 +354,231 @@ const puppiesUnsorted: Puppy[] = [
         linkTo: formUrls.pweekCharm
     },
     {
-        name: "LOUP",
-        coat: "Pomsky F4+ (ADN Poméranian / Husky)",
+        name: "KIARA",
+        coat: "Pomsky F4 (ADN Poméranian / Husky)",
+        color: "Noir et blanc",
+        sexe: "Femelle",
+        size: "Toy",
+        ruler: "Masque fleur de lys",
+        weight: "Poids adulte en cours d'estimation",
+        parents: "Parents : SHADOW & CHARM",
+        readyDate: "Disponible à la réservation",
+        age: "Née en septembre 2026",
+        description:
+            "Kiara est une femelle Pomsky Toy F4 née en septembre 2026, issue de Shadow et Charm. Elle arbore une robe noire et blanche rehaussée d'un masque fleur de lys, signature d'une prestigieuse lignée américaine.",
+        highlights: [
+            "Femelle",
+            "Noir et blanc",
+            "Masque fleur de lys",
+            "Lignée américaine",
+            "Taille Toy"
+        ],
+        health: defaultHealth,
+        images: puppyImages("KIARA", [
+            "pomsky-noir-blanc-kiara/webp/pomsky-noir-blanc-kiara-1.webp",
+            "pomsky-noir-blanc-kiara/webp/pomsky-noir-blanc-kiara-2.webp",
+            "pomsky-noir-blanc-kiara/webp/pomsky-noir-blanc-kiara-3.webp"
+        ]),
+        linkTo: formUrls.shadowCharm
+    },
+    {
+        name: "ATLAS",
+        coat: "Pomsky F4 (ADN Poméranian / Husky)",
         color: "Noir et blanc",
         sexe: "Mâle",
         size: "Miniature",
+        ruler: "Masque fleur de lys",
+        weight: "Poids adulte en cours d'estimation",
+        parents: "Parents : SHADOW & CHARM",
+        readyDate: "Disponible à la réservation",
+        age: "Né en septembre 2026",
+        description:
+            "Atlas est un mâle Pomsky miniature F4 né en septembre 2026, issu de Shadow et Charm. Il arbore une robe noire et blanche rehaussée d'un masque fleur de lys, signature d'une prestigieuse lignée américaine.",
+        highlights: [
+            "Mâle",
+            "Noir et blanc",
+            "Masque fleur de lys",
+            "Lignée américaine",
+            "Taille miniature"
+        ],
+        health: defaultHealth,
+        images: puppyImages("ATLAS", [
+            "pomsky-noir-blanc-atlas/webp/pomsky-noir-blanc-atlas-3.webp",
+            "pomsky-noir-blanc-atlas/webp/pomsky-noir-blanc-atlas-1.webp",
+            "pomsky-noir-blanc-atlas/webp/pomsky-noir-blanc-atlas-2.webp",
+            "pomsky-noir-blanc-atlas/webp/pomsky-noir-blanc-atlas-4.webp",
+            "pomsky-noir-blanc-atlas/webp/pomsky-noir-blanc-atlas-5.webp"
+        ]),
+        linkTo: formUrls.shadowCharm
+    },
+    {
+        name: "TOKYO",
+        coat: "Pomsky F4 (ADN Poméranian / Husky)",
+        color: "Noir et blanc",
+        sexe: "Mâle",
+        size: "Miniature",
+        ruler: "Masque fleur de lys",
+        weight: "Poids adulte en cours d'estimation",
+        parents: "Parents : SHADOW & CHARM",
+        readyDate: "Disponible à la réservation",
+        age: "Né en septembre 2026",
+        description:
+            "Tokyo est un mâle Pomsky miniature F4 né en septembre 2026, issu de Shadow et Charm. Il arbore une robe noire et blanche rehaussée d'un masque fleur de lys, signature d'une prestigieuse lignée américaine.",
+        highlights: [
+            "Mâle",
+            "Noir et blanc",
+            "Masque fleur de lys",
+            "Lignée américaine",
+            "Taille miniature"
+        ],
+        health: defaultHealth,
+        images: puppyImages("TOKYO", [
+            "pomsky-noir-blanc-tokyo/webp/pomsky-noir-blanc-tokyo-1.webp",
+            "pomsky-noir-blanc-tokyo/webp/pomsky-noir-blanc-tokyo-2.webp",
+            "pomsky-noir-blanc-tokyo/webp/pomsky-noir-blanc-tokyo-3.webp"
+        ]),
+        linkTo: formUrls.shadowCharm
+    },
+    {
+        name: "NIKITA",
+        coat: "Pomsky F4 (ADN Poméranian / Husky)",
+        color: "Noir et blanc",
+        sexe: "Femelle",
+        size: "Miniature",
+        ruler: "Masque fleur de lys",
+        weight: "Poids adulte en cours d'estimation",
+        parents: "Parents : SHADOW & CHARM",
+        readyDate: "Disponible à la réservation",
+        age: "Née en septembre 2026",
+        description:
+            "Nikita est une femelle Pomsky miniature F4 née en septembre 2026, issue de Shadow et Charm. Elle arbore une robe noire et blanche rehaussée d'un masque fleur de lys, signature d'une prestigieuse lignée américaine.",
+        highlights: [
+            "Femelle",
+            "Noir et blanc",
+            "Masque fleur de lys",
+            "Lignée américaine",
+            "Taille miniature"
+        ],
+        health: defaultHealth,
+        images: puppyImages("NIKITA", [
+            "pomsky-noir-blanc-nikita/webp/pomsky-noir-blanc-nikita-1.webp",
+            "pomsky-noir-blanc-nikita/webp/pomsky-noir-blanc-nikita-2.webp",
+            "pomsky-noir-blanc-nikita/webp/pomsky-noir-blanc-nikita-3.webp"
+        ]),
+        linkTo: formUrls.shadowCharm
+    },
+    {
+        name: "ASTON",
+        coat: "Pomsky F5 (ADN Poméranian / Husky)",
+        color: "Noir et blanc",
+        sexe: "Mâle",
+        size: "Toy - Micro",
         ruler: "Pelage fluffy",
         weight: "Poids adulte en cours d'estimation",
-        parents: "Parents : SKY & SALLY",
-        readyDate: "Disponible",
-        age: "Né le 28 avril 2026",
+        parents: "Parents : CHARM & DOLLY",
+        readyDate: "Disponible à la réservation",
+        age: "Né le 5 septembre 2026",
+        birthDate: "2026-09-05",
         description:
-            "Loup est un mâle Pomsky F4+ né le 28 avril 2026, issu de Sky et Sally. Il présente des yeux bleus, un pelage fluffy et un format miniature.",
-        highlights: ["Mâle", "Yeux bleus", "Pelage fluffy", "Taille miniature"],
+            "Aston est un mâle Pomsky F5 né le 5 septembre 2026, issu de Charm et Dolly. Robe noire et blanche, format Toy-micro et lignées prestigieuses américaines. Ses yeux sont encore en cours de développement.",
+        highlights: [
+            "Mâle",
+            "Noir et blanc",
+            "Yeux en cours de développement",
+            "Lignée américaine",
+            "Taille Toy-micro"
+        ],
         health: defaultHealth,
-        images: puppyImages(
-            "LOUP",
-            [
-                "pomsky-noir-blanc-loup/webp/pomsky-noir-et-blanc-yeux-bleu-loup-2.webp",
-                "pomsky-noir-blanc-loup/webp/pomsky-noir-et-blanc-loup.webp",
-                "pomsky-noir-blanc-loup/webp/pomsky-noir-et-blanc-yeux-bleu-loup.webp",
-                "pomsky-noir-blanc-loup/webp/pomsky-noir-et-blanc-yeux-bleu-loup-3.webp"
-            ],
-            "png"
-        ),
-        price: 3200,
-        priceCurrency: "EUR",
-        linkTo: formUrls.skySally,
-        isReserved: true
+        images: puppyImages("ASTON", [
+            "pomsky-noir-blanc-aston/webp/pomsky-noir-blanc-aston-1.webp",
+            "pomsky-noir-blanc-aston/webp/pomsky-noir-blanc-aston-2.webp"
+        ]),
+        linkTo: formUrls.charmDolly
+    },
+    {
+        name: "LUNA",
+        coat: "Pomsky F5 (ADN Poméranian / Husky)",
+        color: "Gris noir et blanc",
+        sexe: "Femelle",
+        size: "Toy - Micro",
+        ruler: "Masque fleur de lys",
+        weight: "Poids adulte en cours d'estimation",
+        parents: "Parents : CHARM & DOLLY",
+        readyDate: "Disponible à la réservation",
+        age: "Née le 5 septembre 2026",
+        birthDate: "2026-09-05",
+        description:
+            "Luna est une femelle Pomsky Toy-micro F5 née le 5 septembre 2026, issue de Charm et Dolly. Elle arbore une robe grise, noire et blanche rehaussée d'un masque fleur de lys, signature d'une prestigieuse lignée américaine.",
+        highlights: [
+            "Femelle",
+            "Gris noir et blanc",
+            "Masque fleur de lys",
+            "Lignée américaine",
+            "Taille Toy-micro"
+        ],
+        health: defaultHealth,
+        images: puppyImages("LUNA", [
+            "pomsky-gris-noir-blanc-luna/webp/pomsky-gris-noir-blanc-luna-2.webp",
+            "pomsky-gris-noir-blanc-luna/webp/pomsky-gris-noir-blanc-luna-1.webp",
+            "pomsky-gris-noir-blanc-luna/webp/pomsky-gris-noir-blanc-luna-3.webp"
+        ]),
+        linkTo: formUrls.charmDolly
+    },
+    {
+        name: "VEGAS",
+        coat: "Pomsky F5 (ADN Poméranian / Husky)",
+        color: "Noir et blanc",
+        sexe: "Mâle",
+        size: "Toy - Micro",
+        ruler: "Masque fleur de lys",
+        weight: "Poids adulte en cours d'estimation",
+        parents: "Parents : CHARM & DOLLY",
+        readyDate: "Disponible à la réservation",
+        age: "Né le 5 septembre 2026",
+        birthDate: "2026-09-05",
+        description:
+            "Vegas est un mâle Pomsky Toy-micro F5 né le 5 septembre 2026, issu de Charm et Dolly. Il arbore une robe noire et blanche rehaussée d'un masque fleur de lys, signature d'une prestigieuse lignée américaine.",
+        highlights: [
+            "Mâle",
+            "Noir et blanc",
+            "Masque fleur de lys",
+            "Lignée américaine",
+            "Taille Toy-micro"
+        ],
+        health: defaultHealth,
+        images: puppyImages("VEGAS", [
+            "pomsky-noir-blanc-vegas/webp/pomsky-noir-blanc-vegas-1.webp",
+            "pomsky-noir-blanc-vegas/webp/pomsky-noir-blanc-vegas-2.webp"
+        ]),
+        linkTo: formUrls.charmDolly
+    },
+    {
+        name: "NOX",
+        coat: "Pomsky F5 (ADN Poméranian / Husky)",
+        color: "Noir et blanc",
+        sexe: "Mâle",
+        size: "Toy - Micro",
+        ruler: "Masque fleur de lys",
+        weight: "Poids adulte en cours d'estimation",
+        parents: "Parents : CHARM & DOLLY",
+        readyDate: "Disponible à la réservation",
+        age: "Né le 5 septembre 2026",
+        birthDate: "2026-09-05",
+        description:
+            "Nox est un mâle Pomsky Toy-micro F5 né le 5 septembre 2026, issu de Charm et Dolly. Il arbore une robe noire et blanche rehaussée d'un masque fleur de lys, signature d'une prestigieuse lignée américaine.",
+        highlights: [
+            "Mâle",
+            "Noir et blanc",
+            "Masque fleur de lys",
+            "Lignée américaine",
+            "Taille Toy-micro"
+        ],
+        health: defaultHealth,
+        images: puppyImages("NOX", [
+            "pomsky-noir-blanc-nox/webp/pomsky-noir-blanc-nox-1.webp",
+            "pomsky-noir-blanc-nox/webp/pomsky-noir-blanc-nox-2.webp"
+        ]),
+        linkTo: formUrls.charmDolly
     }
 ];
 

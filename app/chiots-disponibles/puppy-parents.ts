@@ -107,6 +107,32 @@ export const puppyParentProfilesByLabel: Record<string, PuppyParentProfile[]> = 
             href: `/femelles-reproductrices#${getReproductorAnchorId("BANDIT")}`,
         },
     ],
+    "Parents : SHADOW & CHARM": [
+        {
+            role: "Mère",
+            name: "Shadow",
+            image: "/SHADOW-pomsky-F4.webp",
+            description: "Femelle Pomsky Miniature F4",
+            href: `/femelles-reproductrices#${getReproductorAnchorId("SHADOW")}`,
+        },
+        {
+            role: "Père",
+            name: "Charm",
+            image: "/pages/reproducteurs/CHARM-pomsky-toy-f3.webp",
+            description: "Mâle Pomsky F3",
+            href: `/femelles-reproductrices#${getReproductorAnchorId("CHARM")}`,
+        },
+    ],
+    // TODO : ajouter Dolly (ni fiche reproductrice ni photo pour l'instant)
+    "Parents : CHARM & DOLLY": [
+        {
+            role: "Père",
+            name: "Charm",
+            image: "/pages/reproducteurs/CHARM-pomsky-toy-f3.webp",
+            description: "Mâle Pomsky F3",
+            href: `/femelles-reproductrices#${getReproductorAnchorId("CHARM")}`,
+        },
+    ],
 };
 
 export function getPuppyParentProfiles(parentLabel: string) {

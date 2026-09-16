@@ -79,7 +79,7 @@ const nextConfig: NextConfig = {
             },
             {
                 source: "/chiots-disponibles/inuit",
-                destination: "/chiots-disponibles/loup",
+                destination: "/chiots-disponibles",
                 permanent: true
             },
             {
@@ -104,7 +104,7 @@ const nextConfig: NextConfig = {
             },
             {
                 source: "/chiots-disponibles/inuk",
-                destination: "/chiots-disponibles/loup",
+                destination: "/chiots-disponibles",
                 permanent: true
             },
             {
@@ -114,7 +114,7 @@ const nextConfig: NextConfig = {
             },
             {
                 source: "/chiots-disponibles/loki",
-                destination: "/chiots-disponibles/loup",
+                destination: "/chiots-disponibles",
                 permanent: true
             },
             {
@@ -124,12 +124,12 @@ const nextConfig: NextConfig = {
             },
             {
                 source: "/chiots-disponibles/sano",
-                destination: "/chiots-disponibles/loup",
+                destination: "/chiots-disponibles",
                 permanent: true
             },
             {
                 source: "/chiots-disponibles/kiro",
-                destination: "/chiots-disponibles/loup",
+                destination: "/chiots-disponibles",
                 permanent: true
             },
             {
@@ -169,7 +169,7 @@ const nextConfig: NextConfig = {
             },
             {
                 source: "/chiots-disponibles/amarok",
-                destination: "/chiots-disponibles/loup",
+                destination: "/chiots-disponibles",
                 permanent: true
             },
             {
@@ -179,11 +179,6 @@ const nextConfig: NextConfig = {
             },
             {
                 source: "/chiots-disponibles/remus",
-                destination: "/chiots-disponibles",
-                permanent: true
-            },
-            {
-                source: "/chiots-disponibles/luna",
                 destination: "/chiots-disponibles",
                 permanent: true
             },
