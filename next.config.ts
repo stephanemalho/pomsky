@@ -88,6 +88,11 @@ const nextConfig: NextConfig = {
                 permanent: true
             },
             {
+                source: "/chiots-disponibles/koa-blue",
+                destination: "/chiots-disponibles",
+                permanent: true
+            },
+            {
                 source: "/chiots-disponibles/star",
                 destination: "/chiots-disponibles",
                 permanent: true

@@ -327,33 +327,6 @@ const puppiesUnsorted: Puppy[] = [
         linkTo: formUrls.pweekCharm
     },
     {
-        name: "KOA BLUE",
-        coat: "Pomsky F4+ (ADN Poméranian / Husky)",
-        color: "Bleu",
-        sexe: "Mâle",
-        size: "Toy",
-        ruler: "Pelage fluffy",
-        weight: "5 kg adulte",
-        parents: "Parents : WILLOW & BANDIT",
-        readyDate: "Disponible",
-        age: "Né le [date à préciser]",
-        description:
-            "Koa Blue est un mâle Pomsky F4+ issue de Willow et Bandit. Il présente des yeux bleus, un pelage fluffy et une couleur bleu. Format Toy.",
-        highlights: [
-            "Mâle",
-            "Yeux bleus",
-            "Pelage fluffy",
-            "Couleur bleue",
-            "Taille Toy"
-        ],
-        health: defaultHealth,
-        images: puppyImages("KOA BLUE", [
-            "pomsky-femelle-koa/webp/pomsky-femelle-koa-1.webp",
-            "pomsky-femelle-koa/webp/pomsky-femelle-koa-2.webp"
-        ]),
-        linkTo: formUrls.pweekCharm
-    },
-    {
         name: "KIARA",
         coat: "Pomsky F4 (ADN Poméranian / Husky)",
         color: "Noir et blanc",
@@ -375,9 +348,9 @@ const puppiesUnsorted: Puppy[] = [
         ],
         health: defaultHealth,
         images: puppyImages("KIARA", [
+            "pomsky-noir-blanc-kiara/webp/pomsky-noir-blanc-kiara-3.webp",
             "pomsky-noir-blanc-kiara/webp/pomsky-noir-blanc-kiara-1.webp",
             "pomsky-noir-blanc-kiara/webp/pomsky-noir-blanc-kiara-2.webp",
-            "pomsky-noir-blanc-kiara/webp/pomsky-noir-blanc-kiara-3.webp"
         ]),
         linkTo: formUrls.shadowCharm
     },
@@ -490,8 +463,8 @@ const puppiesUnsorted: Puppy[] = [
         ],
         health: defaultHealth,
         images: puppyImages("ASTON", [
-            "pomsky-noir-blanc-aston/webp/pomsky-noir-blanc-aston-1.webp",
-            "pomsky-noir-blanc-aston/webp/pomsky-noir-blanc-aston-2.webp"
+            "pomsky-noir-blanc-aston/webp/pomsky-noir-blanc-aston-2.webp",
+            "pomsky-noir-blanc-aston/webp/pomsky-noir-blanc-aston-1.webp"
         ]),
         linkTo: formUrls.charmDolly
     },
