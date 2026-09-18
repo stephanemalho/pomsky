@@ -70,6 +70,16 @@ const nextConfig: NextConfig = {
     },
     async redirects() {
         return [
+            {
+                source: "/pages/puppies/pomsky-male-aki/:path*",
+                destination: "/pages/puppies/2026-09/pomsky-male-aki/:path*",
+                permanent: true
+            },
+            {
+                source: "/pages/puppies/pomsky-fluffly-sky/:path*",
+                destination: "/pages/puppies/2026-09/pomsky-fluffly-sky/:path*",
+                permanent: true
+            },
             // Chiots réservés retirés du site : redirection vers un chiot
             // disponible de même couleur, sinon vers la page générale.
             {

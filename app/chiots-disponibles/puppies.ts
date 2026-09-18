@@ -289,11 +289,11 @@ const puppiesUnsorted: Puppy[] = [
         ],
         health: defaultHealth,
         images: puppyImages("AKI BLUE", [
-            "pomsky-male-aki/webp/pomsky-male-aki-1.webp",
-            "pomsky-male-aki/webp/pomsky-male-aki-2.webp",
-            "pomsky-male-aki/webp/pomsky-male-aki-3.webp",
-            "pomsky-male-aki/webp/pomsky-male-aki-4.webp",
-            "pomsky-male-aki/webp/pomsky-male-aki-5.webp"
+            "2026-09/pomsky-male-aki/webp/pomsky-male-aki-1.webp",
+            "2026-09/pomsky-male-aki/webp/pomsky-male-aki-2.webp",
+            "2026-09/pomsky-male-aki/webp/pomsky-male-aki-3.webp",
+            "2026-09/pomsky-male-aki/webp/pomsky-male-aki-4.webp",
+            "2026-09/pomsky-male-aki/webp/pomsky-male-aki-5.webp"
         ]),
         linkTo: formUrls.pweekCharm
     },
@@ -319,10 +319,10 @@ const puppiesUnsorted: Puppy[] = [
         ],
         health: defaultHealth,
         images: puppyImages("SKY BLUE", [
-            "pomsky-fluffly-sky/webp/pomsky-fluffly-sky-1.webp",
-            "pomsky-fluffly-sky/webp/pomsky-fluffly-sky-2.webp",
-            "pomsky-fluffly-sky/webp/pomsky-fluffly-sky-3.webp",
-            "pomsky-fluffly-sky/webp/pomsky-fluffly-sky-4.webp"
+            "2026-09/pomsky-fluffly-sky/webp/pomsky-fluffly-sky-1.webp",
+            "2026-09/pomsky-fluffly-sky/webp/pomsky-fluffly-sky-2.webp",
+            "2026-09/pomsky-fluffly-sky/webp/pomsky-fluffly-sky-3.webp",
+            "2026-09/pomsky-fluffly-sky/webp/pomsky-fluffly-sky-4.webp"
         ]),
         linkTo: formUrls.pweekCharm
     },
