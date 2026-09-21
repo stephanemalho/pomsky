@@ -52,6 +52,8 @@ export default function CookieConsent() {
             win.gtag?.("consent", "update", {
                 analytics_storage: "granted",
                 ad_storage: "granted",
+                ad_user_data: "granted",
+                ad_personalization: "granted",
             })
         } catch { }
         setConsent("accepted")
@@ -124,7 +126,12 @@ export default function CookieConsent() {
                 win[`ga-disable-${GA_ID}`] = true
             }
             if (win.gtag) {
-                win.gtag("consent", "update", { analytics_storage: "denied" })
+                win.gtag("consent", "update", {
+                    analytics_storage: "denied",
+                    ad_storage: "denied",
+                    ad_user_data: "denied",
+                    ad_personalization: "denied",
+                })
             }
         } catch { }
 

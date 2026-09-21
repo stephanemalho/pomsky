@@ -1,5 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
+import { GoogleTagManager } from "@next/third-parties/google"
 import { Questrial } from "next/font/google"
 import CookieConsent from "../components/cookie-consent"
 import AnalyticsConsent from "../components/analytics-consent"
@@ -17,6 +18,8 @@ const questrial = Questrial({
   variable: "--font-questrial",
   fallback: ["Arial", "Helvetica", "ui-sans-serif", "system-ui", "sans-serif"],
 })
+
+const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.siteUrl),
@@ -55,11 +58,12 @@ export default function RootLayout({
 
   return (
     <html lang="fr" suppressHydrationWarning className={`${questrial.variable} scroll-smooth`}>
+      {GTM_ID ? <GoogleTagManager gtmId={GTM_ID} /> : null}
       <head>
         {/* Google Consent Mode v2 — must run before any gtag/GA script */}
         <script
           dangerouslySetInnerHTML={{
-            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{analytics_storage:'denied',ad_storage:'denied',wait_for_update:500});`,
+            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{analytics_storage:'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',wait_for_update:500});`,
           }}
         />
 
