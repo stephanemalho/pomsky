@@ -4,6 +4,7 @@ import { GoogleTagManager } from "@next/third-parties/google"
 import { Questrial } from "next/font/google"
 import CookieConsent from "../components/cookie-consent"
 import AnalyticsConsent from "../components/analytics-consent"
+import ContactButton from "../components/contact-button"
 import "./globals.css"
 import { ThemeProvider } from "next-themes"
 import { Navigation } from "../components/navigation"
@@ -89,6 +90,7 @@ export default function RootLayout({
         </ThemeProvider>
         <CookieConsent />
         <AnalyticsConsent />
+        <ContactButton />
       </body>
     </html>
   )

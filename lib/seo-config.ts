@@ -599,7 +599,7 @@ export const sitemapPages = [
         url: "/politique-de-confidentialite",
         changefreq: "yearly",
         priority: 0.2,
-        lastmod: "2026-02-13"
+        lastmod: "2026-09-29"
     }
 ];
 

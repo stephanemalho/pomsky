@@ -125,7 +125,7 @@ export default function MentionsLegalesPage() {
           <section className="space-y-3">
             <h2 className="text-xl md:text-2xl font-semibold">Liens hypertextes</h2>
             <p className="text-muted-foreground">
-              Les liens externes (Instagram, formulaires, ressources partenaires) sont proposés pour faciliter vos démarches. Royal POMSKY ne contrôle
+              Les liens externes (Instagram, WhatsApp, formulaires, ressources partenaires) sont proposés pour faciliter vos démarches. Royal POMSKY ne contrôle
               pas le contenu de ces sites tiers et décline toute responsabilité quant aux informations qui y figurent.
             </p>
           </section>

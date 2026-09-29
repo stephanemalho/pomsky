@@ -85,7 +85,7 @@ export default function PolitiqueConfidentialitePage() {
                 informations sur le foyer (enfants, autres animaux), préférences de chiot et message libre.
               </li>
               <li>
-                <strong>Échanges directs</strong> (email, téléphone, visio) : informations fournies pour préparer une visite, une réservation ou un suivi post-adoption.
+                <strong>Échanges directs</strong> (email, téléphone, WhatsApp, visio) : informations fournies pour préparer une visite, une réservation ou un suivi post-adoption.
               </li>
               <li>
                 <strong>Mesure d&apos;audience</strong> : statistiques agrégées via Vercel Web Analytics et Google Analytics (activé uniquement après consentement),
@@ -126,8 +126,15 @@ export default function PolitiqueConfidentialitePage() {
             </p>
             <ul className="list-disc pl-5 space-y-2 text-muted-foreground">
               <li><strong>Vercel</strong> (hébergement et analytics agrégées, infrastructure cloud).</li>
-              <li><strong>Google Ireland Ltd.</strong> (Google Analytics via Google Tag Manager, uniquement après consentement).</li>
+              <li><strong>Google Ireland Ltd.</strong> (Google Analytics et Google Tag Manager ; mesure d&apos;audience uniquement après consentement).</li>
             </ul>
+            <p className="text-muted-foreground">
+              Si vous choisissez de nous contacter via WhatsApp, vos échanges transitent par <strong>WhatsApp Ireland Ltd.</strong> (groupe Meta),
+              qui agit en tant que responsable de traitement distinct selon ses propres conditions et sa{" "}
+              <a href="https://www.whatsapp.com/legal/privacy-policy-eea" className="text-primary hover:underline" target="_blank" rel="noreferrer">politique de confidentialité</a>.
+              Le bouton WhatsApp du site est un simple lien : aucune donnée n&apos;est transmise à WhatsApp tant que vous ne l&apos;utilisez pas.
+              Si vous préférez ne pas utiliser ce service, vous pouvez nous joindre par email ou par téléphone.
+            </p>
             <p className="text-muted-foreground">
               Les données ne sont ni vendues ni cédées à des tiers à des fins commerciales.
             </p>
@@ -136,9 +143,10 @@ export default function PolitiqueConfidentialitePage() {
           <section className="space-y-3">
             <h2 className="text-xl md:text-2xl font-semibold">6. Transferts hors UE</h2>
             <p className="text-muted-foreground">
-              Certains prestataires (Vercel, Google) peuvent transférer des données vers les États-Unis.
+              Certains prestataires (Vercel, Google, WhatsApp/Meta) peuvent transférer des données vers les États-Unis.
               Ces transferts sont encadrés par des clauses contractuelles types (SCC) et des mesures complémentaires.
               Lorsque le consentement est requis (Google Analytics), le transfert n&apos;a lieu qu&apos;après acceptation des cookies analytiques.
+              Pour WhatsApp, le transfert n&apos;a lieu que si vous choisissez de nous écrire par ce canal.
             </p>
           </section>
 
@@ -149,7 +157,7 @@ export default function PolitiqueConfidentialitePage() {
               modifier votre choix à tout moment via le bouton de gestion des cookies présent en bas de page.
             </p>
             <ul className="list-disc pl-5 space-y-2 text-muted-foreground">
-              <li><strong>Cookies analytiques</strong> (Google Analytics via GTM) : déposés uniquement après consentement explicite.</li>
+              <li><strong>Cookies analytiques</strong> (Google Analytics) : déposés uniquement après consentement explicite.</li>
               <li><strong>Cookies nécessaires</strong> : fonctionnement du site, sécurité et mesure d&apos;audience agrégée sans traceur individualisant.</li>
             </ul>
             <p className="text-muted-foreground">
