@@ -70,7 +70,7 @@ export default function CookieConsent() {
             const cookies = document.cookie.split(";")
             cookies.forEach((c) => {
                 const name = c.split("=")[0].trim()
-                if (/^(_ga|_gid|_gat|_gac_|_ga_)/.test(name)) {
+                if (/^(_ga|_gid|_gat|_gac_|_ga_|_gcl_)/.test(name)) {
                     domainCandidates.forEach((domain) => {
                         const domainPart = domain ? `; domain=${domain}` : ""
                         document.cookie = `${name}=; Max-Age=0; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/${domainPart}`
@@ -157,8 +157,8 @@ gtag('config', '${GA_ID}');
                 <div className="fixed w-full bottom-4 z-50 md:bottom-8">
                     <div className="max-w-4xl mx-auto h-40 bg-background/95 backdrop-blur border p-4 rounded-lg shadow-lg flex flex-col md:flex-row md:items-center gap-3 md:gap-6">
                         <div className="flex-1 text-sm text-muted-foreground">
-                            Nous utilisons des cookies pour améliorer votre expérience et effectuer des analyses. Acceptez-vous
-                            l'utilisation des cookies analytiques ?   <Button variant="ghost" onClick={decline} className="px-4 py-2 rounded-md">
+                            Nous utilisons des cookies de mesure d'audience (Google Analytics) et publicitaires (Google Ads) pour améliorer
+                            le site et mesurer l'efficacité de nos annonces. Acceptez-vous leur utilisation ?   <Button variant="ghost" onClick={decline} className="px-4 py-2 rounded-md">
                                 Refuser
                             </Button>
                         </div>

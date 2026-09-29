@@ -92,6 +92,10 @@ export default function PolitiqueConfidentialitePage() {
                 incluant pages vues, appareil, région approximative. Les cookies analytiques (_ga, _gid…) ne sont déposés qu&apos;après acceptation.
               </li>
               <li>
+                <strong>Publicité et mesure des conversions</strong> : via Google Ads (activé uniquement après consentement), identifiant publicitaire,
+                pages visitées et interactions permettant de mesurer l&apos;efficacité de nos annonces et de vous proposer des publicités Google (remarketing).
+              </li>
+              <li>
                 <strong>Logs techniques</strong> : données nécessaires à la sécurité et à la prévention des abus (adresses IP, horodatage, événements d&apos;erreur).
               </li>
             </ul>
@@ -104,6 +108,7 @@ export default function PolitiqueConfidentialitePage() {
               <li><strong>Gestion des réservations et dossiers d&apos;adoption</strong> (exécution d&apos;un contrat ou mesures précontractuelles).</li>
               <li><strong>Suivi post-adoption et informations sur l&apos;élevage</strong> (intérêt légitime à assurer la santé et le bien-être des chiens).</li>
               <li><strong>Mesure d&apos;audience et amélioration du site</strong> (consentement pour Google Analytics ; intérêt légitime pour mesures agrégées sans cookie).</li>
+              <li><strong>Mesure des conversions publicitaires et remarketing</strong> via Google Ads (consentement).</li>
               <li><strong>Sécurité du site</strong> et prévention des abus (intérêt légitime).</li>
             </ul>
           </section>
@@ -114,6 +119,7 @@ export default function PolitiqueConfidentialitePage() {
               <li><strong>Demandes et échanges précontractuels</strong> : 3 ans après le dernier contact.</li>
               <li><strong>Dossiers clients et documents contractuels</strong> : durée légale applicable (jusqu&apos;à 10 ans pour les pièces comptables le cas échéant).</li>
               <li><strong>Mesures d&apos;audience</strong> : données Google Analytics conservées 13 mois maximum après consentement.</li>
+              <li><strong>Cookies publicitaires</strong> (Google Ads) : 13 mois maximum après consentement.</li>
               <li><strong>Logs techniques</strong> : 12 mois maximum, sauf obligation légale supérieure.</li>
             </ul>
           </section>
@@ -126,7 +132,7 @@ export default function PolitiqueConfidentialitePage() {
             </p>
             <ul className="list-disc pl-5 space-y-2 text-muted-foreground">
               <li><strong>Vercel</strong> (hébergement et analytics agrégées, infrastructure cloud).</li>
-              <li><strong>Google Ireland Ltd.</strong> (Google Analytics et Google Tag Manager ; mesure d&apos;audience uniquement après consentement).</li>
+              <li><strong>Google Ireland Ltd.</strong> (Google Analytics, Google Tag Manager et Google Ads ; mesure d&apos;audience et publicité uniquement après consentement).</li>
             </ul>
             <p className="text-muted-foreground">
               Si vous choisissez de nous contacter via WhatsApp, vos échanges transitent par <strong>WhatsApp Ireland Ltd.</strong> (groupe Meta),
@@ -145,7 +151,7 @@ export default function PolitiqueConfidentialitePage() {
             <p className="text-muted-foreground">
               Certains prestataires (Vercel, Google, WhatsApp/Meta) peuvent transférer des données vers les États-Unis.
               Ces transferts sont encadrés par des clauses contractuelles types (SCC) et des mesures complémentaires.
-              Lorsque le consentement est requis (Google Analytics), le transfert n&apos;a lieu qu&apos;après acceptation des cookies analytiques.
+              Lorsque le consentement est requis (Google Analytics, Google Ads), le transfert n&apos;a lieu qu&apos;après acceptation des cookies concernés.
               Pour WhatsApp, le transfert n&apos;a lieu que si vous choisissez de nous écrire par ce canal.
             </p>
           </section>
@@ -153,11 +159,12 @@ export default function PolitiqueConfidentialitePage() {
           <section className="space-y-3">
             <h2 className="text-xl md:text-2xl font-semibold">7. Cookies et choix de consentement</h2>
             <p className="text-muted-foreground">
-              Un bandeau de consentement s&apos;affiche lors de votre première visite. Vous pouvez accepter ou refuser les cookies analytiques et
+              Un bandeau de consentement s&apos;affiche lors de votre première visite. Vous pouvez accepter ou refuser les cookies de mesure d&apos;audience et publicitaires et
               modifier votre choix à tout moment via le bouton de gestion des cookies présent en bas de page.
             </p>
             <ul className="list-disc pl-5 space-y-2 text-muted-foreground">
               <li><strong>Cookies analytiques</strong> (Google Analytics) : déposés uniquement après consentement explicite.</li>
+              <li><strong>Cookies publicitaires</strong> (Google Ads) : déposés uniquement après consentement explicite.</li>
               <li><strong>Cookies nécessaires</strong> : fonctionnement du site, sécurité et mesure d&apos;audience agrégée sans traceur individualisant.</li>
             </ul>
             <p className="text-muted-foreground">

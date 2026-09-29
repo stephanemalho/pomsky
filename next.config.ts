@@ -6,7 +6,10 @@ const scriptSrcDirectives = [
     "'unsafe-inline'",
     ...(isDev ? ["'unsafe-eval'"] : []),
     "https://va.vercel-scripts.com",
-    "https://www.googletagmanager.com"
+    "https://www.googletagmanager.com",
+    "https://www.googleadservices.com",
+    "https://www.google.com",
+    "https://googleads.g.doubleclick.net"
 ].join(" ");
 
 const contentSecurityPolicy = [
@@ -19,8 +22,8 @@ const contentSecurityPolicy = [
     "style-src 'self' 'unsafe-inline'",
     "img-src 'self' data: blob: https:",
     "font-src 'self' data:",
-    "connect-src 'self' https://vitals.vercel-insights.com https://va.vercel-scripts.com https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com",
-    "frame-src https://www.googletagmanager.com"
+    "connect-src 'self' https://vitals.vercel-insights.com https://va.vercel-scripts.com https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://www.google.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://*.doubleclick.net",
+    "frame-src https://www.googletagmanager.com https://td.doubleclick.net https://*.doubleclick.net"
 ].join("; ");
 
 const nextConfig: NextConfig = {
