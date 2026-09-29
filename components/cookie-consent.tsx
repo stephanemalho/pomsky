@@ -8,9 +8,6 @@ import { Cookie } from "lucide-react"
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID
 type WindowWithGA = Window & {
     gtag?: (...args: unknown[]) => void
-    dataLayer?: unknown[]
-    google_tag_data?: unknown
-    gaGlobal?: unknown
     [key: `ga-disable-${string}`]: boolean | undefined
 }
 
@@ -97,28 +94,6 @@ export default function CookieConsent() {
         } catch { }
     }, [])
 
-    const removeGAScript = useCallback(() => {
-        if (!GA_ID) return
-        try {
-            const scripts = Array.from(
-                document.querySelectorAll(
-                    'script[data-cookie-consent^="ga"], script[id^="ga-"], script[src*="googletagmanager.com/gtag/js"]'
-                )
-            )
-            scripts.forEach((s) => s.parentElement?.removeChild(s))
-            try {
-                const win = window as unknown as WindowWithGA
-                win[`ga-disable-${GA_ID}`] = true
-                delete win.gtag
-                delete win.dataLayer
-                delete win.google_tag_data
-                delete win.gaGlobal
-            } catch { }
-        } catch (error) {
-            console.warn("cookie-consent: failed to remove GA scripts", error)
-        }
-    }, [])
-
     const revokeAnalyticsConsent = useCallback(() => {
         try {
             const win = window as unknown as WindowWithGA
@@ -137,8 +112,7 @@ export default function CookieConsent() {
 
         clearGACookies()
         clearGAStorage()
-        removeGAScript()
-    }, [clearGACookies, clearGAStorage, removeGAScript])
+    }, [clearGACookies, clearGAStorage])
 
     function decline() {
         try {
@@ -151,7 +125,7 @@ export default function CookieConsent() {
         notifyConsentChange()
     }
 
-    // Remove GA scripts and cookies when refused.
+    // Clear GA cookies when refused.
     useEffect(() => {
         if (consent === "denied") {
             revokeAnalyticsConsent()
