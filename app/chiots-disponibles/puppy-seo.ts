@@ -131,6 +131,10 @@ export function buildPuppyProductStructuredData(puppy: Puppy) {
                     { "@type": "PropertyValue", name: "Format", value: puppy.size },
                     { "@type": "PropertyValue", name: "Poids adulte estimé", value: puppy.weight },
                     { "@type": "PropertyValue", name: "Parents", value: puppy.parents.replace("Parents : ", "") },
+                    { "@type": "PropertyValue", name: "Pelage", value: puppy.ruler },
+                    ...(puppy.highlights.find((highlight) => highlight.toLowerCase().startsWith("yeux"))
+                        ? [{ "@type": "PropertyValue", name: "Yeux", value: puppy.highlights.find((highlight) => highlight.toLowerCase().startsWith("yeux")) }]
+                        : []),
                     { "@type": "PropertyValue", name: "Naissance", value: puppy.age },
                     ...(puppy.birthDate ? [{ "@type": "PropertyValue", name: "Date de naissance", value: puppy.birthDate }] : []),
                     ...(puppy.availableFrom ? [{ "@type": "PropertyValue", name: "Date de disponibilité", value: puppy.availableFrom }] : []),
@@ -208,6 +212,10 @@ export function buildPuppyProductStructuredData(puppy: Puppy) {
             { "@type": "PropertyValue", name: "Format", value: puppy.size },
             { "@type": "PropertyValue", name: "Poids adulte estimé", value: puppy.weight },
             { "@type": "PropertyValue", name: "Parents", value: puppy.parents.replace("Parents : ", "") },
+            { "@type": "PropertyValue", name: "Pelage", value: puppy.ruler },
+            ...(puppy.highlights.find((highlight) => highlight.toLowerCase().startsWith("yeux"))
+                ? [{ "@type": "PropertyValue", name: "Yeux", value: puppy.highlights.find((highlight) => highlight.toLowerCase().startsWith("yeux")) }]
+                : []),
             { "@type": "PropertyValue", name: "Naissance", value: puppy.age },
             ...(puppy.birthDate ? [{ "@type": "PropertyValue", name: "Date de naissance", value: puppy.birthDate }] : []),
             ...(puppy.availableFrom ? [{ "@type": "PropertyValue", name: "Date de disponibilité", value: puppy.availableFrom }] : []),

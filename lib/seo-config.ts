@@ -527,7 +527,7 @@ export const sitemapPages = [
         url: "/chiots-disponibles",
         changefreq: "weekly",
         priority: 0.95,
-        lastmod: "2026-09-17"
+        lastmod: "2026-10-04"
     },
     {
         url: "/le-pomsky",

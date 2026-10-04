@@ -332,9 +332,10 @@ const puppiesUnsorted: Puppy[] = [
         color: "Noir et blanc",
         sexe: "Femelle",
         size: "Toy",
-        ruler: "Masque fleur de lys",
+        ruler: "Pelage fluffy",
         weight: "Poids adulte en cours d'estimation",
         parents: "Parents : SHADOW & CHARM",
+        updatedAt: "2026-10-04",
         readyDate: "Disponible à la réservation",
         age: "Née en septembre 2026",
         description:
@@ -342,15 +343,17 @@ const puppiesUnsorted: Puppy[] = [
         highlights: [
             "Femelle",
             "Noir et blanc",
-            "Masque fleur de lys",
+            "Pelage fluffy",
+            "Yeux bleus",
             "Lignée américaine",
             "Taille Toy"
         ],
         health: defaultHealth,
+        pedigree: "Fédération Française du Pomsky",
         images: puppyImages("KIARA", [
-            "pomsky-noir-blanc-kiara/webp/pomsky-noir-blanc-kiara-3.webp",
             "pomsky-noir-blanc-kiara/webp/pomsky-noir-blanc-kiara-1.webp",
             "pomsky-noir-blanc-kiara/webp/pomsky-noir-blanc-kiara-2.webp",
+            "pomsky-noir-blanc-kiara/webp/pomsky-noir-blanc-kiara-3.webp",
         ]),
         linkTo: formUrls.shadowCharm
     },
@@ -360,9 +363,10 @@ const puppiesUnsorted: Puppy[] = [
         color: "Noir et blanc",
         sexe: "Mâle",
         size: "Miniature",
-        ruler: "Masque fleur de lys",
+        ruler: "Pelage polaire Husky",
         weight: "Poids adulte en cours d'estimation",
         parents: "Parents : SHADOW & CHARM",
+        updatedAt: "2026-10-04",
         readyDate: "Disponible à la réservation",
         age: "Né en septembre 2026",
         description:
@@ -370,15 +374,16 @@ const puppiesUnsorted: Puppy[] = [
         highlights: [
             "Mâle",
             "Noir et blanc",
-            "Masque fleur de lys",
+            "Pelage polaire Husky",
+            "Yeux particolor bleus",
             "Lignée américaine",
             "Taille miniature"
         ],
         health: defaultHealth,
         images: puppyImages("ATLAS", [
-            "pomsky-noir-blanc-atlas/webp/pomsky-noir-blanc-atlas-3.webp",
             "pomsky-noir-blanc-atlas/webp/pomsky-noir-blanc-atlas-1.webp",
             "pomsky-noir-blanc-atlas/webp/pomsky-noir-blanc-atlas-2.webp",
+            "pomsky-noir-blanc-atlas/webp/pomsky-noir-blanc-atlas-3.webp",
             "pomsky-noir-blanc-atlas/webp/pomsky-noir-blanc-atlas-4.webp",
             "pomsky-noir-blanc-atlas/webp/pomsky-noir-blanc-atlas-5.webp"
         ]),
@@ -390,9 +395,10 @@ const puppiesUnsorted: Puppy[] = [
         color: "Noir et blanc",
         sexe: "Mâle",
         size: "Miniature",
-        ruler: "Masque fleur de lys",
+        ruler: "Pelage fluffy",
         weight: "Poids adulte en cours d'estimation",
         parents: "Parents : SHADOW & CHARM",
+        updatedAt: "2026-10-04",
         readyDate: "Disponible à la réservation",
         age: "Né en septembre 2026",
         description:
@@ -400,11 +406,13 @@ const puppiesUnsorted: Puppy[] = [
         highlights: [
             "Mâle",
             "Noir et blanc",
-            "Masque fleur de lys",
+            "Pelage fluffy",
+            "Yeux bleus",
             "Lignée américaine",
             "Taille miniature"
         ],
         health: defaultHealth,
+        pedigree: "Fédération Française du Pomsky",
         images: puppyImages("TOKYO", [
             "pomsky-noir-blanc-tokyo/webp/pomsky-noir-blanc-tokyo-1.webp",
             "pomsky-noir-blanc-tokyo/webp/pomsky-noir-blanc-tokyo-2.webp",
@@ -418,9 +426,10 @@ const puppiesUnsorted: Puppy[] = [
         color: "Noir et blanc",
         sexe: "Femelle",
         size: "Miniature",
-        ruler: "Masque fleur de lys",
+        ruler: "Pelage polaire Husky",
         weight: "Poids adulte en cours d'estimation",
         parents: "Parents : SHADOW & CHARM",
+        updatedAt: "2026-10-04",
         readyDate: "Disponible à la réservation",
         age: "Née en septembre 2026",
         description:
@@ -428,7 +437,8 @@ const puppiesUnsorted: Puppy[] = [
         highlights: [
             "Femelle",
             "Noir et blanc",
-            "Masque fleur de lys",
+            "Pelage polaire Husky",
+            "Yeux bleus",
             "Lignée américaine",
             "Taille miniature"
         ],
@@ -442,13 +452,14 @@ const puppiesUnsorted: Puppy[] = [
     },
     {
         name: "ASTON",
-        coat: "Pomsky F5 (ADN Poméranian / Husky)",
+        coat: "Pomsky F4+ (ADN Poméranian / Husky)",
         color: "Noir et blanc",
         sexe: "Mâle",
-        size: "Toy - Micro",
+        size: "Toy",
         ruler: "Pelage fluffy",
-        weight: "Poids adulte en cours d'estimation",
+        weight: "3 kg adulte",
         parents: "Parents : CHARM & DOLLY",
+        updatedAt: "2026-10-04",
         readyDate: "Disponible à la réservation",
         age: "Né le 5 septembre 2026",
         birthDate: "2026-09-05",
@@ -457,14 +468,16 @@ const puppiesUnsorted: Puppy[] = [
         highlights: [
             "Mâle",
             "Noir et blanc",
-            "Yeux en cours de développement",
+            "Pelage fluffy",
+            "Yeux bleus",
             "Lignée américaine",
-            "Taille Toy-micro"
+            "Taille Toy"
         ],
         health: defaultHealth,
+        pedigree: "Fédération Française du Pomsky",
         images: puppyImages("ASTON", [
-            "pomsky-noir-blanc-aston/webp/pomsky-noir-blanc-aston-2.webp",
-            "pomsky-noir-blanc-aston/webp/pomsky-noir-blanc-aston-1.webp"
+            "pomsky-noir-blanc-aston/webp/pomsky-noir-blanc-aston-1.webp",
+            "pomsky-noir-blanc-aston/webp/pomsky-noir-blanc-aston-2.webp"
         ]),
         linkTo: formUrls.charmDolly
     },
@@ -477,6 +490,7 @@ const puppiesUnsorted: Puppy[] = [
         ruler: "Masque fleur de lys",
         weight: "Poids adulte en cours d'estimation",
         parents: "Parents : CHARM & DOLLY",
+        updatedAt: "2026-10-04",
         readyDate: "Disponible à la réservation",
         age: "Née le 5 septembre 2026",
         birthDate: "2026-09-05",
@@ -486,13 +500,15 @@ const puppiesUnsorted: Puppy[] = [
             "Femelle",
             "Gris noir et blanc",
             "Masque fleur de lys",
+            "Yeux bleus",
             "Lignée américaine",
             "Taille Toy-micro"
         ],
         health: defaultHealth,
+        pedigree: "Fédération Française du Pomsky",
         images: puppyImages("LUNA", [
-            "pomsky-gris-noir-blanc-luna/webp/pomsky-gris-noir-blanc-luna-2.webp",
             "pomsky-gris-noir-blanc-luna/webp/pomsky-gris-noir-blanc-luna-1.webp",
+            "pomsky-gris-noir-blanc-luna/webp/pomsky-gris-noir-blanc-luna-2.webp",
             "pomsky-gris-noir-blanc-luna/webp/pomsky-gris-noir-blanc-luna-3.webp"
         ]),
         linkTo: formUrls.charmDolly
@@ -502,10 +518,11 @@ const puppiesUnsorted: Puppy[] = [
         coat: "Pomsky F5 (ADN Poméranian / Husky)",
         color: "Noir et blanc",
         sexe: "Mâle",
-        size: "Toy - Micro",
-        ruler: "Masque fleur de lys",
-        weight: "Poids adulte en cours d'estimation",
+        size: "Toy",
+        ruler: "Pelage fluffy",
+        weight: "4 kg adulte",
         parents: "Parents : CHARM & DOLLY",
+        updatedAt: "2026-10-04",
         readyDate: "Disponible à la réservation",
         age: "Né le 5 septembre 2026",
         birthDate: "2026-09-05",
@@ -514,11 +531,13 @@ const puppiesUnsorted: Puppy[] = [
         highlights: [
             "Mâle",
             "Noir et blanc",
-            "Masque fleur de lys",
+            "Pelage fluffy",
+            "Yeux bleus",
             "Lignée américaine",
-            "Taille Toy-micro"
+            "Taille Toy"
         ],
         health: defaultHealth,
+        pedigree: "Fédération Française du Pomsky",
         images: puppyImages("VEGAS", [
             "pomsky-noir-blanc-vegas/webp/pomsky-noir-blanc-vegas-1.webp",
             "pomsky-noir-blanc-vegas/webp/pomsky-noir-blanc-vegas-2.webp"
@@ -527,13 +546,14 @@ const puppiesUnsorted: Puppy[] = [
     },
     {
         name: "NOX",
-        coat: "Pomsky F5 (ADN Poméranian / Husky)",
+        coat: "Pomsky F4 (ADN Poméranian / Husky)",
         color: "Noir et blanc",
         sexe: "Mâle",
-        size: "Toy - Micro",
-        ruler: "Masque fleur de lys",
-        weight: "Poids adulte en cours d'estimation",
+        size: "Toy",
+        ruler: "Pelage fluffy",
+        weight: "3 kg",
         parents: "Parents : CHARM & DOLLY",
+        updatedAt: "2026-10-04",
         readyDate: "Disponible à la réservation",
         age: "Né le 5 septembre 2026",
         birthDate: "2026-09-05",
@@ -542,11 +562,13 @@ const puppiesUnsorted: Puppy[] = [
         highlights: [
             "Mâle",
             "Noir et blanc",
-            "Masque fleur de lys",
+            "Pelage fluffy",
+            "Yeux bleus",
             "Lignée américaine",
-            "Taille Toy-micro"
+            "Taille Toy"
         ],
         health: defaultHealth,
+        pedigree: "Fédération Française du Pomsky",
         images: puppyImages("NOX", [
             "pomsky-noir-blanc-nox/webp/pomsky-noir-blanc-nox-1.webp",
             "pomsky-noir-blanc-nox/webp/pomsky-noir-blanc-nox-2.webp"
