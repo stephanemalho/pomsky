@@ -1,3 +1,4 @@
+import { getPuppyParentProfiles } from "./puppy-parents";
 import { siteConfig } from "@/lib/seo-config";
 import { type Puppy } from "./puppies";
 import { getSmallImageSrc } from "@/lib/image-variants";
@@ -67,6 +68,7 @@ export function getPuppyStatusLabel(puppy: Puppy) {
 
     if (status === "available") return "Disponible";
     if (status === "adopted") return puppy.sexe.toLowerCase().includes("femelle") ? "Adoptée" : "Adopté";
+    if (puppy.isReservationPending) return "En cours de réservation";
 
     return puppy.sexe.toLowerCase().includes("femelle") ? "Réservée" : "Réservé";
 }
@@ -84,7 +86,7 @@ export function getPuppySeoDescription(puppy: Puppy) {
             ? ` Prix : ${puppy.priceLabel}.`
             : "";
 
-    return `${puppy.name}, chiot Pomsky ${puppy.color.toLowerCase()} ${puppy.sexe.toLowerCase()} de l'élevage Royal POMSKY. ${puppy.description}${price}`;
+    return `${puppy.name}, chiot Pomsky ${puppy.color.toLowerCase()} ${puppy.sexe.toLowerCase()} de l'élevage Royal POMSKY. ${puppy.description} Statut : ${getPuppyStatusLabel(puppy)}.${price}`;
 }
 
 export function getPuppyLastModified(puppy: Puppy) {
@@ -131,6 +133,7 @@ export function buildPuppyProductStructuredData(puppy: Puppy) {
                     { "@type": "PropertyValue", name: "Format", value: puppy.size },
                     { "@type": "PropertyValue", name: "Poids adulte estimé", value: puppy.weight },
                     { "@type": "PropertyValue", name: "Parents", value: puppy.parents.replace("Parents : ", "") },
+                    ...getPuppyParentProfiles(puppy.parents).map((parent) => ({ "@type": "PropertyValue", name: parent.role, value: parent.name })),
                     { "@type": "PropertyValue", name: "Pelage", value: puppy.ruler },
                     ...(puppy.highlights.find((highlight) => highlight.toLowerCase().startsWith("yeux"))
                         ? [{ "@type": "PropertyValue", name: "Yeux", value: puppy.highlights.find((highlight) => highlight.toLowerCase().startsWith("yeux")) }]
@@ -212,6 +215,7 @@ export function buildPuppyProductStructuredData(puppy: Puppy) {
             { "@type": "PropertyValue", name: "Format", value: puppy.size },
             { "@type": "PropertyValue", name: "Poids adulte estimé", value: puppy.weight },
             { "@type": "PropertyValue", name: "Parents", value: puppy.parents.replace("Parents : ", "") },
+                    ...getPuppyParentProfiles(puppy.parents).map((parent) => ({ "@type": "PropertyValue", name: parent.role, value: parent.name })),
             { "@type": "PropertyValue", name: "Pelage", value: puppy.ruler },
             ...(puppy.highlights.find((highlight) => highlight.toLowerCase().startsWith("yeux"))
                 ? [{ "@type": "PropertyValue", name: "Yeux", value: puppy.highlights.find((highlight) => highlight.toLowerCase().startsWith("yeux")) }]

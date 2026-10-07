@@ -1,4 +1,5 @@
 export type PuppyImage = {
+    fit?: "cover" | "contain";
     src: string;
     thumbSrc?: string;
     sourceSrc?: string;
@@ -25,6 +26,7 @@ export type Puppy = {
     images: PuppyImage[];
     linkTo: string;
     isReserved?: boolean;
+    isReservationPending?: boolean;
     isAdopted?: boolean;
     price?: number;
     priceLabel?: string;
@@ -73,13 +75,16 @@ const defaultHealth = ["Suivi vétérinaire en cours"];
 function puppyImages(
     name: string,
     files: string[],
-    metadataFormat: "jpeg" | "png" = "jpeg"
+    metadataFormat: "jpeg" | "png" = "jpeg",
+    coverAlt?: string,
+    coverFit?: PuppyImage["fit"]
 ): PuppyImage[] {
     return files.map((file, index) => {
         const hasAgeVariants = /-[67]semaines?\.webp$/.test(file);
         const hasDirectoryFormatVariants = file.includes("/webp/");
 
         return {
+            ...(index === 0 && coverFit ? { fit: coverFit } : {}),
             src: `pages/puppies/${file}`,
             thumbSrc: `pages/puppies/${file.replace(".webp", "-sm.webp")}`,
             sourceSrc: `pages/puppies/${file}`,
@@ -101,7 +106,7 @@ function puppyImages(
                           ? `pages/puppies/${file.replace("/webp/", "/png/").replace(".webp", ".png")}`
                           : undefined
                     : undefined,
-            alt: `${name}, chiot Pomsky Royal POMSKY - photo ${index + 1}`
+            alt: index === 0 && coverAlt ? coverAlt : `${name}, chiot Pomsky Royal POMSKY - photo ${index + 1}`
         };
     });
 }
@@ -299,6 +304,8 @@ const puppiesUnsorted: Puppy[] = [
     },
     {
         name: "SKY BLUE",
+        isReserved: true,
+        updatedAt: "2026-10-08",
         coat: "Pomsky F4+ (ADN Poméranian / Husky)",
         color: "Bleu",
         sexe: "Mâle",
@@ -306,7 +313,7 @@ const puppiesUnsorted: Puppy[] = [
         ruler: "Pelage fluffy",
         weight: "3 kg adulte",
         parents: "Parents : WILLOW & BANDIT",
-        readyDate: "Disponible",
+        readyDate: "Réservé",
         age: "Né le [date à préciser]",
         description:
             "Sky Blue est un mâle Pomsky F4+ issu de Willow et Bandit. Il présente des yeux gris, un pelage fluffy et une couleur bleu. Format Toy-micro.",
@@ -328,6 +335,8 @@ const puppiesUnsorted: Puppy[] = [
     },
     {
         name: "KIARA",
+        isReserved: true,
+        isReservationPending: true,
         coat: "Pomsky F4 (ADN Poméranian / Husky)",
         color: "Noir et blanc",
         sexe: "Femelle",
@@ -335,8 +344,8 @@ const puppiesUnsorted: Puppy[] = [
         ruler: "Pelage fluffy",
         weight: "Poids adulte en cours d'estimation",
         parents: "Parents : SHADOW & CHARM",
-        updatedAt: "2026-10-04",
-        readyDate: "Disponible à la réservation",
+        updatedAt: "2026-10-08",
+        readyDate: "En cours de réservation",
         age: "Née en septembre 2026",
         description:
             "Kiara est une femelle Pomsky Toy F4 née en septembre 2026, issue de Shadow et Charm. Elle arbore une robe noire et blanche rehaussée d'un masque fleur de lys, signature d'une prestigieuse lignée américaine.",
@@ -351,10 +360,10 @@ const puppiesUnsorted: Puppy[] = [
         health: defaultHealth,
         pedigree: "Fédération Française du Pomsky",
         images: puppyImages("KIARA", [
-            "pomsky-noir-blanc-kiara/webp/pomsky-noir-blanc-kiara-1.webp",
-            "pomsky-noir-blanc-kiara/webp/pomsky-noir-blanc-kiara-2.webp",
-            "pomsky-noir-blanc-kiara/webp/pomsky-noir-blanc-kiara-3.webp",
-        ]),
+            "pomsky-noir-blanc-kiara/webp/kiara-chiot-pomsky-f4-noir-blanc-yeux-bleus-couverture-20261008.webp",
+            "pomsky-noir-blanc-kiara/webp/kiara-chiot-pomsky-f4-noir-blanc-yeux-bleus-photo-2-20261008.webp",
+            "pomsky-noir-blanc-kiara/webp/kiara-chiot-pomsky-f4-noir-blanc-yeux-bleus-photo-3-20261008.webp",
+        ], "jpeg", "Kiara, femelle Pomsky Toy F4 noire et blanche aux yeux bleus, assise chez Royal POMSKY", "contain"),
         linkTo: formUrls.shadowCharm
     },
     {
@@ -366,7 +375,7 @@ const puppiesUnsorted: Puppy[] = [
         ruler: "Pelage polaire Husky",
         weight: "Poids adulte en cours d'estimation",
         parents: "Parents : SHADOW & CHARM",
-        updatedAt: "2026-10-04",
+        updatedAt: "2026-10-08",
         readyDate: "Disponible à la réservation",
         age: "Né en septembre 2026",
         description:
@@ -381,16 +390,21 @@ const puppiesUnsorted: Puppy[] = [
         ],
         health: defaultHealth,
         images: puppyImages("ATLAS", [
-            "pomsky-noir-blanc-atlas/webp/pomsky-noir-blanc-atlas-1.webp",
-            "pomsky-noir-blanc-atlas/webp/pomsky-noir-blanc-atlas-2.webp",
-            "pomsky-noir-blanc-atlas/webp/pomsky-noir-blanc-atlas-3.webp",
+            "pomsky-noir-blanc-atlas/webp/atlas-chiot-pomsky-f4-noir-blanc-yeux-bleus-20261007.webp",
+            "pomsky-noir-blanc-atlas/webp/atlas-chiot-pomsky-f4-noir-blanc-yeux-bleus-photo-2-20261008.webp",
+            "pomsky-noir-blanc-atlas/webp/atlas-chiot-pomsky-f4-noir-blanc-yeux-bleus-photo-3-20261008.webp",
             "pomsky-noir-blanc-atlas/webp/pomsky-noir-blanc-atlas-4.webp",
-            "pomsky-noir-blanc-atlas/webp/pomsky-noir-blanc-atlas-5.webp"
-        ]),
+            "pomsky-noir-blanc-atlas/webp/pomsky-noir-blanc-atlas-5.webp",
+            "pomsky-noir-blanc-atlas/webp/atlas-chiot-pomsky-f4-noir-blanc-yeux-bleus-photo-6-20261008.webp",
+            "pomsky-noir-blanc-atlas/webp/atlas-chiot-pomsky-f4-noir-blanc-yeux-bleus-photo-7-20261008.webp",
+            "pomsky-noir-blanc-atlas/webp/atlas-chiot-pomsky-f4-noir-blanc-yeux-bleus-photo-8-20261008.webp",
+            "pomsky-noir-blanc-atlas/webp/atlas-chiot-pomsky-f4-noir-blanc-yeux-bleus-photo-9-20261008.webp"
+        ], "jpeg", "Atlas, chiot Pomsky F4 miniature noir et blanc aux yeux bleus, de face chez Royal POMSKY", "contain"),
         linkTo: formUrls.shadowCharm
     },
     {
         name: "TOKYO",
+        isReserved: true,
         coat: "Pomsky F4 (ADN Poméranian / Husky)",
         color: "Noir et blanc",
         sexe: "Mâle",
@@ -398,8 +412,8 @@ const puppiesUnsorted: Puppy[] = [
         ruler: "Pelage fluffy",
         weight: "Poids adulte en cours d'estimation",
         parents: "Parents : SHADOW & CHARM",
-        updatedAt: "2026-10-04",
-        readyDate: "Disponible à la réservation",
+        updatedAt: "2026-10-08",
+        readyDate: "Réservé",
         age: "Né en septembre 2026",
         description:
             "Tokyo est un mâle Pomsky miniature F4 né en septembre 2026, issu de Shadow et Charm. Il arbore une robe noire et blanche rehaussée d'un masque fleur de lys, signature d'une prestigieuse lignée américaine.",
@@ -414,10 +428,10 @@ const puppiesUnsorted: Puppy[] = [
         health: defaultHealth,
         pedigree: "Fédération Française du Pomsky",
         images: puppyImages("TOKYO", [
-            "pomsky-noir-blanc-tokyo/webp/pomsky-noir-blanc-tokyo-1.webp",
+            "pomsky-noir-blanc-tokyo/webp/tokyo-chiot-pomsky-f4-noir-blanc-yeux-bleus-couverture-20261008.webp",
             "pomsky-noir-blanc-tokyo/webp/pomsky-noir-blanc-tokyo-2.webp",
             "pomsky-noir-blanc-tokyo/webp/pomsky-noir-blanc-tokyo-3.webp"
-        ]),
+        ], "jpeg", "Tokyo, chiot Pomsky F4 miniature noir et blanc aux yeux bleus, assis chez Royal POMSKY", "contain"),
         linkTo: formUrls.shadowCharm
     },
     {
@@ -429,7 +443,7 @@ const puppiesUnsorted: Puppy[] = [
         ruler: "Pelage polaire Husky",
         weight: "Poids adulte en cours d'estimation",
         parents: "Parents : SHADOW & CHARM",
-        updatedAt: "2026-10-04",
+        updatedAt: "2026-10-08",
         readyDate: "Disponible à la réservation",
         age: "Née en septembre 2026",
         description:
@@ -444,27 +458,30 @@ const puppiesUnsorted: Puppy[] = [
         ],
         health: defaultHealth,
         images: puppyImages("NIKITA", [
-            "pomsky-noir-blanc-nikita/webp/pomsky-noir-blanc-nikita-1.webp",
+            "pomsky-noir-blanc-nikita/webp/nikita-chiot-pomsky-f4-noir-blanc-yeux-bleus-couverture-20261008.webp",
             "pomsky-noir-blanc-nikita/webp/pomsky-noir-blanc-nikita-2.webp",
-            "pomsky-noir-blanc-nikita/webp/pomsky-noir-blanc-nikita-3.webp"
-        ]),
+            "pomsky-noir-blanc-nikita/webp/pomsky-noir-blanc-nikita-3.webp",
+            "pomsky-noir-blanc-nikita/webp/nikita-chiot-pomsky-f4-noir-blanc-yeux-bleus-photo-4-20261008.webp",
+            "pomsky-noir-blanc-nikita/webp/nikita-chiot-pomsky-f4-noir-blanc-yeux-bleus-photo-5-20261008.webp",
+            "pomsky-noir-blanc-nikita/webp/nikita-chiot-pomsky-f4-noir-blanc-yeux-bleus-photo-6-20261008.webp"
+        ], "jpeg", "Nikita, femelle Pomsky F4 miniature noire et blanche aux yeux bleus, assise chez Royal POMSKY", "contain"),
         linkTo: formUrls.shadowCharm
     },
     {
         name: "ASTON",
-        coat: "Pomsky F4+ (ADN Poméranian / Husky)",
+        coat: "Pomsky F4 (ADN Poméranian / Husky)",
         color: "Noir et blanc",
         sexe: "Mâle",
         size: "Toy",
         ruler: "Pelage fluffy",
         weight: "3 kg adulte",
         parents: "Parents : CHARM & DOLLY",
-        updatedAt: "2026-10-04",
+        updatedAt: "2026-10-08",
         readyDate: "Disponible à la réservation",
         age: "Né le 5 septembre 2026",
         birthDate: "2026-09-05",
         description:
-            "Aston est un mâle Pomsky F5 né le 5 septembre 2026, issu de Charm et Dolly. Robe noire et blanche, format Toy-micro et lignées prestigieuses américaines. Ses yeux sont encore en cours de développement.",
+            "Aston est un mâle Pomsky F4 né le 5 septembre 2026, issu de Charm et Dolly. Robe noire et blanche, format Toy-micro et lignées prestigieuses américaines. Ses yeux sont encore en cours de développement.",
         highlights: [
             "Mâle",
             "Noir et blanc",
@@ -476,26 +493,30 @@ const puppiesUnsorted: Puppy[] = [
         health: defaultHealth,
         pedigree: "Fédération Française du Pomsky",
         images: puppyImages("ASTON", [
-            "pomsky-noir-blanc-aston/webp/pomsky-noir-blanc-aston-1.webp",
-            "pomsky-noir-blanc-aston/webp/pomsky-noir-blanc-aston-2.webp"
-        ]),
+            "pomsky-noir-blanc-aston/webp/aston-chiot-pomsky-f4-noir-blanc-yeux-bleus-photo-1-20261008.webp",
+            "pomsky-noir-blanc-aston/webp/aston-chiot-pomsky-f4-noir-blanc-yeux-bleus-photo-2-20261008.webp",
+            "pomsky-noir-blanc-aston/webp/aston-chiot-pomsky-f4-noir-blanc-yeux-bleus-photo-3-20261008.webp",
+            "pomsky-noir-blanc-aston/webp/aston-chiot-pomsky-f4-noir-blanc-yeux-bleus-photo-4-20261008.webp",
+            "pomsky-noir-blanc-aston/webp/aston-chiot-pomsky-f4-noir-blanc-yeux-bleus-photo-5-20261008.webp"
+        ], "jpeg", "Aston, chiot Pomsky Toy F4 noir et blanc aux yeux bleus, assis chez Royal POMSKY", "contain"),
         linkTo: formUrls.charmDolly
     },
     {
         name: "LUNA",
-        coat: "Pomsky F5 (ADN Poméranian / Husky)",
+        isReserved: true,
+        coat: "Pomsky F4 (ADN Poméranian / Husky)",
         color: "Gris noir et blanc",
         sexe: "Femelle",
         size: "Toy - Micro",
         ruler: "Masque fleur de lys",
         weight: "Poids adulte en cours d'estimation",
         parents: "Parents : CHARM & DOLLY",
-        updatedAt: "2026-10-04",
-        readyDate: "Disponible à la réservation",
+        updatedAt: "2026-10-08",
+        readyDate: "Réservée",
         age: "Née le 5 septembre 2026",
         birthDate: "2026-09-05",
         description:
-            "Luna est une femelle Pomsky Toy-micro F5 née le 5 septembre 2026, issue de Charm et Dolly. Elle arbore une robe grise, noire et blanche rehaussée d'un masque fleur de lys, signature d'une prestigieuse lignée américaine.",
+            "Luna est une femelle Pomsky Toy-micro F4 née le 5 septembre 2026, issue de Charm et Dolly. Elle arbore une robe grise, noire et blanche rehaussée d'un masque fleur de lys, signature d'une prestigieuse lignée américaine.",
         highlights: [
             "Femelle",
             "Gris noir et blanc",
@@ -507,27 +528,28 @@ const puppiesUnsorted: Puppy[] = [
         health: defaultHealth,
         pedigree: "Fédération Française du Pomsky",
         images: puppyImages("LUNA", [
-            "pomsky-gris-noir-blanc-luna/webp/pomsky-gris-noir-blanc-luna-1.webp",
+            "pomsky-gris-noir-blanc-luna/webp/luna-chiot-pomsky-f4-gris-noir-blanc-couverture-20261008.webp",
             "pomsky-gris-noir-blanc-luna/webp/pomsky-gris-noir-blanc-luna-2.webp",
             "pomsky-gris-noir-blanc-luna/webp/pomsky-gris-noir-blanc-luna-3.webp"
-        ]),
+        ], "jpeg", "Luna, femelle Pomsky Toy-micro F4 grise, noire et blanche, assise chez Royal POMSKY", "contain"),
         linkTo: formUrls.charmDolly
     },
     {
         name: "VEGAS",
-        coat: "Pomsky F5 (ADN Poméranian / Husky)",
+        isReserved: true,
+        coat: "Pomsky F4 (ADN Poméranian / Husky)",
         color: "Noir et blanc",
         sexe: "Mâle",
         size: "Toy",
         ruler: "Pelage fluffy",
         weight: "4 kg adulte",
         parents: "Parents : CHARM & DOLLY",
-        updatedAt: "2026-10-04",
-        readyDate: "Disponible à la réservation",
+        updatedAt: "2026-10-08",
+        readyDate: "Réservé",
         age: "Né le 5 septembre 2026",
         birthDate: "2026-09-05",
         description:
-            "Vegas est un mâle Pomsky Toy-micro F5 né le 5 septembre 2026, issu de Charm et Dolly. Il arbore une robe noire et blanche rehaussée d'un masque fleur de lys, signature d'une prestigieuse lignée américaine.",
+            "Vegas est un mâle Pomsky Toy-micro F4 né le 5 septembre 2026, issu de Charm et Dolly. Il arbore une robe noire et blanche rehaussée d'un masque fleur de lys, signature d'une prestigieuse lignée américaine.",
         highlights: [
             "Mâle",
             "Noir et blanc",
@@ -539,9 +561,10 @@ const puppiesUnsorted: Puppy[] = [
         health: defaultHealth,
         pedigree: "Fédération Française du Pomsky",
         images: puppyImages("VEGAS", [
-            "pomsky-noir-blanc-vegas/webp/pomsky-noir-blanc-vegas-1.webp",
-            "pomsky-noir-blanc-vegas/webp/pomsky-noir-blanc-vegas-2.webp"
-        ]),
+            "pomsky-noir-blanc-vegas/webp/vegas-chiot-pomsky-f4-noir-blanc-yeux-bleus-photo-1-20261008.webp",
+            "pomsky-noir-blanc-vegas/webp/vegas-chiot-pomsky-f4-noir-blanc-yeux-bleus-photo-2-20261008.webp",
+            "pomsky-noir-blanc-vegas/webp/vegas-chiot-pomsky-f4-noir-blanc-yeux-bleus-photo-3-20261008.webp"
+        ], "jpeg", "Vegas, chiot Pomsky Toy F4 noir et blanc aux yeux bleus, assis chez Royal POMSKY", "contain"),
         linkTo: formUrls.charmDolly
     },
     {
@@ -553,12 +576,12 @@ const puppiesUnsorted: Puppy[] = [
         ruler: "Pelage fluffy",
         weight: "3 kg",
         parents: "Parents : CHARM & DOLLY",
-        updatedAt: "2026-10-04",
+        updatedAt: "2026-10-08",
         readyDate: "Disponible à la réservation",
         age: "Né le 5 septembre 2026",
         birthDate: "2026-09-05",
         description:
-            "Nox est un mâle Pomsky Toy-micro F5 né le 5 septembre 2026, issu de Charm et Dolly. Il arbore une robe noire et blanche rehaussée d'un masque fleur de lys, signature d'une prestigieuse lignée américaine.",
+            "Nox est un mâle Pomsky Toy-micro F4 né le 5 septembre 2026, issu de Charm et Dolly. Il arbore une robe noire et blanche rehaussée d'un masque fleur de lys, signature d'une prestigieuse lignée américaine.",
         highlights: [
             "Mâle",
             "Noir et blanc",
@@ -570,9 +593,10 @@ const puppiesUnsorted: Puppy[] = [
         health: defaultHealth,
         pedigree: "Fédération Française du Pomsky",
         images: puppyImages("NOX", [
-            "pomsky-noir-blanc-nox/webp/pomsky-noir-blanc-nox-1.webp",
-            "pomsky-noir-blanc-nox/webp/pomsky-noir-blanc-nox-2.webp"
-        ]),
+            "pomsky-noir-blanc-nox/webp/nox-chiot-pomsky-f4-noir-blanc-yeux-bleus-photo-1-20261008.webp",
+            "pomsky-noir-blanc-nox/webp/nox-chiot-pomsky-f4-noir-blanc-yeux-bleus-photo-2-20261008.webp",
+            "pomsky-noir-blanc-nox/webp/nox-chiot-pomsky-f4-noir-blanc-yeux-bleus-photo-3-20261008.webp"
+        ], "jpeg", "Nox, chiot Pomsky Toy F4 noir et blanc aux yeux bleus, assis chez Royal POMSKY", "contain"),
         linkTo: formUrls.charmDolly
     }
 ];

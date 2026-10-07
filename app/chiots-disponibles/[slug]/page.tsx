@@ -118,7 +118,7 @@ export async function generateMetadata({ params }: PuppyPageProps): Promise<Meta
             `chiot Pomsky ${puppy.name}`,
             `Pomsky ${puppy.color}`,
             `chiot Pomsky ${puppy.sexe.toLowerCase()}`,
-            "chiot Pomsky disponible",
+            `chiot Pomsky ${getPuppyStatusLabel(puppy).toLowerCase()}`,
             "élevage Pomsky France",
         ],
         openGraph: buildOpenGraph({
@@ -128,22 +128,22 @@ export async function generateMetadata({ params }: PuppyPageProps): Promise<Meta
             images: [
                 ...(firstPngImage ? [{
                     url: `${siteConfig.siteUrl}${firstPngImage}`,
-                    alt: `${puppy.name}, chiot Pomsky ${puppy.color} de l'élevage Royal POMSKY`,
+                    alt: firstPuppyImage?.alt ?? `${puppy.name}, chiot Pomsky ${puppy.color} de l'élevage Royal POMSKY`,
                     type: "image/png",
                 }] : []),
                 ...(firstJpegImage ? [{
                     url: `${siteConfig.siteUrl}${firstJpegImage}`,
-                    alt: `${puppy.name}, chiot Pomsky ${puppy.color} de l'élevage Royal POMSKY`,
+                    alt: firstPuppyImage?.alt ?? `${puppy.name}, chiot Pomsky ${puppy.color} de l'élevage Royal POMSKY`,
                     type: "image/jpeg",
                 }] : []),
                 {
                     url: `${siteConfig.siteUrl}${firstImage}`,
-                    alt: `${puppy.name}, chiot Pomsky ${puppy.color} de l'élevage Royal POMSKY`,
+                    alt: firstPuppyImage?.alt ?? `${puppy.name}, chiot Pomsky ${puppy.color} de l'élevage Royal POMSKY`,
                     type: "image/webp",
                 },
                 ...(firstAvifImage ? [{
                     url: `${siteConfig.siteUrl}${firstAvifImage}`,
-                    alt: `${puppy.name}, chiot Pomsky ${puppy.color} de l'élevage Royal POMSKY`,
+                    alt: firstPuppyImage?.alt ?? `${puppy.name}, chiot Pomsky ${puppy.color} de l'élevage Royal POMSKY`,
                     type: "image/avif",
                 }] : []),
             ],
@@ -335,13 +335,17 @@ export default async function PuppyDetailPage({ params }: PuppyPageProps) {
                                                     aria-label={`Voir les reproducteurs, dont ${parent.name}, ${parent.role.toLowerCase()} de ${puppy.name}`}
                                                 >
                                                     <span className="relative h-16 w-16 shrink-0 overflow-hidden rounded-full border-2 border-primary/15 bg-muted shadow-sm">
-                                                        <Image
-                                                            src={parent.image}
-                                                            alt={`${parent.name}, ${parent.role.toLowerCase()} de ${puppy.name}`}
-                                                            fill
-                                                            className="object-cover"
-                                                            sizes="64px"
-                                                        />
+                                                        {parent.image ? (
+                                                            <Image
+                                                                src={parent.image}
+                                                                alt={`${parent.name}, ${parent.role.toLowerCase()} de ${puppy.name}`}
+                                                                fill
+                                                                className="object-cover"
+                                                                sizes="64px"
+                                                            />
+                                                        ) : (
+                                                            <span className="flex h-full w-full items-center justify-center text-lg font-semibold text-primary" aria-hidden="true">{parent.name.charAt(0)}</span>
+                                                        )}
                                                     </span>
                                                     <span className="min-w-0">
                                                         <span className="flex items-center gap-1.5 text-sm font-semibold text-muted-foreground">

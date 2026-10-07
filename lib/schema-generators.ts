@@ -77,6 +77,7 @@ type PuppyCatalogSchemaInput = {
     interestFormUrl?: string;
     certificationIds?: string[];
     status: "available" | "reserved" | "adopted";
+    statusLabel?: string;
 };
 
 function getSchemaImagePath(image: string | { src: string; alt?: string }) {
@@ -310,7 +311,7 @@ export function generatePuppyCatalogSchema(puppies: PuppyCatalogSchemaInput[]) {
     const itemListId = `${toAbsoluteUrl(siteConfig.pages.puppies)}#chiots-catalogue`;
     const puppyNodes = puppies.map((puppy) => {
         const additionalProperty = [
-            toAdditionalProperty("Statut", getStructuredStatusLabel(puppy.status)),
+            toAdditionalProperty("Statut", puppy.statusLabel ?? getStructuredStatusLabel(puppy.status)),
             toAdditionalProperty("Sexe", puppy.sexe),
             toAdditionalProperty("Couleur", puppy.color),
             toAdditionalProperty("Génération", puppy.coat),

@@ -148,6 +148,8 @@ export default function NosChiotsPage() {
                 ];
             }),
             status: getPuppyStatus(puppy),
+            statusLabel: getPuppyStatusLabel(puppy),
+            parents: getPuppyParentProfiles(puppy.parents).map((parent) => `${parent.role} : ${parent.name}`).join(" ; ") || puppy.parents,
             url: getPuppyUrl(puppy),
             interestFormUrl: puppy.linkTo,
             certificationIds: getCertificationIdsForPuppy(puppy),
@@ -226,7 +228,7 @@ export default function NosChiotsPage() {
                                                 <Link
                                                     href={puppyUrl}
                                                     className="relative block h-96 w-full overflow-hidden bg-muted transition-opacity hover:opacity-90 sm:h-120 md:h-full md:min-h-full"
-                                                    aria-label={`Voir la fiche détaillée de ${puppy.name}`}
+                                                    aria-label={`Voir plus de photos de ${puppy.name}`}
                                                 >
                                                     {firstImage ? (
                                                         <PuppyPicture
@@ -237,6 +239,9 @@ export default function NosChiotsPage() {
                                                             priority={index === 0}
                                                         />
                                                     ) : null}
+                                                    <span className="absolute bottom-3 right-3 z-10 rounded-full bg-background/95 px-3 py-2 text-xs font-semibold text-foreground shadow-md ring-1 ring-primary/20 backdrop-blur-sm">
+                                                        Voir plus de photos
+                                                    </span>
                                                 </Link>
 
                                                 <div className="min-w-0 space-y-2 p-4 text-left md:space-y-3 md:p-6">
@@ -289,13 +294,17 @@ export default function NosChiotsPage() {
                                                                         aria-label={`Voir ${parent.name}, ${parent.role.toLowerCase()} de ${puppy.name}`}
                                                                     >
                                                                         <span className="relative h-11 w-11 shrink-0 overflow-hidden rounded-full border border-primary/10 bg-background">
-                                                                            <Image
-                                                                                src={parent.image}
-                                                                                alt={`${parent.name}, ${parent.role.toLowerCase()} de ${puppy.name}`}
-                                                                                fill
-                                                                                className="object-cover"
-                                                                                sizes="44px"
-                                                                            />
+                                                                            {parent.image ? (
+                                                                                <Image
+                                                                                    src={parent.image}
+                                                                                    alt={`${parent.name}, ${parent.role.toLowerCase()} de ${puppy.name}`}
+                                                                                    fill
+                                                                                    className="object-cover"
+                                                                                    sizes="44px"
+                                                                                />
+                                                                            ) : (
+                                                                                <span className="flex h-full w-full items-center justify-center text-lg font-semibold text-primary" aria-hidden="true">{parent.name.charAt(0)}</span>
+                                                                            )}
                                                                         </span>
                                                                         <span className="min-w-0">
                                                                             <span className="flex items-center gap-1 text-xs font-medium text-muted-foreground">

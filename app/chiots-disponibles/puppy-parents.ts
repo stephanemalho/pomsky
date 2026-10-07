@@ -1,7 +1,7 @@
 export type PuppyParentProfile = {
     role: "Mère" | "Père";
     name: string;
-    image: string;
+    image?: string;
     description: string;
     href: string;
 };
@@ -123,8 +123,13 @@ export const puppyParentProfilesByLabel: Record<string, PuppyParentProfile[]> = 
             href: `/femelles-reproductrices#${getReproductorAnchorId("CHARM")}`,
         },
     ],
-    // TODO : ajouter Dolly (ni fiche reproductrice ni photo pour l'instant)
     "Parents : CHARM & DOLLY": [
+        {
+            role: "Mère",
+            name: "Dolly",
+            description: "Femelle Pomsky",
+            href: "/femelles-reproductrices",
+        },
         {
             role: "Père",
             name: "Charm",

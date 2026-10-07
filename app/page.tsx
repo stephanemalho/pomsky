@@ -25,8 +25,8 @@ const HOME_METADATA_WEBP_IMAGE = "/assets/authors/marine-ava.webp"
 const HOME_METADATA_FALLBACK_IMAGE = "/assets/authors/marine-and-pomsky-in-grass.jpeg"
 const optimizedImageBase = "/images/optimized"
 const pomskyFamilySources = {
-  avif: `${optimizedImageBase}/pomsky-family-480.avif 480w, ${optimizedImageBase}/pomsky-family-768.avif 768w, ${optimizedImageBase}/pomsky-family-1024.avif 1024w`,
-  webp: `${optimizedImageBase}/pomsky-family-480.webp 480w, ${optimizedImageBase}/pomsky-family-768.webp 768w, ${optimizedImageBase}/pomsky-family-1024.webp 1024w`,
+  avif: `${optimizedImageBase}/chiots-pomsky-toy-yeux-bleus-elevage-royal-pomsky-0746-480.avif 480w, ${optimizedImageBase}/chiots-pomsky-toy-yeux-bleus-elevage-royal-pomsky-0746-768.avif 768w, ${optimizedImageBase}/chiots-pomsky-toy-yeux-bleus-elevage-royal-pomsky-0746-1024.avif 1024w`,
+  webp: `${optimizedImageBase}/chiots-pomsky-toy-yeux-bleus-elevage-royal-pomsky-0746-480.webp 480w, ${optimizedImageBase}/chiots-pomsky-toy-yeux-bleus-elevage-royal-pomsky-0746-768.webp 768w, ${optimizedImageBase}/chiots-pomsky-toy-yeux-bleus-elevage-royal-pomsky-0746-1024.webp 1024w`,
 }
 const akashaSources = {
   avif: `${optimizedImageBase}/akasha-pomsky-toy-f4-360.avif 360w, ${optimizedImageBase}/akasha-pomsky-toy-f4-480.avif 480w, ${optimizedImageBase}/akasha-pomsky-toy-f4-640.avif 640w, ${optimizedImageBase}/akasha-pomsky-toy-f4-768.avif 768w`,
@@ -241,11 +241,11 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(homeVideoSchema) }}
       />
       <div className="flex flex-col">
-        <section className="bg-accent-foreground">
-          <div className="overflow-hidden bg-linear-to-b from-[#1a090d] via-[#870518] to-[#1a090d]">
+        <section className="bg-[#233b35]">
+          <div className="overflow-hidden bg-linear-to-b from-[#233b35] via-[#526d5f] to-[#233b35]">
             <div className="container mx-auto px-4 py-6 md:px-6 md:py-8 lg:px-8 lg:py-10">
               <div className="mx-auto max-w-6xl space-y-5 md:space-y-6">
-                <div className="mx-auto max-w-6xl rounded-xl md:rounded-4xl border border-white/12 bg-[#47131b]/72 px-6 py-6 text-center text-white shadow-[0_30px_100px_rgba(0,0,0,0.32)] backdrop-blur-sm md:px-8">
+                <div className="mx-auto max-w-6xl rounded-xl md:rounded-4xl border border-white/12 bg-[#2d473e]/72 px-6 py-6 text-center text-white shadow-[0_30px_100px_rgba(0,0,0,0.32)] backdrop-blur-sm md:px-8">
                   <div className="mx-auto max-w-4xl">
                     <div className="mx-auto inline-flex items-center gap-3 px-4 py-1 text-md uppercase tracking-[0.35em] text-white/80">
                       Royal Pomsky
@@ -255,13 +255,13 @@ export default function HomePage() {
                     </h1>
                   </div>
                 </div>
-                <div className="mx-auto max-w-6xl overflow-hidden rounded-xl md:rounded-4xl border border-white/12 bg-[#3a1117]/55 shadow-[0_30px_100px_rgba(0,0,0,0.28)] backdrop-blur-sm">
+                <div className="mx-auto max-w-6xl overflow-hidden rounded-xl md:rounded-4xl border border-white/12 bg-[#294238]/55 shadow-[0_30px_100px_rgba(0,0,0,0.28)] backdrop-blur-sm">
                   <figure>
                     <div className="relative aspect-4/3 sm:aspect-16/11 md:aspect-16/8 lg:aspect-16/7">
                       <ResponsivePicture
                         sources={pomskyFamilySources}
-                        fallback={`${optimizedImageBase}/pomsky-family-1024.webp`}
-                        alt="Pomsky Royal POMSKY auprès de sa famille dans un moment de complicité"
+                        fallback={`${optimizedImageBase}/chiots-pomsky-toy-yeux-bleus-elevage-royal-pomsky-0746-1024.webp`}
+                        alt="Trois chiots Pomsky Toy aux yeux bleus de l'élevage Royal POMSKY"
                         width={1300}
                         height={869}
                         loading="eager"
@@ -271,15 +271,15 @@ export default function HomePage() {
                         className="absolute inset-0"
                         imgClassName="h-full w-full object-cover object-center"
                       />
-                      <div className="absolute inset-0 bg-linear-to-t from-[#2a0d12]/35 via-transparent to-transparent" aria-hidden="true" />
+                      <div className="absolute inset-0 bg-linear-to-t from-[#20382f]/35 via-transparent to-transparent" aria-hidden="true" />
                     </div>
                     <figcaption className="px-5 py-3 text-xs leading-relaxed text-white/72">
-                      Koda, Pomsky Toy de Royal Pomsky à sa taille adulte.
+                      Chiots Pomsky Toy aux yeux bleus élevés par Royal POMSKY.
                     </figcaption>
                   </figure>
                 </div>
 
-                <div className="mx-auto max-w-6xl rounded-xl md:rounded-4xl border border-white/12 bg-[#2b0d13]/82 px-6 py-6 text-white shadow-[0_35px_120px_rgba(0,0,0,0.4)] backdrop-blur-md md:px-8 md:py-8 lg:px-10">
+                <div className="mx-auto max-w-6xl rounded-xl md:rounded-4xl border border-white/12 bg-[#233b35]/82 px-6 py-6 text-white shadow-[0_35px_120px_rgba(0,0,0,0.4)] backdrop-blur-md md:px-8 md:py-8 lg:px-10">
                   <p className="text-sm font-medium uppercase tracking-[0.28em] text-white/72">
                     {pageContent.home.h1Subtitle}
                   </p>
@@ -481,7 +481,7 @@ export default function HomePage() {
                         key={puppy.name}
                         href={getPuppyUrl(puppy)}
                         className="group block focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-                        aria-label={`Voir la fiche de ${puppy.name}`}
+                        aria-label={`Voir plus de photos de ${puppy.name}`}
                       >
                         <span className="relative block aspect-square overflow-hidden rounded-lg border border-primary/12 bg-background shadow-sm transition group-hover:border-primary/35 group-hover:shadow-md">
                           {firstImage ? (
@@ -492,6 +492,9 @@ export default function HomePage() {
                               sizes="(min-width: 1280px) 132px, (min-width: 1024px) 15vw, (min-width: 768px) 22vw, (min-width: 640px) 30vw, 46vw"
                             />
                           ) : null}
+                          <span className="absolute bottom-2 right-2 z-10 max-w-[calc(100%-1rem)] rounded-xl bg-background/95 px-2 py-1.5 text-right text-[10px] font-semibold leading-tight text-foreground shadow-md ring-1 ring-primary/20 backdrop-blur-sm">
+                            Voir plus de photos
+                          </span>
                         </span>
                         <span className="mt-2 block truncate text-center text-sm font-semibold text-foreground group-hover:text-primary">
                           {puppy.name}

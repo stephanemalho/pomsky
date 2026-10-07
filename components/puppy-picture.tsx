@@ -42,7 +42,11 @@ export function PuppyPicture({
 }: PuppyPictureProps) {
     const webpSrcSet = getVariantSrcSet(getPuppySourceImageSrc(image));
     const avifSrcSet = getVariantSrcSet(getPuppyAvifImageSrc(image));
-    const resolvedStyle = fill ? { ...fillStyle, ...style } : style;
+    const resolvedStyle = {
+        ...(fill ? fillStyle : {}),
+        ...style,
+        ...(image.fit ? { objectFit: image.fit } : {}),
+    };
     const resolvedLoading = loading ?? (priority ? "eager" : "lazy");
     const resolvedFetchPriority = fetchPriority ?? (priority ? "high" : "auto");
 
