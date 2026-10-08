@@ -33,13 +33,13 @@ const akashaSources = {
   webp: `${optimizedImageBase}/akasha-pomsky-toy-f4-360.webp?v=7625 360w, ${optimizedImageBase}/akasha-pomsky-toy-f4-480.webp?v=7625 480w, ${optimizedImageBase}/akasha-pomsky-toy-f4-640.webp?v=7625 640w, ${optimizedImageBase}/akasha-pomsky-toy-f4-768.webp?v=7625 768w`,
 }
 const pomskyStandardSources = {
-  avif: `${optimizedImageBase}/pomsky-standard-size-480.avif 480w, ${optimizedImageBase}/pomsky-standard-size-768.avif 768w, ${optimizedImageBase}/pomsky-standard-size-1024.avif 1024w`,
-  webp: `${optimizedImageBase}/pomsky-standard-size-480.webp 480w, ${optimizedImageBase}/pomsky-standard-size-768.webp 768w, ${optimizedImageBase}/pomsky-standard-size-1024.webp 1024w`,
+  avif: `${optimizedImageBase}/pomsky-standard-size-480.avif?v=7417 480w, ${optimizedImageBase}/pomsky-standard-size-768.avif?v=7417 768w, ${optimizedImageBase}/pomsky-standard-size-1024.avif?v=7417 1024w`,
+  webp: `${optimizedImageBase}/pomsky-standard-size-480.webp?v=7417 480w, ${optimizedImageBase}/pomsky-standard-size-768.webp?v=7417 768w, ${optimizedImageBase}/pomsky-standard-size-1024.webp?v=7417 1024w`,
 }
 const pomskyFamilySizes = "(max-width: 768px) calc(100vw - 32px), (max-width: 1024px) calc(100vw - 80px), 680px"
 const akashaSizes = "(max-width: 768px) 85vw, 640px"
 const pomskyStandardSizes = "(max-width: 768px) calc(100vw - 32px), 680px"
-const pomskyStandardAlt = "Pomsky de l'élevage Royal POMSKY debout dans l'herbe, utilisé pour illustrer les différents formats"
+const pomskyStandardAlt = "Chiot Pomsky de l'élevage Royal POMSKY parmi des fleurs roses, utilisé pour illustrer les différents formats"
 const homeVideoAnchor = `${siteConfig.pages.home}#instant-a-l-elevage`
 const homeVideoSchema = generateVideoObjectSchema({
   name: "Moment de vie à l'élevage Royal POMSKY",
@@ -411,7 +411,7 @@ export default function HomePage() {
                       {item.alt === pomskyStandardAlt ? (
                         <ResponsivePicture
                           sources={pomskyStandardSources}
-                          fallback={`${optimizedImageBase}/pomsky-standard-size-1024.webp`}
+                          fallback={`${optimizedImageBase}/pomsky-standard-size-1024.webp?v=7417`}
                           alt={item.alt}
                           width={1300}
                           height={868}

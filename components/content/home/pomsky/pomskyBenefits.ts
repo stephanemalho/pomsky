@@ -18,7 +18,7 @@ export const pomskyBenefits: BenefitCard[] = [
         title: "Pomsky de taille standard, mini ou Toy : comment choisir ?",
         text: "Un chien Pomsky de taille standard mesure environ 39 à 45 cm au garrot à l'âge adulte. Il existe également des Pomsky Miniature, qui mesurent entre 36 et 40 cm au garrot. En dessous de cette taille, on parle plutôt de Pomsky Toy.",
         image: pomskySize,
-        alt: "Pomsky de l'élevage Royal POMSKY debout dans l'herbe, utilisé pour illustrer les différents formats"
+        alt: "Chiot Pomsky de l'élevage Royal POMSKY parmi des fleurs roses, utilisé pour illustrer les différents formats"
     },
     {
         title: "Quel type de poils pour le Pomsky ?",
