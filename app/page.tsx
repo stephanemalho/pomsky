@@ -20,9 +20,9 @@ import { InternalLinksSection, type InternalLinkItem } from "@/components/Intern
 import { PuppyPicture } from "@/components/puppy-picture"
 import { SectionTitleIcon } from "@/components/section-title-icon"
 
-const HOME_OG_IMAGE = "/pomsky-and-his-pet-family-parent.jpg"
-const HOME_METADATA_WEBP_IMAGE = "/assets/authors/marine-ava.webp"
-const HOME_METADATA_FALLBACK_IMAGE = "/assets/authors/marine-and-pomsky-in-grass.jpeg"
+const HOME_OG_IMAGE = "/images/optimized/chiots-pomsky-toy-yeux-bleus-elevage-royal-pomsky-0746-1024.webp"
+const HOME_METADATA_WEBP_IMAGE = HOME_OG_IMAGE
+const HOME_METADATA_FALLBACK_IMAGE = "/images/optimized/chiots-pomsky-toy-yeux-bleus-elevage-royal-pomsky-0746-1024.jpg"
 const optimizedImageBase = "/images/optimized"
 const pomskyFamilySources = {
   avif: `${optimizedImageBase}/chiots-pomsky-toy-yeux-bleus-elevage-royal-pomsky-0746-480.avif 480w, ${optimizedImageBase}/chiots-pomsky-toy-yeux-bleus-elevage-royal-pomsky-0746-768.avif 768w, ${optimizedImageBase}/chiots-pomsky-toy-yeux-bleus-elevage-royal-pomsky-0746-1024.avif 1024w`,
@@ -120,16 +120,16 @@ export const metadata: Metadata = {
     images: [
       {
         url: `${siteConfig.siteUrl}${HOME_METADATA_WEBP_IMAGE}`,
-        alt: "Marine avec un Pomsky",
-        width: siteConfig.ogImageWidth,
-        height: siteConfig.ogImageHeight,
+        alt: "Trois chiots Pomsky Toy aux yeux bleus de l’élevage Royal POMSKY",
+        width: 1024,
+        height: 683,
         type: "image/webp",
       },
       {
         url: `${siteConfig.siteUrl}${HOME_METADATA_FALLBACK_IMAGE}`,
-        alt: "Marine avec un Pomsky dans l'herbe",
-        width: siteConfig.ogImageWidth,
-        height: siteConfig.ogImageHeight,
+        alt: "Trois chiots Pomsky Toy aux yeux bleus de l’élevage Royal POMSKY",
+        width: 1024,
+        height: 683,
         type: "image/jpeg",
       },
     ],

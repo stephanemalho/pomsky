@@ -21,6 +21,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
             | "yearly"
             | "never",
         priority: page.priority,
+        ...(page.url === siteConfig.pages.home
+            ? { images: [toUrl("/images/optimized/chiots-pomsky-toy-yeux-bleus-elevage-royal-pomsky-0746-1024.webp")] }
+            : {}),
     }));
 
     const blogListEntry: MetadataRoute.Sitemap[number] = {
