@@ -138,37 +138,3 @@
     :where(main .lucide-users, main .lucide-camera, main .lucide-video, main .lucide-instagram) { color: var(--color-fuchsia-500); }
     :where(main .lucide-phone, main .lucide-mail, main .lucide-map-pin, main .lucide-weight, main .lucide-search) { color: var(--color-sky-500); }
 }
-
-.home-elegant-background {
-    position: relative;
-    isolation: isolate;
-    overflow: hidden;
-    background: radial-gradient(ellipse at 8% 10%, #e9d9c650, transparent 48%),
-        radial-gradient(ellipse at 96% 85%, #dfc6bf45, transparent 45%), #faf7f2;
-}
-.home-elegant-background::before,
-.home-elegant-background::after {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    width: clamp(26rem, 65vw, 70rem);
-    height: clamp(38rem, 85vw, 90rem);
-    border: 1px solid #b89b6b40;
-    border-radius: 50%;
-    pointer-events: none;
-}
-.home-elegant-background::before {
-    left: -32%;
-    top: -12%;
-    transform: rotate(-28deg);
-    box-shadow: 20px 0 0 -19px #b89b6b30, 46px 0 0 -45px #b89b6b20;
-}
-.home-elegant-background::after {
-    right: -35%;
-    bottom: -20%;
-    transform: rotate(32deg);
-    box-shadow: -24px 0 0 -23px #b89b6b30, -52px 0 0 -51px #b89b6b20;
-}
-.dark .home-elegant-background {
-    background: radial-gradient(ellipse at 10% 10%, #9a795220, transparent 50%), #241e20;
-}
