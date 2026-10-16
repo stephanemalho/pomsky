@@ -242,10 +242,11 @@ export default function HomePage() {
       />
       <div className="flex flex-col">
         <section className="bg-[#faf6f2] dark:bg-[#241e20]">
-          <div className="overflow-hidden bg-[url(/patterns/pomsky-doodles.svg)] bg-repeat">
+          <div className="overflow-hidden bg-repeat" style={{ backgroundImage: "url(/patterns/pomsky-doodles.svg)", backgroundSize: "320px 272px" }}>
             <div className="container mx-auto px-4 py-6 md:px-6 md:py-8 lg:px-8 lg:py-10">
-              <div className="mx-auto max-w-6xl space-y-5 md:space-y-6">
-                <div className="mx-auto max-w-6xl rounded-xl md:rounded-4xl border border-primary/10 bg-background/90 px-6 py-6 text-center text-foreground shadow-sm backdrop-blur-sm md:px-8">
+              <div className="mx-auto max-w-6xl space-y-8 md:space-y-10">
+                <div aria-hidden="true" className="h-24 rounded-2xl bg-repeat md:h-32" style={{ backgroundImage: "url(/patterns/pomsky-doodles.svg)", backgroundSize: "240px 204px", backgroundPosition: "center 15%" }} />
+                <div className="mx-auto max-w-6xl rounded-xl md:rounded-4xl border border-primary/10 bg-background/85 px-6 py-6 text-center text-foreground shadow-sm md:px-8">
                   <div className="mx-auto max-w-4xl">
                     <div className="mx-auto inline-flex items-center gap-3 px-4 py-1 text-md uppercase tracking-[0.35em] text-primary">
                       Royal Pomsky

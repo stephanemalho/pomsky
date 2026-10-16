@@ -1,17 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="400" height="340" viewBox="0 0 400 340" fill="none" stroke-linecap="round" stroke-linejoin="round">
- <g stroke="#b88597" stroke-width="1.6" opacity=".36">
+ <g stroke="#b88597" stroke-width="1.6" opacity=".72">
   <path d="M54 73 49 40 70 55q14-5 27 0l22-15-5 33q6 30-30 43Q48 103 54 73Z"/>
   <path d="m57 49 3 18 10-8m39-10-3 18-10-8M83 65l-9 18-13-5m22-13 9 18 13-5M68 83l5 2m22-2-5 2m-12 9h10l-5 6Zm5 6v5m-7-1q7 5 14 0"/>
   <path d="M273 248c-17-22-38 4 0 25 38-21 17-47 0-25Z"/>
  </g>
- <g stroke="#63999b" stroke-width="1.6" opacity=".35">
+ <g stroke="#63999b" stroke-width="1.6" opacity=".65">
   <path d="M286 49q23 18 15 53m-4-18q-25-1-23-18 18-2 23 18Zm5 10q20-5 20-21-18 0-20 21Z"/>
   <path d="M58 255q29-18 38-46m-25 36q-19-8-13-22 18 4 13 22Zm11-14q20 6 26-10-16-10-26 10Z"/>
  </g>
- <g fill="#aaa1bf" opacity=".32">
+ <g fill="#aaa1bf" opacity=".60">
   <ellipse cx="201" cy="157" rx="5" ry="7" transform="rotate(-25 201 157)"/><ellipse cx="215" cy="151" rx="5" ry="7" transform="rotate(10 215 151)"/><ellipse cx="227" cy="160" rx="5" ry="7" transform="rotate(35 227 160)"/>
   <path d="M204 173q11-21 20 0c7 13-27 13-20 0Z"/>
   <circle cx="164" cy="283" r="2"/><circle cx="352" cy="162" r="2"/><circle cx="176" cy="53" r="2"/>
  </g>
- <g stroke="#c5a16f" stroke-width="1.5" opacity=".38"><path d="m349 292 3 7 8 3-8 3-3 8-3-8-8-3 8-3Zm-203-81 2 5 5 2-5 2-2 5-2-5-5-2 5-2Z"/></g>
+ <g stroke="#c5a16f" stroke-width="1.5" opacity=".65"><path d="m349 292 3 7 8 3-8 3-3 8-3-8-8-3 8-3Zm-203-81 2 5 5 2-5 2-2 5-2-5-5-2 5-2Z"/></g>
 </svg>
