@@ -256,7 +256,7 @@ export default function NosChiotsPage() {
 
                                                 <div className="min-w-0 space-y-2 p-4 text-left md:space-y-3 md:p-6">
                                                     <div className="space-y-1">
-                                                        <h2 className="text-xl font-bold md:text-2xl">{puppy.name}</h2>
+                                                        <h2 className={`text-xl font-bold md:text-2xl ${puppy.sexe.toLowerCase().includes("femelle") ? "text-pink-600 dark:text-pink-400" : "text-blue-600 dark:text-blue-400"}`}>{puppy.name}</h2>
                                                         <p className="line-clamp-3 text-sm leading-relaxed text-muted-foreground md:line-clamp-none md:text-base">
                                                             {puppy.description}
                                                         </p>

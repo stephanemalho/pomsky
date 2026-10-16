@@ -264,7 +264,7 @@ export default async function PuppyDetailPage({ params }: PuppyPageProps) {
 
                                 <div>
                                     <h1 className="text-3xl font-bold md:text-4xl">
-                                        {puppy.name}, chiot Pomsky {puppy.color.toLowerCase()}
+                                        <span className={puppy.sexe.toLowerCase().includes("femelle") ? "text-pink-600 dark:text-pink-400" : "text-blue-600 dark:text-blue-400"}>{puppy.name}</span>, chiot Pomsky {puppy.color.toLowerCase()}
                                     </h1>
                                     <p className="mt-3 text-lg leading-relaxed text-muted-foreground">
                                         {puppy.description}
@@ -472,7 +472,7 @@ function PuppyNavigationCard({
                 <span className="block text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">
                     {label}
                 </span>
-                <span className="block truncate text-lg font-bold group-hover:text-primary">
+                <span className={`block truncate text-lg font-bold ${puppy.sexe.toLowerCase().includes("femelle") ? "text-pink-600 dark:text-pink-400" : "text-blue-600 dark:text-blue-400"}`}>
                     {puppy.name}
                 </span>
                 <span className="block text-sm text-muted-foreground">
