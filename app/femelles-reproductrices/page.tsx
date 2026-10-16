@@ -111,7 +111,7 @@ export default function NosChiotsPage() {
                             const sexColor = isFemale ? "text-pink-600 dark:text-pink-400" : "text-blue-600 dark:text-blue-400"
                             const sexBadge = isFemale ? "bg-pink-100 text-pink-700 dark:bg-pink-950/40 dark:text-pink-300" : "bg-blue-100 text-blue-700 dark:bg-blue-950/40 dark:text-blue-300"
                             return (
-                            <Card key={puppy.name} className="overflow-hidden bg-muted/30 p-0 md:p-6">
+                            <Card key={puppy.name} className={`overflow-hidden p-0 md:p-6 ${isFemale ? "bg-pink-50 dark:bg-pink-950/25" : "bg-blue-50 dark:bg-blue-950/25"}`}>
                                 <CardContent className="p-0">
                                     <div className={`grid md:grid-cols-2 gap-0 ${index % 2 === 1 ? "md:grid-flow-col-dense" : ""}`}>
                                         <ImageCarousel

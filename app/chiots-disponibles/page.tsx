@@ -228,7 +228,7 @@ export default function NosChiotsPage() {
                                 return (
                                     <Card
                                         key={puppy.name}
-                                        className={`relative overflow-hidden bg-background ${isReserved ? "border-2 border-green-600 ring-2 ring-green-600/20 ring-offset-2 ring-offset-background" : ""}`}
+                                        className={`relative overflow-hidden ${puppy.sexe.toLowerCase().includes("femelle") ? "bg-pink-50 dark:bg-pink-950/25" : "bg-blue-50 dark:bg-blue-950/25"} ${isReserved ? "border-2 border-green-600 ring-2 ring-green-600/20 ring-offset-2 ring-offset-background" : ""}`}
                                     >
                                         <CardContent className="p-0">
                                             <div className="grid md:grid-cols-[220px_1fr_auto] md:items-stretch">
