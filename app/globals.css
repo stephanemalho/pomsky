@@ -126,3 +126,15 @@
         background-image: radial-gradient(circle at top, rgba(207, 115, 90, 0.16), transparent 34%), linear-gradient(180deg, #1f1717 0%, #171312 100%);
     }
 }
+
+/* Decorative icons share a palette; explicit utility colors take precedence. */
+@layer base {
+    :where(main .lucide-heart, main .lucide-heart-handshake, main .lucide-heart-pulse) { color: var(--color-rose-500); }
+    :where(main .lucide-paw-print, main .lucide-dog) { color: var(--color-violet-500); }
+    :where(main .lucide-shield-check, main .lucide-badge-check, main .lucide-check, main .lucide-check-circle, main .lucide-check-circle-2, main .lucide-sprout, main .lucide-leaf) { color: var(--color-emerald-500); }
+    :where(main .lucide-banknote, main .lucide-wallet) { color: var(--color-teal-500); }
+    :where(main .lucide-book-open, main .lucide-file-text, main .lucide-scroll-text) { color: var(--color-indigo-500); }
+    :where(main .lucide-calendar, main .lucide-calendar-days, main .lucide-home, main .lucide-house, main .lucide-sun, main .lucide-star) { color: var(--color-amber-500); }
+    :where(main .lucide-users, main .lucide-camera, main .lucide-video, main .lucide-instagram) { color: var(--color-fuchsia-500); }
+    :where(main .lucide-phone, main .lucide-mail, main .lucide-map-pin, main .lucide-weight, main .lucide-search) { color: var(--color-sky-500); }
+}

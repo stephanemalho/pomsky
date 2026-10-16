@@ -2,10 +2,13 @@ import Link from "next/link"
 import type { LucideIcon } from "lucide-react"
 import { Banknote, BookOpen, Camera, Dog, Heart, Home, PawPrint, Phone, Users } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { getNavigationIconColor } from "@/lib/icon-colors"
 
 const navGroups = [
     {
         label: "Pomsky",
+        icon: PawPrint,
+        iconColor: "text-violet-600 dark:text-violet-400",
         items: [
             {
                 title: "Découvrir le Pomsky",
@@ -29,6 +32,8 @@ const navGroups = [
     },
     {
         label: "L'élevage",
+        icon: Home,
+        iconColor: "text-amber-600 dark:text-amber-400",
         items: [
             {
                 title: "Présentation de Royal POMSKY",
@@ -64,6 +69,8 @@ const navGroups = [
     },
     {
         label: "Adoption",
+        icon: Heart,
+        iconColor: "text-rose-600 dark:text-rose-400",
         items: [
             {
                 title: "Nos chiots disponibles",
@@ -96,16 +103,19 @@ export function DesktopNav() {
                         href="/"
                         className="inline-flex h-9 items-center justify-center rounded-md px-4 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                     >
+                        <Home className="mr-2 h-4 w-4 text-amber-600 dark:text-amber-400" aria-hidden="true" />
                         Accueil
                     </Link>
                 </li>
                 {navGroups.map((group) => {
+                    const GroupIcon = group.icon
                     return (
                         <li key={group.label} className="group relative">
                             <button
                                 type="button"
                                 className="inline-flex h-9 items-center justify-center rounded-md px-4 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                             >
+                                <GroupIcon className={`mr-2 h-4 w-4 ${group.iconColor}`} aria-hidden="true" />
                                 {group.label}
                             </button>
                             <div className="invisible absolute left-0 top-full z-50 pt-2 opacity-0 transition group-focus-within:visible group-focus-within:opacity-100 group-hover:visible group-hover:opacity-100">
@@ -148,7 +158,7 @@ function ListItem({ title, children, href, icon: Icon }: ListItemProps) {
                 )}
             >
                 <div className="flex items-start gap-3">
-                    <span className="mt-0.5 inline-flex h-8 min-h-8 w-8 min-w-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary transition-colors group-hover/item:bg-primary/15">
+                    <span className={cn("mt-0.5 inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full transition-transform group-hover/item:scale-110", getNavigationIconColor(href))}>
                         <Icon className="h-4 w-4" aria-hidden="true" />
                     </span>
                     <div className="space-y-1.5">

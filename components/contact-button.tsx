@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import { FaWhatsapp } from "react-icons/fa6"
+import { FaFacebookF, FaInstagram, FaTiktok, FaWhatsapp } from "react-icons/fa6"
 import { Phone, X } from "lucide-react"
 import { siteConfig } from "@/lib/seo-config"
 
@@ -58,18 +58,50 @@ export default function ContactButton() {
                     </a>
                 </div>
             )}
-            <button
-                type="button"
-                aria-label={open ? "Fermer le menu de contact" : "Nous contacter"}
-                title="Nous contacter"
-                aria-haspopup="menu"
-                aria-expanded={open}
-                aria-controls="contact-menu"
-                onClick={() => setOpen((value) => !value)}
-                className="bg-[#25D366] text-white p-3 rounded-full shadow-md cursor-pointer hover:brightness-95 transition"
-            >
-                {open ? <X className="size-6" /> : <FaWhatsapp className="size-6" />}
-            </button>
+            <div className="flex items-center gap-2">
+                <a
+                    href={siteConfig.socialLinks.tiktok}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Suivre Royal POMSKY sur TikTok (nouvel onglet)"
+                    title="TikTok Royal POMSKY"
+                    className="rounded-full bg-black p-3 text-white shadow-md transition hover:brightness-95 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                >
+                    <FaTiktok className="size-6" aria-hidden="true" />
+                </a>
+                <a
+                    href={siteConfig.socialLinks.facebook}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Suivre Royal POMSKY sur Facebook (nouvel onglet)"
+                    title="Facebook Royal POMSKY"
+                    className="rounded-full bg-[#1877F2] p-3 text-white shadow-md transition hover:brightness-95 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                >
+                    <FaFacebookF className="size-6" aria-hidden="true" />
+                </a>
+                <a
+                    href={siteConfig.socialLinks.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Suivre Royal POMSKY sur Instagram (nouvel onglet)"
+                    title="Instagram Royal POMSKY"
+                    className="rounded-full bg-linear-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] p-3 text-white shadow-md transition hover:brightness-95 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                >
+                    <FaInstagram className="size-6" aria-hidden="true" />
+                </a>
+                <button
+                    type="button"
+                    aria-label={open ? "Fermer le menu de contact" : "Nous contacter"}
+                    title="Nous contacter"
+                    aria-haspopup="menu"
+                    aria-expanded={open}
+                    aria-controls="contact-menu"
+                    onClick={() => setOpen((value) => !value)}
+                    className="bg-[#25D366] text-white p-3 rounded-full shadow-md cursor-pointer hover:brightness-95 transition"
+                >
+                    {open ? <X className="size-6" /> : <FaWhatsapp className="size-6" />}
+                </button>
+            </div>
         </div>
     )
 }

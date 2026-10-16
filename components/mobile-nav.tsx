@@ -8,6 +8,7 @@ import { Banknote, BookOpen, Camera, Dog, Heart, Home, Menu, PawPrint, Phone, Us
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetDescription, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
 import { cn } from "@/lib/utils"
+import { getNavigationIconColor } from "@/lib/icon-colors"
 
 const navigation = [
     { name: "Accueil", href: "/", icon: Home },
@@ -67,7 +68,7 @@ export function MobileNav() {
                             )}
                             aria-current={pathname === item.href ? "page" : undefined}
                         >
-                            <span className="inline-flex h-8 min-h-8 w-8 min-w-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+                            <span className={cn("inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full", getNavigationIconColor(item.href))}>
                                 <Icon className="h-4 w-4" aria-hidden="true" />
                             </span>
                             {item.name}
