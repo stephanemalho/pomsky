@@ -1,3 +1,4 @@
+import PhotoZoom from "@/components/client/PhotoZoom";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -7,7 +8,6 @@ import {
     BadgeCheck,
     Banknote,
     Calendar,
-    Dog,
     FileText,
     Heart,
     MapPin,
@@ -55,7 +55,9 @@ function getPuppyPriceLabel(puppy: Puppy) {
         return formatPuppyPrice(puppy.price, puppy.priceCurrency ?? "EUR");
     }
 
-    return puppy.priceLabel ?? "Prix à définir";
+    return puppy.priceLabel && !/^prix à définir$/i.test(puppy.priceLabel.trim())
+        ? puppy.priceLabel
+        : null;
 }
 
 function getAdjacentPuppies(puppy: Puppy) {
@@ -178,6 +180,10 @@ export default async function PuppyDetailPage({ params }: PuppyPageProps) {
     const status = getPuppyStatus(puppy);
     const statusLabel = getPuppyStatusLabel(puppy);
     const isAvailable = status === "available";
+    const SexIcon = puppy.sexe.toLowerCase().includes("femelle") ? Venus : Mars;
+    const sexActionClass = puppy.sexe.toLowerCase().includes("femelle")
+        ? "bg-pink-600 text-white hover:bg-pink-700 focus-visible:outline-pink-600"
+        : "bg-blue-600 text-white hover:bg-blue-700 focus-visible:outline-blue-600";
     const priceLabel = getPuppyPriceLabel(puppy);
     const parentProfiles = getPuppyParentProfiles(puppy.parents);
     const litterCertification = getLitterCertificationForPuppy(puppy);
@@ -238,6 +244,7 @@ export default async function PuppyDetailPage({ params }: PuppyPageProps) {
                                             : "(min-width: 1024px) 25vw, 50vw"}
                                         className="object-contain p-2"
                                     />
+                                    <PhotoZoom src={image.sourceSrc ?? image.src} alt={image.alt} compact={index === 0} />
                                 </figure>
                             ))}
                         </div>
@@ -246,11 +253,11 @@ export default async function PuppyDetailPage({ params }: PuppyPageProps) {
                             <div className="space-y-4">
                                 <div className="flex flex-wrap items-center gap-2">
                                     <Badge variant="secondary">
-                                        <PawPrint className="mr-1 h-4 w-4" aria-hidden="true" />
+                                        <SexIcon className={`mr-1 h-4 w-4 ${puppy.sexe.toLowerCase().includes("femelle") ? "text-pink-600 dark:text-pink-400" : "text-blue-600 dark:text-blue-400"}`} aria-hidden="true" />
                                         {puppy.coat}
                                     </Badge>
                                     <Badge variant="outline">{puppy.color}</Badge>
-                                    <Badge className={isAvailable ? "bg-primary text-primary-foreground hover:bg-primary" : "bg-green-700 text-white hover:bg-green-700"}>
+                                    <Badge className={isAvailable ? sexActionClass : "bg-green-700 text-white hover:bg-green-700"}>
                                         {statusLabel}
                                     </Badge>
                                 </div>
@@ -269,23 +276,23 @@ export default async function PuppyDetailPage({ params }: PuppyPageProps) {
                                 <CardContent className="p-0">
                                     <dl className="divide-y divide-primary/10 text-sm">
                                         {[
-                                            { icon: Dog, label: "Sexe", value: puppy.sexe },
-                                            { icon: Heart, label: "Parents", value: puppy.parents.replace("Parents : ", "") },
-                                            { icon: FileText, label: "Pédigrée", value: puppy.pedigree ?? "Fédération Française du Pomsky" },
-                                            { icon: Calendar, label: "Disponibilité", value: puppy.readyDate },
-                                            { icon: PawPrint, label: "Naissance", value: puppy.age },
-                                            { icon: Weight, label: "Poids estimé", value: puppy.weight },
-                                            { icon: BadgeCheck, label: "Format", value: puppy.size },
-                                            { icon: ShieldCheck, label: "Pelage", value: puppy.ruler },
-                                            { icon: Banknote, label: "Prix", value: priceLabel },
-                                            { icon: MapPin, label: "Remise", value: "Retrait à l'élevage uniquement, sauf cas particulier pour les pays étrangers. Nous accompagnons les adoptants si besoin pour préserver les meilleures conditions du chiot." },
+                                            { icon: SexIcon, iconColor: puppy.sexe.toLowerCase().includes("femelle") ? "text-pink-600 dark:text-pink-400" : "text-blue-600 dark:text-blue-400", label: "Sexe", value: puppy.sexe },
+                                            { icon: Heart, iconColor: "text-rose-600 dark:text-rose-400", label: "Parents", value: puppy.parents.replace("Parents : ", "") },
+                                            { icon: FileText, iconColor: "text-indigo-600 dark:text-indigo-400", label: "Pédigrée", value: puppy.pedigree ?? "Fédération Française du Pomsky" },
+                                            { icon: Calendar, iconColor: "text-amber-600 dark:text-amber-400", label: "Disponibilité", value: puppy.readyDate },
+                                            { icon: PawPrint, iconColor: "text-violet-600 dark:text-violet-400", label: "Naissance", value: puppy.age },
+                                            { icon: Weight, iconColor: "text-teal-600 dark:text-teal-400", label: "Poids estimé", value: puppy.weight },
+                                            { icon: BadgeCheck, iconColor: "text-blue-600 dark:text-blue-400", label: "Format", value: puppy.size },
+                                            { icon: ShieldCheck, iconColor: "text-emerald-600 dark:text-emerald-400", label: "Pelage", value: puppy.ruler },
+                                            ...(priceLabel ? [{ icon: Banknote, iconColor: "text-green-600 dark:text-green-400", label: "Prix", value: priceLabel }] : []),
+                                            { icon: MapPin, iconColor: "text-orange-600 dark:text-orange-400", label: "Remise", value: "Retrait à l'élevage uniquement, sauf cas particulier pour les pays étrangers. Nous accompagnons les adoptants si besoin pour préserver les meilleures conditions du chiot." },
                                         ].map((item) => {
                                             const Icon = item.icon;
 
                                             return (
                                                 <div key={item.label} className="grid gap-1 px-4 py-3 sm:grid-cols-[180px_1fr] sm:items-center">
                                                     <dt className="flex items-center gap-2 font-semibold text-muted-foreground">
-                                                        <Icon className="h-4 w-4 text-primary" aria-hidden="true" />
+                                                        <Icon className={`h-4 w-4 ${item.iconColor}`} aria-hidden="true" />
                                                         {item.label}
                                                     </dt>
                                                     <dd className="font-medium text-foreground sm:text-right">{item.value}</dd>
@@ -368,7 +375,7 @@ export default async function PuppyDetailPage({ params }: PuppyPageProps) {
 
                             <section className="space-y-3">
                                 <h2 className="flex items-center gap-2 text-lg font-semibold">
-                                    <ShieldCheck className="h-5 w-5 text-primary" aria-hidden="true" />
+                                    <ShieldCheck className="h-5 w-5 text-emerald-600 dark:text-emerald-400" aria-hidden="true" />
                                     Suivi du chiot
                                 </h2>
                                 <ul className="list-inside list-disc space-y-1 text-sm text-muted-foreground">
@@ -393,7 +400,7 @@ export default async function PuppyDetailPage({ params }: PuppyPageProps) {
                                         href={puppy.linkTo}
                                         target="_blank"
                                         rel="noreferrer"
-                                        className="inline-flex items-center justify-center rounded-md bg-primary px-5 py-3 font-semibold text-primary-foreground shadow-xs transition-colors hover:bg-primary/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                                        className={`inline-flex items-center justify-center rounded-md px-5 py-3 font-semibold shadow-xs transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 ${sexActionClass}`}
                                     >
                                         Demander l'adoption de {puppy.name}
                                     </a>

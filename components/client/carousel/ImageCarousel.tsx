@@ -2,6 +2,7 @@
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
+import PhotoZoom from "@/components/client/PhotoZoom";
 
 type ImageCarouselProps = {
     images: Array<string | { src: string; alt?: string }>
@@ -84,6 +85,7 @@ function ImageCarousel({
                 <div className="absolute top-3 right-3 rounded-full bg-card/90 px-3 py-1 text-xs text-foreground ring-1 ring-border/70 backdrop-blur-sm shadow-sm">
                     {index + 1}/{total}
                 </div>
+                <PhotoZoom src={imageSrc} alt={currentAlt} />
                 {!isOneImage && (
                     <>
                         <button
