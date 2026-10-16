@@ -241,21 +241,21 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(homeVideoSchema) }}
       />
       <div className="flex flex-col">
-        <section className="bg-[#233b35]">
-          <div className="overflow-hidden bg-linear-to-b from-[#233b35] via-[#526d5f] to-[#233b35]">
+        <section className="bg-[#faf6f2] dark:bg-[#241e20]">
+          <div className="overflow-hidden bg-[url(/patterns/pomsky-doodles.svg)] bg-repeat">
             <div className="container mx-auto px-4 py-6 md:px-6 md:py-8 lg:px-8 lg:py-10">
               <div className="mx-auto max-w-6xl space-y-5 md:space-y-6">
-                <div className="mx-auto max-w-6xl rounded-xl md:rounded-4xl border border-white/12 bg-[#2d473e]/72 px-6 py-6 text-center text-white shadow-[0_30px_100px_rgba(0,0,0,0.32)] backdrop-blur-sm md:px-8">
+                <div className="mx-auto max-w-6xl rounded-xl md:rounded-4xl border border-primary/10 bg-background/90 px-6 py-6 text-center text-foreground shadow-sm backdrop-blur-sm md:px-8">
                   <div className="mx-auto max-w-4xl">
-                    <div className="mx-auto inline-flex items-center gap-3 px-4 py-1 text-md uppercase tracking-[0.35em] text-white/80">
+                    <div className="mx-auto inline-flex items-center gap-3 px-4 py-1 text-md uppercase tracking-[0.35em] text-primary">
                       Royal Pomsky
                     </div>
-                    <h1 className="mt-4 text-3xl font-semibold tracking-[0.03em] text-white md:text-4xl lg:text-5xl">
+                    <h1 className="mt-4 text-3xl font-semibold tracking-[0.03em] text-foreground md:text-4xl lg:text-5xl">
                       {pageContent.home.h1}
                     </h1>
                   </div>
                 </div>
-                <div className="mx-auto max-w-6xl overflow-hidden rounded-xl md:rounded-4xl border border-white/12 bg-[#294238]/55 shadow-[0_30px_100px_rgba(0,0,0,0.28)] backdrop-blur-sm">
+                <div className="mx-auto max-w-6xl overflow-hidden rounded-xl md:rounded-4xl border border-primary/10 bg-background/90 shadow-sm backdrop-blur-sm">
                   <figure>
                     <div className="relative aspect-4/3 sm:aspect-16/11 md:aspect-16/8 lg:aspect-16/7">
                       <ResponsivePicture
@@ -273,25 +273,25 @@ export default function HomePage() {
                       />
                       <div className="absolute inset-0 bg-linear-to-t from-[#20382f]/35 via-transparent to-transparent" aria-hidden="true" />
                     </div>
-                    <figcaption className="px-5 py-3 text-xs leading-relaxed text-white/72">
+                    <figcaption className="px-5 py-3 text-xs leading-relaxed text-muted-foreground">
                       Chiots Pomsky Toy aux yeux bleus élevés par Royal POMSKY.
                     </figcaption>
                   </figure>
                 </div>
 
-                <div className="mx-auto max-w-6xl rounded-xl md:rounded-4xl border border-white/12 bg-[#233b35]/82 px-6 py-6 text-white shadow-[0_35px_120px_rgba(0,0,0,0.4)] backdrop-blur-md md:px-8 md:py-8 lg:px-10">
-                  <p className="text-sm font-medium uppercase tracking-[0.28em] text-white/72">
+                <div className="mx-auto max-w-6xl rounded-xl md:rounded-4xl border border-primary/10 bg-[#faf6f2] dark:bg-[#241e20]/82 px-6 py-6 text-foreground shadow-sm backdrop-blur-md md:px-8 md:py-8 lg:px-10">
+                  <p className="text-sm font-medium uppercase tracking-[0.28em] text-muted-foreground">
                     {pageContent.home.h1Subtitle}
                   </p>
                   <div className="mt-5 grid gap-6 lg:grid-cols-[1.5fr_0.75fr] lg:items-end">
                     <div className="space-y-4">
-                      <p className="text-base leading-relaxed text-white/88 md:text-lg">
+                      <p className="text-base leading-relaxed text-foreground/90 md:text-lg">
                         {pageContent.home.description}
                       </p>
-                      <p className="text-base leading-relaxed text-white/82 md:text-lg">
+                      <p className="text-base leading-relaxed text-muted-foreground md:text-lg">
                         {pageContent.home.descriptionSecondary}
                       </p>
-                      <p className="text-base leading-relaxed text-white/82 md:text-lg">
+                      <p className="text-base leading-relaxed text-muted-foreground md:text-lg">
                         {pageContent.home.descriptionTertiary}
                       </p>
                     </div>
@@ -299,7 +299,7 @@ export default function HomePage() {
                       <Link
                         href="/chiots-disponibles"
                         className="inline-flex items-center justify-center rounded-md
-                         border border-white/30 bg-white/10 px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-white transition hover:bg-white/20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                         border border-primary/20 bg-primary/10 px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-foreground transition hover:bg-primary/20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                       >
                         Voir les chiots Pomsky disponibles
                       </Link>
