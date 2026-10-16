@@ -2,7 +2,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { FAQSection } from "@/components/faq"
 import { faqReproducteurs } from "@/lib/faq-data"
-import { Dog, PawPrint, Ruler, Scissors, Weight } from "lucide-react"
+import { Dog, Mars, Venus, Ruler, Scissors, Weight } from "lucide-react"
 import { generateBreadcrumbSchema, generateFAQSchema, generateWebPageSchema } from "@/lib/schema-generators"
 import ImageCarousel from "@/components/client/carousel/ImageCarousel"
 import type { Metadata } from "next"
@@ -105,7 +105,12 @@ export default function NosChiotsPage() {
                     </section>
 
                     <div className="grid gap-10">
-                        {puppies.map((puppy, index) => (
+                        {puppies.map((puppy, index) => {
+                            const isFemale = puppy.highlights.includes("Femelle")
+                            const SexIcon = isFemale ? Venus : Mars
+                            const sexColor = isFemale ? "text-pink-600 dark:text-pink-400" : "text-blue-600 dark:text-blue-400"
+                            const sexBadge = isFemale ? "bg-pink-100 text-pink-700 dark:bg-pink-950/40 dark:text-pink-300" : "bg-blue-100 text-blue-700 dark:bg-blue-950/40 dark:text-blue-300"
+                            return (
                             <Card key={puppy.name} className="overflow-hidden bg-muted/30 p-0 md:p-6">
                                 <CardContent className="p-0">
                                     <div className={`grid md:grid-cols-2 gap-0 ${index % 2 === 1 ? "md:grid-flow-col-dense" : ""}`}>
@@ -120,13 +125,13 @@ export default function NosChiotsPage() {
                                         <div className={`p-8 space-y-4 flex flex-col justify-center min-w-0 ${index % 2 === 1 ? "md:order-1" : ""}`}>
                                             <div className="flex items-center gap-2">
                                                 <Badge variant="secondary">
-                                                    <PawPrint className="max-h-4 max-w-4 mr-1" />
+                                                    <SexIcon className={`h-4 w-4 mr-1 ${sexColor}`} aria-hidden="true" />
                                                     {puppy.coat}
                                                 </Badge>
                                                 <Badge variant="outline" className="min-w-0 whitespace-normal wrap-break-words">{puppy.color}</Badge>
                                             </div>
                                             <div className="space-y-2">
-                                                <h3 id={getReproductorAnchorId(puppy.name)} className="scroll-mt-28 text-2xl font-bold">{puppy.name}</h3>
+                                                <h3 id={getReproductorAnchorId(puppy.name)} className={`scroll-mt-28 text-2xl font-bold ${sexColor}`}>{puppy.name}</h3>
                                                 <p className="text-muted-foreground">{puppy.description}</p>
                                                 <div>
                                                     {puppy.health && puppy.health.length > 0 && (
@@ -145,35 +150,36 @@ export default function NosChiotsPage() {
                                                 <div className="text-muted-foreground">
                                                     <dt className="sr-only">Format</dt>
                                                     <dd className="flex items-center gap-2">
-                                                        <Dog className="max-h-4 max-w-4 text-primary" aria-hidden="true" />
+                                                        <Dog className="max-h-4 max-w-4 text-violet-600 dark:text-violet-400" aria-hidden="true" />
                                                         {puppy.size}
                                                     </dd>
                                                 </div>
                                                 <div className="text-muted-foreground">
                                                     <dt className="sr-only">Taille</dt>
                                                     <dd className="flex items-center gap-2">
-                                                        <Ruler className="max-h-4 max-w-4 text-primary" aria-hidden="true" />
+                                                        <Ruler className="max-h-4 max-w-4 text-amber-600 dark:text-amber-400" aria-hidden="true" />
                                                         {puppy.height}
                                                     </dd>
                                                 </div>
                                                 <div className="text-muted-foreground">
                                                     <dt className="sr-only">Poids</dt>
                                                     <dd className="flex items-center gap-2">
-                                                        <Weight className="max-h-4 max-w-4 text-primary" aria-hidden="true" />
+                                                        <Weight className="max-h-4 max-w-4 text-teal-600 dark:text-teal-400" aria-hidden="true" />
                                                         {puppy.weight}
                                                     </dd>
                                                 </div>
                                                 <div className="text-muted-foreground">
                                                     <dt className="sr-only">Fourrure</dt>
                                                     <dd className="flex items-center gap-2">
-                                                        <Scissors className="max-h-4 max-w-4 text-primary" aria-hidden="true" />
+                                                        <Scissors className="max-h-4 max-w-4 text-emerald-600 dark:text-emerald-400" aria-hidden="true" />
                                                         {puppy.ruler}
                                                     </dd>
                                                 </div>
                                             </dl>
                                             <div className="flex flex-wrap gap-2">
                                                 {puppy.highlights.map((item) => (
-                                                    <Badge key={item} variant="secondary">
+                                                    <Badge key={item} variant="secondary" className={item === "Femelle" || item === "Mâle" ? sexBadge : undefined}>
+                                                        {item === "Femelle" || item === "Mâle" ? <SexIcon className="mr-1 h-4 w-4" aria-hidden="true" /> : null}
                                                         {item}
                                                     </Badge>
                                                 ))}
@@ -182,7 +188,8 @@ export default function NosChiotsPage() {
                                     </div>
                                 </CardContent>
                             </Card>
-                        ))}
+                            )
+                        })}
                         <Link
                             href="/chiots-disponibles"
                             className="bg-primary w-fit m-auto text-white hover:bg-primary/80 p-4 font-semibold inline-block dark:text-[#5b3a1a] rounded-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
