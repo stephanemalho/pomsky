@@ -218,7 +218,7 @@ export default function NosChiotsPage() {
                                 const SexIcon = puppy.sexe.toLowerCase().includes("femelle") ? Venus : Mars;
                                 const sexActionClass = puppy.sexe.toLowerCase().includes("femelle")
                                     ? "bg-pink-600 text-white hover:bg-pink-700 focus-visible:outline-pink-600"
-                                    : "bg-blue-600 text-white hover:bg-blue-700 focus-visible:outline-blue-600";
+                                    : "bg-male-600 text-white hover:bg-male-700 focus-visible:outline-male-600";
                                 const priceLabel = getPuppyPriceLabel(puppy);
                                 const priceTextClass = isReserved ? "text-muted-foreground line-through" : "text-primary";
                                 const certification = getLitterCertificationForPuppy(puppy);
@@ -256,7 +256,7 @@ export default function NosChiotsPage() {
 
                                                 <div className="min-w-0 space-y-2 p-4 text-left md:space-y-3 md:p-6">
                                                     <div className="space-y-1">
-                                                        <h2 className={`text-xl font-bold md:text-2xl ${puppy.sexe.toLowerCase().includes("femelle") ? "text-pink-600 dark:text-pink-400" : "text-blue-600 dark:text-blue-400"}`}>{puppy.name}</h2>
+                                                        <h2 className={`text-xl font-bold md:text-2xl ${puppy.sexe.toLowerCase().includes("femelle") ? "text-pink-600 dark:text-pink-400" : "text-male-600 dark:text-male-300"}`}>{puppy.name}</h2>
                                                         <p className="line-clamp-3 text-sm leading-relaxed text-muted-foreground md:line-clamp-none md:text-base">
                                                             {puppy.description}
                                                         </p>
@@ -264,7 +264,7 @@ export default function NosChiotsPage() {
 
                                                     <div className="flex flex-wrap gap-1.5 md:gap-2">
                                                         <Badge variant="secondary">
-                                                            <SexIcon className={`mr-1 h-4 w-4 ${puppy.sexe.toLowerCase().includes("femelle") ? "text-pink-600 dark:text-pink-400" : "text-blue-600 dark:text-blue-400"}`} aria-hidden="true" />
+                                                            <SexIcon className={`mr-1 h-4 w-4 ${puppy.sexe.toLowerCase().includes("femelle") ? "text-pink-600 dark:text-pink-400" : "text-male-600 dark:text-male-300"}`} aria-hidden="true" />
                                                             {puppy.sexe}
                                                         </Badge>
                                                         <Badge variant="outline">{puppy.color}</Badge>
@@ -296,7 +296,7 @@ export default function NosChiotsPage() {
                                                         <div className="grid gap-2 pt-1 sm:grid-cols-2">
                                                             {parentProfiles.map((parent) => {
                                                                 const ParentIcon = parent.role === "Mère" ? Venus : Mars;
-                                                                const iconClassName = parent.role === "Mère" ? "text-rose-500" : "text-sky-500";
+                                                                const iconClassName = parent.role === "Mère" ? "text-rose-500" : "text-male-600 dark:text-male-300";
 
                                                                 return (
                                                                     <Link
@@ -337,7 +337,7 @@ export default function NosChiotsPage() {
                                                 <div className="flex flex-col justify-center gap-2 border-t border-primary/10 p-4 pt-3 md:min-w-60 md:border-t-0 md:p-6 md:pl-0">
                                                     <Link
                                                         href={puppyUrl}
-                                                        className={`inline-flex items-center justify-center rounded-md border px-4 py-2 font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 ${puppy.sexe.toLowerCase().includes("femelle") ? "border-pink-300 bg-pink-50 text-pink-700 hover:bg-pink-100 focus-visible:outline-pink-600 dark:border-pink-700 dark:bg-pink-950/40 dark:text-pink-300 dark:hover:bg-pink-900/50" : "border-blue-300 bg-blue-50 text-blue-700 hover:bg-blue-100 focus-visible:outline-blue-600 dark:border-blue-700 dark:bg-blue-950/40 dark:text-blue-300 dark:hover:bg-blue-900/50"}`}
+                                                        className={`inline-flex items-center justify-center rounded-md border px-4 py-2 font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 ${puppy.sexe.toLowerCase().includes("femelle") ? "border-pink-300 bg-pink-50 text-pink-700 hover:bg-pink-100 focus-visible:outline-pink-600 dark:border-pink-700 dark:bg-pink-950/40 dark:text-pink-300 dark:hover:bg-pink-900/50" : "border-male-300 bg-male-50 text-male-700 hover:bg-male-100 focus-visible:outline-male-600 dark:border-male-700 dark:bg-male-950/40 dark:text-male-300 dark:hover:bg-male-900/50"}`}
                                                     >
                                                         Voir la fiche détaillée
                                                     </Link>

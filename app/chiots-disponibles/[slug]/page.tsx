@@ -183,7 +183,7 @@ export default async function PuppyDetailPage({ params }: PuppyPageProps) {
     const SexIcon = puppy.sexe.toLowerCase().includes("femelle") ? Venus : Mars;
     const sexActionClass = puppy.sexe.toLowerCase().includes("femelle")
         ? "bg-pink-600 text-white hover:bg-pink-700 focus-visible:outline-pink-600"
-        : "bg-blue-600 text-white hover:bg-blue-700 focus-visible:outline-blue-600";
+        : "bg-male-600 text-white hover:bg-male-700 focus-visible:outline-male-600";
     const priceLabel = getPuppyPriceLabel(puppy);
     const parentProfiles = getPuppyParentProfiles(puppy.parents);
     const litterCertification = getLitterCertificationForPuppy(puppy);
@@ -253,7 +253,7 @@ export default async function PuppyDetailPage({ params }: PuppyPageProps) {
                             <div className="space-y-4">
                                 <div className="flex flex-wrap items-center gap-2">
                                     <Badge variant="secondary">
-                                        <SexIcon className={`mr-1 h-4 w-4 ${puppy.sexe.toLowerCase().includes("femelle") ? "text-pink-600 dark:text-pink-400" : "text-blue-600 dark:text-blue-400"}`} aria-hidden="true" />
+                                        <SexIcon className={`mr-1 h-4 w-4 ${puppy.sexe.toLowerCase().includes("femelle") ? "text-pink-600 dark:text-pink-400" : "text-male-600 dark:text-male-300"}`} aria-hidden="true" />
                                         {puppy.coat}
                                     </Badge>
                                     <Badge variant="outline">{puppy.color}</Badge>
@@ -264,7 +264,7 @@ export default async function PuppyDetailPage({ params }: PuppyPageProps) {
 
                                 <div>
                                     <h1 className="text-3xl font-bold md:text-4xl">
-                                        <span className={puppy.sexe.toLowerCase().includes("femelle") ? "text-pink-600 dark:text-pink-400" : "text-blue-600 dark:text-blue-400"}>{puppy.name}</span>, chiot Pomsky {puppy.color.toLowerCase()}
+                                        <span className={puppy.sexe.toLowerCase().includes("femelle") ? "text-pink-600 dark:text-pink-400" : "text-male-600 dark:text-male-300"}>{puppy.name}</span>, chiot Pomsky {puppy.color.toLowerCase()}
                                     </h1>
                                     <p className="mt-3 text-lg leading-relaxed text-muted-foreground">
                                         {puppy.description}
@@ -276,7 +276,7 @@ export default async function PuppyDetailPage({ params }: PuppyPageProps) {
                                 <CardContent className="p-0">
                                     <dl className="divide-y divide-primary/10 text-sm">
                                         {[
-                                            { icon: SexIcon, iconColor: puppy.sexe.toLowerCase().includes("femelle") ? "text-pink-600 dark:text-pink-400" : "text-blue-600 dark:text-blue-400", label: "Sexe", value: puppy.sexe },
+                                            { icon: SexIcon, iconColor: puppy.sexe.toLowerCase().includes("femelle") ? "text-pink-600 dark:text-pink-400" : "text-male-600 dark:text-male-300", label: "Sexe", value: puppy.sexe },
                                             { icon: Heart, iconColor: "text-rose-600 dark:text-rose-400", label: "Parents", value: puppy.parents.replace("Parents : ", "") },
                                             { icon: FileText, iconColor: "text-indigo-600 dark:text-indigo-400", label: "Pédigrée", value: puppy.pedigree ?? "Fédération Française du Pomsky" },
                                             { icon: Calendar, iconColor: "text-amber-600 dark:text-amber-400", label: "Disponibilité", value: puppy.readyDate },
@@ -332,7 +332,7 @@ export default async function PuppyDetailPage({ params }: PuppyPageProps) {
                                     <div className="grid gap-3 sm:grid-cols-2">
                                         {parentProfiles.map((parent) => {
                                             const ParentIcon = parent.role === "Mère" ? Venus : Mars;
-                                            const iconClassName = parent.role === "Mère" ? "text-rose-500" : "text-sky-500";
+                                            const iconClassName = parent.role === "Mère" ? "text-rose-500" : "text-male-600 dark:text-male-300";
 
                                             return (
                                                 <Link
@@ -472,7 +472,7 @@ function PuppyNavigationCard({
                 <span className="block text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">
                     {label}
                 </span>
-                <span className={`block truncate text-lg font-bold ${puppy.sexe.toLowerCase().includes("femelle") ? "text-pink-600 dark:text-pink-400" : "text-blue-600 dark:text-blue-400"}`}>
+                <span className={`block truncate text-lg font-bold ${puppy.sexe.toLowerCase().includes("femelle") ? "text-pink-600 dark:text-pink-400" : "text-male-600 dark:text-male-300"}`}>
                     {puppy.name}
                 </span>
                 <span className="block text-sm text-muted-foreground">

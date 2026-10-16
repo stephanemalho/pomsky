@@ -4,6 +4,13 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+    --color-male-50: #f0f8ff;
+    --color-male-100: #dfeffc;
+    --color-male-300: #a3d3f5;
+    --color-male-600: #397da9;
+    --color-male-700: #2e678e;
+    --color-male-900: #203f58;
+    --color-male-950: #162d40;
     --color-background: var(--background);
     --color-foreground: var(--foreground);
     --font-sans: var(--font-questrial);
@@ -127,14 +134,41 @@
     }
 }
 
-/* Decorative icons share a palette; explicit utility colors take precedence. */
-@layer base {
-    :where(main .lucide-heart, main .lucide-heart-handshake, main .lucide-heart-pulse) { color: var(--color-rose-500); }
-    :where(main .lucide-paw-print, main .lucide-dog) { color: var(--color-violet-500); }
-    :where(main .lucide-shield-check, main .lucide-badge-check, main .lucide-check, main .lucide-check-circle, main .lucide-check-circle-2, main .lucide-sprout, main .lucide-leaf) { color: var(--color-emerald-500); }
-    :where(main .lucide-banknote, main .lucide-wallet) { color: var(--color-teal-500); }
-    :where(main .lucide-book-open, main .lucide-file-text, main .lucide-scroll-text) { color: var(--color-indigo-500); }
-    :where(main .lucide-calendar, main .lucide-calendar-days, main .lucide-home, main .lucide-house, main .lucide-sun, main .lucide-star) { color: var(--color-amber-500); }
-    :where(main .lucide-users, main .lucide-camera, main .lucide-video, main .lucide-instagram) { color: var(--color-fuchsia-500); }
-    :where(main .lucide-phone, main .lucide-mail, main .lucide-map-pin, main .lucide-weight, main .lucide-search) { color: var(--color-sky-500); }
+/* A restrained palette shared by navigation and decorative icons. */
+:root {
+    --icon-slate: #526777;
+    --icon-sage: #5f7464;
+    --icon-bronze: #8a704d;
+    --icon-rose: #916969;
 }
+
+.dark {
+    --icon-slate: #a4b7c5;
+    --icon-sage: #a5b9a8;
+    --icon-bronze: #c8b08e;
+    --icon-rose: #c5a0a0;
+}
+
+/* Scope color changes to icons, preserving text and status badge colors. */
+:is(.lucide-paw-print, .lucide-dog, .lucide-book-open, .lucide-file-text, .lucide-scroll-text, .lucide-phone, .lucide-mail, .lucide-map-pin, .lucide-weight, .lucide-search, .lucide-mars) { color: var(--icon-slate); }
+:is(.lucide-heart, .lucide-heart-handshake, .lucide-heart-pulse, .lucide-users, .lucide-camera, .lucide-video, .lucide-instagram, .lucide-venus) { color: var(--icon-rose); }
+:is(.lucide-shield-check, .lucide-badge-check, .lucide-check, .lucide-check-circle, .lucide-check-circle-2, .lucide-sprout, .lucide-leaf, .lucide-banknote, .lucide-wallet, .lucide-scissors) { color: var(--icon-sage); }
+:is(.lucide-calendar, .lucide-calendar-days, .lucide-home, .lucide-house, .lucide-sun, .lucide-star, .lucide-ruler, .lucide-shield-alert) { color: var(--icon-bronze); }
+
+.icon-tone-slate { color: var(--icon-slate); background-color: color-mix(in srgb, var(--icon-slate) 10%, var(--background)); }
+.icon-tone-sage { color: var(--icon-sage); background-color: color-mix(in srgb, var(--icon-sage) 10%, var(--background)); }
+.icon-tone-bronze { color: var(--icon-bronze); background-color: color-mix(in srgb, var(--icon-bronze) 10%, var(--background)); }
+.icon-tone-rose { color: var(--icon-rose); background-color: color-mix(in srgb, var(--icon-rose) 10%, var(--background)); }
+
+/* Male symbols follow the sky blue used on male profiles. */
+.lucide-mars { color: var(--color-male-600); }
+.dark .lucide-mars { color: var(--color-male-300); }
+
+/* Navigation badges retain their individual colors. */
+.menu-colored-icon .lucide { color: inherit; }
+nav .lucide.text-violet-600 { color: var(--color-violet-600); }
+nav .lucide.text-amber-600 { color: var(--color-amber-600); }
+nav .lucide.text-rose-600 { color: var(--color-rose-600); }
+.dark nav .lucide.text-violet-600 { color: var(--color-violet-400); }
+.dark nav .lucide.text-amber-600 { color: var(--color-amber-400); }
+.dark nav .lucide.text-rose-600 { color: var(--color-rose-400); }

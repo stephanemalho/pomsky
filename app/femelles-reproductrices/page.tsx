@@ -108,10 +108,10 @@ export default function NosChiotsPage() {
                         {puppies.map((puppy, index) => {
                             const isFemale = puppy.highlights.includes("Femelle")
                             const SexIcon = isFemale ? Venus : Mars
-                            const sexColor = isFemale ? "text-pink-600 dark:text-pink-400" : "text-blue-600 dark:text-blue-400"
-                            const sexBadge = isFemale ? "bg-pink-100 text-pink-700 dark:bg-pink-950/40 dark:text-pink-300" : "bg-blue-100 text-blue-700 dark:bg-blue-950/40 dark:text-blue-300"
+                            const sexColor = isFemale ? "text-pink-600 dark:text-pink-400" : "text-male-600 dark:text-male-300"
+                            const sexBadge = isFemale ? "bg-pink-100 text-pink-700 dark:bg-pink-950/40 dark:text-pink-300" : "bg-male-100 text-male-700 dark:bg-male-950/40 dark:text-male-300"
                             return (
-                            <Card key={puppy.name} className={`overflow-hidden p-0 md:p-6 ${isFemale ? "bg-pink-50 dark:bg-pink-950/25" : "bg-blue-50 dark:bg-blue-950/25"}`}>
+                            <Card key={puppy.name} className={`overflow-hidden p-0 text-slate-900 [--muted-foreground:#475569] dark:text-slate-100 dark:[--muted-foreground:#cbd5e1] md:p-6 ${isFemale ? "border-rose-200 bg-rose-100 dark:border-rose-900 dark:bg-[#35272d]" : "border-male-300 bg-male-100 dark:border-male-700 dark:bg-male-950"}`}>
                                 <CardContent className="p-0">
                                     <div className={`grid md:grid-cols-2 gap-0 ${index % 2 === 1 ? "md:grid-flow-col-dense" : ""}`}>
                                         <ImageCarousel
