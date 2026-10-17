@@ -375,9 +375,9 @@ const puppiesUnsorted: Puppy[] = [
         sexe: "Mâle",
         size: "Miniature",
         ruler: "Pelage polaire Husky",
-        weight: "Poids adulte en cours d'estimation",
+        weight: "7 kg adulte (estimation)",
         parents: "Parents : SHADOW & CHARM",
-        updatedAt: "2026-10-16",
+        updatedAt: "2026-10-17",
         readyDate: "Disponible à la réservation",
         age: "Né en septembre 2026",
         description:
@@ -437,9 +437,9 @@ const puppiesUnsorted: Puppy[] = [
         sexe: "Femelle",
         size: "Miniature",
         ruler: "Pelage polaire Husky",
-        weight: "Poids adulte en cours d'estimation",
+        weight: "7 kg adulte (estimation)",
         parents: "Parents : SHADOW & CHARM",
-        updatedAt: "2026-10-16",
+        updatedAt: "2026-10-17",
         readyDate: "Disponible à la réservation",
         age: "Née en septembre 2026",
         description:
