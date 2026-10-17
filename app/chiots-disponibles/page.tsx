@@ -131,7 +131,9 @@ export default function NosChiotsPage() {
     ], siteConfig.pages.puppies);
     const faqSchema = generateFAQSchema(convertFAQsToSchema(faqNosChiots), siteConfig.pages.puppies);
     const pageLastModValue = sitemapPages.find((page) => page.url === siteConfig.pages.puppies)?.lastmod;
-    const visiblePuppies = puppies.filter((puppy) => !puppy.isAdopted);
+    const visiblePuppies = puppies
+        .filter((puppy) => !puppy.isAdopted)
+        .sort((a, b) => Number(Boolean(a.isReserved)) - Number(Boolean(b.isReserved)));
     const availablePuppies = visiblePuppies.filter((puppy) => !puppy.isReserved);
     const puppyListSchema = buildPuppyItemListStructuredData(visiblePuppies);
     const puppyCatalogSchema = generatePuppyCatalogSchema(
