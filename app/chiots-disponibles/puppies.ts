@@ -274,7 +274,6 @@ export const litterCertifications: LitterCertification[] = [
 const puppiesUnsorted: Puppy[] = [
     {
         name: "AKI BLUE",
-        isReserved: true,
         updatedAt: "2026-10-17",
         coat: "Pomsky F4+ (ADN Poméranian / Husky)",
         color: "Bleu",
@@ -283,7 +282,7 @@ const puppiesUnsorted: Puppy[] = [
         ruler: "Pelage fluffy",
         weight: "4-5 kg adulte",
         parents: "Parents : WILLOW & BANDIT",
-        readyDate: "Réservé",
+        readyDate: "Disponible",
         age: "Né le [date à préciser]",
         description:
             "Aki Blue est un mâle Pomsky F4+ issu de Willow et Bandit. Il présente des yeux gris particolor bleu, un pelage fluffy et une couleur bleu distinctive. Format Toy.",
