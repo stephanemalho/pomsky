@@ -201,6 +201,11 @@ const nextConfig: NextConfig = {
                 permanent: true
             },
             {
+                source: "/chiots-disponibles/loup",
+                destination: "/chiots-disponibles",
+                permanent: true
+            },
+            {
                 source: "/author/:path*",
                 destination: "/",
                 permanent: true
