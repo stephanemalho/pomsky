@@ -11,6 +11,22 @@ function getReproductorAnchorId(name: string) {
 }
 
 export const puppyParentProfilesByLabel: Record<string, PuppyParentProfile[]> = {
+    "Parents : SHANE & SKY": [
+        {
+            role: "Mère",
+            name: "Shane",
+            image: "/SHANE-pomsky-miniature-f3.webp",
+            description: "Femelle Pomsky Miniature F3",
+            href: `/femelles-reproductrices#${getReproductorAnchorId("SHANE")}`,
+        },
+        {
+            role: "Père",
+            name: "Sky",
+            image: "/SKY-pomsky-miniature-f3.webp",
+            description: "Mâle Pomsky F3",
+            href: `/femelles-reproductrices#${getReproductorAnchorId("SKY")}`,
+        },
+    ],
     "Parents : CHARM & BEAUTY": [
         {
             role: "Mère",

@@ -275,6 +275,9 @@ export default function NosChiotsPage() {
                                                         ) : null}
                                                         <Badge variant="secondary">{puppy.parents.replace("Parents : ", "")}</Badge>
                                                         <Badge variant="outline">{puppy.size}</Badge>
+                                                        {["Pédigrée FFP", "Test ADN Embark", "Parents purs Pomsky"].map((label) => (
+                                                            <Badge key={label} variant="outline">{label}</Badge>
+                                                        ))}
                                                         {certification ? (
                                                             <Badge variant="secondary">
                                                                 <FileText className="mr-1 h-4 w-4 text-indigo-600 dark:text-indigo-400" aria-hidden="true" />

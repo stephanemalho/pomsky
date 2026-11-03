@@ -247,6 +247,27 @@ export default async function PuppyDetailPage({ params }: PuppyPageProps) {
                                     <PhotoZoom src={image.sourceSrc ?? image.src} alt={image.alt} compact={index === 0} />
                                 </figure>
                             ))}
+                            {puppy.video ? (
+                                <figure className="overflow-hidden rounded-2xl border border-primary/10 bg-muted/40 sm:col-span-2">
+                                    <p className="px-4 py-3 text-center text-sm font-semibold text-primary">
+                                        Cliquez sur ▶ pour lire la vidéo de {puppy.name}
+                                    </p>
+                                    <video
+                                        controls
+                                        playsInline
+                                        preload="none"
+                                        poster={puppy.video.poster}
+                                        aria-label={`Vidéo de ${puppy.name}`}
+                                        className="aspect-4/5 w-full bg-black object-contain"
+                                    >
+                                        <source src={puppy.video.src} type="video/mp4" />
+                                        Votre navigateur ne permet pas de lire cette vidéo.
+                                    </video>
+                                    <figcaption className="p-3 text-center text-sm text-muted-foreground">
+                                        {puppy.name} en vidéo
+                                    </figcaption>
+                                </figure>
+                            ) : null}
                         </div>
 
                         <article className="space-y-6">
