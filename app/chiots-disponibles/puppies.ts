@@ -275,8 +275,10 @@ export const litterCertifications: LitterCertification[] = [
 const puppiesUnsorted: Puppy[] = [
     {
         name: "SUNNY",
+        price: 3500,
+        priceCurrency: "EUR",
         isReserved: false,
-        updatedAt: "2026-11-03",
+        updatedAt: "2026-11-10",
         coat: "Pomsky F4 (ADN Poméranian / Husky)",
         color: "Lilac et blanc",
         sexe: "Mâle",
@@ -309,8 +311,10 @@ const puppiesUnsorted: Puppy[] = [
     },
     {
         name: "BILLY",
+        price: 2500,
+        priceCurrency: "EUR",
         isReserved: false,
-        updatedAt: "2026-11-03",
+        updatedAt: "2026-11-10",
         coat: "Pomsky F4 (ADN Poméranian / Husky)",
         color: "Blanc polaire",
         sexe: "Mâle",
@@ -343,6 +347,8 @@ const puppiesUnsorted: Puppy[] = [
     },
     {
         name: "SIRIUS",
+        price: 3500,
+        priceCurrency: "EUR",
         isReserved: false,
         updatedAt: "2026-11-10",
         coat: "Pomsky F4 (ADN Poméranian / Husky)",
@@ -379,6 +385,8 @@ const puppiesUnsorted: Puppy[] = [
     },
     {
         name: "BELLA",
+        price: 3500,
+        priceCurrency: "EUR",
         isReserved: false,
         updatedAt: "2026-11-10",
         coat: "Pomsky F4 (ADN Poméranian / Husky)",
@@ -415,8 +423,10 @@ const puppiesUnsorted: Puppy[] = [
     },
     {
         name: "ARCTIC",
+        price: 3000,
+        priceCurrency: "EUR",
         isReserved: false,
-        updatedAt: "2026-11-03",
+        updatedAt: "2026-11-10",
         coat: "Pomsky F4 (ADN Poméranian / Husky)",
         color: "Blanc polaire",
         sexe: "Femelle",
@@ -445,8 +455,10 @@ const puppiesUnsorted: Puppy[] = [
     },
     {
         name: "SNOW",
+        price: 3000,
+        priceCurrency: "EUR",
         isReserved: false,
-        updatedAt: "2026-11-03",
+        updatedAt: "2026-11-10",
         coat: "Pomsky F4 (ADN Poméranian / Husky)",
         color: "Blanc polaire",
         sexe: "Femelle",
@@ -480,8 +492,10 @@ const puppiesUnsorted: Puppy[] = [
     },
     {
         name: "COSMO",
+        price: 3500,
+        priceCurrency: "EUR",
         isReserved: false,
-        updatedAt: "2026-11-03",
+        updatedAt: "2026-11-10",
         coat: "Pomsky F4 (ADN Poméranian / Husky)",
         color: "Bleu et blanc",
         sexe: "Mâle",
