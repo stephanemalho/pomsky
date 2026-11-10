@@ -553,6 +553,21 @@ export default function PresentationPage() {
                             Dernière mise à jour : {lastMod}
                         </div>
                     </section>
+                    <section aria-labelledby="spitz-nains" className="mt-16 rounded-3xl border border-primary/10 bg-muted/20 p-6 md:p-8">
+                        <Badge variant="secondary">Poméranien du Cercle Polaire</Badge>
+                        <h2 id="spitz-nains" className="mt-4 text-xl font-bold md:text-3xl">
+                            Vous trouvez que le Pomsky Toy est trop grand ?
+                        </h2>
+                        <p className="mt-4 max-w-3xl leading-relaxed text-muted-foreground">
+                            Découvrez nos Spitz nains poméraniens couleur Pomsky : retrouvez le patron de coloration du Pomsky dans un tout petit Spitz nain, avec un marquage husky qui fait tout leur charme.
+                        </p>
+                        <p className="mt-3 max-w-3xl leading-relaxed text-muted-foreground">
+                            Poméranien du Cercle Polaire, notre élevage unique en Europe, vous présente ces rares Poméraniens à marquage husky. Découvrez nos chiens et les disponibilités sur notre site dédié.
+                        </p>
+                        <Link href="https://pomeranien.fr" className="mt-6 inline-flex rounded-full bg-primary px-6 py-3 font-semibold text-primary-foreground transition-opacity hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
+                            Découvrir nos Spitz nains poméraniens
+                        </Link>
+                    </section>
                 </div>
             </div>
         </>

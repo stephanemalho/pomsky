@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import PhotoZoom from "@/components/client/PhotoZoom";
 import Image from "next/image";
 import Link from "next/link";
@@ -228,8 +229,8 @@ export default function NosChiotsPage() {
                                 const parentProfiles = getPuppyParentProfiles(puppy.parents);
 
                                 return (
+                                    <Fragment key={puppy.name}>
                                     <Card
-                                        key={puppy.name}
                                         className={`relative overflow-hidden bg-background ${isReserved ? "border-2 border-green-600 ring-2 ring-green-600/20 ring-offset-2 ring-offset-background" : ""}`}
                                     >
                                         <CardContent className="p-0">
@@ -364,6 +365,21 @@ export default function NosChiotsPage() {
                                             </div>
                                         </CardContent>
                                     </Card>
+                                    {puppy.name === "SUNNY" ? (
+                                        <section aria-labelledby="portee-tempete-inuk" className="rounded-3xl border border-primary/20 bg-primary/5 p-6 md:p-8">
+                                            <Badge variant="secondary">Naissance imminente</Badge>
+                                            <h2 id="portee-tempete-inuk" className="mt-4 text-2xl font-bold md:text-3xl">
+                                                Une portée de Tempête &amp; Inuk arrive bientôt
+                                            </h2>
+                                            <p className="mt-3 max-w-3xl text-muted-foreground">
+                                                Nous attendons avec impatience les chiots de Tempête et Inuk. La naissance est imminente : nous partagerons leurs premières nouvelles après leur arrivée.
+                                            </p>
+                                            <Link href="/contact" className="mt-5 inline-flex rounded-full bg-primary px-6 py-3 font-semibold text-primary-foreground transition-opacity hover:opacity-90">
+                                                Se renseigner sur cette portée
+                                            </Link>
+                                        </section>
+                                    ) : null}
+                                    </Fragment>
                                 );
                             })}
                         </div>

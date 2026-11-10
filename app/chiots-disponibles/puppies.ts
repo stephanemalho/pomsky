@@ -342,45 +342,9 @@ const puppiesUnsorted: Puppy[] = [
         linkTo: "/contact"
     },
     {
-        name: "BELLA",
-        isReserved: false,
-        updatedAt: "2026-11-03",
-        coat: "Pomsky F4 (ADN Poméranian / Husky)",
-        color: "Bleu et blanc",
-        sexe: "Femelle",
-        size: "Miniature",
-        ruler: "Pelage polaire Husky",
-        weight: "Poids adulte en cours d'estimation",
-        parents: "Parents : SHANE & SKY",
-        readyDate: "Disponible à la réservation",
-        age: "Née le 2 octobre 2026",
-        birthDate: "2026-10-02",
-        description:
-            "Bella est une femelle Pomsky F4 née le 2 octobre 2026, issue de Shane et Sky. Elle se distingue par sa robe rare bleue et blanche et son masque bandit qui souligne ses yeux vairons. Son pelage polaire de type Husky met en valeur son allure nordique et les contrastes de sa robe. Son format adulte est estimé miniature.",
-        highlights: [
-            "Femelle",
-            "Robe rare bleue et blanche",
-            "Yeux vairons",
-            "Masque bandit",
-            "Pelage polaire Husky",
-            "Taille miniature à l'âge adulte"
-        ],
-        health: defaultHealth,
-        images: puppyImages("BELLA", [
-            "2026-10/pomsky-femelle-bella/webp/bella-pomsky-bleue-masque-bandit-1.webp",
-            "2026-10/pomsky-femelle-bella/webp/bella-pomsky-bleue-masque-bandit-2.webp",
-            "2026-10/pomsky-femelle-bella/webp/bella-pomsky-bleue-masque-bandit-3.webp"
-        ], "jpeg", "Bella, femelle Pomsky miniature bleue et blanche aux yeux vairons, masque bandit et pelage polaire Husky", "contain"),
-        video: {
-            src: "/pages/puppies/2026-10/pomsky-femelle-bella/video/bella-1951-20261103.mp4",
-            poster: "/pages/puppies/2026-10/pomsky-femelle-bella/webp/bella-pomsky-bleue-masque-bandit-1.webp"
-        },
-        linkTo: "/contact"
-    },
-    {
         name: "SIRIUS",
         isReserved: false,
-        updatedAt: "2026-11-03",
+        updatedAt: "2026-11-10",
         coat: "Pomsky F4 (ADN Poméranian / Husky)",
         color: "Bleu et blanc",
         sexe: "Mâle",
@@ -392,9 +356,45 @@ const puppiesUnsorted: Puppy[] = [
         age: "Né le 2 octobre 2026",
         birthDate: "2026-10-02",
         description:
-            "Sirius est un mâle Pomsky F4 né le 2 octobre 2026, issu de Shane et Sky. Sa robe rare bleue et blanche se distingue par un masque fleur de lys qui met en valeur ses yeux bleus. Son pelage polaire de type Husky lui donne une allure nordique. Son format adulte est estimé miniature.",
+            "Sirius est un mâle Pomsky F4 né le 2 octobre 2026, issu de Shane et Sky. Il se distingue par sa robe rare bleue et blanche et son masque bandit qui souligne ses yeux vairons. Son pelage polaire de type Husky met en valeur son allure nordique et les contrastes de sa robe. Son format adulte est estimé miniature.",
         highlights: [
             "Mâle",
+            "Robe rare bleue et blanche",
+            "Yeux vairons",
+            "Masque bandit",
+            "Pelage polaire Husky",
+            "Taille miniature à l'âge adulte"
+        ],
+        health: defaultHealth,
+        images: puppyImages("SIRIUS", [
+            "2026-10/pomsky-femelle-bella/webp/bella-pomsky-bleue-masque-bandit-1.webp",
+            "2026-10/pomsky-femelle-bella/webp/bella-pomsky-bleue-masque-bandit-2.webp",
+            "2026-10/pomsky-femelle-bella/webp/bella-pomsky-bleue-masque-bandit-3.webp"
+        ], "jpeg", "Sirius, mâle Pomsky miniature bleu et blanc aux yeux vairons, masque bandit et pelage polaire Husky", "contain"),
+        video: {
+            src: "/pages/puppies/2026-10/pomsky-femelle-bella/video/bella-1951-20261103.mp4",
+            poster: "/pages/puppies/2026-10/pomsky-femelle-bella/webp/bella-pomsky-bleue-masque-bandit-1.webp"
+        },
+        linkTo: "/contact"
+    },
+    {
+        name: "BELLA",
+        isReserved: false,
+        updatedAt: "2026-11-10",
+        coat: "Pomsky F4 (ADN Poméranian / Husky)",
+        color: "Bleu et blanc",
+        sexe: "Femelle",
+        size: "Miniature",
+        ruler: "Pelage polaire Husky",
+        weight: "Poids adulte en cours d'estimation",
+        parents: "Parents : SHANE & SKY",
+        readyDate: "Disponible à la réservation",
+        age: "Née le 2 octobre 2026",
+        birthDate: "2026-10-02",
+        description:
+            "Bella est une femelle Pomsky F4 née le 2 octobre 2026, issue de Shane et Sky. Sa robe rare bleue et blanche se distingue par un masque fleur de lys qui met en valeur ses yeux bleus. Son pelage polaire de type Husky lui donne une allure nordique. Son format adulte est estimé miniature.",
+        highlights: [
+            "Femelle",
             "Robe rare bleue et blanche",
             "Yeux bleus",
             "Masque fleur de lys",
@@ -402,11 +402,11 @@ const puppiesUnsorted: Puppy[] = [
             "Taille miniature à l'âge adulte"
         ],
         health: defaultHealth,
-        images: puppyImages("SIRIUS", [
+        images: puppyImages("BELLA", [
             "2026-10/pomsky-male-sirius/webp/sirius-pomsky-bleu-3.webp",
             "2026-10/pomsky-male-sirius/webp/sirius-pomsky-bleu-1.webp",
             "2026-10/pomsky-male-sirius/webp/sirius-pomsky-bleu-2.webp"
-        ], "jpeg", "Sirius, mâle Pomsky miniature bleu et blanc aux yeux bleus, masque fleur de lys et pelage polaire Husky", "contain"),
+        ], "jpeg", "Bella, femelle Pomsky miniature bleue et blanche aux yeux bleus, masque fleur de lys et pelage polaire Husky", "contain"),
         video: {
             src: "/pages/puppies/2026-10/pomsky-male-sirius/video/sirius-1943-20261103.mp4",
             poster: "/pages/puppies/2026-10/pomsky-male-sirius/webp/sirius-pomsky-bleu-3.webp"
@@ -517,10 +517,10 @@ const puppiesUnsorted: Puppy[] = [
     },
     {
         name: "AKI BLUE",
-        isReserved: false,
+        isReserved: true,
         price: 1500,
         priceCurrency: "EUR",
-        updatedAt: "2026-11-03",
+        updatedAt: "2026-11-10",
         coat: "Pomsky F4+ (ADN Poméranian / Husky)",
         color: "Bleu",
         sexe: "Mâle",
@@ -528,7 +528,7 @@ const puppiesUnsorted: Puppy[] = [
         ruler: "Pelage fluffy",
         weight: "4-5 kg adulte",
         parents: "Parents : WILLOW & BANDIT",
-        readyDate: "Disponible",
+        readyDate: "Réservé",
         age: "Né le [date à préciser]",
         description:
             "Aki Blue est un mâle Pomsky F4+ issu de Willow et Bandit. Il présente des yeux gris particolor bleu, un pelage fluffy et une couleur bleu distinctive. Format miniature.",
@@ -618,6 +618,7 @@ const puppiesUnsorted: Puppy[] = [
     },
     {
         name: "ATLAS",
+        isReserved: true,
         coat: "Pomsky F4 (ADN Poméranian / Husky)",
         color: "Noir et blanc",
         sexe: "Mâle",
@@ -625,8 +626,8 @@ const puppiesUnsorted: Puppy[] = [
         ruler: "Pelage polaire Husky",
         weight: "7 kg adulte (estimation)",
         parents: "Parents : SHADOW & CHARM",
-        updatedAt: "2026-11-03",
-        readyDate: "Disponible à la réservation",
+        updatedAt: "2026-11-10",
+        readyDate: "Réservé",
         age: "Né en septembre 2026",
         description:
             "Atlas est un mâle Pomsky miniature F4 né en septembre 2026, issu de Shadow et Charm. Il arbore une robe noire et blanche rehaussée d'un masque fleur de lys, signature d'une prestigieuse lignée américaine.",
