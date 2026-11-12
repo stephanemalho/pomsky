@@ -399,12 +399,24 @@ export default function NosChiotsPage() {
                                     { name: "Apache dit Chouchou", role: "Père", image: "/pages/reproducteurs/apache-pomsky-toy-micro-f5-2.webp", anchor: "apache" },
                                 ],
                             },
+                            {
+                                id: "apache-legende",
+                                breed: "SPITZ NAIN POMÉRANIEN · MARQUAGE HUSKY",
+                                title: "Apache & Légende",
+                                text: "Nous annonçons une portée de Poméraniens à marquage Husky, issue de notre femelle Spitz Apache et de Légende. Radiographie à réaliser : le nombre de chiots attendus reste à confirmer.",
+                                date: undefined,
+                                dateLabel: "Radiographie à réaliser",
+                                parents: [
+                                    { name: "Apache · femelle Spitz", role: "Mère", image: "/pages/reproducteurs/apache-pomeranien-marquage-husky-1.webp", anchor: "apache-poméranien" },
+                                    { name: "Légende", role: "Père", image: "/pages/reproducteurs/legende-pomeranien-marquage-husky-7.webp", anchor: "legende" },
+                                ],
+                            },
                         ].map((litter) => (
                             <article key={litter.id} className="rounded-3xl border border-primary/20 bg-primary/5 p-6 md:p-8">
                                 <Badge variant="outline" className="whitespace-normal border-primary text-primary">{litter.breed}</Badge>
                                 <h3 className="mt-4 text-xl font-bold md:text-2xl">{litter.title}</h3>
                                 <p className="mt-3 text-muted-foreground">{litter.text}</p>
-                                <p className="mt-3 flex items-center gap-2 text-sm font-medium"><Calendar className="h-4 w-4" aria-hidden="true" /><time dateTime={litter.date}>{litter.dateLabel}</time></p>
+                                <p className="mt-3 flex items-center gap-2 text-sm font-medium"><Calendar className="h-4 w-4" aria-hidden="true" />{litter.date ? <time dateTime={litter.date}>{litter.dateLabel}</time> : <span>{litter.dateLabel}</span>}</p>
                                 <div className="mt-5 flex flex-wrap gap-6">
                                     {litter.parents.map((parent) => (
                                         <Link key={parent.name} href={`/femelles-reproductrices#${parent.anchor}`} className="flex items-center gap-3 rounded-xl p-2 transition-colors hover:bg-primary/10" aria-label={`Voir ${parent.name}, ${parent.role.toLowerCase()} de la portée`}>
