@@ -9,13 +9,173 @@ export type Puppy = {
     description: string;
     title?: string;
     selection?: { title: string; paragraphs: string[] };
-    learnMore?: { href: string; label: string };
     health?: string[];
     highlights: string[];
     images: string[];
 };
 
 const puppiesUnsorted: Puppy[] = [
+{
+    "name": "'BULLE POMÉRANIEN'",
+    "title": "BULLE – Femelle Spitz nain Poméranien à marquage Husky",
+    "coat": "Spitz nain poméranien",
+    "color": "Noire, grise et blanche",
+    "size": "SPITZ NAIN POMÉRANIEN",
+    "height": "Taille : 22 cm au garrot",
+    "weight": "Poids : 3 kg",
+    "description": "Bulle est une femelle Spitz nain Poméranien à marquage Husky, très joyeuse et douce. Proche de l’humain et sociable, elle recherche volontiers le contact et se montre très affectueuse.",
+    "highlights": [
+        "Femelle",
+        "Marquage Husky",
+        "Non LOF · couleur exotique"
+    ],
+    "images": [
+        "pages/reproducteurs/bulle-pomeranien-marquage-husky-1.webp",
+        "pages/reproducteurs/bulle-pomeranien-marquage-husky-2.webp"
+    ]
+},
+{
+    "name": "'APACHE POMÉRANIEN'",
+    "title": "APACHE – Femelle Spitz nain Poméranien à marquage Husky",
+    "coat": "Spitz nain poméranien",
+    "color": "Grise, noire et blanche",
+    "size": "SPITZ NAIN POMÉRANIEN",
+    "height": "Taille : 21 cm au garrot",
+    "weight": "Poids : 2,9 kg",
+    "description": "Apache est une femelle Spitz nain Poméranien à marquage Husky, vive et intelligente. Joueuse et interactive, elle apprécie les échanges avec l’humain et se montre sociable.",
+    "highlights": [
+        "Femelle",
+        "Marquage Husky",
+        "Non LOF · couleur exotique"
+    ],
+    "images": [
+        "pages/reproducteurs/apache-pomeranien-marquage-husky-1.webp",
+        "pages/reproducteurs/apache-pomeranien-marquage-husky-2.webp",
+        "pages/reproducteurs/apache-pomeranien-marquage-husky-3.webp",
+        "pages/reproducteurs/apache-pomeranien-marquage-husky-4.webp",
+        "pages/reproducteurs/apache-pomeranien-marquage-husky-5.webp"
+    ]
+},
+{
+    "name": "'BORÉAL POMÉRANIEN'",
+    "title": "BORÉAL – Femelle Spitz nain Poméranien à marquage Husky",
+    "coat": "Spitz nain poméranien",
+    "color": "Bleue et blanche",
+    "size": "SPITZ NAIN POMÉRANIEN",
+    "height": "Taille : 21 cm au garrot",
+    "weight": "Poids : 3 kg",
+    "description": "Boréal est une femelle Spitz nain Poméranien à marquage Husky, douce et observatrice. Câline, joueuse et interactive, elle est proche de l’humain et sociable.",
+    "highlights": [
+        "Femelle",
+        "Marquage Husky",
+        "Non LOF · couleur exotique"
+    ],
+    "images": [
+        "pages/reproducteurs/willow-pomeranien-marquage-husky-1.webp",
+        "pages/reproducteurs/willow-pomeranien-marquage-husky-2.webp"
+    ]
+},
+{
+    "name": "'ALEU POMÉRANIEN'",
+    "title": "ALEU – Femelle Spitz nain Poméranien à marquage Husky",
+    "coat": "Spitz nain poméranien",
+    "color": "Grise et blanche",
+    "size": "SPITZ NAIN POMÉRANIEN",
+    "height": "Taille : 24 cm au garrot",
+    "weight": "Poids : 3,7 kg",
+    "description": "Aleu est une femelle Spitz nain Poméranien à marquage Husky, vive et intelligente. Elle adore les jeux de balle et se montre joueuse, interactive, proche de l’humain et sociable.",
+    "highlights": [
+        "Femelle",
+        "Marquage Husky",
+        "Non LOF · couleur exotique"
+    ],
+    "images": [
+        "pages/reproducteurs/aleu-pomeranien-marquage-husky-1.webp",
+        "pages/reproducteurs/aleu-pomeranien-marquage-husky-2.webp",
+        "pages/reproducteurs/aleu-pomeranien-marquage-husky-3.webp",
+        "pages/reproducteurs/aleu-pomeranien-marquage-husky-4.webp",
+        "pages/reproducteurs/aleu-pomeranien-marquage-husky-5.webp",
+        "pages/reproducteurs/aleu-pomeranien-marquage-husky-6.webp"
+    ]
+},
+{
+    "name": "'TEMPÊTE POMÉRANIEN'",
+    "title": "TEMPÊTE – Femelle Spitz nain Poméranien à marquage Husky",
+    "coat": "Spitz nain poméranien",
+    "color": "Bleue et blanche",
+    "size": "SPITZ NAIN POMÉRANIEN",
+    "height": "Taille : 18 cm au garrot",
+    "weight": "Poids : 2,2 kg",
+    "description": "Tempête est une femelle Spitz nain Poméranien à marquage Husky, très attachante et expressive. Drôle et interactive, elle se distingue par une personnalité singulière et un charme attendrissant.",
+    "highlights": [
+        "Femelle",
+        "Marquage Husky",
+        "Non LOF · couleur exotique"
+    ],
+    "images": [
+        "pages/reproducteurs/tempete-pomeranien-marquage-husky-1.webp",
+        "pages/reproducteurs/tempete-pomeranien-marquage-husky-2.webp",
+        "pages/reproducteurs/tempete-pomeranien-marquage-husky-3.webp",
+        "pages/reproducteurs/tempete-pomeranien-marquage-husky-4.webp"
+    ]
+},
+{
+    "name": "'LEGENDE'",
+    "coat": "Spitz nain poméranien (ADN 100 % Spitz nain poméranien)",
+    "size": "SPITZ NAIN POMÉRANIEN",
+    "height": "Taille : 23 cm au garrot",
+    "weight": "Poids : 3 kg",
+    "title": "LEGENDE – Spitz nain Poméranien à marquage Husky | Notre programme Pomsky Toy & Micro",
+    "description": "Légende est un mâle Spitz nain Poméranien à marquage Husky, vif, joyeux et observateur. Interactif et câlin, il est proche de l’humain et sociable. Il mesure 23 cm au garrot pour 3 kg. Sa robe rappelle les couleurs du Pomsky et du Husky, associées à la silhouette et à la fourrure généreuse du Poméranien. Il participe à notre programme de sélection de Pomsky Toy et Micro au sein de l’élevage Royal Pomsky.",
+    "selection": {
+        "title": "Un reproducteur pour notre programme Pomsky Toy et Micro",
+        "paragraphs": [
+            "Comme Inuk, Légende participe à notre travail de sélection autour des Poméraniens à marquage Husky et de nos lignées de Pomsky Toy et Micro.",
+            "Notre programme vise à associer les petits formats au marquage caractéristique du Husky et du Pomsky."
+        ]
+    },
+    "highlights": [
+        "Mâle",
+        "Marquage Husky",
+        "Programme Pomsky Toy & Micro"
+    ],
+    "health": [
+        "ADN maladies génétiques indemne",
+        "ADN 100 % Spitz nain poméranien",
+        "Testé Embark"
+    ],
+    "images": [
+        "pages/reproducteurs/legende-pomeranien-marquage-husky-7.webp",
+        "pages/reproducteurs/legende-pomeranien-marquage-husky-1.webp",
+        "pages/reproducteurs/legende-pomeranien-marquage-husky-2.webp",
+        "pages/reproducteurs/legende-pomeranien-marquage-husky-3.webp",
+        "pages/reproducteurs/legende-pomeranien-marquage-husky-4.webp",
+        "pages/reproducteurs/legende-pomeranien-marquage-husky-5.webp",
+        "pages/reproducteurs/legende-pomeranien-marquage-husky-6.webp"
+    ]
+},
+    {
+        name: "'AYA'",
+        coat: "Pomsky F5 (ADN pur Poméranian / Husky)",
+        size: "POMSKY TOY / MICRO",
+        height: "Taille : 24 cm au garrot",
+        weight: "Poids : 3,3 kg",
+        ruler: "Fourrure : fluffy coat",
+        description:
+            "Aya est une femelle Pomsky F5 de format toy / micro, née chez Royal Pomsky d’Akasha et Bandit. Elle mesure 24 cm au garrot pour 3,3 kg et se distingue par ses yeux bleus, son masque fleur de lys et sa fourrure fluffy coat. Elle est enregistrée à la Fédération Française du Pomsky et testée Embark.",
+        highlights: ["Femelle", "Génération F5", "Yeux bleus", "Masque fleur de lys", "Née chez Royal Pomsky · Akasha & Bandit"],
+        health: [
+            "ADN maladies génétiques indemne",
+            "Pomsky ADN pur (Poméranian / Husky)",
+            "Enregistrée à la Fédération Française du Pomsky",
+            "Testée Embark"
+        ],
+        images: [
+            "pages/reproducteurs/aya-pomsky-toy-micro-f5-3.webp",
+            "pages/reproducteurs/aya-pomsky-toy-micro-f5-1.webp",
+            "pages/reproducteurs/aya-pomsky-toy-micro-f5-2.webp"
+        ]
+    },
     {
         name: "'SOOKIE'",
         coat: "Pomsky F4+ (ADN pur Poméranian / Husky)",
@@ -33,6 +193,7 @@ const puppiesUnsorted: Puppy[] = [
             "Testée Embark"
         ],
         images: [
+            "pages/reproducteurs/sookie-pomsky-toy-micro-f4-plus-3.webp",
             "pages/reproducteurs/sookie-pomsky-toy-micro-f4-plus-1.webp",
             "pages/reproducteurs/sookie-pomsky-toy-micro-f4-plus-2.webp"
         ]
@@ -54,8 +215,8 @@ const puppiesUnsorted: Puppy[] = [
             "Testée Embark"
         ],
         images: [
-            "pages/reproducteurs/izzy-pomsky-toy-micro-f4-plus-1.webp",
             "pages/reproducteurs/izzy-pomsky-toy-micro-f4-plus-2.webp",
+            "pages/reproducteurs/izzy-pomsky-toy-micro-f4-plus-1.webp",
             "pages/reproducteurs/izzy-pomsky-toy-micro-f4-plus-3.webp"
         ]
     },
@@ -87,12 +248,12 @@ const puppiesUnsorted: Puppy[] = [
         name: "'FREYA'",
         coat: "Pomsky F4+ (ADN Poméranian / Husky / American Eskimo)",
         color: "Couleur rare Silver Wolf",
-        size: "POMSKY MINIATURE",
+        size: "POMSKY PETIT STANDARD",
         height: "Taille : 39 cm au garrot",
         weight: "Poids : 9,5 kg",
         ruler: "Fourrure : fluffy coat",
         description:
-            "Freya est une femelle Pomsky F4+ de format miniature, importée des États-Unis et issue d'une lignée américaine. Elle mesure 39 cm au garrot pour 9,5 kg et se distingue par sa couleur rare Silver Wolf, ses yeux bleus, son masque ouvert et sa fourrure fluffy coat. Elle est enregistrée à la Fédération Française du Pomsky et possède un pedigree FFP.",
+            "Freya est une femelle Pomsky F4+ de format petit standard, importée des États-Unis et issue d'une lignée américaine. Elle mesure 39 cm au garrot pour 9,5 kg et se distingue par sa couleur rare Silver Wolf, ses yeux bleus, son masque ouvert et sa fourrure fluffy coat. Elle est enregistrée à la Fédération Française du Pomsky et possède un pedigree FFP.",
         highlights: ["Femelle", "Génération F4+", "Yeux bleus", "Masque ouvert", "Import USA · lignée américaine"],
         health: [
             "ADN maladies génétiques indemne",
@@ -219,13 +380,14 @@ const puppiesUnsorted: Puppy[] = [
     },
     {
         name: "'APACHE'",
+        title: "Apache dit Chouchou",
         coat: "Pomsky F5 (ADN Poméranian / Husky)",
         size: "POMSKY TOY MICRO",
         height: "Taille : 24 cm au garrot",
         weight: "Poids : 3 kg",
         ruler: "Fourrure : wooly coat",
         description:
-            "Apache est un mâle Pomsky F5 de format Toy Micro, né chez nous d'Inuit et Apache. Avec ses 24 cm au garrot pour 3 kg, il présente un petit gabarit, des yeux bleus et une fourrure wooly coat. Il est enregistré à la Fédération Française du Pomsky et possède un pedigree FFP.",
+            "Apache, dit Chouchou, est un mâle Pomsky F5 de format Toy Micro, né chez nous d'Inuit et Apache. Avec ses 24 cm au garrot pour 3 kg, il présente un petit gabarit, des yeux bleus et une fourrure wooly coat. Il est enregistré à la Fédération Française du Pomsky et possède un pedigree FFP.",
         highlights: ["Mâle", "Génération F5", "Yeux bleus", "Né chez nous d'Inuit & Apache"],
         health: [
             "ADN maladies génétiques indemne",
@@ -236,7 +398,10 @@ const puppiesUnsorted: Puppy[] = [
         ],
         images: [
             "pages/reproducteurs/apache-pomsky-toy-micro-f5-2.webp",
-            "pages/reproducteurs/apache-pomsky-toy-micro-f5-1.webp"
+            "pages/reproducteurs/apache-pomsky-toy-micro-f5-1.webp",
+            "pages/reproducteurs/apache-pomsky-toy-micro-f5-3.webp",
+            "pages/reproducteurs/apache-pomsky-toy-micro-f5-4.webp",
+            "pages/reproducteurs/apache-pomsky-toy-micro-f5-5.webp"
         ]
     },
     {
@@ -265,17 +430,13 @@ const puppiesUnsorted: Puppy[] = [
         height: "Taille : 18 cm au garrot",
         weight: "Poids : 1,4 kg",
         title: "INUK – Spitz nain Poméranien à marquage Husky | Notre programme Pomsky Toy & Micro",
-        description: "Découvrez Inuk, notre magnifique mâle Spitz nain Poméranien à marquage Husky, qui se distingue par son gabarit exceptionnellement petit, sa robe bleue et blanche et ses yeux bruns expressifs.\n\nAvec seulement 18 cm au garrot pour 1,4 kg, Inuk possède une morphologie particulièrement miniature, associée à une robe aux dessins caractéristiques du Husky Sibérien.\n\nPorteur d’une particularité génétique à l’origine de son marquage Husky, Inuk présente une répartition des couleurs rappelant celle du Husky et du Pomsky, tout en conservant les caractéristiques physiques du Spitz nain Poméranien.",
+        description: "Découvrez Inuk, notre magnifique mâle Spitz nain Poméranien à marquage Husky, qui se distingue par son gabarit exceptionnellement petit, sa robe bleue et blanche et ses yeux bruns expressifs.\n\nJoueur, attachant, sensible et sociable, Inuk apprécie les interactions et la compagnie. Avec seulement 18 cm au garrot pour 1,4 kg, Inuk possède une morphologie particulièrement miniature, associée à une robe aux dessins caractéristiques du Husky Sibérien.\n\nPorteur d’une particularité génétique à l’origine de son marquage Husky, Inuk présente une répartition des couleurs rappelant celle du Husky et du Pomsky, tout en conservant les caractéristiques physiques du Spitz nain Poméranien.",
         selection: {
             title: "Un reproducteur au cœur de notre sélection de Pomsky Toy et Micro",
             paragraphs: [
                 "Inuk occupe une place particulière dans notre programme d’élevage et de sélection. Il participe au développement de notre lignée de Spitz nains Poméraniens à marquage Husky, mais également à notre travail de sélection autour du Pomsky miniature, Toy et Micro.",
                 "Inuk est enregistré auprès de la Fédération Française du Pomsky (FFP) et participe à notre programme de sélection au sein de l’élevage Royal Pomsky."
             ]
-        },
-        learnMore: {
-            href: "https://pomeranien.fr",
-            label: "Découvrir les Spitz nains poméraniens à marquage husky sur pomeranien.fr"
         },
         highlights: ["Mâle", "Yeux bruns", "Couleur rare bleue et blanche"],
         health: [
@@ -306,7 +467,10 @@ const puppiesUnsorted: Puppy[] = [
             "ADN maladies génétiques indemne",
             "Pomsky ADN pur (Poméranian / Husky)"
         ],
-        images: ["ALOU-pomsky-toy-f3.webp"]
+        images: [
+            "pages/reproducteurs/alou-pomsky-toy-f3-1.webp",
+            "pages/reproducteurs/alou-pomsky-toy-f3-2.webp"
+        ]
     },
     {
         name: "'BAMBOU'",
@@ -326,7 +490,11 @@ const puppiesUnsorted: Puppy[] = [
             "Pomsky ADN pur (Poméranian / Husky)",
             "Testée Embark"
         ],
-        images: ["BAMBOU-pomsky-miniature-f5.webp"]
+        images: [
+            "BAMBOU-pomsky-miniature-f5.webp",
+            "pages/reproducteurs/bambou-pomsky-toy-f5-2.webp",
+            "pages/reproducteurs/bambou-pomsky-toy-f5-3.webp"
+        ]
     },
     {
         name: "'BANDIT'",
@@ -347,7 +515,13 @@ const puppiesUnsorted: Puppy[] = [
             "Enregistré à la Fédération Française du Pomsky",
             "Testé Embark"
         ],
-        images: ["BANDIT-pomsky-toy-f5.webp"]
+        images: [
+            "BANDIT-pomsky-toy-f5.webp",
+            "pages/reproducteurs/bandit-pomsky-toy-f5-plus-2.webp",
+            "pages/reproducteurs/bandit-pomsky-toy-f5-plus-3.webp",
+            "pages/reproducteurs/bandit-pomsky-toy-f5-plus-4.webp",
+            "pages/reproducteurs/bandit-pomsky-toy-f5-plus-5.webp"
+        ]
     },
     {
         name: "'BEAUTY'",
@@ -367,7 +541,13 @@ const puppiesUnsorted: Puppy[] = [
             "Pomsky ADN pur (Poméranian / Husky)",
             "Testée Embark"
         ],
-        images: ["BEAUTY-pomsky-miniature-f4.webp"]
+        images: [
+            "BEAUTY-pomsky-miniature-f4.webp",
+            "pages/reproducteurs/beauty-pomsky-miniature-f4-2.webp",
+            "pages/reproducteurs/beauty-pomsky-miniature-f4-3.webp",
+            "pages/reproducteurs/beauty-pomsky-miniature-f4-4.webp",
+            "pages/reproducteurs/beauty-pomsky-miniature-f4-5.webp"
+        ]
     },
     {
         name: "'CHARM'",
@@ -411,7 +591,13 @@ const puppiesUnsorted: Puppy[] = [
             "Pomsky ADN pur (Poméranian / Husky)",
             "Testée Embark"
         ],
-        images: ["MOGU-pomsky-miniature-f4.webp"]
+        images: [
+            "MOGU-pomsky-miniature-f4.webp",
+            "pages/reproducteurs/mogu-pomsky-miniature-f4-2.webp",
+            "pages/reproducteurs/mogu-pomsky-miniature-f4-3.webp",
+            "pages/reproducteurs/mogu-pomsky-miniature-f4-4.webp",
+            "pages/reproducteurs/mogu-pomsky-miniature-f4-5.webp"
+        ]
     },
     {
         name: "'PWEEK'",
@@ -431,7 +617,13 @@ const puppiesUnsorted: Puppy[] = [
             "Pomsky ADN pur (Poméranian / Husky)",
             "Testée Embark"
         ],
-        images: ["PWEEK-pomsky-toy-f3.webp"]
+        images: [
+            "PWEEK-pomsky-toy-f3.webp",
+            "pages/reproducteurs/pweek-pomsky-toy-f3-2.webp",
+            "pages/reproducteurs/pweek-pomsky-toy-f3-3.webp",
+            "pages/reproducteurs/pweek-pomsky-toy-f3-4.webp",
+            "pages/reproducteurs/pweek-pomsky-toy-f3-5.webp"
+        ]
     },
     {
         name: "'SALLY'",
@@ -470,7 +662,11 @@ const puppiesUnsorted: Puppy[] = [
             "ADN maladies génétiques indemne",
             "Testée Embark"
         ],
-        images: ["SHADOW-pomsky-F4.webp"]
+        images: [
+            "pages/reproducteurs/shadow-pomsky-miniature-f4-1.webp",
+            "pages/reproducteurs/shadow-pomsky-miniature-f4-2.webp",
+            "SHADOW-pomsky-F4.webp"
+        ]
     },
     {
         name: "'SHANE'",
@@ -490,7 +686,12 @@ const puppiesUnsorted: Puppy[] = [
             "Pomsky ADN pur (Poméranian / Husky)",
             "Testée Embark"
         ],
-        images: ["SHANE-pomsky-miniature-f3.webp"]
+        images: [
+            "pages/reproducteurs/shane-pomsky-miniature-f3-1.webp",
+            "pages/reproducteurs/shane-pomsky-miniature-f3-2.webp",
+            "pages/reproducteurs/shane-pomsky-miniature-f3-3.webp",
+            "pages/reproducteurs/shane-pomsky-miniature-f3-4.webp"
+        ]
     },
     {
         name: "'SKY'",
@@ -510,7 +711,14 @@ const puppiesUnsorted: Puppy[] = [
             "Pomsky ADN pur (Poméranian / Husky)",
             "Testé Embark"
         ],
-        images: ["SKY-pomsky-miniature-f3.webp"]
+        images: [
+            "SKY-pomsky-miniature-f3.webp",
+            "pages/reproducteurs/sky-pomsky-miniature-f3-plus-2.webp",
+            "pages/reproducteurs/sky-pomsky-miniature-f3-plus-3.webp",
+            "pages/reproducteurs/sky-pomsky-miniature-f3-plus-4.webp",
+            "pages/reproducteurs/sky-pomsky-miniature-f3-plus-5.webp",
+            "pages/reproducteurs/sky-pomsky-miniature-f3-plus-6.webp"
+        ]
     },
     {
         name: "'SUSHI'",
@@ -530,10 +738,16 @@ const puppiesUnsorted: Puppy[] = [
             "Pomsky ADN pur (Poméranian / Husky)",
             "Testée Embark"
         ],
-        images: ["SUSHI-pomsky-toy-f3.webp"]
+        images: [
+            "SUSHI-pomsky-toy-f3.webp",
+            "pages/reproducteurs/sushi-pomsky-toy-f3-2.webp",
+            "pages/reproducteurs/sushi-pomsky-toy-f3-3.webp",
+            "pages/reproducteurs/sushi-pomsky-toy-f3-4.webp",
+            "pages/reproducteurs/sushi-pomsky-toy-f3-5.webp"
+        ]
     },
     {
-        name: "'WILLOW'",
+        name: "'BAÏKAL'",
         coat: "Pomsky toy F2 (ADN Poméranian / Husky)",
         color: "Bleue et blanche (rare)",
         size: "POMSKY TOY",
@@ -541,7 +755,7 @@ const puppiesUnsorted: Puppy[] = [
         weight: "Poids : 5,5 kg",
         height: "Taille : 27 cm au garrot",
         description:
-            "Willow est une femelle Pomsky F2 de catégorie Pomsky Toy, importée des États-Unis, à la robe bleue et blanche rare et à la fourrure wooly d'une qualité exceptionnelle. Très affectueuse et en recherche de contact avec l'humain, elle se distingue par un tempérament doux, joueur et plutôt calme. Malicieuse et attachante, elle sait faire fondre son entourage par son comportement expressif. Sa morphologie est parfaitement conforme au standard du Pomsky Toy, avec un museau court, un stop bien marqué et une démarche fluide et élégante. Son regard brun aux reflets ambrés apporte une profondeur et une intensité remarquables à son expression.",
+            "Baïkal est une femelle Pomsky F2 de catégorie Pomsky Toy, importée des États-Unis, à la robe bleue et blanche rare et à la fourrure wooly d'une qualité exceptionnelle. Très affectueuse et en recherche de contact avec l'humain, elle se distingue par un tempérament doux, joueur et plutôt calme. Malicieuse et attachante, elle sait faire fondre son entourage par son comportement expressif. Sa morphologie est parfaitement conforme au standard du Pomsky Toy, avec un museau court, un stop bien marqué et une démarche fluide et élégante. Son regard brun aux reflets ambrés apporte une profondeur et une intensité remarquables à son expression.",
         highlights: ["Femelle", "Import USA", "Couleur bleue rare"],
         health: [
             "Rotules 0/0",
@@ -550,7 +764,12 @@ const puppiesUnsorted: Puppy[] = [
             "Pomsky ADN pur (Poméranian / Husky)",
             "Testée Embark"
         ],
-        images: ["WILLOW-pomsky-toy-f2.webp"]
+        images: [
+            "WILLOW-pomsky-toy-f2.webp",
+            "pages/reproducteurs/willow-pomsky-toy-f2-2.webp",
+            "pages/reproducteurs/willow-pomsky-toy-f2-3.webp",
+            "pages/reproducteurs/willow-pomsky-toy-f2-4.webp"
+        ]
     }
 ];
 
@@ -564,20 +783,36 @@ function parseMetric(value: string, label: "Taille" | "Poids") {
     return Number.parseFloat(match[1].replace(",", "."));
 }
 
+export function getReproductorGroup(size: string) {
+    const normalized = size.toLowerCase().trim();
+    if (normalized.includes("poméranien")) return "Nos Poméraniens couleur Pomsky";
+    if (normalized.includes("toy")) return "Nos Pomsky Toy / Micro";
+    if (normalized.includes("mini")) return "Nos Pomsky Miniatures";
+    if (normalized.includes("standard")) return "Nos Pomsky Standards";
+    return "Nos futurs reproducteurs · format en cours de croissance";
+}
+
 function sizeRank(size: string) {
     const normalized = size.toLowerCase().trim();
+    if (normalized.includes("poméranien")) return 4;
     if (normalized.includes("toy")) return 0;
     if (normalized.includes("mini")) return 1;
-    return 2;
+    if (normalized.includes("standard")) return 2;
+    return 3;
 }
 
 export const puppies: Puppy[] = [...puppiesUnsorted].sort((a, b) => {
     const categoryDiff = sizeRank(a.size) - sizeRank(b.size);
     if (categoryDiff !== 0) return categoryDiff;
 
+    if (a.size === "SPITZ NAIN POMÉRANIEN") {
+        const sexDiff = Number(a.highlights.includes("Femelle")) - Number(b.highlights.includes("Femelle"));
+        if (sexDiff !== 0) return sexDiff;
+    }
+
     const weightDiff =
         parseMetric(a.weight, "Poids") - parseMetric(b.weight, "Poids");
     if (weightDiff !== 0) return weightDiff;
 
-    return parseMetric(a.weight, "Taille") - parseMetric(b.weight, "Taille");
+    return parseMetric(a.height, "Taille") - parseMetric(b.height, "Taille");
 });

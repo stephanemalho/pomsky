@@ -1,3 +1,4 @@
+import { Fragment } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { FAQSection } from "@/components/faq"
@@ -9,7 +10,7 @@ import type { Metadata } from "next"
 import { buildOpenGraph, buildTwitter, pageMetadata, returnLastmod, siteConfig, sitemapPages } from "@/lib/seo-config"
 import { convertFAQsToSchema } from "@/lib/faq-utils"
 import Link from "next/link"
-import { puppies } from "./puppies"
+import { puppies, getReproductorGroup } from "./puppies"
 import { pageContent } from "@/lib/page-content"
 
 const reproductorsOgJpg = "/BEAUTY-pomsky-miniature-f4.jpg"
@@ -110,8 +111,29 @@ export default function NosChiotsPage() {
                             const SexIcon = isFemale ? Venus : Mars
                             const sexColor = isFemale ? "text-pink-600 dark:text-pink-400" : "text-male-600 dark:text-male-300"
                             const sexBadge = isFemale ? "bg-pink-100 text-pink-700 dark:bg-pink-950/40 dark:text-pink-300" : "bg-male-100 text-male-700 dark:bg-male-950/40 dark:text-male-300"
+                            const group = getReproductorGroup(puppy.size)
+                            const startsGroup = index === 0 || group !== getReproductorGroup(puppies[index - 1].size)
                             return (
-                            <Card key={puppy.name} className={`overflow-hidden p-0 text-slate-900 [--muted-foreground:#475569] dark:text-slate-100 dark:[--muted-foreground:#cbd5e1] md:p-6 ${isFemale ? "border-rose-200 bg-rose-100 dark:border-rose-900 dark:bg-[#35272d]" : "border-male-300 bg-male-100 dark:border-male-700 dark:bg-male-950"}`}>
+                            <Fragment key={puppy.name}>
+                            {startsGroup && (
+                                <div className="mt-8 space-y-3">
+                                    <h2 className="text-2xl font-bold text-primary md:text-3xl">{group}</h2>
+                                    {puppy.size === "SPITZ NAIN POMÉRANIEN" && (
+                                        <div className="space-y-3">
+                                            <p className="text-muted-foreground">
+                                                Le Poméranien est l’une des deux races fondatrices du Pomsky, avec le Husky sibérien. Il apporte notamment son petit gabarit, tandis que le Husky contribue à l’allure nordique du Pomsky. Ce lien explique la place de nos mâles Poméraniens à marquage Husky dans notre programme d’élevage de Pomsky de format Toy à Micro.
+                                            </p>
+                                            <p className="text-muted-foreground">
+                                                Nos femelles Poméranien à marquage Husky ont des chiots Poméraniens à marquage Husky, pour les personnes qui souhaitent un chien plus petit que le Pomsky Toy. Leur format adulte se situe généralement autour d’une vingtaine de centimètres au garrot pour 2 à 3 kg, avec des variations selon les chiots.
+                                            </p>
+                                            <a href="https://pomeranien.fr" className="inline-block font-medium text-primary underline underline-offset-4 hover:no-underline">
+                                                Découvrir nos Spitz à marquage Husky
+                                            </a>
+                                        </div>
+                                    )}
+                                </div>
+                            )}
+                            <Card className={`overflow-hidden p-0 text-slate-900 [--muted-foreground:#475569] dark:text-slate-100 dark:[--muted-foreground:#cbd5e1] md:p-6 ${isFemale ? "border-rose-200 bg-rose-100 dark:border-rose-900 dark:bg-[#35272d]" : "border-male-300 bg-male-100 dark:border-male-700 dark:bg-male-950"}`}>
                                 <CardContent className="p-0">
                                     <div className={`grid ${puppy.images.length > 0 ? "md:grid-cols-2" : ""} gap-0 ${index % 2 === 1 ? "md:grid-flow-col-dense" : ""}`}>
                                         {puppy.images.length > 0 && <ImageCarousel
@@ -131,6 +153,8 @@ export default function NosChiotsPage() {
                                                 {puppy.color && <Badge variant="outline" className="min-w-0 whitespace-normal wrap-break-words">{puppy.color}</Badge>}
                                             </div>
                                             <div className="space-y-2">
+                                                {puppy.name === "'ALOU'" && <span id="boreal" className="block scroll-mt-28" />}
+                                                {puppy.name === "'BAÏKAL'" && <span id="willow" className="block scroll-mt-28" />}
                                                 <h3 id={getReproductorAnchorId(puppy.name)} className={`scroll-mt-28 text-2xl font-bold ${sexColor}`}>{puppy.title ?? puppy.name}</h3>
                                                 {puppy.description.split("\n\n").map((paragraph) => (
                                                     <p key={paragraph} className="text-muted-foreground">{paragraph}</p>
@@ -142,11 +166,6 @@ export default function NosChiotsPage() {
                                                             <p key={paragraph} className="text-muted-foreground">{paragraph}</p>
                                                         ))}
                                                     </div>
-                                                )}
-                                                {puppy.learnMore && (
-                                                    <a href={puppy.learnMore.href} className="inline-block font-medium text-primary underline underline-offset-4 hover:no-underline">
-                                                        {puppy.learnMore.label}
-                                                    </a>
                                                 )}
                                                 <div>
                                                     {puppy.health && puppy.health.length > 0 && (
@@ -203,6 +222,7 @@ export default function NosChiotsPage() {
                                     </div>
                                 </CardContent>
                             </Card>
+                            </Fragment>
                             )
                         })}
                         <Link

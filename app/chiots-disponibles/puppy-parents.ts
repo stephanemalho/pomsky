@@ -110,10 +110,10 @@ export const puppyParentProfilesByLabel: Record<string, PuppyParentProfile[]> = 
     "Parents : WILLOW & BANDIT": [
         {
             role: "Mère",
-            name: "Willow",
+            name: "Baïkal",
             image: "/WILLOW-pomsky-toy-f2.webp",
             description: "Femelle Pomsky F2",
-            href: `/femelles-reproductrices#${getReproductorAnchorId("WILLOW")}`,
+            href: `/femelles-reproductrices#${getReproductorAnchorId("BAÏKAL")}`,
         },
         {
             role: "Père",
