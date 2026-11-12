@@ -25,7 +25,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { buildOpenGraph, buildTwitter, siteConfig } from "@/lib/seo-config";
 import { generateBreadcrumbSchema } from "@/lib/schema-generators";
 import { getPuppyParentProfiles } from "../puppy-parents";
-import { litterCertifications, puppies, type LitterCertification, type Puppy } from "../puppies";
+import { getPuppyBreedLabel, litterCertifications, puppies, type LitterCertification, type Puppy } from "../puppies";
 import {
     buildPuppyProductStructuredData,
     formatPuppyPrice,
@@ -275,7 +275,7 @@ export default async function PuppyDetailPage({ params }: PuppyPageProps) {
                                 <div className="flex flex-wrap items-center gap-2">
                                     <Badge variant="secondary">
                                         <SexIcon className={`mr-1 h-4 w-4 ${puppy.sexe.toLowerCase().includes("femelle") ? "text-pink-600 dark:text-pink-400" : "text-male-600 dark:text-male-300"}`} aria-hidden="true" />
-                                        {puppy.coat}
+                                        {getPuppyBreedLabel(puppy)}
                                     </Badge>
                                     <Badge variant="outline">{puppy.color}</Badge>
                                     <Badge className={isAvailable ? sexActionClass : "bg-green-700 text-white hover:bg-green-700"}>

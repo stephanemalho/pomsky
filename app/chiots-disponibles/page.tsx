@@ -39,7 +39,7 @@ import {
     generateStructuredDataGraph,
     generateWebPageSchema,
 } from "@/lib/schema-generators";
-import { litterCertifications, puppies, type Puppy } from "./puppies";
+import { getPuppyBreedLabel, litterCertifications, puppies, type Puppy } from "./puppies";
 import { getPuppyParentProfiles } from "./puppy-parents";
 import {
     buildPuppyItemListStructuredData,
@@ -266,6 +266,7 @@ export default function NosChiotsPage() {
                                                     </div>
 
                                                     <div className="flex flex-wrap gap-1.5 md:gap-2">
+                                                        <Badge variant="outline" className="border-primary text-primary font-semibold">{getPuppyBreedLabel(puppy)}</Badge>
                                                         <Badge variant="secondary">
                                                             <SexIcon className={`mr-1 h-4 w-4 ${puppy.sexe.toLowerCase().includes("femelle") ? "text-pink-600 dark:text-pink-400" : "text-male-600 dark:text-male-300"}`} aria-hidden="true" />
                                                             {puppy.sexe}

@@ -859,3 +859,7 @@ export const puppies: Puppy[] = puppiesUnsorted.map((puppy) => ({
     return priority(a) - priority(b)
         || getLitterBirthDateForPuppy(a).localeCompare(getLitterBirthDateForPuppy(b));
 });
+
+export function getPuppyBreedLabel(puppy: Puppy): string {
+    return puppy.coat.split("(")[0].trim().toUpperCase();
+}
