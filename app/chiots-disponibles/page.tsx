@@ -403,9 +403,9 @@ export default function NosChiotsPage() {
                                 id: "apache-legende",
                                 breed: "SPITZ NAIN POMÉRANIEN · MARQUAGE HUSKY",
                                 title: "Apache & Légende",
-                                text: "Nous annonçons une portée de Poméraniens à marquage Husky, issue de notre femelle Spitz Apache et de Légende. Radiographie à réaliser : le nombre de chiots attendus reste à confirmer.",
-                                date: undefined,
-                                dateLabel: "Radiographie à réaliser",
+                                text: "Nous annonçons une portée de Poméraniens à marquage Husky, issue de notre femelle Spitz Apache et de Légende, avec une naissance attendue à partir du 20 novembre 2026. Radiographie à réaliser : le nombre de chiots attendus reste à confirmer.",
+                                date: "2026-11-20",
+                                dateLabel: "Naissance attendue à partir du 20 novembre 2026",
                                 parents: [
                                     { name: "Apache · femelle Spitz", role: "Mère", image: "/pages/reproducteurs/apache-pomeranien-marquage-husky-1.webp", anchor: "apache-poméranien" },
                                     { name: "Légende", role: "Père", image: "/pages/reproducteurs/legende-pomeranien-marquage-husky-7.webp", anchor: "legende" },
