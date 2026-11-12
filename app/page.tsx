@@ -1,3 +1,4 @@
+import ImageCarousel from "@/components/client/carousel/ImageCarousel"
 import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -27,10 +28,6 @@ const optimizedImageBase = "/images/optimized"
 const pomskyFamilySources = {
   avif: `${optimizedImageBase}/chiots-pomsky-toy-yeux-bleus-elevage-royal-pomsky-0746-480.avif 480w, ${optimizedImageBase}/chiots-pomsky-toy-yeux-bleus-elevage-royal-pomsky-0746-768.avif 768w, ${optimizedImageBase}/chiots-pomsky-toy-yeux-bleus-elevage-royal-pomsky-0746-1024.avif 1024w`,
   webp: `${optimizedImageBase}/chiots-pomsky-toy-yeux-bleus-elevage-royal-pomsky-0746-480.webp 480w, ${optimizedImageBase}/chiots-pomsky-toy-yeux-bleus-elevage-royal-pomsky-0746-768.webp 768w, ${optimizedImageBase}/chiots-pomsky-toy-yeux-bleus-elevage-royal-pomsky-0746-1024.webp 1024w`,
-}
-const akashaSources = {
-  avif: `${optimizedImageBase}/akasha-pomsky-toy-f4-360.avif?v=7625 360w, ${optimizedImageBase}/akasha-pomsky-toy-f4-480.avif?v=7625 480w, ${optimizedImageBase}/akasha-pomsky-toy-f4-640.avif?v=7625 640w, ${optimizedImageBase}/akasha-pomsky-toy-f4-768.avif?v=7625 768w`,
-  webp: `${optimizedImageBase}/akasha-pomsky-toy-f4-360.webp?v=7625 360w, ${optimizedImageBase}/akasha-pomsky-toy-f4-480.webp?v=7625 480w, ${optimizedImageBase}/akasha-pomsky-toy-f4-640.webp?v=7625 640w, ${optimizedImageBase}/akasha-pomsky-toy-f4-768.webp?v=7625 768w`,
 }
 const pomskyStandardSources = {
   avif: `${optimizedImageBase}/pomsky-standard-size-480.avif?v=7417 480w, ${optimizedImageBase}/pomsky-standard-size-768.avif?v=7417 768w, ${optimizedImageBase}/pomsky-standard-size-1024.avif?v=7417 1024w`,
@@ -363,20 +360,18 @@ export default function HomePage() {
               </div>
 
               <figure className="min-w-0 space-y-3">
-                <div className="relative h-auto w-full max-w-full overflow-hidden rounded-lg aspect-4/5 sm:aspect-video md:h-200 md:aspect-4/5">
-                  <ResponsivePicture
-                    sources={akashaSources}
-                    fallback={`${optimizedImageBase}/akasha-pomsky-toy-f4-768.webp?v=7625`}
-                    alt="Portrait d'Akasha, femelle Pomsky toy F4 de l'élevage Royal POMSKY"
-                    width={1300}
-                    height={1947}
-                    sizes={akashaSizes}
-                    className="absolute inset-0"
-                    imgClassName="h-full w-full object-cover"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </div>
+                <ImageCarousel
+                  images={[
+                    "pages/reproducteurs/akasha-pomsky-toy-f4-1.webp",
+                    "pages/reproducteurs/akasha-pomsky-toy-f4-2.webp",
+                    "pages/reproducteurs/akasha-pomsky-toy-f4-3.webp",
+                  ]}
+                  alt="Akasha, femelle Pomsky toy F4 de l'élevage Royal POMSKY"
+                  sizes={akashaSizes}
+                  ratioClassName="aspect-4/5 sm:aspect-video md:aspect-4/5 rounded-lg"
+                  imageClassName="object-contain"
+                  showBackdrop
+                />
                 <figcaption className="text-sm leading-relaxed text-muted-foreground">
                   Akasha illustre ici le type recherché à l&apos;élevage, avec un format compact, une expression marquée et une vraie présence.
                 </figcaption>

@@ -20,7 +20,7 @@ const internalLinkImagesByHref: Record<string, string> = {
   "/": siteConfig.ogImage,
   "/le-pomsky": "/pages/le-pomsky/pomsky-f4-et-une-citrouille.webp",
   "/pomsky-prix": "/pages/puppies/pomsky-mini-aika-1.webp",
-  "/presentation-elevage": "/AKASHA-pomsky-toy-f4.webp",
+  "/presentation-elevage": "/pages/reproducteurs/akasha-pomsky-toy-f4-1.webp",
   "/presentation-eleveuses": "/assets/authors/marine-ava.webp",
   "/femelles-reproductrices": "/BEAUTY-pomsky-miniature-f4.webp",
   "/chiots-disponibles": "/pages/puppies/pomsky-mini-aika-1.webp",

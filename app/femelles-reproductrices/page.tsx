@@ -113,26 +113,41 @@ export default function NosChiotsPage() {
                             return (
                             <Card key={puppy.name} className={`overflow-hidden p-0 text-slate-900 [--muted-foreground:#475569] dark:text-slate-100 dark:[--muted-foreground:#cbd5e1] md:p-6 ${isFemale ? "border-rose-200 bg-rose-100 dark:border-rose-900 dark:bg-[#35272d]" : "border-male-300 bg-male-100 dark:border-male-700 dark:bg-male-950"}`}>
                                 <CardContent className="p-0">
-                                    <div className={`grid md:grid-cols-2 gap-0 ${index % 2 === 1 ? "md:grid-flow-col-dense" : ""}`}>
-                                        <ImageCarousel
+                                    <div className={`grid ${puppy.images.length > 0 ? "md:grid-cols-2" : ""} gap-0 ${index % 2 === 1 ? "md:grid-flow-col-dense" : ""}`}>
+                                        {puppy.images.length > 0 && <ImageCarousel
                                             className={index % 2 === 1 ? "md:order-2" : undefined}
                                             images={puppy.images}
-                                            alt={"Photos du Pomsky reproducteur " + puppy.name}
+                                            alt={"Photos du reproducteur " + puppy.name}
                                             caption={`Photos de ${puppy.name}, pour visualiser sa morphologie, son type et sa place dans notre programme d'élevage.`}
                                             priority={index === 0}
                                             sizes="(min-width: 1024px) 50vw, (min-width: 768px) 50vw, 100vw"
-                                        />
+                                        />}
                                         <div className={`p-8 space-y-4 flex flex-col justify-center min-w-0 ${index % 2 === 1 ? "md:order-1" : ""}`}>
                                             <div className="flex items-center gap-2">
                                                 <Badge variant="secondary">
                                                     <SexIcon className={`h-4 w-4 mr-1 ${sexColor}`} aria-hidden="true" />
                                                     {puppy.coat}
                                                 </Badge>
-                                                <Badge variant="outline" className="min-w-0 whitespace-normal wrap-break-words">{puppy.color}</Badge>
+                                                {puppy.color && <Badge variant="outline" className="min-w-0 whitespace-normal wrap-break-words">{puppy.color}</Badge>}
                                             </div>
                                             <div className="space-y-2">
-                                                <h3 id={getReproductorAnchorId(puppy.name)} className={`scroll-mt-28 text-2xl font-bold ${sexColor}`}>{puppy.name}</h3>
-                                                <p className="text-muted-foreground">{puppy.description}</p>
+                                                <h3 id={getReproductorAnchorId(puppy.name)} className={`scroll-mt-28 text-2xl font-bold ${sexColor}`}>{puppy.title ?? puppy.name}</h3>
+                                                {puppy.description.split("\n\n").map((paragraph) => (
+                                                    <p key={paragraph} className="text-muted-foreground">{paragraph}</p>
+                                                ))}
+                                                {puppy.selection && (
+                                                    <div className="space-y-2">
+                                                        <h4 className="text-lg font-semibold">{puppy.selection.title}</h4>
+                                                        {puppy.selection.paragraphs.map((paragraph) => (
+                                                            <p key={paragraph} className="text-muted-foreground">{paragraph}</p>
+                                                        ))}
+                                                    </div>
+                                                )}
+                                                {puppy.learnMore && (
+                                                    <a href={puppy.learnMore.href} className="inline-block font-medium text-primary underline underline-offset-4 hover:no-underline">
+                                                        {puppy.learnMore.label}
+                                                    </a>
+                                                )}
                                                 <div>
                                                     {puppy.health && puppy.health.length > 0 && (
                                                         <div className="space-y-1">
@@ -168,13 +183,13 @@ export default function NosChiotsPage() {
                                                         {puppy.weight}
                                                     </dd>
                                                 </div>
-                                                <div className="text-muted-foreground">
+                                                {puppy.ruler && <div className="text-muted-foreground">
                                                     <dt className="sr-only">Fourrure</dt>
                                                     <dd className="flex items-center gap-2">
                                                         <Scissors className="max-h-4 max-w-4 text-emerald-600 dark:text-emerald-400" aria-hidden="true" />
                                                         {puppy.ruler}
                                                     </dd>
-                                                </div>
+                                                </div>}
                                             </dl>
                                             <div className="flex flex-wrap gap-2">
                                                 {puppy.highlights.map((item) => (

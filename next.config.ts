@@ -74,6 +74,11 @@ const nextConfig: NextConfig = {
     async redirects() {
         return [
             {
+                source: "/chiots-disponibles/aki-blue",
+                destination: "/chiots-disponibles/cosmo",
+                permanent: true
+            },
+            {
                 source: "/pages/puppies/pomsky-male-aki/:path*",
                 destination: "/pages/puppies/2026-09/pomsky-male-aki/:path*",
                 permanent: true
