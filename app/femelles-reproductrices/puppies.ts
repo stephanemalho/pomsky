@@ -447,7 +447,9 @@ const puppiesUnsorted: Puppy[] = [
         images: [
             "pages/reproducteurs/inuk-pomeranien-bleu-1.webp",
             "pages/reproducteurs/inuk-pomeranien-bleu-2.webp",
-            "pages/reproducteurs/inuk-pomeranien-bleu-3.webp"
+            "pages/reproducteurs/inuk-pomeranien-bleu-3.webp",
+            "pages/reproducteurs/inuk-pomeranien-bleu-4.webp",
+            "pages/reproducteurs/inuk-pomeranien-bleu-5.webp"
         ]
     },
     {
