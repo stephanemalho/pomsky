@@ -292,6 +292,13 @@ const puppiesUnsorted: Puppy[] = [
     ],
     "images": [
         {
+            "src": "pages/puppies/noxy-pomeranien-marquage-husky-3.webp",
+            "sourceSrc": "pages/puppies/noxy-pomeranien-marquage-husky-3.webp",
+            "thumbSrc": "pages/puppies/noxy-pomeranien-marquage-husky-3-sm.webp",
+            "alt": "Noxy, mâle Poméranien à marquage Husky gris, noir et blanc - photo 3",
+            "fit": "contain"
+        },
+        {
             "src": "pages/puppies/noxy-pomeranien-marquage-husky-1.webp",
             "sourceSrc": "pages/puppies/noxy-pomeranien-marquage-husky-1.webp",
             "thumbSrc": "pages/puppies/noxy-pomeranien-marquage-husky-1-sm.webp",
@@ -303,13 +310,6 @@ const puppiesUnsorted: Puppy[] = [
             "sourceSrc": "pages/puppies/noxy-pomeranien-marquage-husky-2.webp",
             "thumbSrc": "pages/puppies/noxy-pomeranien-marquage-husky-2-sm.webp",
             "alt": "Noxy, mâle Poméranien à marquage Husky gris, noir et blanc - photo 2",
-            "fit": "contain"
-        },
-        {
-            "src": "pages/puppies/noxy-pomeranien-marquage-husky-3.webp",
-            "sourceSrc": "pages/puppies/noxy-pomeranien-marquage-husky-3.webp",
-            "thumbSrc": "pages/puppies/noxy-pomeranien-marquage-husky-3-sm.webp",
-            "alt": "Noxy, mâle Poméranien à marquage Husky gris, noir et blanc - photo 3",
             "fit": "contain"
         },
         {
