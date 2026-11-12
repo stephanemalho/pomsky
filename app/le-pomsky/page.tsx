@@ -416,6 +416,26 @@ export default function DogPage() {
                         </div>
                     </section>
 
+                    <section className="space-y-5">
+                        <h2 className="text-xl font-bold md:text-2xl">Le Poméranien, une race fondatrice du Pomsky</h2>
+                        <p className="max-w-4xl leading-relaxed text-muted-foreground">
+                            Le Spitz nain Poméranien descend de Spitz plus grands. Son nom vient de la Poméranie, une région historique située entre les actuelles Allemagne et Pologne. Au XIXe siècle, l’engouement de la reine Victoria contribue à sa popularité et à la sélection de petits sujets. Au fil des générations, il devient le petit chien de compagnie à la fourrure abondante que nous connaissons aujourd’hui.
+                        </p>
+                        <p className="max-w-4xl leading-relaxed text-muted-foreground">
+                            Avec le Husky sibérien, le Poméranien est l’une des deux races à l’origine du Pomsky. Son petit gabarit occupe une place essentielle dans notre travail autour des formats Toy à Micro.
+                        </p>
+                        <h3 className="text-lg font-semibold">Notre sélection de Poméraniens à marquage Husky</h3>
+                        <p className="max-w-4xl leading-relaxed text-muted-foreground">
+                            Au Cercle Polaire, nous sélectionnons des Poméraniens dont la robe et le masque rappellent le Husky et le Pomsky, tout en préservant le type du Poméranien. Notre objectif associe petit format, santé, équilibre et proximité avec l’humain. Nos mâles à marquage Husky participent également à notre programme d’élevage de Pomsky Toy à Micro. Nos lignées de Poméraniens offrent aussi une possibilité aux familles qui recherchent ce marquage dans un format généralement plus petit que le Pomsky Toy.
+                        </p>
+                        <a href="https://pomeranien.fr" className="inline-flex font-medium text-primary underline underline-offset-4 hover:no-underline">
+                            Découvrir les Poméraniens à marquage Husky du Cercle Polaire
+                        </a>
+                        <p className="text-xs text-muted-foreground">
+                            Repères historiques : <a href="https://www.ampomclub.org/history" className="underline underline-offset-4">American Pomeranian Club</a>.
+                        </p>
+                    </section>
+
                     <section className="space-y-8">
                         <div className="space-y-3">
                             <h2 className="text-xl font-bold md:text-2xl">Que signifient les générations F1 à F5 chez le Pomsky ?</h2>
