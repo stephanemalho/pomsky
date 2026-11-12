@@ -273,6 +273,56 @@ export const litterCertifications: LitterCertification[] = [
 ];
 
 const puppiesUnsorted: Puppy[] = [
+{
+    "name": "NOXY",
+    "coat": "Spitz nain Poméranien à marquage Husky",
+    "color": "Gris noir et blanc",
+    "sexe": "Mâle",
+    "weight": "Poids adulte estimé : 2 kg",
+    "parents": "Parents : BULLE & LEGENDE",
+    "readyDate": "Disponible",
+    "age": "Date de naissance à préciser",
+    "size": "Spitz nain Poméranien",
+    "ruler": "Marquage Husky",
+    "description": "Noxy est un mâle Spitz nain Poméranien à marquage Husky, issu de Bulle et Légende. Son pelage est gris, noir et blanc. Son poids adulte est estimé à environ 2 kg, une estimation qui pourra évoluer avec sa croissance. Il est disponible : contactez-nous pour connaître les modalités de son adoption.",
+    "highlights": [
+        "Mâle",
+        "Poméranien à marquage Husky",
+        "Poids adulte estimé : 2 kg"
+    ],
+    "images": [
+        {
+            "src": "pages/puppies/noxy-pomeranien-marquage-husky-1.webp",
+            "sourceSrc": "pages/puppies/noxy-pomeranien-marquage-husky-1.webp",
+            "thumbSrc": "pages/puppies/noxy-pomeranien-marquage-husky-1-sm.webp",
+            "alt": "Noxy, mâle Poméranien à marquage Husky gris, noir et blanc - photo 1",
+            "fit": "contain"
+        },
+        {
+            "src": "pages/puppies/noxy-pomeranien-marquage-husky-2.webp",
+            "sourceSrc": "pages/puppies/noxy-pomeranien-marquage-husky-2.webp",
+            "thumbSrc": "pages/puppies/noxy-pomeranien-marquage-husky-2-sm.webp",
+            "alt": "Noxy, mâle Poméranien à marquage Husky gris, noir et blanc - photo 2",
+            "fit": "contain"
+        },
+        {
+            "src": "pages/puppies/noxy-pomeranien-marquage-husky-3.webp",
+            "sourceSrc": "pages/puppies/noxy-pomeranien-marquage-husky-3.webp",
+            "thumbSrc": "pages/puppies/noxy-pomeranien-marquage-husky-3-sm.webp",
+            "alt": "Noxy, mâle Poméranien à marquage Husky gris, noir et blanc - photo 3",
+            "fit": "contain"
+        },
+        {
+            "src": "pages/puppies/noxy-pomeranien-marquage-husky-4.webp",
+            "sourceSrc": "pages/puppies/noxy-pomeranien-marquage-husky-4.webp",
+            "thumbSrc": "pages/puppies/noxy-pomeranien-marquage-husky-4-sm.webp",
+            "alt": "Noxy, mâle Poméranien à marquage Husky gris, noir et blanc - photo 4",
+            "fit": "contain"
+        }
+    ],
+    "linkTo": "/contact",
+    "updatedAt": "2026-11-12"
+},
     {
         name: "SUNNY",
         price: 3500,
@@ -736,39 +786,7 @@ const puppiesUnsorted: Puppy[] = [
         ], "jpeg", "Aston, chiot Pomsky Toy F4 noir et blanc aux yeux bleus, assis chez Royal POMSKY", "contain"),
         linkTo: formUrls.charmDolly
     },
-    {
-        name: "LUNA",
-        isReserved: true,
-        coat: "Pomsky F4 (ADN Poméranian / Husky)",
-        color: "Gris noir et blanc",
-        sexe: "Femelle",
-        size: "Toy - Micro",
-        ruler: "Masque fleur de lys",
-        weight: "Poids adulte en cours d'estimation",
-        parents: "Parents : CHARM & DOLLY",
-        updatedAt: "2026-10-08",
-        readyDate: "Réservée",
-        age: "Née le 5 septembre 2026",
-        birthDate: "2026-09-05",
-        description:
-            "Luna est une femelle Pomsky Toy-micro F4 née le 5 septembre 2026, issue de Charm et Dolly. Elle arbore une robe grise, noire et blanche rehaussée d'un masque fleur de lys, signature d'une prestigieuse lignée américaine.",
-        highlights: [
-            "Femelle",
-            "Gris noir et blanc",
-            "Masque fleur de lys",
-            "Yeux bleus",
-            "Lignée américaine",
-            "Taille Toy-micro"
-        ],
-        health: defaultHealth,
-        pedigree: "Fédération Française du Pomsky",
-        images: puppyImages("LUNA", [
-            "pomsky-gris-noir-blanc-luna/webp/luna-chiot-pomsky-f4-gris-noir-blanc-couverture-20261008.webp",
-            "pomsky-gris-noir-blanc-luna/webp/pomsky-gris-noir-blanc-luna-2.webp",
-            "pomsky-gris-noir-blanc-luna/webp/pomsky-gris-noir-blanc-luna-3.webp"
-        ], "jpeg", "Luna, femelle Pomsky Toy-micro F4 grise, noire et blanche, assise chez Royal POMSKY", "contain"),
-        linkTo: formUrls.charmDolly
-    },
+
     {
         name: "VEGAS",
         isReserved: true,
@@ -849,7 +867,7 @@ export const puppySharedHighlights = ["Pédigrée FFP", "Test ADN Embark", "Pare
 
 export const puppies: Puppy[] = puppiesUnsorted.map((puppy) => ({
     ...puppy,
-    highlights: [...new Set([...puppy.highlights, ...puppySharedHighlights])],
+    highlights: [...new Set([...puppy.highlights, ...(puppy.coat.startsWith("Pomsky") ? puppySharedHighlights : [])])],
 })).sort((a, b) => {
     const featuredOrder = ["ATLAS"];
     const priority = (puppy: Puppy) => {
@@ -862,4 +880,8 @@ export const puppies: Puppy[] = puppiesUnsorted.map((puppy) => ({
 
 export function getPuppyBreedLabel(puppy: Puppy): string {
     return puppy.coat.split("(")[0].trim().toUpperCase();
+}
+
+export function getPuppyBreed(puppy: Puppy): string {
+    return puppy.coat.startsWith("Pomsky") ? "Pomsky" : "Spitz nain Poméranien";
 }

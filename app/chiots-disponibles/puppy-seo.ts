@@ -1,6 +1,6 @@
 import { getPuppyParentProfiles } from "./puppy-parents";
 import { siteConfig } from "@/lib/seo-config";
-import { type Puppy } from "./puppies";
+import { getPuppyBreed, type Puppy } from "./puppies";
 import { getSmallImageSrc } from "@/lib/image-variants";
 
 export function formatPuppyPrice(price: number, currency = "EUR") {
@@ -86,7 +86,7 @@ export function getPuppySeoDescription(puppy: Puppy) {
             ? ` Prix : ${puppy.priceLabel}.`
             : "";
 
-    return `${puppy.name}, chiot Pomsky ${puppy.color.toLowerCase()} ${puppy.sexe.toLowerCase()} de l'élevage Royal POMSKY. ${puppy.description} Statut : ${getPuppyStatusLabel(puppy)}.${price}`;
+    return `${puppy.name}, chiot ${getPuppyBreed(puppy)} ${puppy.color.toLowerCase()} ${puppy.sexe.toLowerCase()} de l'élevage Royal POMSKY. ${puppy.description} Statut : ${getPuppyStatusLabel(puppy)}.${price}`;
 }
 
 export function getPuppyLastModified(puppy: Puppy) {
@@ -114,19 +114,19 @@ export function buildPuppyProductStructuredData(puppy: Puppy) {
             "@context": "https://schema.org",
             "@type": "WebPage",
             "@id": `${url}#webpage`,
-            name: `${puppy.name} - chiot Pomsky ${puppy.color}`,
+            name: `${puppy.name} - chiot ${getPuppyBreed(puppy)} ${puppy.color}`,
             description: puppy.description,
             url,
             primaryImageOfPage: images[0],
             mainEntity: {
                 "@type": "Thing",
                 "@id": `${url}#puppy`,
-                name: `${puppy.name} - chiot Pomsky ${puppy.color}`,
+                name: `${puppy.name} - chiot ${getPuppyBreed(puppy)} ${puppy.color}`,
                 description: puppy.description,
                 image: images,
-                category: "Chiot Pomsky",
+                category: `Chiot ${getPuppyBreed(puppy)}`,
                 additionalProperty: [
-                    { "@type": "PropertyValue", name: "Race", value: "Pomsky" },
+                    { "@type": "PropertyValue", name: "Race", value: getPuppyBreed(puppy) },
                     { "@type": "PropertyValue", name: "Génération", value: puppy.coat },
                     { "@type": "PropertyValue", name: "Couleur", value: puppy.color },
                     { "@type": "PropertyValue", name: "Sexe", value: puppy.sexe },
@@ -141,7 +141,7 @@ export function buildPuppyProductStructuredData(puppy: Puppy) {
                     { "@type": "PropertyValue", name: "Naissance", value: puppy.age },
                     ...(puppy.birthDate ? [{ "@type": "PropertyValue", name: "Date de naissance", value: puppy.birthDate }] : []),
                     ...(puppy.availableFrom ? [{ "@type": "PropertyValue", name: "Date de disponibilité", value: puppy.availableFrom }] : []),
-                    { "@type": "PropertyValue", name: "Pédigrée", value: puppy.pedigree ?? "Fédération Française du Pomsky" },
+                    { "@type": "PropertyValue", name: "Pédigrée", value: puppy.pedigree ?? (getPuppyBreed(puppy) === "Pomsky" ? "Fédération Française du Pomsky" : "Non LOF") },
                     { "@type": "PropertyValue", name: "Statut", value: statusLabel },
                 ],
             },
@@ -191,16 +191,16 @@ export function buildPuppyProductStructuredData(puppy: Puppy) {
         "@context": "https://schema.org",
         "@type": "Product",
         "@id": `${url}#product`,
-        name: `${puppy.name} - chiot Pomsky ${puppy.color}`,
+        name: `${puppy.name} - chiot ${getPuppyBreed(puppy)} ${puppy.color}`,
         description: puppy.description,
         url,
         image: images,
         ...(getPuppyLastModified(puppy) ? { dateModified: getPuppyLastModified(puppy) } : {}),
         sku: `pomsky-${getPuppySlug(puppy.name)}`,
-        category: "Chiot Pomsky",
+        category: `Chiot ${getPuppyBreed(puppy)}`,
         brand: {
             "@type": "Brand",
-            name: "Pomsky",
+            name: getPuppyBreed(puppy),
         },
         manufacturer: {
             "@type": "Organization",
@@ -208,7 +208,7 @@ export function buildPuppyProductStructuredData(puppy: Puppy) {
             url: siteConfig.siteUrl,
         },
         additionalProperty: [
-            { "@type": "PropertyValue", name: "Race", value: "Pomsky" },
+            { "@type": "PropertyValue", name: "Race", value: getPuppyBreed(puppy) },
             { "@type": "PropertyValue", name: "Génération", value: puppy.coat },
             { "@type": "PropertyValue", name: "Couleur", value: puppy.color },
             { "@type": "PropertyValue", name: "Sexe", value: puppy.sexe },
@@ -223,7 +223,7 @@ export function buildPuppyProductStructuredData(puppy: Puppy) {
             { "@type": "PropertyValue", name: "Naissance", value: puppy.age },
             ...(puppy.birthDate ? [{ "@type": "PropertyValue", name: "Date de naissance", value: puppy.birthDate }] : []),
             ...(puppy.availableFrom ? [{ "@type": "PropertyValue", name: "Date de disponibilité", value: puppy.availableFrom }] : []),
-            { "@type": "PropertyValue", name: "Pédigrée", value: puppy.pedigree ?? "Fédération Française du Pomsky" },
+            { "@type": "PropertyValue", name: "Pédigrée", value: puppy.pedigree ?? (getPuppyBreed(puppy) === "Pomsky" ? "Fédération Française du Pomsky" : "Non LOF") },
             { "@type": "PropertyValue", name: "Statut", value: statusLabel },
         ],
         offers: offer,
@@ -242,7 +242,7 @@ export function buildPuppyItemListStructuredData(puppies: Puppy[]) {
             "@type": "ListItem",
             position: index + 1,
             url: getAbsolutePuppyUrl(puppy),
-            name: `${puppy.name} - chiot Pomsky`,
+            name: `${puppy.name} - chiot ${getPuppyBreed(puppy)}`,
         })),
     };
 }

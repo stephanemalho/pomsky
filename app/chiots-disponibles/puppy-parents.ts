@@ -11,6 +11,10 @@ function getReproductorAnchorId(name: string) {
 }
 
 export const puppyParentProfilesByLabel: Record<string, PuppyParentProfile[]> = {
+    "Parents : BULLE & LEGENDE": [
+        { role: "Mère", name: "Bulle", image: "/pages/reproducteurs/bulle-pomeranien-marquage-husky-1.webp", description: "Femelle Spitz nain Poméranien à marquage Husky", href: "/femelles-reproductrices#bulle-poméranien" },
+        { role: "Père", name: "Légende", image: "/pages/reproducteurs/legende-pomeranien-marquage-husky-7.webp", description: "Mâle Spitz nain Poméranien à marquage Husky", href: "/femelles-reproductrices#legende" },
+    ],
     "Parents : SHANE & SKY": [
         {
             role: "Mère",

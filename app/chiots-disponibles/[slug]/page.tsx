@@ -25,7 +25,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { buildOpenGraph, buildTwitter, siteConfig } from "@/lib/seo-config";
 import { generateBreadcrumbSchema } from "@/lib/schema-generators";
 import { getPuppyParentProfiles } from "../puppy-parents";
-import { getPuppyBreedLabel, litterCertifications, puppies, type LitterCertification, type Puppy } from "../puppies";
+import { getPuppyBreed, getPuppyBreedLabel, litterCertifications, puppies, type LitterCertification, type Puppy } from "../puppies";
 import {
     buildPuppyProductStructuredData,
     formatPuppyPrice,
@@ -110,18 +110,18 @@ export async function generateMetadata({ params }: PuppyPageProps): Promise<Meta
     const firstJpegImage = firstPuppyImage ? getPuppyJpegImageSrc(firstPuppyImage) : undefined;
     const firstPngImage = firstPuppyImage ? getPuppyPngImageSrc(firstPuppyImage) : undefined;
     const description = getPuppySeoDescription(puppy);
-    const title = `${puppy.name}, chiot Pomsky ${puppy.color} ${getPuppyStatusLabel(puppy).toLowerCase()}`;
+    const title = `${puppy.name}, chiot ${getPuppyBreed(puppy)} ${puppy.color} ${getPuppyStatusLabel(puppy).toLowerCase()}`;
     const url = `${siteConfig.siteUrl}${getPuppyUrl(puppy)}`;
 
     return {
         title,
         description,
         keywords: [
-            `chiot Pomsky ${puppy.name}`,
-            `Pomsky ${puppy.color}`,
-            `chiot Pomsky ${puppy.sexe.toLowerCase()}`,
-            `chiot Pomsky ${getPuppyStatusLabel(puppy).toLowerCase()}`,
-            "élevage Pomsky France",
+            `chiot ${getPuppyBreed(puppy)} ${puppy.name}`,
+            `${getPuppyBreed(puppy)} ${puppy.color}`,
+            `chiot ${getPuppyBreed(puppy)} ${puppy.sexe.toLowerCase()}`,
+            `chiot ${getPuppyBreed(puppy)} ${getPuppyStatusLabel(puppy).toLowerCase()}`,
+            `élevage ${getPuppyBreed(puppy)} France`,
         ],
         openGraph: buildOpenGraph({
             title,
@@ -130,22 +130,22 @@ export async function generateMetadata({ params }: PuppyPageProps): Promise<Meta
             images: [
                 ...(firstPngImage ? [{
                     url: `${siteConfig.siteUrl}${firstPngImage}`,
-                    alt: firstPuppyImage?.alt ?? `${puppy.name}, chiot Pomsky ${puppy.color} de l'élevage Royal POMSKY`,
+                    alt: firstPuppyImage?.alt ?? `${puppy.name}, chiot ${getPuppyBreed(puppy)} ${puppy.color} de l'élevage Royal POMSKY`,
                     type: "image/png",
                 }] : []),
                 ...(firstJpegImage ? [{
                     url: `${siteConfig.siteUrl}${firstJpegImage}`,
-                    alt: firstPuppyImage?.alt ?? `${puppy.name}, chiot Pomsky ${puppy.color} de l'élevage Royal POMSKY`,
+                    alt: firstPuppyImage?.alt ?? `${puppy.name}, chiot ${getPuppyBreed(puppy)} ${puppy.color} de l'élevage Royal POMSKY`,
                     type: "image/jpeg",
                 }] : []),
                 {
                     url: `${siteConfig.siteUrl}${firstImage}`,
-                    alt: firstPuppyImage?.alt ?? `${puppy.name}, chiot Pomsky ${puppy.color} de l'élevage Royal POMSKY`,
+                    alt: firstPuppyImage?.alt ?? `${puppy.name}, chiot ${getPuppyBreed(puppy)} ${puppy.color} de l'élevage Royal POMSKY`,
                     type: "image/webp",
                 },
                 ...(firstAvifImage ? [{
                     url: `${siteConfig.siteUrl}${firstAvifImage}`,
-                    alt: firstPuppyImage?.alt ?? `${puppy.name}, chiot Pomsky ${puppy.color} de l'élevage Royal POMSKY`,
+                    alt: firstPuppyImage?.alt ?? `${puppy.name}, chiot ${getPuppyBreed(puppy)} ${puppy.color} de l'élevage Royal POMSKY`,
                     type: "image/avif",
                 }] : []),
             ],
@@ -285,7 +285,7 @@ export default async function PuppyDetailPage({ params }: PuppyPageProps) {
 
                                 <div>
                                     <h1 className="text-3xl font-bold md:text-4xl">
-                                        <span className={puppy.sexe.toLowerCase().includes("femelle") ? "text-pink-600 dark:text-pink-400" : "text-male-600 dark:text-male-300"}>{puppy.name}</span>, chiot Pomsky {puppy.color.toLowerCase()}
+                                        <span className={puppy.sexe.toLowerCase().includes("femelle") ? "text-pink-600 dark:text-pink-400" : "text-male-600 dark:text-male-300"}>{puppy.name}</span>, chiot {getPuppyBreed(puppy)} {puppy.color.toLowerCase()}
                                     </h1>
                                     <p className="mt-3 text-lg leading-relaxed text-muted-foreground">
                                         {puppy.description}
@@ -299,7 +299,7 @@ export default async function PuppyDetailPage({ params }: PuppyPageProps) {
                                         {[
                                             { icon: SexIcon, iconColor: puppy.sexe.toLowerCase().includes("femelle") ? "text-pink-600 dark:text-pink-400" : "text-male-600 dark:text-male-300", label: "Sexe", value: puppy.sexe },
                                             { icon: Heart, iconColor: "text-rose-600 dark:text-rose-400", label: "Parents", value: puppy.parents.replace("Parents : ", "") },
-                                            { icon: FileText, iconColor: "text-indigo-600 dark:text-indigo-400", label: "Pédigrée", value: puppy.pedigree ?? "Fédération Française du Pomsky" },
+                                            { icon: FileText, iconColor: "text-indigo-600 dark:text-indigo-400", label: "Pédigrée", value: puppy.pedigree ?? (getPuppyBreed(puppy) === "Pomsky" ? "Fédération Française du Pomsky" : "Non LOF") },
                                             { icon: Calendar, iconColor: "text-amber-600 dark:text-amber-400", label: "Disponibilité", value: puppy.readyDate },
                                             { icon: PawPrint, iconColor: "text-violet-600 dark:text-violet-400", label: "Naissance", value: puppy.age },
                                             { icon: Weight, iconColor: "text-teal-600 dark:text-teal-400", label: "Poids estimé", value: puppy.weight },

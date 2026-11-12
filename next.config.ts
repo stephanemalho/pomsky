@@ -73,6 +73,7 @@ const nextConfig: NextConfig = {
     },
     async redirects() {
         return [
+            { source: "/chiots-disponibles/luna", destination: "/chiots-disponibles/noxy", permanent: true },
             {
                 source: "/chiots-disponibles/aki-blue",
                 destination: "/chiots-disponibles/cosmo",
