@@ -366,24 +366,56 @@ export default function NosChiotsPage() {
                                             </div>
                                         </CardContent>
                                     </Card>
-                                    {puppy.name === "SUNNY" ? (
-                                        <section aria-labelledby="portee-tempete-inuk" className="rounded-3xl border border-primary/20 bg-primary/5 p-6 md:p-8">
-                                            <Badge variant="secondary">Naissance imminente</Badge>
-                                            <h2 id="portee-tempete-inuk" className="mt-4 text-2xl font-bold md:text-3xl">
-                                                Une portée de Tempête &amp; Inuk arrive bientôt
-                                            </h2>
-                                            <p className="mt-3 max-w-3xl text-muted-foreground">
-                                                Nous attendons avec impatience les chiots de Tempête et Inuk. La naissance est imminente : nous partagerons leurs premières nouvelles après leur arrivée.
-                                            </p>
-                                            <Link href="/contact" className="mt-5 inline-flex rounded-full bg-primary px-6 py-3 font-semibold text-primary-foreground transition-opacity hover:opacity-90">
-                                                Se renseigner sur cette portée
-                                            </Link>
-                                        </section>
-                                    ) : null}
                                     </Fragment>
                                 );
                             })}
                         </div>
+                    </section>
+
+                    <section aria-labelledby="portees-annoncees" className="mb-12 space-y-6">
+                        <h2 id="portees-annoncees" className="text-2xl font-bold md:text-3xl">Nos portées annoncées</h2>
+                        {[
+                            {
+                                id: "inuk-tempete",
+                                breed: "SPITZ NAIN POMÉRANIEN · MARQUAGE HUSKY",
+                                title: "Inuk & Tempête : 4 chiots attendus",
+                                text: "Une portée de 4 chiots Poméraniens à marquage Husky est attendue à partir du 13 novembre 2026.",
+                                date: "2026-11-13",
+                                dateLabel: "À partir du 13 novembre 2026",
+                                parents: [
+                                    { name: "Inuk", role: "Père", image: "/pages/reproducteurs/inuk-pomeranien-bleu-5.webp", anchor: "inuk" },
+                                    { name: "Tempête", role: "Mère", image: "/pages/reproducteurs/tempete-pomeranien-marquage-husky-1.webp", anchor: "tempête-poméranien" },
+                                ],
+                            },
+                            {
+                                id: "bambou-apache",
+                                breed: "POMSKY TOY / MICRO",
+                                title: "Bambou & Apache dit Chouchou",
+                                text: "Nous annonçons une portée de Pomsky de format Toy à Micro, issue de Bambou et de notre mâle Apache dit Chouchou, avec une naissance prévue le 5 décembre 2026.",
+                                date: "2026-12-05",
+                                dateLabel: "Naissance prévue le 5 décembre 2026",
+                                parents: [
+                                    { name: "Bambou", role: "Mère", image: "/pages/reproducteurs/bambou-pomsky-toy-f5-2.webp", anchor: "bambou" },
+                                    { name: "Apache dit Chouchou", role: "Père", image: "/pages/reproducteurs/apache-pomsky-toy-micro-f5-2.webp", anchor: "apache" },
+                                ],
+                            },
+                        ].map((litter) => (
+                            <article key={litter.id} className="rounded-3xl border border-primary/20 bg-primary/5 p-6 md:p-8">
+                                <Badge variant="outline" className="whitespace-normal border-primary text-primary">{litter.breed}</Badge>
+                                <h3 className="mt-4 text-xl font-bold md:text-2xl">{litter.title}</h3>
+                                <p className="mt-3 text-muted-foreground">{litter.text}</p>
+                                <p className="mt-3 flex items-center gap-2 text-sm font-medium"><Calendar className="h-4 w-4" aria-hidden="true" /><time dateTime={litter.date}>{litter.dateLabel}</time></p>
+                                <div className="mt-5 flex flex-wrap gap-6">
+                                    {litter.parents.map((parent) => (
+                                        <Link key={parent.name} href={`/femelles-reproductrices#${parent.anchor}`} className="flex items-center gap-3 rounded-xl p-2 transition-colors hover:bg-primary/10" aria-label={`Voir ${parent.name}, ${parent.role.toLowerCase()} de la portée`}>
+                                            <Image src={parent.image} alt={parent.name} width={64} height={64} className="h-16 w-16 rounded-full object-cover ring-2 ring-primary/20" />
+                                            <span><span className="block text-xs text-muted-foreground">{parent.role}</span><span className="font-semibold">{parent.name}</span></span>
+                                        </Link>
+                                    ))}
+                                </div>
+                                <Link href="/contact" className="mt-5 inline-flex rounded-full bg-primary px-6 py-3 font-semibold text-primary-foreground transition-opacity hover:opacity-90">Se renseigner sur cette portée</Link>
+                            </article>
+                        ))}
                     </section>
 
                     <section className="relative mx-auto mb-12 overflow-hidden rounded-4xl border border-primary/12 bg-[radial-gradient(circle_at_top_right,rgba(196,86,55,0.12),transparent_32%),linear-gradient(180deg,rgba(255,255,255,0.92),rgba(248,240,236,0.86))] p-6 text-center shadow-sm dark:border-white/10 dark:bg-[linear-gradient(135deg,rgba(39,19,16,0.98),rgba(64,30,25,0.94),rgba(28,13,11,0.98))] dark:shadow-[0_18px_60px_rgba(0,0,0,0.42)] md:p-10">
